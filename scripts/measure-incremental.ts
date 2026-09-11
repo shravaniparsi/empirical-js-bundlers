@@ -98,7 +98,7 @@ async function waitForPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 6
   });
 }
 
-async function waitForNextPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 30000): Promise<number> {
+async function waitForNextPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<number> {
   const start = Date.now();
   return new Promise((resolve) => {
     const timer = setTimeout(() => resolve(-1), timeoutMs);
@@ -159,9 +159,11 @@ async function main() {
       console.log(`  Run ${run}/${args.runs}: TIMEOUT`);
     }
 
-    // Revert
+    // Revert and wait for the revert-rebuild to finish before next run
+    const revertPromise = waitForNextPattern(proc, config.rebuildPattern, 60000);
     fs.writeFileSync(targetFile, originalContent);
-    await sleep(500);
+    await revertPromise;
+    await sleep(300);
   }
 
   // Cleanup

@@ -2,7 +2,11 @@
  * measure-hmr.ts — M4: HMR latency measurement via Puppeteer + CDP
  *
  * Starts the tool's dev server, launches Chrome, modifies a component,
- * and measures the time from file write to DOM update in the browser.
+ * and measures the time from file write to HMR completion.
+ *
+ * Detection: intercepts console messages from the HMR client:
+ *   - Vite: "[vite] hot updated: ..."
+ *   - Rspack/Webpack: "[webpack-dev-server] App updated"
  *
  * Only for tools with native HMR: Vite, Rspack, Webpack.
  *
@@ -39,18 +43,21 @@ function getDevConfig(tool: string) {
         cmd: 'npx', args: ['vite'],
         readyPattern: /Local:\s+http:\/\/localhost:(\d+)/,
         defaultPort: 5173,
+        hmrPattern: /\[vite\] hot updated/,
       };
     case 'rspack':
       return {
         cmd: 'npx', args: ['rspack', 'serve', '--config', 'rspack.config.cjs'],
         readyPattern: /compiled|Loopback:\s+http:\/\/localhost:(\d+)/,
         defaultPort: 3000,
+        hmrPattern: /App updated|hot module replacement/i,
       };
     case 'webpack':
       return {
         cmd: 'npx', args: ['webpack', 'serve', '--mode', 'development', '--config', 'webpack.config.cjs'],
         readyPattern: /compiled|Loopback:\s+http:\/\/localhost:(\d+)/,
         defaultPort: 3000,
+        hmrPattern: /App updated|hot module replacement/i,
       };
     default:
       throw new Error(`${tool} does not support HMR`);
@@ -100,6 +107,11 @@ async function main() {
   const target = findTargetComponent(args.project);
   const originalContent = fs.readFileSync(target.filePath, 'utf-8');
 
+  // Write CSV header if file doesn't exist or is empty
+  if (!fs.existsSync(args.csv) || fs.statSync(args.csv).size === 0) {
+    fs.writeFileSync(args.csv, 'tool,size,metric,run,value,unit,timestamp\n');
+  }
+
   console.log(`  Starting ${args.tool} dev server...`);
 
   const proc = spawn(config.cmd, config.args, {
@@ -125,7 +137,7 @@ async function main() {
   console.log(`  Dev server ready on port ${port}`);
   await sleep(2000);
 
-  // Launch Puppeteer
+  // Launch Puppeteer with system Chrome
   let puppeteer;
   try {
     puppeteer = await import('puppeteer');
@@ -135,66 +147,59 @@ async function main() {
     process.exit(1);
   }
 
-  const browser = await puppeteer.default.launch({ headless: true });
+  const browser = await puppeteer.default.launch({
+    headless: true,
+    executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  });
   const page = await browser.newPage();
 
   await page.goto(`http://localhost:${port}`, { waitUntil: 'networkidle0' });
   console.log(`  Page loaded. Starting HMR measurements...`);
   await sleep(1000);
 
-  // Inject a mutation observer to detect DOM changes
-  await page.evaluate(() => {
-    (window as any).__hmrTimestamps = [];
-    const observer = new MutationObserver(() => {
-      (window as any).__hmrTimestamps.push(performance.now());
-    });
-    observer.observe(document.getElementById('root')!, {
-      childList: true, subtree: true, characterData: true, attributes: true,
-    });
-  });
-
   for (let run = 1; run <= args.runs; run++) {
-    // Clear previous timestamps
-    await page.evaluate(() => {
-      (window as any).__hmrTimestamps = [];
-    });
+    // Set up console message listener for HMR completion
+    let hmrDetected = false;
+    let hmrResolve: (() => void) | null = null;
+    const hmrPromise = new Promise<void>(resolve => { hmrResolve = resolve; });
 
-    // Record time before modification
-    const beforeMark = await page.evaluate(() => performance.now());
+    const consoleHandler = (msg: any) => {
+      const text = msg.text();
+      if (config.hmrPattern.test(text)) {
+        hmrDetected = true;
+        hmrResolve?.();
+      }
+    };
+    page.on('console', consoleHandler);
+
     const writeStart = Date.now();
 
-    // Modify the component — change a visible string
-    const marker = `HMR-${run}-${Date.now()}`;
-    const modifiedContent = originalContent.replace(
-      /(['"])([^'"]{2,20})\1/,
-      `$1${marker}$1`
-    );
+    // Modify the component — append a unique comment + console.log
+    const modifiedContent = originalContent +
+      `\n// HMR-benchmark-run-${run}-${Date.now()}\n` +
+      `if (import.meta.hot) { console.log('hmr-ping-${run}'); }\n`;
     fs.writeFileSync(target.filePath, modifiedContent);
 
-    // Wait for DOM mutation (max 10s)
-    let hmrTime = -1;
-    for (let attempt = 0; attempt < 100; attempt++) {
-      await sleep(100);
-      const timestamps: number[] = await page.evaluate(
-        () => (window as any).__hmrTimestamps
-      );
-      if (timestamps.length > 0) {
-        hmrTime = Date.now() - writeStart;
-        break;
-      }
-    }
+    // Wait for HMR detection (max 15s)
+    const timeout = setTimeout(() => hmrResolve?.(), 15000);
+    await hmrPromise;
+    clearTimeout(timeout);
 
-    if (hmrTime >= 0) {
+    page.off('console', consoleHandler);
+
+    const hmrTime = Date.now() - writeStart;
+
+    if (hmrDetected) {
       fs.appendFileSync(args.csv, `${args.tool},${args.size},M4,${run},${hmrTime},ms,${args.timestamp}\n`);
       console.log(`  Run ${run}/${args.runs}: ${hmrTime}ms`);
     } else {
       fs.appendFileSync(args.csv, `${args.tool},${args.size},M4,${run},-1,ms,${args.timestamp}\n`);
-      console.log(`  Run ${run}/${args.runs}: TIMEOUT (no DOM update detected)`);
+      console.log(`  Run ${run}/${args.runs}: TIMEOUT (no HMR update detected)`);
     }
 
-    // Revert file
+    // Revert file and wait for HMR to process revert
     fs.writeFileSync(target.filePath, originalContent);
-    await sleep(1000);
+    await sleep(2000);
   }
 
   // Cleanup

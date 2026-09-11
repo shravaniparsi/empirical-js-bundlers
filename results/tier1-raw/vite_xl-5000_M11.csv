@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+vite,xl-5000,M11,1,11.12,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,2,10.84,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,3,11.16,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,4,10.86,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,5,11.08,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,6,11.12,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,7,11.28,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,8,10.96,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,9,10.90,seconds,2026-09-11T21:09:12Z
+vite,xl-5000,M11,10,11.40,seconds,2026-09-11T21:09:12Z
