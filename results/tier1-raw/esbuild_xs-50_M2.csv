@@ -1,4 +1,0 @@
-tool,size,metric,run,value,unit,timestamp
-esbuild,xs-50,M2,1,456,ms,2026-09-11T19:49:57Z
-esbuild,xs-50,M2,2,408,ms,2026-09-11T19:49:57Z
-esbuild,xs-50,M2,3,384,ms,2026-09-11T19:49:57Z

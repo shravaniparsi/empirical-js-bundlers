@@ -4,3 +4,4 @@ dist/
 .rspack/
 tier1-synthetic/workspaces/
 tier2-realworld/workspaces/
+.venv/

@@ -1,0 +1,457 @@
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   vite rspack esbuild webpack rollup
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 233
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: vite
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/233] vite × xs-50 × M2 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M2.csv
+    Benchmark 1: npx vite build
+      Time (mean ± σ):      1.340 s ±  0.938 s    [User: 0.658 s, System: 0.424 s]
+      Range (min … max):    0.967 s …  3.992 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (3.992 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 1017 ms
+      StdDev: 938 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M2.csv
+    ⏱️  15s elapsed, ~3480s remaining
+
+  [2/233] vite × s-200 × M2 (10 runs)
+    🔬 Benchmark: vite × s-200 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M2.csv
+    Benchmark 1: npx vite build
+      Time (mean ± σ):      1.942 s ±  1.052 s    [User: 1.304 s, System: 0.554 s]
+      Range (min … max):    1.293 s …  4.344 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (4.344 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 1431 ms
+      StdDev: 1052 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M2.csv
+    ⏱️  36s elapsed, ~4158s remaining
+
+  [3/233] vite × m-500 × M2 (10 runs)
+    🔬 Benchmark: vite × m-500 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M2.csv
+    Benchmark 1: npx vite build
+      Time (mean ± σ):      2.094 s ±  1.389 s    [User: 1.891 s, System: 0.800 s]
+      Range (min … max):    1.611 s …  6.046 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (6.046 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 1645 ms
+      StdDev: 1389 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M2.csv
+    ⏱️  59s elapsed, ~4508s remaining
+
+  [4/233] vite × l-2000 × M2 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M2.csv
+    Benchmark 1: npx vite build
+      Time (mean ± σ):      3.817 s ±  2.575 s    [User: 3.880 s, System: 1.432 s]
+      Range (min … max):    2.848 s … 11.111 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (11.111 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 2926 ms
+      StdDev: 2575 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M2.csv
+    ⏱️  100s elapsed, ~5725s remaining
+
+  [5/233] vite × xl-5000 × M2 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M2.csv
+    Benchmark 1: npx vite build
+      Time (mean ± σ):      6.878 s ±  3.220 s    [User: 8.244 s, System: 2.767 s]
+      Range (min … max):    5.433 s … 16.013 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (16.013 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 5899 ms
+      StdDev: 3220 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M2.csv
+    ⏱️  172s elapsed, ~7843s remaining
+
+  [6/233] vite × xs-50 × M5 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M5.csv
+      Raw bundle size: 311635 bytes (304.3 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M5.csv
+    ⏱️  175s elapsed, ~6605s remaining
+
+  [7/233] vite × s-200 × M5 (10 runs)
+    🔬 Benchmark: vite × s-200 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M5.csv
+      Raw bundle size: 567352 bytes (554.0 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M5.csv
+    ⏱️  178s elapsed, ~5740s remaining
+
+  [8/233] vite × m-500 × M5 (10 runs)
+    🔬 Benchmark: vite × m-500 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M5.csv
+      Raw bundle size: 1649769 bytes (1611.1 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M5.csv
+    ⏱️  182s elapsed, ~5107s remaining
+
+  [9/233] vite × l-2000 × M5 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M5.csv
+      Raw bundle size: 4038885 bytes (3944.2 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M5.csv
+    ⏱️  189s elapsed, ~4704s remaining
+
+  [10/233] vite × xl-5000 × M5 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M5.csv
+      Raw bundle size: 9054960 bytes (8842.7 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M5.csv
+    ⏱️  201s elapsed, ~4482s remaining
+
+  [11/233] vite × xs-50 × M6 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M6.csv
+      Gzipped JS size: 82962 bytes (81.0 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M6.csv
+    ⏱️  203s elapsed, ~4084s remaining
+
+  [12/233] vite × s-200 × M6 (10 runs)
+    🔬 Benchmark: vite × s-200 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M6.csv
+      Gzipped JS size: 124666 bytes (121.7 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M6.csv
+    ⏱️  206s elapsed, ~3779s remaining
+
+  [13/233] vite × m-500 × M6 (10 runs)
+    🔬 Benchmark: vite × m-500 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M6.csv
+      Gzipped JS size: 328052 bytes (320.3 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M6.csv
+    ⏱️  210s elapsed, ~3542s remaining
+
+  [14/233] vite × l-2000 × M6 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M6.csv
+      Gzipped JS size: 556500 bytes (543.4 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M6.csv
+    ⏱️  217s elapsed, ~3394s remaining
+
+  [15/233] vite × xl-5000 × M6 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M6.csv
+      Gzipped JS size: 1089500 bytes (1063.9 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M6.csv
+    ⏱️  230s elapsed, ~3335s remaining
+
+  [16/233] vite × xs-50 × M7 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M7.csv
+    ⏱️  232s elapsed, ~3146s remaining
+
+  [17/233] vite × s-200 × M7 (10 runs)
+    🔬 Benchmark: vite × s-200 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M7.csv
+    ⏱️  236s elapsed, ~2980s remaining
+
+  [18/233] vite × m-500 × M7 (10 runs)
+    🔬 Benchmark: vite × m-500 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M7.csv
+      lodash references in bundle: 3
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M7.csv
+    ⏱️  239s elapsed, ~2838s remaining
+
+  [19/233] vite × l-2000 × M7 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M7.csv
+      lodash references in bundle: 3
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M7.csv
+    ⏱️  246s elapsed, ~2760s remaining
+
+  [20/233] vite × xl-5000 × M7 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M7.csv
+      lodash references in bundle: 3
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M7.csv
+    ⏱️  258s elapsed, ~2747s remaining
+
+  [21/233] vite × xs-50 × M8 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M8.csv
+      JS chunks: 1
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M8.csv
+    ⏱️  260s elapsed, ~2607s remaining
+
+  [22/233] vite × s-200 × M8 (10 runs)
+    🔬 Benchmark: vite × s-200 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M8.csv
+      JS chunks: 5
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M8.csv
+    ⏱️  263s elapsed, ~2510s remaining
+
+  [23/233] vite × m-500 × M8 (10 runs)
+    🔬 Benchmark: vite × m-500 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M8.csv
+      JS chunks: 19
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M8.csv
+    ⏱️  267s elapsed, ~2436s remaining
+
+  [24/233] vite × l-2000 × M8 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M8.csv
+      JS chunks: 34
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M8.csv
+    ⏱️  273s elapsed, ~2361s remaining
+
+  [25/233] vite × xl-5000 × M8 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M8.csv
+      JS chunks: 84
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M8.csv
+    ⏱️  285s elapsed, ~2371s remaining
+
+  [26/233] vite × xs-50 × M9 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M9.csv
+      Sourcemaps: 1 maps for 1 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M9.csv
+    ⏱️  288s elapsed, ~2277s remaining
+
+  [27/233] vite × s-200 × M9 (10 runs)
+    🔬 Benchmark: vite × s-200 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M9.csv
+      Sourcemaps: 5 maps for 5 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M9.csv
+    ⏱️  291s elapsed, ~2204s remaining
+
+  [28/233] vite × m-500 × M9 (10 runs)
+    🔬 Benchmark: vite × m-500 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M9.csv
+      Sourcemaps: 19 maps for 19 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M9.csv
+    ⏱️  295s elapsed, ~2152s remaining
+
+  [29/233] vite × l-2000 × M9 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M9.csv
+      Sourcemaps: 34 maps for 34 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M9.csv
+    ⏱️  301s elapsed, ~2101s remaining
+
+  [30/233] vite × xl-5000 × M9 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M9.csv
+      Sourcemaps: 84 maps for 84 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M9.csv
+    ⏱️  314s elapsed, ~2111s remaining
+
+  [31/233] vite × xs-50 × M10 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M10.csv
+      Run 1: Peak RSS = 236.4 MB
+      Run 2: Peak RSS = 234.1 MB
+      Run 3: Peak RSS = 234.3 MB
+      Run 4: Peak RSS = 237.4 MB
+      Run 5: Peak RSS = 226.9 MB
+      Run 6: Peak RSS = 235.3 MB
+      Run 7: Peak RSS = 233.3 MB
+      Run 8: Peak RSS = 235.2 MB
+      Run 9: Peak RSS = 227.4 MB
+      Run 10: Peak RSS = 228.5 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M10.csv
+    ⏱️  328s elapsed, ~2121s remaining
+
+  [32/233] vite × s-200 × M10 (10 runs)
+    🔬 Benchmark: vite × s-200 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M10.csv
+      Run 1: Peak RSS = 393.1 MB
+      Run 2: Peak RSS = 386.5 MB
+      Run 3: Peak RSS = 383.0 MB
+      Run 4: Peak RSS = 390.1 MB
+      Run 5: Peak RSS = 387.6 MB
+      Run 6: Peak RSS = 384.0 MB
+      Run 7: Peak RSS = 391.0 MB
+      Run 8: Peak RSS = 386.9 MB
+      Run 9: Peak RSS = 383.1 MB
+      Run 10: Peak RSS = 386.4 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_s-200_M10.csv
+    ⏱️  344s elapsed, ~2150s remaining
+
+  [33/233] vite × m-500 × M10 (10 runs)
+    🔬 Benchmark: vite × m-500 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M10.csv
+      Run 1: Peak RSS = 551.0 MB
+      Run 2: Peak RSS = 557.2 MB
+      Run 3: Peak RSS = 550.9 MB
+      Run 4: Peak RSS = 559.1 MB
+      Run 5: Peak RSS = 544.1 MB
+      Run 6: Peak RSS = 550.7 MB
+      Run 7: Peak RSS = 555.9 MB
+      Run 8: Peak RSS = 551.8 MB
+      Run 9: Peak RSS = 549.5 MB
+      Run 10: Peak RSS = 556.3 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_m-500_M10.csv
+    ⏱️  364s elapsed, ~2200s remaining
+
+  [34/233] vite × l-2000 × M10 (10 runs)
+    🔬 Benchmark: vite × l-2000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M10.csv
+      Run 1: Peak RSS = 927.5 MB
+      Run 2: Peak RSS = 931.6 MB
+      Run 3: Peak RSS = 917.3 MB
+      Run 4: Peak RSS = 924.5 MB
+      Run 5: Peak RSS = 895.8 MB
+      Run 6: Peak RSS = 932.7 MB
+      Run 7: Peak RSS = 916.4 MB
+      Run 8: Peak RSS = 947.7 MB
+      Run 9: Peak RSS = 923.6 MB
+      Run 10: Peak RSS = 923.0 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_l-2000_M10.csv
+    ⏱️  397s elapsed, ~2308s remaining
+
+  [35/233] vite × xl-5000 × M10 (10 runs)
+    🔬 Benchmark: vite × xl-5000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M10.csv
+      Run 1: Peak RSS = 1661.3 MB
+      Run 2: Peak RSS = 1702.3 MB
+      Run 3: Peak RSS = 1703.8 MB
+      Run 4: Peak RSS = 1683.6 MB
+      Run 5: Peak RSS = 1661.6 MB
+      Run 6: Peak RSS = 1692.9 MB
+      Run 7: Peak RSS = 1694.5 MB
+      Run 8: Peak RSS = 1689.7 MB
+      Run 9: Peak RSS = 1646.9 MB
+      Run 10: Peak RSS = 1637.4 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xl-5000_M10.csv
+    ⏱️  458s elapsed, ~2574s remaining
+
+  [36/233] vite × xs-50 × M11 (10 runs)
+    🔬 Benchmark: vite × xs-50 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M11.csv
+      Run 1: CPU = 2.58s (user=1.29s sys=1.29s)
+      Run 2: CPU = 2.14s (user=1.07s sys=1.07s)
+      Run 3: CPU = 2.18s (user=1.09s sys=1.09s)
+      Run 4: CPU = 1.96s (user=0.98s sys=0.98s)
+      Run 5: CPU = 2.16s (user=1.08s sys=1.08s)
+      Run 6: CPU = 1.92s (user=0.96s sys=0.96s)
+      Run 7: CPU = 1.94s (user=0.97s sys=0.97s)
+      Run 8: CPU = 1.92s (user=0.96s sys=0.96s)
+      Run 9: CPU = 1.90s (user=0.95s sys=0.95s)
+      Run 10: CPU = 1.88s (user=0.94s sys=0.94s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/vite_xs-50_M11.csv
+    ⏱️  470s elapsed, ~2561s remaining
+
+  [37/233] vite × s-200 × M11 (10 runs)

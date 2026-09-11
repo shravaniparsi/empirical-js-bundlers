@@ -1,0 +1,6 @@
+metric,size,tool,W,p_value,normal
+M2,xs-50,vite,0.4098,0,No
+M2,s-200,vite,0.67,0.0011,No
+M2,m-500,vite,0.3614,0,No
+M2,l-2000,vite,0.3954,0,No
+M2,xl-5000,vite,0.4067,0,No
