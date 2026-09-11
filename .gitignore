@@ -1,0 +1,4 @@
+node_modules/
+tier1-synthetic/projects/*/node_modules/
+dist/
+.vite/

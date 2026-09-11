@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-09-11T18:56:39.039Z",
+  "seed": 42,
+  "size": 5000,
+  "tier": "xl",
+  "components": 5000,
+  "deadModules": 250,
+  "routeEntries": 50,
+  "totalImportEdges": 9301,
+  "totalSourceLines": 801736,
+  "featureFolders": 50,
+  "categoryDistribution": {
+    "navigation": 510,
+    "chart-viz": 515,
+    "data-display": 1277,
+    "form-control": 738,
+    "feedback": 514,
+    "data-fetching": 440,
+    "layout": 752,
+    "utility": 254
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-09-11T18:56:23.826Z",
+  "seed": 42,
+  "size": 2000,
+  "tier": "l",
+  "components": 2000,
+  "deadModules": 100,
+  "routeEntries": 20,
+  "totalImportEdges": 3647,
+  "totalSourceLines": 319647,
+  "featureFolders": 30,
+  "categoryDistribution": {
+    "navigation": 206,
+    "chart-viz": 200,
+    "data-display": 516,
+    "form-control": 301,
+    "feedback": 209,
+    "data-fetching": 162,
+    "layout": 301,
+    "utility": 105
+  }
+}

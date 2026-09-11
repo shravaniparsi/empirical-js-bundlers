@@ -1,0 +1,19 @@
+{
+  "name": "js-bundler-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Empirical Evaluation of Rust-Based JavaScript Bundlers — Replication Package",
+  "type": "module",
+  "scripts": {
+    "generate:xs": "tsx tier1-synthetic/generate-project.ts --size 50 --seed 42 --output tier1-synthetic/projects/xs-50",
+    "generate:s": "tsx tier1-synthetic/generate-project.ts --size 200 --seed 42 --output tier1-synthetic/projects/s-200",
+    "generate:m": "tsx tier1-synthetic/generate-project.ts --size 500 --seed 42 --output tier1-synthetic/projects/m-500",
+    "generate:l": "tsx tier1-synthetic/generate-project.ts --size 2000 --seed 42 --output tier1-synthetic/projects/l-2000",
+    "generate:xl": "tsx tier1-synthetic/generate-project.ts --size 5000 --seed 42 --output tier1-synthetic/projects/xl-5000",
+    "generate:all": "npm run generate:xs && npm run generate:s && npm run generate:m && npm run generate:l && npm run generate:xl"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
