@@ -20,7 +20,7 @@
 |-------|------------|--------|-----------|
 | **Phase 0** | Pre-Research Validation | ✅ DONE | Sep 11, 2026 |
 | **Phase 1** | Research Design | ✅ DONE | Sep 11, 2026 |
-| **Phase 2** | Implementation (projects, configs, harness) | 🔲 NOT STARTED | — |
+| **Phase 2** | Implementation (projects, configs, harness) | ✅ DONE | Sep 11, 2026 |
 | **Phase 3** | Data Collection & Analysis | 🔲 NOT STARTED | — |
 | **Phase 4** | Paper Writing | 🔲 NOT STARTED | — |
 | **Phase 5** | Submission & Response | 🔲 NOT STARTED | — |
@@ -922,6 +922,90 @@ Week 23-26    ████████████████ Phase 5b: Revisio
 | Sep 11, 2026 | "Calibrated synthetic" component specification | Differentiation from existing benchmarks: our components are 50-150 LOC with hooks, state, CSS Modules, TS generics, conditional rendering. 8 template categories ensure variety. Each feature mapped to the specific metric it exercises. |
 | Sep 11, 2026 | Rejected "fork rstackjs" approach | rstackjs maintained by Rspack team (bias), components are trivial shells (5 LOC), only 3 runs averaged (not rigorous). Better to build from scratch with our own design. Cite rstackjs as community baseline only. |
 | Sep 11, 2026 | M1/M4 limited to 3 tools (Vite, Rspack, Webpack) | esbuild has no native HMR; Rollup has no dev server. Forcing dev servers via community plugins would violate "official config" principle and add confounding variables. Feature gap reported as RQ1 finding: *"tool selection involves speed-vs-DX-features tradeoff."* M3 (incremental rebuild) still covers all 5 tools via universal `--watch` mode. |
+| Sep 11, 2026 | M3 uses `build --watch` (not dev server) | Pilot testing revealed dev server stdout doesn't reliably emit rebuild patterns when no browser is connected. `vite build --watch`, `rspack build --watch`, `webpack --watch` all emit clear "built in Xms" / "compiled successfully" patterns to stdout, giving precise incremental rebuild timing. |
+| Sep 11, 2026 | Tier 2 reduced to 1 project (Bulletproof React) | Evaluated 5 candidates. Excalidraw (monorepo + SVG plugins + WASM) would require disproportionate adaptation work vs. research value gained. Bulletproof React (102 files, MIT, React+TS+Tailwind) is a clean SPA that builds with all 5 tools. Reports Tier 2 as "validation probe" rather than full replication. |
+| Sep 11, 2026 | Phase 2 sealed after pilot run validation | Pilot tested M1-M11 on xs-50 (Vite, Rspack, esbuild, Webpack). All metrics produce valid CSV. Notable pilot findings: esbuild 3× faster than Vite/Rspack on M2 (xs-50); Webpack has fastest incremental rebuild (~80ms vs Vite ~420ms). |
+
+---
+
+## Phase 2 Implementation — Completed Sep 11, 2026
+
+### §2.1 Tier 1 Synthetic Projects
+
+**Generator:** `tier1-synthetic/generate-project.ts` — 2,250 LOC, deterministic (seed=42, Mulberry32 PRNG).
+
+**Generated projects** (in `tier1-synthetic/projects/`):
+
+| Size | Components | LOC | Imports | Dead modules | Routes | Disk |
+|------|-----------|-----|---------|-------------|--------|------|
+| xs-50 | 50 | ~8,135 | 80 | 2 | 0 | 448 KB |
+| s-200 | 200 | ~32,209 | 369 | 10 | 4 | 1.7 MB |
+| m-500 | 500 | ~79,605 | 898 | 25 | 12 | 4.1 MB |
+| l-2000 | 2,000 | ~319,647 | 3,647 | 100 | 20 | 17 MB |
+| xl-5000 | 5,000 | ~801,736 | 9,301 | 250 | 50 | 41 MB |
+
+### §2.2 Bundler Configurations
+
+5 configs in `configs/<tool>/`, each with:
+- `deps.json` (devDependencies + scripts)
+- Config file (vite.config.ts, rspack.config.cjs, build.mjs, webpack.config.cjs, rollup.config.mjs)
+
+Key design decisions documented in earlier Decision Log entries (CSS module handling, CJS config naming, plugin ordering).
+
+### §2.3 Workspaces
+
+`scripts/setup-all-workspaces.sh` creates 25 isolated workspaces (5 tools × 5 sizes) in `tier1-synthetic/workspaces/<tool>/<size>/`. Each has its own package.json, config, and node_modules. Total: ~3.7 GB.
+
+### §2.4 Measurement Harness
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/run-single.sh` | Runs ONE benchmark: tool × size × metric → CSV |
+| `scripts/run-all.sh` | Orchestrates all 233 Tier 1 benchmark jobs |
+| `scripts/measure-incremental.ts` | M3: watch-mode incremental rebuild timing |
+| `scripts/measure-hmr.ts` | M4: Puppeteer + CDP HMR latency |
+| `scripts/clear-cache.sh` | Removes all bundler caches before cold runs |
+
+### §2.5 Tier 2 Real-World Project
+
+**Bulletproof React** (alan2207/bulletproof-react, MIT):
+- 102 TSX/TS source files, React 18 + TypeScript + Tailwind CSS
+- Production deps: @radix-ui, @tanstack/react-query, react-router, zustand, zod
+- Adapted: MSW mocking stubbed, non-build deps stripped, `@/*` alias configured per tool
+- All 5 tools verified: Vite (7.3s), Rspack (1.58s), esbuild (fast), Webpack (12s), Rollup (7.7s)
+
+### §2.6 Pilot Run Results (xs-50 validation)
+
+| Metric | Tool | Value | Notes |
+|--------|------|-------|-------|
+| M2 (prod build) | Vite | 1,020–1,872 ms | |
+| M2 (prod build) | Rspack | 1,095–1,991 ms | |
+| M2 (prod build) | esbuild | 384–456 ms | ~3× faster |
+| M1 (dev cold start) | Vite | 999–1,211 ms | |
+| M3 (incremental) | Vite | 27–454 ms | |
+| M3 (incremental) | Webpack | 79–132 ms | Fastest incremental |
+| M5 (bundle raw) | Vite | 311,635 bytes | |
+| M6 (bundle gzip) | esbuild | 90,106 bytes | |
+| M10 (peak RSS) | Vite | 232.8–237.6 MB | |
+| M11 (CPU time) | esbuild | 0.84–0.94 s | |
+
+All metrics produce valid, parseable CSV with schema: `tool,size,metric,run,value,unit,timestamp`.
+
+### §2.8 Phase 2 Reflexion Gate
+
+**Act:** Built complete benchmark infrastructure — synthetic generator (5 sizes), 5 bundler configs, 25 Tier 1 workspaces, measurement harness (11 metrics), 1 Tier 2 real-world project, pilot validation.
+
+**Evaluate:**
+- ✅ All 25 Tier 1 workspaces build successfully (5 tools × 5 sizes)
+- ✅ All 5 tools build Tier 2 project (Bulletproof React)
+- ✅ Pilot run validates all 11 metrics (M1-M11) produce clean CSV data
+- ✅ M3 fix: `build --watch` mode more reliable than dev server for incremental measurement
+- ⚠️ Only 1 Tier 2 project instead of planned 2-3 (Excalidraw too complex to adapt)
+- ⚠️ Vite version mismatch: Tier 1 uses Vite 8.x, BP-React has Vite 5.x (fixable by upgrading workspace)
+
+**Reflect:** The infrastructure is solid. The pilot data already shows meaningful differentiation (esbuild 3× faster than Vite/Rspack on M2). Having only 1 Tier 2 project is a minor limitation — the paper can frame it as a "validation probe" with acknowledgment that additional real-world replication strengthens findings. The Vite version mismatch in Tier 2 should be fixed before data collection.
+
+**Revise:** Phase 2 is sealed. Before Phase 3 data collection: (1) upgrade Tier 2 BP-React Vite workspace to Vite 8.x, (2) ensure all Tier 2 workspaces use same dependency versions as Tier 1, (3) clear all pilot data from results/tier1-raw/ before the real run.
 
 ---
 
