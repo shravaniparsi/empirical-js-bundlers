@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@rspack/cli": "^2.2.3",
+    "@rspack/core": "^2.2.3",
+    "@rspack/plugin-react-refresh": "^1.1.1",
+    "react-refresh": "^0.14.2",
+    "css-loader": "^7.1.2"
+  },
+  "scripts": {
+    "dev": "rspack serve --config rspack.config.cjs",
+    "build": "NODE_ENV=production rspack build --config rspack.config.cjs",
+    "preview": "npx serve dist"
+  }
+}
