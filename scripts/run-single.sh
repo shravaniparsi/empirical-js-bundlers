@@ -41,7 +41,7 @@ fi
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-PROJECT="$ROOT/tier1-synthetic/projects/$SIZE"
+PROJECT="$ROOT/tier1-synthetic/workspaces/$TOOL/$SIZE"
 RESULTS_DIR="$ROOT/results/tier1-raw"
 CSV="$RESULTS_DIR/${TOOL}_${SIZE}_${METRIC}.csv"
 

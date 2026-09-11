@@ -139,10 +139,10 @@ for tool in $TOOLS; do
       fi
 
       # Check project is set up for this tool
-      PROJECT="$ROOT/tier1-synthetic/projects/$size"
+      PROJECT="$ROOT/tier1-synthetic/workspaces/$tool/$size"
       if [[ ! -d "$PROJECT/node_modules" ]]; then
-        echo "    ⚠️  Project not set up. Setting up $tool for $size..."
-        bash "$ROOT/configs/setup-tool.sh" "$tool" "tier1-synthetic/projects/$size" 2>&1 | tail -2
+        echo "    ⚠️  Workspace not set up. Run: ./scripts/setup-all-workspaces.sh --tools \"$tool\" --sizes \"$size\""
+        continue
       fi
 
       # Run the benchmark
