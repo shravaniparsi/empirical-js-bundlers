@@ -34,21 +34,21 @@ function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern:
   switch (tool) {
     case 'vite':
       return {
-        cmd: 'npx', args: ['vite'],
-        readyPattern: /Local:/,
-        rebuildPattern: /page reload|hmr update/i,
+        cmd: 'npx', args: ['vite', 'build', '--watch'],
+        readyPattern: /watching for file changes/i,
+        rebuildPattern: /built in/i,
       };
     case 'rspack':
       return {
-        cmd: 'npx', args: ['rspack', 'serve', '--config', 'rspack.config.cjs'],
+        cmd: 'npx', args: ['rspack', 'build', '--watch', '--config', 'rspack.config.cjs'],
         readyPattern: /compiled/i,
         rebuildPattern: /compiled/i,
       };
     case 'webpack':
       return {
-        cmd: 'npx', args: ['webpack', 'serve', '--mode', 'development', '--config', 'webpack.config.cjs'],
-        readyPattern: /compiled/i,
-        rebuildPattern: /compiled/i,
+        cmd: 'npx', args: ['webpack', '--watch', '--config', 'webpack.config.cjs'],
+        readyPattern: /compiled successfully/i,
+        rebuildPattern: /compiled successfully/i,
       };
     case 'esbuild':
       return {
@@ -59,8 +59,8 @@ function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern:
     case 'rollup':
       return {
         cmd: 'npx', args: ['rollup', '-c', 'rollup.config.mjs', '-w'],
-        readyPattern: /created|waiting/i,
-        rebuildPattern: /created/i,
+        readyPattern: /waiting for changes/i,
+        rebuildPattern: /created dist/i,
       };
     default:
       throw new Error(`Unknown tool: ${tool}`);

@@ -1,0 +1,4 @@
+tool,size,metric,run,value,unit,timestamp
+vite,xs-50,M2,1,1872,ms,2026-09-11T19:49:47Z
+vite,xs-50,M2,2,1178,ms,2026-09-11T19:49:47Z
+vite,xs-50,M2,3,1020,ms,2026-09-11T19:49:47Z
