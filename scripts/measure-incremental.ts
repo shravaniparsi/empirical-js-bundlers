@@ -1,0 +1,179 @@
+/**
+ * measure-incremental.ts — M3: Incremental rebuild timing
+ *
+ * Starts the tool's watch/dev mode, modifies a component file,
+ * measures time until rebuild completes, then reverts.
+ *
+ * Usage: npx tsx measure-incremental.ts --tool vite --project <dir> --runs 20 --csv <file> --size xs-50 --timestamp <ts>
+ */
+
+import { spawn, ChildProcess } from 'node:child_process';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+
+interface Args {
+  tool: string;
+  project: string;
+  runs: number;
+  csv: string;
+  size: string;
+  timestamp: string;
+}
+
+function parseArgs(): Args {
+  const args = process.argv.slice(2);
+  const result: Partial<Args> = {};
+  for (let i = 0; i < args.length; i += 2) {
+    const key = args[i].replace('--', '') as keyof Args;
+    result[key] = key === 'runs' ? parseInt(args[i + 1], 10) as any : args[i + 1];
+  }
+  return result as Args;
+}
+
+function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern: RegExp; rebuildPattern: RegExp } {
+  switch (tool) {
+    case 'vite':
+      return {
+        cmd: 'npx', args: ['vite'],
+        readyPattern: /Local:/,
+        rebuildPattern: /page reload|hmr update/i,
+      };
+    case 'rspack':
+      return {
+        cmd: 'npx', args: ['rspack', 'serve', '--config', 'rspack.config.cjs'],
+        readyPattern: /compiled/i,
+        rebuildPattern: /compiled/i,
+      };
+    case 'webpack':
+      return {
+        cmd: 'npx', args: ['webpack', 'serve', '--mode', 'development', '--config', 'webpack.config.cjs'],
+        readyPattern: /compiled/i,
+        rebuildPattern: /compiled/i,
+      };
+    case 'esbuild':
+      return {
+        cmd: 'node', args: ['configs/esbuild/watch.mjs'],
+        readyPattern: /watching/i,
+        rebuildPattern: /build finished/i,
+      };
+    case 'rollup':
+      return {
+        cmd: 'npx', args: ['rollup', '-c', 'rollup.config.mjs', '-w'],
+        readyPattern: /created|waiting/i,
+        rebuildPattern: /created/i,
+      };
+    default:
+      throw new Error(`Unknown tool: ${tool}`);
+  }
+}
+
+function findTargetFile(projectDir: string): string {
+  const featuresDir = path.join(projectDir, 'src', 'features');
+  const folders = fs.readdirSync(featuresDir);
+  for (const folder of folders) {
+    const folderPath = path.join(featuresDir, folder);
+    const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.tsx'));
+    if (files.length > 0) {
+      return path.join(folderPath, files[0]);
+    }
+  }
+  throw new Error('No .tsx file found in features/');
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function waitForPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<boolean> {
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(false), timeoutMs);
+    const handler = (data: Buffer) => {
+      if (pattern.test(data.toString())) {
+        clearTimeout(timer);
+        resolve(true);
+      }
+    };
+    proc.stdout?.on('data', handler);
+    proc.stderr?.on('data', handler);
+  });
+}
+
+async function waitForNextPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 30000): Promise<number> {
+  const start = Date.now();
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(-1), timeoutMs);
+    const handler = (data: Buffer) => {
+      if (pattern.test(data.toString())) {
+        clearTimeout(timer);
+        proc.stdout?.removeListener('data', handler);
+        proc.stderr?.removeListener('data', handler);
+        resolve(Date.now() - start);
+      }
+    };
+    proc.stdout?.on('data', handler);
+    proc.stderr?.on('data', handler);
+  });
+}
+
+async function main() {
+  const args = parseArgs();
+  const config = getWatchCmd(args.tool);
+  const targetFile = findTargetFile(args.project);
+  const originalContent = fs.readFileSync(targetFile, 'utf-8');
+  const modifiedContent = originalContent + `\n// benchmark-modification-${Date.now()}\nconsole.log('benchmark-ping');\n`;
+
+  console.log(`  Starting ${args.tool} watch mode...`);
+  console.log(`  Target file: ${path.basename(targetFile)}`);
+
+  const proc = spawn(config.cmd, config.args, {
+    cwd: args.project,
+    stdio: ['pipe', 'pipe', 'pipe'],
+    env: { ...process.env, NODE_ENV: 'development' },
+    shell: true,
+  });
+
+  const ready = await waitForPattern(proc, config.readyPattern);
+  if (!ready) {
+    console.error('  ❌ Watch mode failed to start (60s timeout)');
+    proc.kill();
+    process.exit(1);
+  }
+  console.log('  Watch mode ready. Starting measurements...');
+
+  await sleep(1000);
+
+  for (let run = 1; run <= args.runs; run++) {
+    // Modify file
+    const modContent = originalContent + `\n// benchmark-run-${run}-${Date.now()}\nconsole.log('ping-${run}');\n`;
+    
+    const rebuildPromise = waitForNextPattern(proc, config.rebuildPattern);
+    fs.writeFileSync(targetFile, modContent);
+    
+    const elapsed = await rebuildPromise;
+
+    if (elapsed >= 0) {
+      fs.appendFileSync(args.csv, `${args.tool},${args.size},M3,${run},${elapsed},ms,${args.timestamp}\n`);
+      console.log(`  Run ${run}/${args.runs}: ${elapsed}ms`);
+    } else {
+      fs.appendFileSync(args.csv, `${args.tool},${args.size},M3,${run},-1,ms,${args.timestamp}\n`);
+      console.log(`  Run ${run}/${args.runs}: TIMEOUT`);
+    }
+
+    // Revert
+    fs.writeFileSync(targetFile, originalContent);
+    await sleep(500);
+  }
+
+  // Cleanup
+  fs.writeFileSync(targetFile, originalContent);
+  proc.kill('SIGTERM');
+  await sleep(500);
+  proc.kill('SIGKILL');
+
+  console.log('  Watch mode stopped.');
+}
+
+main().catch(err => {
+  console.error('Fatal:', err);
+  process.exit(1);
+});
