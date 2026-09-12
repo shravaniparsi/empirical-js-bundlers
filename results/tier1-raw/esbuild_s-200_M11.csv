@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+esbuild,s-200,M11,1,7.80,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,2,1.42,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,3,1.80,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,4,1.60,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,5,2.34,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,6,1.70,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,7,1.46,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,8,6.04,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,9,2.54,seconds,2026-09-12T00:13:45Z
+esbuild,s-200,M11,10,1.52,seconds,2026-09-12T00:13:45Z

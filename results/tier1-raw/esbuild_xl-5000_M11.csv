@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+esbuild,xl-5000,M11,1,72.36,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,2,60.20,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,3,29.02,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,4,27.84,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,5,28.30,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,6,28.52,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,7,28.60,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,8,27.76,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,9,29.18,seconds,2026-09-12T00:15:38Z
+esbuild,xl-5000,M11,10,28.74,seconds,2026-09-12T00:15:38Z

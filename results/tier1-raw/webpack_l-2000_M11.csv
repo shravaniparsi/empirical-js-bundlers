@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+webpack,l-2000,M11,1,119.56,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,2,76.90,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,3,77.02,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,4,77.04,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,5,76.64,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,6,77.12,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,7,79.64,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,8,76.66,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,9,76.34,seconds,2026-09-12T06:29:21Z
+webpack,l-2000,M11,10,76.96,seconds,2026-09-12T06:29:21Z

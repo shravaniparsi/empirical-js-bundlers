@@ -1,0 +1,35 @@
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   rollup
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 43
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: rollup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/43] rollup × xs-50 × M2 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    Benchmark 1: NODE_ENV=production npx rollup -c rollup.config.mjs
+      Time (mean ± σ):      4.542 s ±  3.304 s    [User: 3.886 s, System: 3.422 s]
+      Range (min … max):    3.419 s … 13.943 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (13.943 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 3496 ms
+      StdDev: 3304 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    ⏱️  48s elapsed, ~2016s remaining
+
+  [2/43] rollup × s-200 × M2 (10 runs)

@@ -1,0 +1,1505 @@
+=== Rspack M4 gaps ===
+RUN rspack xs-50 M4
+🔬 Benchmark: rspack × xs-50 × M4 (20 runs)
+   Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M4.csv
+  Starting rspack dev server...
+  Dev server ready on port 3000
+  Page loaded. Starting HMR measurements...
+  Run 1/20: 16ms
+  Run 2/20: 14ms
+  Run 3/20: 14ms
+  Run 4/20: 15ms
+  Run 5/20: 6ms
+  Run 6/20: 12ms
+  Run 7/20: 73ms
+  Run 8/20: 29ms
+  Run 9/20: 15ms
+  Run 10/20: 16ms
+  Run 11/20: 16ms
+  Run 12/20: 13ms
+  Run 13/20: 14ms
+  Run 14/20: 14ms
+  Run 15/20: 14ms
+  Run 16/20: 12ms
+  Run 17/20: 14ms
+  Run 18/20: 14ms
+  Run 19/20: 14ms
+  Run 20/20: 15ms
+  Dev server stopped.
+✅ M4 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M4.csv
+
+📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M4.csv
+RUN rspack m-500 M4
+🔬 Benchmark: rspack × m-500 × M4 (20 runs)
+   Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M4.csv
+  Starting rspack dev server...
+  Dev server ready on port 3000
+  Page loaded. Starting HMR measurements...
+  Run 1/20: 12ms
+  Run 2/20: 14ms
+  Run 3/20: 14ms
+  Run 4/20: 16ms
+  Run 5/20: 14ms
+  Run 6/20: 13ms
+  Run 7/20: 15ms
+  Run 8/20: 14ms
+  Run 9/20: 48ms
+  Run 10/20: 14ms
+  Run 11/20: 15ms
+  Run 12/20: 9ms
+  Run 13/20: 22ms
+  Run 14/20: 15ms
+  Run 15/20: 4ms
+  Run 16/20: 13ms
+  Run 17/20: 13ms
+  Run 18/20: 15ms
+  Run 19/20: 13ms
+  Run 20/20: 14ms
+  Dev server stopped.
+✅ M4 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M4.csv
+
+📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M4.csv
+RUN rspack xl-5000 M4
+🔬 Benchmark: rspack × xl-5000 × M4 (20 runs)
+   Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M4.csv
+  Starting rspack dev server...
+  Dev server ready on port 3000
+  Page loaded. Starting HMR measurements...
+  Run 1/20: TIMEOUT (no HMR update detected)
+  Run 2/20: TIMEOUT (no HMR update detected)
+  Run 3/20: TIMEOUT (no HMR update detected)
+  Run 4/20: TIMEOUT (no HMR update detected)
+  Run 5/20: TIMEOUT (no HMR update detected)
+  Run 6/20: TIMEOUT (no HMR update detected)
+  Run 7/20: TIMEOUT (no HMR update detected)
+  Run 8/20: TIMEOUT (no HMR update detected)
+  Run 9/20: TIMEOUT (no HMR update detected)
+  Run 10/20: TIMEOUT (no HMR update detected)
+  Run 11/20: TIMEOUT (no HMR update detected)
+  Run 12/20: TIMEOUT (no HMR update detected)
+  Run 13/20: TIMEOUT (no HMR update detected)
+  Run 14/20: TIMEOUT (no HMR update detected)
+  Run 15/20: TIMEOUT (no HMR update detected)
+  Run 16/20: TIMEOUT (no HMR update detected)
+  Run 17/20: TIMEOUT (no HMR update detected)
+  Run 18/20: TIMEOUT (no HMR update detected)
+  Run 19/20: TIMEOUT (no HMR update detected)
+  Run 20/20: TIMEOUT (no HMR update detected)
+  Dev server stopped.
+✅ M4 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M4.csv
+
+📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M4.csv
+
+=== esbuild (all metrics, no HMR) ===
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   esbuild
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 43
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: esbuild
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/43] esbuild × xs-50 × M2 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M2.csv
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):     682.2 ms ± 845.5 ms    [User: 501.8 ms, System: 362.8 ms]
+      Range (min … max):   382.2 ms … 3085.4 ms    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (3.085 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 399 ms
+      StdDev: 845 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M2.csv
+    ⏱️  9s elapsed, ~378s remaining
+
+  [2/43] esbuild × s-200 × M2 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M2.csv
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):     793.3 ms ± 638.2 ms    [User: 764.6 ms, System: 580.8 ms]
+      Range (min … max):   526.0 ms … 2555.3 ms    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (2.555 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 544 ms
+      StdDev: 638 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M2.csv
+    ⏱️  18s elapsed, ~369s remaining
+
+  [3/43] esbuild × m-500 × M2 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M2.csv
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):      1.371 s ±  1.198 s    [User: 0.590 s, System: 0.877 s]
+      Range (min … max):    0.957 s …  4.778 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (4.778 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 989 ms
+      StdDev: 1198 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M2.csv
+    ⏱️  34s elapsed, ~452s remaining
+
+  [4/43] esbuild × l-2000 × M2 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M2.csv
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):      4.284 s ±  2.532 s    [User: 1.177 s, System: 3.292 s]
+      Range (min … max):    3.087 s … 11.420 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (11.420 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 3592 ms
+      StdDev: 2532 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M2.csv
+    ⏱️  80s elapsed, ~780s remaining
+
+  [5/43] esbuild × xl-5000 × M2 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M2.csv
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):     17.032 s ±  5.321 s    [User: 2.555 s, System: 7.088 s]
+      Range (min … max):   13.549 s … 30.479 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (30.479 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 14683 ms
+      StdDev: 5321 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M2.csv
+    ⏱️  255s elapsed, ~1938s remaining
+
+  [6/43] esbuild × xs-50 × M5 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M5.csv
+      Raw bundle size: 370950 bytes (362.2 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M5.csv
+    ⏱️  257s elapsed, ~1583s remaining
+
+  [7/43] esbuild × s-200 × M5 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M5.csv
+      Raw bundle size: 1298868 bytes (1268.4 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M5.csv
+    ⏱️  258s elapsed, ~1324s remaining
+
+  [8/43] esbuild × m-500 × M5 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M5.csv
+      Raw bundle size: 6531439 bytes (6378.3 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M5.csv
+    ⏱️  261s elapsed, ~1141s remaining
+
+  [9/43] esbuild × l-2000 × M5 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M5.csv
+      Raw bundle size: 32751306 bytes (31983.6 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M5.csv
+    ⏱️  269s elapsed, ~1013s remaining
+
+  [10/43] esbuild × xl-5000 × M5 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M5.csv
+      Raw bundle size: 167317981 bytes (163396.4 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M5.csv
+    ⏱️  299s elapsed, ~986s remaining
+
+  [11/43] esbuild × xs-50 × M6 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M6.csv
+      Gzipped JS size: 90106 bytes (87.9 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M6.csv
+    ⏱️  301s elapsed, ~873s remaining
+
+  [12/43] esbuild × s-200 × M6 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M6.csv
+      Gzipped JS size: 151151 bytes (147.6 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M6.csv
+    ⏱️  302s elapsed, ~778s remaining
+
+  [13/43] esbuild × m-500 × M6 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M6.csv
+      Gzipped JS size: 404245 bytes (394.7 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M6.csv
+    ⏱️  305s elapsed, ~702s remaining
+
+  [14/43] esbuild × l-2000 × M6 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M6.csv
+      Gzipped JS size: 862291 bytes (842.0 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M6.csv
+    ⏱️  313s elapsed, ~646s remaining
+
+  [15/43] esbuild × xl-5000 × M6 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M6.csv
+      Gzipped JS size: 1861322 bytes (1817.6 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M6.csv
+    ⏱️  346s elapsed, ~644s remaining
+
+  [16/43] esbuild × xs-50 × M7 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M7.csv
+      lodash references in bundle: 5
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M7.csv
+    ⏱️  348s elapsed, ~585s remaining
+
+  [17/43] esbuild × s-200 × M7 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M7.csv
+      lodash references in bundle: 5
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M7.csv
+    ⏱️  352s elapsed, ~538s remaining
+
+  [18/43] esbuild × m-500 × M7 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M7.csv
+      lodash references in bundle: 6
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M7.csv
+    ⏱️  357s elapsed, ~495s remaining
+
+  [19/43] esbuild × l-2000 × M7 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M7.csv
+      lodash references in bundle: 6
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M7.csv
+    ⏱️  374s elapsed, ~470s remaining
+
+  [20/43] esbuild × xl-5000 × M7 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M7.csv
+      lodash references in bundle: 6
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M7.csv
+    ⏱️  430s elapsed, ~494s remaining
+
+  [21/43] esbuild × xs-50 × M8 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M8.csv
+      JS chunks: 1
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M8.csv
+    ⏱️  433s elapsed, ~453s remaining
+
+  [22/43] esbuild × s-200 × M8 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M8.csv
+      JS chunks: 10
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M8.csv
+    ⏱️  438s elapsed, ~417s remaining
+
+  [23/43] esbuild × m-500 × M8 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M8.csv
+      JS chunks: 31
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M8.csv
+    ⏱️  445s elapsed, ~386s remaining
+
+  [24/43] esbuild × l-2000 × M8 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M8.csv
+      JS chunks: 50
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M8.csv
+    ⏱️  463s elapsed, ~364s remaining
+
+  [25/43] esbuild × xl-5000 × M8 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M8.csv
+      JS chunks: 119
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M8.csv
+    ⏱️  511s elapsed, ~367s remaining
+
+  [26/43] esbuild × xs-50 × M9 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M9.csv
+      Sourcemaps: 1 maps for 1 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M9.csv
+    ⏱️  519s elapsed, ~338s remaining
+
+  [27/43] esbuild × s-200 × M9 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M9.csv
+      Sourcemaps: 10 maps for 10 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M9.csv
+    ⏱️  537s elapsed, ~316s remaining
+
+  [28/43] esbuild × m-500 × M9 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M9.csv
+      Sourcemaps: 31 maps for 31 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M9.csv
+    ⏱️  554s elapsed, ~295s remaining
+
+  [29/43] esbuild × l-2000 × M9 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M9.csv
+      Sourcemaps: 50 maps for 50 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M9.csv
+    ⏱️  576s elapsed, ~277s remaining
+
+  [30/43] esbuild × xl-5000 × M9 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M9.csv
+      Sourcemaps: 119 maps for 119 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M9.csv
+    ⏱️  631s elapsed, ~273s remaining
+
+  [31/43] esbuild × xs-50 × M10 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M10.csv
+      Run 1: Peak RSS = 103.1 MB
+      Run 2: Peak RSS = 102.7 MB
+      Run 3: Peak RSS = 101.3 MB
+      Run 4: Peak RSS = 100.0 MB
+      Run 5: Peak RSS = 99.6 MB
+      Run 6: Peak RSS = 96.0 MB
+      Run 7: Peak RSS = 100.9 MB
+      Run 8: Peak RSS = 98.1 MB
+      Run 9: Peak RSS = 99.6 MB
+      Run 10: Peak RSS = 101.3 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M10.csv
+    ⏱️  638s elapsed, ~246s remaining
+
+  [32/43] esbuild × s-200 × M10 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M10.csv
+      Run 1: Peak RSS = 147.6 MB
+      Run 2: Peak RSS = 134.9 MB
+      Run 3: Peak RSS = 140.0 MB
+      Run 4: Peak RSS = 139.2 MB
+      Run 5: Peak RSS = 142.0 MB
+      Run 6: Peak RSS = 141.0 MB
+      Run 7: Peak RSS = 143.3 MB
+      Run 8: Peak RSS = 135.1 MB
+      Run 9: Peak RSS = 140.2 MB
+      Run 10: Peak RSS = 141.1 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M10.csv
+    ⏱️  648s elapsed, ~222s remaining
+
+  [33/43] esbuild × m-500 × M10 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M10.csv
+      Run 1: Peak RSS = 122.9 MB
+      Run 2: Peak RSS = 124.4 MB
+      Run 3: Peak RSS = 124.9 MB
+      Run 4: Peak RSS = 113.9 MB
+      Run 5: Peak RSS = 124.2 MB
+      Run 6: Peak RSS = 125.1 MB
+      Run 7: Peak RSS = 124.0 MB
+      Run 8: Peak RSS = 125.3 MB
+      Run 9: Peak RSS = 124.7 MB
+      Run 10: Peak RSS = 124.0 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M10.csv
+    ⏱️  672s elapsed, ~203s remaining
+
+  [34/43] esbuild × l-2000 × M10 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M10.csv
+      Run 1: Peak RSS = 158.9 MB
+      Run 2: Peak RSS = 181.5 MB
+      Run 3: Peak RSS = 175.6 MB
+      Run 4: Peak RSS = 176.1 MB
+      Run 5: Peak RSS = 176.7 MB
+      Run 6: Peak RSS = 180.2 MB
+      Run 7: Peak RSS = 177.9 MB
+      Run 8: Peak RSS = 178.9 MB
+      Run 9: Peak RSS = 179.7 MB
+      Run 10: Peak RSS = 173.3 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M10.csv
+    ⏱️  725s elapsed, ~191s remaining
+
+  [35/43] esbuild × xl-5000 × M10 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M10.csv
+      Run 1: Peak RSS = 271.6 MB
+      Run 2: Peak RSS = 286.9 MB
+      Run 3: Peak RSS = 279.1 MB
+      Run 4: Peak RSS = 290.1 MB
+      Run 5: Peak RSS = 289.1 MB
+      Run 6: Peak RSS = 285.0 MB
+      Run 7: Peak RSS = 267.4 MB
+      Run 8: Peak RSS = 292.7 MB
+      Run 9: Peak RSS = 286.2 MB
+      Run 10: Peak RSS = 287.6 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M10.csv
+    ⏱️  937s elapsed, ~213s remaining
+
+  [36/43] esbuild × xs-50 × M11 (10 runs)
+    🔬 Benchmark: esbuild × xs-50 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M11.csv
+      Run 1: CPU = 10.66s (user=5.33s sys=5.33s)
+      Run 2: CPU = 1.36s (user=0.68s sys=0.68s)
+      Run 3: CPU = 1.42s (user=0.71s sys=0.71s)
+      Run 4: CPU = 1.48s (user=0.74s sys=0.74s)
+      Run 5: CPU = 1.58s (user=0.79s sys=0.79s)
+      Run 6: CPU = 1.32s (user=0.66s sys=0.66s)
+      Run 7: CPU = 1.26s (user=0.63s sys=0.63s)
+      Run 8: CPU = 1.40s (user=0.70s sys=0.70s)
+      Run 9: CPU = 1.92s (user=0.96s sys=0.96s)
+      Run 10: CPU = 1.26s (user=0.63s sys=0.63s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M11.csv
+    ⏱️  952s elapsed, ~184s remaining
+
+  [37/43] esbuild × s-200 × M11 (10 runs)
+    🔬 Benchmark: esbuild × s-200 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M11.csv
+      Run 1: CPU = 7.80s (user=3.90s sys=3.90s)
+      Run 2: CPU = 1.42s (user=0.71s sys=0.71s)
+      Run 3: CPU = 1.80s (user=0.90s sys=0.90s)
+      Run 4: CPU = 1.60s (user=0.80s sys=0.80s)
+      Run 5: CPU = 2.34s (user=1.17s sys=1.17s)
+      Run 6: CPU = 1.70s (user=0.85s sys=0.85s)
+      Run 7: CPU = 1.46s (user=0.73s sys=0.73s)
+      Run 8: CPU = 6.04s (user=3.02s sys=3.02s)
+      Run 9: CPU = 2.54s (user=1.27s sys=1.27s)
+      Run 10: CPU = 1.52s (user=0.76s sys=0.76s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_s-200_M11.csv
+    ⏱️  970s elapsed, ~157s remaining
+
+  [38/43] esbuild × m-500 × M11 (10 runs)
+    🔬 Benchmark: esbuild × m-500 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M11.csv
+      Run 1: CPU = 19.86s (user=9.93s sys=9.93s)
+      Run 2: CPU = 3.92s (user=1.96s sys=1.96s)
+      Run 3: CPU = 3.32s (user=1.66s sys=1.66s)
+      Run 4: CPU = 3.48s (user=1.74s sys=1.74s)
+      Run 5: CPU = 3.06s (user=1.53s sys=1.53s)
+      Run 6: CPU = 3.58s (user=1.79s sys=1.79s)
+      Run 7: CPU = 3.12s (user=1.56s sys=1.56s)
+      Run 8: CPU = 4.00s (user=2.00s sys=2.00s)
+      Run 9: CPU = 2.46s (user=1.23s sys=1.23s)
+      Run 10: CPU = 3.38s (user=1.69s sys=1.69s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M11.csv
+    ⏱️  1002s elapsed, ~131s remaining
+
+  [39/43] esbuild × l-2000 × M11 (10 runs)
+    🔬 Benchmark: esbuild × l-2000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M11.csv
+      Run 1: CPU = 33.44s (user=16.72s sys=16.72s)
+      Run 2: CPU = 8.50s (user=4.25s sys=4.25s)
+      Run 3: CPU = 8.84s (user=4.42s sys=4.42s)
+      Run 4: CPU = 8.76s (user=4.38s sys=4.38s)
+      Run 5: CPU = 9.90s (user=4.95s sys=4.95s)
+      Run 6: CPU = 9.84s (user=4.92s sys=4.92s)
+      Run 7: CPU = 8.02s (user=4.01s sys=4.01s)
+      Run 8: CPU = 7.36s (user=3.68s sys=3.68s)
+      Run 9: CPU = 9.28s (user=4.64s sys=4.64s)
+      Run 10: CPU = 8.04s (user=4.02s sys=4.02s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_l-2000_M11.csv
+    ⏱️  1065s elapsed, ~109s remaining
+
+  [40/43] esbuild × xl-5000 × M11 (10 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M11.csv
+      Run 1: CPU = 72.36s (user=36.18s sys=36.18s)
+      Run 2: CPU = 60.20s (user=30.10s sys=30.10s)
+      Run 3: CPU = 29.02s (user=14.51s sys=14.51s)
+      Run 4: CPU = 27.84s (user=13.92s sys=13.92s)
+      Run 5: CPU = 28.30s (user=14.15s sys=14.15s)
+      Run 6: CPU = 28.52s (user=14.26s sys=14.26s)
+      Run 7: CPU = 28.60s (user=14.30s sys=14.30s)
+      Run 8: CPU = 27.76s (user=13.88s sys=13.88s)
+      Run 9: CPU = 29.18s (user=14.59s sys=14.59s)
+      Run 10: CPU = 28.74s (user=14.37s sys=14.37s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M11.csv
+    ⏱️  1250s elapsed, ~93s remaining
+
+  [41/43] esbuild × xs-50 × M3 (20 runs)
+    🔬 Benchmark: esbuild × xs-50 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M3.csv
+      Starting esbuild watch mode...
+      Target file: AuthConfirm.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: TIMEOUT
+      Run 2/20: TIMEOUT
+      Run 3/20: TIMEOUT
+      Run 4/20: TIMEOUT
+      Run 5/20: TIMEOUT
+      Run 6/20: TIMEOUT
+      Run 7/20: TIMEOUT
+      Run 8/20: TIMEOUT
+      Run 9/20: TIMEOUT
+      Run 10/20: TIMEOUT
+      Run 11/20: TIMEOUT
+      Run 12/20: TIMEOUT
+      Run 13/20: TIMEOUT
+      Run 14/20: TIMEOUT
+      Run 15/20: TIMEOUT
+      Run 16/20: TIMEOUT
+      Run 17/20: TIMEOUT
+      Run 18/20: TIMEOUT
+      Run 19/20: TIMEOUT
+      Run 20/20: TIMEOUT
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xs-50_M3.csv
+    ⏱️  3661s elapsed, ~178s remaining
+
+  [42/43] esbuild × m-500 × M3 (20 runs)
+    🔬 Benchmark: esbuild × m-500 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M3.csv
+      Starting esbuild watch mode...
+      Target file: AnalyticsAlert.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: TIMEOUT
+      Run 2/20: TIMEOUT
+      Run 3/20: TIMEOUT
+      Run 4/20: TIMEOUT
+      Run 5/20: TIMEOUT
+      Run 6/20: TIMEOUT
+      Run 7/20: TIMEOUT
+      Run 8/20: TIMEOUT
+      Run 9/20: TIMEOUT
+      Run 10/20: TIMEOUT
+      Run 11/20: TIMEOUT
+      Run 12/20: TIMEOUT
+      Run 13/20: TIMEOUT
+      Run 14/20: TIMEOUT
+      Run 15/20: TIMEOUT
+      Run 16/20: TIMEOUT
+      Run 17/20: TIMEOUT
+      Run 18/20: TIMEOUT
+      Run 19/20: TIMEOUT
+      Run 20/20: TIMEOUT
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_m-500_M3.csv
+    ⏱️  6079s elapsed, ~144s remaining
+
+  [43/43] esbuild × xl-5000 × M3 (20 runs)
+    🔬 Benchmark: esbuild × xl-5000 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M3.csv
+      Starting esbuild watch mode...
+      Target file: ActivityAdapter.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: TIMEOUT
+      Run 2/20: TIMEOUT
+      Run 3/20: TIMEOUT
+      Run 4/20: TIMEOUT
+      Run 5/20: TIMEOUT
+      Run 6/20: TIMEOUT
+      Run 7/20: TIMEOUT
+      Run 8/20: TIMEOUT
+      Run 9/20: TIMEOUT
+      Run 10/20: TIMEOUT
+      Run 11/20: TIMEOUT
+      Run 12/20: TIMEOUT
+      Run 13/20: TIMEOUT
+      Run 14/20: TIMEOUT
+      Run 15/20: TIMEOUT
+      Run 16/20: TIMEOUT
+      Run 17/20: TIMEOUT
+      Run 18/20: TIMEOUT
+      Run 19/20: TIMEOUT
+      Run 20/20: TIMEOUT
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/esbuild_xl-5000_M3.csv
+    ⏱️  8497s elapsed, ~0s remaining
+
+╔══════════════════════════════════════════════════╗
+║   ✅ All benchmarks complete!                    ║
+║   Total time: 8497s                     ║
+║   Results in: results/tier1-raw/                 ║
+╚══════════════════════════════════════════════════╝
+
+=== webpack (all metrics) ===
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   webpack
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 49
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: webpack
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/49] webpack × xs-50 × M2 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M2.csv
+    Benchmark 1: NODE_ENV=production npx webpack --mode production --config webpack.config.cjs
+      Time (mean ± σ):      5.819 s ±  6.395 s    [User: 6.409 s, System: 0.713 s]
+      Range (min … max):    3.600 s … 24.007 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (24.007 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 3712 ms
+      StdDev: 6395 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M2.csv
+    ⏱️  60s elapsed, ~2880s remaining
+
+  [2/49] webpack × s-200 × M2 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M2.csv
+    Benchmark 1: NODE_ENV=production npx webpack --mode production --config webpack.config.cjs
+      Time (mean ± σ):      6.350 s ±  2.621 s    [User: 13.126 s, System: 1.051 s]
+      Range (min … max):    5.080 s … 12.968 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (12.968 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 5214 ms
+      StdDev: 2621 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M2.csv
+    ⏱️  125s elapsed, ~2937s remaining
+
+  [3/49] webpack × m-500 × M2 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M2.csv
+    Benchmark 1: NODE_ENV=production npx webpack --mode production --config webpack.config.cjs
+      Time (mean ± σ):     12.187 s ±  3.927 s    [User: 25.809 s, System: 1.840 s]
+      Range (min … max):   10.431 s … 23.291 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (23.291 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 10983 ms
+      StdDev: 3927 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M2.csv
+    ⏱️  249s elapsed, ~3818s remaining
+
+  [4/49] webpack × l-2000 × M2 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M2.csv
+    Benchmark 1: NODE_ENV=production npx webpack --mode production --config webpack.config.cjs
+      Time (mean ± σ):     41.311 s ±  3.964 s    [User: 58.460 s, System: 4.883 s]
+      Range (min … max):   38.351 s … 51.434 s    10 runs
+     
+      Median: 39664 ms
+      StdDev: 3964 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M2.csv
+    ⏱️  6358s elapsed, ~71527s remaining
+
+  [5/49] webpack × xl-5000 × M2 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M2.csv
+    Benchmark 1: NODE_ENV=production npx webpack --mode production --config webpack.config.cjs
+      Time (mean ± σ):     120.580 s ± 12.607 s    [User: 158.768 s, System: 14.041 s]
+      Range (min … max):   109.900 s … 153.078 s    10 runs
+     
+      Median: 115872 ms
+      StdDev: 12607 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M2.csv
+    ⏱️  10884s elapsed, ~95779s remaining
+
+  [6/49] webpack × xs-50 × M5 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M5.csv
+      Raw bundle size: 372983 bytes (364.2 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M5.csv
+    ⏱️  10909s elapsed, ~78178s remaining
+
+  [7/49] webpack × s-200 × M5 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M5.csv
+      Raw bundle size: 887756 bytes (866.9 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M5.csv
+    ⏱️  10936s elapsed, ~65612s remaining
+
+  [8/49] webpack × m-500 × M5 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M5.csv
+      Raw bundle size: 2555959 bytes (2496.0 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M5.csv
+    ⏱️  10977s elapsed, ~56256s remaining
+
+  [9/49] webpack × l-2000 × M5 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M5.csv
+      Raw bundle size: 8114836 bytes (7924.6 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M5.csv
+    ⏱️  11091s elapsed, ~49292s remaining
+
+  [10/49] webpack × xl-5000 × M5 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M5.csv
+      Raw bundle size: 19327288 bytes (18874.3 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M5.csv
+    ⏱️  11510s elapsed, ~44889s remaining
+
+  [11/49] webpack × xs-50 × M6 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M6.csv
+      Gzipped JS size: 87038 bytes (84.9 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M6.csv
+    ⏱️  11537s elapsed, ~39854s remaining
+
+  [12/49] webpack × s-200 × M6 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M6.csv
+      Gzipped JS size: 148225 bytes (144.7 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M6.csv
+    ⏱️  11561s elapsed, ~35645s remaining
+
+  [13/49] webpack × m-500 × M6 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M6.csv
+      Gzipped JS size: 370827 bytes (362.1 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M6.csv
+    ⏱️  11602s elapsed, ~32126s remaining
+
+  [14/49] webpack × l-2000 × M6 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M6.csv
+      Gzipped JS size: 836548 bytes (816.9 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M6.csv
+    ⏱️  11699s elapsed, ~29246s remaining
+
+  [15/49] webpack × xl-5000 × M6 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M6.csv
+      Gzipped JS size: 1829249 bytes (1786.3 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M6.csv
+    ⏱️  11928s elapsed, ~27036s remaining
+
+  [16/49] webpack × xs-50 × M7 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M7.csv
+    ⏱️  11940s elapsed, ~24624s remaining
+
+  [17/49] webpack × s-200 × M7 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M7.csv
+    ⏱️  11956s elapsed, ~22502s remaining
+
+  [18/49] webpack × m-500 × M7 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M7.csv
+    ⏱️  11981s elapsed, ~20633s remaining
+
+  [19/49] webpack × l-2000 × M7 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M7.csv
+    ⏱️  12063s elapsed, ~19044s remaining
+
+  [20/49] webpack × xl-5000 × M7 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M7.csv
+    ⏱️  12294s elapsed, ~17826s remaining
+
+  [21/49] webpack × xs-50 × M8 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M8.csv
+      JS chunks: 2
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M8.csv
+    ⏱️  12303s elapsed, ~16402s remaining
+
+  [22/49] webpack × s-200 × M8 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M8.csv
+      JS chunks: 5
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M8.csv
+    ⏱️  12314s elapsed, ~15111s remaining
+
+  [23/49] webpack × m-500 × M8 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M8.csv
+      JS chunks: 6
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M8.csv
+    ⏱️  12337s elapsed, ~13943s remaining
+
+  [24/49] webpack × l-2000 × M8 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M8.csv
+      JS chunks: 6
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M8.csv
+    ⏱️  12420s elapsed, ~12937s remaining
+
+  [25/49] webpack × xl-5000 × M8 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M8.csv
+      JS chunks: 13
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M8.csv
+    ⏱️  12638s elapsed, ~12132s remaining
+
+  [26/49] webpack × xs-50 × M9 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M9.csv
+      Sourcemaps: 2 maps for 2 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M9.csv
+    ⏱️  12646s elapsed, ~11184s remaining
+
+  [27/49] webpack × s-200 × M9 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M9.csv
+      Sourcemaps: 5 maps for 5 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M9.csv
+    ⏱️  12657s elapsed, ~10311s remaining
+
+  [28/49] webpack × m-500 × M9 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M9.csv
+      Sourcemaps: 6 maps for 6 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M9.csv
+    ⏱️  12678s elapsed, ~9506s remaining
+
+  [29/49] webpack × l-2000 × M9 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M9.csv
+      Sourcemaps: 6 maps for 6 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M9.csv
+    ⏱️  12755s elapsed, ~8796s remaining
+
+  [30/49] webpack × xl-5000 × M9 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M9.csv
+      Sourcemaps: 13 maps for 13 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M9.csv
+    ⏱️  12971s elapsed, ~8213s remaining
+
+  [31/49] webpack × xs-50 × M10 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M10.csv
+      Run 1: Peak RSS = 480.8 MB
+      Run 2: Peak RSS = 465.9 MB
+      Run 3: Peak RSS = 481.0 MB
+      Run 4: Peak RSS = 474.3 MB
+      Run 5: Peak RSS = 464.4 MB
+      Run 6: Peak RSS = 483.4 MB
+      Run 7: Peak RSS = 462.2 MB
+      Run 8: Peak RSS = 481.5 MB
+      Run 9: Peak RSS = 487.7 MB
+      Run 10: Peak RSS = 477.2 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M10.csv
+    ⏱️  13011s elapsed, ~7554s remaining
+
+  [32/49] webpack × s-200 × M10 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M10.csv
+      Run 1: Peak RSS = 846.3 MB
+      Run 2: Peak RSS = 895.8 MB
+      Run 3: Peak RSS = 897.1 MB
+      Run 4: Peak RSS = 927.0 MB
+      Run 5: Peak RSS = 933.0 MB
+      Run 6: Peak RSS = 913.6 MB
+      Run 7: Peak RSS = 847.9 MB
+      Run 8: Peak RSS = 889.5 MB
+      Run 9: Peak RSS = 840.0 MB
+      Run 10: Peak RSS = 929.8 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M10.csv
+    ⏱️  13069s elapsed, ~6942s remaining
+
+  [33/49] webpack × m-500 × M10 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M10.csv
+      Run 1: Peak RSS = 2229.3 MB
+      Run 2: Peak RSS = 2141.7 MB
+      Run 3: Peak RSS = 2119.1 MB
+      Run 4: Peak RSS = 2051.6 MB
+      Run 5: Peak RSS = 2214.4 MB
+      Run 6: Peak RSS = 2109.8 MB
+      Run 7: Peak RSS = 2160.0 MB
+      Run 8: Peak RSS = 2127.9 MB
+      Run 9: Peak RSS = 2041.2 MB
+      Run 10: Peak RSS = 1963.5 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M10.csv
+    ⏱️  13185s elapsed, ~6392s remaining
+
+  [34/49] webpack × l-2000 × M10 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M10.csv
+      Run 1: Peak RSS = 4197.4 MB
+      Run 2: Peak RSS = 4797.1 MB
+      Run 3: Peak RSS = 4745.2 MB
+      Run 4: Peak RSS = 4093.2 MB
+      Run 5: Peak RSS = 5169.8 MB
+      Run 6: Peak RSS = 4867.8 MB
+      Run 7: Peak RSS = 4550.2 MB
+      Run 8: Peak RSS = 4883.8 MB
+      Run 9: Peak RSS = 5005.9 MB
+      Run 10: Peak RSS = 5164.2 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M10.csv
+    ⏱️  13592s elapsed, ~5995s remaining
+
+  [35/49] webpack × xl-5000 × M10 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M10.csv
+      Run 1: Peak RSS = 5416.8 MB
+      Run 2: Peak RSS = 5659.8 MB
+      Run 3: Peak RSS = 5803.0 MB
+      Run 4: Peak RSS = 5521.0 MB
+      Run 5: Peak RSS = 6748.2 MB
+      Run 6: Peak RSS = 6594.2 MB
+      Run 7: Peak RSS = 5936.7 MB
+      Run 8: Peak RSS = 5913.7 MB
+      Run 9: Peak RSS = 7003.0 MB
+      Run 10: Peak RSS = 6477.5 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M10.csv
+    ⏱️  14719s elapsed, ~5887s remaining
+
+  [36/49] webpack × xs-50 × M11 (10 runs)
+    🔬 Benchmark: webpack × xs-50 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M11.csv
+      Run 1: CPU = 75.40s (user=37.70s sys=37.70s)
+      Run 2: CPU = 7.80s (user=3.90s sys=3.90s)
+      Run 3: CPU = 7.82s (user=3.91s sys=3.91s)
+      Run 4: CPU = 7.40s (user=3.70s sys=3.70s)
+      Run 5: CPU = 7.42s (user=3.71s sys=3.71s)
+      Run 6: CPU = 9.64s (user=4.82s sys=4.82s)
+      Run 7: CPU = 9.24s (user=4.62s sys=4.62s)
+      Run 8: CPU = 7.62s (user=3.81s sys=3.81s)
+      Run 9: CPU = 7.48s (user=3.74s sys=3.74s)
+      Run 10: CPU = 8.38s (user=4.19s sys=4.19s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M11.csv
+    ⏱️  14795s elapsed, ~5341s remaining
+
+  [37/49] webpack × s-200 × M11 (10 runs)
+    🔬 Benchmark: webpack × s-200 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M11.csv
+      Run 1: CPU = 45.30s (user=22.65s sys=22.65s)
+      Run 2: CPU = 10.44s (user=5.22s sys=5.22s)
+      Run 3: CPU = 10.42s (user=5.21s sys=5.21s)
+      Run 4: CPU = 10.20s (user=5.10s sys=5.10s)
+      Run 5: CPU = 10.88s (user=5.44s sys=5.44s)
+      Run 6: CPU = 10.24s (user=5.12s sys=5.12s)
+      Run 7: CPU = 10.08s (user=5.04s sys=5.04s)
+      Run 8: CPU = 10.48s (user=5.24s sys=5.24s)
+      Run 9: CPU = 10.22s (user=5.11s sys=5.11s)
+      Run 10: CPU = 10.16s (user=5.08s sys=5.08s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_s-200_M11.csv
+    ⏱️  14866s elapsed, ~4820s remaining
+
+  [38/49] webpack × m-500 × M11 (10 runs)
+    🔬 Benchmark: webpack × m-500 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M11.csv
+      Run 1: CPU = 57.46s (user=28.73s sys=28.73s)
+      Run 2: CPU = 20.88s (user=10.44s sys=10.44s)
+      Run 3: CPU = 20.50s (user=10.25s sys=10.25s)
+      Run 4: CPU = 20.84s (user=10.42s sys=10.42s)
+      Run 5: CPU = 20.48s (user=10.24s sys=10.24s)
+      Run 6: CPU = 20.68s (user=10.34s sys=10.34s)
+      Run 7: CPU = 21.00s (user=10.50s sys=10.50s)
+      Run 8: CPU = 21.08s (user=10.54s sys=10.54s)
+      Run 9: CPU = 20.90s (user=10.45s sys=10.45s)
+      Run 10: CPU = 20.94s (user=10.47s sys=10.47s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M11.csv
+    ⏱️  14991s elapsed, ~4339s remaining
+
+  [39/49] webpack × l-2000 × M11 (10 runs)
+    🔬 Benchmark: webpack × l-2000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M11.csv
+      Run 1: CPU = 119.56s (user=59.78s sys=59.78s)
+      Run 2: CPU = 76.90s (user=38.45s sys=38.45s)
+      Run 3: CPU = 77.02s (user=38.51s sys=38.51s)
+      Run 4: CPU = 77.04s (user=38.52s sys=38.52s)
+      Run 5: CPU = 76.64s (user=38.32s sys=38.32s)
+      Run 6: CPU = 77.12s (user=38.56s sys=38.56s)
+      Run 7: CPU = 79.64s (user=39.82s sys=39.82s)
+      Run 8: CPU = 76.66s (user=38.33s sys=38.33s)
+      Run 9: CPU = 76.34s (user=38.17s sys=38.17s)
+      Run 10: CPU = 76.96s (user=38.48s sys=38.48s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_l-2000_M11.csv
+    ⏱️  15400s elapsed, ~3948s remaining
+
+  [40/49] webpack × xl-5000 × M11 (10 runs)
+    🔬 Benchmark: webpack × xl-5000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M11.csv
+      Run 1: CPU = 276.22s (user=138.11s sys=138.11s)
+      Run 2: CPU = 213.84s (user=106.92s sys=106.92s)
+      Run 3: CPU = 215.32s (user=107.66s sys=107.66s)
+      Run 4: CPU = 214.72s (user=107.36s sys=107.36s)
+      Run 5: CPU = 213.04s (user=106.52s sys=106.52s)
+      Run 6: CPU = 213.88s (user=106.94s sys=106.94s)
+      Run 7: CPU = 215.78s (user=107.89s sys=107.89s)
+      Run 8: CPU = 226.40s (user=113.20s sys=113.20s)
+      Run 9: CPU = 213.02s (user=106.51s sys=106.51s)
+      Run 10: CPU = 214.32s (user=107.16s sys=107.16s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M11.csv
+    ⏱️  16510s elapsed, ~3714s remaining
+
+  [41/49] webpack × xs-50 × M1 (20 runs)
+    🔬 Benchmark: webpack × xs-50 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M1.csv
+      Run 1: 8329ms
+      Run 2: 3889ms
+      Run 3: 2422ms
+      Run 4: 2577ms
+      Run 5: 2547ms
+      Run 6: 2531ms
+      Run 7: 2682ms
+      Run 8: 2637ms
+      Run 9: 2955ms
+      Run 10: 2454ms
+      Run 11: 2503ms
+      Run 12: 2430ms
+      Run 13: 2417ms
+      Run 14: 2448ms
+      Run 15: 2439ms
+      Run 16: 2467ms
+      Run 17: 2413ms
+      Run 18: 2445ms
+      Run 19: 2430ms
+      Run 20: 2722ms
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M1.csv
+    ⏱️  16572s elapsed, ~3232s remaining
+
+  [42/49] webpack × m-500 × M1 (20 runs)
+    🔬 Benchmark: webpack × m-500 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M1.csv
+      Run 1: 6992ms
+      Run 2: 5927ms
+      Run 3: 4403ms
+      Run 4: 4623ms
+      Run 5: 4595ms
+      Run 6: 4516ms
+      Run 7: 4530ms
+      Run 8: 4371ms
+      Run 9: 4375ms
+      Run 10: 4320ms
+      Run 11: 4389ms
+      Run 12: 4397ms
+      Run 13: 4539ms
+      Run 14: 4380ms
+      Run 15: 4350ms
+      Run 16: 4491ms
+      Run 17: 4717ms
+      Run 18: 4634ms
+      Run 19: 4550ms
+      Run 20: 4510ms
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M1.csv
+    ⏱️  16669s elapsed, ~2777s remaining
+
+  [43/49] webpack × xl-5000 × M1 (20 runs)
+    🔬 Benchmark: webpack × xl-5000 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M1.csv
+      Run 1: 21464ms
+      Run 2: 20780ms
+      Run 3: 18985ms
+      Run 4: 18897ms
+      Run 5: 18829ms
+      Run 6: 18885ms
+      Run 7: 18772ms
+      Run 8: 18737ms
+      Run 9: 19536ms
+      Run 10: 19098ms
+      Run 11: 19029ms
+      Run 12: 19191ms
+      Run 13: 18911ms
+      Run 14: 18944ms
+      Run 15: 18748ms
+      Run 16: 18993ms
+      Run 17: 18938ms
+      Run 18: 18860ms
+      Run 19: 18790ms
+      Run 20: 18871ms
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M1.csv
+    ⏱️  17058s elapsed, ~2379s remaining
+
+  [44/49] webpack × xs-50 × M3 (20 runs)
+    🔬 Benchmark: webpack × xs-50 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M3.csv
+      Starting webpack watch mode...
+      Target file: AuthConfirm.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 155ms
+      Run 2/20: 148ms
+      Run 3/20: 92ms
+      Run 4/20: 142ms
+      Run 5/20: 148ms
+      Run 6/20: 159ms
+      Run 7/20: 142ms
+      Run 8/20: 130ms
+      Run 9/20: 79ms
+      Run 10/20: 166ms
+      Run 11/20: 85ms
+      Run 12/20: 146ms
+      Run 13/20: 133ms
+      Run 14/20: 77ms
+      Run 15/20: 69ms
+      Run 16/20: 79ms
+      Run 17/20: 142ms
+      Run 18/20: 78ms
+      Run 19/20: 160ms
+      Run 20/20: 80ms
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M3.csv
+    ⏱️  17074s elapsed, ~1940s remaining
+
+  [45/49] webpack × m-500 × M3 (20 runs)
+    🔬 Benchmark: webpack × m-500 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M3.csv
+      Starting webpack watch mode...
+      Target file: AnalyticsAlert.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 389ms
+      Run 2/20: 347ms
+      Run 3/20: 295ms
+      Run 4/20: 327ms
+      Run 5/20: 536ms
+      Run 6/20: 312ms
+      Run 7/20: 564ms
+      Run 8/20: 303ms
+      Run 9/20: 538ms
+      Run 10/20: 596ms
+      Run 11/20: 290ms
+      Run 12/20: 559ms
+      Run 13/20: 625ms
+      Run 14/20: 285ms
+      Run 15/20: 514ms
+      Run 16/20: 550ms
+      Run 17/20: 593ms
+      Run 18/20: 500ms
+      Run 19/20: 578ms
+      Run 20/20: 564ms
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M3.csv
+    ⏱️  17108s elapsed, ~1520s remaining
+
+  [46/49] webpack × xl-5000 × M3 (20 runs)
+    🔬 Benchmark: webpack × xl-5000 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M3.csv
+      Starting webpack watch mode...
+      Target file: ActivityAdapter.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: TIMEOUT
+      Run 2/20: TIMEOUT
+      Run 3/20: TIMEOUT
+      Run 4/20: TIMEOUT
+      Run 5/20: TIMEOUT
+      Run 6/20: TIMEOUT
+      Run 7/20: TIMEOUT
+      Run 8/20: TIMEOUT
+      Run 9/20: TIMEOUT
+      Run 10/20: TIMEOUT
+      Run 11/20: TIMEOUT
+      Run 12/20: TIMEOUT
+      Run 13/20: TIMEOUT
+      Run 14/20: TIMEOUT
+      Run 15/20: TIMEOUT
+      Run 16/20: TIMEOUT
+      Run 17/20: TIMEOUT
+      Run 18/20: TIMEOUT
+      Run 19/20: TIMEOUT
+      Run 20/20: TIMEOUT
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M3.csv
+    ⏱️  19533s elapsed, ~1273s remaining
+
+  [47/49] webpack × xs-50 × M4 (20 runs)
+    🔬 Benchmark: webpack × xs-50 × M4 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M4.csv
+      Starting webpack dev server...
+      Dev server ready on port 3000
+      Page loaded. Starting HMR measurements...
+      Run 1/20: 35ms
+      Run 2/20: 14ms
+      Run 3/20: 13ms
+      Run 4/20: 54ms
+      Run 5/20: 16ms
+      Run 6/20: 15ms
+      Run 7/20: 16ms
+      Run 8/20: 15ms
+      Run 9/20: 57ms
+      Run 10/20: 64ms
+      Run 11/20: 14ms
+      Run 12/20: 14ms
+      Run 13/20: 16ms
+      Run 14/20: 13ms
+      Run 15/20: 16ms
+      Run 16/20: 12ms
+      Run 17/20: 36ms
+      Run 18/20: 36ms
+      Run 19/20: 14ms
+      Run 20/20: 47ms
+      Dev server stopped.
+    ✅ M4 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M4.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xs-50_M4.csv
+    ⏱️  19604s elapsed, ~834s remaining
+
+  [48/49] webpack × m-500 × M4 (20 runs)
+    🔬 Benchmark: webpack × m-500 × M4 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M4.csv
+      Starting webpack dev server...
+      Dev server ready on port 3000
+      Page loaded. Starting HMR measurements...
+      Run 1/20: 14ms
+      Run 2/20: 51ms
+      Run 3/20: 15ms
+      Run 4/20: 53ms
+      Run 5/20: 13ms
+      Run 6/20: 14ms
+      Run 7/20: 13ms
+      Run 8/20: 14ms
+      Run 9/20: 14ms
+      Run 10/20: 49ms
+      Run 11/20: 13ms
+      Run 12/20: 13ms
+      Run 13/20: 22ms
+      Run 14/20: 14ms
+      Run 15/20: 36ms
+      Run 16/20: 19ms
+      Run 17/20: 13ms
+      Run 18/20: 14ms
+      Run 19/20: 13ms
+      Run 20/20: 14ms
+      Dev server stopped.
+    ✅ M4 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M4.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_m-500_M4.csv
+    ⏱️  19673s elapsed, ~409s remaining
+
+  [49/49] webpack × xl-5000 × M4 (20 runs)
+    🔬 Benchmark: webpack × xl-5000 × M4 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/webpack_xl-5000_M4.csv
+      Starting webpack dev server...
+      Dev server ready on port 3000
+    Fatal: TimeoutError: Navigation timeout of 30000 ms exceeded
+        at new Deferred (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/util/Deferred.ts:74:28)
+        at Function.create (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/util/Deferred.ts:29:12)
+        at new LifecycleWatcher (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/cdp/LifecycleWatcher.ts:149:42)
+        at CdpFrame.goto (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/cdp/Frame.ts:173:21)
+        at CdpFrame.<anonymous> (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/util/decorators.ts:63:21)
+        at CdpPage.goto (/Users/s0p0icn/Documents/empirical-js-bundlers/node_modules/puppeteer-core/src/api/Page.ts:1886:35)
+        at main (/Users/s0p0icn/Documents/empirical-js-bundlers/scripts/measure-hmr.ts:156:14)

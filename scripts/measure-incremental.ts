@@ -86,10 +86,16 @@ function sleep(ms: number): Promise<void> {
 
 async function waitForPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<boolean> {
   return new Promise((resolve) => {
-    const timer = setTimeout(() => resolve(false), timeoutMs);
+    const timer = setTimeout(() => {
+      proc.stdout?.removeListener('data', handler);
+      proc.stderr?.removeListener('data', handler);
+      resolve(false);
+    }, timeoutMs);
     const handler = (data: Buffer) => {
       if (pattern.test(data.toString())) {
         clearTimeout(timer);
+        proc.stdout?.removeListener('data', handler);
+        proc.stderr?.removeListener('data', handler);
         resolve(true);
       }
     };
@@ -101,7 +107,11 @@ async function waitForPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 6
 async function waitForNextPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<number> {
   const start = Date.now();
   return new Promise((resolve) => {
-    const timer = setTimeout(() => resolve(-1), timeoutMs);
+    const timer = setTimeout(() => {
+      proc.stdout?.removeListener('data', handler);
+      proc.stderr?.removeListener('data', handler);
+      resolve(-1);
+    }, timeoutMs);
     const handler = (data: Buffer) => {
       if (pattern.test(data.toString())) {
         clearTimeout(timer);

@@ -4,7 +4,8 @@
     "@rspack/core": "^2.2.3",
     "@rspack/plugin-react-refresh": "^1.1.1",
     "react-refresh": "^0.14.2",
-    "css-loader": "^7.1.2"
+    "css-loader": "^7.1.2",
+    "@rspack/dev-server": "^2.2.3"
   },
   "scripts": {
     "dev": "rspack serve --config rspack.config.cjs",

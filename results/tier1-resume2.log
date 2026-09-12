@@ -1,0 +1,716 @@
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   rspack esbuild webpack rollup
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 184
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: rspack
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/184] rspack × xs-50 × M2 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M2.csv
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):      1.473 s ±  0.980 s    [User: 0.741 s, System: 0.452 s]
+      Range (min … max):    1.103 s …  4.257 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (4.257 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 1150 ms
+      StdDev: 980 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M2.csv
+    ⏱️  17s elapsed, ~3111s remaining
+
+  [2/184] rspack × s-200 × M2 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M2.csv
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):      1.762 s ±  0.622 s    [User: 1.413 s, System: 0.546 s]
+      Range (min … max):    1.451 s …  3.450 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (3.450 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 1518 ms
+      StdDev: 622 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M2.csv
+    ⏱️  37s elapsed, ~3367s remaining
+
+  [3/184] rspack × m-500 × M2 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M2.csv
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):      2.832 s ±  0.841 s    [User: 2.985 s, System: 0.922 s]
+      Range (min … max):    2.436 s …  5.161 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (5.161 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 2516 ms
+      StdDev: 841 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M2.csv
+    ⏱️  67s elapsed, ~4036s remaining
+
+  [4/184] rspack × l-2000 × M2 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M2.csv
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):      6.886 s ±  2.073 s    [User: 8.472 s, System: 1.835 s]
+      Range (min … max):    5.996 s … 12.687 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (12.687 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 6133 ms
+      StdDev: 2073 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M2.csv
+    ⏱️  138s elapsed, ~6210s remaining
+
+  [5/184] rspack × xl-5000 × M2 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M2.csv
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):     14.742 s ±  3.044 s    [User: 19.245 s, System: 3.755 s]
+      Range (min … max):   12.923 s … 23.204 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (23.204 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 13848 ms
+      StdDev: 3044 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M2.csv
+    ⏱️  287s elapsed, ~10274s remaining
+
+  [6/184] rspack × xs-50 × M5 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M5.csv
+      Raw bundle size: 435642 bytes (425.4 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M5.csv
+    ⏱️  291s elapsed, ~8633s remaining
+
+  [7/184] rspack × s-200 × M5 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M5.csv
+      Raw bundle size: 1182103 bytes (1154.3 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M5.csv
+    ⏱️  294s elapsed, ~7434s remaining
+
+  [8/184] rspack × m-500 × M5 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M5.csv
+      Raw bundle size: 3458372 bytes (3377.3 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M5.csv
+    ⏱️  301s elapsed, ~6617s remaining
+
+  [9/184] rspack × l-2000 × M5 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M5.csv
+      Raw bundle size: 11795557 bytes (11519.0 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M5.csv
+    ⏱️  314s elapsed, ~6090s remaining
+
+  [10/184] rspack × xl-5000 × M5 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M5.csv
+      Raw bundle size: 28623040 bytes (27952.1 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M5.csv
+    ⏱️  343s elapsed, ~5968s remaining
+
+  [11/184] rspack × xs-50 × M6 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M6.csv
+      Gzipped JS size: 99169 bytes (96.8 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M6.csv
+    ⏱️  346s elapsed, ~5432s remaining
+
+  [12/184] rspack × s-200 × M6 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M6.csv
+      Gzipped JS size: 207353 bytes (202.4 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M6.csv
+    ⏱️  350s elapsed, ~5005s remaining
+
+  [13/184] rspack × m-500 × M6 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M6.csv
+      Gzipped JS size: 516111 bytes (504.0 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M6.csv
+    ⏱️  356s elapsed, ~4668s remaining
+
+  [14/184] rspack × l-2000 × M6 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M6.csv
+      Gzipped JS size: 1420560 bytes (1387.2 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M6.csv
+    ⏱️  370s elapsed, ~4488s remaining
+
+  [15/184] rspack × xl-5000 × M6 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M6.csv
+      Gzipped JS size: 3252093 bytes (3175.8 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M6.csv
+    ⏱️  397s elapsed, ~4461s remaining
+
+  [16/184] rspack × xs-50 × M7 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M7.csv
+    ⏱️  401s elapsed, ~4200s remaining
+
+  [17/184] rspack × s-200 × M7 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M7.csv
+      lodash references in bundle: 1
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M7.csv
+    ⏱️  404s elapsed, ~3957s remaining
+
+  [18/184] rspack × m-500 × M7 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M7.csv
+      lodash references in bundle: 2
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M7.csv
+    ⏱️  410s elapsed, ~3768s remaining
+
+  [19/184] rspack × l-2000 × M7 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M7.csv
+      lodash references in bundle: 2
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M7.csv
+    ⏱️  423s elapsed, ~3663s remaining
+
+  [20/184] rspack × xl-5000 × M7 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M7.csv
+      lodash references in bundle: 2
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M7.csv
+    ⏱️  451s elapsed, ~3690s remaining
+
+  [21/184] rspack × xs-50 × M8 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M8.csv
+      JS chunks: 1
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M8.csv
+    ⏱️  454s elapsed, ~3520s remaining
+
+  [22/184] rspack × s-200 × M8 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M8.csv
+      JS chunks: 4
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M8.csv
+    ⏱️  457s elapsed, ~3353s remaining
+
+  [23/184] rspack × m-500 × M8 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M8.csv
+      JS chunks: 5
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M8.csv
+    ⏱️  462s elapsed, ~3220s remaining
+
+  [24/184] rspack × l-2000 × M8 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M8.csv
+      JS chunks: 5
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M8.csv
+    ⏱️  475s elapsed, ~3152s remaining
+
+  [25/184] rspack × xl-5000 × M8 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M8.csv
+      JS chunks: 12
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M8.csv
+    ⏱️  502s elapsed, ~3180s remaining
+
+  [26/184] rspack × xs-50 × M9 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M9.csv
+      Sourcemaps: 1 maps for 1 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M9.csv
+    ⏱️  504s elapsed, ~3049s remaining
+
+  [27/184] rspack × s-200 × M9 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M9.csv
+      Sourcemaps: 4 maps for 4 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M9.csv
+    ⏱️  507s elapsed, ~2935s remaining
+
+  [28/184] rspack × m-500 × M9 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M9.csv
+      Sourcemaps: 5 maps for 5 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M9.csv
+    ⏱️  512s elapsed, ~2839s remaining
+
+  [29/184] rspack × l-2000 × M9 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M9.csv
+      Sourcemaps: 5 maps for 5 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M9.csv
+    ⏱️  524s elapsed, ~2790s remaining
+
+  [30/184] rspack × xl-5000 × M9 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M9.csv
+      Sourcemaps: 12 maps for 12 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M9.csv
+    ⏱️  550s elapsed, ~2818s remaining
+
+  [31/184] rspack × xs-50 × M10 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M10.csv
+      Run 1: Peak RSS = 187.7 MB
+      Run 2: Peak RSS = 192.2 MB
+      Run 3: Peak RSS = 188.7 MB
+      Run 4: Peak RSS = 189.7 MB
+      Run 5: Peak RSS = 195.8 MB
+      Run 6: Peak RSS = 194.2 MB
+      Run 7: Peak RSS = 194.5 MB
+      Run 8: Peak RSS = 191.7 MB
+      Run 9: Peak RSS = 195.6 MB
+      Run 10: Peak RSS = 193.1 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M10.csv
+    ⏱️  563s elapsed, ~2769s remaining
+
+  [32/184] rspack × s-200 × M10 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M10.csv
+      Run 1: Peak RSS = 282.8 MB
+      Run 2: Peak RSS = 280.2 MB
+      Run 3: Peak RSS = 275.9 MB
+      Run 4: Peak RSS = 279.4 MB
+      Run 5: Peak RSS = 278.9 MB
+      Run 6: Peak RSS = 278.9 MB
+      Run 7: Peak RSS = 284.4 MB
+      Run 8: Peak RSS = 278.3 MB
+      Run 9: Peak RSS = 275.9 MB
+      Run 10: Peak RSS = 275.6 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M10.csv
+    ⏱️  580s elapsed, ~2751s remaining
+
+  [33/184] rspack × m-500 × M10 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M10.csv
+      Run 1: Peak RSS = 523.6 MB
+      Run 2: Peak RSS = 504.3 MB
+      Run 3: Peak RSS = 517.7 MB
+      Run 4: Peak RSS = 510.7 MB
+      Run 5: Peak RSS = 508.0 MB
+      Run 6: Peak RSS = 502.6 MB
+      Run 7: Peak RSS = 506.2 MB
+      Run 8: Peak RSS = 503.7 MB
+      Run 9: Peak RSS = 503.9 MB
+      Run 10: Peak RSS = 506.1 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M10.csv
+    ⏱️  605s elapsed, ~2763s remaining
+
+  [34/184] rspack × l-2000 × M10 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M10.csv
+      Run 1: Peak RSS = 1121.3 MB
+      Run 2: Peak RSS = 1117.0 MB
+      Run 3: Peak RSS = 1118.7 MB
+      Run 4: Peak RSS = 1133.9 MB
+      Run 5: Peak RSS = 1107.7 MB
+      Run 6: Peak RSS = 1130.1 MB
+      Run 7: Peak RSS = 929.0 MB
+      Run 8: Peak RSS = 1128.5 MB
+      Run 9: Peak RSS = 1123.2 MB
+      Run 10: Peak RSS = 1014.0 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M10.csv
+    ⏱️  667s elapsed, ~2940s remaining
+
+  [35/184] rspack × xl-5000 × M10 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M10.csv
+      Run 1: Peak RSS = 2043.3 MB
+      Run 2: Peak RSS = 2283.7 MB
+      Run 3: Peak RSS = 2173.5 MB
+      Run 4: Peak RSS = 1830.8 MB
+      Run 5: Peak RSS = 2143.4 MB
+      Run 6: Peak RSS = 2051.1 MB
+      Run 7: Peak RSS = 2167.4 MB
+      Run 8: Peak RSS = 1827.7 MB
+      Run 9: Peak RSS = 1708.6 MB
+      Run 10: Peak RSS = 2274.7 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M10.csv
+    ⏱️  802s elapsed, ~3412s remaining
+
+  [36/184] rspack × xs-50 × M11 (10 runs)
+    🔬 Benchmark: rspack × xs-50 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M11.csv
+      Run 1: CPU = 2.62s (user=1.31s sys=1.31s)
+      Run 2: CPU = 2.26s (user=1.13s sys=1.13s)
+      Run 3: CPU = 2.36s (user=1.18s sys=1.18s)
+      Run 4: CPU = 2.14s (user=1.07s sys=1.07s)
+      Run 5: CPU = 2.06s (user=1.03s sys=1.03s)
+      Run 6: CPU = 2.34s (user=1.17s sys=1.17s)
+      Run 7: CPU = 2.16s (user=1.08s sys=1.08s)
+      Run 8: CPU = 2.02s (user=1.01s sys=1.01s)
+      Run 9: CPU = 2.10s (user=1.05s sys=1.05s)
+      Run 10: CPU = 2.12s (user=1.06s sys=1.06s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M11.csv
+    ⏱️  816s elapsed, ~3344s remaining
+
+  [37/184] rspack × s-200 × M11 (10 runs)
+    🔬 Benchmark: rspack × s-200 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M11.csv
+      Run 1: CPU = 3.26s (user=1.63s sys=1.63s)
+      Run 2: CPU = 2.96s (user=1.48s sys=1.48s)
+      Run 3: CPU = 3.20s (user=1.60s sys=1.60s)
+      Run 4: CPU = 2.74s (user=1.37s sys=1.37s)
+      Run 5: CPU = 2.80s (user=1.40s sys=1.40s)
+      Run 6: CPU = 3.04s (user=1.52s sys=1.52s)
+      Run 7: CPU = 3.04s (user=1.52s sys=1.52s)
+      Run 8: CPU = 3.32s (user=1.66s sys=1.66s)
+      Run 9: CPU = 2.86s (user=1.43s sys=1.43s)
+      Run 10: CPU = 2.66s (user=1.33s sys=1.33s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_s-200_M11.csv
+    ⏱️  833s elapsed, ~3307s remaining
+
+  [38/184] rspack × m-500 × M11 (10 runs)
+    🔬 Benchmark: rspack × m-500 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M11.csv
+      Run 1: CPU = 5.06s (user=2.53s sys=2.53s)
+      Run 2: CPU = 4.88s (user=2.44s sys=2.44s)
+      Run 3: CPU = 4.62s (user=2.31s sys=2.31s)
+      Run 4: CPU = 4.64s (user=2.32s sys=2.32s)
+      Run 5: CPU = 4.60s (user=2.30s sys=2.30s)
+      Run 6: CPU = 4.88s (user=2.44s sys=2.44s)
+      Run 7: CPU = 4.68s (user=2.34s sys=2.34s)
+      Run 8: CPU = 5.30s (user=2.65s sys=2.65s)
+      Run 9: CPU = 4.80s (user=2.40s sys=2.40s)
+      Run 10: CPU = 4.76s (user=2.38s sys=2.38s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M11.csv
+    ⏱️  859s elapsed, ~3299s remaining
+
+  [39/184] rspack × l-2000 × M11 (10 runs)
+    🔬 Benchmark: rspack × l-2000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M11.csv
+      Run 1: CPU = 11.92s (user=5.96s sys=5.96s)
+      Run 2: CPU = 11.72s (user=5.86s sys=5.86s)
+      Run 3: CPU = 11.74s (user=5.87s sys=5.87s)
+      Run 4: CPU = 11.56s (user=5.78s sys=5.78s)
+      Run 5: CPU = 11.72s (user=5.86s sys=5.86s)
+      Run 6: CPU = 11.56s (user=5.78s sys=5.78s)
+      Run 7: CPU = 12.00s (user=6.00s sys=6.00s)
+      Run 8: CPU = 11.40s (user=5.70s sys=5.70s)
+      Run 9: CPU = 11.28s (user=5.64s sys=5.64s)
+      Run 10: CPU = 11.26s (user=5.63s sys=5.63s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_l-2000_M11.csv
+    ⏱️  919s elapsed, ~3407s remaining
+
+  [40/184] rspack × xl-5000 × M11 (10 runs)
+    🔬 Benchmark: rspack × xl-5000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M11.csv
+      Run 1: CPU = 26.10s (user=13.05s sys=13.05s)
+      Run 2: CPU = 25.56s (user=12.78s sys=12.78s)
+      Run 3: CPU = 26.62s (user=13.31s sys=13.31s)
+      Run 4: CPU = 25.38s (user=12.69s sys=12.69s)
+      Run 5: CPU = 25.12s (user=12.56s sys=12.56s)
+      Run 6: CPU = 25.04s (user=12.52s sys=12.52s)
+      Run 7: CPU = 25.56s (user=12.78s sys=12.78s)
+      Run 8: CPU = 25.94s (user=12.97s sys=12.97s)
+      Run 9: CPU = 25.36s (user=12.68s sys=12.68s)
+      Run 10: CPU = 25.38s (user=12.69s sys=12.69s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M11.csv
+    ⏱️  1049s elapsed, ~3772s remaining
+
+  [41/184] rspack × xs-50 × M1 (20 runs)
+    🔬 Benchmark: rspack × xs-50 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M1.csv
+      Run 1: TIMEOUT (60s)
+      Run 2: TIMEOUT (60s)
+      Run 3: TIMEOUT (60s)
+      Run 4: TIMEOUT (60s)
+      Run 5: TIMEOUT (60s)
+      Run 6: TIMEOUT (60s)
+      Run 7: TIMEOUT (60s)
+      Run 8: TIMEOUT (60s)
+      Run 9: TIMEOUT (60s)
+      Run 10: TIMEOUT (60s)
+      Run 11: TIMEOUT (60s)
+      Run 12: TIMEOUT (60s)
+      Run 13: TIMEOUT (60s)
+      Run 14: TIMEOUT (60s)
+      Run 15: TIMEOUT (60s)
+      Run 16: TIMEOUT (60s)
+      Run 17: TIMEOUT (60s)
+      Run 18: TIMEOUT (60s)
+      Run 19: TIMEOUT (60s)
+      Run 20: TIMEOUT (60s)
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M1.csv
+    ⏱️  2503s elapsed, ~8723s remaining
+
+  [42/184] rspack × m-500 × M1 (20 runs)
+    🔬 Benchmark: rspack × m-500 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M1.csv
+      Run 1: TIMEOUT (60s)
+      Run 2: TIMEOUT (60s)
+      Run 3: TIMEOUT (60s)
+      Run 4: TIMEOUT (60s)
+      Run 5: TIMEOUT (60s)
+      Run 6: TIMEOUT (60s)
+      Run 7: TIMEOUT (60s)
+      Run 8: TIMEOUT (60s)
+      Run 9: TIMEOUT (60s)
+      Run 10: TIMEOUT (60s)
+      Run 11: TIMEOUT (60s)
+      Run 12: TIMEOUT (60s)
+      Run 13: TIMEOUT (60s)
+      Run 14: TIMEOUT (60s)
+      Run 15: TIMEOUT (60s)
+      Run 16: TIMEOUT (60s)
+      Run 17: TIMEOUT (60s)
+      Run 18: TIMEOUT (60s)
+      Run 19: TIMEOUT (60s)
+      Run 20: TIMEOUT (60s)
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M1.csv
+    ⏱️  4026s elapsed, ~13603s remaining
+
+  [43/184] rspack × xl-5000 × M1 (20 runs)
+    🔬 Benchmark: rspack × xl-5000 × M1 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M1.csv
+      Run 1: TIMEOUT (60s)
+      Run 2: TIMEOUT (60s)
+      Run 3: TIMEOUT (60s)
+      Run 4: TIMEOUT (60s)
+      Run 5: TIMEOUT (60s)
+      Run 6: TIMEOUT (60s)
+      Run 7: TIMEOUT (60s)
+      Run 8: TIMEOUT (60s)
+      Run 9: TIMEOUT (60s)
+      Run 10: TIMEOUT (60s)
+      Run 11: TIMEOUT (60s)
+      Run 12: TIMEOUT (60s)
+      Run 13: TIMEOUT (60s)
+      Run 14: TIMEOUT (60s)
+      Run 15: TIMEOUT (60s)
+      Run 16: TIMEOUT (60s)
+      Run 17: TIMEOUT (60s)
+      Run 18: TIMEOUT (60s)
+      Run 19: TIMEOUT (60s)
+      Run 20: TIMEOUT (60s)
+    ✅ M1 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M1.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M1.csv
+    ⏱️  5454s elapsed, ~17878s remaining
+
+  [44/184] rspack × xs-50 × M3 (20 runs)
+    🔬 Benchmark: rspack × xs-50 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M3.csv
+      Starting rspack watch mode...
+      Target file: AuthConfirm.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 58ms
+      Run 2/20: 52ms
+      Run 3/20: 31ms
+      Run 4/20: 185ms
+      Run 5/20: 283ms
+      Run 6/20: 212ms
+      Run 7/20: 204ms
+      Run 8/20: 162ms
+      Run 9/20: 202ms
+      Run 10/20: 203ms
+      Run 11/20: 189ms
+      Run 12/20: 54ms
+      Run 13/20: 236ms
+      Run 14/20: 355ms
+      Run 15/20: 320ms
+      Run 16/20: 179ms
+      Run 17/20: 186ms
+      Run 18/20: 33ms
+      Run 19/20: 174ms
+      Run 20/20: 200ms
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M3.csv
+    ⏱️  5474s elapsed, ~17416s remaining
+
+  [45/184] rspack × m-500 × M3 (20 runs)
+    🔬 Benchmark: rspack × m-500 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M3.csv
+      Starting rspack watch mode...
+      Target file: AnalyticsAlert.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 90ms
+      Run 2/20: 301ms
+      Run 3/20: 59ms
+      Run 4/20: 411ms
+      Run 5/20: 415ms
+      Run 6/20: 301ms
+      Run 7/20: 299ms
+      Run 8/20: 289ms
+      Run 9/20: 627ms
+      Run 10/20: 74ms
+      Run 11/20: 348ms
+      Run 12/20: 298ms
+      Run 13/20: 409ms
+      Run 14/20: 402ms
+      Run 15/20: 402ms
+      Run 16/20: 76ms
+      Run 17/20: 413ms
+      Run 18/20: 400ms
+      Run 19/20: 308ms
+      Run 20/20: 421ms
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_m-500_M3.csv
+    ⏱️  5500s elapsed, ~16985s remaining
+
+  [46/184] rspack × xl-5000 × M3 (20 runs)
+    🔬 Benchmark: rspack × xl-5000 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M3.csv
+      Starting rspack watch mode...
+      Target file: ActivityAdapter.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: TIMEOUT
+      Run 2/20: TIMEOUT
+      Run 3/20: TIMEOUT
+      Run 4/20: TIMEOUT
+      Run 5/20: TIMEOUT
+    (node:41946) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 data listeners added to [Socket]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+    (Use `node --trace-warnings ...` to show where the warning was created)
+    (node:41946) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 data listeners added to [Socket]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+      Run 6/20: TIMEOUT
+      Run 7/20: TIMEOUT
+      Run 8/20: TIMEOUT
+      Run 9/20: TIMEOUT
+      Run 10/20: TIMEOUT
+      Run 11/20: TIMEOUT
+      Run 12/20: TIMEOUT
+      Run 13/20: TIMEOUT
+      Run 14/20: TIMEOUT
+      Run 15/20: TIMEOUT
+      Run 16/20: TIMEOUT
+      Run 17/20: TIMEOUT
+      Run 18/20: TIMEOUT
+      Run 19/20: TIMEOUT
+      Run 20/20: TIMEOUT
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xl-5000_M3.csv
+    ⏱️  7922s elapsed, ~23763s remaining
+
+  [47/184] rspack × xs-50 × M4 (20 runs)
+    🔬 Benchmark: rspack × xs-50 × M4 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rspack_xs-50_M4.csv
+      Starting rspack dev server...
+      ❌ Dev server failed to start
