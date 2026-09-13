@@ -1,0 +1,558 @@
+╔══════════════════════════════════════════════════╗
+║   JS Bundler Benchmark — Master Orchestrator     ║
+╚══════════════════════════════════════════════════╝
+
+Tools:   rollup
+Sizes:   xs-50 s-200 m-500 l-2000 xl-5000
+Metrics: M2 M5 M6 M7 M8 M9 M10 M11 M1 M3 M4
+Runs:    10 (cold), 20 (M3/M4)
+
+Node.js: v22.16.0
+
+Total benchmark jobs: 43
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Tool: rollup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  [1/43] rollup × xs-50 × M2 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    Benchmark 1: NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs
+      Time (mean ± σ):      2.876 s ±  0.077 s    [User: 3.658 s, System: 3.166 s]
+      Range (min … max):    2.788 s …  3.031 s    10 runs
+     
+      Median: 2857 ms
+      StdDev: 77 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M2.csv
+    ⏱️  31s elapsed, ~1302s remaining
+
+  [2/43] rollup × s-200 × M2 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M2.csv
+    Benchmark 1: NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs
+      Time (mean ± σ):      3.883 s ±  0.065 s    [User: 5.431 s, System: 4.103 s]
+      Range (min … max):    3.822 s …  4.023 s    10 runs
+     
+      Median: 3860 ms
+      StdDev: 65 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M2.csv
+    ⏱️  72s elapsed, ~1476s remaining
+
+  [3/43] rollup × m-500 × M2 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M2.csv
+    Benchmark 1: NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs
+      Time (mean ± σ):      7.714 s ±  0.153 s    [User: 10.677 s, System: 8.337 s]
+      Range (min … max):    7.514 s …  7.984 s    10 runs
+     
+      Median: 7670 ms
+      StdDev: 153 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M2.csv
+    ⏱️  151s elapsed, ~2012s remaining
+
+  [4/43] rollup × l-2000 × M2 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M2.csv
+    Benchmark 1: NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs
+      Time (mean ± σ):     24.945 s ±  1.987 s    [User: 28.236 s, System: 19.254 s]
+      Range (min … max):   22.577 s … 30.223 s    10 runs
+     
+      Median: 24608 ms
+      StdDev: 1987 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M2.csv
+    ⏱️  403s elapsed, ~3927s remaining
+
+  [5/43] rollup × xl-5000 × M2 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M2 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M2.csv
+    Benchmark 1: NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs
+      Time (mean ± σ):     106.285 s ± 15.054 s    [User: 107.559 s, System: 42.347 s]
+      Range (min … max):   98.221 s … 139.441 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (129.520 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+      Median: 99208 ms
+      StdDev: 15054 ms
+    ✅ M2 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M2.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M2.csv
+    ⏱️  1469s elapsed, ~11164s remaining
+
+  [6/43] rollup × xs-50 × M5 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M5.csv
+      Raw bundle size: 1000071 bytes (976.6 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M5.csv
+    ⏱️  1486s elapsed, ~9161s remaining
+
+  [7/43] rollup × s-200 × M5 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M5.csv
+      Raw bundle size: 1661401 bytes (1622.4 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M5.csv
+    ⏱️  1503s elapsed, ~7729s remaining
+
+  [8/43] rollup × m-500 × M5 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M5.csv
+      Raw bundle size: 4566945 bytes (4459.9 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M5.csv
+    ⏱️  1531s elapsed, ~6695s remaining
+
+  [9/43] rollup × l-2000 × M5 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M5.csv
+      Raw bundle size: 11626286 bytes (11353.7 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M5.csv
+    ⏱️  1599s elapsed, ~6038s remaining
+
+  [10/43] rollup × xl-5000 × M5 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M5 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M5.csv
+      Raw bundle size: 25934927 bytes (25327.0 KB)
+      (Verified with second build)
+    ✅ M5 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M5.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M5.csv
+    ⏱️  1798s elapsed, ~5933s remaining
+
+  [11/43] rollup × xs-50 × M6 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M6.csv
+      Gzipped JS size: 155580 bytes (151.9 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M6.csv
+    ⏱️  1819s elapsed, ~5289s remaining
+
+  [12/43] rollup × s-200 × M6 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M6.csv
+      Gzipped JS size: 235853 bytes (230.3 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M6.csv
+    ⏱️  1834s elapsed, ~4736s remaining
+
+  [13/43] rollup × m-500 × M6 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M6.csv
+      Gzipped JS size: 627183 bytes (612.4 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M6.csv
+    ⏱️  1863s elapsed, ~4299s remaining
+
+  [14/43] rollup × l-2000 × M6 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M6.csv
+      Gzipped JS size: 1277956 bytes (1248.0 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M6.csv
+    ⏱️  1929s elapsed, ~3993s remaining
+
+  [15/43] rollup × xl-5000 × M6 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M6 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M6.csv
+      Gzipped JS size: 2614322 bytes (2553.0 KB)
+      (Verified with second build)
+    ✅ M6 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M6.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M6.csv
+    ⏱️  2158s elapsed, ~4026s remaining
+
+  [16/43] rollup × xs-50 × M7 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M7.csv
+      lodash references in bundle: 5
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M7.csv
+    ⏱️  2165s elapsed, ~3653s remaining
+
+  [17/43] rollup × s-200 × M7 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M7.csv
+      lodash references in bundle: 5
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M7.csv
+    ⏱️  2173s elapsed, ~3322s remaining
+
+  [18/43] rollup × m-500 × M7 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M7.csv
+      lodash references in bundle: 17
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M7.csv
+    ⏱️  2190s elapsed, ~3040s remaining
+
+  [19/43] rollup × l-2000 × M7 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M7.csv
+      lodash references in bundle: 17
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M7.csv
+    ⏱️  2236s elapsed, ~2822s remaining
+
+  [20/43] rollup × xl-5000 × M7 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M7 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M7.csv
+      lodash references in bundle: 17
+      (Verified with second build)
+    ✅ M7 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M7.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M7.csv
+    ⏱️  5375s elapsed, ~6180s remaining
+
+  [21/43] rollup × xs-50 × M8 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M8.csv
+      JS chunks: 2
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M8.csv
+    ⏱️  5382s elapsed, ~5636s remaining
+
+  [22/43] rollup × s-200 × M8 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M8.csv
+      JS chunks: 5
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M8.csv
+    ⏱️  5391s elapsed, ~5145s remaining
+
+  [23/43] rollup × m-500 × M8 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M8.csv
+      JS chunks: 6
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M8.csv
+    ⏱️  5407s elapsed, ~4700s remaining
+
+  [24/43] rollup × l-2000 × M8 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M8.csv
+      JS chunks: 6
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M8.csv
+    ⏱️  6482s elapsed, ~5130s remaining
+
+  [25/43] rollup × xl-5000 × M8 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M8 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M8.csv
+      JS chunks: 13
+      (Verified with second build)
+    ✅ M8 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M8.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M8.csv
+    ⏱️  8918s elapsed, ~6420s remaining
+
+  [26/43] rollup × xs-50 × M9 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M9.csv
+      Sourcemaps: 2 maps for 2 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M9.csv
+    ⏱️  8924s elapsed, ~5834s remaining
+
+  [27/43] rollup × s-200 × M9 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M9.csv
+      Sourcemaps: 5 maps for 5 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M9.csv
+    ⏱️  9864s elapsed, ~5844s remaining
+
+  [28/43] rollup × m-500 × M9 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M9.csv
+      Sourcemaps: 6 maps for 6 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M9.csv
+    ⏱️  9880s elapsed, ~5292s remaining
+
+  [29/43] rollup × l-2000 × M9 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M9.csv
+      Sourcemaps: 6 maps for 6 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M9.csv
+    ⏱️  9928s elapsed, ~4792s remaining
+
+  [30/43] rollup × xl-5000 × M9 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M9 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M9.csv
+      Sourcemaps: 13 maps for 13 JS files
+      (Verified with second build)
+    ✅ M9 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M9.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M9.csv
+    ⏱️  10120s elapsed, ~4384s remaining
+
+  [31/43] rollup × xs-50 × M10 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M10.csv
+      Run 1: Peak RSS = 402.9 MB
+      Run 2: Peak RSS = 472.0 MB
+      Run 3: Peak RSS = 407.5 MB
+      Run 4: Peak RSS = 401.4 MB
+      Run 5: Peak RSS = 408.2 MB
+      Run 6: Peak RSS = 405.7 MB
+      Run 7: Peak RSS = 471.7 MB
+      Run 8: Peak RSS = 403.2 MB
+      Run 9: Peak RSS = 469.6 MB
+      Run 10: Peak RSS = 473.9 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M10.csv
+    ⏱️  10150s elapsed, ~3928s remaining
+
+  [32/43] rollup × s-200 × M10 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M10.csv
+      Run 1: Peak RSS = 525.2 MB
+      Run 2: Peak RSS = 569.7 MB
+      Run 3: Peak RSS = 604.3 MB
+      Run 4: Peak RSS = 612.9 MB
+      Run 5: Peak RSS = 610.0 MB
+      Run 6: Peak RSS = 607.4 MB
+      Run 7: Peak RSS = 523.6 MB
+      Run 8: Peak RSS = 599.9 MB
+      Run 9: Peak RSS = 564.9 MB
+      Run 10: Peak RSS = 612.7 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M10.csv
+    ⏱️  10193s elapsed, ~3503s remaining
+
+  [33/43] rollup × m-500 × M10 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M10.csv
+      Run 1: Peak RSS = 1079.0 MB
+      Run 2: Peak RSS = 1097.0 MB
+      Run 3: Peak RSS = 1001.0 MB
+      Run 4: Peak RSS = 1104.0 MB
+      Run 5: Peak RSS = 1048.7 MB
+      Run 6: Peak RSS = 1114.8 MB
+      Run 7: Peak RSS = 1049.1 MB
+      Run 8: Peak RSS = 1100.1 MB
+      Run 9: Peak RSS = 1046.0 MB
+      Run 10: Peak RSS = 1108.6 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M10.csv
+    ⏱️  12207s elapsed, ~3699s remaining
+
+  [34/43] rollup × l-2000 × M10 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M10.csv
+      Run 1: Peak RSS = 2077.4 MB
+      Run 2: Peak RSS = 2089.4 MB
+      Run 3: Peak RSS = 2067.6 MB
+      Run 4: Peak RSS = 2111.1 MB
+      Run 5: Peak RSS = 2077.1 MB
+      Run 6: Peak RSS = 2068.3 MB
+      Run 7: Peak RSS = 2074.1 MB
+      Run 8: Peak RSS = 2074.9 MB
+      Run 9: Peak RSS = 2078.9 MB
+      Run 10: Peak RSS = 2067.7 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M10.csv
+    ⏱️  16169s elapsed, ~4279s remaining
+
+  [35/43] rollup × xl-5000 × M10 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M10 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M10.csv
+      Run 1: Peak RSS = 3150.1 MB
+      Run 2: Peak RSS = 3248.2 MB
+      Run 3: Peak RSS = 2988.9 MB
+      Run 4: Peak RSS = 3072.7 MB
+      Run 5: Peak RSS = 3044.1 MB
+      Run 6: Peak RSS = 3251.7 MB
+      Run 7: Peak RSS = 3047.1 MB
+      Run 8: Peak RSS = 3214.3 MB
+      Run 9: Peak RSS = 3072.2 MB
+      Run 10: Peak RSS = 3066.0 MB
+    ✅ M10 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M10.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M10.csv
+    ⏱️  33827s elapsed, ~7731s remaining
+
+  [36/43] rollup × xs-50 × M11 (10 runs)
+    🔬 Benchmark: rollup × xs-50 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M11.csv
+      Run 1: CPU = 29.76s (user=14.88s sys=14.88s)
+      Run 2: CPU = 5.64s (user=2.82s sys=2.82s)
+      Run 3: CPU = 5.70s (user=2.85s sys=2.85s)
+      Run 4: CPU = 5.60s (user=2.80s sys=2.80s)
+      Run 5: CPU = 5.74s (user=2.87s sys=2.87s)
+      Run 6: CPU = 5.54s (user=2.77s sys=2.77s)
+      Run 7: CPU = 5.62s (user=2.81s sys=2.81s)
+      Run 8: CPU = 5.82s (user=2.91s sys=2.91s)
+      Run 9: CPU = 5.70s (user=2.85s sys=2.85s)
+      Run 10: CPU = 5.72s (user=2.86s sys=2.86s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M11.csv
+    ⏱️  33870s elapsed, ~6585s remaining
+
+  [37/43] rollup × s-200 × M11 (10 runs)
+    🔬 Benchmark: rollup × s-200 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M11.csv
+      Run 1: CPU = 2074.42s (user=1037.21s sys=1037.21s)
+      Run 2: CPU = 8.14s (user=4.07s sys=4.07s)
+      Run 3: CPU = 8.00s (user=4.00s sys=4.00s)
+      Run 4: CPU = 7.90s (user=3.95s sys=3.95s)
+      Run 5: CPU = 7.86s (user=3.93s sys=3.93s)
+      Run 6: CPU = 7.92s (user=3.96s sys=3.96s)
+      Run 7: CPU = 7.98s (user=3.99s sys=3.99s)
+      Run 8: CPU = 8.36s (user=4.18s sys=4.18s)
+      Run 9: CPU = 7.88s (user=3.94s sys=3.94s)
+      Run 10: CPU = 7.84s (user=3.92s sys=3.92s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_s-200_M11.csv
+    ⏱️  34945s elapsed, ~5666s remaining
+
+  [38/43] rollup × m-500 × M11 (10 runs)
+    🔬 Benchmark: rollup × m-500 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M11.csv
+      Run 1: CPU = 38.46s (user=19.23s sys=19.23s)
+      Run 2: CPU = 15.36s (user=7.68s sys=7.68s)
+      Run 3: CPU = 15.46s (user=7.73s sys=7.73s)
+      Run 4: CPU = 15.12s (user=7.56s sys=7.56s)
+      Run 5: CPU = 14.78s (user=7.39s sys=7.39s)
+      Run 6: CPU = 14.86s (user=7.43s sys=7.43s)
+      Run 7: CPU = 14.86s (user=7.43s sys=7.43s)
+      Run 8: CPU = 14.96s (user=7.48s sys=7.48s)
+      Run 9: CPU = 14.72s (user=7.36s sys=7.36s)
+      Run 10: CPU = 15.00s (user=7.50s sys=7.50s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M11.csv
+    ⏱️  35034s elapsed, ~4609s remaining
+
+  [39/43] rollup × l-2000 × M11 (10 runs)
+    🔬 Benchmark: rollup × l-2000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M11.csv
+      Run 1: CPU = 2063.58s (user=1031.79s sys=1031.79s)
+      Run 2: CPU = 127.90s (user=63.95s sys=63.95s)
+      Run 3: CPU = 44.68s (user=22.34s sys=22.34s)
+      Run 4: CPU = 736.16s (user=368.08s sys=368.08s)
+      Run 5: CPU = 47.12s (user=23.56s sys=23.56s)
+      Run 6: CPU = 48.70s (user=24.35s sys=24.35s)
+      Run 7: CPU = 1901.16s (user=950.58s sys=950.58s)
+      Run 8: CPU = 2087.60s (user=1043.80s sys=1043.80s)
+      Run 9: CPU = 82.46s (user=41.23s sys=41.23s)
+      Run 10: CPU = 2023.08s (user=1011.54s sys=1011.54s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_l-2000_M11.csv
+    ⏱️  39618s elapsed, ~4063s remaining
+
+  [40/43] rollup × xl-5000 × M11 (10 runs)
+    🔬 Benchmark: rollup × xl-5000 × M11 (10 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M11.csv
+      Run 1: CPU = 1255.64s (user=627.82s sys=627.82s)
+      Run 2: CPU = 195.98s (user=97.99s sys=97.99s)
+      Run 3: CPU = 201.12s (user=100.56s sys=100.56s)
+      Run 4: CPU = 2217.80s (user=1108.90s sys=1108.90s)
+      Run 5: CPU = 249.56s (user=124.78s sys=124.78s)
+      Run 6: CPU = 220.24s (user=110.12s sys=110.12s)
+      Run 7: CPU = 3929.08s (user=1964.54s sys=1964.54s)
+      Run 8: CPU = 2260.46s (user=1130.23s sys=1130.23s)
+      Run 9: CPU = 5262.66s (user=2631.33s sys=2631.33s)
+      Run 10: CPU = 4084.94s (user=2042.47s sys=2042.47s)
+    ✅ M11 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M11.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xl-5000_M11.csv
+    ⏱️  49559s elapsed, ~3716s remaining
+
+  [41/43] rollup × xs-50 × M3 (20 runs)
+    🔬 Benchmark: rollup × xs-50 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M3.csv
+      Starting rollup watch mode...
+      Target file: AuthConfirm.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 3415ms
+      Run 2/20: 939ms
+      Run 3/20: 902ms
+      Run 4/20: 1098ms
+      Run 5/20: 950ms
+      Run 6/20: 859ms
+      Run 7/20: 930ms
+      Run 8/20: 880ms
+      Run 9/20: 870ms
+      Run 10/20: 967ms
+      Run 11/20: 865ms
+      Run 12/20: 965ms
+      Run 13/20: 891ms
+      Run 14/20: 974ms
+      Run 15/20: 894ms
+      Run 16/20: 906ms
+      Run 17/20: 908ms
+      Run 18/20: 938ms
+      Run 19/20: 887ms
+      Run 20/20: 931ms
+      Watch mode stopped.
+    ✅ M3 complete → /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M3.csv
+    
+    📊 Results saved to: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_xs-50_M3.csv
+    ⏱️  50561s elapsed, ~2466s remaining
+
+  [42/43] rollup × m-500 × M3 (20 runs)
+    🔬 Benchmark: rollup × m-500 × M3 (20 runs)
+       Output: /Users/s0p0icn/Documents/empirical-js-bundlers/results/tier1-raw/rollup_m-500_M3.csv
+      Starting rollup watch mode...
+      Target file: AnalyticsAlert.tsx
+      ❌ Watch mode failed to start (60s timeout)

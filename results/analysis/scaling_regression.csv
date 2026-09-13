@@ -1,2 +1,6 @@
 tool,r2_linear,r2_log_linear,best_fit,slope_per_1000_modules
 vite,0.9969,0.7764,linear,954.1
+rspack,0.9997,0.7694,linear,2553.4
+esbuild,0.972,0.6371,linear,2887.7
+webpack,0.9949,0.7107,linear,22770.1
+rollup,0.9715,0.6397,linear,19345.6

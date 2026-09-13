@@ -73,7 +73,7 @@ get_build_cmd() {
     rspack)  echo "NODE_ENV=production npx rspack build --config rspack.config.cjs" ;;
     esbuild) echo "node configs/esbuild/build.mjs" ;;
     webpack) echo "NODE_ENV=production npx webpack --mode production --config webpack.config.cjs" ;;
-    rollup)  echo "NODE_ENV=production npx rollup -c rollup.config.mjs" ;;
+    rollup)  echo "NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs" ;;
   esac
 }
 

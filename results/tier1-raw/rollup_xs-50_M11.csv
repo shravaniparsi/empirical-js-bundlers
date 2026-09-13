@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rollup,xs-50,M11,1,29.76,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,2,5.64,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,3,5.70,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,4,5.60,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,5,5.74,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,6,5.54,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,7,5.62,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,8,5.82,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,9,5.70,seconds,2026-09-12T17:17:44Z
+rollup,xs-50,M11,10,5.72,seconds,2026-09-12T17:17:44Z

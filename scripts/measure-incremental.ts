@@ -58,7 +58,7 @@ function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern:
       };
     case 'rollup':
       return {
-        cmd: 'npx', args: ['rollup', '-c', 'rollup.config.mjs', '-w'],
+        cmd: 'node', args: ['--stack-size=65536', './node_modules/.bin/rollup', '-c', 'rollup.config.mjs', '-w'],
         readyPattern: /waiting for changes/i,
         rebuildPattern: /created dist/i,
       };
