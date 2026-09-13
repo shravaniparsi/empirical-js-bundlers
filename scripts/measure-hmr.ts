@@ -65,17 +65,44 @@ function getDevConfig(tool: string) {
 }
 
 function findTargetComponent(projectDir: string): { filePath: string; componentName: string } {
+  // Try synthetic layout first (src/features/<folder>/*.tsx)
   const featuresDir = path.join(projectDir, 'src', 'features');
-  const folders = fs.readdirSync(featuresDir);
-  for (const folder of folders) {
-    const folderPath = path.join(featuresDir, folder);
-    const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.tsx'));
-    if (files.length > 0) {
-      return {
-        filePath: path.join(folderPath, files[0]),
-        componentName: files[0].replace('.tsx', ''),
-      };
+  if (fs.existsSync(featuresDir)) {
+    const folders = fs.readdirSync(featuresDir);
+    for (const folder of folders) {
+      const folderPath = path.join(featuresDir, folder);
+      if (!fs.statSync(folderPath).isDirectory()) continue;
+      const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.tsx'));
+      if (files.length > 0) {
+        return {
+          filePath: path.join(folderPath, files[0]),
+          componentName: files[0].replace('.tsx', ''),
+        };
+      }
     }
+  }
+  // Fallback: find any .tsx in src/ (excluding test files, main.tsx, index.tsx)
+  const srcDir = path.join(projectDir, 'src');
+  function walk(dir: string): string | null {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === 'node_modules' || entry.name === '__tests__') continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        const found = walk(full);
+        if (found) return found;
+      } else if (entry.name.endsWith('.tsx') && !entry.name.includes('test') &&
+                 entry.name !== 'main.tsx' && entry.name !== 'index.tsx') {
+        return full;
+      }
+    }
+    return null;
+  }
+  const found = walk(srcDir);
+  if (found) {
+    return {
+      filePath: found,
+      componentName: path.basename(found).replace('.tsx', ''),
+    };
   }
   throw new Error('No .tsx file found');
 }

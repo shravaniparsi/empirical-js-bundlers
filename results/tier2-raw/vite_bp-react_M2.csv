@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+vite,bp-react,M2,1,2291,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,2,2308,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,3,2125,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,4,2091,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,5,2179,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,6,2044,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,7,2169,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,8,2269,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,9,2299,ms,2026-09-13T23:38:13Z
+vite,bp-react,M2,10,2315,ms,2026-09-13T23:38:13Z

@@ -1,0 +1,63 @@
+
+━━━ vite ━━━
+  SKIP M2
+  SKIP M5
+  SKIP M6
+  SKIP M7
+  SKIP M8
+  SKIP M9
+  SKIP M10
+  SKIP M11
+  RUN M3 (20 runs)
+      Starting vite watch mode...
+      Target file: provider.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 5791ms
+      Run 2/20: 1340ms
+      Run 3/20: 1231ms
+      Run 4/20: 1324ms
+      Run 5/20: 1264ms
+      Run 6/20: 1226ms
+      Run 7/20: 1298ms
+      Run 8/20: 1231ms
+      Run 9/20: 1214ms
+      Run 10/20: 1232ms
+      Run 11/20: 1384ms
+      Run 12/20: 1217ms
+      Run 13/20: 1353ms
+      Run 14/20: 1178ms
+      Run 15/20: 1190ms
+      Run 16/20: 1204ms
+      Run 17/20: 1272ms
+      Run 18/20: 1239ms
+      Run 19/20: 1220ms
+      Run 20/20: 1376ms
+      Watch mode stopped.
+  RUN M4 (20 runs)
+      Starting vite dev server...
+      Dev server ready on port 3001
+      Page loaded. Starting HMR measurements...
+      Run 1/20: 212ms
+      Run 2/20: 302ms
+      Run 3/20: 99ms
+      Run 4/20: 216ms
+      Run 5/20: 216ms
+      Run 6/20: 204ms
+      Run 7/20: 172ms
+      Run 8/20: 212ms
+      Run 9/20: 179ms
+      Run 10/20: 127ms
+      Run 11/20: 91ms
+      Run 12/20: 110ms
+      Run 13/20: 204ms
+      Run 14/20: 114ms
+      Run 15/20: 94ms
+      Run 16/20: 203ms
+      Run 17/20: 105ms
+      Run 18/20: 204ms
+      Run 19/20: 209ms
+      Run 20/20: 205ms
+      Dev server stopped.
+
+━━━ rspack ━━━
+  RUN M2 (10 runs)
