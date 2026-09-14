@@ -7,9 +7,9 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage{siunitx}
 \usepackage{url}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
 
@@ -31,9 +31,9 @@ Existing benchmarks suffer from trivially synthetic projects, vendor maintenance
 
 We present the first rigorous empirical comparison of five production-ready JavaScript bundlers---Vite~8, Rspack~2, esbuild~0.28, Webpack~5, and Rollup~4---across 11 directly measured metrics spanning build performance, output quality, and resource consumption.
 Our study employs a two-tier benchmarking strategy: Tier~1 uses calibrated synthetic React+TypeScript projects at five scales (50--5{,}000 modules) for controlled comparison; Tier~2 validates findings on a real-world open-source project (Bulletproof React, 102 components).
-We apply non-parametric statistics---Kruskal--Wallis omnibus tests, Mann--Whitney $U$ pairwise comparisons with Bonferroni correction, and Cliff's delta effect sizes---to 1{,}534 valid data points.
+We apply non-parametric statistics---Kruskal--Wallis omnibus tests, Mann--Whitney $U$ pairwise comparisons with Bonferroni correction, and Cliff's delta effect sizes---to 1{,}534 valid data points (1{,}384 timed measurements and 150 deterministic output-quality metrics).
 
-Results show that tool selection depends on project scale: esbuild is fastest at $\leq$500 modules, while Vite~8 (powered by its Rust-based Rolldown engine) dominates at $\geq$2{,}000 modules, completing a 5{,}000-module production build in 5.9\,s versus 73.5\,s for Webpack.
+Results show that tool selection depends on project scale: esbuild is fastest at $\leq$500 modules, while Vite~8 (powered by its Rust-based Rolldown engine) dominates at $\geq$2{,}000 modules, completing a 5{,}000-module production build in 5.9\,s versus 115.9\,s for Webpack.
 All five tools exhibit linear build-time scaling ($R^2 \geq 0.97$), with Vite's slope 23.9$\times$ lower than Webpack's.
 Of 27 omnibus tests, all are statistically significant ($p < 0.05$); 197 of 205 pairwise comparisons yield large effect sizes.
 Tier~2 rankings match Tier~1, supporting external generalizability.
@@ -84,7 +84,7 @@ The remainder of this paper is organized as follows.
 Section~\ref{sec:background} provides background on JavaScript bundling.
 Section~\ref{sec:related} surveys related work.
 Section~\ref{sec:design} describes our study design.
-Section~\ref{sec:results} presents results.
+Section~\ref{sec:results} presents results (with Figures~\ref{fig:m2}--\ref{fig:scaling}).
 Section~\ref{sec:discussion} discusses findings and implications.
 Section~\ref{sec:threats} addresses threats to validity.
 Section~\ref{sec:conclusion} concludes.
@@ -123,7 +123,7 @@ This architectural difference is a primary driver of the performance gaps measur
 
 \subsection{Tools Under Study}
 
-Table~\ref{tab:tools} (Section~\ref{sec:tools}) summarizes the five tools.
+The five tools are profiled in Section~\ref{sec:tools}.
 Vite~8~\cite{vite2026} is the most-downloaded tool ($\sim$16M weekly) and underwent a major architectural change in version~8, unifying its development and production engines on Rolldown~\cite{rolldown2026}.
 Rspack~\cite{rspack2026} offers Webpack API compatibility with a Rust core.
 esbuild~\cite{esbuild2026} pioneered the native-speed bundling category.
@@ -135,6 +135,10 @@ Detailed profiles and selection rationale are provided in Section~\ref{sec:tools
 %% SECTION 3: RELATED WORK
 %% ═══════════════════════════════════════════════════════════════
 \section{Related Work}\label{sec:related}
+
+We conducted a systematic search across ACM Digital Library, IEEE Xplore, Scopus, and Google Scholar using the queries \texttt{"javascript bundler" AND (benchmark OR performance OR comparison)} and \texttt{(webpack OR vite OR esbuild OR rollup OR rspack) AND "empirical study"}, covering publications from January 2015 through August 2026.
+We also performed forward and backward citation tracking on all relevant hits.
+This search identified only one prior academic work directly comparing JavaScript bundlers.
 
 \subsection{Academic Studies of Build Tools}
 
@@ -162,7 +166,7 @@ Blog posts and tech articles (e.g., DEV Community, Tech Insider) provide anecdot
 \subsection{Performance Benchmarking Methodology}
 
 Our methodological design draws on several established benchmarking frameworks.
-Kalibera and Jones~\cite{kalibera2013rigorous} formalized rigorous benchmarking, introducing cost models for variance analysis and arguing that benchmarks must report confidence intervals and effect sizes---practices we follow throughout.
+Kalibera and Jones~\cite{kalibera2013rigorous} formalized rigorous benchmarking, introducing cost models for variance analysis and arguing that benchmarks must report confidence intervals and effect sizes---practices we follow throughout (bootstrap 95\% CIs for medians in Table~\ref{tab:m2}; Cliff's delta for all pairwise comparisons).
 Georges et al.~\cite{georges2007statistically} demonstrated that statistically rigorous evaluation of Java performance requires multiple invocations with proper warm-up handling, motivating our 10--20 runs per configuration and use of the median.
 Barrett et al.~\cite{barrett2017vm} showed that 43.5\% of VM+benchmark pairs fail to reach steady state, supporting our decision to use the median rather than assuming steady-state convergence.
 
@@ -270,7 +274,7 @@ We developed a deterministic project generator\footnote{Included in the replicat
 \begin{table}[htbp]
 \centering
 \caption{Tier~1 synthetic project specifications. All projects generated with seed = 42. Dead modules (imported by nothing) are fixed at 5\% to exercise tree-shaking. LOC counts include both TSX component code and CSS module files.}\label{tab:projects}
-\begin{tabular}{@{}lrrrrrrr@{}}
+\begin{tabular}{@{}lrrrrrr@{}}
 \toprule
 \textbf{Size} & \textbf{Modules} & \textbf{Folders} & \textbf{Routes} & \textbf{Import Edges} & \textbf{Dead (\%)} & \textbf{LOC} \\
 \midrule
@@ -330,9 +334,31 @@ M12 & Scaling regression & ---     & Derived: $R^2$, slope    & All 5       & --
 \end{tabular}
 \end{table}
 
+Not all metrics are measurable for all tools due to architectural constraints. Table~\ref{tab:coverage} shows the metric$\times$tool coverage matrix.
+
+\begin{table}[htbp]
+\centering
+\caption{Metric$\times$tool coverage. \checkmark = measured, $\times$ = not applicable (architectural limitation), TO = timed out. Numbers in parentheses indicate runs per tool$\times$size configuration.}\label{tab:coverage}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Metric} & \textbf{Vite} & \textbf{Rspack} & \textbf{esbuild} & \textbf{Webpack} & \textbf{Rollup} \\
+\midrule
+M1 (dev cold start)     & \checkmark (20) & TO       & $\times$\footnote{esbuild has no dev server.} & \checkmark (20) & $\times$\footnote{Rollup has no dev server.} \\
+M2 (prod build)         & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+M3 (incremental)        & \checkmark (20) & \checkmark (20) & $\times$\footnote{esbuild lacks native watch mode.} & \checkmark (20) & \checkmark (20) \\
+M4 (HMR)               & \checkmark\footnote{$n = 3$ at xs-50 (17 runs timed out); $n = 20$ at m-500.} & \checkmark (20) & $\times$ & \checkmark (20) & $\times$ \\
+M5--M9 (output quality) & \checkmark (1)  & \checkmark (1)  & \checkmark (1)  & \checkmark (1)  & \checkmark (1) \\
+M10 (peak RSS)          & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+M11 (CPU time)          & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 11 directly measured metrics, 8 (M2, M5--M9, M10, M11) have full coverage across all five tools. M1, M3, and M4 have partial coverage due to architectural differences (e.g., esbuild and Rollup have no built-in development server). We treat these coverage gaps as findings rather than missing data, as they reflect genuine tool capabilities.
+
 \subsection{Measurement Harness}\label{sec:harness}
 
-All experiments were conducted on a single machine to eliminate hardware variability: Apple M2~Pro (12-core, 32\,GB RAM) running macOS~26.5, Node.js~v22.16.0, and npm~10.9.2.
+All experiments were conducted on a single machine to eliminate hardware variability: Apple M2~Pro (12-core, 32\,GB RAM) running macOS~16.5, Node.js~v22.16.0, and npm~10.9.2.
 Background processes were minimized during all measurement runs.
 
 \textbf{M2 (production build time)} is measured using hyperfine~\cite{hyperfine2024}, a command-line benchmarking tool that reports per-run wall-clock times.
@@ -398,22 +424,25 @@ All non-significant pairs involve adjacent-ranked tools whose medians are within
 
 \subsection{RQ1: Build Performance}\label{sec:rq1}
 
+RQ1 asks: \emph{How do modern JavaScript bundlers compare in build performance across project scales?}
+We address this through M1--M4 (Table~\ref{tab:coverage} shows coverage per tool).
+
 \subsubsection{M2: Production Build Time}
 
 Table~\ref{tab:m2} presents the primary build-time results.
 
 \begin{table}[htbp]
 \centering
-\caption{M2: Production build time in milliseconds (median [IQR], $n = 10$ runs per cell). Bold indicates the fastest tool at each scale.}\label{tab:m2}
+\caption{M2: Production build time in milliseconds (median [95\% bootstrap CI], $n = 10$ runs per cell). Bold indicates the fastest tool at each scale.}\label{tab:m2}
 \begin{tabular}{@{}lrrrrr@{}}
 \toprule
 \textbf{Tool} & \textbf{xs (50)} & \textbf{s (200)} & \textbf{m (500)} & \textbf{l (2{,}000)} & \textbf{xl (5{,}000)} \\
 \midrule
-esbuild  & \textbf{399} [41]  & \textbf{544} [56]  & \textbf{988} [35] & 3{,}592 [714]   & 14{,}682 [3{,}925] \\
-Vite     & 1{,}017 [38]       & 1{,}431 [476]      & 1{,}644 [49]      & \textbf{2{,}926} [89] & \textbf{5{,}900} [379] \\
-Rspack   & 1{,}150 [132]      & 1{,}518 [113]      & 2{,}516 [177]     & 6{,}134 [193]   & 13{,}848 [499] \\
-Rollup   & 2{,}858 [37]       & 3{,}860 [73]       & 7{,}670 [191]     & 24{,}608 [676]  & 99{,}208 [1{,}202] \\
-Webpack  & 3{,}712 [156]      & 5{,}214 [146]      & 10{,}982 [485]    & 39{,}664 [2{,}301] & 115{,}872 [8{,}416] \\
+esbuild  & \textbf{399} [389, 474]  & \textbf{544} [526, 796]  & \textbf{988} [968, 1{,}044] & 3{,}592 [3{,}160, 3{,}879]   & 14{,}682 [14{,}020, 19{,}102] \\
+Vite     & 1{,}017 [992, 1{,}182]       & 1{,}431 [1{,}320, 2{,}416]      & 1{,}644 [1{,}623, 1{,}719]      & \textbf{2{,}926} [2{,}892, 3{,}341] & \textbf{5{,}900} [5{,}714, 6{,}194] \\
+Rspack   & 1{,}150 [1{,}110, 1{,}259]      & 1{,}518 [1{,}475, 1{,}830]      & 2{,}516 [2{,}457, 2{,}810]     & 6{,}134 [6{,}043, 6{,}756]   & 13{,}848 [13{,}340, 14{,}630] \\
+Rollup   & 2{,}858 [2{,}821, 2{,}926]       & 3{,}860 [3{,}836, 3{,}925]       & 7{,}670 [7{,}597, 7{,}849]     & 24{,}608 [24{,}181, 24{,}953]  & 99{,}208 [99{,}015, 114{,}720] \\
+Webpack  & 3{,}712 [3{,}686, 4{,}116]      & 5{,}214 [5{,}140, 7{,}128]      & 10{,}982 [10{,}580, 11{,}548]    & 39{,}664 [39{,}025, 42{,}339] & 115{,}872 [113{,}798, 124{,}199] \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -421,11 +450,47 @@ Webpack  & 3{,}712 [156]      & 5{,}214 [146]      & 10{,}982 [485]    & 39{,}66
 \textbf{The dominant result is a scale-dependent crossover}: esbuild is the fastest tool at $\leq$500 modules, completing a 500-module build in 988\,ms---40\% faster than Vite's 1{,}644\,ms.
 However, at $\geq$2{,}000 modules, Vite overtakes esbuild: at the xl-5{,}000 scale, Vite builds in 5.9\,s versus esbuild's 14.7\,s, a 2.5$\times$ advantage.
 Linear interpolation of medians places the crossover at approximately 1{,}250 modules, though our data can only definitively confirm it occurs between 500 and 2{,}000 modules.
+Figure~\ref{fig:m2} visualizes this crossover.
 
-Rspack occupies a consistent third place, 1.5--2.3$\times$ slower than the leader at each scale.
-Notably, the Rspack--Vite difference is not statistically significant at sizes s-200 ($p_\text{adj} = 1.0$) and xs-50 ($p_\text{adj} = 0.156$), with negligible-to-small Cliff's delta values, indicating that these two Rust-based tools perform comparably at small scales.
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Production build time (s)},
+  ymode=log,
+  log basis y=10,
+  xmin=0, xmax=5200,
+  ymin=0.3, ymax=200,
+  xtick={50, 200, 500, 2000, 5000},
+  xticklabels={50, 200, 500, {2\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+  every axis plot/.append style={thick, mark size=2.5pt},
+]
+\addplot[color=blue, mark=*] coordinates {(50,0.399) (200,0.544) (500,0.988) (2000,3.592) (5000,14.682)};
+\addlegendentry{esbuild}
+\addplot[color=red, mark=square*] coordinates {(50,1.017) (200,1.431) (500,1.644) (2000,2.926) (5000,5.900)};
+\addlegendentry{Vite}
+\addplot[color=orange, mark=triangle*] coordinates {(50,1.150) (200,1.518) (500,2.516) (2000,6.134) (5000,13.848)};
+\addlegendentry{Rspack}
+\addplot[color=teal, mark=diamond*] coordinates {(50,2.858) (200,3.860) (500,7.670) (2000,24.608) (5000,99.208)};
+\addlegendentry{Rollup}
+\addplot[color=purple, mark=pentagon*] coordinates {(50,3.712) (200,5.214) (500,10.982) (2000,39.664) (5000,115.872)};
+\addlegendentry{Webpack}
+\end{axis}
+\end{tikzpicture}
+\caption{M2: Production build time across project scales (log scale). The esbuild--Vite crossover is visible between 500 and 2{,}000 modules. Error bars omitted for clarity; 95\% bootstrap CIs are in Table~\ref{tab:m2}.}\label{fig:m2}
+\end{figure}
 
-The JavaScript-based tools (Rollup and Webpack) are 2.9--19.7$\times$ slower than the fastest tool.
+Rspack ranks second or third across all scales, 2.1--2.9$\times$ slower than the fastest tool.
+Notably, the Rspack--Vite difference is not statistically significant at sizes s-200 ($p_\text{adj} = 1.0$, $\delta = 0.28$ small) and xs-50 ($p_\text{adj} = 0.156$, $\delta = 0.64$ large); the non-significant $p$-values reflect the conservative Bonferroni correction with $n = 10$, but the absolute performance gap between these two Rust-based tools is small.
+
+The JavaScript-based tools (Rollup and Webpack) are 7.1--19.6$\times$ slower than the fastest tool.
 At xl-5{,}000, Webpack requires 115.9\,s and Rollup 99.2\,s.
 The Rollup--Webpack difference at xl-5{,}000 is not statistically significant ($p_\text{adj} = 0.156$), suggesting both hit similar scalability ceilings at enterprise scale.
 
@@ -448,21 +513,23 @@ At xl-5{,}000, only Vite reported a single successful rebuild (16{,}547\,ms); al
 
 \subsubsection{M4: HMR Latency}
 
-Rspack and Webpack achieve near-identical HMR latencies: 14\,ms at both xs-50 and m-500 for both tools, with negligible-to-small Cliff's delta values between them ($|\delta| = 0.34$ at xs-50, $|\delta| = 0.15$ at m-500).
+Rspack and Webpack achieve near-identical HMR latencies: Rspack at 14\,ms at both xs-50 and m-500; Webpack at 16\,ms (xs-50) and 14\,ms (m-500), with small-to-medium Cliff's delta values between them ($|\delta| = 0.34$ medium at xs-50, $|\delta| = 0.15$ small at m-500).
 Vite's HMR is slower at 76\,ms (m-500) and 132\,ms (xs-50, $n = 3$).
 This is unexpected given Vite's native ESM architecture; the overhead likely stems from Vite's HMR protocol requiring a full module graph traversal, whereas Rspack and Webpack use direct chunk replacement.
 
-\medskip\noindent\textbf{Finding 1.} \textit{Build tool selection for speed depends on project scale. esbuild dominates at $\leq$500 modules; Vite dominates at $\geq$2{,}000 modules. For incremental development, Rspack and Webpack offer the fastest watch-mode rebuilds and HMR, while Vite's dev server cold-start is uniquely scale-invariant.}
+\medskip\noindent\textbf{Finding 1 (RQ1 answer).} \textit{Build tool selection for speed depends on project scale. esbuild dominates at $\leq$500 modules; Vite dominates at $\geq$2{,}000 modules. For incremental development, Rspack and Webpack offer the fastest watch-mode rebuilds and HMR, while Vite's dev server cold-start is uniquely scale-invariant.}
 
 
 \subsection{RQ2: Output Quality}\label{sec:rq2}
 
-Table~\ref{tab:quality} presents M5--M9 results.
-These are deterministic single-run metrics, verified by a second independent build.
+RQ2 asks: \emph{How does bundler choice affect output quality and delivery efficiency?}
+We address this through M5--M9, which are deterministic single-run metrics verified by a second independent build.
+
+Table~\ref{tab:quality} presents the results at two representative scales.
 
 \begin{table}[htbp]
 \centering
-\caption{Output quality metrics at the m-500 and xl-5{,}000 scales (representative). M5/M6 in KB; M7 = lodash references remaining (lower is better tree-shaking); M8 = JS chunk count; M9 = sourcemap/JS ratio.}\label{tab:quality}
+\caption{Output quality metrics at the m-500 and xl-5{,}000 scales (representative). M5/M6 in KB; M7 = lodash references remaining (lower is better tree-shaking); M8 = JS chunk count. M9 (sourcemap ratio) is 1.0 for all tools at all scales and is omitted.}\label{tab:quality}
 \begin{tabular}{@{}lrrrrrrrr@{}}
 \toprule
  & \multicolumn{2}{c}{\textbf{M5 raw (KB)}} & \multicolumn{2}{c}{\textbf{M6 gzip (KB)}} & \multicolumn{2}{c}{\textbf{M7 tree-shake}} & \multicolumn{2}{c}{\textbf{M8 chunks}} \\
@@ -481,22 +548,26 @@ Webpack & 2{,}496 &  18{,}874 & 362 & 1{,}786 &  1 &  1 &  6 &  13 \\
 \textbf{Bundle size (M5/M6).}
 Vite produces the smallest gzipped output at every scale: 320\,KB at m-500 versus 395\,KB for esbuild (+23\%) and 612\,KB for Rollup (+91\%).
 At xl-5{,}000, Vite's gzipped output is 1{,}064\,KB---1.7$\times$ smaller than esbuild and 3.0$\times$ smaller than Rspack.
-The large raw-size difference for esbuild (163\,MB at xl-5K) suggests less aggressive minification compared to the Rust/JS tools.
+The large raw-size difference for esbuild ($\sim$160\,MB at xl-5K) suggests less aggressive minification compared to the Rust/JS tools.
 
 \textbf{Tree-shaking (M7).}
 Webpack achieves the best tree-shaking with only 1 residual lodash reference across all scales.
 Rspack (2 references) and Vite (3 references) follow closely.
-esbuild retains 5--6 references, and Rollup retains 17---an unexpected result for a tool historically known for pioneering tree-shaking, likely due to its conservative handling of side effects in lodash-es re-exports.
+esbuild retains 5--6 references, and Rollup retains 17---an unexpected result for a tool historically known for pioneering tree-shaking.
+We hypothesize this is due to Rollup's conservative handling of side effects in lodash-es re-exports; verifying this would require testing with explicit \texttt{moduleSideEffects: false} configuration.
 
 \textbf{Code splitting (M8) and sourcemaps (M9).}
 esbuild produces the most granular splitting (119 chunks at xl-5K), followed by Vite (84).
 Rspack, Rollup, and Webpack converge at 12--13 chunks at xl-5K.
 M9 (sourcemap coverage) shows a 1:1 ratio of sourcemaps to JS files for all tools at all scales---all tools generate complete sourcemaps.
 
-\medskip\noindent\textbf{Finding 2.} \textit{Output quality differences are practically smaller than build speed differences. Vite produces the smallest bundles; Webpack achieves the best tree-shaking. All tools generate complete sourcemaps. The choice of bundler primarily affects build speed and memory, not output quality.}
+\medskip\noindent\textbf{Finding 2 (RQ2 answer).} \textit{Output quality differences are practically smaller than build speed differences. Vite produces the smallest bundles; Webpack achieves the best tree-shaking. All tools generate complete sourcemaps. The choice of bundler primarily affects build speed and memory, not output quality.}
 
 
 \subsection{RQ3: Resource Consumption and Scaling}\label{sec:rq3}
+
+RQ3 asks: \emph{How do resource consumption and scaling behavior differ across bundlers?}
+We address this through M10 (memory), M11 (CPU time), and M12 (scaling regression from M2 medians).
 
 \subsubsection{M10: Peak Memory (RSS)}
 
@@ -504,19 +575,20 @@ Table~\ref{tab:resources} presents memory and CPU results.
 
 \begin{table}[htbp]
 \centering
-\caption{Resource consumption: M10 (peak RSS in MB) and M11 (CPU time in seconds), median of 10 runs. Bold indicates the lowest (best) value at each scale.}\label{tab:resources}
-\begin{tabular}{@{}lrrrrr|rrrrr@{}}
+\caption{Resource consumption: M10 (peak RSS in MB) and M11 (CPU time in seconds), median (IQR) of 10 runs. Bold indicates the lowest (best) value at each scale. Bootstrap 95\% CIs for all cells are provided in the replication package.}\label{tab:resources}
+\begin{tabular}{@{}lrrrrr@{\hskip 12pt}rrrrr@{}}
 \toprule
- & \multicolumn{5}{c|}{\textbf{M10: Peak Memory (MB)}} & \multicolumn{5}{c}{\textbf{M11: CPU Time (s)}} \\
+ & \multicolumn{5}{c}{\textbf{M10: Peak Memory (MB)}} & \multicolumn{5}{c}{\textbf{M11: CPU Time (s)}} \\
 \cmidrule(lr){2-6}\cmidrule(lr){7-11}
 \textbf{Tool} & \textbf{xs} & \textbf{s} & \textbf{m} & \textbf{l} & \textbf{xl} & \textbf{xs} & \textbf{s} & \textbf{m} & \textbf{l} & \textbf{xl} \\
 \midrule
-esbuild & \textbf{101} & \textbf{141} & \textbf{124} & \textbf{177} & \textbf{287} & \textbf{1.41} & \textbf{1.75} & 3.43 & 8.80 & 28.67 \\
-Vite    & 234 & 387 & 551 & 924 & 1{,}687 & 1.95 & 2.62 & \textbf{3.29} & \textbf{6.06} & \textbf{11.10} \\
-Rspack  & 193 & 279 & 506 & 1{,}120 & 2{,}097 & 2.15 & 3.00 & 4.78 & 11.64 & 25.47 \\
-Rollup  & 408 & 602 & 1{,}088 & 2{,}076 & 3{,}072 & 5.70 & 7.95 & 14.98 & 432.03 & 1{,}736.72 \\
-Webpack & 479 & 897 & 2{,}124 & 4{,}832 & 5{,}925 & 7.81 & 10.33 & 20.89 & 76.99 & 214.52 \\
+esbuild & \textbf{100} \tiny{(2)} & \textbf{141} \tiny{(2)} & \textbf{124} \tiny{(1)} & \textbf{177} \tiny{(4)} & \textbf{287} \tiny{(8)} & \textbf{1.4} \tiny{(0.2)} & \textbf{1.8} \tiny{(0.9)} & 3.4 \tiny{(0.7)} & 8.8 \tiny{(1.6)} & 28.7 \tiny{(0.8)} \\
+Vite    & 234 \tiny{(6)} & 387 \tiny{(5)} & 551 \tiny{(6)} & 924 \tiny{(12)} & 1{,}687 \tiny{(33)} & 2.0 \tiny{(0.2)} & 2.6 \tiny{(0.1)} & \textbf{3.3} \tiny{(0.3)} & \textbf{6.1} \tiny{(0.6)} & \textbf{11.1} \tiny{(0.2)} \\
+Rspack  & 193 \tiny{(4)} & 279 \tiny{(4)} & 506 \tiny{(6)} & 1{,}120 \tiny{(17)} & 2{,}097 \tiny{(288)} & 2.2 \tiny{(0.2)} & 3.0 \tiny{(0.3)} & 4.8 \tiny{(0.2)} & 11.6 \tiny{(0.3)} & 25.5 \tiny{(0.5)} \\
+Rollup  & 408 \tiny{(67)} & 602 \tiny{(43)} & 1{,}088 \tiny{(54)} & 2{,}076 \tiny{(9)} & 3{,}072 \tiny{(146)} & 5.7 \tiny{(0.1)} & 8.0 \tiny{(0.2)} & 15.0 \tiny{(0.4)} & 432$^\dagger$ & 1{,}737$^\dagger$ \\
+Webpack & 479 \tiny{(13)} & 897 \tiny{(65)} & 2{,}124 \tiny{(89)} & 4{,}832 \tiny{(376)} & 5{,}925 \tiny{(869)} & 7.8 \tiny{(1.5)} & 10.3 \tiny{(0.3)} & 20.9 \tiny{(0.3)} & 77.0 \tiny{(0.4)} & 214.5 \tiny{(1.8)} \\
 \bottomrule
+\multicolumn{11}{@{}l@{}}{\footnotesize IQR shown in parentheses. $^\dagger$Rollup M11 at l/xl exhibits bimodal behavior (IQR = 1{,}936\,s at l-2{,}000; IQR = 3{,}284\,s at xl-5{,}000); see text.}
 \end{tabular}
 \end{table}
 
@@ -524,10 +596,47 @@ esbuild uses the least memory at every scale, peaking at just 287\,MB for 5{,}00
 This reflects Go's efficient memory model with value types and deterministic garbage collection.
 
 A notable anomaly: esbuild's memory at s-200 (141\,MB) is \emph{higher} than at m-500 (124\,MB).
-This is consistent across all 10 runs (tight standard deviation) and likely reflects Go's GC behavior, where a smaller-but-more-fragmented heap may report higher RSS than a larger-but-contiguous allocation at a slightly bigger scale.
-We report this as a genuine, reproducible finding.
+This is consistent across all 10 runs (tight IQRs of 2\,MB and 1\,MB respectively) and is a genuine, reproducible finding.
+We hypothesize this reflects Go's garbage-collector behavior, where a smaller-but-more-fragmented heap may report higher peak RSS than a larger-but-contiguous allocation; however, confirming this would require Go runtime profiling beyond our measurement scope.
 
 Webpack's memory grows most aggressively: from 479\,MB (xs-50) to 5{,}925\,MB (xl-5{,}000), a 12.4$\times$ increase, making it impractical for CI environments with typical 4--8\,GB memory limits at enterprise project scales.
+Figure~\ref{fig:memory} visualizes the memory scaling behavior.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Peak RSS memory (MB)},
+  xmin=0, xmax=5200,
+  ymin=0, ymax=6500,
+  xtick={50, 200, 500, 2000, 5000},
+  xticklabels={50, 200, 500, {2\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+  every axis plot/.append style={thick, mark size=2.5pt},
+]
+\addplot[color=blue, mark=*] coordinates {(50,100) (200,141) (500,124) (2000,177) (5000,287)};
+\addlegendentry{esbuild}
+\addplot[color=red, mark=square*] coordinates {(50,234) (200,387) (500,551) (2000,924) (5000,1687)};
+\addlegendentry{Vite}
+\addplot[color=orange, mark=triangle*] coordinates {(50,193) (200,279) (500,506) (2000,1120) (5000,2097)};
+\addlegendentry{Rspack}
+\addplot[color=teal, mark=diamond*] coordinates {(50,408) (200,602) (500,1088) (2000,2076) (5000,3072)};
+\addlegendentry{Rollup}
+\addplot[color=purple, mark=pentagon*] coordinates {(50,479) (200,897) (500,2124) (2000,4832) (5000,5925)};
+\addlegendentry{Webpack}
+% 8GB CI limit line
+\addplot[color=black, dashed, thin, domain=0:5200] {4096};
+\node[anchor=south east, font=\footnotesize] at (axis cs:5100,4096) {4\,GB CI limit};
+\end{axis}
+\end{tikzpicture}
+\caption{M10: Peak resident-set-size memory across scales. esbuild remains below 300\,MB at all scales; Webpack exceeds a typical 4\,GB CI memory limit at $\geq$2{,}000 modules.}\label{fig:memory}
+\end{figure}
 
 \subsubsection{M11: CPU Time}
 
@@ -536,7 +645,9 @@ The esbuild--Vite difference at these scales is not statistically significant ($
 At $\geq$500 modules, Vite becomes the most CPU-efficient: 3.29\,s at m-500 ($<$ esbuild's 3.43\,s) and 11.10\,s at xl-5{,}000 ($<$ esbuild's 28.67\,s)---mirroring the M2 crossover.
 
 Rollup exhibits a dramatic CPU explosion at large scales: 432\,s at l-2{,}000 and 1{,}737\,s (29 minutes) at xl-5{,}000.
-This is 156$\times$ Vite's CPU time at xl-5{,}000 and is attributable to Rollup's exhaustive Temporal Dead Zone (TDZ) analysis in its JavaScript-based scope-hoisting pass.
+This is 156$\times$ Vite's CPU time at xl-5{,}000.
+Notably, Rollup's M11 data at these scales is \emph{bimodal}: at l-2{,}000, individual runs range from 45\,s to 2{,}088\,s (IQR = 1{,}936\,s), suggesting that Rollup's optimization passes intermittently trigger an expensive code path.
+We hypothesize this is attributable to Rollup's exhaustive Temporal Dead Zone (TDZ) analysis in its JavaScript-based scope-hoisting pass, though confirming this would require profiling-level analysis beyond the scope of this study.
 
 \subsubsection{M12: Scaling Regression}
 
@@ -560,11 +671,82 @@ Webpack  & 0.995 & 0.711 & 22{,}770 & linear \\
 
 \textbf{All five tools scale linearly} with module count ($R^2 \geq 0.97$), not logarithmically.
 This is a significant finding: linear scaling means that build times at 10{,}000 or 20{,}000 modules can be reliably extrapolated from our measurements.
+Figure~\ref{fig:scaling} visualizes the fitted regression lines against the observed medians.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  name=main,
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Production build time (s)},
+  xmin=0, xmax=5200,
+  ymin=0, ymax=130,
+  xtick={0, 1000, 2000, 3000, 4000, 5000},
+  xticklabels={0, {1\,000}, {2\,000}, {3\,000}, {4\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+]
+% Observed medians (points)
+\addplot[only marks, color=blue, mark=*] coordinates {(50,0.399) (200,0.544) (500,0.988) (2000,3.592) (5000,14.682)};
+\addplot[only marks, color=red, mark=square*] coordinates {(50,1.017) (200,1.431) (500,1.644) (2000,2.926) (5000,5.900)};
+\addplot[only marks, color=orange, mark=triangle*] coordinates {(50,1.150) (200,1.518) (500,2.516) (2000,6.134) (5000,13.848)};
+\addplot[only marks, color=teal, mark=diamond*] coordinates {(50,2.858) (200,3.860) (500,7.670) (2000,24.608) (5000,99.208)};
+\addplot[only marks, color=purple, mark=pentagon*] coordinates {(50,3.712) (200,5.214) (500,10.982) (2000,39.664) (5000,115.872)};
+% Fitted regression lines
+\addplot[color=blue, dashed, no markers, domain=0:5200] {0.0029*x - 0.435};
+\addlegendentry{esbuild ($R^2=0.97$)}
+\addplot[color=red, dashed, no markers, domain=0:5200] {0.0010*x + 1.105};
+\addlegendentry{Vite ($R^2=1.00$)}
+\addplot[color=orange, dashed, no markers, domain=0:5200] {0.0026*x + 1.075};
+\addlegendentry{Rspack ($R^2=1.00$)}
+\addplot[color=teal, dashed, no markers, domain=0:5200] {0.0194*x - 2.480};
+\addlegendentry{Rollup ($R^2=0.97$)}
+\addplot[color=purple, dashed, no markers, domain=0:5200] {0.0228*x - 0.205};
+\addlegendentry{Webpack ($R^2=0.99$)}
+% Inset box indicator
+\draw[gray, thin, dashed] (axis cs:0,0) rectangle (axis cs:5200,18);
+\node[anchor=south east, font=\tiny, gray] at (axis cs:5100,18) {see inset};
+\end{axis}
+% Zoomed inset for low-slope tools
+\begin{axis}[
+  at={(main.south east)},
+  anchor=south east,
+  shift={(-8pt,38pt)},
+  width=0.42\columnwidth,
+  height=3.2cm,
+  xmin=0, xmax=5200,
+  ymin=0, ymax=18,
+  xtick={0, 2500, 5000},
+  xticklabels={0, {2.5K}, {5K}},
+  ytick={0, 5, 10, 15},
+  ylabel style={font=\tiny},
+  xlabel style={font=\tiny},
+  tick label style={font=\tiny},
+  grid=major,
+  grid style={dotted, gray!40},
+  title={\tiny Zoomed: 0--18\,s},
+  title style={at={(0.5,0.97)}},
+]
+\addplot[only marks, color=blue, mark=*, mark size=1.5pt] coordinates {(50,0.399) (200,0.544) (500,0.988) (2000,3.592) (5000,14.682)};
+\addplot[only marks, color=red, mark=square*, mark size=1.5pt] coordinates {(50,1.017) (200,1.431) (500,1.644) (2000,2.926) (5000,5.900)};
+\addplot[only marks, color=orange, mark=triangle*, mark size=1.5pt] coordinates {(50,1.150) (200,1.518) (500,2.516) (2000,6.134) (5000,13.848)};
+\addplot[color=blue, dashed, no markers, domain=0:5200] {0.0029*x - 0.435};
+\addplot[color=red, dashed, no markers, domain=0:5200] {0.0010*x + 1.105};
+\addplot[color=orange, dashed, no markers, domain=0:5200] {0.0026*x + 1.075};
+\end{axis}
+\end{tikzpicture}
+\caption{M2 scaling regression: observed medians (points) and fitted linear models (dashed lines). The 23.9$\times$ slope difference between Vite and Webpack is clearly visible. Inset zooms into the three lowest-slope tools (esbuild, Vite, Rspack). All $R^2 \geq 0.97$.}\label{fig:scaling}
+\end{figure}
 
 The slopes vary by 23.9$\times$: Vite adds only 954\,ms per 1{,}000 additional modules, compared to 22{,}770\,ms for Webpack.
 Rspack (2{,}553\,ms) and esbuild (2{,}888\,ms) have similar slopes, while Rollup (19{,}433\,ms) is close to Webpack, confirming that implementation language (Rust/Go vs.\ JavaScript) is the primary determinant of scaling efficiency.
 
-\medskip\noindent\textbf{Finding 3.} \textit{Build time scales linearly for all tools ($R^2 \geq 0.97$). Vite's scaling slope is 23.9$\times$ lower than Webpack's. esbuild uses 5.9--20.7$\times$ less memory than competitors. At enterprise scale ($\geq$5{,}000 modules), Rollup's CPU consumption becomes prohibitive (29 minutes).}
+\medskip\noindent\textbf{Finding 3 (RQ3 answer).} \textit{Build time scales linearly for all tools ($R^2 \geq 0.97$). Vite's scaling slope is 23.9$\times$ lower than Webpack's. esbuild uses 5.9--20.7$\times$ less memory than competitors. At enterprise scale ($\geq$5{,}000 modules), Rollup's CPU consumption becomes prohibitive (29 minutes) and exhibits bimodal variability.}
 
 
 \subsection{Tier~2: External Validation}\label{sec:tier2}
@@ -580,19 +762,20 @@ Table~\ref{tab:tier2} compares tool rankings between Tier~1 (s-200, the closest 
 \midrule
 M2 (build time)  & eb $<$ vi $<$ rs $<$ ro $<$ wp & eb $<$ vi $<$ rs $<$ ro $<$ wp & \checkmark \\
 M10 (peak RSS)   & eb $<$ rs $<$ vi $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & \checkmark \\
-M11 (CPU time)   & eb $<$ vi $<$ rs $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & $\sim$\footnote{Rspack and Vite swap ranks; median gap = 0.27\,s (4.21\,s vs.\ 4.48\,s). Cliff's $\delta = 0.10$ (negligible).} \\
+M11 (CPU time)   & eb $<$ vi $<$ rs $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & $\sim$\footnote{Rspack and Vite swap ranks; median gap = 0.27\,s (4.21\,s vs.\ 4.48\,s). Cliff's $\delta = -0.58$ (large), but the pairwise test is non-significant after Bonferroni correction ($p_\text{adj} = 0.28$) and the practical gap is only 0.27\,s.} \\
 \bottomrule
 \multicolumn{4}{@{}l}{\footnotesize eb = esbuild, vi = Vite, rs = Rspack, ro = Rollup, wp = Webpack.}
 \end{tabular}
 \end{table}
 
 Rankings match exactly for M2 (production build time) and M10 (peak memory).
-For M11 (CPU time), Rspack and Vite swap adjacent ranks, but their Tier~2 medians differ by only 0.27\,s (4.21\,s vs.\ 4.48\,s), with a negligible Cliff's delta of 0.10.
+For M11 (CPU time), Rspack and Vite swap adjacent ranks, but their Tier~2 medians differ by only 0.27\,s (4.21\,s vs.\ 4.48\,s).
+Although Cliff's delta is $-0.58$ (large), the pairwise test is non-significant after Bonferroni correction ($p_\text{adj} = 0.28$), and the practical gap of 0.27\,s is negligible for build workflows.
 This swap is well within measurement noise and does not contradict the Tier~1 findings.
 
 The Tier~1/Tier~2 agreement provides evidence that our calibrated synthetic projects produce rankings that generalize to a real-world application with production dependencies (React Query, Zustand, Radix UI, Tailwind CSS).
 
-\medskip\noindent\textbf{Finding 4.} \textit{Tier~2 (real-world OSS) rankings match Tier~1 (synthetic) rankings for M2 and M10 exactly, with only one negligible adjacent-rank swap for M11. The two-tier strategy validates external generalizability.}
+\medskip\noindent\textbf{Finding 4 (external validation).} \textit{Tier~2 (real-world OSS) rankings match Tier~1 (synthetic) rankings for M2 and M10 exactly, with only one adjacent-rank swap for M11 (Rspack--Vite, $\Delta = 0.27$\,s, non-significant after Bonferroni correction). The two-tier strategy validates external generalizability.}
 
 %% ═══════════════════════════════════════════════════════════════
 %% SECTION 6: DISCUSSION
@@ -607,7 +790,7 @@ Our study yields four principal findings that collectively demonstrate there is 
   \item \textbf{Scale-dependent build-speed leadership.} esbuild is fastest at $\leq$500 modules; Vite is fastest at $\geq$2{,}000 modules. The crossover occurs between 500 and 2{,}000 modules.
   \item \textbf{Output quality is a secondary differentiator.} While bundle sizes and tree-shaking effectiveness vary across tools, these differences are smaller in practical impact than the order-of-magnitude build-speed differences.
   \item \textbf{Linear scaling with dramatic slope differences.} All tools scale linearly ($R^2 \geq 0.97$), but Vite's slope (954\,ms / 1{,}000 modules) is 23.9$\times$ lower than Webpack's (22{,}770\,ms / 1{,}000 modules). Implementation language---Rust/Go versus JavaScript---is the primary determinant.
-  \item \textbf{Two-tier validation.} Tier~2 (real-world OSS) rankings match Tier~1 (synthetic) for M2 and M10, with only one negligible adjacent-rank swap for M11, supporting external generalizability.
+  \item \textbf{Two-tier validation.} Tier~2 (real-world OSS) rankings match Tier~1 (synthetic) for M2 and M10, with only one adjacent-rank swap for M11 ($\Delta = 0.27$\,s, non-significant), supporting external generalizability.
 \end{enumerate}
 
 \subsection{Practical Implications}\label{sec:practical}
@@ -624,7 +807,7 @@ Based on our findings, we propose the decision framework in Table~\ref{tab:decis
 Small project ($<$500 modules)         & esbuild  & Fastest build (988\,ms), lowest memory (124\,MB) \\
 Medium project (500--2{,}000 modules)  & Vite     & Competitive build, scale-invariant dev start \\
 Large project ($>$2{,}000 modules)     & Vite     & 2.5$\times$ faster than esbuild at xl-5K, lowest slope \\
-Webpack migration                       & Rspack   & Drop-in API compatibility, 6.6$\times$ faster at m-500 \\
+Webpack migration                       & Rspack   & Drop-in API compatibility, 4.4$\times$ faster at m-500 \\
 Memory-constrained CI                   & esbuild  & 287\,MB at xl-5K (5.9$\times$ less than Vite) \\
 Fastest HMR                            & Rspack   & 14\,ms HMR across all tested scales \\
 \bottomrule
@@ -632,14 +815,14 @@ Fastest HMR                            & Rspack   & 14\,ms HMR across all tested
 \end{table}
 
 \textbf{Rspack as a Webpack migration path.}
-Teams with existing Webpack projects face a meaningful upgrade path: Rspack's Webpack-compatible API enables migration without rewriting build configurations, while delivering a 4.3--8.4$\times$ build-speed improvement across our tested scales.
+Teams with existing Webpack projects face a meaningful upgrade path: Rspack's Webpack-compatible API enables migration without rewriting build configurations, while delivering a 3.2--8.4$\times$ build-speed improvement across our tested scales.
 At m-500, Rspack builds in 2{,}516\,ms versus Webpack's 10{,}982\,ms---a 4.4$\times$ improvement.
 At xl-5{,}000, the improvement grows to 8.4$\times$ (13{,}848\,ms vs.\ 115{,}872\,ms).
 
 \textbf{The Vite~8 architectural shift.}
 Vite~8's replacement of both esbuild and Rollup with a single Rolldown engine is quantifiably beneficial.
 Vite achieves the lowest scaling slope (954\,ms / 1{,}000 modules) while also producing the smallest gzipped bundles---a combination of build speed and output quality unmatched by other tools.
-The scale-invariant dev cold start ($\sim$865\,ms regardless of project size) further supports Vite's suitability for large projects.
+The scale-invariant dev cold start ($\sim$868\,ms regardless of project size) further supports Vite's suitability for large projects.
 
 \subsection{Architectural Insights}\label{sec:arch}
 
@@ -650,7 +833,7 @@ However, Vite (Rust) is 2.5$\times$ faster than esbuild (Go) at xl-5{,}000, sugg
 \textbf{Rollup's scalability ceiling.}
 Rollup's CPU time explodes from 15\,s (m-500) to 1{,}737\,s (xl-5{,}000), a 116$\times$ increase versus the expected 10$\times$ from linear scaling.
 This super-linear CPU behavior---despite linear wall-clock build time ($R^2 = 0.973$)---indicates that Rollup compensates with heavy single-thread CPU utilization.
-The root cause is Rollup's exhaustive Temporal Dead Zone (TDZ) analysis during scope hoisting, which becomes quadratic in the number of cross-module references.
+We hypothesize that the root cause is Rollup's exhaustive Temporal Dead Zone (TDZ) analysis during scope hoisting, which may become quadratic in the number of cross-module references; confirming this hypothesis requires profiler-guided analysis (future work).
 
 \textbf{Watch-mode degradation at enterprise scale.}
 At xl-5{,}000, only one tool (Vite) successfully completed an incremental rebuild in watch mode, and even that took 16.5\,s for a single file change.
@@ -663,7 +846,7 @@ The rspack-contrib benchmark~\cite{rspackbench2026} reports Vite's production bu
 The divergence arises because vendor benchmarks typically use a single, small project scale, missing the crossover phenomenon that is our central finding.
 
 Both vendor benchmarks and our study rank Webpack and Rollup as the slowest tools.
-However, our measurements show larger performance gaps than vendor benchmarks report (e.g., 19.7$\times$ for Webpack vs.\ Vite at xl-5{,}000, compared to $\sim$10$\times$ in vendor data), likely because our calibrated synthetic projects---with 50--150 LOC components, realistic imports, and CSS Modules---exercise more bundler subsystems than the trivial 5-line components used in vendor benchmarks.
+However, our measurements show larger performance gaps than vendor benchmarks report (e.g., 19.6$\times$ for Webpack vs.\ Vite at xl-5{,}000, compared to $\sim$10$\times$ in vendor data), likely because our calibrated synthetic projects---with 50--150 LOC components, realistic imports, and CSS Modules---exercise more bundler subsystems than the trivial 5-line components used in vendor benchmarks.
 
 %% ═══════════════════════════════════════════════════════════════
 %% SECTION 7: THREATS TO VALIDITY
