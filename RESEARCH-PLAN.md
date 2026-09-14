@@ -6,9 +6,9 @@
 >
 > **Author:** Independent Researcher
 >
-> **Target Venue (Primary):** Software: Practice and Experience (Wiley, Q2, IF ~3.1)
+> **Target Venue (Primary):** Journal of Systems and Software (Elsevier, Q1, IF ~3.5)
 >
-> **Target Venue (Backup):** Journal of Systems and Software (Elsevier, Q1, IF ~3.5)
+> **Target Venue (Backup):** Software: Practice and Experience (Wiley, Q2, IF ~3.1)
 >
 > **Started:** September 11, 2026
 
@@ -55,7 +55,7 @@
 | No resource metrics | Peak RSS, CPU time, disk I/O |
 | No replication package | GitHub + Zenodo DOI |
 | Outdated (pre-Rolldown Vite) | Vite 8 with Rolldown engine (2026) |
-| Bachelor's thesis, not journal | Target: SPE (Q2) or JSS (Q1) |
+| Bachelor's thesis, not journal | Target: JSS (Q1, primary) or SPE (Q2, backup) |
 
 ### 0.3 Reference Papers (Structural Models)
 
@@ -1007,6 +1007,7 @@ Week 23-26    ████████████████ Phase 5b: Revisio
 | Sep 12, 2026 | Run 1 cold-start outliers retained (median-robust) | 8/266 groups CV>100%, all caused by Run 1 being 10-300× slower. Median is robust; mean would be misleading. Documented in Threats to Validity. |
 | Sep 13, 2026 | M3 xl-5000 watch-mode timeouts = genuine finding | All tools (Vite, Rspack, Rollup) timeout at 5,000 modules in build-watch mode. Not a measurement bug — build-watch genuinely degrades at extreme scale. esbuild has no native watch; Webpack not tested at xl-5000 M3. |
 | Sep 13, 2026 | Phase 3 sealed after Reflexion Gate | 1,769 data points, 27/27 significant omnibus tests, 197/205 large effect sizes, Tier 1 / Tier 2 exact ranking match for M2. Data quality sufficient for publication. |
+| Sep 13, 2026 | Venue switched: JSS primary, SPE backup (was SPE primary, JSS backup) | Post-experiment analysis: (1) Theodolite (our methodology gold standard) published in JSS — shows editorial board values benchmarking. (2) JSS is Q1 vs SPE Q2 with similar review timelines. (3) ConflictBench (tool comparison, 5 tools, 3 metrics) accepted by JSS — same paper shape. (4) SPE remains safest backup with 5+ recent benchmark precedents. TSE rejected: pure empirical measurement lacks the methodological novelty TSE expects. |
 
 ---
 
