@@ -1,3 +1,4 @@
+tool,size,metric,run,value,unit,timestamp
 rspack,bp-react,M3,1,372,ms,2026-09-13T23:41:54Z
 rspack,bp-react,M3,2,459,ms,2026-09-13T23:41:54Z
 rspack,bp-react,M3,3,445,ms,2026-09-13T23:41:54Z

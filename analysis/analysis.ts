@@ -347,6 +347,7 @@ function runAnalysis(data: Row[], metricFilter?: string) {
     const toolM2 = m2Data.filter(r => r.tool === tool);
     const sizeMedians: { modules: number; median: number }[] = [];
     for (const size of actualSizes) {
+      if (!SIZE_MODULES[size]) continue;
       const vals = toolM2.filter(r => r.size === size).map(r => r.value);
       if (vals.length > 0) {
         sizeMedians.push({ modules: SIZE_MODULES[size], median: ss.median(vals) });

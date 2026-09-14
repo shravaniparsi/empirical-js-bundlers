@@ -1,0 +1,6 @@
+tool,r2_linear,r2_log_linear,best_fit,slope_per_1000_modules
+esbuild,NaN,NaN,log-linear,NaN
+rollup,NaN,NaN,log-linear,NaN
+rspack,NaN,NaN,log-linear,NaN
+vite,NaN,NaN,log-linear,NaN
+webpack,NaN,NaN,log-linear,NaN
