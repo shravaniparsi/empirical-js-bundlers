@@ -1,5 +1,37 @@
 # Phase 4 Writing Plan — Journal of Systems and Software (JSS)
 
+## Reflexion Gate: Plan Validation (Sep 13, 2026)
+
+**Pattern:** Act → Evaluate → Reflect → Revise
+
+### Act
+Writing plan created with 8 sections (~22 pages), 13 tables, 5 figures, paragraph-level detail, backwards writing order, 9 hostile reviewer defenses, JSS submission checklist.
+
+### Evaluate — 9 Issues Found
+
+| # | Issue | Severity | Resolution |
+|---|-------|----------|------------|
+| 1 | §2 Background (2pp) duplicates §4.2 tool profiles | Medium | Reduce §2 to 1.5pp; merge §2.3 tool profiles INTO §4.2 |
+| 2 | §6.4 vendor benchmark comparison may go stale | Low | Reframe as qualitative "grey literature sanity check" |
+| 3 | 18 visuals in 22pp = 1 per 1.2pp (too dense) | Medium | Consolidate: merge T5→appendix, merge Fig4+5 into 2-panel. Target: ≤15 visuals |
+| 4 | "Crossover at 1,500 modules" not provable from data | High | Interpolation says ~1,245. Change to "between 500 and 2,000 modules" everywhere |
+| 5 | Abstract says "11 metrics" but M1–M12 = 12 | Medium | Say "11 directly measured metrics" (M12 is derived from M2 regression) |
+| 6 | Finding callout boxes not typical JSS style | Low | Use inline **bold summary sentences** instead |
+| 7 | Title doesn't signal two-tier contribution | Medium | Revised title candidate below |
+| 8 | Replication package (Zenodo DOI) not yet created | N/A | Phase 5 action — note in plan |
+| 9 | Only ~20 references identified; need 40–50 | Medium | Compile full BibTeX as Phase 4 Step 0 before any section writing |
+
+### Reflect
+
+**Critical finding:** The crossover claim (Issue 4) is the most important fix. "1,500 modules" appears in the abstract sentence plan AND Highlight H4. Our data has measurements at 500 and 2,000 modules — linear interpolation gives ~1,245 but we cannot claim 1,500 with empirical precision. A hostile reviewer could challenge this exact number. The safe, defensible phrasing is "between 500 and 2,000 modules" in the body, and "at ≥1,000 modules" in highlights for brevity.
+
+**Structural insight:** The Background–Study Design duplication (Issue 1) wastes ~0.5pp. Theodolite (our gold-standard precedent) has NO Background section at all. Merging tool profiles into §4.2 also strengthens §4 because reviewers see selection criteria and tool details together.
+
+**Visual density (Issue 3):** At 1 visual per 1.2 pages, the paper will feel like a data dump. Moving Table 5 (component templates) to an appendix and combining the memory + scaling figures into a 2-panel composite brings us to ~15 visuals in ~22pp (1 per 1.5pp), which matches ConflictBench's density.
+
+### Revise — Applied Below
+All 9 issues addressed inline in the plan sections below (marked with ✏️ where changed).
+
 ## JSS Submission Rules Summary
 
 | Rule | Requirement |
@@ -27,36 +59,38 @@ Modeled after Theodolite (Henning & Hasselbring, JSS 2024) and ConflictBench (Sh
 
 | # | Section | Est. Pages | Content Summary |
 |---|---------|-----------|-----------------|
-| — | **Title** | — | "An Empirical Comparison of JavaScript Bundler Performance: Vite, Rspack, esbuild, Webpack, and Rollup" |
+| — | **Title** | — | "Benchmarking JavaScript Bundlers at Scale: A Two-Tier Empirical Study..." ✏️ |
 | — | **Abstract** | 0.5 | Context → Gap → Method → Key results → Conclusion (≤250 words) |
 | — | **Highlights** | — | 5 bullets ≤85 chars each |
 | — | **Keywords** | — | JavaScript bundler; build tools; empirical study; performance benchmarking; Vite; Rspack; esbuild |
 | 1 | **Introduction** | 1.5 | Motivation, gap, contributions, paper organization |
-| 2 | **Background** | 2 | JS module systems, bundler architectures, 5 tools profiled |
+| 2 | **Background** | 1.5 | JS module systems, bundler architectures, tool summary ✏️ (reduced from 2pp) |
 | 3 | **Related Work** | 2 | Academic (Nguyen thesis), grey lit (vendor benchmarks), methodology (Kalibera-Jones, Georges et al.) |
-| 4 | **Study Design** | 4 | RQs, tool selection, two-tier data strategy, metrics, measurement harness, statistical method |
+| 4 | **Study Design** | 4 | RQs, tool selection + profiles ✏️, two-tier data strategy, metrics, measurement harness, statistical method |
 | 5 | **Results** | 4.5 | RQ1 (build perf), RQ2 (output quality), RQ3 (resources & scaling), Tier 2 validation |
 | 6 | **Discussion** | 2.5 | Key findings, practical implications, tier comparison |
 | 7 | **Threats to Validity** | 1.5 | Internal, external, construct, conclusion validity |
 | 8 | **Conclusion & Future Work** | 0.5 | Summary, recommendations, future directions |
 | — | **References** | 1.5 | ~40–50 references |
-| — | **Appendix** (if needed) | 1 | Tool version table, extended stats tables |
-| | **TOTAL** | **~22** | Within 36-page single-column limit |
+| — | **Appendix** (if needed) | 1 | Tool version table, extended stats tables, component template table (T5) ✏️ |
+| | **TOTAL** | **~21.5** ✏️ | Within 36-page single-column limit (14.5pp buffer) |
 
 ---
 
 ## Section-by-Section Plan
 
-### Title
+### Title ✏️ (Issue 7 — signal two-tier contribution)
 
-**Primary candidate:**
+**Primary candidate (REVISED):**
+"Benchmarking JavaScript Bundlers at Scale: A Two-Tier Empirical Study of Vite, Rspack, esbuild, Webpack, and Rollup"
+
+**Previous candidate (demoted):**
 "An Empirical Comparison of JavaScript Bundler Performance Across Project Scales"
 
 **Alternative candidates:**
 - "How Fast Is Your Bundler? A Rigorous Empirical Study of Five JavaScript Build Tools"
-- "Benchmarking JavaScript Bundlers: A Two-Tier Empirical Study of Vite, Rspack, esbuild, Webpack, and Rollup"
 
-**Decision criteria:** JSS titles tend to be descriptive rather than catchy. Theodolite uses "Benchmarking Scalability of..." — descriptive. ConflictBench uses "ConflictBench: A Benchmark to..." — named artifact. Since we don't have a named tool/benchmark to brand, go with descriptive.
+**Decision criteria:** JSS titles tend to be descriptive. Theodolite uses "Benchmarking Scalability of..." — descriptive. New title signals both key differentiators: "at Scale" (range of project sizes) and "Two-Tier" (methodology novelty).
 
 ---
 
@@ -70,13 +104,14 @@ Sentence plan:
    academic comparison exists.
 2. Gap (1 sentence): Existing benchmarks use trivially synthetic projects, lack 
    statistical rigor, and are often vendor-maintained.
-3. Method (3 sentences): We compare 5 bundlers across 11 metrics using a two-tier 
-   design: Tier 1 = calibrated synthetic projects at 5 scales (50–5,000 modules), 
-   Tier 2 = real-world OSS project. Non-parametric statistics: Kruskal-Wallis, 
-   Mann-Whitney U with Bonferroni, Cliff's delta. Total: 1,534 valid data points.
+3. Method (3 sentences): We compare 5 bundlers across 11 directly measured metrics 
+   using a two-tier design: Tier 1 = calibrated synthetic projects at 5 scales 
+   (50–5,000 modules), Tier 2 = real-world OSS project. Non-parametric statistics: 
+   Kruskal-Wallis, Mann-Whitney U with Bonferroni, Cliff's delta. 
+   Total: 1,534 valid data points.  ✏️ (Issue 5: "11 directly measured")
 4. Key results (4 sentences): 
-   - Vite 8 (Rust/Rolldown) fastest at ≥1,500 modules (5.9s at 5,000 modules).
-   - esbuild (Go) fastest at small scale (<1,500 modules).
+   - Vite 8 (Rust/Rolldown) fastest at ≥2,000 modules (5.9s at 5,000 modules).
+   - esbuild (Go) fastest at ≤500 modules.  ✏️ (Issue 4: provable bounds, not "1,500")
    - All tools scale linearly (R²≥0.97).
    - 27/27 omnibus tests significant, 197/205 pairs show large effect sizes.
 5. Conclusion (2 sentences): Tool choice depends on project scale. Tier 2 rankings 
@@ -85,14 +120,14 @@ Sentence plan:
 
 ---
 
-### Highlights (5 bullets, each ≤ 85 characters)
+### Highlights (5 bullets, each ≤ 85 characters) ✏️ (Issues 4, 5)
 
 ```
 1. First rigorous empirical comparison of five JavaScript bundlers     [62 chars]
-2. Two-tier design: calibrated synthetic + real-world OSS validation   [63 chars]
-3. 1,534 measurements across 11 metrics and 5 project scales          [61 chars]
-4. Vite 8 overtakes esbuild at 1,500+ modules; all scale linearly     [64 chars]
-5. Full replication package with scripts, data, and analysis code      [63 chars]
+2. Two-tier design: calibrated synthetic + real-world OSS validation   [65 chars]
+3. 1,534 measurements across 11 metrics and 5 project scales          [57 chars]
+4. Vite 8 overtakes esbuild between 500 and 2,000 modules             [56 chars] ✏️
+5. Full replication package with scripts, data, and analysis code      [62 chars]
 ```
 
 ---
@@ -120,7 +155,7 @@ Sentence plan:
 
 ---
 
-### Section 2: Background (~2 pages)
+### Section 2: Background (~1.5 pages) ✏️ (Issue 1 — reduced from 2pp, tool profiles moved to §4.2)
 
 **Purpose:** Give a reviewer unfamiliar with JS bundlers enough context to evaluate our study.
 
@@ -136,14 +171,14 @@ Sentence plan:
 - Language matters: JavaScript (Webpack, Rollup) vs. Go (esbuild) vs. Rust (Vite/Rolldown, Rspack)
 - Key concepts: HMR, tree-shaking, code splitting, sourcemaps
 
-**2.3 Tools Under Study** (1 page)
-- Table: 5 tools with version, language, architecture, npm downloads, rationale
-- Brief profile of each tool (2–3 sentences each)
-- Why each was included and what architectural approach it represents
+**2.3 Tools Under Study** (0.5 page — summary only) ✏️
+- Table: 5 tools with version, language, architecture, npm downloads
+- Brief 1-sentence description of each tool
+- Detailed profiles and selection rationale moved to §4.2
 
 **Figures/Tables:**
-- Table 1: Tool comparison matrix (version, language, architecture, downloads, key feature)
-- Figure 1: Architectural diagram showing the three bundler paradigms
+- Table 1: Tool comparison matrix (5 tools × 5 columns: version, language, architecture, downloads, paradigm)
+- ~~Figure 1: Architectural diagram~~ → CONSIDER: merge into Table 1 as a "paradigm" column to save space
 
 ---
 
@@ -189,9 +224,9 @@ Sentence plan:
 - RQ3: Resource consumption and scaling behavior (M10–M12)
 - Each RQ with motivation and sub-questions
 
-**4.2 Tool Selection** (0.5 page)
+**4.2 Tool Selection** (0.5 page) ✏️ (Issue 1 — now includes detailed tool profiles from former §2.3)
 - Inclusion criteria (5 criteria)
-- Selected tools table (from Section 2.3, reference back)
+- Selected tools with 2–3 sentence profiles each (why included, architecture, unique traits)
 - Excluded tools with rationale (Turbopack, Parcel, Farm, Bun, SWC)
 
 **4.3 Two-Tier Benchmarking Strategy** (1 page) ← **KEY NOVELTY — emphasize**
@@ -236,12 +271,13 @@ Sentence plan:
 
 **5.1 RQ1: Build Performance** (1.5 pages)
 - **M2 (Production build time):** Main results table (5 tools × 5 sizes), key findings
-  - Crossover finding: esbuild fastest at <1,500 modules, Vite fastest at ≥1,500
+  - Crossover finding: esbuild fastest at ≤500 modules, Vite fastest at ≥2,000 modules ✏️ (Issue 4)
+  - Interpolated crossover at ~1,250 modules; discussed as range, not point estimate
   - Figure: Line chart of M2 vs project scale (5 lines, 5 data points each)
 - **M1 (Dev cold start):** Limited to Vite/Webpack (Rspack all timeout), brief discussion
 - **M3 (Incremental rebuild):** 3 sizes × 4 tools, watch-mode timeout finding at xl-5000
 - **M4 (HMR latency):** 2 sizes × 3 tools, Rspack consistently fastest
-- Box: "Finding 1: Tool selection for build speed depends on project scale..."
+- **Finding 1** (inline bold, not boxed ✏️ Issue 6): Tool selection for build speed depends on project scale...
 
 **5.2 RQ2: Output Quality** (1 page)
 - **M5/M6 (Bundle size raw/gzip):** Table, all tools produce similar sizes at same scale
@@ -249,6 +285,7 @@ Sentence plan:
 - **M8 (Code splitting):** Chunk count comparison
 - **M9 (Sourcemap coverage):** Brief note on validation pass rates
 - Box: "Finding 2: Output quality differences are smaller than build speed differences..."
++ **Finding 2** (inline bold ✏️): Output quality differences are smaller than build speed differences...
 
 **5.3 RQ3: Resource Consumption & Scaling** (1.5 pages)
 - **M10 (Peak memory RSS):** Table + line chart across scales
@@ -259,7 +296,7 @@ Sentence plan:
   - ALL tools scale linearly (R²≥0.97)
   - Slope table: Vite +954ms/1000 modules vs Webpack +22,770ms/1000 modules
   - Figure: Scaling regression plot with 5 fitted lines
-- Box: "Finding 3: Build time scales linearly, not logarithmically..."
+- **Finding 3** (inline bold ✏️): Build time scales linearly, not logarithmically...
 
 **5.4 Tier 2: External Validation** (0.5 page)
 - Bulletproof React results: rankings match Tier 1 for M2, M10, M11
@@ -300,10 +337,10 @@ Sentence plan:
 - Rollup's scalability ceiling: TDZ analysis as a concrete limitation
 - Watch-mode degradation: industry-wide gap at enterprise scale
 
-**6.4 Comparison with Vendor Benchmarks** (0.5 page)
-- Our results vs rspack-contrib/build-tools-performance
-- Our results vs Rolldown official benchmarks
-- Where grey literature matches/diverges from our findings
+**6.4 Qualitative Comparison with Grey Literature** (0.5 page) ✏️ (Issue 2 — reframed)
+- Our results vs rspack-contrib/build-tools-performance: qualitative ranking agreement
+- Our results vs Rolldown official benchmarks: qualitative ranking agreement
+- Where grey literature matches/diverges from our findings (direction, not exact numbers)
 - Why vendor benchmarks underestimate differences (trivial projects)
 
 **Figures/Tables:**
@@ -354,10 +391,11 @@ Follow standard 4-category structure (Wohlin et al., 2012):
 
 ---
 
-## Writing Order
+## Writing Order ✏️ (Issue 9 — added Step 0 for references)
 
 | Phase | Sections | Why This Order |
 |-------|----------|---------------|
+| **0** | **Reference list (BibTeX)** ✏️ | **Compile full ~40–50 references BEFORE writing any section** |
 | 1 | §4 Study Design | Backbone — everything references this |
 | 2 | §5 Results | Flows directly from §4 |
 | 3 | §6 Discussion | Interprets §5 |
@@ -369,15 +407,15 @@ Follow standard 4-category structure (Wohlin et al., 2012):
 
 ---
 
-## Figures & Tables Inventory
+## Figures & Tables Inventory ✏️ (Issue 3 — consolidated from 18 → 15 visuals)
 
 | ID | Type | Section | Content |
 |----|------|---------|---------|
-| Table 1 | Table | §2.3 | Tool comparison matrix (5 tools × 6 columns) |
+| Table 1 | Table | §2.3 | Tool comparison matrix (5 tools × 5 columns) |
 | Table 2 | Table | §3.4 | Our study vs existing benchmarks |
 | Table 3 | Table | §4.3 | Tier 1 project specifications (5 sizes) |
-| Table 4 | Table | §4.4 | Metric definitions (11 metrics) |
-| Table 5 | Table | §4.3 | Component template distribution |
+| Table 4 | Table | §4.4 | Metric definitions (11+1 metrics) ✏️ (Issue 5: note M12 is derived) |
+| Table 5 | Table | Appendix | Component template distribution ✏️ (Issue 3: moved to appendix) |
 | Table 6 | Table | §5.1 | M2 descriptive stats (5 tools × 6 sizes) |
 | Table 7 | Table | §5.1 | Significance summary (KW + pairwise) |
 | Table 8 | Table | §5.2 | M5–M9 output quality metrics |
@@ -385,18 +423,16 @@ Follow standard 4-category structure (Wohlin et al., 2012):
 | Table 10 | Table | §5.3 | Scaling regression coefficients |
 | Table 11 | Table | §5.4 | Tier 1 vs Tier 2 ranking comparison |
 | Table 12 | Table | §6.2 | Practitioner decision matrix |
-| Table 13 | Table | §6.4 | Our results vs vendor benchmarks |
-| Fig. 1 | Figure | §2.2 | Bundler architecture paradigms |
-| Fig. 2 | Figure | §4.3 | Two-tier benchmarking strategy diagram |
-| Fig. 3 | Figure | §5.1 | M2 build time vs project scale (line chart) |
-| Fig. 4 | Figure | §5.3 | M10 memory vs project scale (line chart) |
-| Fig. 5 | Figure | §5.3 | Scaling regression with fitted lines |
+| Table 13 | Table | §6.4 | Our results vs vendor benchmarks (qualitative ✏️ Issue 2) |
+| Fig. 1 | Figure | §4.3 | Two-tier benchmarking strategy diagram ✏️ (was Fig 2; arch diagram dropped) |
+| Fig. 2 | Figure | §5.1 | M2 build time vs project scale (line chart) ✏️ (renumbered) |
+| Fig. 3 | 2-panel | §5.3 | (a) M10 memory + (b) scaling regression ✏️ (Issue 3: merged Fig4+5) |
 
-**Total: 13 tables + 5 figures = 18 visual elements**
+**Total: 13 tables (12 body + 1 appendix) + 3 figures = 15 body visuals → ~1 per 1.5 pages ✅**
 
 ---
 
-## Hostile Reviewer Defense (Updated for JSS)
+## Hostile Reviewer Defense (Updated for JSS) ✏️
 
 | Likely Criticism | Pre-emptive Defense | Where Addressed |
 |-----------------|---------------------|-----------------|
@@ -409,6 +445,8 @@ Follow standard 4-category structure (Wohlin et al., 2012):
 | "Only React/TypeScript" | Most popular framework (controls variable). Acknowledged. Future work: Vue, Angular. | §7.2 |
 | "Bonferroni is too conservative" | 188/205 still significant. Conservative = fewer false positives = stronger claims. | §7.4 |
 | "esbuild memory anomaly suspicious" | Genuine finding: tight std, consistent across runs, Go GC behavior documented. | §5.3 + §6.3 |
+| "Crossover at 1,500 not provable" ✏️ | **NEW:** We report range "between 500 and 2,000 modules" with interpolated estimate (~1,250). No point claim. | §5.1 |
+| "M1 only 2 tools — weak RQ" ✏️ | **NEW:** Explicitly scoped as limited. 3 tools timed out = itself a finding (tool limitation). | §5.1 + §7.3 |
 
 ---
 

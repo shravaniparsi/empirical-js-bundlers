@@ -897,6 +897,16 @@ No protocol changes needed. Data quality is sufficient for publication:
 ## Phase 4: Paper Writing 🔲
 
 > _≤36 pages single-column, following JSS conventions. Detailed plan in `WRITING-PLAN.md`._
+> 
+> **Reflexion Gate: Plan Validation ✅ (Sep 13, 2026)**
+> - 9 issues found, all resolved in revised WRITING-PLAN.md
+> - Critical fix: crossover claim changed from "1,500 modules" → "between 500 and 2,000 modules" (defensible from data)
+> - Title revised to signal two-tier contribution
+> - §2 Background reduced from 2pp to 1.5pp (tool profiles → §4.2)
+> - Visual density improved: 18 → 15 visuals via consolidation
+> - 2 new hostile reviewer defenses added (crossover precision, M1 weak coverage)
+> - Writing Step 0 added: compile full BibTeX before any section
+> - All numerical claims in abstract verified exact against data
 
 ### 4.1 Paper Structure (JSS-Optimized)
 
