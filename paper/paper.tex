@@ -1,0 +1,311 @@
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{siunitx}
+\usepackage{url}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\journal{Journal of Systems and Software}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Benchmarking JavaScript Bundlers at Scale:\\A Two-Tier Empirical Study of Vite, Rspack, esbuild, Webpack, and Rollup}
+
+\author[addr1]{[Author Name]}
+\address[addr1]{[Affiliation]}
+
+\begin{abstract}
+JavaScript bundlers are a critical component of modern web development, transforming source modules into optimized production artifacts.
+Despite their ubiquity---Staicu et al.\ found that 40\% of websites rely on bundlers---no peer-reviewed empirical comparison of modern bundlers exists.
+Existing benchmarks suffer from trivially synthetic projects, vendor maintenance bias, and absence of statistical rigor.
+
+We present the first rigorous empirical comparison of five production-ready JavaScript bundlers---Vite~8, Rspack~2, esbuild~0.28, Webpack~5, and Rollup~4---across 11 directly measured metrics spanning build performance, output quality, and resource consumption.
+Our study employs a two-tier benchmarking strategy: Tier~1 uses calibrated synthetic React+TypeScript projects at five scales (50--5{,}000 modules) for controlled comparison; Tier~2 validates findings on a real-world open-source project (Bulletproof React, 102 components).
+We apply non-parametric statistics---Kruskal--Wallis omnibus tests, Mann--Whitney $U$ pairwise comparisons with Bonferroni correction, and Cliff's delta effect sizes---to 1{,}534 valid data points.
+
+Results show that tool selection depends on project scale: esbuild is fastest at $\leq$500 modules, while Vite~8 (powered by its Rust-based Rolldown engine) dominates at $\geq$2{,}000 modules, completing a 5{,}000-module production build in 5.9\,s versus 73.5\,s for Webpack.
+All five tools exhibit linear build-time scaling ($R^2 \geq 0.97$), with Vite's slope 23.9$\times$ lower than Webpack's.
+Of 27 omnibus tests, all are statistically significant ($p < 0.05$); 197 of 205 pairwise comparisons yield large effect sizes.
+Tier~2 rankings match Tier~1, supporting external generalizability.
+We provide a full replication package.
+\end{abstract}
+
+\begin{keyword}
+JavaScript bundler \sep build tools \sep empirical study \sep performance benchmarking \sep Vite \sep Rspack \sep esbuild
+\end{keyword}
+
+\begin{highlights}
+\item First rigorous empirical comparison of five JavaScript bundlers
+\item Two-tier design: calibrated synthetic + real-world OSS validation
+\item 1{,}534 measurements across 11 metrics and 5 project scales
+\item Vite 8 overtakes esbuild between 500 and 2{,}000 modules
+\item Full replication package with scripts, data, and analysis code
+\end{highlights}
+
+\end{frontmatter}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 1: INTRODUCTION (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Introduction}\label{sec:intro}
+
+\textit{[To be written --- see WRITING-PLAN.md \S1]}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 2: BACKGROUND (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Background}\label{sec:background}
+
+\textit{[To be written --- see WRITING-PLAN.md \S2]}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 3: RELATED WORK (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Related Work}\label{sec:related}
+
+\textit{[To be written --- see WRITING-PLAN.md \S3]}
+
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 4: STUDY DESIGN
+%% ═══════════════════════════════════════════════════════════════
+\section{Study Design}\label{sec:design}
+
+This section describes the design of our empirical study, following the guidelines of Wohlin et al.~\cite{wohlin2012experimentation} and the benchmarking methodology established by Kalibera and Jones~\cite{kalibera2013rigorous}.
+
+\subsection{Research Questions}\label{sec:rqs}
+
+We structure our investigation around three research questions, each addressing a distinct dimension of bundler performance.
+
+\medskip\noindent\textbf{RQ1: How do modern JavaScript bundlers compare in build performance across project scales?}
+Build speed directly impacts developer productivity and is the primary reason teams migrate bundlers~\cite{stateofjs2025}.
+We measure four metrics: development server cold-start time (M1), production build time (M2), incremental rebuild latency (M3), and hot module replacement (HMR) latency (M4).
+
+\medskip\noindent\textbf{RQ2: How does bundler choice affect output quality and delivery efficiency?}
+A fast bundler that produces bloated output is a false economy; bundle size and code-splitting granularity directly affect end-user load times.
+We measure raw bundle size (M5), gzipped bundle size (M6), tree-shaking effectiveness (M7), code-splitting granularity (M8), and sourcemap accuracy (M9).
+
+\medskip\noindent\textbf{RQ3: How do resource consumption and scaling behavior differ across bundlers?}
+Resource usage determines viability in CI/CD environments with memory limits and on developer machines with 8--32\,GB RAM.
+We measure peak resident-set-size memory (M10), CPU time (M11), and derive scaling regression models from M2 across all five project scales (M12).
+
+\subsection{Tool Selection}\label{sec:tools}
+
+We select five tools spanning three architectural paradigms and three implementation languages, ensuring a balanced comparison.
+The inclusion criteria are: (1)~open source and installable via npm; (2)~standalone (usable outside a specific framework); (3)~production-ready with stable release; (4)~significant adoption ($\geq$100K weekly npm downloads or major organizational backing); and (5)~architecturally distinct from other selected tools.
+
+Table~\ref{tab:tools} summarizes the selected tools.
+
+\begin{table}[htbp]
+\centering
+\caption{Tools under study. All versions pinned on experiment Day~1 (September~11, 2026). Downloads from npm trends~\protect\cite{npmtrends2026}.}\label{tab:tools}
+\begin{tabular}{@{}llllr@{}}
+\toprule
+\textbf{Tool} & \textbf{Version} & \textbf{Lang.} & \textbf{Paradigm} & \textbf{npm wk.\ DL} \\
+\midrule
+Vite     & 8.3.0   & Rust (Rolldown) & Unbundled dev  & $\sim$16M \\
+Rspack   & 2.2.3   & Rust            & Fully bundled  & $\sim$700K \\
+esbuild  & 0.28.2  & Go              & Fully bundled  & $\sim$38M \\
+Webpack  & 5.110.3 & JS + SWC (Rust) & Fully bundled  & $\sim$28M \\
+Rollup   & 4.63.1  & JavaScript      & Fully bundled  & $\sim$30M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Vite~8}~\cite{vite2026} represents the dominant greenfield choice ($\sim$16M weekly downloads). Version~8 is architecturally significant: it replaced both esbuild (development transforms) and Rollup (production bundling) with Rolldown~\cite{rolldown2026}, a unified Rust-based engine---a fundamental shift worth quantifying.
+
+\textbf{Rspack~2}~\cite{rspack2026}, developed by ByteDance, offers a drop-in Webpack replacement with a Rust core. It represents the ``migrate existing Webpack projects to Rust'' migration path and tests whether API compatibility incurs a performance cost.
+
+\textbf{esbuild~0.28}~\cite{esbuild2026}, written in Go, pioneered the 10--100$\times$ speedup narrative that catalyzed the Rust/Go bundler wave. Its minimal plugin API tests the raw-speed-versus-extensibility tradeoff. As the only Go-based tool, it provides a cross-language comparison point.
+
+\textbf{Webpack~5}~\cite{webpack2026} is the incumbent, used by $\sim$86\% of developers~\cite{stateofjs2025}. We equip it with SWC~\cite{swc2026} for Rust-accelerated transforms, giving it the best-case scenario. It serves as the \emph{baseline control}.
+
+\textbf{Rollup~4}~\cite{rollup2026}, Vite's former production engine, is a pure-JavaScript ESM-native bundler. It serves as the \emph{second baseline}, establishing the performance floor of a tool without Rust or Go acceleration.
+
+\medskip\noindent\textbf{Excluded tools.} Turbopack lacks a stable standalone production build (it functions only as a Next.js-internal development bundler) and is noted as future work. Parcel~2 overlaps architecturally with Vite. Farm has insufficient adoption ($\sim$2K GitHub stars). Bun's bundler is runtime-integrated (different execution model). SWC is a transpiler, not a full bundler.
+
+\subsection{Two-Tier Benchmarking Strategy}\label{sec:twotier}
+
+A key design decision is how to construct the projects being benchmarked.
+Existing vendor-maintained benchmarks (e.g., rspack-contrib/build-tools-performance~\cite{rspackbench2026}, Rolldown benchmarks~\cite{rolldownbench2026}) use trivially synthetic components ($\sim$5 lines of empty JSX), while purely real-world projects cannot be fairly ported to all five bundlers due to bundler-specific APIs.
+Our solution is a \textbf{two-tier strategy} that satisfies both internal validity (controlled comparison via synthetic projects) and external validity (real-world generalizability).
+
+\subsubsection{Tier~1: Calibrated Synthetic Projects}\label{sec:tier1}
+
+We developed a deterministic project generator\footnote{Included in the replication package; seeded with Mulberry32 PRNG (seed = 42) for exact reproducibility.} that produces React + TypeScript projects at five scales, summarized in Table~\ref{tab:projects}.
+
+\begin{table}[htbp]
+\centering
+\caption{Tier~1 synthetic project specifications. All projects generated with seed = 42. Dead modules (imported by nothing) are fixed at 5\% to exercise tree-shaking. LOC counts include both TSX component code and CSS module files.}\label{tab:projects}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+\textbf{Size} & \textbf{Modules} & \textbf{Folders} & \textbf{Routes} & \textbf{Import Edges} & \textbf{Dead (\%)} & \textbf{LOC} \\
+\midrule
+xs   &     50 &  5 &   0 &     80 &  2 (4.0\%) &    8{,}135 \\
+s    &    200 & 10 &   4 &    369 & 10 (5.0\%) &   32{,}209 \\
+m    &    500 & 15 &  12 &    898 & 25 (5.0\%) &   79{,}605 \\
+l    &  2{,}000 & 30 &  20 &  3{,}647 & 100 (5.0\%) &  319{,}647 \\
+xl   &  5{,}000 & 50 &  50 &  9{,}301 & 250 (5.0\%) &  801{,}736 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each generated component falls into one of eight template categories---data display (25\%), form control (15\%), layout (15\%), navigation (10\%), feedback (10\%), data fetching (10\%), chart/visualization (10\%), and utility/context providers (5\%)---weighted to approximate the distribution in production codebases.
+Components range from 50 to 150 lines of code and include realistic patterns: React hooks (\texttt{useState}, \texttt{useMemo}, \texttt{useCallback}, \texttt{useEffect}), third-party imports (\texttt{lodash-es}, \texttt{date-fns}, \texttt{clsx}), CSS Modules, TypeScript generics, and inter-component dependencies.
+Critically, each component template is \emph{calibrated}---designed so that specific features exercise specific metrics.
+For example, the \texttt{lodash-es} import (using only \texttt{pick} and \texttt{debounce}) exercises tree-shaking (M7), lazy-loaded route entries exercise code splitting (M8), and dead modules (5\% of components, imported by nothing) test dead-code elimination.
+
+The dependency graph is structured to resemble real projects: each component imports 1--3 siblings within its feature folder; 10\% of components have a cross-folder import; and $\sim$2\% are designated as ``hub'' components imported by 20--30 parents.
+Circular dependencies are detected and broken by the generator.
+
+\subsubsection{Tier~2: Real-World OSS Validation}\label{sec:tier2}
+
+To validate that synthetic results generalize, we select Bulletproof React~\cite{bulletproofreact2024}, an open-source production-architecture reference application with 102 TSX component files, React 18, TypeScript 5, Tailwind CSS, React Query, Zustand, and React Router.
+We adapt it for all five bundlers by creating tool-specific configurations that follow each bundler's official documentation, with no tool-specific optimizations beyond defaults.
+All configurations are included in the replication package.
+
+\subsection{Metrics}\label{sec:metrics}
+
+Table~\ref{tab:metrics} defines the 11 directly measured metrics (M1--M11) and one derived metric (M12).
+Metrics M1--M4 capture build performance (RQ1), M5--M9 capture output quality (RQ2), and M10--M12 capture resource consumption and scaling (RQ3).
+
+\begin{table}[htbp]
+\centering
+\caption{Metric definitions. Run counts indicate the number of independent measurements per tool$\times$size configuration.
+M5--M9 are single-run deterministic metrics (verified via a second build).
+M12 is derived from M2 medians across all five Tier~1 scales.}\label{tab:metrics}
+\begin{tabular}{@{}cllllr@{}}
+\toprule
+\textbf{ID} & \textbf{Name} & \textbf{Unit} & \textbf{Measurement Tool} & \textbf{Scope} & \textbf{Runs} \\
+\midrule
+M1  & Dev cold start     & ms      & Puppeteer + log parsing & V, R$^*$, W  & 20 \\
+M2  & Prod build time    & ms      & hyperfine               & All 5        & 10 \\
+M3  & Incremental rebuild & ms     & \texttt{build --watch} + fs event  & V, R, W, Ro  & 20 \\
+M4  & HMR latency        & ms      & Puppeteer + CDP console & V, R, W      & 20 \\
+\midrule
+M5  & Bundle size (raw)  & bytes   & \texttt{find dist | wc -c}  & All 5    & 1 \\
+M6  & Bundle size (gzip) & bytes   & \texttt{gzip -9 -c | wc -c} & All 5   & 1 \\
+M7  & Tree-shaking        & count  & grep lodash references   & All 5       & 1 \\
+M8  & Code splitting     & count   & JS chunk count in dist   & All 5       & 1 \\
+M9  & Sourcemap accuracy & ratio   & map count / JS count     & All 5       & 1 \\
+\midrule
+M10 & Peak memory (RSS)  & MB      & \texttt{command time -l}  & All 5       & 10 \\
+M11 & CPU time           & s       & user + sys from \texttt{time} & All 5  & 10 \\
+M12 & Scaling regression & ---     & Derived: $R^2$, slope    & All 5       & --- \\
+\bottomrule
+\multicolumn{6}{@{}l@{}}{\footnotesize V = Vite, R = Rspack, W = Webpack, Ro = Rollup. $^*$Rspack M1 timed out at all sizes.}
+\end{tabular}
+\end{table}
+
+\subsection{Measurement Harness}\label{sec:harness}
+
+All experiments were conducted on a single machine to eliminate hardware variability: Apple M2~Pro (12-core, 32\,GB RAM) running macOS~26.5, Node.js~v22.16.0, and npm~10.9.2.
+Background processes were minimized during all measurement runs.
+
+\textbf{M2 (production build time)} is measured using hyperfine~\cite{hyperfine2024}, a command-line benchmarking tool that reports per-run wall-clock times.
+Before each run, a cache-clearing script removes \texttt{node\_modules/.cache}, \texttt{dist/}, \texttt{.rspack/}, \texttt{.vite/}, and OS filesystem caches where applicable.
+We configure hyperfine with zero explicit warm-up runs (\texttt{--warmup 0}) and 10 measured runs (\texttt{--runs 10}).
+
+\textbf{M1 (dev cold start)} is measured by starting the development server process, monitoring \texttt{stdout} for the tool-specific ``ready'' pattern (e.g., \texttt{"Local:"} for Vite, \texttt{"compiled"} for Webpack/Rspack), and recording the elapsed wall-clock time.
+This is repeated for 20 independent runs with cache clearing between each.
+A 60-second timeout classifies non-responding servers as failures.
+
+\textbf{M3 (incremental rebuild)} uses each tool's \texttt{build --watch} mode.
+A dedicated Node.js script starts the watch process, waits for the initial build to complete, then programmatically modifies a randomly selected component file (toggling a JSX attribute) and measures the time until the watcher reports rebuild completion.
+This is repeated for 20 file changes per configuration.
+
+\textbf{M4 (HMR latency)} is measured via Puppeteer~\cite{puppeteer2024} controlling a headless Chromium browser.
+The script launches the development server, navigates Puppeteer to the local URL, intercepts Chrome DevTools Protocol (CDP) console messages, then modifies a component file.
+The HMR latency is the interval between the file-system write and the browser console's HMR confirmation message.
+This is repeated for 20 independent file modifications.
+
+\textbf{M5--M9 (output quality)} are deterministic single-run metrics computed from the production build output.
+Each is verified by a second independent build to confirm determinism.
+M5 sums all file sizes in the output directory; M6 applies \texttt{gzip -9} to each JavaScript file and sums; M7 counts residual \texttt{lodash-es} references (full library is $\sim$600\,KB; our code imports only \texttt{pick} and \texttt{debounce}); M8 counts distinct JavaScript chunks; M9 reports the ratio of sourcemap files to JavaScript files.
+
+\textbf{M10 and M11 (memory and CPU)} are extracted from the macOS \texttt{command time -l} utility, which reports peak resident set size (in bytes) and user + system CPU time.
+Ten independent runs are performed with cache clearing between each.
+
+\textbf{No explicit warm-up.} Following Barrett et al.~\cite{barrett2017vm}, who showed that 43.5\% of VM+benchmark pairs fail to reach steady state, we do not assume warm-up convergence. Instead, we use the median (robust to outliers) as our primary summary statistic and report the full interquartile range.
+
+\subsection{Statistical Analysis}\label{sec:stats}
+
+Our statistical pipeline follows the recommendations of Georges et al.~\cite{georges2007statistically} for non-parametric analysis of performance data.
+
+\textbf{Step 1: Normality testing.}
+We apply the Shapiro--Wilk test~\cite{shapiro1965analysis} ($\alpha = 0.05$) to every tool$\times$size$\times$metric group with $n \geq 3$.
+Of the 115 testable groups, 74 (64\%) reject the null hypothesis of normality, motivating non-parametric methods throughout.
+
+\textbf{Step 2: Omnibus test.}
+For each metric$\times$size combination where multiple tools have data, we apply the Kruskal--Wallis $H$ test~\cite{kruskal1952use} ($\alpha = 0.05$) to determine whether at least one tool differs significantly from the others.
+
+\textbf{Step 3: Pairwise comparisons.}
+Where the omnibus test is significant, we conduct all $\binom{k}{2}$ pairwise Mann--Whitney $U$ tests~\cite{mann1947test} with Bonferroni correction~\cite{bonferroni1936teoria} to control the family-wise error rate.
+
+\textbf{Step 4: Effect sizes.}
+For every pairwise comparison, we compute Cliff's delta~\cite{cliff1993dominance}, a non-parametric effect-size measure interpreted as: $|\delta| < 0.147$ (negligible), $< 0.33$ (small), $< 0.474$ (medium), and $\geq 0.474$ (large), following the thresholds of Vargha and Delaney~\cite{vargha2000critique}.
+
+\textbf{Step 5: Scaling regression.}
+For each tool, we fit both a linear model ($\text{build\_time} = a \cdot \text{modules} + b$) and a log-linear model ($\text{build\_time} = a \cdot \ln(\text{modules}) + b$) to the five Tier~1 M2 medians.
+We select the model with the higher $R^2$.
+
+All analysis code is implemented in TypeScript (executed via \texttt{tsx}) using the \texttt{simple-statistics} library and is included in the replication package.
+
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 5: RESULTS (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Results}\label{sec:results}
+
+\textit{[To be written --- see WRITING-PLAN.md \S5]}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 6: DISCUSSION (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Discussion}\label{sec:discussion}
+
+\textit{[To be written --- see WRITING-PLAN.md \S6]}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 7: THREATS TO VALIDITY (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Threats to Validity}\label{sec:threats}
+
+\textit{[To be written --- see WRITING-PLAN.md \S7]}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 8: CONCLUSION (placeholder)
+%% ═══════════════════════════════════════════════════════════════
+\section{Conclusion and Future Work}\label{sec:conclusion}
+
+\textit{[To be written --- see WRITING-PLAN.md \S8]}
+
+
+%% ─── Data Availability ───
+\section*{Data Availability}
+The complete replication package---including the project generator, bundler configurations, measurement scripts, raw data (277 CSV files, 1{,}534 data points), analysis code, and all results---is publicly available at [Zenodo DOI to be assigned upon submission].
+
+%% ─── Declaration of Generative AI Use ───
+\section*{Declaration of Generative AI and AI-Assisted Technologies}
+During the preparation of this manuscript, the authors used AI-assisted tools for code generation (measurement scripts) and statistical analysis verification.
+The authors reviewed and validated all AI-generated content and take full responsibility for the accuracy and integrity of the published work.
+
+%% ─── Declaration of Competing Interests ───
+\section*{Declaration of Competing Interests}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+This study was conducted independently with no funding or affiliation with any of the bundler projects evaluated.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}
