@@ -1,0 +1,89 @@
+
+━━━ vite ━━━
+  SKIP M2
+  SKIP M5
+  SKIP M6
+  SKIP M7
+  SKIP M8
+  SKIP M9
+  SKIP M10
+  SKIP M11
+  SKIP M3
+  SKIP M4
+
+━━━ rspack ━━━
+  SKIP M2
+  SKIP M5
+  SKIP M6
+  SKIP M7
+  SKIP M8
+  SKIP M9
+  SKIP M10
+  SKIP M11
+  SKIP M3
+  RUN M4 (20 runs)
+      Starting rspack dev server...
+      Dev server ready on port 3000
+      Page loaded. Starting HMR measurements...
+      Run 1/20: TIMEOUT (no HMR update detected)
+      Run 2/20: TIMEOUT (no HMR update detected)
+      Run 3/20: TIMEOUT (no HMR update detected)
+      Run 4/20: TIMEOUT (no HMR update detected)
+      Run 5/20: TIMEOUT (no HMR update detected)
+      Run 6/20: TIMEOUT (no HMR update detected)
+      Run 7/20: TIMEOUT (no HMR update detected)
+      Run 8/20: TIMEOUT (no HMR update detected)
+      Run 9/20: TIMEOUT (no HMR update detected)
+      Run 10/20: TIMEOUT (no HMR update detected)
+      Run 11/20: TIMEOUT (no HMR update detected)
+      Run 12/20: TIMEOUT (no HMR update detected)
+      Run 13/20: TIMEOUT (no HMR update detected)
+      Run 14/20: TIMEOUT (no HMR update detected)
+      Run 15/20: TIMEOUT (no HMR update detected)
+      Run 16/20: TIMEOUT (no HMR update detected)
+      Run 17/20: TIMEOUT (no HMR update detected)
+      Run 18/20: TIMEOUT (no HMR update detected)
+      Run 19/20: TIMEOUT (no HMR update detected)
+      Run 20/20: TIMEOUT (no HMR update detected)
+      Dev server stopped.
+
+━━━ esbuild ━━━
+  RUN M2 (10 runs)
+    Benchmark 1: node configs/esbuild/build.mjs
+      Time (mean ± σ):      1.531 s ±  2.653 s    [User: 0.061 s, System: 0.014 s]
+      Range (min … max):    0.633 s …  9.079 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (9.079 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+  Median: 672 ms
+  M5 = 902365
+  M6 = 278412
+  M7 = 24
+  M8 = 24
+  M9 = 25
+  RUN M10 (10 runs)
+    Run 1: 61 MB
+    Run 2: 61 MB
+    Run 3: 63 MB
+    Run 4: 63 MB
+    Run 5: 62 MB
+    Run 6: 61 MB
+    Run 7: 61 MB
+    Run 8: 62 MB
+    Run 9: 62 MB
+    Run 10: 63 MB
+  RUN M11 (10 runs)
+    Run 1: CPU = 1.74s
+    Run 2: CPU = 1.44s
+    Run 3: CPU = 1.46s
+    Run 4: CPU = 1.42s
+    Run 5: CPU = 1.90s
+    Run 6: CPU = 1.50s
+    Run 7: CPU = 1.48s
+    Run 8: CPU = 1.42s
+    Run 9: CPU = 1.36s
+    Run 10: CPU = 1.54s
+  RUN M3 (20 runs)
+      Starting esbuild watch mode...
+      Target file: provider.tsx
+      ❌ Watch mode failed to start (60s timeout)

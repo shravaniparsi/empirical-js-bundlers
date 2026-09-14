@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+webpack,bp-react,M2,1,56545,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,2,7493,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,3,7765,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,4,7094,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,5,6994,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,6,7174,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,7,7253,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,8,7009,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,9,7441,ms,2026-09-13T23:57:41Z
+webpack,bp-react,M2,10,8018,ms,2026-09-13T23:57:41Z

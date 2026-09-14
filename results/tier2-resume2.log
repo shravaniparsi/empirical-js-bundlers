@@ -61,3 +61,65 @@
 
 ━━━ rspack ━━━
   RUN M2 (10 runs)
+    Benchmark 1: NODE_ENV=production npx rspack build --config rspack.config.cjs
+      Time (mean ± σ):      3.253 s ±  3.273 s    [User: 1.465 s, System: 0.703 s]
+      Range (min … max):    1.952 s … 12.555 s    10 runs
+     
+      Warning: The first benchmarking run for this command was significantly slower than the rest (12.555 s). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--prepare' option which can be used to clear caches. If you did not use a cache-clearing command with '--prepare', you can either try that or consider using the '--warmup' option to fill those caches before the actual benchmark.
+     
+  Median: 2248 ms
+  M5 = 696188
+  M6 = 206848
+  M7 = 14
+  M8 = 14
+  M9 = 15
+  RUN M10 (10 runs)
+    Run 1: 313 MB
+    Run 2: 315 MB
+    Run 3: 310 MB
+    Run 4: 313 MB
+    Run 5: 305 MB
+    Run 6: 311 MB
+    Run 7: 312 MB
+    Run 8: 313 MB
+    Run 9: 314 MB
+    Run 10: 316 MB
+  RUN M11 (10 runs)
+    Run 1: CPU = 4.64s
+    Run 2: CPU = 3.90s
+    Run 3: CPU = 4.38s
+    Run 4: CPU = 4.44s
+    Run 5: CPU = 4.38s
+    Run 6: CPU = 3.98s
+    Run 7: CPU = 4.00s
+    Run 8: CPU = 4.02s
+    Run 9: CPU = 4.04s
+    Run 10: CPU = 4.42s
+  RUN M3 (20 runs)
+      Starting rspack watch mode...
+      Target file: provider.tsx
+      Watch mode ready. Starting measurements...
+      Run 1/20: 372ms
+      Run 2/20: 459ms
+      Run 3/20: 445ms
+      Run 4/20: 930ms
+      Run 5/20: 687ms
+      Run 6/20: 566ms
+      Run 7/20: 626ms
+      Run 8/20: 470ms
+      Run 9/20: 420ms
+      Run 10/20: 512ms
+      Run 11/20: 486ms
+      Run 12/20: 564ms
+      Run 13/20: 425ms
+      Run 14/20: 700ms
+      Run 15/20: 513ms
+      Run 16/20: 500ms
+      Run 17/20: 741ms
+      Run 18/20: 425ms
+      Run 19/20: 449ms
+      Run 20/20: 435ms
+      Watch mode stopped.
+  RUN M4 (20 runs)
+      Starting rspack dev server...
+      ❌ Dev server failed to start

@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+esbuild,bp-react,M2,1,9079,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,2,851,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,3,648,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,4,633,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,5,696,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,6,667,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,7,668,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,8,672,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,9,724,ms,2026-09-13T23:48:02Z
+esbuild,bp-react,M2,10,672,ms,2026-09-13T23:48:02Z

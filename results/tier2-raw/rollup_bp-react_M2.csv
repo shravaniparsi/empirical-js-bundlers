@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rollup,bp-react,M2,1,19582,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,2,4907,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,3,4965,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,4,4956,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,5,4873,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,6,4880,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,7,4874,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,8,4902,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,9,4911,ms,2026-09-13T23:57:41Z
+rollup,bp-react,M2,10,5307,ms,2026-09-13T23:57:41Z

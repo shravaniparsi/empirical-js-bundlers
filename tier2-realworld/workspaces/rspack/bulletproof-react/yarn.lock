@@ -660,12 +660,24 @@
   resolved "https://npme.walmart.com:443/artifactory/api/npm/npme-npm/@rspack/cli/-/cli-2.2.3.tgz"
   integrity sha512-EXMbWQt3neroH2zVfsJfY5u3U/IUJsalD27gj/Crl607WiSZODh5mNs18fcjWf56kc4l1G8aYFySC6WTw175VQ==
 
-"@rspack/core@^2.0.0-0", "@rspack/core@^2.2.3", "@rspack/core@0.x || ^1.0.0 || ^2.0.0-0":
+"@rspack/core@^2.0.0", "@rspack/core@^2.0.0-0", "@rspack/core@^2.2.3", "@rspack/core@0.x || ^1.0.0 || ^2.0.0-0":
   version "2.2.3"
   resolved "https://npme.walmart.com:443/artifactory/api/npm/npme-npm/@rspack/core/-/core-2.2.3.tgz"
   integrity sha512-VHejw+PDd5B5v6VduFyjLSTIFaHBMNGPMKw+Y0zjkMqjYhDD1hjLOBC5frRKjTWcfYdk+Q73auWPp9k/H9PfIQ==
   dependencies:
     "@rspack/binding" "2.2.3"
+
+"@rspack/dev-middleware@^2.0.3":
+  version "2.0.4"
+  resolved "https://npme.walmart.com:443/artifactory/api/npm/npme-npm/@rspack/dev-middleware/-/dev-middleware-2.0.4.tgz"
+  integrity sha512-VCdT8hv9YvMPiBohhukD/OkGB+2GJ7mPRbeuDJ/jIT6hv5gvmJCnydMetJVARh6vXoBtfSHEd2gX78Dqaxh1NQ==
+
+"@rspack/dev-server@^2.0.0-0", "@rspack/dev-server@^2.2.1":
+  version "2.2.1"
+  resolved "https://npme.walmart.com:443/artifactory/api/npm/npme-npm/@rspack/dev-server/-/dev-server-2.2.1.tgz"
+  integrity sha512-Il8HbYGK3rH5rM0XmUOsOGZVw69BKRpBZ61P28Fy8ry35CtfniDBWtbo/rvJtIT/sK0qwijmNrhF498ltsV+uA==
+  dependencies:
+    "@rspack/dev-middleware" "^2.0.3"
 
 "@rspack/plugin-react-refresh@^1.1.1":
   version "1.6.2"

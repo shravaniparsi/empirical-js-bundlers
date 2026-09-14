@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rspack,bp-react,M10,1,313,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,2,315,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,3,310,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,4,313,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,5,305,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,6,311,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,7,312,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,8,313,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,9,314,MB,2026-09-13T23:41:54Z
+rspack,bp-react,M10,10,316,MB,2026-09-13T23:41:54Z

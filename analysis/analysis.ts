@@ -214,17 +214,20 @@ function runAnalysis(data: Row[], metricFilter?: string) {
 
   console.log('═'.repeat(60));
   console.log('  JS Bundler Benchmark — Statistical Analysis');
+  const actualSizes = [...new Set(data.map(r => r.size))];
+  const actualTools = [...new Set(data.map(r => r.tool))];
+
   console.log('═'.repeat(60));
   console.log(`\n📂 Loaded ${data.length} data points from ${metrics.length} metrics`);
-  console.log(`  Tools: ${[...new Set(data.map(r => r.tool))].sort().join(', ')}`);
-  console.log(`  Sizes: ${[...new Set(data.map(r => r.size))].join(', ')}`);
+  console.log(`  Tools: ${actualTools.sort().join(', ')}`);
+  console.log(`  Sizes: ${actualSizes.join(', ')}`);
 
   // ── 1. Descriptive Statistics ──
   console.log('\n📊 Descriptive Statistics...');
   const descRows: string[] = ['metric,tool,size,n,mean,median,std,iqr,min,max,cv'];
   for (const m of metrics) {
-    for (const size of SIZES) {
-      for (const tool of TOOLS) {
+    for (const size of actualSizes) {
+      for (const tool of actualTools) {
         const vals = filterData(data, m, size, tool);
         if (vals.length === 0) continue;
         const mean = ss.mean(vals);
@@ -249,8 +252,8 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   const normRows: string[] = ['metric,size,tool,W,p_value,normal'];
   let nonNormal = 0, totalNorm = 0;
   for (const m of metrics) {
-    for (const size of SIZES) {
-      for (const tool of TOOLS) {
+    for (const size of actualSizes) {
+      for (const tool of actualTools) {
         const vals = filterData(data, m, size, tool);
         if (vals.length < 3) continue;
         const { W, p } = shapiroWilk(vals);
@@ -269,8 +272,8 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   const kwRows: string[] = ['metric,size,H,p_value,significant'];
   let sigKW = 0, totalKW = 0;
   for (const m of metrics) {
-    for (const size of SIZES) {
-      const groups = TOOLS.map(t => filterData(data, m, size, t)).filter(g => g.length >= 2);
+    for (const size of actualSizes) {
+      const groups = actualTools.map(t => filterData(data, m, size, t)).filter(g => g.length >= 2);
       if (groups.length < 2) continue;
       const { H, p } = kruskalWallis(groups);
       const sig = p < 0.05 ? 'Yes' : 'No';
@@ -287,9 +290,9 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   const pairRows: string[] = ['metric,size,tool_1,tool_2,U,p_raw,p_bonferroni,significant'];
   let sigPairs = 0, totalPairs = 0;
   for (const m of metrics) {
-    for (const size of SIZES) {
+    for (const size of actualSizes) {
       const toolData: Record<string, number[]> = {};
-      for (const t of TOOLS) {
+      for (const t of actualTools) {
         const vals = filterData(data, m, size, t);
         if (vals.length >= 2) toolData[t] = vals;
       }
@@ -316,9 +319,9 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   const effRows: string[] = ['metric,size,tool_1,tool_2,cliffs_delta,magnitude'];
   let largeFx = 0, totalFx = 0;
   for (const m of metrics) {
-    for (const size of SIZES) {
+    for (const size of actualSizes) {
       const toolData: Record<string, number[]> = {};
-      for (const t of TOOLS) {
+      for (const t of actualTools) {
         const vals = filterData(data, m, size, t);
         if (vals.length >= 2) toolData[t] = vals;
       }
@@ -340,10 +343,10 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   console.log('\n📉 Scaling Regression (M2)...');
   const regRows: string[] = ['tool,r2_linear,r2_log_linear,best_fit,slope_per_1000_modules'];
   const m2Data = data.filter(r => r.metric === 'M2' && r.value >= 0);
-  for (const tool of TOOLS) {
+  for (const tool of actualTools) {
     const toolM2 = m2Data.filter(r => r.tool === tool);
     const sizeMedians: { modules: number; median: number }[] = [];
-    for (const size of SIZES) {
+    for (const size of actualSizes) {
       const vals = toolM2.filter(r => r.size === size).map(r => r.value);
       if (vals.length > 0) {
         sizeMedians.push({ modules: SIZE_MODULES[size], median: ss.median(vals) });
@@ -378,8 +381,8 @@ function runAnalysis(data: Row[], metricFilter?: string) {
   for (const m of ['M2', 'M10', 'M11']) {
     if (!metrics.includes(m)) continue;
     console.log(`\n  ${m} (${METRIC_NAMES[m]}):`);
-    for (const size of SIZES) {
-      const medians = TOOLS.map(t => {
+    for (const size of actualSizes) {
+      const medians = actualTools.map(t => {
         const vals = filterData(data, m, size, t);
         return { tool: t, median: vals.length > 0 ? ss.median(vals) : Infinity, n: vals.length };
       }).filter(r => r.n > 0).sort((a, b) => a.median - b.median);

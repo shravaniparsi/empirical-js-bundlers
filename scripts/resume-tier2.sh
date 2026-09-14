@@ -124,7 +124,7 @@ for tool in vite rspack esbuild webpack rollup; do
     cd "$ROOT"
     npx tsx scripts/measure-incremental.ts \
       --tool "$tool" --project "$DIR" --runs 20 \
-      --csv "$csv" --size bp-react --timestamp "$TIMESTAMP" 2>&1 | sed 's/^/    /'
+      --csv "$csv" --size bp-react --timestamp "$TIMESTAMP" 2>&1 | sed 's/^/    /' || echo "  ⚠️ M3 failed (watch mode not available for $tool on this project)"
   fi
   
   # M4 (HMR tools only)
@@ -137,7 +137,7 @@ for tool in vite rspack esbuild webpack rollup; do
       cd "$ROOT"
       npx tsx scripts/measure-hmr.ts \
         --tool "$tool" --project "$DIR" --runs 20 \
-        --csv "$csv" --size bp-react --timestamp "$TIMESTAMP" 2>&1 | sed 's/^/    /'
+        --csv "$csv" --size bp-react --timestamp "$TIMESTAMP" 2>&1 | sed 's/^/    /' || echo "  ⚠️ M4 failed for $tool"
     fi
   fi
 done
