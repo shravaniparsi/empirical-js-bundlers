@@ -1,11 +1,28 @@
 /**
  * esbuild watch mode script (for M3: incremental rebuild measurement).
  *
- * esbuild does NOT have native HMR or a dev server comparable to Vite/Webpack.
- * This script uses --watch for incremental rebuild timing only.
+ * Uses an onEnd plugin to emit "build finished" after every rebuild,
+ * which the measurement harness (measure-incremental.ts) detects as
+ * the rebuild-completion signal.
  */
 import * as esbuild from 'esbuild';
 import cssModulesPlugin from 'esbuild-css-modules-plugin';
+
+const rebuildReporter = {
+  name: 'rebuild-reporter',
+  setup(build) {
+    let isFirstBuild = true;
+    build.onEnd((result) => {
+      const errors = result.errors.length;
+      if (isFirstBuild) {
+        isFirstBuild = false;
+        console.log(`esbuild: initial build finished (${errors} errors)`);
+      } else {
+        console.log(`esbuild: build finished (${errors} errors)`);
+      }
+    });
+  },
+};
 
 const ctx = await esbuild.context({
   entryPoints: ['src/main.tsx'],
@@ -26,7 +43,7 @@ const ctx = await esbuild.context({
     '.gif': 'file',
     '.svg': 'file',
   },
-  plugins: [cssModulesPlugin()],
+  plugins: [cssModulesPlugin(), rebuildReporter],
 });
 
 await ctx.watch();

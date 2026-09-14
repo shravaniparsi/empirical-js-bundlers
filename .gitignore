@@ -24,5 +24,7 @@ results/*.log
 # Stale backups
 results/analysis-pre-audit-backup/
 
-# Lock files
+# Lock files (Tier 2 lockfiles contained internal registry URLs)
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
