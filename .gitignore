@@ -2,7 +2,7 @@ node_modules/
 dist/
 .vite/
 .rspack/
-tier1-synthetic/workspaces/
+tier1-synthetic/
 tier2-realworld/workspaces/
 .venv/
 .DS_Store
@@ -10,6 +10,19 @@ tier2-realworld/workspaces/
 # Keep paper private until accepted
 paper/
 
-# Generator (not part of replication data)
-tier1-synthetic/
+# Internal docs
+RESEARCH-PLAN.md
 WRITING-PLAN.md
+results/DATA-AUDIT-LOG.md
+
+# IDE & OS
+.vscode/
+
+# Logs
+results/*.log
+
+# Stale backups
+results/analysis-pre-audit-backup/
+
+# Lock files
+package-lock.json
