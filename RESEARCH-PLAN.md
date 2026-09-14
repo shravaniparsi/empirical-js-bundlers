@@ -896,21 +896,22 @@ No protocol changes needed. Data quality is sufficient for publication:
 
 ## Phase 4: Paper Writing 🔲
 
-> _16–20 pages following SPE conventions._
+> _≤36 pages single-column, following JSS conventions. Detailed plan in `WRITING-PLAN.md`._
 
-### 4.1 Paper Structure
+### 4.1 Paper Structure (JSS-Optimized)
 
 | Section | Est. Pages |
 |---------|-----------|
 | 1. Introduction | 1.5 |
 | 2. Background | 2 |
 | 3. Related Work | 2 |
-| 4. Study Design (incl. Two-Tier Data Strategy) | 4 |
-| 5. Results (Tier 1: Calibrated Synthetic) | 4 |
-| 6. Discussion (incl. §6.2 Tier 2 External Validation) | 3 |
-| 7. Threats to Validity | 1 |
+| 4. Study Design (incl. Two-Tier Strategy) | 4 |
+| 5. Results (RQ1–RQ3 + Tier 2 Validation) | 4.5 |
+| 6. Discussion (Findings, Practical Implications, Architecture) | 2.5 |
+| 7. Threats to Validity | 1.5 |
 | 8. Conclusion & Future Work | 0.5 |
-| **Total** | **~18** |
+| References + Appendix | 2.5 |
+| **Total** | **~22** |
 
 ### 4.2 Writing Order
 
