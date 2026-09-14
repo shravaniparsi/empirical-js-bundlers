@@ -859,6 +859,39 @@ No protocol changes needed. Data quality is sufficient for publication:
 
 **Phase 3 status: ✅ COMPLETE**
 
+#### Reflexion Pass 2: Pre-Writing Final Validation (Sep 13, 2026)
+
+**Data Audit** (5 fixes applied — see `results/DATA-AUDIT-LOG.md`):
+- Fixed 3 missing CSV headers (Tier 2 M3)
+- Removed 1 empty file (webpack_xl-5000_M4)
+- Deduplicated 3 Rollup M2 files (2 batches → 1) and 1 pilot overlap
+- Fixed scaling regression NaN (bp-react not in SIZE_MODULES)
+- Post-fix: 277 CSVs, all valid, **0 ranking flips**
+
+**Coverage Check**:
+- M2/M5-M9/M10/M11: Full 5×5 coverage (all tools × all sizes) ✅
+- M1/M3/M4: 3 sizes by design (xs-50, m-500, xl-5000) — intentional per run-all.sh
+- M5-M9 (deterministic output metrics): n=1 by design, correctly excluded from statistical tests ✅
+
+**Logical Consistency**:
+- Build times (M2): monotonically increasing with project size for all 5 tools ✅
+- Memory (M10): monotonically increasing for 4/5 tools ✅
+  - esbuild anomaly: s-200 (141MB) > m-500 (124MB) — genuine, low std, Go GC behavior. Documented.
+- Raw bundle ≥ gzip bundle: 25/25 ✅
+- Tree-shaking in [0,100]: all values ✅
+- CPU time (M11) top-2 ≡ build time (M2) top-2 at every scale ✅
+- Tier 1 vs Tier 2 exact ranking match for M2 and M10 ✅
+- Tier 1 vs Tier 2 M11: vite/rspack swap at positions 2-3 (0.27s gap — within noise) ✅
+
+**Non-significant pairs (17/205)** — all are between adjacent-ranked tools:
+- rspack ≈ vite at small scales (both Rust-based, similar perf)
+- esbuild ≈ vite on CPU time at small scales (both fast, sub-second)
+- rspack ≈ webpack on HMR (architecturally similar)
+
+**8 non-large effect sizes overlap exactly with 8 of the 17 non-significant pairs** — statistical and practical significance are perfectly aligned.
+
+**Verdict: Data is publication-ready. No further collection or reanalysis needed.**
+
 ---
 
 ## Phase 4: Paper Writing 🔲
