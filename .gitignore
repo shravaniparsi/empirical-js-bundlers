@@ -5,3 +5,11 @@ dist/
 tier1-synthetic/workspaces/
 tier2-realworld/workspaces/
 .venv/
+.DS_Store
+
+# Keep paper private until accepted
+paper/
+
+# Generator (not part of replication data)
+tier1-synthetic/
+WRITING-PLAN.md
