@@ -1,0 +1,35 @@
+{
+  "batchId": "20260914-corrected-v4-m7",
+  "phase": "M7",
+  "status": "complete",
+  "startedAt": "2026-09-15T07:34:12Z",
+  "sourceVerification": "passed",
+  "gitCommit": "2eb58440bf722c77dd0487e4ec5b3692581c9647",
+  "node": "v22.16.0",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpus": 12,
+  "totalMemoryBytes": 34359738368,
+  "loadAverageAtStart": [
+    5.96875,
+    6.5830078125,
+    7.47216796875
+  ],
+  "attempts": [
+    {
+      "startedAt": "2026-09-15T07:34:12Z",
+      "phase": "M7",
+      "loadAverageAtStart": [
+        5.96875,
+        6.5830078125,
+        7.47216796875
+      ]
+    }
+  ],
+  "completedAt": "2026-09-15T07:37:45.306Z",
+  "loadAverageAtEnd": [
+    5.626953125,
+    6.40234375,
+    7.36328125
+  ]
+}

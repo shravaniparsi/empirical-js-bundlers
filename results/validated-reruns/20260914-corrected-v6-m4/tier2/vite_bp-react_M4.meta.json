@@ -1,0 +1,155 @@
+{
+  "metric": "M4",
+  "definition": "self-accepted probe file write to exact browser-observed DOM marker without page reload",
+  "tool": "vite",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/vite/bulletproof-react",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4/tier2/vite_bp-react_M4.csv",
+  "size": "bp-react",
+  "timestamp": "2026-09-15T07:12:03Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/vite/bulletproof-react/src/__benchmark_hmr_probe__.ts",
+  "entry": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/vite/bulletproof-react/src/main.tsx",
+  "targetSha256": "9e7500082e6577e974d1b794657eb116a7162c0ce0e856db017fa952e28af433",
+  "targetSha256After": "9e7500082e6577e974d1b794657eb116a7162c0ce0e856db017fa952e28af433",
+  "probeExistedBefore": false,
+  "probeRestored": true,
+  "runsPerSession": 4,
+  "timeoutMs": 60000,
+  "cooldownMs": 1000,
+  "command": [
+    "npx",
+    "vite",
+    "--port",
+    "5199",
+    "--strictPort"
+  ],
+  "port": 5199,
+  "warmups": [
+    {
+      "session": 1,
+      "reloaded": false
+    },
+    {
+      "session": 2,
+      "reloaded": false
+    },
+    {
+      "session": 3,
+      "reloaded": false
+    },
+    {
+      "session": 4,
+      "reloaded": false
+    },
+    {
+      "session": 5,
+      "reloaded": false
+    }
+  ],
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 145
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 45
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 44
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 45
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 145
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 45
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 114
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 91
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 64
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 89
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 44
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 94
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 124
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 99
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 143
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 145
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 144
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 33
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 84
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 145
+    }
+  ]
+}

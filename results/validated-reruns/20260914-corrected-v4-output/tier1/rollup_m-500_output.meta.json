@@ -1,0 +1,139 @@
+{
+  "tool": "rollup",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/m-500",
+  "size": "m-500",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Output varied across clean builds; M5/M6/M8 use the predeclared five-build median.",
+  "outputRuns": [
+    {
+      "rawBytes": 4566873,
+      "gzipBytes": 627580,
+      "jsFiles": 6,
+      "manifest": {
+        "AuthHeatmap-DxJp5std.js": "6a401aec811c6d365f0449da28ec7c566661a062e8cf7c5843c9deb28c2699d1",
+        "AuthHeatmap-DxJp5std.js.map": "b45e8a4649f395f7f217e40dbc57f0517314a964cc19d55b13207bb1440f80b3",
+        "OrdersScroll-DAuVwBX8.js": "69b072524236b7153b92663b2c5419a66977fb5ebf7df34d78da5904d38e78b2",
+        "OrdersScroll-DAuVwBX8.js.map": "c92f5292e7aa19be500b1235d1082c8c409ecf196bc77307b75f84db16dbd271",
+        "OrdersSticky--CPSKzxQ.js": "d7b8d90cfd249119ee54cd73bbce6d0054f46ecb52067b3810a9523a8879d99d",
+        "OrdersSticky--CPSKzxQ.js.map": "c9a5f5fcfaa61501dfe3d5d25f12871efd30c39d63ea6a2fd3593e67d2e44bfa",
+        "ReportsSpinner-Dq31-9nX.js": "a71a2f7d08a072bce4222e9a6d03458e8ee0c220c1175025a1e2858d13b9c22b",
+        "ReportsSpinner-Dq31-9nX.js.map": "e00721277def8d658ae318ffa71a04d802f5bf7bbe4e75e01a9b3b765e229e3d",
+        "index.html": "8eb22f8f922ebd51d68ac5db70679612927b0c807970a50467dc3a1a958072e4",
+        "main-CjaJBRsY.css": "7807312558246c4391c92853313975e30c8f4dedebe7c4b40b02d4d7dd7df60a",
+        "main-CjaJBRsY.js": "f9f11ef9bf49dffe085b0fe55a473a31f22ba474a4850a96090201a888c651d7",
+        "main-CjaJBRsY.js.map": "3e8c84c35614111f59543608446db6d9b24763d7ff2d9b9a2078915d1747b2d3",
+        "vendor-DGYOmDRB.js": "0f14edbf2181f2e7c5f8af676c444dce81e3a67851adda9696b1774a4b7d805a",
+        "vendor-DGYOmDRB.js.map": "417d9fa8c5eb9c1c3b47fa867b1a7e2462247240ae8e3953765f82aa79e73d65"
+      }
+    },
+    {
+      "rawBytes": 4566972,
+      "gzipBytes": 627576,
+      "jsFiles": 6,
+      "manifest": {
+        "AuthHeatmap-CyZHHWui.js": "7f09dc2cd13990e6cb49a702878d42df292e3cc61b01d3595f2e095519d1a10e",
+        "AuthHeatmap-CyZHHWui.js.map": "57cf1b564db4f04e59cb8a6d221edb30c5129c1a10e0fe73c13135393506c817",
+        "OrdersScroll-CwKRBa1V.js": "c376be8910bff9d8342e8f68b18f2bc214e4710ef16be9271e3b4d17484d44a0",
+        "OrdersScroll-CwKRBa1V.js.map": "04d189c0075ccef93bb3b68aa80e440d1e59fcfbeb1215227e6c2ad9b657b077",
+        "OrdersSticky-CCt2S4tK.js": "1fbbe249c261206ab0f55d53ea00337c3e5783263ba956403f63d878d6f1b779",
+        "OrdersSticky-CCt2S4tK.js.map": "80b1914ff37aa534e483d21a1c23ecda4bd80474ed0ed8aaff85fcf54fefb1b9",
+        "ReportsSpinner-CIHPRKup.js": "846a32144a7e7297ee1d7ae49b80e3f22c00d63ba8eb5ed00c6dd18d5d8aa4c8",
+        "ReportsSpinner-CIHPRKup.js.map": "9f8b6f367ff1bc5954805977148cafe814d31cb1f6ab8f75a4c98580d3fd68f6",
+        "index.html": "6058c90f93336401f919f7eb6451961729431b4ff37d1d5614963ba8df0443c2",
+        "main-BhcdOTUy.css": "fa705e59c9961a55692b42a10a06bb10da19fa6ae52e8efec4ca17117adfd7da",
+        "main-BhcdOTUy.js": "1dc1830404439d131b55f2f63b6ec47132ad6e5da306775b6beb46ca738093d9",
+        "main-BhcdOTUy.js.map": "f75276d1677f24e46a9ccac5d94d5150a9a4eca1329b74a23444a4e16d3e6bd7",
+        "vendor-CaVn-tLc.js": "e6d7786d9d804da8f809ea43300ade5ce7493de5a3f0cbcebf4fae3555cac594",
+        "vendor-CaVn-tLc.js.map": "6b08567cb101729d2d51734eee4b88f9d5865b8a063fea667ef2eafb1ec56adb"
+      }
+    },
+    {
+      "rawBytes": 4566908,
+      "gzipBytes": 627580,
+      "jsFiles": 6,
+      "manifest": {
+        "AuthHeatmap-DvJFrvPX.js": "1bccebd64f10980983a02f7ca518a9047a7341be9ec1174c17cdb459a052a4f3",
+        "AuthHeatmap-DvJFrvPX.js.map": "70588c8de354898b164891eda2e408f1c641c662d92627150e7658fe1049baa7",
+        "OrdersScroll-Dtz_ZL31.js": "4f2dec70206df2398136228c8ceb3c7b4fa89ef225d6d9bbebb176fe7b55424f",
+        "OrdersScroll-Dtz_ZL31.js.map": "24a0cf98e230c92dab490acb5dcf9aa6a587f5aac60bea0a0fb8be73a61d4898",
+        "OrdersSticky-BgON0WV_.js": "4adf9dad5a97ef509d267735af4a907f05d52e44912c1e65cb5536820322784f",
+        "OrdersSticky-BgON0WV_.js.map": "706995dfe9ebebe54bf8d8846906eff06315264d8f2f32ef9b9c4fa41a22de81",
+        "ReportsSpinner-CMaE1eCT.js": "b6583a4598ecfea8cdf3e36b848a236e60ddbc0160b1bd5e6a220364f7868f58",
+        "ReportsSpinner-CMaE1eCT.js.map": "625d2641e9a58cd88b428373375d6f8fe08b851be83f214e2821d4e243060504",
+        "index.html": "489f9563056b763785b58e14b2001a632cf4c5ee794edb5577e8747d6be72097",
+        "main-CyHUiSNF.css": "e8041999e4474e7a587250df4fdede21215739b2a832dabec920d4583691b4b8",
+        "main-CyHUiSNF.js": "72f21efa9db8583fbe49b0e32b5ef0679e005bb4fb9d6d49e96b5d47c622e7b1",
+        "main-CyHUiSNF.js.map": "11a94caed027c41792282fcb0135dbaf03447cfc412e1780068cdcb875c3b667",
+        "vendor-sfe-AK9H.js": "a7069886deb6c8546b36b89aa8025384c8a12331c8691d721a8e229d2be45fd5",
+        "vendor-sfe-AK9H.js.map": "12cb38e70be0bb784f33fda3f12c42aef46c3424dc82ef7d41d464ac080dcb38"
+      }
+    },
+    {
+      "rawBytes": 4566918,
+      "gzipBytes": 627577,
+      "jsFiles": 6,
+      "manifest": {
+        "AuthHeatmap-l0XBVqy0.js": "d5769d2a015678211b4e2de828ee59ea2f8fb6b926e2f64979a4af1782eb06b5",
+        "AuthHeatmap-l0XBVqy0.js.map": "5e9f96ad72a788940f55cbed9c8a387ac0728cfd855215ba44c4ead1aa26c6af",
+        "OrdersScroll-CYvTYQXZ.js": "d899a0b1851f7cdb3b93c7bb6e43f778eaa374fa5675f2a2f6e16f4f6624d1d3",
+        "OrdersScroll-CYvTYQXZ.js.map": "54f996f989718c942ab4e789f154b98b405369a31ee9214c581794c28cf7deb9",
+        "OrdersSticky-CPFcfMXA.js": "4218a5b6ab474371ab7192d544b4fe1fb00ab617ac4ab627b6d898e53b434045",
+        "OrdersSticky-CPFcfMXA.js.map": "f0c277587432aa303271015b05aa4f0bc6eb24df0b5d78b21aae0bafee8afdc8",
+        "ReportsSpinner-dOcY6F-B.js": "b02ffa08b04ac60cca1751a8fb58f4248b1a8f5a831eee8bd932a10057aa0a62",
+        "ReportsSpinner-dOcY6F-B.js.map": "6bab5a569b388345d362d9704eb9539d68a00b1bbe36ef2ec6361ed25669da42",
+        "index.html": "85cd3282cb4e1f209ab1ef7a06e0bb40d23cd17a936b2d75ea729a0790f72924",
+        "main-vv0WXcue.css": "4bdbec842160f1f58bb04ada8214f00e600ac1bbde7b83d4f409a94fc204cc6d",
+        "main-vv0WXcue.js": "aad3e90fc3ca0a4d227205ddaf1a401e9db0d10f862d60969c6f921674ae42af",
+        "main-vv0WXcue.js.map": "0a4499fc5516044a40a17b5527682af8855409572e39fb4a0c038b0ef5b07829",
+        "vendor-DFU00_d-.js": "ada3c39994c791d86ba6355f6944b0bf0a61808669d42ea8598b5d8ae00e295b",
+        "vendor-DFU00_d-.js.map": "30d9f3b3ab85d2f7fa618c6189fec31fdee671dbd85e7315a62eabd0274a7352"
+      }
+    },
+    {
+      "rawBytes": 4566939,
+      "gzipBytes": 627581,
+      "jsFiles": 6,
+      "manifest": {
+        "AuthHeatmap-BSh2eDJO.js": "f395d9aaf9586633eb09fd91a6a02cd12a8d303f2587cc76076c8775c77c400b",
+        "AuthHeatmap-BSh2eDJO.js.map": "64b784358edcec8efc4bb4e3081a5baaeb471a2e47dd03329167d3b11d257ad7",
+        "OrdersScroll-FFrxiTwh.js": "85347bc6d7c737f25a44f449f8d8d455f787536584b17589c18ea9c563e8b566",
+        "OrdersScroll-FFrxiTwh.js.map": "bc66c4f22de1acf199d261eac7cda40123c2ada864d147de45d3f01fb926eaba",
+        "OrdersSticky-D5Mpb85A.js": "56892ee63e81ca6dffb473f7b0d116ddab23298093da2f284ee568d2c0815101",
+        "OrdersSticky-D5Mpb85A.js.map": "94072ce8968017bec2bc4aa6d721c73d4808642004e08242d561910dc6653559",
+        "ReportsSpinner-YFw66lLl.js": "681fcece6d0e4ccc3af95838f9a3776a7be008d3df8401aa95df6a6c6e987269",
+        "ReportsSpinner-YFw66lLl.js.map": "1ace3f8b7622c6e0cd7ed1894bcdaf85289c50022dc4ae5c79e13c59eb8b8fdb",
+        "index.html": "b9adcd4f240d266620028072feb926f7f1080947608e502d1059cb3aee5b6c8d",
+        "main-C_JvdQNE.css": "7f627c307397c1df8de21835903397b4de564a4e2a0b96dfc5ee12c76042d30c",
+        "main-C_JvdQNE.js": "90384fa4e7deac84007a0ca39f373356d604eca93b23e9b86085b1e795f0a675",
+        "main-C_JvdQNE.js.map": "ac717cf2d668c546a1ce156e8062fb53190bd04d155757bba8f7bb62f094db72",
+        "vendor-BXYRfnQJ.js": "c791fddf02fd634408ebd0f46e48bd464a28943cc18c88a70339b2c4cc8be68c",
+        "vendor-BXYRfnQJ.js.map": "4542058677d4d3f70b9455695706b181d2ad48d5dda7e32cbe7766bdaf84f780"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main-D-B7g81r.js",
+    "originalSource": "../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": false,
+  "metricsAccepted": true
+}

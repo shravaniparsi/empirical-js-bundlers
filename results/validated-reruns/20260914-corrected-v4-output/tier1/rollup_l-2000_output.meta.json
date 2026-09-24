@@ -1,0 +1,139 @@
+{
+  "tool": "rollup",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/l-2000",
+  "size": "l-2000",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Output varied across clean builds; M5/M6/M8 use the predeclared five-build median.",
+  "outputRuns": [
+    {
+      "rawBytes": 11626311,
+      "gzipBytes": 1277927,
+      "jsFiles": 6,
+      "manifest": {
+        "ApiKeysTreeView-D2QgN030.js": "4b654567d7fe7e642011887901347d2082ceb692f51f5fa4b765806dc7ba5c4b",
+        "ApiKeysTreeView-D2QgN030.js.map": "d76690064d4c00d7e0f4b7d045a953a488280b278e152ed4b276e78974d789a1",
+        "AuthStepper-CYVQZqBN.js": "37a4c7defac76851ec501e9d16a1799259444ccb44fcfa4f5a87260c3cf986cb",
+        "AuthStepper-CYVQZqBN.js.map": "2858d97d90f10a47904e6168a35a4dcf077486e2ac0c91072bc0c519557a9f83",
+        "ProfileRangeSlider-VHxp_O-e.js": "1611ece8ffbc890c99143c01d807e259f915f4c4259c4f06e951efa2274e1957",
+        "ProfileRangeSlider-VHxp_O-e.js.map": "4ab7411fc55d6176101e9be721d40e6e9c1206b7b4742b5c1bac66c6f360c374",
+        "UsersPagination-BNW42_zA.js": "129ea096c5303488de58fe80ae887d8feb1a701f8be0a0331da738e32cf2f020",
+        "UsersPagination-BNW42_zA.js.map": "885aa1b34472a0f77b765a4d41730ff5601a7c9bcf6bd00169a46177ca772caa",
+        "index.html": "317991b5346e0c8023907aab30d0406cf5c91aca151dce1aad2c521347c329d9",
+        "main-rVk8uHr4.css": "bedbee7f2cc6aaaa486143562f0fe10b653837f88130878e68a8ff6b50b32442",
+        "main-rVk8uHr4.js": "f40488dd0a99ec243d478bf981a05dc5d7e9065ee118abec5192eae0d9208daf",
+        "main-rVk8uHr4.js.map": "5f4a6225f64e93325956f1198ccd24ec11e897bfc5601440108055513cd8cd5a",
+        "vendor-CU3lbGSK.js": "924fcf02f5fd3150fe64495c729dece60109056d7c43ead3eb667080f3211977",
+        "vendor-CU3lbGSK.js.map": "0332451a89f6e0c4a77bf485c92694889e224070dd9624ff7d706731a0de1e16"
+      }
+    },
+    {
+      "rawBytes": 11626301,
+      "gzipBytes": 1277925,
+      "jsFiles": 6,
+      "manifest": {
+        "ApiKeysTreeView-Ck-bbW35.js": "c1348dd3c5906ab583e41a6bd2c0377a981ffb013d63fa7bdff80f8982b06748",
+        "ApiKeysTreeView-Ck-bbW35.js.map": "9739a6c8794de4313e2e403023b8301af05781117bbeb8f10b19182e76d84293",
+        "AuthStepper-DM2XZvMk.js": "52e8c18e8c504aa395a6d1efc552667724506d4995f502b04578fbd89cfb75a8",
+        "AuthStepper-DM2XZvMk.js.map": "e8441e91777ed5825d4451ad6c795a0c0b1c6546f5d39fddfb7cbf389a19837f",
+        "ProfileRangeSlider-CAorjhU1.js": "4d4022ac02ef646ebcd4e83bb72eae3f97c763fde338bfe5980fbf12126761bd",
+        "ProfileRangeSlider-CAorjhU1.js.map": "ec9b2bab1cb988f4d34c811c153b5828265ea1f33419dfa97ba07bd09aaf7707",
+        "UsersPagination-HNVAn-OX.js": "f689679064b22b68e6507f2426e6c6dc062f953d86340852b88e85b88dfaa9ac",
+        "UsersPagination-HNVAn-OX.js.map": "b230c35abe938d81f64460e1762a795523860431cd30d24451c66a455c7b98d9",
+        "index.html": "af5f47bafb8a131933bb783c8ca2a3a96f0221132a99b2cc5e7a11c83591997d",
+        "main-DZ8gKzrx.css": "949ff2f76cae5af082b696cab4f4596a311f9d4623725483145a9ce27d0b0d75",
+        "main-DZ8gKzrx.js": "1abea268bf51569d58d520a619faa996b7e4cf63d827b6720f49271e47d03a00",
+        "main-DZ8gKzrx.js.map": "81e5877f1a7a8c1efb389a566a9966c6f2c2b5c6d40fab91fa9e0f023898dc35",
+        "vendor-CSzjySE0.js": "9a6ee7314ea10b7fb1ee3ae849896cb9784789f3d96c19732b01b01d78853b43",
+        "vendor-CSzjySE0.js.map": "e7c0dc4c8f78ca105fcb0ca27ebf5678328e9167e94f73c5664cdccc02ceaba1"
+      }
+    },
+    {
+      "rawBytes": 11626286,
+      "gzipBytes": 1277922,
+      "jsFiles": 6,
+      "manifest": {
+        "ApiKeysTreeView-N8bIOHRD.js": "a483f1cdc63298130599ace9d348c729587ae1e7d1637b964298a8b76edcaac0",
+        "ApiKeysTreeView-N8bIOHRD.js.map": "e9020d8f678b37de229ee3a2d6687f3eb83b66669864faa92f4ce7b67ffc79ef",
+        "AuthStepper-CsB12XTY.js": "1af35a373f6a9062da024b57cf57f8694c8b5d9f571ddab80a0080d386d4a358",
+        "AuthStepper-CsB12XTY.js.map": "7721f8858ba598feaf37e0d1a525d3cd901555b50c4d532bb1042cfde53fbfbd",
+        "ProfileRangeSlider-BoBjwT4j.js": "6d7ffb176a76073178a7c8b2708826fbcf83f40c7bbc91c80035d54595af562a",
+        "ProfileRangeSlider-BoBjwT4j.js.map": "fbc833f440162510174034af6148f0a5a4d4fe5b35a9522375f83cd3baada8b8",
+        "UsersPagination-foPy2a3W.js": "b51d4bab6aea7dd4ac499259cc9d871820fe086619b8cf50f3eab476d62e98cb",
+        "UsersPagination-foPy2a3W.js.map": "711ec5bd6e02a7331837bd1b9dc6cf160905c91e985bb1adfc873e25e82a2ed2",
+        "index.html": "6f4427859c2570e4bb81f353f952f53dbe47076cbdac086dfab835c0661276f0",
+        "main-eAePUTUs.css": "2182ae698fb66184eeb0080d416b10ff5464231707bbb624dc667ecf90426188",
+        "main-eAePUTUs.js": "f523ab49abe95f1e10c481945093ef28e753cd2bfd357b32b7323c932e94a1e9",
+        "main-eAePUTUs.js.map": "a426b966858f9bae447feaa3f6cd81d1f31dae58270a04a136768212c4c3ceee",
+        "vendor-BzOmwUzn.js": "f7a43af4e9c1f082ee4985dfbbc34b353f6cad0019b41fed85926b31eb4420c6",
+        "vendor-BzOmwUzn.js.map": "13ea9450057f58b3be194b3b7cfc9ed97b44c6f965c855f8cedb4c167e2ee880"
+      }
+    },
+    {
+      "rawBytes": 11626287,
+      "gzipBytes": 1277926,
+      "jsFiles": 6,
+      "manifest": {
+        "ApiKeysTreeView-CaWz-VP_.js": "625409c212bd3e9633525e80b77e8c0a9e6ca6d54ad2dbc173971d2fdee78a3b",
+        "ApiKeysTreeView-CaWz-VP_.js.map": "d62e613b301193f40dd5107d1b0cf5b3f7026d58e416d43cc84cdf63bcfc804d",
+        "AuthStepper-6MrVnYxP.js": "c5a1503907465185a29f91a9e17f8b4da100dad5ecb6a27e1d6eb6c0a3e83123",
+        "AuthStepper-6MrVnYxP.js.map": "ce92985d6cf71a77fecb29e4c60d3c08dbfc2a5d9034bf6bc072460eeefe19dc",
+        "ProfileRangeSlider-BUsP5SDI.js": "ad948736112d06bf3b27415a6c95433388cb0675213a0f62cc645c2667f16b50",
+        "ProfileRangeSlider-BUsP5SDI.js.map": "1c43765a5d6c8484df652f25aca6aad999d7b54ca41054b4c43627319192e8e7",
+        "UsersPagination-OgN4wHCq.js": "d41d743b647580351f1a56d994301d8d41618e76d4e3d5b027a8bd7a07e7b077",
+        "UsersPagination-OgN4wHCq.js.map": "50bfbbf7128559a27d6918cd814222b5198f82816756f6fbd33923171a72278b",
+        "index.html": "a13993623b2a1ac1fd2bde78d4ce90bd9e988de4d54d61939a110e7f7b76dcb5",
+        "main-CEl-N6uT.css": "3c5b2ae89a2ccc539629d1a4c2b490465de2b6f4d5c1cdf95a911c36049ad705",
+        "main-CEl-N6uT.js": "5944e7e0d8116ef71aff8d382f6b28aabadbb0439fd6155da90c2ca4653075af",
+        "main-CEl-N6uT.js.map": "ea190e59c7752991ca1ea5ad57f5a510324a85902fe52b6ef636d157476bbc61",
+        "vendor-WOSE62qA.js": "c33932714510ca8fa25ad82e915561c34d1874bfe41d4f301b515f0e70fef57c",
+        "vendor-WOSE62qA.js.map": "1b1e16855a2457735ce829b30f331363b02a05a26e0f24f369f4c8bf98b010da"
+      }
+    },
+    {
+      "rawBytes": 11626312,
+      "gzipBytes": 1277926,
+      "jsFiles": 6,
+      "manifest": {
+        "ApiKeysTreeView-CbXrGJPu.js": "a1a1ed215343e8bc2f233d83f8d61e9d584d299f94527f5289cba78b70cb6c03",
+        "ApiKeysTreeView-CbXrGJPu.js.map": "647fe4dc35d18bff748581a23bb74f76dfb5489da9dda43fbb061b35a204fd04",
+        "AuthStepper-DbUkbaaO.js": "008ad61c1795d5630d992aade435f79fe5ae6eb670426a8126a47ebea8d5d461",
+        "AuthStepper-DbUkbaaO.js.map": "af1bd1c30fe01726795987ec8684461f2869166d1f30bc71db8e63aa4f833238",
+        "ProfileRangeSlider-B3J7jbc0.js": "c5187eb5d857264d7784b82b63d1f54d6e1954034491d17504f9c4794848cd98",
+        "ProfileRangeSlider-B3J7jbc0.js.map": "15e1538ce069e50c625018848dbf6b086864d657fd5563a4972f2ec16c2f6544",
+        "UsersPagination-DFCwIUyG.js": "437c8d3bbfdcd60b3227314ceca3ff6b4e22a5447ecf0832de3dd1c6c250f9bf",
+        "UsersPagination-DFCwIUyG.js.map": "043b3e5f3e13da070de8a100c0bb4a2cd7a41b7edfec6e610ca1fce86f4a044c",
+        "index.html": "26d88852fe66f0ff5795aea8d9c552d1da3fc5d0b74dfcccde63a8764f214f0d",
+        "main-CwarqJ_3.css": "d730657ce5b431ff5282613debca98b1b2368a4214cde5ba7b28ebaf7859cbfe",
+        "main-CwarqJ_3.js": "67017c1ecc3465ddd2be91fa1481fc4ec662f17bf5eaf96ec8145f2b76ae7d6d",
+        "main-CwarqJ_3.js.map": "31e38310ceb870a04637b5ce7c421bbe4a72f567b28398d58923facea331737a",
+        "vendor-BzR7m98q.js": "87b60284476b2a19b8cee0cb8385956dd776c03994824c362e23651a107d8f27",
+        "vendor-BzR7m98q.js.map": "68c60fcbdfcb1756206290a267c57c7e287f3d42f78d6c6abc051a5d16a104bc"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main-Bgb3NK4f.js",
+    "originalSource": "../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": false,
+  "metricsAccepted": true
+}

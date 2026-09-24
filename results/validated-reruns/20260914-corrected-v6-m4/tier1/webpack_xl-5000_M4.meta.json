@@ -1,0 +1,159 @@
+{
+  "metric": "M4",
+  "definition": "self-accepted probe file write to exact browser-observed DOM marker without page reload",
+  "tool": "webpack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/webpack/xl-5000",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4/tier1/webpack_xl-5000_M4.csv",
+  "size": "xl-5000",
+  "timestamp": "2026-09-15T07:12:03Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/webpack/xl-5000/src/__benchmark_hmr_probe__.ts",
+  "entry": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/webpack/xl-5000/src/main.tsx",
+  "targetSha256": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "targetSha256After": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "probeExistedBefore": false,
+  "probeRestored": true,
+  "runsPerSession": 4,
+  "timeoutMs": 180000,
+  "cooldownMs": 1000,
+  "command": [
+    "npx",
+    "webpack",
+    "serve",
+    "--mode",
+    "development",
+    "--config",
+    "webpack.config.cjs",
+    "--port",
+    "5399"
+  ],
+  "port": 5399,
+  "warmups": [
+    {
+      "session": 1,
+      "reloaded": false
+    },
+    {
+      "session": 2,
+      "reloaded": false
+    },
+    {
+      "session": 3,
+      "reloaded": false
+    },
+    {
+      "session": 4,
+      "reloaded": false
+    },
+    {
+      "session": 5,
+      "reloaded": false
+    }
+  ],
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 5194
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 4959
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 5389
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 5419
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 4395
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 4203
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 4252
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 4491
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 4233
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 4343
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 4195
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 4315
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 4285
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 4139
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 4360
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 4080
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 4264
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 4461
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 4407
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 4132
+    }
+  ]
+}

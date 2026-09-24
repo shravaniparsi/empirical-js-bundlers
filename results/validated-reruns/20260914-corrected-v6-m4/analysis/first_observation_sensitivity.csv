@@ -1,0 +1,13 @@
+tier,metric,size,tool,median_all,median_excluding_first,n_all,n_excluding_first,rank_all,rank_excluding_first
+tier1,M4,m-500,rspack,105,111,20,15,2,2
+tier1,M4,m-500,vite,89.5,71,20,15,1,1
+tier1,M4,m-500,webpack,445,441,20,15,3,3
+tier1,M4,xl-5000,rspack,389,390,20,15,2,2
+tier1,M4,xl-5000,vite,95,62,20,15,1,1
+tier1,M4,xl-5000,webpack,4329,4343,20,15,3,3
+tier1,M4,xs-50,rspack,94.5,94,20,15,2,2
+tier1,M4,xs-50,vite,67.5,84,20,15,1,1
+tier1,M4,xs-50,webpack,154,152,20,15,3,3
+tier2,M4,bp-react,rspack,122.5,122,20,15,2,2
+tier2,M4,bp-react,vite,92.5,89,20,15,1,1
+tier2,M4,bp-react,webpack,231.5,228,20,15,3,3

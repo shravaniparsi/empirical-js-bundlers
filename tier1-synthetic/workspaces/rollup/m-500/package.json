@@ -1,0 +1,37 @@
+{
+  "name": "benchmark-m-500",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c rollup.config.mjs -w",
+    "build": "NODE_ENV=production rollup -c rollup.config.mjs",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lodash-es": "^4.17.21",
+    "date-fns": "^4.1.0",
+    "clsx": "^2.1.1",
+    "react-router-dom": "^7.1.0",
+    "zustand": "^5.0.0",
+    "recharts": "^2.15.0",
+    "react-hook-form": "^7.54.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/lodash-es": "^4.17.12",
+    "typescript": "^5.6.0",
+    "rollup": "^4.63.1",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-swc": "^0.4.0",
+    "@rollup/plugin-replace": "^6.0.0",
+    "@rollup/plugin-html": "^2.0.0",
+    "@swc/core": "^1.10.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

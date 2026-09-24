@@ -1,0 +1,90 @@
+import { createContext, useContext, useState, useCallback, useMemo } from 'react';
+import type { ReactNode } from 'react';
+import WorkflowsTag1 from './WorkflowsTag1';
+import WorkflowsLineChart from './WorkflowsLineChart';
+
+interface WorkflowsBridgeState {
+  isActive: boolean;
+  count: number;
+  label: string;
+  metadata: Record<string, unknown>;
+}
+
+interface WorkflowsBridgeContextValue {
+  state: WorkflowsBridgeState;
+  toggle: () => void;
+  increment: () => void;
+  reset: () => void;
+  updateLabel: (label: string) => void;
+  setMeta: (key: string, value: unknown) => void;
+}
+
+const WorkflowsBridgeContext = createContext<WorkflowsBridgeContextValue | null>(null);
+
+export function useWorkflowsBridge() {
+  const ctx = useContext(WorkflowsBridgeContext);
+  if (!ctx) {
+    throw new Error(`useWorkflowsBridge must be used within a WorkflowsBridge`);
+  }
+  return ctx;
+}
+
+interface WorkflowsBridgeProps {
+  children: ReactNode;
+  initialActive?: boolean;
+  initialLabel?: string;
+}
+
+export default function WorkflowsBridge({
+  children,
+  initialActive = false,
+  initialLabel = 'WorkflowsBridge',
+}: WorkflowsBridgeProps) {
+  const [state, setState] = useState<WorkflowsBridgeState>({
+    isActive: initialActive,
+    count: 0,
+    label: initialLabel,
+    metadata: {},
+  });
+
+  const toggle = useCallback(() => {
+    setState(prev => ({ ...prev, isActive: !prev.isActive }));
+  }, []);
+
+  const increment = useCallback(() => {
+    setState(prev => ({ ...prev, count: prev.count + 1 }));
+  }, []);
+
+  const reset = useCallback(() => {
+    setState({
+      isActive: initialActive,
+      count: 0,
+      label: initialLabel,
+      metadata: {},
+    });
+  }, [initialActive, initialLabel]);
+
+  const updateLabel = useCallback((label: string) => {
+    setState(prev => ({ ...prev, label }));
+  }, []);
+
+  const setMeta = useCallback((key: string, value: unknown) => {
+    setState(prev => ({
+      ...prev,
+      metadata: { ...prev.metadata, [key]: value },
+    }));
+  }, []);
+
+  const contextValue = useMemo<WorkflowsBridgeContextValue>(
+    () => ({ state, toggle, increment, reset, updateLabel, setMeta }),
+    [state, toggle, increment, reset, updateLabel, setMeta]
+  );
+
+  return (
+    <WorkflowsBridgeContext.Provider value={contextValue}>
+      {children}
+      <WorkflowsTag1 />
+      <WorkflowsLineChart />
+    </WorkflowsBridgeContext.Provider>
+  );
+}

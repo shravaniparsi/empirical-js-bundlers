@@ -1,0 +1,129 @@
+{
+  "tool": "rollup",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/s-200",
+  "size": "s-200",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Output varied across clean builds; M5/M6/M8 use the predeclared five-build median.",
+  "outputRuns": [
+    {
+      "rawBytes": 1661421,
+      "gzipBytes": 235955,
+      "jsFiles": 5,
+      "manifest": {
+        "ProductsSearch-bO4FUto7.js": "1f92743b40031c151d380362e9902635bb347e742e09e42cccf8183be4a343fd",
+        "ProductsSearch-bO4FUto7.js.map": "8aede3ec9577446a7070b17197d4c1e61b155bae55bb55f8360f9aedf825ee64",
+        "ProductsStat-CfM85lGo.js": "0e18dc7715d8e1fcf51cfbab0aa77e1aa7c7d6513465fa009d68db9167c4b151",
+        "ProductsStat-CfM85lGo.js.map": "e88bacb985a447eadd24e645ae815cb899e1031c65bbe794feb4915685173d70",
+        "ReportsBottomNav-LJr2qsVB.js": "7f8d82864e9bd0d4383d97a1be941b8d8aa727ceddde214b53aca3d248ce1de1",
+        "ReportsBottomNav-LJr2qsVB.js.map": "254108d2cb627747bfee62367c4d1d38c74e460d437be1dc3a24426790ed1024",
+        "index.html": "df88640a5ba0c6112206f61d265d281062829dc6c74d64747ba2ea8f2d9c9536",
+        "main-BX51nSI2.css": "a5f1736ae3230afb91973387549eefc608668febef35a34a4d222f6a193c57b4",
+        "main-BX51nSI2.js": "35eb9fc9d4e5b162b2c4cdf75777863641b5744c237c94a7b876be8007991772",
+        "main-BX51nSI2.js.map": "192b3f681efb8fa8ceacccf3849e73055fd922c037ce3f65ad5ace07bb02ac31",
+        "vendor-DJcZIhy5.js": "abbca65bf33b0f9cd6073a09449b87d5d91afce5a112878fb9543a0c07f2d968",
+        "vendor-DJcZIhy5.js.map": "f1c77a493bdfff52053dcf6356ad4fb56d2d1ea24d2a1a2a82f5283d31a8b40d"
+      }
+    },
+    {
+      "rawBytes": 1661436,
+      "gzipBytes": 235955,
+      "jsFiles": 5,
+      "manifest": {
+        "ProductsSearch-8L4rks5w.js": "2e6bfb2c51d7dae654b364e83f5f2ce6ab20f5a82cc56e102a8e5c202c81d02b",
+        "ProductsSearch-8L4rks5w.js.map": "57ef65bdddbbfc3d1eb3c26f3f8a9d970f78c83aebc47390ff1450268789aba2",
+        "ProductsStat-CpL2-m48.js": "609f8196d960e0a8b0152bf9f0675590fabfac7a1f9822708571866dc0ac55ed",
+        "ProductsStat-CpL2-m48.js.map": "b3d92778ed86a87501aab6645faba3bed1f31af840d2e4541ebc3e6992e95e40",
+        "ReportsBottomNav-DsfdjlDt.js": "6f7db36a4128eddca7717c2a8e6af1e540915623042b210e2645ba56ff3bda6c",
+        "ReportsBottomNav-DsfdjlDt.js.map": "60777353ce76092748544919afe30b4fa3eabfd694ca4a2a3229ca06d0bee420",
+        "index.html": "49d637ba9fd2e6b99326d57477f7e5f8cbfc480cd857c9bfed227ae2840c41c5",
+        "main-DN3oX8VJ.css": "eb75aa85aa7b8043026363716136d769863d82d484348bf5db51d04615299fdb",
+        "main-DN3oX8VJ.js": "b5375cec12fc8de3b057459dd04c5b82f13d364a624f31e437d30ae019a669ce",
+        "main-DN3oX8VJ.js.map": "53bf7f4b0b40eef87f94001c1495f1bcdf7d364edb5010613c98753433968d48",
+        "vendor-Pw6bCw2d.js": "612aa8d402afdc5f68e261ebfafc7627e4c8add2e71b1b2a4c7b66769d784dfb",
+        "vendor-Pw6bCw2d.js.map": "ecff8a62815e4073bb3537f4fde9904636365ebea65acfdf33b0142e275e33a1"
+      }
+    },
+    {
+      "rawBytes": 1661445,
+      "gzipBytes": 235952,
+      "jsFiles": 5,
+      "manifest": {
+        "ProductsSearch-k-oetgZt.js": "19f4b8be25f1aa00a4ff313326e96b04f2c9d42273a536cc1bf18edcbc2316ca",
+        "ProductsSearch-k-oetgZt.js.map": "e142ca6903e82ae50ae643ef30aec517753b821ef1d85023ef5ca8b62446f6cb",
+        "ProductsStat-BNpOrJXd.js": "5a061f701f2a759fbb9a54d038de6c38d9dacdcc51028772eb24fc9e88d7dfc0",
+        "ProductsStat-BNpOrJXd.js.map": "953b05f45481475b6e7b663da64de9bfe6025315f5f8810847dddbe4b1ffc6ed",
+        "ReportsBottomNav-DyIUuITr.js": "669f86353500a1a90068a682e3de902b634539f24fac87ca79df76eff7cd1d5f",
+        "ReportsBottomNav-DyIUuITr.js.map": "6bda12a57ab6321b713495917d5cc5edec8fb229f718d88f784e7c0f2e2b6928",
+        "index.html": "a536e9876fba98844c3f796265c056a660faa39c11e52d9494fb3ca1fbd797cd",
+        "main-D1rkqFOF.css": "da046c0123bf3f33da39f2add12a447901f60ff965e1680414294c47e5d50b77",
+        "main-D1rkqFOF.js": "745f4d7b3209fe9708c8f0af9a335611a6954b047262097b494578cfff4b3cdd",
+        "main-D1rkqFOF.js.map": "4ff2f416cc69ab8a0ecc3ce67663949f7204308630967d2bcbbb32ffb6341089",
+        "vendor-DerYHOSl.js": "30fb5ec14a38024238c50eea376dee0af7edbf2a5d6b9a83ec20656b0ae63374",
+        "vendor-DerYHOSl.js.map": "2aeded64e23a7071c695035e2080eb6486c849713c894a2e073aee1561c9a5ee"
+      }
+    },
+    {
+      "rawBytes": 1661407,
+      "gzipBytes": 235955,
+      "jsFiles": 5,
+      "manifest": {
+        "ProductsSearch-CGyF6fUQ.js": "f05278abd645ef043b1c8ce4146bf5623b100e5a8a20aaa0093f911d4491d711",
+        "ProductsSearch-CGyF6fUQ.js.map": "c858e8456df73df340d97fa6fc4d345e4630fd70b1e33223be6d0a6f117b432f",
+        "ProductsStat-Dc3ylvCq.js": "83182a49f3b6054ddaf6ef75c83342e8e907317f691aeca39a7b41a360279a90",
+        "ProductsStat-Dc3ylvCq.js.map": "002d516c7ea913a3e3f037bc2f0392167eb3dc456f0fb9e88676457ab669da3b",
+        "ReportsBottomNav-z_TKYfHP.js": "93b050e2456a1d7b8ed6f1ba8b238fd37120f900776975f2e981c81fd7c3488e",
+        "ReportsBottomNav-z_TKYfHP.js.map": "0de0a0dd9c7df38ec3d208b2e9375855a90a569c9d61dde810a236636c7dbc5f",
+        "index.html": "57699b5bacfa7a5ebbcd1fee582047e7fdfe64798681eeaef2a03d0602c8287b",
+        "main-CYICOMSx.css": "4266109174ce1fdb1ddc8293330f7a70d7c347065dabf7402444b8808aa9caf4",
+        "main-CYICOMSx.js": "6a847dfa9273661d38ec8919bdd5ffcbca80745d6b9352f988baada80053760f",
+        "main-CYICOMSx.js.map": "ca4070e5fbd3dfb67855a03dee6cf5af878883dee49842cb2b63b1b1759069b0",
+        "vendor-TyDQ4-M0.js": "c49e98b3430682291aaee49e3b5f448a85e9e6fc8f8b0a5c20df569dfa158dbf",
+        "vendor-TyDQ4-M0.js.map": "21f5ddb944743edc7e2d9fa7133410d3c36749f8e9dc491075d2d512a0ae29f4"
+      }
+    },
+    {
+      "rawBytes": 1661410,
+      "gzipBytes": 235954,
+      "jsFiles": 5,
+      "manifest": {
+        "ProductsSearch-By3V1TSI.js": "c450ebdda97d2d90f14935bbeffb45343847000b88b265c966546443b3d80bbe",
+        "ProductsSearch-By3V1TSI.js.map": "9d558440db7a8e8be12813f80dc8522e2881cf4ea0a69d190d3bea6410b0d427",
+        "ProductsStat-BhfVwNJ2.js": "6ee5d386db6c8f2abb1efc8e2a467c71628fe5fec9a7d6c03a7f30ebbc3c8e19",
+        "ProductsStat-BhfVwNJ2.js.map": "59ef68ad38097d90c921fef97edf0c8182ba5dc2bacdc61432caa11740c9325e",
+        "ReportsBottomNav-EvGmpC6x.js": "c6e71b23b039b3791a90c126dc7ea353b614e0c151bf401dfecadf0ffc5a4971",
+        "ReportsBottomNav-EvGmpC6x.js.map": "f95539d5824ad1ce4b5633509e9a6313eaa7e8a86473dab8f29c18dcc0678a1a",
+        "index.html": "8d80f56244b8229195748f041ef1f9ff059a216d883868c4e6d08ff4db1e4ef2",
+        "main-DCg56d1p.css": "7c9b46692a776862bc9e56d727d0d556d171955dcfe326166ed2a363fe7904af",
+        "main-DCg56d1p.js": "b9c8f2a6f1259a226917b6168009b32202ac66cc5c3337ee4c287143df037c33",
+        "main-DCg56d1p.js.map": "ffc13e252f1a6defcf6e33bf53dbe704e2bd7ca6e5854986046fc8537e67a6d5",
+        "vendor-By55xE9a.js": "9ffd2a56c1dfc47b0b628a34d16e4fbb17c133cea961d7bc993d2bd9eb5ceb17",
+        "vendor-By55xE9a.js.map": "de56f446e6de6e5ac742eff51789fc3d21eebd6a1f3872d7bb73e562ef732f03"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main-pA75vrM1.js",
+    "originalSource": "../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": false,
+  "metricsAccepted": true
+}

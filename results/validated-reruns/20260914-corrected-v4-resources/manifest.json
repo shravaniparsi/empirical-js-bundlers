@@ -1,0 +1,35 @@
+{
+  "batchId": "20260914-corrected-v4-resources",
+  "phase": "resources",
+  "status": "complete",
+  "startedAt": "2026-09-15T08:34:47Z",
+  "sourceVerification": "passed",
+  "gitCommit": "2eb58440bf722c77dd0487e4ec5b3692581c9647",
+  "node": "v22.16.0",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpus": 12,
+  "totalMemoryBytes": 34359738368,
+  "loadAverageAtStart": [
+    4.22314453125,
+    5.0634765625,
+    6.0673828125
+  ],
+  "attempts": [
+    {
+      "startedAt": "2026-09-15T08:34:47Z",
+      "phase": "resources",
+      "loadAverageAtStart": [
+        4.22314453125,
+        5.0634765625,
+        6.0673828125
+      ]
+    }
+  ],
+  "completedAt": "2026-09-15T10:13:19.988Z",
+  "loadAverageAtEnd": [
+    13.67822265625,
+    11.20263671875,
+    9.6650390625
+  ]
+}

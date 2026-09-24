@@ -1,0 +1,109 @@
+{
+  "tool": "webpack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/webpack/xs-50",
+  "size": "xs-50",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production npx webpack --mode production --config webpack.config.cjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Five builds were byte-for-byte identical; median equals every run.",
+  "outputRuns": [
+    {
+      "rawBytes": 372983,
+      "gzipBytes": 87029,
+      "jsFiles": 2,
+      "manifest": {
+        "611.1601e55ca122b00ce7ee.js": "76dbcacf96f23744133e5ca2daaf568367c56e87271e3c3e7eaeea9d27dea70c",
+        "611.1601e55ca122b00ce7ee.js.LICENSE.txt": "fcd44eaa24992e4f238a50dc8ab77d8b2052e6c8006c8aef3187f764cf55406d",
+        "611.1601e55ca122b00ce7ee.js.map": "7dafeaca6e0411815b04cf4111c4c9dacf1fc2ac86365b2b3e01dd1e34bbd343",
+        "index.html": "ea15be82c3ff93b30c28887479843995f07cbe8cea962eb7161d313da7b9f888",
+        "main.d6d6a9dd1447a13e37a6.js": "7e658cc3accb84b589431a44b12700ef164491e6cd5876c796695383698bf000",
+        "main.d6d6a9dd1447a13e37a6.js.map": "fea5d5a506c27a5c42ebdb76f07ff07b1f3caa089ae083e27baf17c012816d8b",
+        "main.e3af243bd3204b72fa9f.css": "37aeaa0e9fc641a8cdf4fee56b597cf9d0b89ff8650ca386351eb4286a1f5f36",
+        "main.e3af243bd3204b72fa9f.css.map": "d1694fef9149a3be3a22d9848f4b967b3eac1c2f02d6ff15555b92fed169b52d"
+      }
+    },
+    {
+      "rawBytes": 372983,
+      "gzipBytes": 87029,
+      "jsFiles": 2,
+      "manifest": {
+        "611.1601e55ca122b00ce7ee.js": "76dbcacf96f23744133e5ca2daaf568367c56e87271e3c3e7eaeea9d27dea70c",
+        "611.1601e55ca122b00ce7ee.js.LICENSE.txt": "fcd44eaa24992e4f238a50dc8ab77d8b2052e6c8006c8aef3187f764cf55406d",
+        "611.1601e55ca122b00ce7ee.js.map": "7dafeaca6e0411815b04cf4111c4c9dacf1fc2ac86365b2b3e01dd1e34bbd343",
+        "index.html": "ea15be82c3ff93b30c28887479843995f07cbe8cea962eb7161d313da7b9f888",
+        "main.d6d6a9dd1447a13e37a6.js": "7e658cc3accb84b589431a44b12700ef164491e6cd5876c796695383698bf000",
+        "main.d6d6a9dd1447a13e37a6.js.map": "fea5d5a506c27a5c42ebdb76f07ff07b1f3caa089ae083e27baf17c012816d8b",
+        "main.e3af243bd3204b72fa9f.css": "37aeaa0e9fc641a8cdf4fee56b597cf9d0b89ff8650ca386351eb4286a1f5f36",
+        "main.e3af243bd3204b72fa9f.css.map": "d1694fef9149a3be3a22d9848f4b967b3eac1c2f02d6ff15555b92fed169b52d"
+      }
+    },
+    {
+      "rawBytes": 372983,
+      "gzipBytes": 87029,
+      "jsFiles": 2,
+      "manifest": {
+        "611.1601e55ca122b00ce7ee.js": "76dbcacf96f23744133e5ca2daaf568367c56e87271e3c3e7eaeea9d27dea70c",
+        "611.1601e55ca122b00ce7ee.js.LICENSE.txt": "fcd44eaa24992e4f238a50dc8ab77d8b2052e6c8006c8aef3187f764cf55406d",
+        "611.1601e55ca122b00ce7ee.js.map": "7dafeaca6e0411815b04cf4111c4c9dacf1fc2ac86365b2b3e01dd1e34bbd343",
+        "index.html": "ea15be82c3ff93b30c28887479843995f07cbe8cea962eb7161d313da7b9f888",
+        "main.d6d6a9dd1447a13e37a6.js": "7e658cc3accb84b589431a44b12700ef164491e6cd5876c796695383698bf000",
+        "main.d6d6a9dd1447a13e37a6.js.map": "fea5d5a506c27a5c42ebdb76f07ff07b1f3caa089ae083e27baf17c012816d8b",
+        "main.e3af243bd3204b72fa9f.css": "37aeaa0e9fc641a8cdf4fee56b597cf9d0b89ff8650ca386351eb4286a1f5f36",
+        "main.e3af243bd3204b72fa9f.css.map": "d1694fef9149a3be3a22d9848f4b967b3eac1c2f02d6ff15555b92fed169b52d"
+      }
+    },
+    {
+      "rawBytes": 372983,
+      "gzipBytes": 87029,
+      "jsFiles": 2,
+      "manifest": {
+        "611.1601e55ca122b00ce7ee.js": "76dbcacf96f23744133e5ca2daaf568367c56e87271e3c3e7eaeea9d27dea70c",
+        "611.1601e55ca122b00ce7ee.js.LICENSE.txt": "fcd44eaa24992e4f238a50dc8ab77d8b2052e6c8006c8aef3187f764cf55406d",
+        "611.1601e55ca122b00ce7ee.js.map": "7dafeaca6e0411815b04cf4111c4c9dacf1fc2ac86365b2b3e01dd1e34bbd343",
+        "index.html": "ea15be82c3ff93b30c28887479843995f07cbe8cea962eb7161d313da7b9f888",
+        "main.d6d6a9dd1447a13e37a6.js": "7e658cc3accb84b589431a44b12700ef164491e6cd5876c796695383698bf000",
+        "main.d6d6a9dd1447a13e37a6.js.map": "fea5d5a506c27a5c42ebdb76f07ff07b1f3caa089ae083e27baf17c012816d8b",
+        "main.e3af243bd3204b72fa9f.css": "37aeaa0e9fc641a8cdf4fee56b597cf9d0b89ff8650ca386351eb4286a1f5f36",
+        "main.e3af243bd3204b72fa9f.css.map": "d1694fef9149a3be3a22d9848f4b967b3eac1c2f02d6ff15555b92fed169b52d"
+      }
+    },
+    {
+      "rawBytes": 372983,
+      "gzipBytes": 87029,
+      "jsFiles": 2,
+      "manifest": {
+        "611.1601e55ca122b00ce7ee.js": "76dbcacf96f23744133e5ca2daaf568367c56e87271e3c3e7eaeea9d27dea70c",
+        "611.1601e55ca122b00ce7ee.js.LICENSE.txt": "fcd44eaa24992e4f238a50dc8ab77d8b2052e6c8006c8aef3187f764cf55406d",
+        "611.1601e55ca122b00ce7ee.js.map": "7dafeaca6e0411815b04cf4111c4c9dacf1fc2ac86365b2b3e01dd1e34bbd343",
+        "index.html": "ea15be82c3ff93b30c28887479843995f07cbe8cea962eb7161d313da7b9f888",
+        "main.d6d6a9dd1447a13e37a6.js": "7e658cc3accb84b589431a44b12700ef164491e6cd5876c796695383698bf000",
+        "main.d6d6a9dd1447a13e37a6.js.map": "fea5d5a506c27a5c42ebdb76f07ff07b1f3caa089ae083e27baf17c012816d8b",
+        "main.e3af243bd3204b72fa9f.css": "37aeaa0e9fc641a8cdf4fee56b597cf9d0b89ff8650ca386351eb4286a1f5f36",
+        "main.e3af243bd3204b72fa9f.css.map": "d1694fef9149a3be3a22d9848f4b967b3eac1c2f02d6ff15555b92fed169b52d"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main.bdb69a58e953f1ade1af.js",
+    "originalSource": "webpack://benchmark-xs-50/src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": true,
+  "metricsAccepted": true
+}

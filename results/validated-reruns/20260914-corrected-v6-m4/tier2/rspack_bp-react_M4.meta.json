@@ -1,0 +1,157 @@
+{
+  "metric": "M4",
+  "definition": "self-accepted probe file write to exact browser-observed DOM marker without page reload",
+  "tool": "rspack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/rspack/bulletproof-react",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4/tier2/rspack_bp-react_M4.csv",
+  "size": "bp-react",
+  "timestamp": "2026-09-15T07:12:03Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/rspack/bulletproof-react/src/__benchmark_hmr_probe__.ts",
+  "entry": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/rspack/bulletproof-react/src/main.tsx",
+  "targetSha256": "9e7500082e6577e974d1b794657eb116a7162c0ce0e856db017fa952e28af433",
+  "targetSha256After": "9e7500082e6577e974d1b794657eb116a7162c0ce0e856db017fa952e28af433",
+  "probeExistedBefore": false,
+  "probeRestored": true,
+  "runsPerSession": 4,
+  "timeoutMs": 60000,
+  "cooldownMs": 1000,
+  "command": [
+    "npx",
+    "rspack",
+    "serve",
+    "--config",
+    "rspack.config.cjs",
+    "--port",
+    "5299"
+  ],
+  "port": 5299,
+  "warmups": [
+    {
+      "session": 1,
+      "reloaded": true
+    },
+    {
+      "session": 2,
+      "reloaded": true
+    },
+    {
+      "session": 3,
+      "reloaded": false
+    },
+    {
+      "session": 4,
+      "reloaded": false
+    },
+    {
+      "session": 5,
+      "reloaded": false
+    }
+  ],
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 131
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 123
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 120
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 120
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 127
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 109
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 126
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 126
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 116
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 117
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 124
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 99
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 119
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 165
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 129
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 103
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 130
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 165
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 122
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 104
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "benchmark-m-500",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rspack serve --config rspack.config.cjs",
+    "build": "NODE_ENV=production rspack build --config rspack.config.cjs",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lodash-es": "^4.17.21",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.0",
+    "react-router-dom": "^7.1.0",
+    "recharts": "^2.15.0",
+    "zod": "^3.24.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^2.2.3",
+    "@rspack/core": "^2.2.3",
+    "@rspack/dev-server": "^2.2.1",
+    "@rspack/plugin-react-refresh": "^1.1.1",
+    "@types/lodash-es": "^4.17.12",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "css-loader": "^7.1.2",
+    "react-refresh": "^0.14.2",
+    "typescript": "^5.6.0"
+  }
+}

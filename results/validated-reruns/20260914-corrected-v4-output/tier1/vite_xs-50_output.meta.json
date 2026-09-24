@@ -1,0 +1,89 @@
+{
+  "tool": "vite",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/vite/xs-50",
+  "size": "xs-50",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "npx vite build",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Five builds were byte-for-byte identical; median equals every run.",
+  "outputRuns": [
+    {
+      "rawBytes": 311635,
+      "gzipBytes": 83071,
+      "jsFiles": 1,
+      "manifest": {
+        "assets/index-DMuVVOAH.js": "743c3929770572374c4cffc41094f62bea7f6836b3734cce2a40f260932a6c79",
+        "assets/index-DMuVVOAH.js.map": "f3b2f993a5db6723c597ab5f2f31a397923ee639489a3eea88b07287c0b24335",
+        "assets/index-sCws33SE.css": "151ca7eba9f82ac2d376ccd76f92c1a3a8ba7010c6fd820e93b501ecae606025",
+        "index.html": "d19fdda2206e7047d6af22c1094f2276f6e92f7837ccb8b66ea882efb8a2a07a"
+      }
+    },
+    {
+      "rawBytes": 311635,
+      "gzipBytes": 83071,
+      "jsFiles": 1,
+      "manifest": {
+        "assets/index-DMuVVOAH.js": "743c3929770572374c4cffc41094f62bea7f6836b3734cce2a40f260932a6c79",
+        "assets/index-DMuVVOAH.js.map": "f3b2f993a5db6723c597ab5f2f31a397923ee639489a3eea88b07287c0b24335",
+        "assets/index-sCws33SE.css": "151ca7eba9f82ac2d376ccd76f92c1a3a8ba7010c6fd820e93b501ecae606025",
+        "index.html": "d19fdda2206e7047d6af22c1094f2276f6e92f7837ccb8b66ea882efb8a2a07a"
+      }
+    },
+    {
+      "rawBytes": 311635,
+      "gzipBytes": 83071,
+      "jsFiles": 1,
+      "manifest": {
+        "assets/index-DMuVVOAH.js": "743c3929770572374c4cffc41094f62bea7f6836b3734cce2a40f260932a6c79",
+        "assets/index-DMuVVOAH.js.map": "f3b2f993a5db6723c597ab5f2f31a397923ee639489a3eea88b07287c0b24335",
+        "assets/index-sCws33SE.css": "151ca7eba9f82ac2d376ccd76f92c1a3a8ba7010c6fd820e93b501ecae606025",
+        "index.html": "d19fdda2206e7047d6af22c1094f2276f6e92f7837ccb8b66ea882efb8a2a07a"
+      }
+    },
+    {
+      "rawBytes": 311635,
+      "gzipBytes": 83071,
+      "jsFiles": 1,
+      "manifest": {
+        "assets/index-DMuVVOAH.js": "743c3929770572374c4cffc41094f62bea7f6836b3734cce2a40f260932a6c79",
+        "assets/index-DMuVVOAH.js.map": "f3b2f993a5db6723c597ab5f2f31a397923ee639489a3eea88b07287c0b24335",
+        "assets/index-sCws33SE.css": "151ca7eba9f82ac2d376ccd76f92c1a3a8ba7010c6fd820e93b501ecae606025",
+        "index.html": "d19fdda2206e7047d6af22c1094f2276f6e92f7837ccb8b66ea882efb8a2a07a"
+      }
+    },
+    {
+      "rawBytes": 311635,
+      "gzipBytes": 83071,
+      "jsFiles": 1,
+      "manifest": {
+        "assets/index-DMuVVOAH.js": "743c3929770572374c4cffc41094f62bea7f6836b3734cce2a40f260932a6c79",
+        "assets/index-DMuVVOAH.js.map": "f3b2f993a5db6723c597ab5f2f31a397923ee639489a3eea88b07287c0b24335",
+        "assets/index-sCws33SE.css": "151ca7eba9f82ac2d376ccd76f92c1a3a8ba7010c6fd820e93b501ecae606025",
+        "index.html": "d19fdda2206e7047d6af22c1094f2276f6e92f7837ccb8b66ea882efb8a2a07a"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "assets/index-DcVBkBPI.js",
+    "originalSource": "../../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": true,
+  "metricsAccepted": true
+}

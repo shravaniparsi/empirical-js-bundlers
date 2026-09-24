@@ -1,0 +1,94 @@
+{
+  "tool": "esbuild",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/esbuild/xs-50",
+  "size": "xs-50",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "node configs/esbuild/build.mjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Five builds were byte-for-byte identical; median equals every run.",
+  "outputRuns": [
+    {
+      "rawBytes": 370950,
+      "gzipBytes": 90371,
+      "jsFiles": 1,
+      "manifest": {
+        "index.html": "50816ce403a4674185bc61c29d370cfba3fc7a4f258d856c939a1efcd9e166e8",
+        "src/main.css": "2780c59701b897d7a0a5ba6220acb5373e47d21036d9911c47c69ae284ee2a82",
+        "src/main.css.map": "6318b512f8755b0ea8c918e1a7f34da146f594c23495aaa4ef56ae9119a62d44",
+        "src/main.js": "a8c8a599a2ebe488a67894786950ba142e321fd7ccb5a2561f50e55d2db04fe0",
+        "src/main.js.map": "ec0aefe6a33f7d2da1a28aa54601a8128f12908310cdcfc2d7694d971c6b950f"
+      }
+    },
+    {
+      "rawBytes": 370950,
+      "gzipBytes": 90371,
+      "jsFiles": 1,
+      "manifest": {
+        "index.html": "50816ce403a4674185bc61c29d370cfba3fc7a4f258d856c939a1efcd9e166e8",
+        "src/main.css": "2780c59701b897d7a0a5ba6220acb5373e47d21036d9911c47c69ae284ee2a82",
+        "src/main.css.map": "6318b512f8755b0ea8c918e1a7f34da146f594c23495aaa4ef56ae9119a62d44",
+        "src/main.js": "a8c8a599a2ebe488a67894786950ba142e321fd7ccb5a2561f50e55d2db04fe0",
+        "src/main.js.map": "ec0aefe6a33f7d2da1a28aa54601a8128f12908310cdcfc2d7694d971c6b950f"
+      }
+    },
+    {
+      "rawBytes": 370950,
+      "gzipBytes": 90371,
+      "jsFiles": 1,
+      "manifest": {
+        "index.html": "50816ce403a4674185bc61c29d370cfba3fc7a4f258d856c939a1efcd9e166e8",
+        "src/main.css": "2780c59701b897d7a0a5ba6220acb5373e47d21036d9911c47c69ae284ee2a82",
+        "src/main.css.map": "6318b512f8755b0ea8c918e1a7f34da146f594c23495aaa4ef56ae9119a62d44",
+        "src/main.js": "a8c8a599a2ebe488a67894786950ba142e321fd7ccb5a2561f50e55d2db04fe0",
+        "src/main.js.map": "ec0aefe6a33f7d2da1a28aa54601a8128f12908310cdcfc2d7694d971c6b950f"
+      }
+    },
+    {
+      "rawBytes": 370950,
+      "gzipBytes": 90371,
+      "jsFiles": 1,
+      "manifest": {
+        "index.html": "50816ce403a4674185bc61c29d370cfba3fc7a4f258d856c939a1efcd9e166e8",
+        "src/main.css": "2780c59701b897d7a0a5ba6220acb5373e47d21036d9911c47c69ae284ee2a82",
+        "src/main.css.map": "6318b512f8755b0ea8c918e1a7f34da146f594c23495aaa4ef56ae9119a62d44",
+        "src/main.js": "a8c8a599a2ebe488a67894786950ba142e321fd7ccb5a2561f50e55d2db04fe0",
+        "src/main.js.map": "ec0aefe6a33f7d2da1a28aa54601a8128f12908310cdcfc2d7694d971c6b950f"
+      }
+    },
+    {
+      "rawBytes": 370950,
+      "gzipBytes": 90371,
+      "jsFiles": 1,
+      "manifest": {
+        "index.html": "50816ce403a4674185bc61c29d370cfba3fc7a4f258d856c939a1efcd9e166e8",
+        "src/main.css": "2780c59701b897d7a0a5ba6220acb5373e47d21036d9911c47c69ae284ee2a82",
+        "src/main.css.map": "6318b512f8755b0ea8c918e1a7f34da146f594c23495aaa4ef56ae9119a62d44",
+        "src/main.js": "a8c8a599a2ebe488a67894786950ba142e321fd7ccb5a2561f50e55d2db04fe0",
+        "src/main.js.map": "ec0aefe6a33f7d2da1a28aa54601a8128f12908310cdcfc2d7694d971c6b950f"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "src/main.js",
+    "originalSource": "../../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": true,
+  "metricsAccepted": true
+}

@@ -1,0 +1,13 @@
+tier,metric,size,tool_1,tool_2,cliffs_delta,ci_95_low,ci_95_high,magnitude
+tier1,M4,m-500,rspack,vite,0.6,-0.042,1,large
+tier1,M4,m-500,rspack,webpack,-1,-1,-1,large
+tier1,M4,m-500,vite,webpack,-1,-1,-1,large
+tier1,M4,xl-5000,rspack,vite,1,1,1,large
+tier1,M4,xl-5000,rspack,webpack,-1,-1,-1,large
+tier1,M4,xl-5000,vite,webpack,-1,-1,-1,large
+tier1,M4,xs-50,rspack,vite,1,1,1,large
+tier1,M4,xs-50,rspack,webpack,-1,-1,-1,large
+tier1,M4,xs-50,vite,webpack,-1,-1,-1,large
+tier2,M4,bp-react,rspack,vite,0.6,-0.2,1,large
+tier2,M4,bp-react,rspack,webpack,-1,-1,-1,large
+tier2,M4,bp-react,vite,webpack,-1,-1,-1,large

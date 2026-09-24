@@ -1,0 +1,21 @@
+{
+  "tool": "rspack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rspack/xs-50",
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-m7/tier1",
+  "timestamp": "2026-09-15T07:34:12Z",
+  "definition": "percentage of full lodash-es differential bytes eliminated when only pick and debounce are observably used",
+  "unminified": true,
+  "firstBuildBytes": {
+    "empty": 86,
+    "used": 62112,
+    "full": 628994
+  },
+  "deterministicSecondBuildBytes": {
+    "empty": 86,
+    "used": 62112,
+    "full": 628994
+  },
+  "usedDifferentialBytes": 62026,
+  "fullDifferentialBytes": 628908,
+  "eliminatedPercent": 90.14
+}

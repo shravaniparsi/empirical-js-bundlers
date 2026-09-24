@@ -1,0 +1,89 @@
+{
+  "tool": "esbuild",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/esbuild/xl-5000",
+  "size": "xl-5000",
+  "runs": 1,
+  "runOffset": 9,
+  "append": true,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-resources/tier1",
+  "timestamp": "2026-09-15T08:34:47Z",
+  "definition": {
+    "M2": "wall time of a production build after clearing bundler output and caches",
+    "M10": "maximum resident set size reported by macOS /usr/bin/time -l for the command process and waited-for children; not aggregate simultaneous process-tree RSS",
+    "M11": "user plus system CPU seconds from macOS /usr/bin/time -l"
+  },
+  "command": "node configs/esbuild/build.mjs",
+  "sourceSha256": "8fb59f9a7a883dfaebae3f32911feedbf8103d5da6ade58c9c6015b7a290204b",
+  "runDetails": [
+    {
+      "run": 1,
+      "realSeconds": 17.68,
+      "userSeconds": 2.86,
+      "systemSeconds": 6.41,
+      "rssBytes": 255279104
+    },
+    {
+      "run": 2,
+      "realSeconds": 17.34,
+      "userSeconds": 2.83,
+      "systemSeconds": 6.32,
+      "rssBytes": 286588928
+    },
+    {
+      "run": 3,
+      "realSeconds": 17.03,
+      "userSeconds": 2.78,
+      "systemSeconds": 6.27,
+      "rssBytes": 284966912
+    },
+    {
+      "run": 4,
+      "realSeconds": 21.73,
+      "userSeconds": 2.87,
+      "systemSeconds": 5.97,
+      "rssBytes": 299548672
+    },
+    {
+      "run": 5,
+      "realSeconds": 18.24,
+      "userSeconds": 2.89,
+      "systemSeconds": 6.36,
+      "rssBytes": 252805120
+    },
+    {
+      "run": 6,
+      "realSeconds": 17.67,
+      "userSeconds": 2.8,
+      "systemSeconds": 6.21,
+      "rssBytes": 288161792
+    },
+    {
+      "run": 7,
+      "realSeconds": 17.9,
+      "userSeconds": 2.9,
+      "systemSeconds": 5.86,
+      "rssBytes": 276643840
+    },
+    {
+      "run": 8,
+      "realSeconds": 17.62,
+      "userSeconds": 2.83,
+      "systemSeconds": 6.34,
+      "rssBytes": 288505856
+    },
+    {
+      "run": 9,
+      "realSeconds": 22.17,
+      "userSeconds": 2.91,
+      "systemSeconds": 6.47,
+      "rssBytes": 305004544
+    },
+    {
+      "run": 10,
+      "realSeconds": 18.61,
+      "userSeconds": 2.86,
+      "systemSeconds": 6.35,
+      "rssBytes": 284016640
+    }
+  ]
+}

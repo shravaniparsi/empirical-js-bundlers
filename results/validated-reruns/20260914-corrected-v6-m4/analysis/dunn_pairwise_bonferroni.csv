@@ -1,0 +1,13 @@
+tier,metric,size,tool_1,tool_2,z,p_raw,p_bonferroni,significant
+tier1,M4,m-500,rspack,vite,1.061608,0.288413,0.86524,No
+tier1,M4,m-500,rspack,webpack,-2.123217,0.033736,0.101207,No
+tier1,M4,m-500,vite,webpack,-3.184825,0.001448,0.004345,Yes
+tier1,M4,xl-5000,rspack,vite,1.767767,0.0771,0.2313,No
+tier1,M4,xl-5000,rspack,webpack,-1.767767,0.0771,0.2313,No
+tier1,M4,xl-5000,vite,webpack,-3.535534,0.000407,0.001221,Yes
+tier1,M4,xs-50,rspack,vite,1.770932,0.076572,0.229716,No
+tier1,M4,xs-50,rspack,webpack,-1.770932,0.076572,0.229716,No
+tier1,M4,xs-50,vite,webpack,-3.541864,0.000397,0.001192,Yes
+tier2,M4,bp-react,rspack,vite,1.061608,0.288413,0.86524,No
+tier2,M4,bp-react,rspack,webpack,-2.123217,0.033736,0.101207,No
+tier2,M4,bp-react,vite,webpack,-3.184825,0.001448,0.004345,Yes

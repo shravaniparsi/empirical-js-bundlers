@@ -1,0 +1,99 @@
+{
+  "tool": "rollup",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/xs-50",
+  "size": "xs-50",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production node --stack-size=65536 ./node_modules/.bin/rollup -c rollup.config.mjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Output varied across clean builds; M5/M6/M8 use the predeclared five-build median.",
+  "outputRuns": [
+    {
+      "rawBytes": 1000071,
+      "gzipBytes": 155676,
+      "jsFiles": 2,
+      "manifest": {
+        "index.html": "d9bda5a784d43b016ca7b87ccadd356da673a50118dc5352ba6d390e68b718ce",
+        "main-BT-ZezYZ.css": "36f52227008f7e24fbf1b00651c83488179d51229496bbf5bbaed89aa9c65ba4",
+        "main-BT-ZezYZ.js": "ecea087af474dddfb4e66e840e38ad63557ccbc302227e865a2e5f3911aaaddd",
+        "main-BT-ZezYZ.js.map": "3eaa883e76c1dbd6d97fb91d43476042017b5ddfd1a89f64bcd53156b317ec90",
+        "vendor-BTed_v-6.js": "6e3f88f56bbe51faf67fd8ff6808f2d65634e559bf2644ed2d16fb32b3300650",
+        "vendor-BTed_v-6.js.map": "78b296a678afd06f240b79ce19a5f5abe1ce5a6f5b61a7a3c6ef72437a0c0372"
+      }
+    },
+    {
+      "rawBytes": 1000071,
+      "gzipBytes": 155675,
+      "jsFiles": 2,
+      "manifest": {
+        "index.html": "95130be452f81c60695ab6f29628a8927bbf7f8cc4cde30794827350365da075",
+        "main-BOnLYD5L.css": "36f52227008f7e24fbf1b00651c83488179d51229496bbf5bbaed89aa9c65ba4",
+        "main-BOnLYD5L.js": "546b2c94fb4d7e6255e0bccf18b95147366561390aaac138de9bb9a262f85004",
+        "main-BOnLYD5L.js.map": "44e1309fa27ca2076c18731d98dd899ed3f2cf6e4291c6b9e1287dd6d4575223",
+        "vendor-DxrpeNRJ.js": "3095e96371d451d99e8fa8b6f677a8002641bef665132600d8a714978221d513",
+        "vendor-DxrpeNRJ.js.map": "b45ab1107d4efb0be12fc598e2b6e922481edd4b1dd7a23eee99870eacfba1b8"
+      }
+    },
+    {
+      "rawBytes": 1000071,
+      "gzipBytes": 155676,
+      "jsFiles": 2,
+      "manifest": {
+        "index.html": "6920a170a3ad0b92a6f16ea792e55e0ecc86db62111b0a77c7b73cf2c4961d27",
+        "main-pPBW4fGq.css": "36f52227008f7e24fbf1b00651c83488179d51229496bbf5bbaed89aa9c65ba4",
+        "main-pPBW4fGq.js": "57178f2ee498656c38582a245fd3d25e82e155a8d112662eb3a6b3f193163a4e",
+        "main-pPBW4fGq.js.map": "522be052d45c0ca5ecb113902b14a075d17f86a25b4138d138e4056c7b29dcc6",
+        "vendor-CCUqN21d.js": "997b444932d5528f490f2fcd5aaf3dde07cc536a1dba2ab0c6794407c097897b",
+        "vendor-CCUqN21d.js.map": "f3c3c514df7d075fe445003f891db71e4c4e3668778e68975d69cc6aaa7f120d"
+      }
+    },
+    {
+      "rawBytes": 1000071,
+      "gzipBytes": 155676,
+      "jsFiles": 2,
+      "manifest": {
+        "index.html": "e829c6b345652c41743e37a8be890177a04a4317a8148ba7294cf048bb42f022",
+        "main-BRqYfXCA.css": "36f52227008f7e24fbf1b00651c83488179d51229496bbf5bbaed89aa9c65ba4",
+        "main-BRqYfXCA.js": "de4e71555c6c90af1693b7c5fe7e7ac28d249865deac5e90110582d7386b2038",
+        "main-BRqYfXCA.js.map": "5eadf863184657681c021742f35c0b9be45f1a9bdc12bc7cbbbc2a0a8a7c10f5",
+        "vendor-Dy1lZ4u0.js": "9458fc530f38046c984c4e4b5f20bce6c24fc578fcfc234a920b1688dfe9f29a",
+        "vendor-Dy1lZ4u0.js.map": "56c3197706e400f0e04ec5dc5739a62b4f0b65ac3f34abe5418d212acbabec47"
+      }
+    },
+    {
+      "rawBytes": 1000071,
+      "gzipBytes": 155675,
+      "jsFiles": 2,
+      "manifest": {
+        "index.html": "890c5d2f2375dcf36a79fcb60c6307efcc4a60cc8255c2f681ee010812b2007e",
+        "main-Bqx8y-ny.css": "36f52227008f7e24fbf1b00651c83488179d51229496bbf5bbaed89aa9c65ba4",
+        "main-Bqx8y-ny.js": "5fbb76b5a6d55702776098438353745621197dc4207bb9c87b4050854a74bb8c",
+        "main-Bqx8y-ny.js.map": "a8fb759f169d123c61628517f061fd318b64ecad8ffb36f468d1cf1f960b9354",
+        "vendor-Bxnujqvn.js": "3cfa9fe9de7647b585f73d8dadaed79e4b927c09d55a19128f7cd696285deeec",
+        "vendor-Bxnujqvn.js.map": "356c4c7140fb75a64d64098143fa308db65e716873a937e994da3fb9f2cb3056"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main-BtOd6HYh.js",
+    "originalSource": "../src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": false,
+  "metricsAccepted": true
+}

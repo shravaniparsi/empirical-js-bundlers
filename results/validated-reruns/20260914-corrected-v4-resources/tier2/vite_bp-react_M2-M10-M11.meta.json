@@ -1,0 +1,89 @@
+{
+  "tool": "vite",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier2-realworld/workspaces/vite/bulletproof-react",
+  "size": "bp-react",
+  "runs": 1,
+  "runOffset": 9,
+  "append": true,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-resources/tier2",
+  "timestamp": "2026-09-15T08:34:47Z",
+  "definition": {
+    "M2": "wall time of a production build after clearing bundler output and caches",
+    "M10": "maximum resident set size reported by macOS /usr/bin/time -l for the command process and waited-for children; not aggregate simultaneous process-tree RSS",
+    "M11": "user plus system CPU seconds from macOS /usr/bin/time -l"
+  },
+  "command": "npx vite build",
+  "sourceSha256": "cdbef3d2353b155fdcf8c99029ab1e5171cb409d57d07c98bb3f775cb1f0e6f2",
+  "runDetails": [
+    {
+      "run": 1,
+      "realSeconds": 16.69,
+      "userSeconds": 2.19,
+      "systemSeconds": 0.96,
+      "rssBytes": 452771840
+    },
+    {
+      "run": 2,
+      "realSeconds": 7,
+      "userSeconds": 1.87,
+      "systemSeconds": 0.8,
+      "rssBytes": 487620608
+    },
+    {
+      "run": 3,
+      "realSeconds": 2.02,
+      "userSeconds": 1.76,
+      "systemSeconds": 0.74,
+      "rssBytes": 484392960
+    },
+    {
+      "run": 4,
+      "realSeconds": 1.97,
+      "userSeconds": 1.73,
+      "systemSeconds": 0.75,
+      "rssBytes": 489816064
+    },
+    {
+      "run": 5,
+      "realSeconds": 1.8,
+      "userSeconds": 1.71,
+      "systemSeconds": 0.72,
+      "rssBytes": 488816640
+    },
+    {
+      "run": 6,
+      "realSeconds": 1.74,
+      "userSeconds": 1.73,
+      "systemSeconds": 0.74,
+      "rssBytes": 500203520
+    },
+    {
+      "run": 7,
+      "realSeconds": 1.91,
+      "userSeconds": 1.71,
+      "systemSeconds": 0.74,
+      "rssBytes": 484114432
+    },
+    {
+      "run": 8,
+      "realSeconds": 1.99,
+      "userSeconds": 1.73,
+      "systemSeconds": 0.76,
+      "rssBytes": 497287168
+    },
+    {
+      "run": 9,
+      "realSeconds": 2.08,
+      "userSeconds": 1.74,
+      "systemSeconds": 0.76,
+      "rssBytes": 493174784
+    },
+    {
+      "run": 10,
+      "realSeconds": 1.94,
+      "userSeconds": 1.77,
+      "systemSeconds": 0.74,
+      "rssBytes": 490848256
+    }
+  ]
+}

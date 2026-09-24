@@ -1,0 +1,44 @@
+{
+  "batchId": "20260914-corrected-v4-m3",
+  "phase": "M3",
+  "status": "complete",
+  "startedAt": "2026-09-15T03:53:31Z",
+  "sourceVerification": "passed",
+  "gitCommit": "2eb58440bf722c77dd0487e4ec5b3692581c9647",
+  "node": "v22.16.0",
+  "platform": "darwin",
+  "release": "25.5.0",
+  "cpus": 12,
+  "totalMemoryBytes": 34359738368,
+  "loadAverageAtStart": [
+    4.380859375,
+    5.513671875,
+    13.9443359375
+  ],
+  "attempts": [
+    {
+      "startedAt": "2026-09-15T03:53:31Z",
+      "phase": "M3",
+      "loadAverageAtStart": [
+        9.30126953125,
+        8.16943359375,
+        7.6708984375
+      ]
+    },
+    {
+      "startedAt": "2026-09-15T06:03:55Z",
+      "phase": "M3",
+      "loadAverageAtStart": [
+        4.380859375,
+        5.513671875,
+        13.9443359375
+      ]
+    }
+  ],
+  "completedAt": "2026-09-15T06:25:31.873Z",
+  "loadAverageAtEnd": [
+    7.8349609375,
+    7.693359375,
+    9.3037109375
+  ]
+}

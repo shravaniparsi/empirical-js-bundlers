@@ -1,0 +1,155 @@
+{
+  "metric": "M4",
+  "definition": "self-accepted probe file write to exact browser-observed DOM marker without page reload",
+  "tool": "vite",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/vite/xl-5000",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4/tier1/vite_xl-5000_M4.csv",
+  "size": "xl-5000",
+  "timestamp": "2026-09-15T07:12:03Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/vite/xl-5000/src/__benchmark_hmr_probe__.ts",
+  "entry": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/vite/xl-5000/src/main.tsx",
+  "targetSha256": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "targetSha256After": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "probeExistedBefore": false,
+  "probeRestored": true,
+  "runsPerSession": 4,
+  "timeoutMs": 180000,
+  "cooldownMs": 1000,
+  "command": [
+    "npx",
+    "vite",
+    "--port",
+    "5199",
+    "--strictPort"
+  ],
+  "port": 5199,
+  "warmups": [
+    {
+      "session": 1,
+      "reloaded": false
+    },
+    {
+      "session": 2,
+      "reloaded": false
+    },
+    {
+      "session": 3,
+      "reloaded": false
+    },
+    {
+      "session": 4,
+      "reloaded": false
+    },
+    {
+      "session": 5,
+      "reloaded": false
+    }
+  ],
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 944
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 61
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 155
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 155
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 225
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 96
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 65
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 37
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 94
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 62
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 25
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 148
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 275
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 55
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 41
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 141
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 242
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 99
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 34
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 43
+    }
+  ]
+}

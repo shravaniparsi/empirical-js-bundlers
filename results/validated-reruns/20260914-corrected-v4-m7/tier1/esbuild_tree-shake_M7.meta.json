@@ -1,0 +1,21 @@
+{
+  "tool": "esbuild",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/esbuild/xs-50",
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-m7/tier1",
+  "timestamp": "2026-09-15T07:34:12Z",
+  "definition": "percentage of full lodash-es differential bytes eliminated when only pick and debounce are observably used",
+  "unminified": true,
+  "firstBuildBytes": {
+    "empty": 93,
+    "used": 29718,
+    "full": 286887
+  },
+  "deterministicSecondBuildBytes": {
+    "empty": 93,
+    "used": 29718,
+    "full": 286887
+  },
+  "usedDifferentialBytes": 29625,
+  "fullDifferentialBytes": 286794,
+  "eliminatedPercent": 89.67
+}

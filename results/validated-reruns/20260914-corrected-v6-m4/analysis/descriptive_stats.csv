@@ -1,0 +1,13 @@
+tier,metric,size,tool,unit_of_analysis,n,mean,median,std,iqr,min,max
+tier1,M4,m-500,rspack,session_median,5,117.9,108,26.159128,37,86.5,148
+tier1,M4,xl-5000,rspack,session_median,5,385.9,376.5,28.074455,34.5,361,428.5
+tier1,M4,xs-50,rspack,session_median,5,95.2,95.5,3.598611,1.5,90.5,100.5
+tier1,M4,m-500,vite,session_median,5,86.7,84.5,25.220527,27.5,49.5,113
+tier1,M4,xl-5000,vite,session_median,5,96.5,80.5,34.179672,20,71,155
+tier1,M4,xs-50,vite,session_median,5,72.1,77,11.965576,14.5,53.5,81.5
+tier1,M4,m-500,webpack,session_median,5,443.9,445,4.929503,5,438.5,451
+tier1,M4,xl-5000,webpack,session_median,5,4487.3,4323.5,452.18865,61.5,4212,5291.5
+tier1,M4,xs-50,webpack,session_median,5,155.3,153,12.828679,18.5,140.5,171.5
+tier2,M4,bp-react,rspack,session_median,5,122.8,124,3.978065,4.5,116.5,126
+tier2,M4,bp-react,vite,session_median,5,94.3,102.5,34.421287,37.5,45,133.5
+tier2,M4,bp-react,webpack,session_median,5,230.9,231,4.435651,1,224.5,237

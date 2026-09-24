@@ -1,0 +1,124 @@
+{
+  "tool": "rspack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rspack/s-200",
+  "size": "s-200",
+  "runs": 5,
+  "resultsDir": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-output/tier1",
+  "timestamp": "2026-09-15T07:47:32Z",
+  "definitions": {
+    "M5": "generated JS/CSS/HTML bytes; external maps and copied public files excluded",
+    "M6": "sum of generated JS files gzipped individually at level 9",
+    "M8": "generated JS file count",
+    "M9": "exact generated-to-original mapping of an injected sentinel probe"
+  },
+  "buildCommand": "NODE_ENV=production npx rspack build --config rspack.config.cjs",
+  "analyticalAggregation": "one median observation from five clean verification builds",
+  "aggregationReason": "Five builds were byte-for-byte identical; median equals every run.",
+  "outputRuns": [
+    {
+      "rawBytes": 1182103,
+      "gzipBytes": 207359,
+      "jsFiles": 4,
+      "manifest": {
+        "233.fe7520868c6a2a9c.js": "f7c2362f220aa3b35a672b5085c0e2d392e46639b66af92a4db10525cc27a538",
+        "233.fe7520868c6a2a9c.js.map": "ebd5c9c8e0b8a1295cacae36db46bb05f94657056128972236db784887fbc09e",
+        "499.a57d3b2b3c94cdb6.js": "237d5eefcfec01340d63977fd6331d8175a21809edc632cc83b0fd95238a6dd4",
+        "499.a57d3b2b3c94cdb6.js.map": "749b90fb8d3cff45d6fc1efb829c214f86e6a3521b743f94bc81d5ff819a504d",
+        "518.6b9958f89af03e3f.js": "e36391b2ad9c299c5f12bf704a2c90c995e00ae672024588345f3712f5cd5c31",
+        "518.6b9958f89af03e3f.js.map": "3c840bed8c4c75abdcf171a3716f7a1af41e19c8adedc662fd8b7c24cbed057b",
+        "index.html": "6ba94e74c395a20a9c3971aeaadee4bea644ca01fef41cedfce7709277687180",
+        "main.4d7ccb450b6ae012.css": "fc9ecf8b4de4617919a31621bbd3b31e10dbf19af270359b13dc8351ee87fe94",
+        "main.4d7ccb450b6ae012.css.map": "190daf82e6ea961d5226103adb047c9993299e65a79d4f7b8825bec5913e2c7e",
+        "main.96481daa1c0d479e.js": "df9b410b632c6554f13f5443b440d9a01800296cb95ef0de66045c71315b00fd",
+        "main.96481daa1c0d479e.js.map": "db6eb9edc8e35d5e5213b3a96cee14ac49b3f0c5cc35ba23e65ece6da4700f6f"
+      }
+    },
+    {
+      "rawBytes": 1182103,
+      "gzipBytes": 207359,
+      "jsFiles": 4,
+      "manifest": {
+        "233.fe7520868c6a2a9c.js": "f7c2362f220aa3b35a672b5085c0e2d392e46639b66af92a4db10525cc27a538",
+        "233.fe7520868c6a2a9c.js.map": "ebd5c9c8e0b8a1295cacae36db46bb05f94657056128972236db784887fbc09e",
+        "499.a57d3b2b3c94cdb6.js": "237d5eefcfec01340d63977fd6331d8175a21809edc632cc83b0fd95238a6dd4",
+        "499.a57d3b2b3c94cdb6.js.map": "749b90fb8d3cff45d6fc1efb829c214f86e6a3521b743f94bc81d5ff819a504d",
+        "518.6b9958f89af03e3f.js": "e36391b2ad9c299c5f12bf704a2c90c995e00ae672024588345f3712f5cd5c31",
+        "518.6b9958f89af03e3f.js.map": "3c840bed8c4c75abdcf171a3716f7a1af41e19c8adedc662fd8b7c24cbed057b",
+        "index.html": "6ba94e74c395a20a9c3971aeaadee4bea644ca01fef41cedfce7709277687180",
+        "main.4d7ccb450b6ae012.css": "fc9ecf8b4de4617919a31621bbd3b31e10dbf19af270359b13dc8351ee87fe94",
+        "main.4d7ccb450b6ae012.css.map": "190daf82e6ea961d5226103adb047c9993299e65a79d4f7b8825bec5913e2c7e",
+        "main.96481daa1c0d479e.js": "df9b410b632c6554f13f5443b440d9a01800296cb95ef0de66045c71315b00fd",
+        "main.96481daa1c0d479e.js.map": "db6eb9edc8e35d5e5213b3a96cee14ac49b3f0c5cc35ba23e65ece6da4700f6f"
+      }
+    },
+    {
+      "rawBytes": 1182103,
+      "gzipBytes": 207359,
+      "jsFiles": 4,
+      "manifest": {
+        "233.fe7520868c6a2a9c.js": "f7c2362f220aa3b35a672b5085c0e2d392e46639b66af92a4db10525cc27a538",
+        "233.fe7520868c6a2a9c.js.map": "ebd5c9c8e0b8a1295cacae36db46bb05f94657056128972236db784887fbc09e",
+        "499.a57d3b2b3c94cdb6.js": "237d5eefcfec01340d63977fd6331d8175a21809edc632cc83b0fd95238a6dd4",
+        "499.a57d3b2b3c94cdb6.js.map": "749b90fb8d3cff45d6fc1efb829c214f86e6a3521b743f94bc81d5ff819a504d",
+        "518.6b9958f89af03e3f.js": "e36391b2ad9c299c5f12bf704a2c90c995e00ae672024588345f3712f5cd5c31",
+        "518.6b9958f89af03e3f.js.map": "3c840bed8c4c75abdcf171a3716f7a1af41e19c8adedc662fd8b7c24cbed057b",
+        "index.html": "6ba94e74c395a20a9c3971aeaadee4bea644ca01fef41cedfce7709277687180",
+        "main.4d7ccb450b6ae012.css": "fc9ecf8b4de4617919a31621bbd3b31e10dbf19af270359b13dc8351ee87fe94",
+        "main.4d7ccb450b6ae012.css.map": "190daf82e6ea961d5226103adb047c9993299e65a79d4f7b8825bec5913e2c7e",
+        "main.96481daa1c0d479e.js": "df9b410b632c6554f13f5443b440d9a01800296cb95ef0de66045c71315b00fd",
+        "main.96481daa1c0d479e.js.map": "db6eb9edc8e35d5e5213b3a96cee14ac49b3f0c5cc35ba23e65ece6da4700f6f"
+      }
+    },
+    {
+      "rawBytes": 1182103,
+      "gzipBytes": 207359,
+      "jsFiles": 4,
+      "manifest": {
+        "233.fe7520868c6a2a9c.js": "f7c2362f220aa3b35a672b5085c0e2d392e46639b66af92a4db10525cc27a538",
+        "233.fe7520868c6a2a9c.js.map": "ebd5c9c8e0b8a1295cacae36db46bb05f94657056128972236db784887fbc09e",
+        "499.a57d3b2b3c94cdb6.js": "237d5eefcfec01340d63977fd6331d8175a21809edc632cc83b0fd95238a6dd4",
+        "499.a57d3b2b3c94cdb6.js.map": "749b90fb8d3cff45d6fc1efb829c214f86e6a3521b743f94bc81d5ff819a504d",
+        "518.6b9958f89af03e3f.js": "e36391b2ad9c299c5f12bf704a2c90c995e00ae672024588345f3712f5cd5c31",
+        "518.6b9958f89af03e3f.js.map": "3c840bed8c4c75abdcf171a3716f7a1af41e19c8adedc662fd8b7c24cbed057b",
+        "index.html": "6ba94e74c395a20a9c3971aeaadee4bea644ca01fef41cedfce7709277687180",
+        "main.4d7ccb450b6ae012.css": "fc9ecf8b4de4617919a31621bbd3b31e10dbf19af270359b13dc8351ee87fe94",
+        "main.4d7ccb450b6ae012.css.map": "190daf82e6ea961d5226103adb047c9993299e65a79d4f7b8825bec5913e2c7e",
+        "main.96481daa1c0d479e.js": "df9b410b632c6554f13f5443b440d9a01800296cb95ef0de66045c71315b00fd",
+        "main.96481daa1c0d479e.js.map": "db6eb9edc8e35d5e5213b3a96cee14ac49b3f0c5cc35ba23e65ece6da4700f6f"
+      }
+    },
+    {
+      "rawBytes": 1182103,
+      "gzipBytes": 207359,
+      "jsFiles": 4,
+      "manifest": {
+        "233.fe7520868c6a2a9c.js": "f7c2362f220aa3b35a672b5085c0e2d392e46639b66af92a4db10525cc27a538",
+        "233.fe7520868c6a2a9c.js.map": "ebd5c9c8e0b8a1295cacae36db46bb05f94657056128972236db784887fbc09e",
+        "499.a57d3b2b3c94cdb6.js": "237d5eefcfec01340d63977fd6331d8175a21809edc632cc83b0fd95238a6dd4",
+        "499.a57d3b2b3c94cdb6.js.map": "749b90fb8d3cff45d6fc1efb829c214f86e6a3521b743f94bc81d5ff819a504d",
+        "518.6b9958f89af03e3f.js": "e36391b2ad9c299c5f12bf704a2c90c995e00ae672024588345f3712f5cd5c31",
+        "518.6b9958f89af03e3f.js.map": "3c840bed8c4c75abdcf171a3716f7a1af41e19c8adedc662fd8b7c24cbed057b",
+        "index.html": "6ba94e74c395a20a9c3971aeaadee4bea644ca01fef41cedfce7709277687180",
+        "main.4d7ccb450b6ae012.css": "fc9ecf8b4de4617919a31621bbd3b31e10dbf19af270359b13dc8351ee87fe94",
+        "main.4d7ccb450b6ae012.css.map": "190daf82e6ea961d5226103adb047c9993299e65a79d4f7b8825bec5913e2c7e",
+        "main.96481daa1c0d479e.js": "df9b410b632c6554f13f5443b440d9a01800296cb95ef0de66045c71315b00fd",
+        "main.96481daa1c0d479e.js.map": "db6eb9edc8e35d5e5213b3a96cee14ac49b3f0c5cc35ba23e65ece6da4700f6f"
+      }
+    }
+  ],
+  "sourceMapProbe": {
+    "valid": true,
+    "generatedFile": "main.4e5529213b1b8166.js",
+    "originalSource": "webpack://benchmark-s-200/src/__benchmark_sourcemap_probe__.ts",
+    "originalLine": 2,
+    "originalColumn": 18
+  },
+  "sourceRestoration": {
+    "entryHashBefore": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "entryHashAfter": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+    "probeExisted": false,
+    "probeRestored": true
+  },
+  "byteForByteDeterministic": true,
+  "metricsAccepted": true
+}

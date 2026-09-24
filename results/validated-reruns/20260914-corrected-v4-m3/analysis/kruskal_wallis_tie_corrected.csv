@@ -1,0 +1,6 @@
+tier,metric,size,groups,total_n,H,df,tie_correction,p_value,significant
+tier1,M3,l-2000,5,25,23.076923,4,1,0.000122,Yes
+tier1,M3,m-500,5,25,23.076923,4,1,0.000122,Yes
+tier1,M3,s-200,5,25,23.085802,4,0.999615,0.000122,Yes
+tier1,M3,xl-5000,5,25,23.076923,4,1,0.000122,Yes
+tier1,M3,xs-50,5,25,22.59823,4,0.999615,0.000152,Yes

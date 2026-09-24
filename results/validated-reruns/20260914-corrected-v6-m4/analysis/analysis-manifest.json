@@ -1,0 +1,12 @@
+{
+  "batch": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4",
+  "generatedAt": "2026-09-15T07:33:49.243Z",
+  "rawObservations": 240,
+  "inferentialUnits": 60,
+  "repeatedMeasuresHandling": "M3 and M4 reduced to one median per independent watch/dev-server session",
+  "deterministicMetricsHandling": "M5-M9 retained as one aggregate observation per tool/size and excluded from inferential tests",
+  "omnibus": "Kruskal-Wallis with tie correction",
+  "postHoc": "Dunn tests using global ranks and tie-adjusted variance; Bonferroni family correction",
+  "effectSize": "Cliffs delta with deterministic 5000-replicate percentile bootstrap confidence intervals",
+  "normalityTesting": "omitted; nonparametric methods were selected a priori"
+}

@@ -1,0 +1,6 @@
+tier,metric,size,tool,unit_of_analysis,n,mean,median,std,iqr,min,max
+tier1,M7,tree-shake,esbuild,deterministic_aggregate,1,89.67,89.67,0,0,89.67,89.67
+tier1,M7,tree-shake,rollup,deterministic_aggregate,1,90.27,90.27,0,0,90.27,90.27
+tier1,M7,tree-shake,rspack,deterministic_aggregate,1,90.14,90.14,0,0,90.14,90.14
+tier1,M7,tree-shake,vite,deterministic_aggregate,1,90.24,90.24,0,0,90.24,90.24
+tier1,M7,tree-shake,webpack,deterministic_aggregate,1,90.09,90.09,0,0,90.09,90.09

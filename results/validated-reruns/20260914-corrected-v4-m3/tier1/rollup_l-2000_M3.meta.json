@@ -1,0 +1,131 @@
+{
+  "metric": "M3",
+  "definition": "file write to unminified development watch-build completion log",
+  "tool": "rollup",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/l-2000",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v4-m3/tier1/rollup_l-2000_M3.csv",
+  "size": "l-2000",
+  "timestamp": "2026-09-15T03:53:31Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rollup/l-2000/src/App.tsx",
+  "targetSha256": "5fc58b65e95f9377eb567c7d7e128a7a23a7473294cdc08e6219727d5300f05f",
+  "runsPerSession": 4,
+  "cooldownMs": 2000,
+  "timeoutMs": 120000,
+  "command": [
+    "node",
+    "--stack-size=65536",
+    "./node_modules/.bin/rollup",
+    "-c",
+    "rollup.config.mjs",
+    "-w"
+  ],
+  "nodeEnv": "development",
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 6663
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 6241
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 6465
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 5987
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 6556
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 6198
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 6307
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 6250
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 6601
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 6106
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 6287
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 6307
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 6243
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 5958
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 5803
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 6344
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 6523
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 5779
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 6284
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 5952
+    }
+  ],
+  "targetSha256After": "5fc58b65e95f9377eb567c7d7e128a7a23a7473294cdc08e6219727d5300f05f"
+}

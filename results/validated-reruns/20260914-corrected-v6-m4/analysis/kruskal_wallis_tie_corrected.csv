@@ -1,0 +1,5 @@
+tier,metric,size,groups,total_n,H,df,tie_correction,p_value,significant
+tier1,M4,m-500,3,15,10.518784,2,0.998214,0.005198,Yes
+tier1,M4,xl-5000,3,15,12.5,2,1,0.00193,Yes
+tier1,M4,xs-50,3,15,12.544803,2,0.996429,0.001888,Yes
+tier2,M4,bp-react,3,15,10.518784,2,0.998214,0.005198,Yes

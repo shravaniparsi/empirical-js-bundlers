@@ -1,0 +1,157 @@
+{
+  "metric": "M4",
+  "definition": "self-accepted probe file write to exact browser-observed DOM marker without page reload",
+  "tool": "rspack",
+  "project": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rspack/m-500",
+  "runs": 4,
+  "sessions": 1,
+  "sessionOffset": 4,
+  "runOffset": 16,
+  "append": true,
+  "csv": "/Users/s0p0icn/Documents/empirical-js-bundlers/results/validated-reruns/20260914-corrected-v6-m4/tier1/rspack_m-500_M4.csv",
+  "size": "m-500",
+  "timestamp": "2026-09-15T07:12:03Z",
+  "target": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rspack/m-500/src/__benchmark_hmr_probe__.ts",
+  "entry": "/Users/s0p0icn/Documents/empirical-js-bundlers/tier1-synthetic/workspaces/rspack/m-500/src/main.tsx",
+  "targetSha256": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "targetSha256After": "b7dc6364c230f182a0412fac6ee9560586df620d654a812e5c52c75d370c3187",
+  "probeExistedBefore": false,
+  "probeRestored": true,
+  "runsPerSession": 4,
+  "timeoutMs": 60000,
+  "cooldownMs": 1000,
+  "command": [
+    "npx",
+    "rspack",
+    "serve",
+    "--config",
+    "rspack.config.cjs",
+    "--port",
+    "5299"
+  ],
+  "port": 5299,
+  "warmups": [
+    {
+      "session": 1,
+      "reloaded": false
+    },
+    {
+      "session": 2,
+      "reloaded": false
+    },
+    {
+      "session": 3,
+      "reloaded": false
+    },
+    {
+      "session": 4,
+      "reloaded": false
+    },
+    {
+      "session": 5,
+      "reloaded": false
+    }
+  ],
+  "runSessions": [
+    {
+      "run": 1,
+      "session": 1,
+      "value": 82
+    },
+    {
+      "run": 2,
+      "session": 1,
+      "value": 93
+    },
+    {
+      "run": 3,
+      "session": 1,
+      "value": 86
+    },
+    {
+      "run": 4,
+      "session": 1,
+      "value": 87
+    },
+    {
+      "run": 5,
+      "session": 2,
+      "value": 169
+    },
+    {
+      "run": 6,
+      "session": 2,
+      "value": 149
+    },
+    {
+      "run": 7,
+      "session": 2,
+      "value": 92
+    },
+    {
+      "run": 8,
+      "session": 2,
+      "value": 147
+    },
+    {
+      "run": 9,
+      "session": 3,
+      "value": 150
+    },
+    {
+      "run": 10,
+      "session": 3,
+      "value": 134
+    },
+    {
+      "run": 11,
+      "session": 3,
+      "value": 89
+    },
+    {
+      "run": 12,
+      "session": 3,
+      "value": 181
+    },
+    {
+      "run": 13,
+      "session": 4,
+      "value": 98
+    },
+    {
+      "run": 14,
+      "session": 4,
+      "value": 111
+    },
+    {
+      "run": 15,
+      "session": 4,
+      "value": 111
+    },
+    {
+      "run": 16,
+      "session": 4,
+      "value": 99
+    },
+    {
+      "run": 17,
+      "session": 5,
+      "value": 93
+    },
+    {
+      "run": 18,
+      "session": 5,
+      "value": 92
+    },
+    {
+      "run": 19,
+      "session": 5,
+      "value": 133
+    },
+    {
+      "run": 20,
+      "session": 5,
+      "value": 123
+    }
+  ]
+}
