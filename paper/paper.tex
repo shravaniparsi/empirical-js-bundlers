@@ -1,0 +1,945 @@
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\journal{Journal of Systems and Software}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Benchmarking JavaScript Bundlers at Scale:\\A Two-Tier Empirical Study of Vite, Rspack, esbuild, Webpack, and Rollup}
+
+\author[addr1]{Vishwak Thatikonda\corref{cor1}\fnref{orcid-vt}}
+\ead{vishwakt@gmail.com}
+\author[addr1]{Shravani Parsi\fnref{orcid-sp}}
+\ead{shravaniparsi26@gmail.com}
+\address[addr1]{Independent Researcher}
+\cortext[cor1]{Corresponding author.}
+\fntext[orcid-vt]{ORCID: \url{https://orcid.org/0009-0009-5828-5903}}
+\fntext[orcid-sp]{ORCID: \url{https://orcid.org/0009-0004-0084-4657}}
+
+\begin{abstract}
+JavaScript bundlers are a critical component of modern web development, transforming source modules into optimized production artifacts.
+Despite their ubiquity---Staicu et al.\ found that 40\% of websites rely on bundlers---no peer-reviewed empirical comparison of modern bundlers exists.
+Existing benchmarks suffer from trivially synthetic projects, vendor maintenance bias, and absence of statistical rigor.
+
+We present, to our knowledge, the first rigorous empirical comparison of five production-ready JavaScript bundlers---Vite~8, Rspack~2, esbuild~0.28, Webpack~5, and Rollup~4---across 11 directly measured metrics spanning build performance, output quality, and resource consumption.
+Our study employs a two-tier benchmarking strategy: Tier~1 uses calibrated synthetic React+TypeScript projects at five scales (50--5{,}000 modules) for controlled comparison; Tier~2 evaluates which findings replicate on one real-world open-source project (Bulletproof React, 102 components).
+We analyze 1{,}945 observations (1{,}390 analysis units; 1{,}265 entering inferential tests) using tie-corrected Kruskal--Wallis tests, Dunn post-hoc comparisons with Bonferroni correction, and Cliff's delta with bootstrap confidence intervals.
+
+Results show scale-dependent production performance: esbuild has the lowest median through 2{,}000 modules, while Vite~8 has the lowest median at 5{,}000 modules (5.56\,s versus 121.52\,s for Webpack).
+Rspack records the lowest incremental-rebuild median at every scale, whereas Vite records the lowest HMR median.
+Leave-one-size-out model selection favors linear scaling for Vite and Rspack but quadratic scaling for esbuild, Rollup, and Webpack.
+All 30 omnibus tests are significant; 126 of 251 Bonferroni-adjusted Dunn comparisons are significant and 250 of 251 Cliff's delta estimates are large.
+Tier~2 broadly preserves the performance tiers but includes adjacent-rank changes, bounding rather than proving external validity.
+We provide a full replication package.
+\end{abstract}
+
+\begin{keyword}
+JavaScript bundler \sep build tools \sep empirical study \sep performance benchmarking \sep Vite \sep Rspack \sep esbuild
+\end{keyword}
+
+\begin{highlights}
+\item First rigorous multi-tool, multi-scale JavaScript bundler comparison
+\item Two-tier design: calibrated synthetic + scoped real-world replication
+\item 1{,}945 observations across 11 measured metrics and 5 project scales
+\item Corrected session-level inference for incremental rebuild and HMR
+\item Full replication package with scripts, data, and analysis code
+\end{highlights}
+
+\end{frontmatter}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 1: INTRODUCTION
+%% ═══════════════════════════════════════════════════════════════
+\section{Introduction}\label{sec:intro}
+
+JavaScript bundlers are the invisible infrastructure of modern web development.
+They transform thousands of source modules---JavaScript, TypeScript, CSS, images---into optimized bundles that browsers can efficiently load.
+Staicu et al.~\cite{staicu2023jackinthebox} found that 40\% of websites rely on bundlers, and the State of JavaScript 2025 survey~\cite{stateofjs2025} reports that $\sim$86\% of developers use Webpack, while Vite has become the most-adopted tool for new projects at $\sim$16 million weekly npm downloads.
+The choice of bundler directly impacts developer productivity---build wait times are the primary complaint driving bundler migration---and end-user experience through bundle size, code splitting, and load performance.
+
+Despite this ubiquity, \emph{no peer-reviewed empirical comparison of modern JavaScript bundlers exists}.
+The only prior academic work is a Bachelor's thesis~\cite{nguyen2024comparative} comparing just Webpack and Vite on a single project scale with no statistical analysis.
+The grey literature---vendor-maintained benchmarks~\cite{rspackbench2026,rolldownbench2026} and blog posts---suffers from three systematic limitations: (1)~trivially synthetic components ($\sim$5 lines of empty JSX); (2)~vendor maintenance bias, where the team maintaining the benchmark also maintains the tool being benchmarked; and (3)~no statistical rigor (single runs or averages of 3 runs, no confidence intervals, no effect sizes).
+
+This paper presents what is, to our knowledge, the first rigorous empirical comparison of five production-ready JavaScript bundlers---Vite~8, Rspack~2, esbuild~0.28, Webpack~5, and Rollup~4---spanning three implementation languages (Rust, Go, JavaScript) and three architectural paradigms.
+We introduce a \emph{two-tier benchmarking strategy}: Tier~1 uses calibrated synthetic React + TypeScript projects at five scales (50--5{,}000 modules) for controlled comparison; Tier~2 evaluates whether principal findings persist on a real-world open-source project (Bulletproof React, 102 components).
+
+Our contributions are:
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Comprehensive empirical dataset}: 1{,}945 observations across 5 tools, 5 synthetic scales, and 11 directly measured metrics, collected in a controlled single-machine environment.
+  \item \textbf{Two-tier benchmarking strategy}: calibrated synthetic projects (50--150 LOC components, 8 template categories, realistic dependency graphs) combined with scoped real-world OSS replication.
+  \item \textbf{Statistically rigorous analysis}: tie-corrected Kruskal--Wallis tests, Dunn comparisons with within-family Bonferroni correction, Cliff's delta with deterministic bootstrap intervals, and session-level units for repeated M3/M4 updates.
+  \item \textbf{Actionable findings}: scale-dependent production performance, Rspack's low incremental-rebuild latency, Vite's low browser-observed HMR latency, and substantially lower resource use by esbuild.
+  \item \textbf{Full replication package}: scripts, raw data, analysis code, and bundler configurations for complete reproducibility.
+\end{enumerate}
+
+The remainder of this paper is organized as follows.
+Section~\ref{sec:background} provides background on JavaScript bundling.
+Section~\ref{sec:related} surveys related work.
+Section~\ref{sec:design} describes our study design.
+Section~\ref{sec:results} presents results (with Figures~\ref{fig:m2}--\ref{fig:scaling}).
+Section~\ref{sec:discussion} discusses findings and implications.
+Section~\ref{sec:threats} addresses threats to validity.
+Section~\ref{sec:conclusion} concludes.
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 2: BACKGROUND
+%% ═══════════════════════════════════════════════════════════════
+\section{Background}\label{sec:background}
+
+\subsection{JavaScript Module Systems}
+
+The JavaScript module landscape has evolved through several generations.
+Early web development relied on manually ordered \texttt{<script>} tags with global scope pollution.
+Node.js introduced CommonJS (2009) with synchronous \texttt{require()} semantics, enabling server-side modularity but remaining incompatible with browsers.
+AMD (Asynchronous Module Definition) addressed browser asynchronicity but added configuration complexity.
+
+ECMAScript 2015 standardized ES Modules (ESM)~\cite{ecma2015modules} with static \texttt{import}/\texttt{export} syntax, enabling static analysis for tree-shaking (dead-code elimination) and supporting both browser and server environments~\cite{nodejs2024esm}.
+Despite native browser support for ESM, production applications still require bundling for three reasons: (1)~hundreds of HTTP requests for individual modules degrade load performance; (2)~bundlers apply optimizations (minification, code splitting, scope hoisting) that browsers cannot; and (3)~many npm packages still ship only CommonJS, requiring transformation.
+
+\subsection{Bundler Architectures}
+
+Modern JavaScript bundlers follow three architectural paradigms:
+
+\textbf{Fully bundled.}
+Tools such as Webpack, esbuild, Rspack, and Rollup bundle all modules into optimized chunks for both development and production.
+The development server serves pre-compiled bundles, which increases cold-start time but enables fast hot module replacement (HMR) via granular chunk updates.
+
+\textbf{Unbundled development.}
+Vite serves individual ES modules to the browser during development via native ESM, transforming files on demand.
+This yields near-instant cold starts regardless of project size (confirmed by our M1 results in Section~\ref{sec:rq1}), but requires a separate production bundling step.
+
+\textbf{Implementation language.}
+A key differentiator is whether the bundler's core is implemented in JavaScript (Webpack, Rollup), Go (esbuild), or Rust (Vite/Rolldown, Rspack).
+Native-compiled implementations can avoid portions of V8's JIT and garbage-collection overhead and can exploit native threading models.
+Implementation language is nevertheless confounded with algorithms, defaults, plugin pipelines, and architecture; our observational design cannot attribute measured differences to language alone.
+
+\subsection{Tools Under Study}
+
+The five tools are profiled in Section~\ref{sec:tools}.
+Vite~8~\cite{vite2026} is the most-downloaded tool ($\sim$16M weekly) and underwent a major architectural change in version~8, unifying its development and production engines on Rolldown~\cite{rolldown2026}.
+Rspack~\cite{rspack2026} offers Webpack API compatibility with a Rust core.
+esbuild~\cite{esbuild2026} pioneered the native-speed bundling category.
+Webpack~\cite{webpack2026} remains the incumbent with the largest ecosystem.
+Rollup~\cite{rollup2026} is a pure-JavaScript baseline that pioneered tree-shaking.
+Detailed profiles and selection rationale are provided in Section~\ref{sec:tools}.
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 3: RELATED WORK
+%% ═══════════════════════════════════════════════════════════════
+\section{Related Work}\label{sec:related}
+
+We conducted a systematic literature search on August~28, 2026 across four databases: ACM Digital Library, IEEE Xplore, Scopus, and Google Scholar.
+We used two query strings: (Q1)~\texttt{"javascript bundler" AND (benchmark OR performance OR comparison)} and (Q2)~\texttt{(webpack OR vite OR esbuild OR rollup OR rspack) AND "empirical study"}, restricting results to January 2015--August 2026.
+
+\textbf{Inclusion criteria:} (I1)~directly compares at least two JavaScript bundlers; (I2)~reports quantitative performance measurements; (I3)~written in English.
+\textbf{Exclusion criteria:} (E1)~pure opinion or tutorial content with no measurement data; (E2)~compares non-bundler tools (e.g., linters, formatters); (E3)~duplicates across databases.
+
+Q1 returned 23 results (ACM: 4, IEEE: 2, Scopus: 3, Scholar: 14); Q2 returned 31 results (ACM: 2, IEEE: 1, Scopus: 5, Scholar: 23).
+After deduplication (38 unique), title--abstract screening eliminated 29 papers (E1: 18, E2: 8, E3: 3).
+Full-text review of the remaining 9 papers retained 1 that met all inclusion criteria.
+We also performed forward and backward citation tracking on all 9 full-text candidates, yielding no additional hits.
+The sole qualifying work is Nguyen~\cite{nguyen2024comparative}.
+
+\subsection{Academic Studies of Build Tools}
+
+Despite the ubiquity of JavaScript bundlers, academic attention to them is remarkably sparse.
+The only prior academic work directly comparing JavaScript bundlers is Nguyen~\cite{nguyen2024comparative}, a Bachelor's thesis that compares Webpack and Vite on a single project scale using single-run measurements without statistical analysis.
+Our study extends this substantially: five tools, five scales, 11 metrics, 1{,}945 raw observations, and non-parametric statistics with effect sizes.
+
+In the broader build-systems literature, McIntosh et al.~\cite{mcintosh2015build} conducted an empirical study of build technology (Make, Ant, Maven) and its relationship to software maintenance, finding that build technology choice affects defect-proneness.
+Nejati et al.~\cite{nejati2024understanding} studied changes to build systems and their impact on software quality.
+Neither addresses JavaScript bundler performance, but both motivate the importance of studying build tooling empirically.
+
+\subsection{Grey Literature and Vendor Benchmarks}
+
+The practical benchmark landscape for JavaScript bundlers is dominated by vendor-maintained repositories.
+The rspack-contrib/build-tools-performance benchmark~\cite{rspackbench2026}, maintained by the Rspack team, compares Rspack, Vite, Webpack, and others using a single project with trivially synthetic components ($\sim$5 lines each) and reports averages of three runs without statistical analysis.
+The Rolldown benchmarks~\cite{rolldownbench2026}, maintained by the Vite/Rolldown team, focus on module resolution speed with 19{,}000-module synthetic projects.
+
+These benchmarks suffer from three systematic limitations that our study addresses:
+(1)~\emph{trivially synthetic components} that do not exercise tree-shaking, CSS processing, or TypeScript generics;
+(2)~\emph{vendor maintenance bias}, where the maintaining team has an incentive to optimize for their own tool's strengths;
+and (3)~\emph{absence of statistical rigor}---no normality tests, no omnibus comparisons, no effect sizes, and typically only 3 runs averaged.
+
+Blog posts and tech articles (e.g., DEV Community, Tech Insider) provide anecdotal comparisons but use ad-hoc methodology, single runs, and inconsistent configurations, making their findings unreliable for scientific conclusions.
+
+\subsection{Performance Benchmarking Methodology}
+
+Our methodological design draws on several established benchmarking frameworks.
+Kalibera and Jones~\cite{kalibera2013rigorous} formalized rigorous benchmarking, introducing cost models for variance analysis and arguing that benchmarks must report uncertainty and effect sizes---practices we follow through IQRs and Cliff's delta with bootstrap confidence intervals.
+Georges et al.~\cite{georges2007statistically} demonstrated that statistically rigorous evaluation of Java performance requires multiple invocations with proper warm-up handling, motivating our 10--20 runs per configuration and use of the median.
+Barrett et al.~\cite{barrett2017vm} showed that 43.5\% of VM+benchmark pairs fail to reach steady state, supporting our decision to use the median rather than assuming steady-state convergence.
+
+In the systems software domain, Henning and Hasselbring~\cite{henning2024benchmarking} (published in JSS) presented Theodolite, a systematic method for benchmarking scalability of stream processing frameworks.
+Their approach---controlled synthetic workloads, scaling analysis across multiple dimensions, and statistical comparison---directly inspired our two-tier design and scaling regression analysis.
+Mohan and Goswami~\cite{mohan2025nodejs} compared Node.js and Java Spring Boot for RESTful API performance in SPE, providing a structural model for tool-comparison papers in software engineering journals.
+
+\subsection{Positioning Our Work}
+
+Table~\ref{tab:comparison} positions our study against existing JavaScript bundler benchmarks.
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison of existing JavaScript bundler benchmarks with our study. \checkmark = present, $\times$ = absent.}\label{tab:comparison}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Dimension} & \textbf{Nguyen} & \textbf{rspack-} & \textbf{rolldown-} & \textbf{Blog} & \textbf{Our} \\
+ & \textbf{(2024)} & \textbf{contrib} & \textbf{bench} & \textbf{posts} & \textbf{study} \\
+\midrule
+Peer-reviewed           & $\times$\footnote{Bachelor's thesis.} & $\times$ & $\times$ & $\times$ & $\times$\footnote{Manuscript targeting the Journal of Systems and Software; not yet peer-reviewed.} \\
+Tools $\geq 5$          & $\times$ (2) & \checkmark & \checkmark & varies & \checkmark \\
+Multiple scales         & $\times$     & $\times$   & $\times$   & $\times$ & \checkmark \\
+Realistic components    & $\times$     & $\times$   & $\times$   & varies   & \checkmark \\
+Statistical tests       & $\times$     & $\times$   & $\times$   & $\times$ & \checkmark \\
+Effect sizes            & $\times$     & $\times$   & $\times$   & $\times$ & \checkmark \\
+Real-world replication  & $\times$     & $\times$   & $\times$   & $\times$ & \checkmark \\
+Independent (no vendor) & \checkmark   & $\times$   & $\times$   & varies   & \checkmark \\
+Replication package     & $\times$     & \checkmark & \checkmark & $\times$ & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Our study combines eight methodological dimensions not jointly covered by prior work: five or more tools, multiple project scales, realistic component patterns, statistical rigor, effect sizes, real-world replication, independence from vendor influence, and a full replication package.
+Shen and Meng~\cite{shen2024conflictbench} provide a methodological precedent in JSS: their ConflictBench paper compares five merge tools using novel metrics and a curated benchmark---a structure closely paralleling our five-tool, multi-metric approach.
+
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 4: STUDY DESIGN
+%% ═══════════════════════════════════════════════════════════════
+\section{Study Design}\label{sec:design}
+
+This section describes the design of our empirical study, following the guidelines of Wohlin et al.~\cite{wohlin2012experimentation} and Kitchenham et al.~\cite{kitchenham2002preliminary}, and the benchmarking methodology established by Kalibera and Jones~\cite{kalibera2013rigorous} and Jain~\cite{jain1991art}.
+
+\subsection{Research Questions}\label{sec:rqs}
+
+We structure our investigation around three research questions, each addressing a distinct dimension of bundler performance.
+
+\medskip\noindent\textbf{RQ1: How do modern JavaScript bundlers compare in build performance across project scales?}
+Build speed directly impacts developer productivity and is the primary reason teams migrate bundlers~\cite{stateofjs2025}.
+We measure four metrics: development server cold-start time (M1), production build time (M2), incremental rebuild latency (M3), and hot module replacement (HMR) latency (M4).
+
+\medskip\noindent\textbf{RQ2: How does bundler choice affect output quality and delivery efficiency?}
+A fast bundler that produces bloated output is a false economy; bundle size and code-splitting granularity directly affect end-user load times.
+We measure raw bundle size (M5), gzipped bundle size (M6), tree-shaking effectiveness (M7), code-splitting granularity (M8), and sourcemap coverage (M9).
+
+\medskip\noindent\textbf{RQ3: How do resource consumption and scaling behavior differ across bundlers?}
+Resource usage determines viability in CI/CD environments with memory limits and on developer machines with 8--32\,GB RAM.
+We measure peak resident-set-size memory (M10), CPU-time energy proxy (M11), and derive scaling models from M2 across all five project scales (M12).
+
+\subsection{Tool Selection}\label{sec:tools}
+
+We select five tools spanning three architectural paradigms and three implementation languages, ensuring a balanced comparison.
+The inclusion criteria are: (1)~open source and installable via npm; (2)~standalone (usable outside a specific framework); (3)~production-ready with stable release; (4)~significant adoption ($\geq$100K weekly npm downloads or major organizational backing); and (5)~architecturally distinct from other selected tools.
+
+Table~\ref{tab:tools} summarizes the selected tools.
+
+\begin{table}[htbp]
+\centering
+\caption{Tools under study. All versions pinned on experiment Day~1 (September~11, 2026). Downloads from npm trends~\protect\cite{npmtrends2026}.}\label{tab:tools}
+\begin{tabular}{@{}llllr@{}}
+\toprule
+\textbf{Tool} & \textbf{Version} & \textbf{Lang.} & \textbf{Paradigm} & \textbf{npm wk.\ DL} \\
+\midrule
+Vite     & 8.3.0   & Rust (Rolldown) & Unbundled dev  & $\sim$16M \\
+Rspack   & 2.2.3   & Rust            & Fully bundled  & $\sim$700K \\
+esbuild  & 0.28.2  & Go              & Fully bundled  & $\sim$38M \\
+Webpack  & 5.110.3 & JS + SWC (Rust) & Fully bundled  & $\sim$28M \\
+Rollup   & 4.63.1  & JavaScript      & Fully bundled  & $\sim$30M \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Vite~8}~\cite{vite2026} represents the dominant greenfield choice ($\sim$16M weekly downloads). Version~8 is architecturally significant: it replaced both esbuild (development transforms) and Rollup (production bundling) with Rolldown~\cite{rolldown2026}, a unified Rust-based engine---a fundamental shift worth quantifying.
+
+\textbf{Rspack~2}~\cite{rspack2026}, developed by ByteDance, offers a drop-in Webpack replacement with a Rust core. It represents the ``migrate existing Webpack projects to Rust'' migration path and tests whether API compatibility incurs a performance cost.
+
+\textbf{esbuild~0.28}~\cite{esbuild2026}, written in Go, pioneered the 10--100$\times$ speedup narrative that catalyzed the Rust/Go bundler wave. Its minimal plugin API tests the raw-speed-versus-extensibility tradeoff. As the only Go-based tool, it provides a cross-language comparison point.
+
+\textbf{Webpack~5}~\cite{webpack2026} is the incumbent, used by $\sim$86\% of developers~\cite{stateofjs2025}. We equip it with SWC~\cite{swc2026} for Rust-accelerated transforms, giving it the best-case scenario. It serves as the \emph{baseline control}.
+
+\textbf{Rollup~4}~\cite{rollup2026}, Vite's former production engine, is a pure-JavaScript ESM-native bundler. It serves as the \emph{second baseline}, establishing the performance floor of a tool without Rust or Go acceleration.
+
+\medskip\noindent\textbf{Excluded tools.} Turbopack lacks a stable standalone production build (it functions only as a Next.js-internal development bundler) and is noted as future work. Parcel~2 overlaps architecturally with Vite. Farm has insufficient adoption ($\sim$2K GitHub stars). Bun's bundler is runtime-integrated (different execution model). SWC is a transpiler, not a full bundler.
+
+\subsection{Two-Tier Benchmarking Strategy}\label{sec:twotier}
+
+A key design decision is how to construct the projects being benchmarked.
+Existing vendor-maintained benchmarks (e.g., rspack-contrib/build-tools-performance~\cite{rspackbench2026}, Rolldown benchmarks~\cite{rolldownbench2026}) use trivially synthetic components ($\sim$5 lines of empty JSX), while purely real-world projects cannot be fairly ported to all five bundlers due to bundler-specific APIs.
+Our solution is a \textbf{two-tier strategy}: controlled synthetic projects provide internal comparisons, and one real-world fixture provides a scoped replication.
+
+\subsubsection{Tier~1: Calibrated Synthetic Projects}\label{sec:tier1}
+
+We developed a deterministic project generator\footnote{Included in the replication package; seeded with Mulberry32 PRNG (seed = 42) for exact reproducibility.} that produces React + TypeScript projects at five scales, summarized in Table~\ref{tab:projects}.
+
+\begin{table}[htbp]
+\centering
+\caption{Tier~1 synthetic project specifications. All projects use seed = 42. Dead modules are nominally 5\% (4\% at xs because of integer rounding). LOC includes TSX and CSS modules.}\label{tab:projects}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Size} & \textbf{Modules} & \textbf{Folders} & \textbf{Routes} & \textbf{Import Edges} & \textbf{Dead (\%)} & \textbf{LOC} \\
+\midrule
+xs   &     50 &  5 &   0 &     80 &  2 (4.0\%) &    8{,}135 \\
+s    &    200 & 10 &   4 &    369 & 10 (5.0\%) &   32{,}209 \\
+m    &    500 & 15 &  12 &    898 & 25 (5.0\%) &   79{,}605 \\
+l    &  2{,}000 & 30 &  20 &  3{,}647 & 100 (5.0\%) &  319{,}647 \\
+xl   &  5{,}000 & 50 &  50 &  9{,}301 & 250 (5.0\%) &  801{,}736 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each generated component falls into one of eight template categories---data display (25\%), form control (15\%), layout (15\%), navigation (10\%), feedback (10\%), data fetching (10\%), chart/visualization (10\%), and utility/context providers (5\%)---weighted to approximate the distribution in production codebases.
+Components range from 50 to 150 lines of code and include realistic patterns: React hooks (\texttt{useState}, \texttt{useMemo}, \texttt{useCallback}, \texttt{useEffect}), third-party imports (\texttt{lodash-es}, \texttt{date-fns}, \texttt{clsx}), CSS Modules, TypeScript generics, and inter-component dependencies.
+Critically, each component template is \emph{calibrated}---designed so that specific features exercise specific metrics.
+For example, the \texttt{lodash-es} import (using only \texttt{pick} and \texttt{debounce}) exercises tree-shaking (M7), lazy-loaded route entries exercise code splitting (M8), and dead modules (5\% of components, imported by nothing) test dead-code elimination.
+
+The dependency graph is structured to resemble real projects: each component imports 1--3 siblings within its feature folder; 10\% of components have a cross-folder import; and $\sim$2\% are designated as ``hub'' components imported by 20--30 parents.
+Circular dependencies are detected and broken by the generator.
+
+\subsubsection{Tier~2: Real-World OSS Replication}\label{sec:tier2}
+
+For a scoped replication, we select Bulletproof React~\cite{bulletproofreact2024}, an open-source production-architecture reference application with 102 TSX component files, React 18, TypeScript 5, Tailwind CSS, React Query, Zustand, and React Router.
+We adapt it for all five bundlers by creating tool-specific configurations that follow each bundler's official documentation, with no tool-specific optimizations beyond defaults.
+All configurations are included in the replication package.
+
+\subsection{Metrics}\label{sec:metrics}
+
+Table~\ref{tab:metrics} defines the 11 directly measured metrics (M1--M11) and one derived metric (M12).
+Metrics M1--M4 capture build performance (RQ1), M5--M9 capture output quality (RQ2), and M10--M12 capture resource consumption and scaling (RQ3).
+
+\begin{table}[htbp]
+\centering
+\caption{Metric definitions. M5/M6/M8 are five-build aggregates, M7 is a verified fixture aggregate, M9 is an exact mapping probe, and M12 is derived from M2 medians.}\label{tab:metrics}
+\begin{tabular}{@{}cllllr@{}}
+\toprule
+\textbf{ID} & \textbf{Name} & \textbf{Unit} & \textbf{Measurement Tool} & \textbf{Scope} & \textbf{Runs} \\
+\midrule
+M1  & Dev cold start     & ms      & Process readiness logging & V, R, W  & 20 \\
+M2  & Prod build time    & ms      & hyperfine               & All 5        & 10 \\
+M3  & Incremental rebuild & ms     & Validated watch completion  & All 5  & 5 sessions $\times$ 4 \\
+M4  & HMR latency        & ms      & Puppeteer + DOM marker & V, R, W      & 5 sessions $\times$ 4 \\
+\midrule
+M5  & Bundle size (raw)  & bytes   & Generated JS/CSS/HTML bytes  & All 5    & 5 builds \\
+M6  & Bundle size (gzip) & bytes   & Per-JS-file \texttt{gzip -9} & All 5   & 5 builds \\
+M7  & Tree-shaking        & \% eliminated  & Controlled lodash-es fixtures & All 5 & 2 verification builds \\
+M8  & Code splitting     & count   & JS chunk count in dist   & All 5       & 5 builds \\
+M9  & Sourcemap accuracy & \%      & Exact sentinel mapping   & All 5       & 1 \\
+\midrule
+M10 & Peak memory (RSS)  & MiB     & \texttt{command time -l}  & All 5       & 10 \\
+M11 & CPU-time proxy     & s       & user + sys CPU time & All 5  & 10 \\
+M12 & Scaling regression & ---     & Derived: $R^2$, slope    & All 5       & --- \\
+\bottomrule
+\multicolumn{6}{@{}l@{}}{\footnotesize V = Vite, R = Rspack, W = Webpack. M5/M6/M8 report five-build medians.}
+\end{tabular}
+\end{table}
+
+Not all metrics are measurable for all tools due to architectural constraints. Table~\ref{tab:coverage} shows the metric$\times$tool coverage matrix.
+
+\begin{table}[htbp]
+\centering
+\caption{Metric$\times$tool coverage. \checkmark = measured and accepted, $\times$ = not applicable (architectural limitation). Numbers indicate observations per tool$\times$size; M3/M4 comprise five independent sessions of four updates.}\label{tab:coverage}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Metric} & \textbf{Vite} & \textbf{Rspack} & \textbf{esbuild} & \textbf{Webpack} & \textbf{Rollup} \\
+\midrule
+M1 (dev cold start)     & \checkmark (20) & \checkmark (20) & $\times$\footnote{esbuild has no built-in dev server in the evaluated configuration.} & \checkmark (20) & $\times$\footnote{Rollup has no built-in dev server in the evaluated configuration.} \\
+M2 (prod build)         & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+M3 (incremental)        & \checkmark (5 sess.$\times$4) & \checkmark (5 sess.$\times$4) & \checkmark (5 sess.$\times$4) & \checkmark (5 sess.$\times$4) & \checkmark (5 sess.$\times$4) \\
+M4 (HMR)               & \checkmark (5 sess.$\times$4) & \checkmark (5 sess.$\times$4) & $\times$ & \checkmark (5 sess.$\times$4) & $\times$ \\
+M5--M9 (output quality) & \checkmark (1 aggregate)  & \checkmark (1 aggregate)  & \checkmark (1 aggregate)  & \checkmark (1 aggregate)  & \checkmark (1 aggregate) \\
+M10 (peak RSS)          & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+M11 (CPU-time proxy)    & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) & \checkmark (10) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 11 directly measured metrics, 9 (M2, M3, M5--M9, M10, M11) have full coverage across all five tools. M1 and M4 have partial coverage because only Vite, Rspack, and Webpack expose the evaluated built-in development/HMR workflow.
+
+\subsection{Measurement Harness}\label{sec:harness}
+
+All experiments were conducted on a single machine to eliminate hardware variability: Apple M2~Pro (12-core, 32\,GB RAM) running macOS~26.5.1 (build 25F80), Node.js~v22.16.0, and npm~10.9.2.
+Background processes were minimized during all measurement runs.
+
+\textbf{M2 (production build time)} is measured using hyperfine~\cite{hyperfine2024}, a command-line benchmarking tool that reports per-run wall-clock times.
+Before each run, a cache-clearing script removes \texttt{node\_modules/.cache}, \texttt{dist/}, \texttt{.rspack/}, \texttt{.vite/}, and OS filesystem caches where applicable.
+We configure hyperfine with zero explicit warm-up runs (\texttt{--warmup 0}) and 10 measured runs (\texttt{--runs 10}).
+
+\textbf{M1 (dev cold start)} is measured by starting the development server process, monitoring \texttt{stdout} for the tool-specific ``ready'' pattern (e.g., \texttt{"Local:"} for Vite, \texttt{"compiled"} for Webpack/Rspack), and recording the elapsed wall-clock time.
+This is repeated for 20 independent runs with cache clearing between each.
+A 60-second timeout classifies non-responding servers as failures.
+All retained M1 results are hash-pinned supplemental data collected in an earlier campaign epoch; unlike M2--M11, they do not have a validated-batch manifest.
+
+\textbf{M3 (incremental rebuild)} uses each tool's \texttt{build --watch} mode.
+A dedicated script starts a fresh watch process, waits for the initial build's success marker, modifies an active source file, and measures until the subsequent validated rebuild-completion marker.
+Each configuration uses five independent watch sessions with four measured updates per session; inference uses the five session medians rather than treating dependent updates as independent.
+
+\textbf{M4 (HMR latency)} is measured via Puppeteer~\cite{puppeteer2024} controlling a headless Chromium browser.
+The script launches the development server, navigates Puppeteer to the local URL, and injects a self-accepted probe module whose exact value is observed in the DOM.
+After one untimed synchronization update, HMR latency is measured from the file write to the exact browser-observed marker; any full-page reload invalidates the run.
+As with M3, each configuration uses five independent sessions with four updates and session-median inference.
+
+\textbf{M5, M6, and M8 (output properties)} are computed across five clean production builds.
+M5 sums generated JavaScript, CSS, and HTML bytes (excluding external maps and copied public files); M6 gzips each generated JavaScript file at level~9 and sums the results; M8 counts JavaScript chunks.
+M5/M6/M8 report the five-build median and retain per-build hashes; Rollup's synthetic output varies byte-for-byte, so its predeclared median aggregation is retained with that nondeterminism recorded.
+M9 injects a unique source sentinel and checks whether its generated position maps to the exact original source line and column.
+M7 uses empty, selected-export, and full-library \texttt{lodash-es} fixtures and reports the percentage of full-library bytes eliminated; fixture builds are independently repeated.
+
+\textbf{M10 (memory)} is derived from the process peak resident set size and normalized to MiB; \textbf{M11} sums user and system CPU seconds from \texttt{/usr/bin/time -l} as a CPU-time proxy for energy demand under controlled load.
+Ten independent runs are performed with cache clearing between each.
+
+\textbf{Warm-up and sensitivity.} Production/resource runs have no discarded warm-up observation; medians and IQRs retain all runs. M4 uses one untimed synchronization update to align browser and server compilation generations. A sensitivity analysis removes the first production/resource observation and the first update from every M3/M4 session; none of 136 within-group tool ranks changes.
+
+\subsection{Statistical Analysis}\label{sec:stats}
+
+Our statistical pipeline follows the recommendations of Georges et al.~\cite{georges2007statistically} for non-parametric analysis of performance data.
+
+\textbf{Step 1: Units and descriptive summaries.}
+M1/M2/M10/M11 runs are independent process executions. M3/M4 use one median per independent watch/dev-server session. M5--M9 are single accepted aggregates and are excluded from inferential testing.
+
+\textbf{Step 2: Omnibus test.}
+For each inferential metric$\times$size combination, we apply the Kruskal--Wallis $H$ test~\cite{kruskal1952use} with average ranks and tie correction ($\alpha = 0.05$).
+For M3/M4, the asymptotic chi-square reference is interpreted cautiously because each tool contributes five session units.
+
+\textbf{Step 3: Pairwise comparisons.}
+We conduct Dunn post-hoc comparisons using global ranks and tie-adjusted rank variance, with Bonferroni correction~\cite{bonferroni1936teoria} within each metric$\times$size family.
+
+\textbf{Step 4: Effect sizes.}
+For every pair, we compute Cliff's delta~\cite{cliff1993dominance} and a deterministic 5{,}000-replicate percentile bootstrap interval.
+Positive delta means the first tool has larger values; intervals are descriptive and not multiplicity-adjusted.
+We interpret $|\delta| < 0.147$ as negligible, $< 0.33$ as small, $< 0.474$ as medium, and $\geq 0.474$ as large~\cite{vargha2000critique}.
+
+\textbf{Step 5: Scaling regression.}
+For each tool, we fit linear, log-linear, and quadratic models to the five Tier~1 M2 medians.
+We report $R^2$, adjusted $R^2$, and leave-one-size-out RMSE, selecting the model with the lowest held-out RMSE.
+
+All analysis code is implemented in TypeScript (executed via \texttt{tsx}) using the \texttt{simple-statistics} library and is included in the replication package.
+
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 5: RESULTS
+%% ═══════════════════════════════════════════════════════════════
+\section{Results}\label{sec:results}
+
+This section presents results organized by research question.
+All 30 tie-corrected Kruskal--Wallis omnibus tests are statistically significant ($p < 0.05$), confirming that at least one tool differs in every inferential metric$\times$size group.
+Of 251 Dunn comparisons, 126 remain significant after within-family Bonferroni correction.
+Of 251 Cliff's delta estimates, 250 are large and one is small; effect-size intervals are not multiplicity-adjusted.
+The lower pairwise significance rate---especially for M3/M4---reflects conservative correction and five independent session units per tool rather than 20 pseudoreplicated updates.
+
+\subsection{RQ1: Build Performance}\label{sec:rq1}
+
+RQ1 asks: \emph{How do modern JavaScript bundlers compare in build performance across project scales?}
+We address this through M1--M4 (Table~\ref{tab:coverage} shows coverage per tool).
+
+\subsubsection{M2: Production Build Time}
+
+Table~\ref{tab:m2} presents the primary build-time results.
+
+\begin{table}[htbp]
+\centering
+\caption{M2: Production build time in milliseconds (median [IQR], $n = 10$ independent builds per cell). Bold indicates the lowest median at each scale.}\label{tab:m2}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Tool} & \textbf{xs (50)} & \textbf{s (200)} & \textbf{m (500)} & \textbf{l (2{,}000)} & \textbf{xl (5{,}000)} \\
+\midrule
+esbuild  & \textbf{320} [25] & \textbf{465} [178] & \textbf{860} [85] & \textbf{2{,}705} [83] & 17{,}790 [885] \\
+Vite     & 890 [38] & 1{,}135 [45] & 1{,}490 [170] & 2{,}850 [868] & \textbf{5{,}560} [1{,}725] \\
+Rspack   & 940 [48] & 1{,}260 [190] & 2{,}190 [95] & 5{,}640 [715] & 14{,}585 [343] \\
+Rollup   & 2{,}740 [273] & 3{,}870 [723] & 7{,}440 [283] & 23{,}655 [3{,}263] & 112{,}105 [8{,}895] \\
+Webpack  & 3{,}415 [515] & 5{,}115 [325] & 10{,}665 [565] & 39{,}055 [6{,}723] & 121{,}520 [3{,}563] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{The dominant result is a scale-dependent crossover}: esbuild has the lowest median through l-2{,}000, completing that build in 2.705\,s versus Vite's 2.850\,s.
+At xl-5{,}000, Vite has the lowest median at 5.56\,s, followed by Rspack (14.585\,s) and esbuild (17.790\,s).
+The Vite--esbuild xl comparison has a large effect estimate but narrowly misses Bonferroni significance ($p_\text{adj}=0.0663$), so the median ordering should not be overstated as a confirmed pairwise difference.
+The observed crossover lies between 2{,}000 and 5{,}000 modules; additional scales are needed to locate it.
+Figure~\ref{fig:m2} visualizes this crossover.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Production build time (s)},
+  ymode=log,
+  log basis y=10,
+  xmin=0, xmax=5200,
+  ymin=0.3, ymax=200,
+  xtick={50, 200, 500, 2000, 5000},
+  xticklabels={50, 200, 500, {2\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+  every axis plot/.append style={thick, mark size=2.5pt},
+]
+\addplot[color=blue, mark=*] coordinates {(50,0.320) (200,0.465) (500,0.860) (2000,2.705) (5000,17.790)};
+\addlegendentry{esbuild}
+\addplot[color=red, mark=square*] coordinates {(50,0.890) (200,1.135) (500,1.490) (2000,2.850) (5000,5.560)};
+\addlegendentry{Vite}
+\addplot[color=orange, mark=triangle*] coordinates {(50,0.940) (200,1.260) (500,2.190) (2000,5.640) (5000,14.585)};
+\addlegendentry{Rspack}
+\addplot[color=teal, mark=diamond*] coordinates {(50,2.740) (200,3.870) (500,7.440) (2000,23.655) (5000,112.105)};
+\addlegendentry{Rollup}
+\addplot[color=purple, mark=pentagon*] coordinates {(50,3.415) (200,5.115) (500,10.665) (2000,39.055) (5000,121.520)};
+\addlegendentry{Webpack}
+\end{axis}
+\end{tikzpicture}
+\caption{M2: Production build time across project scales (log scale). The esbuild--Vite median crossover occurs between 2{,}000 and 5{,}000 modules. IQRs are reported in Table~\ref{tab:m2}.}\label{fig:m2}
+\end{figure}
+
+Rspack ranks second or third by median at every scale.
+At xl-5{,}000, Webpack requires 121.52\,s and Rollup 112.11\,s; their corrected pairwise comparison is not significant after Bonferroni adjustment.
+
+\subsubsection{M1: Development Server Cold Start}
+
+M1 covers Vite, Rspack, and Webpack at xs-50, m-500, and xl-5{,}000.
+In the corrected Rspack campaign all 60 starts complete without a timeout.
+
+Vite's dev cold start is remarkably \emph{scale-invariant}: 868\,ms at xs-50, 870\,ms at m-500, and 863\,ms at xl-5{,}000 (IQR $\leq$ 32\,ms).
+This pattern is consistent with its on-demand development architecture, but the experiment does not isolate the causal mechanism.
+Rspack scales from 1{,}145\,ms to 1{,}827\,ms and 7{,}605\,ms, remaining substantially faster than Webpack (2{,}485, 4{,}513, and 18{,}925\,ms).
+All nine pairwise comparisons are Bonferroni-significant with large effect sizes.
+M1 is hash-pinned supplemental data collected in an earlier campaign epoch and lacks the validated-batch manifest available for M2--M11.
+
+\subsubsection{M3: Incremental Rebuild}
+
+All five tools complete 20 measured updates at every scale.
+Rspack has the lowest session-median latency throughout: 52.5\,ms at xs-50, 82.5\,ms at m-500, and 351.5\,ms at xl-5{,}000.
+At xl-5{,}000, the descriptive order is Rspack (351.5\,ms), Webpack (3{,}818.5\,ms), Vite (4{,}598.5\,ms), esbuild (6{,}755\,ms), and Rollup (15{,}254\,ms).
+Every M3 omnibus test is significant, but only 15 of 50 Dunn pairs remain significant after Bonferroni correction because the valid inferential sample is five independent sessions per tool.
+
+\subsubsection{M4: HMR Latency}
+
+Vite has the lowest HMR session median at every tested scale: 77\,ms at xs-50, 84.5\,ms at m-500, and 80.5\,ms at xl-5{,}000.
+Rspack records 95.5, 108, and 376.5\,ms; Webpack records 153, 445, and 4{,}323.5\,ms.
+At xl-5{,}000, Vite differs significantly from Webpack ($p_\text{adj}=0.00122$), while Vite and Rspack do not ($p_\text{adj}=0.231$).
+On Bulletproof React, medians are Vite 102.5\,ms, Rspack 124\,ms, and Webpack 231\,ms; only Vite--Webpack remains significant after correction.
+
+\medskip\noindent\textbf{Finding 1 (RQ1 answer).} \textit{Production-build leadership is scale-dependent: esbuild has the lowest median through 2{,}000 modules and Vite at 5{,}000 modules. Rspack has the lowest incremental-rebuild medians at all scales; Vite has the lowest HMR and development-start medians in the tested configurations.}
+
+
+\subsection{RQ2: Output Quality}\label{sec:rq2}
+
+RQ2 asks: \emph{How does bundler choice affect output quality and delivery efficiency?}
+We address this through M5--M9 using controlled fixtures and five-build output aggregates.
+
+Table~\ref{tab:quality} presents the results at two representative scales.
+
+\begin{table}[htbp]
+\centering
+\caption{Output properties at m-500 and xl-5{,}000. M5/M6 are KiB; M7 is controlled-fixture byte elimination (higher is better); M8 is JS chunk count. M9 exact mapping passes all Tier~1 combinations and is omitted.}\label{tab:quality}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{\textbf{M5 raw (KiB)}} & \multicolumn{2}{c}{\textbf{M6 gzip (KiB)}} & \textbf{M7} & \multicolumn{2}{c}{\textbf{M8 chunks}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){7-8}
+\textbf{Tool} & \textbf{m-500} & \textbf{xl-5K} & \textbf{m-500} & \textbf{xl-5K} & \textbf{elim.\%} & \textbf{m-500} & \textbf{xl-5K} \\
+\midrule
+esbuild & 6{,}378 & 163{,}396 & 395 & 1{,}818 & 89.67 & 31 & 119 \\
+Vite    & 1{,}611 &   8{,}843 & 321 & 1{,}063 & 90.24 & 19 &  84 \\
+Rspack  & 3{,}377 &  27{,}952 & 504 & 3{,}174 & 90.14 &  5 &  12 \\
+Rollup  & 4{,}460 &  25{,}327 & 613 & 2{,}552 & 90.27 &  6 &  13 \\
+Webpack & 2{,}496 &  18{,}874 & 362 & 1{,}785 & 90.09 &  6 &  13 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Bundle size (M5/M6).}
+Vite produces the smallest gzipped output at every synthetic scale: 321\,KiB at m-500 versus 395\,KiB for esbuild and 613\,KiB for Rollup.
+At xl-5{,}000, Vite's gzipped output is 1{,}063\,KiB, compared with 1{,}818\,KiB for esbuild and 3{,}174\,KiB for Rspack.
+The large esbuild raw output at xl-5K is scoped to the evaluated configuration and should not be generalized to all esbuild projects.
+
+\textbf{Tree-shaking (M7).}
+Controlled-fixture elimination ranges only from 89.67\% (esbuild) to 90.27\% (Rollup), a 0.60-point spread.
+With one aggregate per tool, these differences are descriptive and receive no inferential $p$-values.
+
+\textbf{Code splitting (M8) and sourcemaps (M9).}
+esbuild produces the most granular splitting (119 chunks at xl-5K), followed by Vite (84).
+Rspack, Rollup, and Webpack converge at 12--13 chunks at xl-5K.
+M8 measures output structure rather than quality: fewer chunks are not automatically preferable.
+M9's exact sentinel mapping passes all 25 Tier~1 tool$\times$size combinations and four of five Tier~2 tools.
+Rollup fails the exact Bulletproof React probe; this is a scoped mapping result, not evidence that all Rollup sourcemaps are inaccurate.
+
+\medskip\noindent\textbf{Finding 2 (RQ2 answer).} \textit{Vite produces the smallest synthetic gzip aggregates, while controlled tree-shaking effectiveness differs by only 0.60 percentage points. Exact sourcemap mapping succeeds in 29 of 30 evaluated combinations; M8 chunk counts describe different output structures rather than a universal quality order.}
+
+
+\subsection{RQ3: Resource Consumption and Scaling}\label{sec:rq3}
+
+RQ3 asks: \emph{How do resource consumption and scaling behavior differ across bundlers?}
+We address this through M10 (memory), M11 (CPU-time proxy), and M12 (scaling analysis of M2 medians).
+
+\subsubsection{M10: Peak Memory (RSS)}
+
+Table~\ref{tab:resources} presents memory and CPU results.
+
+\begin{table}[htbp]
+\centering
+\caption{Resource consumption: M10 (peak RSS in MiB) and M11 (CPU-time proxy in seconds), median (IQR) of 10 observations. Bold indicates the lowest value at each scale.}\label{tab:resources}
+\begin{tabular}{@{}lrrrrr@{\hskip 12pt}rrrrr@{}}
+\toprule
+ & \multicolumn{5}{c}{\textbf{M10: Peak Memory (MiB)}} & \multicolumn{5}{c}{\textbf{M11: CPU-time Proxy (s)}} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}
+\textbf{Tool} & \textbf{xs} & \textbf{s} & \textbf{m} & \textbf{l} & \textbf{xl} & \textbf{xs} & \textbf{s} & \textbf{m} & \textbf{l} & \textbf{xl} \\
+\midrule
+esbuild & \textbf{100.88} \tiny{(2.98)} & \textbf{138.76} \tiny{(5.33)} & \textbf{124.31} \tiny{(3.08)} & \textbf{178.36} \tiny{(5.24)} & \textbf{272.54} \tiny{(9.47)} & \textbf{0.80} \tiny{(0.05)} & \textbf{1.32} \tiny{(0.04)} & \textbf{1.19} \tiny{(0.08)} & \textbf{3.49} \tiny{(0.19)} & \textbf{9.16} \tiny{(0.22)} \\
+Vite & 237.94 \tiny{(3.71)} & 389.62 \tiny{(5.04)} & 553.39 \tiny{(2.23)} & 937.08 \tiny{(4.37)} & 1{,}678.97 \tiny{(25.82)} & 0.98 \tiny{(0.04)} & 1.66 \tiny{(0.04)} & 2.53 \tiny{(0.07)} & 5.05 \tiny{(0.14)} & 10.66 \tiny{(0.40)} \\
+Rspack & 191.99 \tiny{(3.78)} & 279.76 \tiny{(2.63)} & 507.03 \tiny{(4.15)} & 1{,}129.79 \tiny{(14.00)} & 2{,}319.86 \tiny{(84.35)} & 1.03 \tiny{(0.04)} & 1.79 \tiny{(0.06)} & 3.61 \tiny{(0.08)} & 9.53 \tiny{(0.09)} & 22.23 \tiny{(0.57)} \\
+Rollup & 459.97 \tiny{(61.02)} & 590.57 \tiny{(12.99)} & 1{,}061.87 \tiny{(63.65)} & 2{,}085.81 \tiny{(57.47)} & 3{,}539.29 \tiny{(93.96)} & 6.31 \tiny{(0.22)} & 8.81 \tiny{(0.21)} & 17.27 \tiny{(0.29)} & 43.17 \tiny{(1.54)} & 149.74 \tiny{(4.15)} \\
+Webpack & 470.35 \tiny{(20.84)} & 904.00 \tiny{(19.22)} & 2{,}059.79 \tiny{(207.79)} & 3{,}522.07 \tiny{(428.09)} & 6{,}512.20 \tiny{(401.41)} & 6.94 \tiny{(0.49)} & 14.02 \tiny{(0.79)} & 27.62 \tiny{(0.86)} & 62.05 \tiny{(0.56)} & 168.33 \tiny{(2.21)} \\
+\bottomrule
+\multicolumn{11}{@{}l@{}}{\footnotesize IQR shown in parentheses. M11 is user + system CPU time, not a direct joule measurement.}
+\end{tabular}
+\end{table}
+
+esbuild uses the least peak memory at every scale, reaching 272.54\,MiB at 5{,}000 modules, compared with Vite's 1{,}678.97\,MiB and Webpack's 6{,}512.20\,MiB.
+The non-monotonic esbuild values at s-200 and m-500 are reproducible in this campaign, but the experiment does not isolate their cause.
+Webpack's xl-5K median exceeds 6\,GiB, which may constrain memory-limited CI configurations.
+Figure~\ref{fig:memory} visualizes the memory scaling behavior.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Peak RSS memory (MiB)},
+  xmin=0, xmax=5200,
+  ymin=0, ymax=6500,
+  xtick={50, 200, 500, 2000, 5000},
+  xticklabels={50, 200, 500, {2\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+  every axis plot/.append style={thick, mark size=2.5pt},
+]
+\addplot[color=blue, mark=*] coordinates {(50,100.88) (200,138.76) (500,124.31) (2000,178.36) (5000,272.54)};
+\addlegendentry{esbuild}
+\addplot[color=red, mark=square*] coordinates {(50,237.94) (200,389.62) (500,553.39) (2000,937.08) (5000,1678.97)};
+\addlegendentry{Vite}
+\addplot[color=orange, mark=triangle*] coordinates {(50,191.99) (200,279.76) (500,507.03) (2000,1129.79) (5000,2319.86)};
+\addlegendentry{Rspack}
+\addplot[color=teal, mark=diamond*] coordinates {(50,459.97) (200,590.57) (500,1061.87) (2000,2085.81) (5000,3539.29)};
+\addlegendentry{Rollup}
+\addplot[color=purple, mark=pentagon*] coordinates {(50,470.35) (200,904) (500,2059.79) (2000,3522.07) (5000,6512.20)};
+\addlegendentry{Webpack}
+% 4 GiB illustrative CI limit line
+\addplot[color=black, dashed, thin, domain=0:5200] {4096};
+\node[anchor=south east, font=\footnotesize] at (axis cs:5100,4096) {4\,GB CI limit};
+\end{axis}
+\end{tikzpicture}
+\caption{M10: Peak resident-set-size memory across scales. esbuild remains below 300\,MiB; Webpack exceeds the illustrated 4\,GiB threshold at xl-5{,}000.}\label{fig:memory}
+\end{figure}
+
+\subsubsection{M11: CPU-Time Energy Proxy}
+
+esbuild has the lowest proxy median at every scale (0.80--9.16\,s), followed by Vite (0.98--10.66\,s).
+At xl-5{,}000, Rollup and Webpack record 149.74 and 168.33\,s.
+Because M11 is CPU time rather than a hardware-counter reading, it supports comparisons of CPU demand, not absolute energy consumption.
+
+\subsubsection{M12: Scaling Regression}
+
+Table~\ref{tab:scaling} presents the scaling regression results.
+
+\begin{table}[htbp]
+\centering
+\caption{M12 scaling analysis of M2 medians. Linear, log-linear, and quadratic candidates are selected by leave-one-scale-out cross-validation (LOOCV). Linear $R^2$ is descriptive for all tools.}\label{tab:scaling}
+\begin{tabular}{@{}lrrc@{}}
+\toprule
+\textbf{Tool} & $R^2_\text{linear}$ & \textbf{Linear slope (ms/1K)} & \textbf{LOOCV selection} \\
+\midrule
+Vite     & 0.9987 &    928 & linear \\
+Rspack   & 0.9973 &  2{,}746 & linear \\
+esbuild  & 0.9364 &  3{,}506 & quadratic \\
+Rollup   & 0.9600 & 22{,}006 & quadratic \\
+Webpack  & 0.9919 & 23{,}935 & quadratic \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+LOOCV selects linear models for Vite and Rspack and quadratic models for esbuild, Rollup, and Webpack.
+Accordingly, we do not extrapolate beyond the measured 50--5{,}000-module range.
+Figure~\ref{fig:scaling} shows the observed medians without imposing a common linear form.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\columnwidth,
+  height=6.5cm,
+  xlabel={Modules},
+  ylabel={Production build time (s)},
+  xmin=0, xmax=5200,
+  ymin=0, ymax=130,
+  xtick={0, 1000, 2000, 3000, 4000, 5000},
+  xticklabels={0, {1\,000}, {2\,000}, {3\,000}, {4\,000}, {5\,000}},
+  legend pos=north west,
+  legend style={font=\footnotesize},
+  grid=major,
+  grid style={dotted, gray!40},
+]
+\addplot[color=blue, mark=*] coordinates {(50,0.320) (200,0.465) (500,0.860) (2000,2.705) (5000,17.790)};
+\addlegendentry{esbuild}
+\addplot[color=red, mark=square*] coordinates {(50,0.890) (200,1.135) (500,1.490) (2000,2.850) (5000,5.560)};
+\addlegendentry{Vite}
+\addplot[color=orange, mark=triangle*] coordinates {(50,0.940) (200,1.260) (500,2.190) (2000,5.640) (5000,14.585)};
+\addlegendentry{Rspack}
+\addplot[color=teal, mark=diamond*] coordinates {(50,2.740) (200,3.870) (500,7.440) (2000,23.655) (5000,112.105)};
+\addlegendentry{Rollup}
+\addplot[color=purple, mark=pentagon*] coordinates {(50,3.415) (200,5.115) (500,10.665) (2000,39.055) (5000,121.520)};
+\addlegendentry{Webpack}
+\end{axis}
+\end{tikzpicture}
+\caption{Observed M2 medians across the five synthetic scales. Model selection is reported in Table~\ref{tab:scaling}; lines connect observations only.}\label{fig:scaling}
+\end{figure}
+
+The linear descriptive slopes range from 928\,ms per 1{,}000 modules for Vite to 23{,}935\,ms for Webpack, but these slopes are not the selected predictive form for three tools.
+
+\medskip\noindent\textbf{Finding 3 (RQ3 answer).} \textit{Vite and Rspack are best described by linear M2 scaling within the observed range; esbuild, Rollup, and Webpack select quadratic models by LOOCV. esbuild has the lowest M10 and M11 medians at every synthetic scale.}
+
+
+\subsection{Tier~2: External Validation}\label{sec:tier2results}
+
+Table~\ref{tab:tier2} compares tool rankings between Tier~1 (s-200, the closest scale to Bulletproof React's 102 components) and Tier~2 (bp-react).
+
+\begin{table}[htbp]
+\centering
+\caption{Tier~1 (s-200) and Tier~2 (Bulletproof React) descriptive rankings. Tier~2 is a scoped replication, not proof of external validity.}\label{tab:tier2}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Metric} & \textbf{Tier~1 (s-200)} & \textbf{Tier~2 (bp-react)} & \textbf{Tier~2 medians} \\
+\midrule
+M2 (ms) & eb $<$ vi $<$ rs $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & 500, 1{,}920, 1{,}980, 4{,}215, 6{,}515 \\
+M10 (MiB) & eb $<$ rs $<$ vi $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & 62.41, 315.59, 466.65, 640.95, 1{,}153.37 \\
+M11 (s) & eb $<$ vi $<$ rs $<$ ro $<$ wp & eb $<$ rs $<$ vi $<$ ro $<$ wp & 0.06, 2.00, 2.495, 11.46, 17.09 \\
+\bottomrule
+\multicolumn{4}{@{}l}{\footnotesize eb = esbuild, vi = Vite, rs = Rspack, ro = Rollup, wp = Webpack.}
+\end{tabular}
+\end{table}
+
+M10 preserves the s-200 ordering.
+M2 and M11 each reverse the adjacent Vite/Rspack positions.
+These results identify patterns that replicate in one real-world fixture; they do not establish broad generalizability.
+
+\medskip\noindent\textbf{Finding 4 (scoped replication).} \textit{Bulletproof React preserves the Tier~1 M10 order, while Vite and Rspack swap adjacent positions for M2 and M11. This bounds, rather than proves, external validity.}
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 6: DISCUSSION
+%% ═══════════════════════════════════════════════════════════════
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Key Findings Summary}\label{sec:findings}
+
+Our study yields four principal findings that collectively demonstrate there is no single ``best'' JavaScript bundler---the optimal choice depends on project scale and priorities.
+
+\begin{enumerate}[leftmargin=*,label=\textbf{F\arabic*.}]
+  \item \textbf{Scale-dependent build-speed leadership.} esbuild has the lowest M2 median through 2{,}000 modules; Vite has the lowest at 5{,}000, with their xl pair not significant after Bonferroni correction.
+  \item \textbf{Development metrics distinguish different operations.} Rspack has the lowest M3 median at every scale, while Vite has the lowest M1 and M4 medians.
+  \item \textbf{Scaling form differs by tool.} LOOCV selects linear M2 models for Vite and Rspack and quadratic models for esbuild, Rollup, and Webpack.
+  \item \textbf{Scoped real-world replication.} Bulletproof React preserves the synthetic M10 ordering but swaps Vite and Rspack for M2 and M11, bounding rather than proving generalizability.
+\end{enumerate}
+
+\subsection{Practical Implications}\label{sec:practical}
+
+Based on our findings, we propose the decision framework in Table~\ref{tab:decision}.
+
+\begin{table}[htbp]
+\centering
+\caption{Practitioner decision matrix. Recommendations based on primary project priority and scale.}\label{tab:decision}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Scenario} & \textbf{Recommended Tool} & \textbf{Rationale} \\
+\midrule
+Production build through 2K modules & esbuild & Lowest M2 medians and lowest resource medians \\
+Production build at 5K modules & Vite & Lowest M2 median; esbuild pair is not adjusted-significant \\
+Webpack migration & Rspack & Similar API surface; 4.9$\times$ lower M2 median at m-500 \\
+Memory-constrained CI & esbuild & 272.54\,MiB M10 median at xl-5K \\
+Fastest incremental rebuild & Rspack & Lowest M3 session median at every scale \\
+Fastest measured HMR & Vite & Lowest M4 session median at every scale \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Rspack as a Webpack migration path.}
+Rspack's Webpack-compatible API can reduce migration effort, although compatibility was not an experimental outcome.
+At m-500, its M2 median is 2{,}190\,ms versus Webpack's 10{,}665\,ms (4.9$\times$); at xl-5{,}000 the medians are 14{,}585 and 121{,}520\,ms (8.3$\times$).
+
+\textbf{Vite~8 in the evaluated configuration.}
+Vite has the lowest descriptive linear slope (928\,ms per 1{,}000 modules), the lowest xl-5K M2 median, and the smallest synthetic gzip aggregates.
+The study does not isolate how much of this behavior is attributable to Rolldown versus other implementation or configuration differences.
+The scale-invariant dev cold start ($\sim$868\,ms regardless of project size) further supports Vite's suitability for large projects.
+
+\subsection{Architectural Insights}\label{sec:arch}
+
+\textbf{Observed performance is not a causal architecture test.}
+The tool implementations differ in language, algorithms, defaults, and integration layers.
+Our controlled workloads compare their resulting behavior but cannot attribute differences to any one factor.
+
+\textbf{Large-scale development performance.}
+All five tools complete M3 at xl-5{,}000; Rspack's 351.5\,ms session median is the lowest.
+For M4, Vite's 80.5\,ms median is lowest, followed by Rspack at 376.5\,ms and Webpack at 4{,}323.5\,ms.
+
+\subsection{Comparison with Grey Literature}\label{sec:grey}
+
+Our findings qualitatively agree with vendor benchmarks in ranking direction but diverge in magnitude.
+The rspack-contrib benchmark~\cite{rspackbench2026} reports Vite's production build as the fastest among the tools we study---consistent with our xl-5K medians but not smaller scales, where esbuild leads.
+The divergence arises because vendor benchmarks typically use a single, small project scale, missing the crossover phenomenon that is our central finding.
+
+Both vendor benchmarks and our study rank Webpack and Rollup as the slowest tools.
+Our xl-5K M2 medians show a 21.9$\times$ Webpack--Vite ratio.
+Differences from vendor benchmarks may reflect workload and configuration choices; the present design cannot isolate a single cause.
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 7: THREATS TO VALIDITY
+%% ═══════════════════════════════════════════════════════════════
+\section{Threats to Validity}\label{sec:threats}
+
+We discuss threats following the four-category framework of Wohlin et al.~\cite{wohlin2012experimentation}.
+
+\subsection{Internal Validity}
+
+\textbf{Single machine.}
+All experiments were conducted on a single Apple M2~Pro machine.
+While this eliminates hardware variability, it limits generalizability to other architectures (x86, ARM server, CI runners).
+We mitigate this by reporting relative rankings (which are less hardware-sensitive than absolute times) and note multi-platform benchmarking as future work.
+
+\textbf{First-observation sensitivity.}
+The first observation in a session can differ because of caching, JIT compilation, or disk I/O.
+We report medians and IQRs, and a prespecified sensitivity analysis excluding first observations changes none of 136 within-group tool ranks.
+
+\textbf{Measurement precision.}
+Wall-clock timing via hyperfine (M2) and Node.js \texttt{Date.now()} (M1, M3, M4) has millisecond precision.
+For measurements in the range of hundreds of milliseconds to minutes, this precision is sufficient.
+Measurement variability is represented by IQRs; bootstrap confidence intervals accompany pairwise Cliff's delta estimates.
+
+\subsection{External Validity}
+
+\textbf{Synthetic projects.}
+Despite our calibration effort (8 component templates, 50--150 LOC, realistic patterns), synthetic projects may not capture all characteristics of production codebases.
+Tier~2 (Bulletproof React) provides one scoped comparison: it preserves the M10 ordering but swaps Vite and Rspack for M2 and M11.
+
+\textbf{Single real-world project.}
+Tier~2 uses only one OSS project (Bulletproof React, 102 files).
+Because a single project cannot establish population-level external validity, Tier~2 bounds rather than proves generalizability.
+Bulletproof React is a React + TypeScript reference architecture; projects with substantially different dependency profiles (e.g., heavy native modules, monorepos with workspace resolution) may produce different rankings.
+A broader validation with multiple projects of varying size, framework (Vue, Angular, Svelte), and complexity is needed and noted as future work.
+
+\textbf{React + TypeScript only.}
+All projects use React and TypeScript, the most popular frontend framework and language~\cite{stateofjs2025}.
+Results may differ for other frameworks due to different plugin pipelines and transform requirements.
+
+\textbf{Tool versions.}
+All tool versions were pinned on experiment Day~1.
+Bundler performance improves across releases; our results reflect the state as of September 2026.
+
+\textbf{Phase-batched collection.}
+Metrics were collected in separate validated phase batches on the same recorded host with rotated tool orders.
+Differences in collection time and background system load may affect cross-metric comparisons even though provenance and host fingerprints are retained.
+
+\subsection{Construct Validity}
+
+\textbf{Metric coverage.}
+Our 11 metrics cover build speed, output quality, and resource consumption, but do not measure developer experience factors such as error message quality, configuration complexity, plugin ecosystem breadth, or IDE integration.
+These are qualitatively important but require different research methods (e.g., surveys, usability studies).
+
+\textbf{M1 provenance and coverage.}
+M1 covers Vite, Rspack, and Webpack but not esbuild or Rollup.
+Its 180 observations are hash-pinned supplemental results from an earlier campaign epoch and lack the validated-batch manifest used for M2--M11, so M1 conclusions receive a stronger provenance limitation.
+
+\textbf{Session-based development metrics.}
+M3 and M4 use five independent sessions per tool and condition, each summarized by its median measured update.
+This avoids pseudo-replication of updates from one long-lived process, but $n=5$ makes the asymptotic Kruskal--Wallis and Dunn approximations coarse; exact adjusted values and effect intervals are retained in the package.
+
+\textbf{HMR measurement.}
+M4 measures from a file mutation to an exact browser DOM marker set by the updated module and rejects reloads.
+This operationalizes visible propagation for the fixture but does not represent every framework HMR path.
+
+\textbf{Tree-shaking metric.}
+M7 is the byte-elimination percentage from a controlled used-versus-unused fixture.
+It is more comparable than textual reference counting, but remains a fixture-specific proxy.
+M5--M9 have one aggregate analysis unit per tool and condition and are therefore reported descriptively without inferential tests.
+
+\subsection{Conclusion Validity}
+
+\textbf{Non-parametric statistics.}
+We use tie-corrected Kruskal--Wallis omnibus tests followed by Dunn pairwise comparisons and Cliff's delta, avoiding distributional normality assumptions.
+For M3/M4, inference is over independent session medians, not within-session updates.
+
+\textbf{Bonferroni correction.}
+We apply the Bonferroni correction within each metric$\times$size family (i.e., the $\binom{k}{2}$ pairs arising from one Kruskal--Wallis test share a single family-wise $\alpha$).
+This is conservative and may produce false negatives for borderline comparisons.
+Of 251 Dunn pairs, 126 are significant after correction.
+Bonferroni control is conservative, so non-significance is not evidence of equivalence.
+
+\textbf{Effect-size confidence intervals.}
+We report Cliff's delta with bootstrap confidence intervals in the replication package.
+Intervals for small session samples can be wide and should be interpreted with adjusted $p$-values and descriptive differences.
+
+\textbf{Sample sizes.}
+The package contains 1{,}945 raw observations, yielding 1{,}390 analysis units and 1{,}265 inferential-test units.
+All 30 omnibus tests are significant; 250 of 251 Cliff's delta estimates are large.
+These observed outcomes do not eliminate power limitations, especially for five-session M3/M4 groups.
+
+%% ═══════════════════════════════════════════════════════════════
+%% SECTION 8: CONCLUSION
+%% ═══════════════════════════════════════════════════════════════
+\section{Conclusion and Future Work}\label{sec:conclusion}
+
+We presented a comprehensive empirical comparison of five production-ready JavaScript bundlers---Vite~8, Rspack~2, esbuild~0.28, Webpack~5, and Rollup~4---across 11 directly measured metrics and one derived scaling analysis at five project scales (50--5{,}000 modules).
+Our two-tier benchmarking strategy combines calibrated synthetic projects (Tier~1) with one real-world open-source fixture (Tier~2).
+The validated corpus contains 1{,}945 raw observations, 1{,}390 analysis units, and 1{,}265 inferential-test units.
+
+The central finding is that no tool leads every operation: esbuild has the lowest production-build median through 2{,}000 modules, Vite at 5{,}000, Rspack for incremental rebuilds, and Vite for HMR.
+LOOCV selects linear M2 scaling for Vite and Rspack and quadratic scaling for the other three tools.
+Tier~2 reproduces some rankings and changes others, so its evidence is deliberately scoped.
+For practitioners, we provide an actionable decision matrix (Table~\ref{tab:decision}) based on project scale and priorities.
+
+\medskip\noindent\textbf{Future work.}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Multi-platform benchmarking} on Linux CI runners, x86 servers, and ARM cloud instances to test hardware generalizability.
+  \item \textbf{Turbopack} once a stable standalone production build is available outside Next.js.
+  \item \textbf{Longitudinal study} tracking performance changes across bundler versions over 12--18 months.
+  \item \textbf{Framework diversity}: replicating the study with Vue, Angular, and Svelte projects.
+  \item \textbf{Additional Tier~2 projects} of varying size and complexity to strengthen external validity.
+  \item \textbf{Developer experience metrics}: error message quality, configuration complexity, and plugin ecosystem analysis via surveys and usability studies.
+\end{enumerate}
+
+
+%% ─── Data Availability ───
+\section*{Data Availability}
+The complete replication package---including the project generator, bundler configurations, measurement scripts, 261 consolidated CSVs (1{,}945 raw observations), analysis code, provenance manifests, and results---is publicly available at \url{https://github.com/shravaniparsi/empirical-js-bundlers}. An archival Zenodo DOI will be added before submission.
+
+%% ─── Declaration of Generative AI Use ───
+\section*{Declaration of Generative AI and AI-Assisted Technologies}
+During the preparation of this manuscript, the authors used AI-assisted tools for code generation (measurement scripts) and statistical analysis verification.
+The authors reviewed and validated all AI-generated content and take full responsibility for the accuracy and integrity of the published work.
+
+%% ─── Declaration of Competing Interests ───
+\section*{Declaration of Competing Interests}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+This study was conducted independently with no funding or affiliation with any of the bundler projects evaluated.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\end{document}

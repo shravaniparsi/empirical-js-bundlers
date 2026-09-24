@@ -7,9 +7,6 @@ tier2-realworld/workspaces/
 .venv/
 .DS_Store
 
-# Keep paper private until accepted
-paper/
-
 # Internal docs
 RESEARCH-PLAN.md
 WRITING-PLAN.md
