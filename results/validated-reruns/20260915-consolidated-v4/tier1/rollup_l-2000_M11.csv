@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rollup,l-2000,M11,1,42.34,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,2,42.06,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,3,43.7,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,4,43.26,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,5,43.57,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,6,44.18,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,7,43.88,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,8,41.31,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,9,43.08,seconds,2026-09-15T08:34:47Z
+rollup,l-2000,M11,10,40.95,seconds,2026-09-15T08:34:47Z

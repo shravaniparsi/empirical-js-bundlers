@@ -1,0 +1,16 @@
+{
+  "batch": "results/validated-reruns/20260915-consolidated-v4",
+  "inputManifestSha256": "4a07986541978278337273a09e77690d0935142c26524ff7fc25c3e17bcedd61",
+  "sourceFilesReverified": true,
+  "generatedAt": "2026-09-24T22:06:47.600Z",
+  "rawObservations": 1945,
+  "analysisUnits": 1390,
+  "inferentialTestUnits": 1265,
+  "repeatedMeasuresHandling": "M3 and M4 reduced to one median per independent watch/dev-server session",
+  "aggregateMetricsHandling": "M5-M8 retained as one fixture or five-build aggregate per tool/size; M9 retained as one exact probe result; M5-M9 excluded from inferential tests",
+  "omnibus": "Kruskal-Wallis with tie correction",
+  "postHoc": "Dunn tests using global ranks and tie-adjusted variance; Bonferroni family correction",
+  "effectSize": "Cliffs delta with deterministic 5000-replicate percentile bootstrap confidence intervals; positive delta means tool_1 has larger values; intervals are not multiplicity-adjusted",
+  "scalingRegression": "Tier-1 M2 size medians fitted with linear, log-linear, and quadratic models; model selected by leave-one-size-out RMSE",
+  "normalityTesting": "omitted; nonparametric methods were selected a priori"
+}

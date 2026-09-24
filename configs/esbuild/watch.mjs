@@ -46,5 +46,6 @@ const ctx = await esbuild.context({
   plugins: [cssModulesPlugin(), rebuildReporter],
 });
 
+await ctx.rebuild();
 await ctx.watch();
 console.log('esbuild: watching for changes...');

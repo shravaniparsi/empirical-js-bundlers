@@ -4,6 +4,9 @@
  * Starts the tool's watch/dev mode, modifies a component file,
  * measures time until rebuild completes, then reverts.
  *
+ * Uses a persistent stdout listener to avoid pipe buffer issues
+ * that cause timeouts at large project scales (xl-5000).
+ *
  * Usage: npx tsx measure-incremental.ts --tool vite --project <dir> --runs 20 --csv <file> --size xs-50 --timestamp <ts>
  */
 
@@ -53,7 +56,7 @@ function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern:
     case 'esbuild':
       return {
         cmd: 'node', args: ['configs/esbuild/watch.mjs'],
-        readyPattern: /watching/i,
+        readyPattern: /initial build finished/i,
         rebuildPattern: /build finished/i,
       };
     case 'rollup':
@@ -68,7 +71,6 @@ function getWatchCmd(tool: string): { cmd: string; args: string[]; readyPattern:
 }
 
 function findTargetFile(projectDir: string): string {
-  // Try synthetic layout first (src/features/<folder>/*.tsx)
   const featuresDir = path.join(projectDir, 'src', 'features');
   if (fs.existsSync(featuresDir)) {
     const folders = fs.readdirSync(featuresDir);
@@ -81,7 +83,6 @@ function findTargetFile(projectDir: string): string {
       }
     }
   }
-  // Fallback: find any .tsx in src/ (excluding test files, main.tsx, index.tsx)
   const srcDir = path.join(projectDir, 'src');
   function walk(dir: string): string | null {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -106,45 +107,76 @@ function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function waitForPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<boolean> {
-  return new Promise((resolve) => {
-    const timer = setTimeout(() => {
-      proc.stdout?.removeListener('data', handler);
-      proc.stderr?.removeListener('data', handler);
-      resolve(false);
-    }, timeoutMs);
+/**
+ * PatternWatcher — persistent stdout/stderr listener that queues pattern matches.
+ *
+ * Unlike the old attach/remove approach, this keeps a single listener active
+ * at all times, preventing pipe buffer stalls that caused timeouts at xl-5000.
+ */
+class PatternWatcher {
+  private matchQueue: number[] = [];  // timestamps of pattern matches
+  private waiters: Array<{ resolve: (ts: number) => void; timer: NodeJS.Timeout }> = [];
+  private readyResolve: ((value: boolean) => void) | null = null;
+  private readyTimer: NodeJS.Timeout | null = null;
+
+  constructor(
+    private proc: ChildProcess,
+    private readyPattern: RegExp,
+    private rebuildPattern: RegExp,
+  ) {
     const handler = (data: Buffer) => {
-      if (pattern.test(data.toString())) {
-        clearTimeout(timer);
-        proc.stdout?.removeListener('data', handler);
-        proc.stderr?.removeListener('data', handler);
+      const text = data.toString();
+      if (this.readyResolve && this.readyPattern.test(text)) {
+        if (this.readyTimer) clearTimeout(this.readyTimer);
+        const resolve = this.readyResolve;
+        this.readyResolve = null;
+        this.readyTimer = null;
         resolve(true);
       }
-    };
-    proc.stdout?.on('data', handler);
-    proc.stderr?.on('data', handler);
-  });
-}
-
-async function waitForNextPattern(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<number> {
-  const start = Date.now();
-  return new Promise((resolve) => {
-    const timer = setTimeout(() => {
-      proc.stdout?.removeListener('data', handler);
-      proc.stderr?.removeListener('data', handler);
-      resolve(-1);
-    }, timeoutMs);
-    const handler = (data: Buffer) => {
-      if (pattern.test(data.toString())) {
-        clearTimeout(timer);
-        proc.stdout?.removeListener('data', handler);
-        proc.stderr?.removeListener('data', handler);
-        resolve(Date.now() - start);
+      if (this.rebuildPattern.test(text)) {
+        const now = Date.now();
+        if (this.waiters.length > 0) {
+          const waiter = this.waiters.shift()!;
+          clearTimeout(waiter.timer);
+          waiter.resolve(now);
+        } else {
+          this.matchQueue.push(now);
+        }
       }
     };
     proc.stdout?.on('data', handler);
     proc.stderr?.on('data', handler);
-  });
+  }
+
+  waitForReady(timeoutMs = 300000): Promise<boolean> {
+    return new Promise((resolve) => {
+      this.readyTimer = setTimeout(() => {
+        this.readyResolve = null;
+        resolve(false);
+      }, timeoutMs);
+      this.readyResolve = resolve;
+    });
+  }
+
+  waitForRebuild(timeoutMs = 300000): Promise<number> {
+    // If there's already a queued match, return it immediately
+    if (this.matchQueue.length > 0) {
+      return Promise.resolve(this.matchQueue.shift()!);
+    }
+    return new Promise((resolve) => {
+      const timer = setTimeout(() => {
+        const idx = this.waiters.findIndex(w => w.timer === timer);
+        if (idx >= 0) this.waiters.splice(idx, 1);
+        resolve(-1);
+      }, timeoutMs);
+      this.waiters.push({ resolve, timer });
+    });
+  }
+
+  // Drain any queued matches (e.g. from a revert rebuild we don't need to time)
+  drain() {
+    this.matchQueue.length = 0;
+  }
 }
 
 async function main() {
@@ -152,10 +184,16 @@ async function main() {
   const config = getWatchCmd(args.tool);
   const targetFile = findTargetFile(args.project);
   const originalContent = fs.readFileSync(targetFile, 'utf-8');
-  const modifiedContent = originalContent + `\n// benchmark-modification-${Date.now()}\nconsole.log('benchmark-ping');\n`;
+
+  // Scale-appropriate timeouts and cooldowns
+  const isXL = args.size.startsWith('xl');
+  const isL = args.size.startsWith('l');
+  const rebuildTimeoutMs = isXL ? 300000 : isL ? 120000 : 60000;
+  const cooldownMs = isXL ? 10000 : isL ? 5000 : 1000;
 
   console.log(`  Starting ${args.tool} watch mode...`);
   console.log(`  Target file: ${path.basename(targetFile)}`);
+  console.log(`  Timeout: ${rebuildTimeoutMs/1000}s, Cooldown: ${cooldownMs/1000}s`);
 
   const proc = spawn(config.cmd, config.args, {
     cwd: args.project,
@@ -164,24 +202,28 @@ async function main() {
     shell: true,
   });
 
-  const ready = await waitForPattern(proc, config.readyPattern);
+  const watcher = new PatternWatcher(proc, config.readyPattern, config.rebuildPattern);
+
+  const ready = await watcher.waitForReady();
   if (!ready) {
-    console.error('  ❌ Watch mode failed to start (60s timeout)');
+    console.error('  ❌ Watch mode failed to start (timeout)');
     proc.kill();
     process.exit(1);
   }
   console.log('  Watch mode ready. Starting measurements...');
 
-  await sleep(1000);
+  // Wait for any initial build to complete, then drain stale matches
+  await sleep(3000);
+  watcher.drain();
 
   for (let run = 1; run <= args.runs; run++) {
-    // Modify file
     const modContent = originalContent + `\n// benchmark-run-${run}-${Date.now()}\nconsole.log('ping-${run}');\n`;
-    
-    const rebuildPromise = waitForNextPattern(proc, config.rebuildPattern);
+
+    const startTime = Date.now();
     fs.writeFileSync(targetFile, modContent);
-    
-    const elapsed = await rebuildPromise;
+
+    const matchTime = await watcher.waitForRebuild(rebuildTimeoutMs);
+    const elapsed = matchTime >= 0 ? matchTime - startTime : -1;
 
     if (elapsed >= 0) {
       fs.appendFileSync(args.csv, `${args.tool},${args.size},M3,${run},${elapsed},ms,${args.timestamp}\n`);
@@ -192,10 +234,14 @@ async function main() {
     }
 
     // Revert and wait for the revert-rebuild to finish before next run
-    const revertPromise = waitForNextPattern(proc, config.rebuildPattern, 60000);
     fs.writeFileSync(targetFile, originalContent);
-    await revertPromise;
-    await sleep(300);
+    await watcher.waitForRebuild(rebuildTimeoutMs);
+
+    // Cooldown: let the filesystem watcher re-stabilize
+    await sleep(cooldownMs);
+
+    // Drain any extra matches from the revert cycle
+    watcher.drain();
   }
 
   // Cleanup

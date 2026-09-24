@@ -72,8 +72,10 @@ for tool in $ALL_TOOLS; do
       cat > "$TARGET/rspack.config.cjs" << 'RSPACK_EOF'
 const path = require('path');
 const rspack = require('@rspack/core');
+const ReactRefreshPlugin = require('@rspack/plugin-react-refresh');
+const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
-  mode: 'production',
+  mode: isProduction ? 'production' : 'development',
   entry: './src/main.tsx',
   output: { path: path.resolve(__dirname, 'dist'), filename: '[name].[contenthash:8].js', clean: true },
   resolve: {
@@ -83,19 +85,25 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(tsx?|jsx?)$/, exclude: /node_modules/, loader: 'builtin:swc-loader',
-        options: { jsc: { parser: { syntax: 'typescript', tsx: true }, transform: { react: { runtime: 'automatic' } } } } },
+        options: { jsc: { parser: { syntax: 'typescript', tsx: true }, transform: { react: { runtime: 'automatic', development: !isProduction, refresh: !isProduction } } } } },
       { test: /\.css$/, type: 'javascript/auto', use: [
-        rspack.CssExtractRspackPlugin.loader,
+        isProduction ? rspack.CssExtractRspackPlugin.loader : 'style-loader',
         'css-loader',
         'postcss-loader'
       ]},
     ],
   },
   plugins: [
-    new rspack.CssExtractRspackPlugin(),
+    isProduction && new rspack.CssExtractRspackPlugin(),
+    !isProduction && new ReactRefreshPlugin(),
     new rspack.HtmlRspackPlugin({ template: './index.html' }),
-    new rspack.DefinePlugin({ 'import.meta.env': JSON.stringify({ DEV: false, PROD: true, MODE: 'production' }) }),
-  ],
+    new rspack.DefinePlugin({ 'import.meta.env': JSON.stringify({
+      DEV: !isProduction, PROD: isProduction, MODE: isProduction ? 'production' : 'development',
+      VITE_APP_API_URL: process.env.VITE_APP_API_URL || 'http://localhost:8080/api',
+      VITE_APP_ENABLE_API_MOCKING: process.env.VITE_APP_ENABLE_API_MOCKING || 'true',
+    }) }),
+  ].filter(Boolean),
+  devServer: { hot: true },
   devtool: 'source-map',
 };
 RSPACK_EOF
@@ -142,9 +150,11 @@ ESBUILD_EOF
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const webpack = require('webpack');
+const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
-  mode: 'production',
+  mode: isProduction ? 'production' : 'development',
   entry: './src/main.tsx',
   output: { path: path.resolve(__dirname, 'dist'), filename: '[name].[contenthash:8].js', clean: true },
   resolve: {
@@ -154,15 +164,21 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(tsx?|jsx?)$/, exclude: /node_modules/, use: {
-        loader: 'swc-loader', options: { jsc: { parser: { syntax: 'typescript', tsx: true }, transform: { react: { runtime: 'automatic' } } } } } },
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] },
+        loader: 'swc-loader', options: { jsc: { parser: { syntax: 'typescript', tsx: true }, transform: { react: { runtime: 'automatic', development: !isProduction, refresh: !isProduction } } } } } },
+      { test: /\.css$/, use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'postcss-loader'] },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({ template: './index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].[contenthash:8].css' }),
-    new webpack.DefinePlugin({ 'import.meta.env': JSON.stringify({ DEV: false, PROD: true, MODE: 'production' }) }),
-  ],
+    isProduction && new MiniCssExtractPlugin({ filename: '[name].[contenthash:8].css' }),
+    !isProduction && new ReactRefreshWebpackPlugin(),
+    new webpack.DefinePlugin({ 'import.meta.env': JSON.stringify({
+      DEV: !isProduction, PROD: isProduction, MODE: isProduction ? 'production' : 'development',
+      VITE_APP_API_URL: process.env.VITE_APP_API_URL || 'http://localhost:8080/api',
+      VITE_APP_ENABLE_API_MOCKING: process.env.VITE_APP_ENABLE_API_MOCKING || 'true',
+    }) }),
+  ].filter(Boolean),
+  devServer: { hot: true },
   devtool: 'source-map',
 };
 WEBPACK_EOF

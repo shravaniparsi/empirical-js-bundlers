@@ -48,8 +48,8 @@ function getDevConfig(tool: string) {
     case 'rspack':
       return {
         cmd: 'npx', args: ['rspack', 'serve', '--config', 'rspack.config.cjs'],
-        readyPattern: /compiled|Loopback:\s+http:\/\/localhost:(\d+)/,
-        defaultPort: 3000,
+        readyPattern: /Local:\s+http:\/\/localhost:(\d+)|compiled|Loopback:\s+http:\/\/localhost:(\d+)/,
+        defaultPort: 5299,
         hmrPattern: /App updated|hot module replacement/i,
       };
     case 'webpack':
@@ -111,7 +111,7 @@ function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function waitForOutput(proc: ChildProcess, pattern: RegExp, timeoutMs = 60000): Promise<string> {
+async function waitForOutput(proc: ChildProcess, pattern: RegExp, timeoutMs = 300000): Promise<string> {
   return new Promise((resolve, reject) => {
     const timer = setTimeout(() => reject(new Error('Timeout waiting for dev server')), timeoutMs);
     let output = '';
@@ -180,7 +180,7 @@ async function main() {
   });
   const page = await browser.newPage();
 
-  await page.goto(`http://localhost:${port}`, { waitUntil: 'networkidle0' });
+  await page.goto(`http://localhost:${port}`, { waitUntil: 'load', timeout: 180000 });
   console.log(`  Page loaded. Starting HMR measurements...`);
   await sleep(1000);
 
@@ -201,14 +201,13 @@ async function main() {
 
     const writeStart = Date.now();
 
-    // Modify the component — append a unique comment + console.log
+    // Modify the component — append a unique comment only (avoids full-reload triggers)
     const modifiedContent = originalContent +
-      `\n// HMR-benchmark-run-${run}-${Date.now()}\n` +
-      `if (import.meta.hot) { console.log('hmr-ping-${run}'); }\n`;
+      `\n// HMR-benchmark-run-${run}-${Date.now()}\n`;
     fs.writeFileSync(target.filePath, modifiedContent);
 
-    // Wait for HMR detection (max 15s)
-    const timeout = setTimeout(() => hmrResolve?.(), 15000);
+    // Wait for HMR detection (max 60s)
+    const timeout = setTimeout(() => hmrResolve?.(), 60000);
     await hmrPromise;
     clearTimeout(timeout);
 

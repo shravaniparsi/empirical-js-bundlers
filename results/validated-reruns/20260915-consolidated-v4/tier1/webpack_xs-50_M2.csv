@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+webpack,xs-50,M2,1,17230,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,2,34440,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,3,3410,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,4,3510,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,5,3400,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,6,3400,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,7,3350,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,8,3420,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,9,3350,ms,2026-09-15T08:34:47Z
+webpack,xs-50,M2,10,4050,ms,2026-09-15T08:34:47Z

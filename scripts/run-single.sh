@@ -78,10 +78,11 @@ get_build_cmd() {
 }
 
 get_dev_cmd() {
+  # Use unique ports per tool to avoid EADDRINUSE conflicts
   case "$1" in
-    vite)    echo "npx vite" ;;
-    rspack)  echo "npx rspack serve --config rspack.config.cjs" ;;
-    webpack) echo "npx webpack serve --mode development --config webpack.config.cjs" ;;
+    vite)    echo "npx vite --port 5199" ;;
+    rspack)  echo "npx rspack serve --config rspack.config.cjs --port 5299" ;;
+    webpack) echo "npx webpack serve --mode development --config webpack.config.cjs --port 5399" ;;
   esac
 }
 
@@ -145,14 +146,18 @@ if [[ "$METRIC" == "M1" ]]; then
   for run in $(seq 1 "$RUNS"); do
     bash "$SCRIPT_DIR/clear-cache.sh" "$PROJECT"
 
+    # Kill any leftover dev server from a previous run
+    lsof -ti:5199 -ti:5299 -ti:5399 2>/dev/null | xargs kill -9 2>/dev/null || true
+    sleep 1
+
     # Start dev server, measure time until ready pattern appears
     START_MS=$(node -e "console.log(Date.now())")
     $DEV_CMD > /tmp/dev-server-out.log 2>&1 &
     DEV_PID=$!
 
-    # Wait for ready pattern (timeout 60s)
+    # Wait for ready pattern (timeout 120s)
     FOUND=0
-    for _ in $(seq 1 600); do
+    for _ in $(seq 1 1200); do
       if grep -q "$READY_PATTERN" /tmp/dev-server-out.log 2>/dev/null; then
         FOUND=1
         break
@@ -163,6 +168,7 @@ if [[ "$METRIC" == "M1" ]]; then
     END_MS=$(node -e "console.log(Date.now())")
     kill "$DEV_PID" 2>/dev/null || true
     wait "$DEV_PID" 2>/dev/null || true
+    sleep 2  # Ensure port is released before next run
 
     if [[ "$FOUND" -eq 1 ]]; then
       ELAPSED=$((END_MS - START_MS))
@@ -180,14 +186,13 @@ fi
 # M3: Incremental Rebuild (watch mode, file change → rebuild)
 # ═══════════════════════════════════════════════════════════════
 if [[ "$METRIC" == "M3" ]]; then
-  write_header
   cd "$PROJECT"
 
-  # Use the dedicated Node.js script for precise measurement
-  npx tsx "$SCRIPT_DIR/measure-incremental.ts" \
+  npx tsx "$SCRIPT_DIR/measure-incremental-validated.ts" \
     --tool "$TOOL" \
     --project "$PROJECT" \
     --runs "$RUNS" \
+    --sessions 5 \
     --csv "$CSV" \
     --size "$SIZE" \
     --timestamp "$TIMESTAMP"
@@ -199,13 +204,13 @@ fi
 # M4: HMR Latency (Puppeteer + CDP)
 # ═══════════════════════════════════════════════════════════════
 if [[ "$METRIC" == "M4" ]]; then
-  write_header
   cd "$PROJECT"
 
-  npx tsx "$SCRIPT_DIR/measure-hmr.ts" \
+  npx tsx "$SCRIPT_DIR/measure-hmr-validated.ts" \
     --tool "$TOOL" \
     --project "$PROJECT" \
     --runs "$RUNS" \
+    --sessions 5 \
     --csv "$CSV" \
     --size "$SIZE" \
     --timestamp "$TIMESTAMP"
@@ -213,103 +218,28 @@ if [[ "$METRIC" == "M4" ]]; then
   echo "✅ M4 complete → $CSV"
 fi
 
-# ═══════════════════════════════════════════════════════════════
-# M5-M9: Output Quality Metrics (after one prod build)
-# ═══════════════════════════════════════════════════════════════
-if [[ "$METRIC" =~ ^M[5-9]$ ]]; then
-  write_header
-  BUILD_CMD=$(get_build_cmd "$TOOL")
-  cd "$PROJECT"
-
-  # Do a fresh prod build
-  bash "$SCRIPT_DIR/clear-cache.sh" "$PROJECT"
-  eval "$BUILD_CMD" > /dev/null 2>&1
-
-  case "$METRIC" in
-    M5) # Bundle size raw
-      BYTES=$(find dist -type f \( -name '*.js' -o -name '*.css' -o -name '*.html' \) -exec cat {} + 2>/dev/null | wc -c | tr -d ' ')
-      echo "$TOOL,$SIZE,M5,1,$BYTES,bytes,$TIMESTAMP" >> "$CSV"
-      echo "  Raw bundle size: $BYTES bytes ($(echo "scale=1; $BYTES/1024" | bc) KB)"
-      ;;
-    M6) # Bundle size gzip
-      GZIP_TOTAL=0
-      while IFS= read -r f; do
-        GZ=$(gzip -9 -c "$f" | wc -c | tr -d ' ')
-        GZIP_TOTAL=$((GZIP_TOTAL + GZ))
-      done < <(find dist -name '*.js' -type f)
-      echo "$TOOL,$SIZE,M6,1,$GZIP_TOTAL,bytes,$TIMESTAMP" >> "$CSV"
-      echo "  Gzipped JS size: $GZIP_TOTAL bytes ($(echo "scale=1; $GZIP_TOTAL/1024" | bc) KB)"
-      ;;
-    M7) # Tree-shaking (lodash-es presence in bundle)
-      # Count bytes of lodash-related code in output
-      LODASH_BYTES=$(grep -r "lodash" dist/ --include='*.js' -l 2>/dev/null | xargs cat 2>/dev/null | grep -c "lodash" || echo 0)
-      JS_SIZE=$(find dist -name '*.js' -type f -exec cat {} + | wc -c | tr -d ' ')
-      # Full lodash-es is ~600KB, we only import pick+debounce (~5KB)
-      echo "$TOOL,$SIZE,M7,1,$LODASH_BYTES,occurrences,$TIMESTAMP" >> "$CSV"
-      echo "  lodash references in bundle: $LODASH_BYTES"
-      ;;
-    M8) # Code splitting (chunk count)
-      CHUNKS=$(find dist -name '*.js' -type f | wc -l | tr -d ' ')
-      echo "$TOOL,$SIZE,M8,1,$CHUNKS,count,$TIMESTAMP" >> "$CSV"
-      echo "  JS chunks: $CHUNKS"
-      ;;
-    M9) # Sourcemap accuracy
-      MAP_COUNT=$(find dist -name '*.js.map' -type f 2>/dev/null | wc -l | tr -d ' ')
-      JS_COUNT=$(find dist -name '*.js' -type f | wc -l | tr -d ' ')
-      echo "$TOOL,$SIZE,M9,1,$MAP_COUNT/$JS_COUNT,ratio,$TIMESTAMP" >> "$CSV"
-      echo "  Sourcemaps: $MAP_COUNT maps for $JS_COUNT JS files"
-      ;;
-  esac
-
-  # Verify with a second build for determinism
-  bash "$SCRIPT_DIR/clear-cache.sh" "$PROJECT"
-  eval "$BUILD_CMD" > /dev/null 2>&1
-  echo "  (Verified with second build)"
-  echo "✅ $METRIC complete → $CSV"
+if [[ "$METRIC" =~ ^(M5|M6|M8|M9)$ ]]; then
+  npx tsx "$SCRIPT_DIR/measure-output-quality-validated.ts" \
+    --tool "$TOOL" --project "$PROJECT" --size "$SIZE" --runs 5 \
+    --resultsDir "$RESULTS_DIR" --timestamp "$TIMESTAMP"
+  echo "✅ M5/M6/M8/M9 complete → $RESULTS_DIR"
+  exit 0
 fi
 
-# ═══════════════════════════════════════════════════════════════
-# M10 + M11: Peak Memory + CPU Time (via /usr/bin/time)
-# ═══════════════════════════════════════════════════════════════
-if [[ "$METRIC" == "M10" || "$METRIC" == "M11" ]]; then
-  write_header
-  BUILD_CMD=$(get_build_cmd "$TOOL")
-  cd "$PROJECT"
+if [[ "$METRIC" == "M7" ]]; then
+  npx tsx "$SCRIPT_DIR/measure-tree-shaking-validated.ts" \
+    --tool "$TOOL" --project "$PROJECT" \
+    --resultsDir "$RESULTS_DIR" --timestamp "$TIMESTAMP"
+  echo "✅ M7 controlled fixture complete → $RESULTS_DIR"
+  exit 0
+fi
 
-  for run in $(seq 1 "$RUNS"); do
-    bash "$SCRIPT_DIR/clear-cache.sh" "$PROJECT"
-
-    # macOS uses `command time -l`, Linux uses `/usr/bin/time -v`
-    TIME_OUT="/tmp/time-output-$run.txt"
-    if [[ "$(uname)" == "Darwin" ]]; then
-      command time -l bash -c "$BUILD_CMD > /dev/null 2>&1" 2> "$TIME_OUT"
-      # macOS reports in bytes
-      RSS_BYTES=$(grep "maximum resident set size" "$TIME_OUT" | awk '{print $1}')
-      RSS_MB=$(echo "scale=1; $RSS_BYTES/1048576" | bc)
-      USER_TIME=$(grep "user" "$TIME_OUT" | head -1 | awk '{print $1}')
-      SYS_TIME=$(grep "sys" "$TIME_OUT" | head -1 | awk '{print $1}')
-    else
-      /usr/bin/time -v bash -c "$BUILD_CMD > /dev/null 2>&1" 2> "$TIME_OUT"
-      RSS_KB=$(grep "Maximum resident set size" "$TIME_OUT" | awk '{print $NF}')
-      RSS_MB=$(echo "scale=1; $RSS_KB/1024" | bc)
-      USER_TIME=$(grep "User time" "$TIME_OUT" | awk '{print $NF}')
-      SYS_TIME=$(grep "System time" "$TIME_OUT" | awk '{print $NF}')
-    fi
-
-    CPU_TOTAL=$(echo "$USER_TIME + $SYS_TIME" | bc 2>/dev/null || echo "0")
-
-    if [[ "$METRIC" == "M10" ]]; then
-      echo "$TOOL,$SIZE,M10,$run,$RSS_MB,MB,$TIMESTAMP" >> "$CSV"
-      echo "  Run $run: Peak RSS = ${RSS_MB} MB"
-    fi
-    if [[ "$METRIC" == "M11" ]]; then
-      echo "$TOOL,$SIZE,M11,$run,$CPU_TOTAL,seconds,$TIMESTAMP" >> "$CSV"
-      echo "  Run $run: CPU = ${CPU_TOTAL}s (user=${USER_TIME}s sys=${SYS_TIME}s)"
-    fi
-
-    rm -f "$TIME_OUT"
-  done
-  echo "✅ $METRIC complete → $CSV"
+if [[ "$METRIC" =~ ^(M10|M11)$ ]]; then
+  npx tsx "$SCRIPT_DIR/measure-build-resources-validated.ts" \
+    --tool "$TOOL" --project "$PROJECT" --size "$SIZE" --runs "$RUNS" \
+    --resultsDir "$RESULTS_DIR" --timestamp "$TIMESTAMP"
+  echo "✅ M2/M10/M11 complete → $RESULTS_DIR"
+  exit 0
 fi
 
 echo ""

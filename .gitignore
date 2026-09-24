@@ -23,6 +23,12 @@ results/*.log
 
 # Stale backups
 results/analysis-pre-audit-backup/
+results/tier1-raw/*.bak*
+
+# Intermediate/superseded campaigns; publish only the authoritative corpus
+results/validated-reruns/*
+!results/validated-reruns/20260915-consolidated-v4/
+!results/validated-reruns/20260915-consolidated-v4/**
 
 # Lock files (Tier 2 lockfiles contained internal registry URLs)
 package-lock.json

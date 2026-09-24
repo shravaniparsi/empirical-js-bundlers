@@ -8,7 +8,7 @@ Replication data and scripts for the empirical study:
 
 ## Overview
 
-This repository contains 1,534 data points collected from benchmarking five production-ready JavaScript bundlers across 11 metrics and five project scales (50–5,000 modules), plus a real-world validation on Bulletproof React (102 components).
+The authoritative consolidated corpus contains 1,945 raw observations, 1,390 analysis units, and 1,265 inferential-test units across five production-ready JavaScript bundlers, 11 measured metrics, five synthetic scales (50–5,000 modules), and one scoped Bulletproof React replication.
 
 | Tool | Version | Language |
 |------|---------|----------|
@@ -22,19 +22,19 @@ This repository contains 1,534 data points collected from benchmarking five prod
 
 ```
 ├── results/
-│   ├── tier1-raw/          # Raw CSV measurements (277 files)
-│   ├── tier2-raw/          # Bulletproof React measurements
-│   ├── analysis/           # Statistical analysis output
-│   │   ├── descriptive_stats.csv
-│   │   ├── normality_tests.csv
-│   │   ├── kruskal_wallis.csv
-│   │   ├── pairwise_tests.csv
-│   │   ├── effect_sizes.csv
-│   │   └── scaling_regression.csv
+│   ├── validated-reruns/
+│   │   └── 20260915-consolidated-v4/ # Authoritative 261-CSV corpus
+│   │       ├── tier1/
+│   │       ├── tier2/
+│   │       └── analysis/             # Validated statistics and findings
+│   ├── tier1-raw/          # Legacy/supplemental source measurements
+│   ├── tier2-raw/          # Legacy Bulletproof React measurements
+│   ├── analysis/           # Legacy output; not for publication claims
 │   └── machine-env.yaml    # Hardware/software environment
 ├── analysis/
-│   ├── analysis.ts         # Statistical analysis pipeline (TypeScript)
-│   └── analysis.py         # Alternative Python analysis
+│   ├── validated-analysis.ts # Authoritative fail-closed analysis
+│   ├── analysis.ts           # Legacy pipeline
+│   └── analysis.py           # Legacy alternative
 ├── scripts/
 │   ├── run-all.sh          # Main measurement harness
 │   ├── run-single.sh       # Single tool×size measurement
@@ -55,7 +55,7 @@ This repository contains 1,534 data points collected from benchmarking five prod
 
 All measurements were collected on:
 - **Hardware:** Apple M2 Pro (12-core, 32 GB RAM)
-- **OS:** macOS 16.5
+- **OS:** macOS 26.5.1 (build 25F80)
 - **Node.js:** v22.16.0
 - **npm:** 10.9.2
 
@@ -63,10 +63,17 @@ All measurements were collected on:
 
 ```bash
 npm install
-npx tsx analysis/analysis.ts
+npx tsx analysis/validated-analysis.ts \
+  results/validated-reruns/20260915-consolidated-v4
 ```
 
-This reads the raw CSVs from `results/tier1-raw/` and `results/tier2-raw/`, runs the full statistical pipeline (Shapiro–Wilk, Kruskal–Wallis, Mann–Whitney U with Bonferroni correction, Cliff's delta), and writes results to `results/analysis/`.
+This verifies the consolidated input and source hashes, reduces M3/M4 to
+independent session medians, and runs tie-corrected Kruskal–Wallis, Dunn
+post-hoc tests with Bonferroni correction, Cliff's delta with bootstrap
+intervals, first-observation sensitivity analysis, and M12 scaling models.
+Outputs are written under the consolidated batch's `analysis/` directory.
+The legacy `analysis.ts` and `analysis.py` pipelines read superseded raw data
+and must not be used for publication claims.
 
 ## Metrics
 
@@ -74,14 +81,14 @@ This reads the raw CSVs from `results/tier1-raw/` and `results/tier2-raw/`, runs
 |----|--------|------|------|
 | M1 | Dev cold start | ms | 20 |
 | M2 | Production build time | ms | 10 |
-| M3 | Incremental rebuild | ms | 20 |
-| M4 | HMR latency | ms | 20 |
-| M5 | Bundle size (raw) | bytes | 1 |
-| M6 | Bundle size (gzip) | bytes | 1 |
-| M7 | Tree-shaking effectiveness | count | 1 |
-| M8 | Code-splitting granularity | count | 1 |
-| M9 | Sourcemap accuracy | ratio | 1 |
-| M10 | Peak memory (RSS) | MB | 10 |
+| M3 | Incremental rebuild | ms | 5 sessions × 4 updates |
+| M4 | HMR latency | ms | 5 sessions × 4 updates |
+| M5 | Bundle size (raw) | bytes | 5-build aggregate |
+| M6 | Bundle size (gzip) | bytes | 5-build aggregate |
+| M7 | Tree-shaking effectiveness | percent | verified fixture aggregate |
+| M8 | Code-splitting granularity | count | 5-build aggregate |
+| M9 | Sourcemap accuracy | percent | 1 exact probe |
+| M10 | Peak memory (RSS) | MiB | 10 |
 | M11 | CPU time | s | 10 |
 | M12 | Scaling regression | derived | — |
 

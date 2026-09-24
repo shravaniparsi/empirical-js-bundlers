@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rspack,xs-50,M2,1,2820,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,2,15080,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,3,950,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,4,890,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,5,960,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,6,910,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,7,890,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,8,930,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,9,920,ms,2026-09-15T08:34:47Z
+rspack,xs-50,M2,10,960,ms,2026-09-15T08:34:47Z

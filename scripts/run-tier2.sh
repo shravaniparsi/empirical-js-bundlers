@@ -15,6 +15,10 @@ export NVM_DIR="$HOME/.nvm"
 . "$NVM_DIR/nvm.sh"
 nvm use 22.16.0 > /dev/null 2>&1
 
+echo "This legacy runner is disabled because it used incompatible metric definitions." >&2
+echo "Use scripts/run-validated-campaign.sh instead." >&2
+exit 2
+
 mkdir -p "$RAW"
 
 echo "╔══════════════════════════════════════════════════╗"
@@ -156,8 +160,8 @@ for tool in $TOOLS; do
   for run in $(seq 1 $RUNS); do
     rm -rf dist .rspack .vite
     TIME_OUT=$(/usr/bin/time -l bash -c "cd '$DIR' && $BUILD_CMD > /dev/null 2>&1" 2>&1)
-    USER_T=$(echo "$TIME_OUT" | grep "user" | head -1 | awk '{print $1}')
-    SYS_T=$(echo "$TIME_OUT" | grep "sys" | head -1 | awk '{print $1}')
+    USER_T=$(echo "$TIME_OUT" | awk '{for(i=2;i<=NF;i++) if($i=="user") print $(i-1)}' | head -1)
+    SYS_T=$(echo "$TIME_OUT" | awk '{for(i=2;i<=NF;i++) if($i=="sys") print $(i-1)}' | head -1)
     CPU_S=$(echo "$USER_T + $SYS_T" | bc)
     echo "$tool,bp-react,M11,$run,$CPU_S,seconds,$TIMESTAMP" >> "$CSV"
     echo "    Run $run: CPU = ${CPU_S}s"

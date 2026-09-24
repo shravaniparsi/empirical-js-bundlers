@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -34,7 +35,11 @@ module.exports = {
             jsc: {
               parser: { syntax: 'typescript', tsx: true },
               transform: {
-                react: { runtime: 'automatic' },
+                react: {
+                  runtime: 'automatic',
+                  development: !isProduction,
+                  refresh: !isProduction,
+                },
               },
             },
           },
@@ -77,6 +82,7 @@ module.exports = {
     isProduction && new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+    !isProduction && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
   optimization: {
     splitChunks: {

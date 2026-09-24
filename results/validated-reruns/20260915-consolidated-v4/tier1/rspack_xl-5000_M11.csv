@@ -1,0 +1,11 @@
+tool,size,metric,run,value,unit,timestamp
+rspack,xl-5000,M11,1,21.57,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,2,21.95,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,3,22.78,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,4,22.26,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,5,22.63,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,6,22.47,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,7,22,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,8,21.5,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,9,22.19,seconds,2026-09-15T08:34:47Z
+rspack,xl-5000,M11,10,22.55,seconds,2026-09-15T08:34:47Z
