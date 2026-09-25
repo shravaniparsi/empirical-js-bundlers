@@ -49,16 +49,21 @@ try {
   page.on('request', request => {
     if (request.url().startsWith(origin + '/') || /^(data:|blob:)/.test(request.url())) request.continue();
     else if (request.url().startsWith('https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/')) {
-      try { const name = decodeURIComponent(new URL(request.url()).pathname.slice('/oss/fonts/'.length)); request.respond({ status: 200, contentType: 'font/woff2', body: fontResponse(name) }); }
+      try { const name = decodeURIComponent(new URL(request.url()).pathname.slice('/oss/fonts/'.length)); request.respond({ status: 200, contentType: 'font/woff2', headers: { 'access-control-allow-origin': '*' }, body: fontResponse(name) }); }
       catch (error) { report.errors.push(error.message); request.abort(); }
     } else if (request.url() === 'https://scripts.simpleanalyticscdn.com/latest.js') {
       report.suppressedAnalyticsRequests.push(request.url()); request.respond({ status: 200, contentType: 'text/javascript', body: '/* analytics intentionally disabled by local acceptance harness */' });
     } else { report.externalRequests.push(request.url()); request.abort(); }
   });
+  page.on('console', message => { if (message.type() === 'error') report.errors.push('Console: ' + message.text()); });
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) report.errors.push(`HTTP ${response.status()}: ${response.url().replace(origin, '')}`); });
   await page.goto(origin, { waitUntil: 'networkidle0', timeout: 60000 });
   await page.waitForSelector('.excalidraw canvas', { timeout: 30000 });
+  report.checks.uiFontsLoaded = await page.evaluate(async () => {
+    await document.fonts.load('16px Assistant'); await document.fonts.ready;
+    return [...document.fonts].some(font => font.family.replaceAll('\"', '').replaceAll("'", '') === 'Assistant' && font.status === 'loaded');
+  });
   report.checks.canvasVisible = await page.$eval('.excalidraw canvas', canvas => canvas.width > 500 && canvas.height > 500);
   await page.keyboard.press('r');
   await page.mouse.move(500, 400); await page.mouse.down(); await page.mouse.move(700, 540, { steps: 10 }); await page.mouse.up();
