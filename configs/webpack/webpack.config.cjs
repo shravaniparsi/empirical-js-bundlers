@@ -53,6 +53,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
+                namedExport: false,
                 localIdentName: isProduction
                   ? '[hash:base64:8]'
                   : '[name]__[local]--[hash:base64:5]',
@@ -77,7 +78,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      templateContent: require('fs').readFileSync('./index.html', 'utf8').replace(/<script\b[^>]*src=["']\/src\/main\.tsx["'][^>]*><\/script>/, ''),
     }),
     isProduction && new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',

@@ -1,0 +1,62 @@
+name: Submission correctness
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/submission-correctness-20260924]
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        tool: [webpack, rollup]
+        size: [xl-5000]
+    env:
+      PILOT_REVISION: cloud
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Prepare isolated corrected fixture
+        run: node scripts/prepare-submission-pilot.mjs '${{ matrix.size }}'
+      - name: Record runner and install dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p cloud-evidence
+          uname -a > cloud-evidence/host.txt
+          lscpu >> cloud-evidence/host.txt
+          free -b >> cloud-evidence/host.txt
+          printf '%s\n' "${ImageOS:-unknown}" "${ImageVersion:-unknown}" >> cloud-evidence/host.txt
+          workspace=".submission-pilot/${{ matrix.size }}-corrected-cloud/${{ matrix.tool }}"
+          cp "$workspace/package-lock.json" cloud-evidence/recovered-package-lock.json
+          if ! npm ci --prefix "$workspace" --no-audit --no-fund > cloud-evidence/install.log 2>&1; then
+            if ! grep -q E404 cloud-evidence/install.log; then cat cloud-evidence/install.log; exit 1; fi
+            mv "$workspace/package-lock.json" "$workspace/recovered-package-lock.json"
+            npm install --prefix "$workspace" --package-lock-only --ignore-scripts --no-audit --no-fund > cloud-evidence/relock.log 2>&1
+            npm ci --prefix "$workspace" --no-audit --no-fund >> cloud-evidence/install.log 2>&1
+          fi
+          cp "$workspace/package-lock.json" cloud-evidence/pilot-package-lock.json
+          cp "$workspace/MANIFEST.json" "$workspace/GRAPH.json" cloud-evidence/
+          cp ".submission-pilot/${{ matrix.size }}-corrected-cloud/preparation.json" cloud-evidence/
+      - name: Build and check all routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          workspace=".submission-pilot/${{ matrix.size }}-corrected-cloud/${{ matrix.tool }}"
+          npm run build --prefix "$workspace" > cloud-evidence/build.log 2>&1
+          node scripts/check-production-browser.mjs "$workspace/dist" cloud-evidence/browser.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: correctness-${{ matrix.tool }}-${{ matrix.size }}
+          path: cloud-evidence/
+          retention-days: 7

@@ -44,19 +44,8 @@ module.exports = {
       },
       {
         test: /\.module\.css$/,
-        use: [
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: isProduction
-                  ? '[hash:base64:8]'
-                  : '[name]__[local]--[hash:base64:5]',
-              },
-            },
-          },
-        ],
-        type: 'javascript/auto',
+        type: 'css/module',
+        parser: { namedExports: false },
       },
       {
         test: /\.css$/,
@@ -71,7 +60,7 @@ module.exports = {
   },
   plugins: [
     new HtmlRspackPlugin({
-      template: './index.html',
+      templateContent: require('fs').readFileSync('./index.html', 'utf8').replace(/<script\b[^>]*src=["']\/src\/main\.tsx["'][^>]*><\/script>/, ''),
     }),
     !isProduction && new ReactRefreshPlugin(),
   ].filter(Boolean),

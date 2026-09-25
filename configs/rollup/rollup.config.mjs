@@ -48,12 +48,14 @@ export default {
     swc({
       include: /\.[jt]sx?$/,
       swc: {
+        minify: isProduction,
         jsc: {
           parser: { syntax: 'typescript', tsx: true },
           transform: {
             react: { runtime: 'automatic' },
           },
           target: 'es2022',
+          minify: isProduction ? { compress: true, mangle: true } : undefined,
         },
       },
     }),
@@ -61,6 +63,7 @@ export default {
       title: `JS Bundler Benchmark — ${pkg.name}`,
       template: ({ files }) => {
         const scripts = (files.js || [])
+          .filter(file => file.isEntry)
           .map(({ fileName }) => `<script type="module" src="${fileName}"></script>`)
           .join('\n    ');
         const styles = (files.css || [])
