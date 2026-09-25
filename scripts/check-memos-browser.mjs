@@ -11,7 +11,7 @@ const [sourceArg, binaryArg, reportArg] = process.argv.slice(2);
 if (!reportArg) throw new Error('Usage: check-memos-browser.mjs <pinned-source> <backend-binary> <NEW-report-dir>');
 const source = fs.realpathSync(sourceArg), binary = fs.realpathSync(binaryArg), reportDir = path.resolve(reportArg);
 fs.mkdirSync(reportDir, { recursive: false });
-const report = { publicationEligible: false, purpose: 'Memos actual-backend functional acceptance', passed: false, checks: {}, errors: [], responses: [], source: verifySource('memos', source), binarySha256: sha256(fs.readFileSync(binary)) };
+const report = { publicationEligible: false, purpose: 'Memos actual-backend functional acceptance', passed: false, checks: {}, errors: [], console: [], responses: [], source: verifySource('memos', source), binarySha256: sha256(fs.readFileSync(binary)) };
 const dist = path.join(source, 'web/dist');
 const data = path.join(reportDir, 'database'); fs.mkdirSync(data);
 const reservation = http.createServer(); await new Promise(resolve => reservation.listen(0, '127.0.0.1', resolve));
@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream' }); fs.createReadStream(file).pipe(res);
   } catch { res.writeHead(400).end(); }
 });
-let browser, page;
+let browser, page, phase = 'bootstrap';
 try {
   for (let attempt = 0; ; attempt++) {
     if (backend.exitCode !== null) throw new Error('Backend exited before readiness');
@@ -48,11 +48,15 @@ try {
   page = await browser.newPage(); await page.setViewport({ width: 1440, height: 1000 });
   await page.setRequestInterception(true);
   page.on('request', request => { if (request.url().startsWith(origin + '/') || /^(data:|blob:)/.test(request.url())) request.continue(); else { report.errors.push('External request: ' + request.url()); request.abort(); } });
+  page.on('console', message => { if (['error', 'warn'].includes(message.type())) report.console.push({ type: message.type(), text: message.text() }); });
+  page.on('requestfailed', request => report.errors.push('Request failed: ' + request.url() + ' ' + request.failure()?.errorText));
   page.on('pageerror', error => report.errors.push(error.message));
-  page.on('response', response => { const url = response.url().replace(origin, ''); report.responses.push({ url, status: response.status() }); if (response.status() >= 400) report.errors.push(`HTTP ${response.status()}: ${url}`); });
+  page.on('response', response => { const url = response.url().replace(origin, ''); const expectedAnonymousRefresh = phase === 'bootstrap' && response.status() === 401 && url === '/memos.api.v1.AuthService/RefreshToken'; report.responses.push({ url, status: response.status(), expectedAnonymousRefresh }); if (response.status() >= 400 && !expectedAnonymousRefresh) report.errors.push(`HTTP ${response.status()}: ${url}`); });
   await page.goto(origin, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('#signup-username', { timeout: 30000 });
-  await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.click('button[type="submit"]');
+  phase = 'signup';
+  await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.querySelector('form').addEventListener('submit', () => window.__benchmarkSubmitCount++); });
+  await page.locator('button[type="submit"]').click();
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
   await page.click('[data-new-memo-trigger]');
   await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
@@ -80,7 +84,7 @@ try {
   report.sourceAfter = verifySource('memos', source); report.passed = true;
 } catch (error) { report.errors.push(error.message); }
 finally {
-  if (page) { await page.screenshot({ path: path.join(reportDir, 'browser.png') }).catch(() => {}); fs.writeFileSync(path.join(reportDir, 'page.html'), await page.content().catch(() => '')); }
+  if (page) { report.formSubmissions = await page.evaluate(() => window.__benchmarkSubmitCount).catch(() => null); await page.screenshot({ path: path.join(reportDir, 'browser.png') }).catch(() => {}); fs.writeFileSync(path.join(reportDir, 'page.html'), await page.content().catch(() => '')); }
   if (browser) await browser.close();
   server.closeAllConnections(); await new Promise(resolve => server.close(resolve));
   backend.kill('SIGTERM');
