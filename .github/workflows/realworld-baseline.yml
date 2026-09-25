@@ -5,6 +5,7 @@ on:
     branches: [codex/realworld-expansion-v1]
     paths:
       - 'scripts/*realworld*'
+      - 'scripts/check-excalidraw-browser.mjs'
       - 'workloads/realworld-v1/**'
       - '.github/workflows/realworld-baseline.yml'
 permissions:
