@@ -1,0 +1,16 @@
+{
+  "kind": "real-component-hmr-correctness-not-latency-data",
+  "tool": "rspack",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xl-5000-corrected-hmr-expanded-v1/rspack",
+  "publicationEligible": false,
+  "heading": "MegaRepo",
+  "passed": false,
+  "edits": [],
+  "errors": [
+    "Waiting for selector `input:not([type=\"hidden\"]):not([disabled])` failed"
+  ],
+  "originalSourceSha256": "96f389880f3d09becac07584bfaac032e9fd39da28383c49759438bdb2565b41",
+  "browserVersion": "Chrome/153.0.8010.52",
+  "sourceRestored": true,
+  "serverStopped": true
+}

@@ -1,0 +1,537 @@
+[
+  {
+    "path": "attempt-1/rspack-xl-5000/acceptance-server.log",
+    "bytes": 424,
+    "sha256": "5f608dfd370852a1b4a8cbda17a3791c8a2e53d95d1ba6d1f7d891c897f925c6"
+  },
+  {
+    "path": "attempt-1/rspack-xl-5000/acceptance.json",
+    "bytes": 603,
+    "sha256": "d1d57fdd34646ec6a055212b7a51b78d62d97126b06f1c77fe0ba2fad93721f4"
+  },
+  {
+    "path": "attempt-1/vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "27e2f333091eab5c9f60663d3919632e7346c4b3ade29495a7f499a09e882520"
+  },
+  {
+    "path": "attempt-1/vite-xl-5000/acceptance.json",
+    "bytes": 599,
+    "sha256": "dde4eef7a1ca8c3f7d22cb5e7df747977cccd408b40e4115c5219a7f8e765d64"
+  },
+  {
+    "path": "attempt-1/webpack-xl-5000/acceptance-server.log",
+    "bytes": 4263,
+    "sha256": "916c5911b116a25f85e3a9d871a75437504fb0ca6cf369ed7d1df8e80e53d3bb"
+  },
+  {
+    "path": "attempt-1/webpack-xl-5000/acceptance.json",
+    "bytes": 606,
+    "sha256": "7f1f5ae0b462d80d95d1a14ba5372830e0345994e63813f3efddd3b41d59948d"
+  },
+  {
+    "path": "attempt-1-full/github-run.json",
+    "bytes": 13843,
+    "sha256": "39f8c2abe1afe7439d47684205b19effe85f24ba5aa30dedf0c4ae3feb529497"
+  },
+  {
+    "path": "attempt-1-full/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "d6d6e2471d091b15d3e942c32b01ff4e6efe035450801239f36f8e0e2ef679a5"
+  },
+  {
+    "path": "attempt-1-full/hmr-rspack-s-200/acceptance.json",
+    "bytes": 1068,
+    "sha256": "3a3199b92cb33112d28d249d4b817a45cedc2c97cd6355f9f3999d6d4f522d69"
+  },
+  {
+    "path": "attempt-1-full/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 424,
+    "sha256": "5f608dfd370852a1b4a8cbda17a3791c8a2e53d95d1ba6d1f7d891c897f925c6"
+  },
+  {
+    "path": "attempt-1-full/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 603,
+    "sha256": "d1d57fdd34646ec6a055212b7a51b78d62d97126b06f1c77fe0ba2fad93721f4"
+  },
+  {
+    "path": "attempt-1-full/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "3e94e536a9556f4f131d94b802cf6ee298ef3b73c92ece5ef0e2fe9eaffc7c1f"
+  },
+  {
+    "path": "attempt-1-full/hmr-vite-s-200/acceptance.json",
+    "bytes": 1064,
+    "sha256": "91a10c5c0dee3a1abb12850f8921867ce409b83c8f8c02aab81d3d491f8c195c"
+  },
+  {
+    "path": "attempt-1-full/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "27e2f333091eab5c9f60663d3919632e7346c4b3ade29495a7f499a09e882520"
+  },
+  {
+    "path": "attempt-1-full/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 599,
+    "sha256": "dde4eef7a1ca8c3f7d22cb5e7df747977cccd408b40e4115c5219a7f8e765d64"
+  },
+  {
+    "path": "attempt-1-full/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 8150,
+    "sha256": "2f7794fa95520df0aa0de041d4397c261cfe3d9b596b6404e72b51805eac2f17"
+  },
+  {
+    "path": "attempt-1-full/hmr-webpack-s-200/acceptance.json",
+    "bytes": 1070,
+    "sha256": "48f00e489c8057a26db3c77d3154f350ca6ffdd73d8eacff6d9864df0c7e3fcd"
+  },
+  {
+    "path": "attempt-1-full/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 4263,
+    "sha256": "916c5911b116a25f85e3a9d871a75437504fb0ca6cf369ed7d1df8e80e53d3bb"
+  },
+  {
+    "path": "attempt-1-full/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 606,
+    "sha256": "7f1f5ae0b462d80d95d1a14ba5372830e0345994e63813f3efddd3b41d59948d"
+  },
+  {
+    "path": "attempt-2/github-run.json",
+    "bytes": 13843,
+    "sha256": "104dacec706082d4bcead3b0510e34d29eca1a337053d68d7c6f8b43c9e0e813"
+  },
+  {
+    "path": "attempt-2/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "2fec09a8d8863e9d486a54a8428fe2ff30ebb5b30693c956b8abb4aca2742e46"
+  },
+  {
+    "path": "attempt-2/hmr-rspack-s-200/acceptance.json",
+    "bytes": 1182,
+    "sha256": "6c1c64158f83ce0a464998606a20e7ebdbd35e867b325dfa43e2fdef55d80967"
+  },
+  {
+    "path": "attempt-2/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 4063,
+    "sha256": "15a91defced6fca98474aee4d1bb6cbd2a0814c692343e543c6d414e4a94e482"
+  },
+  {
+    "path": "attempt-2/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 590,
+    "sha256": "389521d2476f3ac18315436d021bede00e4df35b9f262ad2b61fd8ebb28337dd"
+  },
+  {
+    "path": "attempt-2/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "7443ae9dd2204761aa248caba5e67f9bef2ceb77a29fb79ef23a4a8c50538566"
+  },
+  {
+    "path": "attempt-2/hmr-vite-s-200/acceptance.json",
+    "bytes": 1178,
+    "sha256": "0a3fcc035b16b25637ba4444b53730aad7c30776d1ea78eddf6a95f9cfb78ea5"
+  },
+  {
+    "path": "attempt-2/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "e4320da692168802e49677d63bca3090db54fbcb7388bbcc9612c812eaf1dee3"
+  },
+  {
+    "path": "attempt-2/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 586,
+    "sha256": "64b5385fd8d935da13822fd92c26eb02fa0b9f08aee55a054a4674ae0bc3e55c"
+  },
+  {
+    "path": "attempt-2/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 8091,
+    "sha256": "0f75391c7a46a7372e2b9f1b17e0cb96e4dc45ca5a95ea4b7999da46c620919d"
+  },
+  {
+    "path": "attempt-2/hmr-webpack-s-200/acceptance.json",
+    "bytes": 1184,
+    "sha256": "ed5769f50f3c80c5b4bfebd801263bd33aa002edb16a15a9008597de7a2b9e7c"
+  },
+  {
+    "path": "attempt-2/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 4381,
+    "sha256": "c6d8a99bfd63613aa9f16b0031817a8364998167b329973143b13961f62a4a7a"
+  },
+  {
+    "path": "attempt-2/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 750,
+    "sha256": "72212e460ee8d0f7921dd19f694ff527b7cd29d8adf5e0847e8807ace818dcdb"
+  },
+  {
+    "path": "attempt-3/github-run.json",
+    "bytes": 13843,
+    "sha256": "3637c4969eab765583d92972163cfd78231e55bc2b0b394d65be7b9d822f49e9"
+  },
+  {
+    "path": "attempt-3/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "9629b040928831c021e8f7bbf38088ee17aa26660ad76891c3422a0f69f8048b"
+  },
+  {
+    "path": "attempt-3/hmr-rspack-s-200/acceptance.json",
+    "bytes": 1910,
+    "sha256": "e5f84f34caf14cb89cc81ea8b6618b89ef7705c25beb445c0c0491a779ddef94"
+  },
+  {
+    "path": "attempt-3/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 3466,
+    "sha256": "8d98d9b661ac906fc0b33856601ff304afa59db16c0d6dcef6d904d898acd03d"
+  },
+  {
+    "path": "attempt-3/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 1337,
+    "sha256": "3e74e7504161207ec0400a748f6c5a07e1264c94ccf5f28372a6c25aa5dd98c0"
+  },
+  {
+    "path": "attempt-3/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "d18b55451370c700e14a75bcc4bd602d863981bb89ac67a675234e34a926f41d"
+  },
+  {
+    "path": "attempt-3/hmr-vite-s-200/acceptance.json",
+    "bytes": 1906,
+    "sha256": "88b8586c08aff4ff09e196e3ceabfd647cad87795f55f247b416269d6d438e70"
+  },
+  {
+    "path": "attempt-3/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "2cee9bce15945c12b423aeaf03135228ceb8a787d2eebead10018c352154cd4d"
+  },
+  {
+    "path": "attempt-3/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 1333,
+    "sha256": "727a3e004e0eb61b5f368803e70fd33bcf3ec44840983794e9391552ad16bc6a"
+  },
+  {
+    "path": "attempt-3/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 6812,
+    "sha256": "5f9f5668fb48d6c99100dfa92e0cf7559cd50b72918f7f6db89546ad661c5835"
+  },
+  {
+    "path": "attempt-3/hmr-webpack-s-200/acceptance.json",
+    "bytes": 1912,
+    "sha256": "e4a01d537bad283cc161d82d8580ec05e30e5430ccc579be4eec4e1cc7fd1def"
+  },
+  {
+    "path": "attempt-3/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 4204,
+    "sha256": "218e1ef37c007d19374db65f2ee10ed2ee9818ce97334316d1bac781e7067243"
+  },
+  {
+    "path": "attempt-3/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 1497,
+    "sha256": "9e969ec98683dce7f200b422fd88d63903e57c70f8bf8c4567d25aa4fc388092"
+  },
+  {
+    "path": "attempt-4/hmr-vite-xl-5000/acceptance-browser.png",
+    "bytes": 28037,
+    "sha256": "42baab0478524b5a1970d148dbbd3d647ff38b5a4475f0eed6bc20188b938c1e"
+  },
+  {
+    "path": "attempt-4/hmr-vite-xl-5000/acceptance-page.html",
+    "bytes": 428579,
+    "sha256": "d5ada40e96c99aa72e8b2eccaefa574f140c4fc2dde49fe57a57fc9b52c5f1e6"
+  },
+  {
+    "path": "attempt-4/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "2b8fd10ca1992d31a3be60464fb865f3453aa6fafd4754964c1798c7d61a260a"
+  },
+  {
+    "path": "attempt-4/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 1485,
+    "sha256": "e1a8aef321eb9a57c80a67b179655e94dcbed89fa4fc6d79b10a1b76542bce4c"
+  },
+  {
+    "path": "attempt-4/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 8176,
+    "sha256": "dc59b0a6b3df7103bdfb181b16c76aff6685348867d31f665d97192b7626c834"
+  },
+  {
+    "path": "attempt-4/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 1942,
+    "sha256": "e6c784e0976fcfc7ee63544d29f84e85cf08f0b754a99635ac35eb585a14d7ea"
+  },
+  {
+    "path": "attempt-4-full/github-run.json",
+    "bytes": 13843,
+    "sha256": "10aaac8f9946b14a14fa10d661cc96cdc781deaf3a84c71dc2ed7aff8e501a59"
+  },
+  {
+    "path": "attempt-4-full/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "c74ef4bbe56b037e4314cacf5d76798b757d66b6a0f60047ec3adb714994f17f"
+  },
+  {
+    "path": "attempt-4-full/hmr-rspack-s-200/acceptance.json",
+    "bytes": 1910,
+    "sha256": "456fed94242f50809ce0834b65c8a4232332d9fb4803c99377b277d3d0ba3088"
+  },
+  {
+    "path": "attempt-4-full/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 653,
+    "sha256": "6341cd7104481a48d0a6a154b15522ebf47eb7ab0bae7b9272bf0eb6333dfd56"
+  },
+  {
+    "path": "attempt-4-full/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 1932,
+    "sha256": "cf1e36684878cc92f40289217cab369cfcf2a2fb7b58f49e0b6af03c125ccbf2"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "23798a0798855c54de308acad37b34251d75ebda30dd03bedda3274ce54d3322"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-s-200/acceptance.json",
+    "bytes": 1906,
+    "sha256": "3b0099020127900b78ea652927b527d3af2679dc72564ca4a58b9259b7a29bdf"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-xl-5000/acceptance-browser.png",
+    "bytes": 28037,
+    "sha256": "42baab0478524b5a1970d148dbbd3d647ff38b5a4475f0eed6bc20188b938c1e"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-xl-5000/acceptance-page.html",
+    "bytes": 428579,
+    "sha256": "d5ada40e96c99aa72e8b2eccaefa574f140c4fc2dde49fe57a57fc9b52c5f1e6"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 491,
+    "sha256": "2b8fd10ca1992d31a3be60464fb865f3453aa6fafd4754964c1798c7d61a260a"
+  },
+  {
+    "path": "attempt-4-full/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 1485,
+    "sha256": "e1a8aef321eb9a57c80a67b179655e94dcbed89fa4fc6d79b10a1b76542bce4c"
+  },
+  {
+    "path": "attempt-4-full/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 8032,
+    "sha256": "d2f43f664905a79e3c5e693ba4bd77febf737f589b4c5b745993e4b2fc05f309"
+  },
+  {
+    "path": "attempt-4-full/hmr-webpack-s-200/acceptance.json",
+    "bytes": 1912,
+    "sha256": "5a88ce2a8939a596b1a8c0e8ae892fc89362abb2cdddf993579c1b07853338e5"
+  },
+  {
+    "path": "attempt-4-full/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 8176,
+    "sha256": "dc59b0a6b3df7103bdfb181b16c76aff6685348867d31f665d97192b7626c834"
+  },
+  {
+    "path": "attempt-4-full/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 1942,
+    "sha256": "e6c784e0976fcfc7ee63544d29f84e85cf08f0b754a99635ac35eb585a14d7ea"
+  },
+  {
+    "path": "attempt-5/github-run.json",
+    "bytes": 13843,
+    "sha256": "0d972c9c7fc8b388ac7541939341226ffa4d6dffca2610c164dc8d7b636171b9"
+  },
+  {
+    "path": "attempt-5/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "d04b8a58e478d27254ae0cb369195b5a62a211e18b21a3baa39776c1a7b15aa9"
+  },
+  {
+    "path": "attempt-5/hmr-rspack-s-200/acceptance.json",
+    "bytes": 2146,
+    "sha256": "e0f1abfd72f6dbcbbd42c9712bc3d5ee8baca40e8541c253ab9f89fbee9473b9"
+  },
+  {
+    "path": "attempt-5/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 711,
+    "sha256": "14959a21040cfdf29789166eaea929e1902c31bb5ed0fff1761de6e5a83bc15d"
+  },
+  {
+    "path": "attempt-5/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 2177,
+    "sha256": "e4a502f91fbfc0a8a7e419ca1d9852b29b384f375b4c723d06683d0ad41aed7b"
+  },
+  {
+    "path": "attempt-5/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "1d72c5627d98eea87df45086d29639e1cf067773c67e7eb3a762fa956ccfbf56"
+  },
+  {
+    "path": "attempt-5/hmr-vite-s-200/acceptance.json",
+    "bytes": 2142,
+    "sha256": "cc2edce1cfb5993a8d882e5ffd6b37868989c04edaab7ea868124aee671eeb16"
+  },
+  {
+    "path": "attempt-5/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 842,
+    "sha256": "17a4f2d00ca6d0ec5e3101e754a6e1ff7c11e5183d573a36b3b37d67f43c0fc4"
+  },
+  {
+    "path": "attempt-5/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 2166,
+    "sha256": "1c5ca0f20f29b647eaedb047cf85ad6e3972ae55e6c04ff4effab911c5feaa99"
+  },
+  {
+    "path": "attempt-5/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 6812,
+    "sha256": "ca962d4552e6a14864facf56d3c3d7bf0c5c30d46398e0832362dd15c9c70966"
+  },
+  {
+    "path": "attempt-5/hmr-webpack-s-200/acceptance.json",
+    "bytes": 2148,
+    "sha256": "7ab32ef270d2b0d7a20a693625dbe68e554fa4014394fc2edb496b256ad72dd1"
+  },
+  {
+    "path": "attempt-5/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 8117,
+    "sha256": "5e7b6152889f1b86036aea82479bd69ac80f6823b47b006f5c0b001ee96678af"
+  },
+  {
+    "path": "attempt-5/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 2174,
+    "sha256": "22efa346745b40f93beffa18ca7f52e924582a238b4108d76b7a051be955d37b"
+  },
+  {
+    "path": "attempt-6/github-run.json",
+    "bytes": 13843,
+    "sha256": "0bca03ed5dbc718ed08ffce11a6e48f1ca9a92e10dfd6998c69186b0653aa83b"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "80898a1aa7cedaf3853ecbbd194cd8bc9b94e7a0e2c7af9bf4d10d99c7f8a218"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-s-200/acceptance.json",
+    "bytes": 2146,
+    "sha256": "ae0e51582f872c83554ddafb91b20b9693a09d2cf3b43629607170acbd4c7af9"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-xl-5000/acceptance-browser.png",
+    "bytes": 4711,
+    "sha256": "3b3481e749b7edd17972608b7533ae453d7b5f0ca5a2f122a8fcf109db3c3d50"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-xl-5000/acceptance-page.html",
+    "bytes": 146,
+    "sha256": "803fc6c3a106c1711a492fd9c5b84b416850246aff8e45d97076041493b2e0fd"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 424,
+    "sha256": "b5afe6de2c11c2519f633bed5c07ef81eb4fa83272102a9ea5b81d681b16b222"
+  },
+  {
+    "path": "attempt-6/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 1341,
+    "sha256": "a70fcd13f657a3f71308abe3a71ab2ccfa5fa33cc4f6a5090d6666eab74af901"
+  },
+  {
+    "path": "attempt-6/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "be848c46af816eac08311333e6cd7a8cafab85c4a7e4206928ac86d5012fc8b6"
+  },
+  {
+    "path": "attempt-6/hmr-vite-s-200/acceptance.json",
+    "bytes": 2142,
+    "sha256": "6427e4d5dcdee043e274bf3f3699f3c9ff380ed9ca077c163873be724b3d0b0f"
+  },
+  {
+    "path": "attempt-6/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 842,
+    "sha256": "caccd1119af6323eb36d6bd84e5731d8aa736c8cf2e1d64a77bb1bc690d15505"
+  },
+  {
+    "path": "attempt-6/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 2173,
+    "sha256": "6dbd896a4f45df998f56cbbd5ae016cd63d5d2ccd8b902c7a7b2fe757d9a1b22"
+  },
+  {
+    "path": "attempt-6/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 8150,
+    "sha256": "cae43331af99cea5c5c167785a0879485356bdcd5d0f733ea34057f0599993a7"
+  },
+  {
+    "path": "attempt-6/hmr-webpack-s-200/acceptance.json",
+    "bytes": 2148,
+    "sha256": "21d055cc08abb4b505208410c46ea6f7eefed99ef0140e0a2249f92d2be70c62"
+  },
+  {
+    "path": "attempt-6/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 7645,
+    "sha256": "85df2ab520f621c20ae3a9ef0bbb78cb285f2c69a1e95f69b3e03f042d083acd"
+  },
+  {
+    "path": "attempt-6/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 2179,
+    "sha256": "147eb31231e858bfb32ceb8b97a9e73a373b8691796838aaee00b1091738c750"
+  },
+  {
+    "path": "attempt-7/github-run.json",
+    "bytes": 15375,
+    "sha256": "684d819fcd5960d642bb728e09601575cbc755bafe816e0fad47a7283912cf4e"
+  },
+  {
+    "path": "attempt-7/hmr-rspack-s-200/acceptance-server.log",
+    "bytes": 595,
+    "sha256": "ce29280880f51a55c819f79f4791f9fcc0b744f6289fbbfd20e66bae5ace965e"
+  },
+  {
+    "path": "attempt-7/hmr-rspack-s-200/acceptance.json",
+    "bytes": 2533,
+    "sha256": "e842999a5ea728e91d4f318834adc9c5d322439f58288e88a82c17932baf522f"
+  },
+  {
+    "path": "attempt-7/hmr-rspack-xl-5000/acceptance-server.log",
+    "bytes": 653,
+    "sha256": "aae72f91b8ba2b194aa962ce1c2b07fd914dcbcc211b68aff6d424ead86aaa0f"
+  },
+  {
+    "path": "attempt-7/hmr-rspack-xl-5000/acceptance.json",
+    "bytes": 2564,
+    "sha256": "099b167c0d8be48b28e0e18f1112c1f9938e023b2464f06d4f12384d9cf3fdd0"
+  },
+  {
+    "path": "attempt-7/hmr-vite-s-200/acceptance-server.log",
+    "bytes": 731,
+    "sha256": "b04d574d38822db84b035198c0c111c7c05cfce8da4fd54ec3d0414144dbeaec"
+  },
+  {
+    "path": "attempt-7/hmr-vite-s-200/acceptance.json",
+    "bytes": 2466,
+    "sha256": "203c4a126be9c9745096485e128850a23ca6162b2e49da43cc6f10ebfe16d321"
+  },
+  {
+    "path": "attempt-7/hmr-vite-xl-5000/acceptance-server.log",
+    "bytes": 842,
+    "sha256": "85aa11613418fb86576d8b8d2a1b0d243c2110baf873f595ecc0d82528f79e22"
+  },
+  {
+    "path": "attempt-7/hmr-vite-xl-5000/acceptance.json",
+    "bytes": 2497,
+    "sha256": "cc92f1fad1070791af023d8cc07ccd6fc728dbe29e7de9eb4d9621b302ea3243"
+  },
+  {
+    "path": "attempt-7/hmr-webpack-s-200/acceptance-server.log",
+    "bytes": 8091,
+    "sha256": "102bf51a66302147be43d334f8ca4d32875ce4f053b7c5f49ebfe6d7360194ec"
+  },
+  {
+    "path": "attempt-7/hmr-webpack-s-200/acceptance.json",
+    "bytes": 2475,
+    "sha256": "94ef162885186f3223a31335efd7eb5111ef15062b8d3c4754ba4ae3767d652c"
+  },
+  {
+    "path": "attempt-7/hmr-webpack-xl-5000/acceptance-server.log",
+    "bytes": 8176,
+    "sha256": "cf2bce7602c1c12f541648b54e8e6841584dc3820f2cb050a609a4b8290ad9db"
+  },
+  {
+    "path": "attempt-7/hmr-webpack-xl-5000/acceptance.json",
+    "bytes": 2506,
+    "sha256": "f519c898071aa17af98c984664cedba9ff2a7d1e57cc0f83b115c1ddb2f030cc"
+  }
+]

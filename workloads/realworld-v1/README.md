@@ -28,9 +28,22 @@ node scripts/check-excalidraw-browser.mjs /tmp/excalidraw-pinned/excalidraw-app/
 
 The check exercises drawing, movement, reload persistence and SVG export in the original complete app. Unrecognized external requests are blocked and fail acceptance. Exact upstream WOFF2 files are hash-checked and served by local request fixtures, including the production CSS Assistant font paths; the known analytics script receives an empty local response. Native file picking is disabled before application initialization to exercise its existing browser-download fallback. These are declared host/browser harness adaptations, not unmodified offline deployment acceptance. Collaboration, AI, sharing and cloud storage are outside the local interaction scope; their source remains in the upstream build. The Docker build entry disables Sentry, and the harness sets tracking false and disables Husky installation hooks. No application source is edited for the baseline. The upstream HTML independently loads analytics despite the tracking environment flag; the browser harness suppresses that script explicitly.
 
+## Memos actual-backend acceptance
+
+The pinned original Memos build also passed signup/login, Markdown creation, editing, reload and SQLite persistence after backend shutdown in run [36092946515](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36092946515), tested benchmark commit `94106c7`. No API responses were mocked. The bridge serves frontend assets and forwards service requests to the actual loopback backend.
+
+After the frozen frontend build above, use Go 1.27.0 and Node 24.14.0:
+
+```sh
+(cd /tmp/memos-pinned && go build -mod=readonly -o /tmp/memos-server ./cmd/memos)
+node scripts/check-memos-browser.mjs /tmp/memos-pinned /tmp/memos-server /tmp/memos-native-report
+```
+
+The report directory must be new. A local disposable account/database is created and the database is deleted after hash recording and content verification. This baseline acceptance does not establish cross-bundler equivalence or backend performance.
+
 ## Cross-tool adaptation requirements, still open
 
-- **Memos:** Node >=24, React compiler transform, Tailwind 4 plugin, a patched protobuf runtime, and binary Connect RPC. Preserve these dependencies and their semantics. Prefer a locally seeded actual backend for read/create/edit checks; do not silently substitute empty API responses and call that functional acceptance.
+- **Memos:** Node >=24, React compiler transform, Tailwind 4 plugin, a patched protobuf runtime, and binary Connect RPC. Preserve these dependencies and their semantics. Use the verified actual-backend read/create/edit scenario for each adapter; do not silently substitute empty API responses and call that functional acceptance.
 - **Excalidraw:** source-level workspace aliases, Sass, SVG components, dynamic locales, font/WOFF2 processing, HTML environment substitutions and PWA virtual modules. Document a shared transformation policy before substituting build plugins. Keep the complete application graph, including features not exercised by the local browser scenario.
 - Freeze one Node version for the eventual comparison; adopting Node 24 requires revalidating the earlier synthetic and Bulletproof cells. Existing production-v1 validation cannot automatically cover that runtime change.
 - Generate and audit the five adapter lockfiles per app. A newly generated adapter lockfile is not proof of historical dependency versions; retain original upstream locks as provenance.

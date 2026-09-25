@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "before": {
+    "passed": true,
+    "errors": [],
+    "scope": "Configuration/package/lock identity only; source identity is a separate measurement gate"
+  },
+  "after": {
+    "passed": false,
+    "errors": [
+      "rspack/rspack.config.cjs: workspace differs from profile"
+    ],
+    "scope": "Configuration/package/lock identity only; source identity is a separate measurement gate"
+  }
+}

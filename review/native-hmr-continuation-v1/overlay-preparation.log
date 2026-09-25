@@ -1,0 +1,21 @@
+
+🏗️  Generating 50-module project (tier: xs, seed: 42)
+   Output: /private/tmp/empirical-js-bundlers-recovery-20260924/.submission-pilot/xs-50-corrected-dev-overlay-guard-v1/fixture
+
+  [1/6] Planning component graph...
+  [2/6] Building dependency graph...
+  [3/6] Generating components...
+  [4/6] Generating shared utilities & types...
+  [5/6] Generating entry point & config...
+  [6/6] Writing manifest...
+
+✅ Done! Generated 50 components
+   📁 Feature folders: 5
+   🔗 Import edges: 53
+   🗑️  Dead modules: 2 (4.0%)
+   🛣️  Route entries: 0
+   📝 Total source lines: ~8,123
+   📊 Categories: navigation:5, chart-viz:6, data-display:14, form-control:9, feedback:6, data-fetching:3, layout:6, utility:1
+
+/private/tmp/empirical-js-bundlers-recovery-20260924/.submission-pilot/xs-50-corrected-dev-overlay-guard-v1
+/private/tmp/empirical-js-bundlers-recovery-20260924/.submission-pilot/xs-50-corrected-dev-overlay-guard-v1

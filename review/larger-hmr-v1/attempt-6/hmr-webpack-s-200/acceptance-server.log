@@ -1,0 +1,82 @@
+
+> benchmark-production-v1-synthetic-webpack@1.0.0 dev
+> webpack serve --mode development --config webpack.config.cjs --host 127.0.0.1 --port 43759
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://127.0.0.1:43759/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36m/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/s-200-corrected-hmr-expanded-v1/webpack/public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+asset [1m[32mmain.js[39m[22m 3.52 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+asset [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+asset [1m[32msrc_features_notifications_NotificationsGrid_tsx.js[39m[22m 563 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32msrc_features_products_ProductsSearch_tsx.js[39m[22m 516 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32msrc_features_reports_ReportsBottomNav_tsx.js[39m[22m 492 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32msrc_features_analytics_AnalyticsAvatar_tsx.js[39m[22m 446 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32msrc_features_analytics_AnalyticsScroll1_tsx.js[39m[22m 23.3 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32mindex.html[39m[22m 432 bytes [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m 5.68 MiB (4.36 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32mmain.js[39m[22m 3.52 MiB 2 auxiliary assets
+orphan modules 578 KiB [1m[33m[orphan][39m[22m 275 modules
+runtime modules 34.5 KiB 18 modules
+modules by path [1m./src/[39m[22m 3.3 MiB
+  modules by path [1m./src/features/[39m[22m 3.27 MiB 554 modules
+  modules by path [1m./src/*.tsx[39m[22m 25.8 KiB
+    [1m./src/main.tsx[39m[22m 2.09 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./src/App.tsx[39m[22m 23.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  modules by path [1m./src/*.css[39m[22m 4.91 KiB
+    [1m./src/App.css[39m[22m 2.22 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    ./node_modules/css-loader/dist/cjs.js![1m./src/App.css[39m[22m 2.69 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+modules by path [1m./node_modules/[39m[22m 1.99 MiB 235 modules
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 4290 ms
+assets by status 4.15 MiB [1m[32m[cached][39m[22m 6 assets
+assets by status 3.55 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.55 MiB
+    asset [1m[32mmain.js[39m[22m 3.52 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.bb2c5fd8103ca1218396.hot-update.js[39m[22m 30.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 432 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.bb2c5fd8103ca1218396.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 5.71 MiB (4.37 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32mmain.js[39m[22m 3.52 MiB [1m[32mmain.bb2c5fd8103ca1218396.hot-update.js[39m[22m 30.8 KiB 3 auxiliary assets
+cached modules 5.82 MiB [1m[32m[cached][39m[22m 1067 modules
+runtime modules 34.5 KiB 18 modules
+[1m./src/App.tsx[39m[22m 23.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 441 ms
+assets by status 4.15 MiB [1m[32m[cached][39m[22m 6 assets
+assets by status 3.55 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.55 MiB
+    asset [1m[32mmain.js[39m[22m 3.52 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.657d3157a839b90ecb2b.hot-update.js[39m[22m 30.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 432 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.657d3157a839b90ecb2b.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 5.71 MiB (4.37 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32mmain.js[39m[22m 3.52 MiB [1m[32mmain.657d3157a839b90ecb2b.hot-update.js[39m[22m 30.8 KiB 3 auxiliary assets
+cached modules 5.82 MiB [1m[32m[cached][39m[22m 1067 modules
+runtime modules 34.5 KiB 18 modules
+[1m./src/App.tsx[39m[22m 23.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 336 ms
+assets by status 4.15 MiB [1m[32m[cached][39m[22m 6 assets
+assets by status 3.55 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.55 MiB
+    asset [1m[32mmain.js[39m[22m 3.52 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.a9d693dd0398bf54f148.hot-update.js[39m[22m 30.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 432 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.a9d693dd0398bf54f148.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 5.71 MiB (4.37 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32mmain.js[39m[22m 3.52 MiB [1m[32mmain.a9d693dd0398bf54f148.hot-update.js[39m[22m 30.8 KiB 3 auxiliary assets
+cached modules 5.82 MiB [1m[32m[cached][39m[22m 1067 modules
+runtime modules 34.5 KiB 18 modules
+[1m./src/App.tsx[39m[22m 23.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 281 ms
+assets by status 4.15 MiB [1m[32m[cached][39m[22m 6 assets
+assets by status 3.55 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.55 MiB
+    asset [1m[32mmain.js[39m[22m 3.52 MiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.b0efebeadf376f70b308.hot-update.js[39m[22m 30.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 432 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.b0efebeadf376f70b308.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 5.71 MiB (4.37 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-538ea2.js[39m[22m 2.16 MiB [1m[32mmain.js[39m[22m 3.52 MiB [1m[32mmain.b0efebeadf376f70b308.hot-update.js[39m[22m 30.8 KiB 3 auxiliary assets
+cached modules 5.82 MiB [1m[32m[cached][39m[22m 1067 modules
+runtime modules 34.5 KiB 18 modules
+[1m./src/App.tsx[39m[22m 23.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 289 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...

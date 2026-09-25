@@ -1,0 +1,79 @@
+{
+  "kind": "real-component-hmr-correctness-not-latency-data",
+  "tool": "vite",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xl-5000-corrected-hmr-expanded-v1/vite",
+  "publicationEligible": false,
+  "heading": "MegaRepo",
+  "passed": true,
+  "edits": [
+    {
+      "edit": 1,
+      "text": "MegaRepo edit 1",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 2,
+      "text": "MegaRepo edit 2",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 3,
+      "text": "MegaRepo edit 3",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    }
+  ],
+  "errors": [],
+  "originalSourceSha256": "96f389880f3d09becac07584bfaac032e9fd39da28383c49759438bdb2565b41",
+  "fixture": {
+    "generatorVersion": "submission-v2-bounded-graph",
+    "reachableComponents": 4750,
+    "expandedRenderUpperBound": 6096,
+    "maxImportDepth": 5,
+    "generatedAt": "2026-09-25T04:03:45.403Z",
+    "seed": 42,
+    "size": 5000,
+    "tier": "xl",
+    "components": 5000,
+    "deadModules": 250,
+    "routeEntries": 50,
+    "totalImportEdges": 6046,
+    "totalSourceLines": 796323,
+    "featureFolders": 50,
+    "categoryDistribution": {
+      "navigation": 510,
+      "chart-viz": 515,
+      "data-display": 1277,
+      "form-control": 738,
+      "feedback": 514,
+      "data-fetching": 440,
+      "layout": 752,
+      "utility": 254
+    }
+  },
+  "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+  "browserVersion": "Chrome/153.0.8010.52",
+  "stateRoute": "/auth",
+  "stateControl": {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "AuthFileUpload",
+    "id": "AuthFileUpload-field"
+  },
+  "phase": "reload-control",
+  "initialState": "hmr-state-sentinel",
+  "reloadControlDetected": true,
+  "sourceRestored": true,
+  "serverStopped": true
+}
