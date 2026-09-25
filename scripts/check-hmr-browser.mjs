@@ -61,26 +61,31 @@ try {
   }
   if (!selected) throw new Error('No visible editable text state in declared application routes');
   report.stateRoute = new URL(page.url()).pathname;
-  const input = '[data-benchmark-state-input="true"]';
-  report.stateControl = await page.$eval(input, element => ({ tag: element.tagName, type: element.type, name: element.name }));
+  const marked = '[data-benchmark-state-input="true"]';
+  report.stateControl = await page.$eval(marked, element => ({ tag: element.tagName, type: element.type, name: element.name, id: element.id }));
+  const input = report.stateControl.tag.toLowerCase() + `[id=${JSON.stringify(report.stateControl.id)}]`;
+  report.phase = 'enter-state';
   await page.type(input, 'hmr-state-sentinel');
   const state = await page.$eval(input, element => element.value);
   if (!state.includes('hmr-state-sentinel')) throw new Error('State sentinel was not stored in the application control');
+  report.initialState = state;
   const token = randomUUID();
   await page.evaluate(token => { window.__benchmarkDocumentToken = token; }, token);
   let navigations = 0;
   page.on('framenavigated', frame => { if (frame === page.mainFrame()) navigations++; });
   for (let edit = 1; edit <= 3; edit++) {
+    report.phase = `edit-${edit}`;
     const text = `${heading} edit ${edit}`;
     fs.writeFileSync(source, original.replace(headingMarkup, headingMarkup.replace(heading, text)));
     await page.waitForFunction(text => document.querySelector('h1')?.textContent === text, { timeout: 60000 }, text);
     const observedToken = await page.evaluate(() => window.__benchmarkDocumentToken);
     const observedState = await page.$eval(input, element => element.value);
     const passed = observedToken === token && observedState === state && navigations === 0;
-    report.edits.push({ edit, text, statePreserved: observedState === state, documentPreserved: observedToken === token, navigations, passed });
+    report.edits.push({ edit, text, statePreserved: observedState === state, documentPreserved: observedToken === token, navigations, passed, observedState });
     if (!passed) throw new Error(`Edit ${edit} caused reload or lost application state`);
   }
   // Positive control for the detector: an intentional reload must be detected.
+  report.phase = 'reload-control';
   await page.reload({ waitUntil: 'networkidle0', timeout: 30000 });
   report.reloadControlDetected = navigations > 0 && await page.evaluate(() => window.__benchmarkDocumentToken) !== token;
   if (!report.reloadControlDetected) throw new Error('Reload detector failed its control');

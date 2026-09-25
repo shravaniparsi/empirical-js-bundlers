@@ -5,6 +5,7 @@ import http from 'node:http';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
 import assert from 'node:assert/strict';
+import { DatabaseSync } from 'node:sqlite';
 import puppeteer from 'puppeteer';
 import { verifySource, sha256 } from './verify-realworld-source.mjs';
 const [sourceArg, binaryArg, reportArg] = process.argv.slice(2);
@@ -87,6 +88,8 @@ try {
   assert(report.responses.some(response => response.url.includes('CreateMemo') && response.status === 200));
   assert(report.responses.some(response => response.url.includes('UpdateMemo') && response.status === 200));
   report.checks.actualWriteResponses = true;
+  const unexpectedConsole = report.console.filter(message => message.type === 'error' && !(message.text.includes('401 (Unauthorized)') && report.responses.some(response => response.expectedAnonymousRefresh)));
+  assert.equal(unexpectedConsole.length, 0, 'Unexpected console errors: ' + JSON.stringify(unexpectedConsole));
   assert.equal(report.errors.length, 0, 'Browser/network errors');
   report.sourceAfter = verifySource('memos', source); report.passed = true;
 } catch (error) { report.errors.push(error.message); }
@@ -99,7 +102,18 @@ finally {
   report.backendExitCode = backend.exitCode; report.backendSignal = backend.signalCode;
   // Database contains disposable authentication material: retain hashes, never publish the database.
   report.databaseFiles = fs.readdirSync(data).filter(name => fs.statSync(path.join(data, name)).isFile()).map(name => ({ name, sha256: sha256(fs.readFileSync(path.join(data, name))) }));
-  fs.rmSync(data, { recursive: true });
+  try {
+    if (report.passed) {
+      const dbFile = fs.readdirSync(data).find(name => name.endsWith('.db'));
+      const db = new DatabaseSync(path.join(data, dbFile), { readOnly: true });
+      try {
+        const rows = db.prepare('SELECT content FROM memo').all();
+        assert.equal(rows.length, 1); assert.equal(rows[0].content, '**Benchmark edited note**\n\nPersist this exact revision.');
+        report.checks.sqlitePersistenceAfterShutdown = true;
+      } finally { db.close(); }
+    }
+  } catch (error) { report.passed = false; report.errors.push(error.message); }
+  finally { fs.rmSync(data, { recursive: true }); }
   fs.writeFileSync(path.join(reportDir, 'browser.json'), JSON.stringify(report, null, 2) + '\n');
 }
 console.log(JSON.stringify({ passed: report.passed, checks: report.checks, errors: report.errors })); process.exitCode = report.passed ? 0 : 1;
