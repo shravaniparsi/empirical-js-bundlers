@@ -61,7 +61,7 @@ try {
   await page.click('[data-new-memo-trigger]');
   await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
   await page.locator('.cm-content[contenteditable="true"]').click();
-  await page.keyboard.insertText('**Benchmark original note**\n\nActual local SQLite acceptance.');
+  await page.keyboard.sendCharacter('**Benchmark original note**\n\nActual local SQLite acceptance.');
   await page.waitForFunction(() => document.querySelector('.cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark original note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark original note'));
@@ -75,7 +75,7 @@ try {
   });
   await page.locator('[data-benchmark-edit-target="true"]').click();
   await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
-  await page.keyboard.insertText('**Benchmark edited note**\n\nPersist this exact revision.');
+  await page.keyboard.sendCharacter('**Benchmark edited note**\n\nPersist this exact revision.');
   await page.waitForFunction(() => document.querySelector('[data-benchmark-edit-target="true"]')?.textContent.includes('**Benchmark edited note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark edited note'));
