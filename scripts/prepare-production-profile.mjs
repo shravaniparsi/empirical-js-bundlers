@@ -18,6 +18,9 @@ const profile=path.join(root,'profiles/production-v1');
 const receipt={profile:'production-v1',publicationEligible:false,kind,size:kind==='synthetic'?size:null,contractSha256:hash(path.join(profile,'contract.json')),tools:{}};
 for(const tool of ['vite','rspack','esbuild','webpack','rollup']){
  const source=path.join(profile,kind,tool),target=path.join(dir,tool);
+ const required=JSON.parse(fs.readFileSync(path.join(target,'package.json'))).dependencies??{};
+ const provided=JSON.parse(fs.readFileSync(path.join(source,'package.json'))).dependencies??{};
+ for(const name of Object.keys(required))if(!provided[name])throw Error(`Profile omits fixture dependency ${name}`);
  const files={};
  for(const name of fs.readdirSync(source)){
   if(!/\.(json|mjs|cjs|ts)$/.test(name))continue;

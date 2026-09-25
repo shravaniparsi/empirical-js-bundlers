@@ -38,7 +38,7 @@ jobs:
           browser_path="$(command -v google-chrome)"
           "$browser_path" --version >> cloud-profile-evidence/host.txt
           printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
-      - run: node --test scripts/generator.test.mjs scripts/production-contract.test.mjs
+      - run: node --test scripts/generator.test.mjs scripts/production-contract.test.mjs scripts/production-profile-audit.test.mjs
       - run: node scripts/audit-production-profile.mjs cloud-profile-evidence/dependency-audit.json
       - name: Build and verify frozen profile
         run: node scripts/run-production-profile.mjs synthetic '${{ matrix.size }}' cloud-profile-evidence/check '${{ matrix.tool }}'
