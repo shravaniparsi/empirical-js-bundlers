@@ -1,0 +1,48 @@
+name: Real-world upstream feasibility
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'scripts/*realworld*'
+      - 'workloads/realworld-v1/**'
+      - '.github/workflows/realworld-baseline.yml'
+permissions:
+  contents: read
+jobs:
+  upstream:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: memos
+            repository: usememos/memos
+            ref: 05a2c6db7a3e926c9142a635f42f7af0f078c81d
+            manager: pnpm@11.0.1
+          - app: excalidraw
+            repository: excalidraw/excalidraw
+            ref: 5db42c3ddbbdc44d10120ab2f18e0864d083e268
+            manager: yarn@1.22.22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: '${{ matrix.repository }}'
+          ref: '${{ matrix.ref }}'
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - run: npm install --global '${{ matrix.manager }}' --no-audit --no-fund
+      - name: Verify source, install frozen dependencies and build upstream application
+        run: node scripts/run-realworld-baseline.mjs '${{ matrix.app }}' upstream baseline-evidence
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: upstream-${{ matrix.app }}
+          path: baseline-evidence/
+          retention-days: 30

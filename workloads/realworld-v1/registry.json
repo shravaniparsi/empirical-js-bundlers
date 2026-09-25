@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Upstream feasibility; not the comparative production profile",
+  "applications": [
+    {
+      "id": "memos",
+      "repository": "https://github.com/usememos/memos.git",
+      "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+      "license": {
+        "path": "LICENSE",
+        "bytes": 1062,
+        "sha256": "dadc85262cec40d1344736b57da50814194ff721ab98012c09cd9d35c4b8582a"
+      },
+      "lockfile": {
+        "path": "web/pnpm-lock.yaml",
+        "bytes": 177336,
+        "sha256": "6ddc14634290e7fb3f97081e172ca0a37b7cef95809002f9af9a27201b4e02df"
+      },
+      "frontendDirectory": "web",
+      "packageManager": "pnpm@11.0.1",
+      "baselineNode": "24.14.0",
+      "build": [
+        "pnpm",
+        "build"
+      ],
+      "outputDirectory": "web/dist",
+      "status": "screening",
+      "publicationEligible": false,
+      "sourceFiles": 1307,
+      "sourceBytes": 12032591,
+      "scriptModules": 653,
+      "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a"
+    },
+    {
+      "id": "excalidraw",
+      "repository": "https://github.com/excalidraw/excalidraw.git",
+      "commit": "5db42c3ddbbdc44d10120ab2f18e0864d083e268",
+      "license": {
+        "path": "LICENSE",
+        "bytes": 1067,
+        "sha256": "1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be"
+      },
+      "lockfile": {
+        "path": "yarn.lock",
+        "bytes": 517669,
+        "sha256": "2fceed8bdb8180b2d14ab0db6010f48b05da0f3a772e218a7024e88ca7a7c76e"
+      },
+      "frontendDirectory": ".",
+      "packageManager": "yarn@1.22.22",
+      "baselineNode": "24.14.0",
+      "build": [
+        "yarn",
+        "--cwd",
+        "excalidraw-app",
+        "build:app:docker"
+      ],
+      "outputDirectory": "excalidraw-app/build",
+      "status": "screening",
+      "publicationEligible": false,
+      "sourceFiles": 1297,
+      "sourceBytes": 56309490,
+      "scriptModules": 692,
+      "inventorySha256": "1645f0400e7c5ccbad50f0d8e5ba967df6bd06e3d26fe84b88aa7d119a4e8f01"
+    }
+  ]
+}
