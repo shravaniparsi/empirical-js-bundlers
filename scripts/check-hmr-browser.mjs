@@ -42,8 +42,26 @@ try {
   page.on('pageerror', error => report.errors.push(error.message));
   await page.goto(origin, { waitUntil: 'networkidle0', timeout: 180000 });
   await page.waitForFunction(heading => document.querySelector('h1')?.textContent === heading, { timeout: 60000 }, heading);
-  const input = 'input:not([type="hidden"]):not([disabled])';
-  await page.waitForSelector(input, { timeout: 10000 });
+  // Large fixtures may place editable state only in lazy routes. Select the
+  // first visible text control in home/nav order, before installing the detector.
+  const selectStateControl = () => {
+    const candidate = [...document.querySelectorAll('input:not([type]), input[type="text"], input[type="email"], input[type="search"], textarea')]
+      .find(element => !element.disabled && !element.readOnly && element.getBoundingClientRect().width > 0 && element.getBoundingClientRect().height > 0);
+    if (!candidate) return false;
+    candidate.setAttribute('data-benchmark-state-input', 'true'); return true;
+  };
+  let selected = await page.evaluate(selectStateControl);
+  const routes = await page.$$eval('.nav-links a', links => links.map(link => new URL(link.href).pathname));
+  for (const route of routes) {
+    if (selected) break;
+    await page.click(`.nav-links a[href=${JSON.stringify(route)}]`);
+    await page.waitForFunction(route => location.pathname === route && !document.querySelector('.loading'), { timeout: 60000 }, route);
+    selected = await page.evaluate(selectStateControl);
+  }
+  if (!selected) throw new Error('No visible editable text state in declared application routes');
+  report.stateRoute = new URL(page.url()).pathname;
+  const input = '[data-benchmark-state-input="true"]';
+  report.stateControl = await page.$eval(input, element => ({ tag: element.tagName, type: element.type, name: element.name }));
   await page.type(input, 'hmr-state-sentinel');
   const state = await page.$eval(input, element => element.value);
   const token = randomUUID();
