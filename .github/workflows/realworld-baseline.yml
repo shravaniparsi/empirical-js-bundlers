@@ -47,6 +47,7 @@ jobs:
           PUPPETEER_SKIP_DOWNLOAD: 'true'
         run: npm ci --include=dev --no-audit --no-fund
       - name: Exercise local drawing, editing, persistence and SVG export
+        timeout-minutes: 5
         if: matrix.app == 'excalidraw'
         run: |
           export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"

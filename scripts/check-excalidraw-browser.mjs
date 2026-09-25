@@ -44,7 +44,7 @@ try {
   report.browserVersion = await browser.version();
   page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 1000 });
-  await page.evaluateOnNewDocument(() => { delete window.showSaveFilePicker; });
+  await page.evaluateOnNewDocument(() => { delete window.showOpenFilePicker; delete window.showSaveFilePicker; delete window.showDirectoryPicker; });
   await page.setRequestInterception(true);
   page.on('request', request => {
     if (request.url().startsWith(origin + '/') || /^(data:|blob:)/.test(request.url())) request.continue();
