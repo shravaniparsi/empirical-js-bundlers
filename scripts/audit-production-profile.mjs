@@ -15,7 +15,8 @@ for(const kind of ['synthetic','realworld']){
    for(const name of new Set([...Object.keys(data.dependencies??{}),...Object.keys(data.optionalDependencies??{}),...Object.keys(data.peerDependencies??{})])){const dest=resolve(key,name);if(dest){edges.add(label+' -> '+name+'@'+l.packages[dest].version);visit(dest);}else if(data.dependencies?.[name]&&!data.optionalDependencies?.[name])errors.push(`${kind}/${tool}: unresolved runtime dependency ${name}`);}
   }
   for(const name of Object.keys(p.dependencies))visit(resolve('',name));
-  const closure={nodes:[...nodes].sort(),edges:[...edges].sort()};const closureText=JSON.stringify(closure);if(expectedClosure&&expectedClosure!==closureText)errors.push(`${kind}/${tool}: application dependency closure differs`);expectedClosure??=closureText;
+  const counts={};for(const key of seen){const label=key.split('node_modules/').at(-1)+'@'+l.packages[key].version;counts[label]=(counts[label]??0)+1;}
+  const closure={nodes:[...nodes].sort(),edges:[...edges].sort(),instances:Object.fromEntries(Object.entries(counts).sort())};const closureText=JSON.stringify(closure);if(expectedClosure&&expectedClosure!==closureText)errors.push(`${kind}/${tool}: application dependency closure differs`);expectedClosure??=closureText;
   inventory[kind][tool]={application:sorted,closure,resolved:Object.fromEntries(Object.entries(l.packages).filter(([k])=>k).map(([k,v])=>[k,{version:v.version,integrity:v.integrity}]))};
  }
 }
