@@ -40,6 +40,16 @@ jobs:
       - run: npm install --global '${{ matrix.manager }}' --no-audit --no-fund
       - name: Verify source, install frozen dependencies and build upstream application
         run: node scripts/run-realworld-baseline.mjs '${{ matrix.app }}' upstream baseline-evidence
+      - name: Install browser harness dependencies
+        if: matrix.app == 'excalidraw'
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Exercise local drawing, editing, persistence and SVG export
+        if: matrix.app == 'excalidraw'
+        run: |
+          export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"
+          node scripts/check-excalidraw-browser.mjs upstream/excalidraw-app/build baseline-evidence/browser
       - uses: actions/upload-artifact@v4
         if: always()
         with:
