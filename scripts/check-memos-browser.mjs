@@ -60,11 +60,17 @@ try {
   await page.locator('button[type="submit"]').click();
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
   await page.click('[data-new-memo-trigger]');
-  await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
-  await page.locator('.cm-content[contenteditable="true"]').click();
+  const composer = '[role="dialog"] .cm-content[contenteditable="true"]';
+  await page.waitForSelector(composer, { visible: true });
+  await page.locator(composer).click();
   await page.keyboard.sendCharacter('**Benchmark original note**\n\nActual local SQLite acceptance.');
-  await page.waitForFunction(() => document.querySelector('.cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark original note**'));
-  await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
+  await page.waitForFunction(() => {
+    const editor = document.querySelector('[role="dialog"] .cm-content[contenteditable="true"]');
+    const save = [...document.querySelectorAll('[role="dialog"] button')].find(button => button.textContent.trim().startsWith('Save') && !button.disabled);
+    if (!editor?.textContent.includes('**Benchmark original note**') || !save) return false;
+    save.setAttribute('data-benchmark-save', 'true'); return true;
+  });
+  await page.locator('[data-benchmark-save="true"]').click();
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark original note'));
   report.checks.createAndRenderMarkdown = true;
   await page.click('[data-slot="memo-header-actions"] button[aria-label="More"]');
