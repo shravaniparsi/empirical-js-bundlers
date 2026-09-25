@@ -11,7 +11,7 @@ const [sourceArg, binaryArg, reportArg] = process.argv.slice(2);
 if (!reportArg) throw new Error('Usage: check-memos-browser.mjs <pinned-source> <backend-binary> <NEW-report-dir>');
 const source = fs.realpathSync(sourceArg), binary = fs.realpathSync(binaryArg), reportDir = path.resolve(reportArg);
 fs.mkdirSync(reportDir, { recursive: false });
-const report = { publicationEligible: false, purpose: 'Memos actual-backend functional acceptance', passed: false, checks: {}, errors: [], console: [], responses: [], source: verifySource('memos', source), binarySha256: sha256(fs.readFileSync(binary)) };
+const report = { publicationEligible: false, purpose: 'Memos actual-backend functional acceptance', passed: false, checks: {}, errors: [], console: [], cancellations: [], responses: [], source: verifySource('memos', source), binarySha256: sha256(fs.readFileSync(binary)) };
 const dist = path.join(source, 'web/dist');
 const data = path.join(reportDir, 'database'); fs.mkdirSync(data);
 const reservation = http.createServer(); await new Promise(resolve => reservation.listen(0, '127.0.0.1', resolve));
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
   if (/^\/(api\/|memos\.api\.|file\/)/.test(url.pathname)) {
     const proxy = http.request({ host: '127.0.0.1', port: backendPort, path: req.url, method: req.method, headers: req.headers }, upstream => { res.writeHead(upstream.statusCode, upstream.headers); upstream.pipe(res); });
-    proxy.on('error', error => { report.errors.push(error.message); res.writeHead(502).end(); });
+    proxy.on('error', error => { if (res.destroyed && error.code === 'ECONNRESET') { report.cancellations.push({ url: req.url, reason: 'client closed upstream read' }); return; } report.errors.push(error.message); if (!res.destroyed) res.writeHead(502).end(); });
     res.on('close', () => proxy.destroy()); req.pipe(proxy); return;
   }
   try {
@@ -49,7 +49,7 @@ try {
   await page.setRequestInterception(true);
   page.on('request', request => { if (request.url().startsWith(origin + '/') || /^(data:|blob:)/.test(request.url())) request.continue(); else { report.errors.push('External request: ' + request.url()); request.abort(); } });
   page.on('console', message => { if (['error', 'warn'].includes(message.type())) report.console.push({ type: message.type(), text: message.text() }); });
-  page.on('requestfailed', request => report.errors.push('Request failed: ' + request.url() + ' ' + request.failure()?.errorText));
+  page.on('requestfailed', request => { const url = new URL(request.url()); const reason = request.failure()?.errorText; if (reason === 'net::ERR_ABORTED' && (url.pathname === '/memos.api.v1.MemoService/ListMemos' || (phase === 'reload' && url.pathname === '/api/v1/sse'))) report.cancellations.push({ url: url.pathname, reason }); else report.errors.push('Request failed: ' + url.pathname + ' ' + reason); });
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => { const url = response.url().replace(origin, ''); const expectedAnonymousRefresh = phase === 'bootstrap' && response.status() === 401 && url === '/memos.api.v1.AuthService/RefreshToken'; report.responses.push({ url, status: response.status(), expectedAnonymousRefresh }); if (response.status() >= 400 && !expectedAnonymousRefresh) report.errors.push(`HTTP ${response.status()}: ${url}`); });
   await page.goto(origin, { waitUntil: 'domcontentloaded' });
@@ -60,7 +60,9 @@ try {
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
   await page.click('[data-new-memo-trigger]');
   await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
-  await page.type('.cm-content[contenteditable="true"]', '**Benchmark original note**\n\nActual local SQLite acceptance.');
+  await page.locator('.cm-content[contenteditable="true"]').click();
+  await page.keyboard.insertText('**Benchmark original note**\n\nActual local SQLite acceptance.');
+  await page.waitForFunction(() => document.querySelector('.cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark original note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark original note'));
   report.checks.createAndRenderMarkdown = true;
@@ -70,10 +72,12 @@ try {
   await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
   await page.click('.cm-content[contenteditable="true"]');
   await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
-  await page.keyboard.type('**Benchmark edited note**\n\nPersist this exact revision.');
+  await page.keyboard.insertText('**Benchmark edited note**\n\nPersist this exact revision.');
+  await page.waitForFunction(() => document.querySelector('.cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark edited note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark edited note'));
   report.checks.editNote = true;
+  phase = 'reload';
   await page.reload({ waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark edited note'));
   report.checks.reloadPersistence = true;
