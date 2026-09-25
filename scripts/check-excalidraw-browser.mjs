@@ -3,16 +3,33 @@ import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
 import assert from 'node:assert/strict';
+import { sha256, verifySource } from './verify-realworld-source.mjs';
 import puppeteer from 'puppeteer';
-const [distArg, reportArg] = process.argv.slice(2);
-if (!distArg || !reportArg) throw new Error('Usage: check-excalidraw-browser.mjs <dist> <NEW-report-dir>');
+const [distArg, reportArg, upstreamArg] = process.argv.slice(2);
+if (!distArg || !reportArg || !upstreamArg) throw new Error('Usage: check-excalidraw-browser.mjs <dist> <NEW-report-dir> <pinned-upstream-dir>');
 const dist = fs.realpathSync(distArg), reportDir = path.resolve(reportArg);
 fs.mkdirSync(reportDir, { recursive: false });
-const report = { publicationEligible: false, purpose: 'Upstream offline functional acceptance', passed: false, checks: {}, errors: [], externalRequests: [], responses: [] };
+const upstream = fs.realpathSync(upstreamArg);
+verifySource('excalidraw', upstream);
+const fontRoot = path.join(upstream, 'packages/excalidraw/fonts');
+const inventory = JSON.parse(fs.readFileSync(new URL('../workloads/realworld-v1/excalidraw/source-inventory.json', import.meta.url)));
+const fontFiles = inventory.filter(file => file.path.startsWith('packages/excalidraw/fonts/') && file.path.endsWith('.woff2'));
+function fontResponse(relativePath) {
+  const record = fontFiles.find(file => file.path === 'packages/excalidraw/fonts/' + relativePath);
+  if (!record) throw new Error('Unregistered font: ' + relativePath);
+  const body = fs.readFileSync(path.join(fontRoot, relativePath));
+  assert.equal(sha256(body), record.sha256);
+  report.fontFixtures.push({ path: relativePath, sha256: record.sha256 });
+  return body;
+}
+const report = { publicationEligible: false, purpose: 'Upstream offline functional acceptance', passed: false, checks: {}, errors: [], externalRequests: [], fontFixtures: [], suppressedAnalyticsRequests: [], harnessAdaptations: ['Pinned upstream font files served as local CDN fixtures', 'Known analytics script replaced with an empty local response', 'Native save picker disabled to exercise upstream browser download fallback'] };
 const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.json': 'application/json', '.webmanifest': 'application/manifest+json' };
 const server = http.createServer((req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    if (/^\/assets\/Assistant-(Regular|Medium|SemiBold|Bold)\.woff2$/.test(pathname)) {
+      res.writeHead(200, { 'Content-Type': 'font/woff2' }); return res.end(fontResponse('Assistant/' + path.basename(pathname)));
+    }
     const file = path.resolve(dist, '.' + (pathname === '/' ? '/index.html' : pathname));
     if (!file.startsWith(dist + path.sep) || !fs.existsSync(file) || !fs.statSync(file).isFile()) return res.writeHead(404).end();
     res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream' });
@@ -27,10 +44,16 @@ try {
   report.browserVersion = await browser.version();
   page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 1000 });
+  await page.evaluateOnNewDocument(() => { delete window.showSaveFilePicker; });
   await page.setRequestInterception(true);
   page.on('request', request => {
     if (request.url().startsWith(origin + '/') || /^(data:|blob:)/.test(request.url())) request.continue();
-    else { report.externalRequests.push(request.url()); request.abort(); }
+    else if (request.url().startsWith('https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/')) {
+      try { const name = decodeURIComponent(new URL(request.url()).pathname.slice('/oss/fonts/'.length)); request.respond({ status: 200, contentType: 'font/woff2', body: fontResponse(name) }); }
+      catch (error) { report.errors.push(error.message); request.abort(); }
+    } else if (request.url() === 'https://scripts.simpleanalyticscdn.com/latest.js') {
+      report.suppressedAnalyticsRequests.push(request.url()); request.respond({ status: 200, contentType: 'text/javascript', body: '/* analytics intentionally disabled by local acceptance harness */' });
+    } else { report.externalRequests.push(request.url()); request.abort(); }
   });
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) report.errors.push(`HTTP ${response.status()}: ${response.url().replace(origin, '')}`); });
