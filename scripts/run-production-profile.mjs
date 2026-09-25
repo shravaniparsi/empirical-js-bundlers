@@ -1,4 +1,5 @@
 /** Serial correctness only. No timing claims; strict npm ci, no dependency fallback. */
+import {verifyConfiguration} from './verify-production-configuration.mjs';
 import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
 const kind=process.argv[2],size=process.argv[3]??'xs-50',output=process.argv[4],only=process.argv[5];
 if(!['synthetic','realworld'].includes(kind)||!output||fs.existsSync(output))throw Error('Usage: run-production-profile.mjs <synthetic|realworld> <size|app> <new-report-dir> [tool]');
@@ -8,6 +9,7 @@ const root=path.resolve('.submission-pilot',kind==='synthetic'?`${size}-correcte
 if(!fs.existsSync(root)){
  const r=spawnSync(process.execPath,['scripts/prepare-production-profile.mjs',kind,size],{stdio:'inherit'});if(r.status!==0)throw Error('Preparation failed');
 }
+const verified=verifyConfiguration(root);if(!verified.passed)throw Error(verified.errors.join('\n'));
 fs.copyFileSync(path.join(root,'profile.json'),path.join(output,'profile.json'));
 const rows=[];
 for(const tool of only?[only]:tools){
