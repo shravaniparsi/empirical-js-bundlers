@@ -1,0 +1,43 @@
+name: Larger workload HMR acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths: ['scripts/check-hmr-browser.mjs', '.github/workflows/larger-hmr.yml']
+permissions:
+  contents: read
+jobs:
+  hmr:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+        size: [s-200, xl-5000]
+    env:
+      PROFILE_REVISION: hmr-expanded-v1
+      PUPPETEER_SKIP_DOWNLOAD: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+      - run: npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-hmr-expanded-v1/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Validate edits, state persistence, reload detection and restoration
+        timeout-minutes: 12
+        run: |
+          mkdir hmr-evidence
+          export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"
+          node scripts/check-hmr-browser.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-hmr-expanded-v1/${{ matrix.tool }}' hmr-evidence/acceptance.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hmr-${{ matrix.tool }}-${{ matrix.size }}
+          path: hmr-evidence/
+          retention-days: 30

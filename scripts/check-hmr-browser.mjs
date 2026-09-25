@@ -11,9 +11,11 @@ const workspace = fs.realpathSync(workspaceArg), reportPath = path.resolve(repor
 if (fs.existsSync(reportPath)) throw new Error('Refusing to overwrite an HMR report');
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 const source = path.join(workspace, 'src/App.tsx'), original = fs.readFileSync(source, 'utf8');
-if (!original.includes('<h1>TaskBoard</h1>')) throw new Error('This HMR scenario requires the 50-module TaskBoard fixture');
+const headings = [...original.matchAll(/<h1(?:\s[^>]*)?>([^<{]+)<\/h1>/g)];
+if (headings.length !== 1) throw new Error('Expected exactly one literal application heading');
+const headingMarkup = headings[0][0], heading = headings[0][1];
 const hash = value => createHash('sha256').update(value).digest('hex');
-const report = { kind: 'real-component-hmr-correctness-not-latency-data', tool, workspace, passed: false, edits: [], errors: [], originalSourceSha256: hash(original) };
+const report = { kind: 'real-component-hmr-correctness-not-latency-data', tool, workspace, publicationEligible: false, heading, passed: false, edits: [], errors: [], originalSourceSha256: hash(original) };
 const reserve = http.createServer();
 await new Promise(resolve => reserve.listen(0, '127.0.0.1', resolve));
 const port = reserve.address().port;
@@ -26,7 +28,7 @@ server.on('error', error => report.errors.push(error.message));
 let browser;
 try {
   const origin = `http://127.0.0.1:${port}`;
-  const deadline = Date.now() + 60000;
+  const deadline = Date.now() + 180000;
   let ready = false;
   while (Date.now() < deadline && !ready) {
     if (server.exitCode !== null) throw new Error('Development server exited before readiness');
@@ -38,8 +40,8 @@ try {
   report.browserVersion = await browser.version();
   const page = await browser.newPage();
   page.on('pageerror', error => report.errors.push(error.message));
-  await page.goto(origin, { waitUntil: 'networkidle0', timeout: 60000 });
-  await page.waitForFunction(() => document.querySelector('h1')?.textContent === 'TaskBoard', { timeout: 30000 });
+  await page.goto(origin, { waitUntil: 'networkidle0', timeout: 180000 });
+  await page.waitForFunction(heading => document.querySelector('h1')?.textContent === heading, { timeout: 60000 }, heading);
   const input = 'input:not([type="hidden"]):not([disabled])';
   await page.waitForSelector(input, { timeout: 10000 });
   await page.type(input, 'hmr-state-sentinel');
@@ -49,9 +51,9 @@ try {
   let navigations = 0;
   page.on('framenavigated', frame => { if (frame === page.mainFrame()) navigations++; });
   for (let edit = 1; edit <= 3; edit++) {
-    const text = `TaskBoard edit ${edit}`;
-    fs.writeFileSync(source, original.replace('<h1>TaskBoard</h1>', `<h1>${text}</h1>`));
-    await page.waitForFunction(text => document.querySelector('h1')?.textContent === text, { timeout: 20000 }, text);
+    const text = `${heading} edit ${edit}`;
+    fs.writeFileSync(source, original.replace(headingMarkup, headingMarkup.replace(heading, text)));
+    await page.waitForFunction(text => document.querySelector('h1')?.textContent === text, { timeout: 60000 }, text);
     const observedToken = await page.evaluate(() => window.__benchmarkDocumentToken);
     const observedState = await page.$eval(input, element => element.value);
     const passed = observedToken === token && observedState === state && navigations === 0;
