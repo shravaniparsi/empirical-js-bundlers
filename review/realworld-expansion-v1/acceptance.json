@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "publicationEligible": false,
+  "testedCommit": "fa6331e0e53c07c35593bc24d77582cf49d4d322",
+  "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36091272714",
+  "memos": {
+    "originalFrozenBuild": true,
+    "sourceIntegrity": true,
+    "browserAcceptance": false,
+    "fiveToolAcceptance": false
+  },
+  "excalidraw": {
+    "originalFrozenBuild": true,
+    "sourceIntegrity": true,
+    "localBrowserChecks": {
+      "uiFontsLoaded": true,
+      "canvasVisible": true,
+      "drawRectangle": true,
+      "moveRectangle": true,
+      "reloadPersistence": true,
+      "svgExport": true
+    },
+    "harnessAdaptations": [
+      "Pinned upstream font files served as local CDN fixtures",
+      "Known analytics script replaced with an empty local response",
+      "Native save picker disabled to exercise upstream browser download fallback"
+    ],
+    "fiveToolAcceptance": false
+  },
+  "historicalCorpusModified": false,
+  "newPrimaryMeasurements": 0,
+  "retainedAttempts": 5
+}

@@ -1,0 +1,21 @@
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /private/tmp/memos-reproduction-20260924/.git/
+From https://github.com/usememos/memos
+ * branch            05a2c6db7a3e926c9142a635f42f7af0f078c81d -> FETCH_HEAD
+HEAD is now at 05a2c6d chore: replace bird sprites with ink empty states
+{
+  "id": "memos",
+  "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+  "filesVerified": 1307,
+  "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+  "publicationEligible": false
+}
