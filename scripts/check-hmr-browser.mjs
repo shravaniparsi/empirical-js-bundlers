@@ -15,7 +15,7 @@ const headings = [...original.matchAll(/<h1(?:\s[^>]*)?>([^<{]+)<\/h1>/g)];
 if (headings.length !== 1) throw new Error('Expected exactly one literal application heading');
 const headingMarkup = headings[0][0], heading = headings[0][1];
 const hash = value => createHash('sha256').update(value).digest('hex');
-const report = { kind: 'real-component-hmr-correctness-not-latency-data', tool, workspace, publicationEligible: false, heading, passed: false, edits: [], errors: [], originalSourceSha256: hash(original) };
+const report = { kind: 'real-component-hmr-correctness-not-latency-data', tool, workspace, publicationEligible: false, heading, passed: false, edits: [], errors: [], originalSourceSha256: hash(original), fixture: JSON.parse(fs.readFileSync(path.join(workspace, 'MANIFEST.json'))), lockSha256: hash(fs.readFileSync(path.join(workspace, 'package-lock.json'))) };
 const reserve = http.createServer();
 await new Promise(resolve => reserve.listen(0, '127.0.0.1', resolve));
 const port = reserve.address().port;
@@ -64,6 +64,7 @@ try {
   report.stateControl = await page.$eval(input, element => ({ tag: element.tagName, type: element.type, name: element.name }));
   await page.type(input, 'hmr-state-sentinel');
   const state = await page.$eval(input, element => element.value);
+  if (!state.includes('hmr-state-sentinel')) throw new Error('State sentinel was not stored in the application control');
   const token = randomUUID();
   await page.evaluate(token => { window.__benchmarkDocumentToken = token; }, token);
   let navigations = 0;
