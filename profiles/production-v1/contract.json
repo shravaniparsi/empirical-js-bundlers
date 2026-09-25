@@ -1,0 +1,20 @@
+{
+  "id": "production-v1",
+  "status": "candidate-until-acceptance",
+  "estimand": "Production toolchain performance under common functional output requirements; not isolated bundler-core or language causality",
+  "jsTarget": "ES2022",
+  "jsMinification": true,
+  "cssMinification": true,
+  "jsSourceMaps": {
+    "required": "external for every emitted JS file",
+    "sourcesContent": true,
+    "originalSourceMapping": true
+  },
+  "cssSourceMaps": "record availability; not required for primary build endpoint",
+  "assets": "external image files; no inline threshold optimization",
+  "chunking": "preserve dynamic imports; automatic tool partitioning; no hand-selected vendor groups or chunk-size tuning",
+  "applicationDependencies": "exact common direct versions within each application; lockfiles and full transitive inventories archived",
+  "hosts": "same host within a measured block; separate cross-host replication",
+  "timing": "external npm run build elapsed time, caches cleared, OS cache uncontrolled",
+  "publicationEligible": false
+}

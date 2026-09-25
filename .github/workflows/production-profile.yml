@@ -1,0 +1,50 @@
+name: Production profile acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/production-profile-v1]
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+        size: [s-200, m-500, l-2000, xl-5000]
+    env:
+      PROFILE_REVISION: profile-v1-cloud
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+      - name: Record runner and select sandboxed Chrome
+        shell: bash
+        run: |
+          mkdir -p cloud-profile-evidence
+          uname -a > cloud-profile-evidence/host.txt
+          lscpu >> cloud-profile-evidence/host.txt
+          free -b >> cloud-profile-evidence/host.txt
+          node --version >> cloud-profile-evidence/host.txt
+          npm --version >> cloud-profile-evidence/host.txt
+          browser_path="$(command -v google-chrome)"
+          "$browser_path" --version >> cloud-profile-evidence/host.txt
+          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - run: node --test scripts/generator.test.mjs scripts/production-contract.test.mjs
+      - run: node scripts/audit-production-profile.mjs cloud-profile-evidence/dependency-audit.json
+      - name: Build and verify frozen profile
+        run: node scripts/run-production-profile.mjs synthetic '${{ matrix.size }}' cloud-profile-evidence/check '${{ matrix.tool }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: profile-v1-${{ matrix.tool }}-${{ matrix.size }}
+          path: cloud-profile-evidence/
+          retention-days: 14

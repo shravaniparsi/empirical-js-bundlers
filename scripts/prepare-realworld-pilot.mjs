@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const destination = path.join(root, '.submission-pilot/bulletproof-corrected-v1');
+const destination = path.join(root, `.submission-pilot/bulletproof-corrected-${process.env.PILOT_REVISION ?? 'v1'}`);
 if (fs.existsSync(destination)) throw new Error('Refusing to overwrite a real-world pilot');
 const common = path.join(root, 'tier2-realworld/workspaces/vite/bulletproof-react');
 const sha = file => createHash('sha256').update(fs.readFileSync(file)).digest('hex');
