@@ -69,11 +69,14 @@ try {
   await page.click('[data-slot="memo-header-actions"] button[aria-label="More"]');
   await page.waitForSelector('[role="menuitem"]');
   await page.evaluate(() => [...document.querySelectorAll('[role="menuitem"]')].find(node => node.textContent.trim() === 'Edit').click());
-  await page.waitForSelector('.cm-content[contenteditable="true"]', { visible: true });
-  await page.click('.cm-content[contenteditable="true"]');
+  await page.waitForFunction(() => {
+    const editor = [...document.querySelectorAll('.cm-content[contenteditable="true"]')].find(node => node.textContent.includes('Benchmark original note'));
+    if (!editor) return false; editor.setAttribute('data-benchmark-edit-target', 'true'); return true;
+  });
+  await page.locator('[data-benchmark-edit-target="true"]').click();
   await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
   await page.keyboard.insertText('**Benchmark edited note**\n\nPersist this exact revision.');
-  await page.waitForFunction(() => document.querySelector('.cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark edited note**'));
+  await page.waitForFunction(() => document.querySelector('[data-benchmark-edit-target="true"]')?.textContent.includes('**Benchmark edited note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');
   await page.waitForFunction(() => [...document.querySelectorAll('[data-slot="memo-body"] strong')].some(node => node.textContent === 'Benchmark edited note'));
   report.checks.editNote = true;
