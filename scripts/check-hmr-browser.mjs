@@ -25,7 +25,7 @@ const server = spawn('npm', ['run', 'dev', '--', '--host', '127.0.0.1', '--port'
   cwd: workspace, env: { ...process.env, NODE_ENV: 'development' }, detached: true, stdio: ['ignore', log, log],
 });
 server.on('error', error => report.errors.push(error.message));
-let browser;
+let browser, page;
 try {
   const origin = `http://127.0.0.1:${port}`;
   const deadline = Date.now() + 180000;
@@ -38,7 +38,7 @@ try {
   if (!ready) throw new Error('Development server readiness timeout');
   browser = await puppeteer.launch({ headless: true });
   report.browserVersion = await browser.version();
-  const page = await browser.newPage();
+  page = await browser.newPage();
   page.on('pageerror', error => report.errors.push(error.message));
   await page.goto(origin, { waitUntil: 'networkidle0', timeout: 180000 });
   await page.waitForFunction(heading => document.querySelector('h1')?.textContent === heading, { timeout: 60000 }, heading);
@@ -55,6 +55,7 @@ try {
   for (const route of routes) {
     if (selected) break;
     await page.click(`.nav-links a[href=${JSON.stringify(route)}]`);
+    await page.waitForNetworkIdle({ idleTime: 500, timeout: 60000 });
     await page.waitForFunction(route => location.pathname === route && !document.querySelector('.loading'), { timeout: 60000 }, route);
     selected = await page.evaluate(selectStateControl);
   }
@@ -88,6 +89,10 @@ try {
 finally {
   fs.writeFileSync(source, original);
   report.sourceRestored = hash(fs.readFileSync(source)) === report.originalSourceSha256;
+  if (page && !report.passed) {
+    fs.writeFileSync(reportPath.replace(/\.json$/, '') + '-page.html', await page.content().catch(() => ''));
+    await page.screenshot({ path: reportPath.replace(/\.json$/, '') + '-browser.png' }).catch(() => {});
+  }
   if (browser) await browser.close();
   try { process.kill(-server.pid, 'SIGTERM'); } catch {}
   await new Promise(resolve => setTimeout(resolve, 500));
