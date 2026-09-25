@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [codex/realworld-expansion-v1]
-    paths: ['scripts/check-hmr-browser.mjs', '.github/workflows/larger-hmr.yml']
+    paths: ['scripts/check-hmr-browser.mjs', 'scripts/prepare-development-profile.mjs', 'profiles/development-v1/**', '.github/workflows/larger-hmr.yml']
 permissions:
   contents: read
 jobs:
@@ -28,6 +28,7 @@ jobs:
           cache: npm
       - run: npm ci --include=dev --no-audit --no-fund
       - run: node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+      - run: node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-hmr-expanded-v1/${{ matrix.tool }}'
       - run: npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-hmr-expanded-v1/${{ matrix.tool }}' --include=dev --no-audit --no-fund
       - name: Validate edits, state persistence, reload detection and restoration
         timeout-minutes: 12

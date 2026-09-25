@@ -16,6 +16,8 @@ if (headings.length !== 1) throw new Error('Expected exactly one literal applica
 const headingMarkup = headings[0][0], heading = headings[0][1];
 const hash = value => createHash('sha256').update(value).digest('hex');
 const report = { kind: 'real-component-hmr-correctness-not-latency-data', tool, workspace, publicationEligible: false, heading, passed: false, edits: [], errors: [], originalSourceSha256: hash(original), fixture: JSON.parse(fs.readFileSync(path.join(workspace, 'MANIFEST.json'))), lockSha256: hash(fs.readFileSync(path.join(workspace, 'package-lock.json'))) };
+const developmentReceipt = path.join(workspace, 'DEVELOPMENT_PROFILE.json');
+if (fs.existsSync(developmentReceipt)) report.developmentProfile = JSON.parse(fs.readFileSync(developmentReceipt));
 const reserve = http.createServer();
 await new Promise(resolve => reserve.listen(0, '127.0.0.1', resolve));
 const port = reserve.address().port;
