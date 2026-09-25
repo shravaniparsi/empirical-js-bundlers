@@ -47,6 +47,12 @@ jobs:
           cp "$workspace/package-lock.json" cloud-evidence/pilot-package-lock.json
           cp "$workspace/MANIFEST.json" "$workspace/GRAPH.json" cloud-evidence/
           cp ".submission-pilot/${{ matrix.size }}-corrected-cloud/preparation.json" cloud-evidence/
+      - name: Use runner Chrome with its supported sandbox profile
+        shell: bash
+        run: |
+          browser_path="$(command -v google-chrome)"
+          "$browser_path" --version > cloud-evidence/browser-installation.txt
+          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
       - name: Build and check all routes
         shell: bash
         run: |
