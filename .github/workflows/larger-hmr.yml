@@ -31,6 +31,9 @@ jobs:
       - run: npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-hmr-expanded-v1/${{ matrix.tool }}' --include=dev --no-audit --no-fund
       - name: Validate edits, state persistence, reload detection and restoration
         timeout-minutes: 12
+        env:
+          HMR_STATE_ROUTE: "${{ matrix.size == 'xl-5000' && '/dashboard' || '/' }}"
+          HMR_STATE_SELECTOR: '${{ matrix.size == ''xl-5000'' && ''input[id="DashboardToggle-field"]'' || ''input[id="AuthTextArea-field"]'' }}'
         run: |
           mkdir hmr-evidence
           export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"

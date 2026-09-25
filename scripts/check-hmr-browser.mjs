@@ -42,28 +42,22 @@ try {
   page.on('pageerror', error => report.errors.push(error.message));
   await page.goto(origin, { waitUntil: 'networkidle0', timeout: 180000 });
   await page.waitForFunction(heading => document.querySelector('h1')?.textContent === heading, { timeout: 60000 }, heading);
-  // Large fixtures may place editable state only in lazy routes. Select the
-  // first visible text control in home/nav order, before installing the detector.
-  const selectStateControl = () => {
-    const candidate = [...document.querySelectorAll('input:not([type]), input[type="text"], input[type="email"], input[type="search"], textarea')]
-      .find(element => !element.disabled && !element.readOnly && element.getBoundingClientRect().width > 0 && element.getBoundingClientRect().height > 0);
-    if (!candidate) return false;
-    candidate.setAttribute('data-benchmark-state-input', 'true'); return true;
-  };
-  let selected = await page.evaluate(selectStateControl);
-  const routes = await page.$$eval('.nav-links a', links => links.map(link => new URL(link.href).pathname));
-  for (const route of routes) {
-    if (selected) break;
-    await page.click(`.nav-links a[href=${JSON.stringify(route)}]`);
-    await page.waitForNetworkIdle({ idleTime: 500, timeout: 60000 });
-    await page.waitForFunction(route => location.pathname === route && !document.querySelector('.loading'), { timeout: 60000 }, route);
-    selected = await page.evaluate(selectStateControl);
+  const stateRoute = process.env.HMR_STATE_ROUTE;
+  const stateSelector = process.env.HMR_STATE_SELECTOR;
+  let input;
+  if (stateSelector) {
+    if (!stateRoute || !stateRoute.startsWith('/') || stateRoute.startsWith('//')) throw new Error('Invalid explicit state route');
+    if (new URL(page.url()).pathname !== stateRoute) await page.goto(origin + stateRoute, { waitUntil: 'networkidle0', timeout: 180000 });
+    await page.waitForSelector(stateSelector, { visible: true, timeout: 60000 });
+    input = stateSelector;
+  } else {
+    // Compatibility for the original small fixture; expanded matrices specify
+    // exactly the same route and field for every tool.
+    input = 'input:not([type="hidden"]):not([disabled])';
+    await page.waitForSelector(input, { visible: true, timeout: 30000 });
   }
-  if (!selected) throw new Error('No visible editable text state in declared application routes');
   report.stateRoute = new URL(page.url()).pathname;
-  const marked = '[data-benchmark-state-input="true"]';
-  report.stateControl = await page.$eval(marked, element => ({ tag: element.tagName, type: element.type, name: element.name, id: element.id }));
-  const input = report.stateControl.tag.toLowerCase() + `[id=${JSON.stringify(report.stateControl.id)}]`;
+  report.stateControl = await page.$eval(input, element => ({ tag: element.tagName, type: element.type, name: element.name, id: element.id }));
   report.phase = 'enter-state';
   await page.type(input, 'hmr-state-sentinel');
   const state = await page.$eval(input, element => element.value);
@@ -99,10 +93,14 @@ finally {
     await page.screenshot({ path: reportPath.replace(/\.json$/, '') + '-browser.png' }).catch(() => {});
   }
   if (browser) await browser.close();
+  const groupAlive = () => { try { process.kill(-server.pid, 0); return true; } catch { return false; } };
+  const awaitStopped = async () => { for (let attempt = 0; attempt < 50 && groupAlive(); attempt++) await new Promise(resolve => setTimeout(resolve, 100)); };
   try { process.kill(-server.pid, 'SIGTERM'); } catch {}
-  await new Promise(resolve => setTimeout(resolve, 500));
-  try { process.kill(-server.pid, 'SIGKILL'); } catch {}
-  try { process.kill(-server.pid, 0); report.serverStopped = false; } catch { report.serverStopped = true; }
+  await awaitStopped();
+  if (groupAlive()) { try { process.kill(-server.pid, 'SIGKILL'); } catch {} await awaitStopped(); }
+  report.serverStopped = !groupAlive();
+  if (!report.sourceRestored) report.errors.push('Source restoration failed');
+  if (!report.serverStopped) report.errors.push('Development server process group did not terminate');
   fs.closeSync(log);
   report.passed = report.passed && report.sourceRestored && report.serverStopped;
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n');
