@@ -87,7 +87,7 @@ const bundle = await rollup({
     }),
     applicationTransform,
     applicationCss,
-    dynamicImportVars(),
+    dynamicImportVars({ include: ['src/**/*.{js,jsx,ts,tsx}'] }),
     nodeResolve({ browser: true, extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx', '.jsx'] }),
     commonjs(),
     json(),
