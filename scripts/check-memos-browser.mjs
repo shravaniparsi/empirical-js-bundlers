@@ -60,6 +60,11 @@ try {
   await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.querySelector('form').addEventListener('submit', () => window.__benchmarkSubmitCount++); });
   await page.locator('button[type="submit"]').click();
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
+  // The trigger can render just before user-setting initialization finishes. The
+  // session-boundary effect intentionally closes editors during that transition,
+  // so wait for Home's inline composer as the readiness signal before clicking.
+  await page.waitForSelector('.memo-editor-content .cm-content[contenteditable="true"]', { timeout: 30000 });
+  report.checks.homeComposerReady = true;
   await page.click('[data-new-memo-trigger]');
   const composer = '[role="dialog"] .cm-content[contenteditable="true"]';
   await page.waitForSelector(composer, { visible: true });
