@@ -81,6 +81,7 @@ const bundle = await rollup({
         'import.meta.env.DEV': 'false',
         'import.meta.env.PROD': 'true',
         'import.meta.env.MODE': JSON.stringify('production'),
+        'process.env.NODE_ENV': JSON.stringify('production'),
       },
     }),
     applicationTransform,

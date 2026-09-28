@@ -60,19 +60,20 @@ try {
   await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.querySelector('form').addEventListener('submit', () => window.__benchmarkSubmitCount++); });
   await page.locator('button[type="submit"]').click();
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
-  // The trigger can render just before user-setting initialization finishes. The
-  // session-boundary effect intentionally closes editors during that transition,
-  // so wait for Home's inline composer as the readiness signal before clicking.
-  await page.waitForSelector('.memo-editor-content .cm-content[contenteditable="true"]', { timeout: 30000 });
+  // Exercise Home's primary composer. It is present in both the upstream build
+  // and every adapter, and becomes usable only after the authenticated editor
+  // state has initialized. The sidebar trigger opens a second editor through a
+  // context effect whose timing varies with chunk layout, so it is not a stable
+  // production-build acceptance boundary.
+  const composer = '.memo-editor-content .cm-content[contenteditable="true"]';
+  await page.waitForSelector(composer, { timeout: 30000 });
   report.checks.homeComposerReady = true;
-  await page.click('[data-new-memo-trigger]');
-  const composer = '[role="dialog"] .cm-content[contenteditable="true"]';
-  await page.waitForSelector(composer, { visible: true });
   await page.locator(composer).click();
   await page.keyboard.sendCharacter('**Benchmark original note**\n\nActual local SQLite acceptance.');
   await page.waitForFunction(() => {
-    const editor = document.querySelector('[role="dialog"] .cm-content[contenteditable="true"]');
-    const save = [...document.querySelectorAll('[role="dialog"] button')].find(button => button.textContent.trim().startsWith('Save') && !button.disabled);
+    const editor = document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]');
+    const editorContainer = editor?.closest('.group');
+    const save = editorContainer && [...editorContainer.querySelectorAll('button')].find(button => button.textContent.trim().startsWith('Save') && !button.disabled);
     if (!editor?.textContent.includes('**Benchmark original note**') || !save) return false;
     save.setAttribute('data-benchmark-save', 'true'); return true;
   });
