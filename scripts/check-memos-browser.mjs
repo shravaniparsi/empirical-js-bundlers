@@ -57,8 +57,17 @@ try {
   await page.goto(origin, { waitUntil: 'domcontentloaded' });
   await page.waitForSelector('#signup-username', { timeout: 60000 });
   phase = 'signup';
-  await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.querySelector('form').addEventListener('submit', () => window.__benchmarkSubmitCount++); });
-  await page.locator('button[type="submit"]').click();
+  await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.addEventListener('submit', () => window.__benchmarkSubmitCount++, { capture: true }); });
+  for (let attempt = 0; ; attempt++) {
+    await page.click('button[type="submit"]');
+    try {
+      await page.waitForFunction(() => window.__benchmarkSubmitCount > 0, { timeout: 2000 });
+      report.checks.signupSubmitted = true;
+      break;
+    } catch (error) {
+      if (attempt >= 9) throw error;
+    }
+  }
   await page.waitForSelector('[data-new-memo-trigger]', { timeout: 60000 }); report.checks.signupAndLogin = true;
   // Exercise Home's primary composer. It is present in both the upstream build
   // and every adapter, and becomes usable only after the authenticated editor
