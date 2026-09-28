@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "memos-five-tool-adapter-acceptance",
+  "passed": true,
+  "publicationEligible": false,
+  "reason": "Adapter correctness evidence only; no comparative timing measurements were collected.",
+  "commit": "5aa3ab6d07158d88cfec92461e34e328ad009037",
+  "source": {
+    "repository": "usememos/memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a"
+  },
+  "sharedApplicationProfile": {
+    "files": 526,
+    "inventorySha256": "4154c76d327ba48d3b63e6b8b52b3918fee7194f85f75c64b45c70128b0c7a19",
+    "lockfileSha256": "216d39db228d71434cb3dc9815922c2c18336de4283eca74f9cd9678044fbbb4",
+    "applicationDependencies": 59,
+    "toolDependencies": 36
+  },
+  "matrixRun": {
+    "id": 36366232069,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36366232069",
+    "conclusion": "success",
+    "jobs": {
+      "vite": 108753094642,
+      "rspack": 108753094644,
+      "esbuild": 108753094638,
+      "webpack": 108753094593,
+      "rollup": 108753094421
+    }
+  },
+  "upstreamControlRun": {
+    "id": 36366232074,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36366232074",
+    "job": 108753094163,
+    "conclusion": "success"
+  },
+  "requiredChecks": [
+    "exact shared dependency closure installed",
+    "pinned source and protobuf patch verified",
+    "native production build completed",
+    "ES2022 output parsed",
+    "external CSS and compiled Tailwind output verified",
+    "application source maps verified",
+    "separate MapLibre worker asset verified",
+    "original Go backend compiled",
+    "signup and authenticated Home editor exercised",
+    "memo created and rendered as Markdown",
+    "memo edited and persisted across reload",
+    "CreateMemo and UpdateMemo returned successful responses",
+    "SQLite content verified after backend shutdown"
+  ],
+  "tools": {
+    "vite": { "passed": true },
+    "rspack": { "passed": true },
+    "esbuild": { "passed": true },
+    "webpack": { "passed": true },
+    "rollup": { "passed": true }
+  }
+}

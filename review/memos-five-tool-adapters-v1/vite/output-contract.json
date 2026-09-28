@@ -1,0 +1,2190 @@
+{
+  "kind": "memos-five-tool-adapter-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "assets/About-Cbe7BqBc.js",
+      "sha256": "bb454292975ba69f8bb48c8a1e2bad64d8dea20c5eed6c4dbad488df58fc21e8",
+      "mappedSegments": 1731,
+      "projectSources": [
+        "../../src/lib/release-version.ts",
+        "../../src/pages/About.tsx"
+      ],
+      "mapSha256": "0ed2eb5d729c90f2cc41a0d3efe0b99a0c35c2e1325b8565cfcafd7440632c5a"
+    },
+    {
+      "file": "assets/AdminSignIn-BskQKRwB.js",
+      "sha256": "825cc581efb38d4514ee204a210c5aeb11eb65ef563781ff126e9bccfc28be84",
+      "mappedSegments": 286,
+      "projectSources": [
+        "../../src/pages/AdminSignIn.tsx"
+      ],
+      "mapSha256": "8508baf7285e1f1acbbecac43777f2eb7189f76f977e04779224f087d6d02be8"
+    },
+    {
+      "file": "assets/Archived-C9jPr2-9.js",
+      "sha256": "6b203fb0eefbb0eb61ed893086be6960a6c2438f0bc726329c5c0a64c5e3cb33",
+      "mappedSegments": 223,
+      "projectSources": [
+        "../../src/pages/Archived.tsx"
+      ],
+      "mapSha256": "a81906bb6edd3c9b1db7c32e8822b8961f21f2b6b24e694160b43bf63b4cf1b1"
+    },
+    {
+      "file": "assets/Attachments-DyB1Lf90.js",
+      "sha256": "1ec23114e3924ba018b26a57fa9169e9007c65a68f4852a21c6bd9886a293132",
+      "mappedSegments": 3909,
+      "projectSources": [
+        "../../src/components/AttachmentLibrary/AttachmentLibraryPrimitives.tsx",
+        "../../src/components/AttachmentLibrary/AttachmentFileRows.tsx",
+        "../../src/components/AttachmentLibrary/AttachmentLibraryEmptyState.tsx",
+        "../../src/components/AttachmentLibrary/AttachmentLibraryStates.tsx",
+        "../../src/components/AttachmentLibrary/AttachmentMediaGrid.tsx",
+        "../../src/pages/Attachments.tsx"
+      ],
+      "mapSha256": "eeadda4e8cbcda2ab22bf37092ebb8024322289a55d835f24e0a5d3012838612"
+    },
+    {
+      "file": "assets/AudioAttachmentItem-CchWrMa7.js",
+      "sha256": "bf88ea34a757b0989cea9887929bb2f08586dbbf6df59665496aa25467876bad",
+      "mappedSegments": 8367,
+      "projectSources": [
+        "../../src/components/MemoMetadata/MetadataSection.tsx",
+        "../../src/components/map/LazyLocationPicker.tsx",
+        "../../src/utils/media-metadata.ts",
+        "../../src/components/MediaMetadataDetails.tsx",
+        "../../src/components/MotionPhotoPlayer.tsx",
+        "../../src/components/MotionPhotoPreview.tsx",
+        "../../src/components/PreviewImageDialog.tsx",
+        "../../src/components/VideoPoster.tsx",
+        "../../src/components/MemoMetadata/Attachment/AudioAttachmentItem.tsx"
+      ],
+      "mapSha256": "f2fee07406cba94cd235aed111dac898d87dc83c4d6b1d80f9065320aeefe1dd"
+    },
+    {
+      "file": "assets/AuthCallback-CrapHxNB.js",
+      "sha256": "a4592e112ab8041ff40920ad289654d1bb127f5ad1c8426eb928eeed0a7f121e",
+      "mappedSegments": 324,
+      "projectSources": [
+        "../../src/pages/AuthCallback.tsx"
+      ],
+      "mapSha256": "d64ffde882482478634c7eaa4775d832d2e856421952c833fc6bcbf59896fed3"
+    },
+    {
+      "file": "assets/AuthContext-Ccb4OP9s.js",
+      "sha256": "2c4b558a188f7988229b0e20c8d4c2f14845acdf5931ab7d0bfe854f792c8ab3",
+      "mappedSegments": 2787,
+      "projectSources": [
+        "../../src/hooks/useCurrentUser.ts",
+        "../../src/lib/resource-names.ts",
+        "../../src/lib/tag.ts",
+        "../../src/hooks/useUserQueries.ts",
+        "../../src/contexts/AuthContext.tsx"
+      ],
+      "mapSha256": "bb4fe7bbe1ee789af72dd97dadac0c561c00992948eb4dd6c2ff8af0e7ba977a"
+    },
+    {
+      "file": "assets/BasemapLayer-e3xc7azE.js",
+      "sha256": "d8389a9e95e125eec9a7087fe527351bc766827aad4baeb1a1687575ae1101ad",
+      "mappedSegments": 73186,
+      "projectSources": [
+        "../../src/hooks/useResolvedTheme.ts",
+        "../../src/components/map/map-utils.tsx",
+        "../../src/components/map/BasemapLayer.tsx"
+      ],
+      "mapSha256": "86788fa94bf32ee185fa9d4c9941712501185106cdfa1bcb6e978f3f44c1b96e"
+    },
+    {
+      "file": "assets/Calendar-BouwgrzY.js",
+      "sha256": "8f87517a5692a12cd908e0f33ce069ab104acf6348c6c421980b87497f4e1db6",
+      "mappedSegments": 5351,
+      "projectSources": [
+        "../../src/components/CalendarView/CalendarLink.tsx",
+        "../../src/components/CalendarView/paths.ts",
+        "../../src/components/CalendarView/CalendarDayCell.tsx",
+        "../../src/components/CalendarView/CalendarGrid.tsx",
+        "../../src/components/CalendarView/MonthPicker.tsx",
+        "../../src/components/CalendarView/CalendarHeader.tsx",
+        "../../src/components/CalendarView/dayModel.ts",
+        "../../src/components/CalendarView/useMonthMemos.ts",
+        "../../src/components/CalendarView/CalendarView.tsx",
+        "../../src/pages/Calendar.tsx"
+      ],
+      "mapSha256": "8d7b4c5357fce07bff98f31024e3d44ecbc43a55500fd6cb2e89453bf87790d5"
+    },
+    {
+      "file": "assets/CredentialFields-D6IC5bqZ.js",
+      "sha256": "8375f79c3c2023c866f759e97b635fbadf38de2ec3500cd8c03b1d2c3a4f7ce9",
+      "mappedSegments": 1771,
+      "projectSources": [
+        "../../src/components/AuthFooter.tsx",
+        "../../src/components/AuthPageLayout.tsx",
+        "../../src/components/ChallengeWidget.tsx",
+        "../../src/components/CredentialFields.tsx"
+      ],
+      "mapSha256": "9590d8e8aa93629d259f67b6db7cf5989cb78d7c5c8ffe5880a3fcb6f16a6c35"
+    },
+    {
+      "file": "assets/CustomIcon-DFARBqVR.js",
+      "sha256": "25b04ea70c19953c2bd1fa91f817d54b4fed0860f51f1ccfcea1427877c2e6fa",
+      "mappedSegments": 1362,
+      "projectSources": [
+        "../../src/lib/custom-icons.ts",
+        "../../src/components/CustomIcon.tsx"
+      ],
+      "mapSha256": "5da98510be95410d547f4c9f8b57cd9cb2a93bff5f221bce971b2709e562e1c7"
+    },
+    {
+      "file": "assets/Explore-nF8DADpn.js",
+      "sha256": "1f821f2a5b3041410d834f4d517daf7db8af5cffe72852f2c2b6e3aa9ddc355b",
+      "mappedSegments": 205,
+      "projectSources": [
+        "../../src/pages/Explore.tsx"
+      ],
+      "mapSha256": "671158b71f766a84dddcea39b2b2ed69e625c05a6def3cb5ec1e89d6c6a68bca"
+    },
+    {
+      "file": "assets/Home-zMyK3-ep.js",
+      "sha256": "764ef35d3bdb1e2aaec5786c7fb47df12cfba7ffbe6c89820ccc99554e4b273d",
+      "mappedSegments": 351,
+      "projectSources": [
+        "../../src/pages/Home.tsx"
+      ],
+      "mapSha256": "6c33ed41b9fb64177ab5c5a9949a8b9876b22ef1c4b0bdcb3e1977ccd9a13e1a"
+    },
+    {
+      "file": "assets/Inboxes-savlBjsr.js",
+      "sha256": "cdb7583d727fcea63afd2058cedb48c62801b0fc0beaac54f5a8db69db798ec6",
+      "mappedSegments": 5200,
+      "projectSources": [
+        "../../src/components/Inbox/MemoCommentMessage.tsx",
+        "../../src/components/Inbox/MemoMentionMessage.tsx",
+        "../../src/components/Inbox/SpaceInvitationMessage.tsx",
+        "../../src/pages/Inboxes.tsx"
+      ],
+      "mapSha256": "c05ad6f1d526aab08db822feedd3d549416a1effafebfde0dcf79d00d10d6737"
+    },
+    {
+      "file": "assets/LocationPicker-B2ZqfxjM.js",
+      "sha256": "4eea4438eeb998e9e2489e834ac6f60dd9edd7596c25a87361a908395f7ae88e",
+      "mappedSegments": 1255,
+      "projectSources": [
+        "../../src/components/map/LocationPicker.tsx"
+      ],
+      "mapSha256": "9e820a0d22d00768213703073dc373e4df031ab7a1ffed7c2f9a32885bef3dff"
+    },
+    {
+      "file": "assets/Map-B__csQHC.js",
+      "sha256": "ba915779b141d5c49ec06862900edf76295c2196cf39efbb6564af1b4a952bc3",
+      "mappedSegments": 8884,
+      "projectSources": [
+        "../../src/components/MapView/MapCanvas.tsx",
+        "../../src/components/MapView/MapView.tsx",
+        "../../src/pages/Map.tsx"
+      ],
+      "mapSha256": "8d9b3cd8b841c7fa157e24c06b813d7a51c39b893a8a360bc66cead4ac12ac6d"
+    },
+    {
+      "file": "assets/MathMarkdownRenderer-BevfSAvu.js",
+      "sha256": "70bbe339ff4f071889c176aea60f0ae99f87d6bb96089d6a9574d2eed13799af",
+      "mappedSegments": 3119,
+      "projectSources": [
+        "../../src/utils/remark-plugins/remark-currency-safe-math.ts",
+        "../../src/components/MemoContent/MathMarkdownRenderer.tsx"
+      ],
+      "mapSha256": "7d443cf47405663fe9a3e919e3d4afc26666489a0cf46d44f0116b043e5a71d6"
+    },
+    {
+      "file": "assets/MemoDetail-Up3T-0f7.js",
+      "sha256": "0b08191aa4b2aff2aef2a17cb601df663ce7cfbb13c907d5c407720bc849fdfa",
+      "mappedSegments": 2236,
+      "projectSources": [
+        "../../src/components/MemoCommentSection.tsx",
+        "../../src/hooks/useMemoDetailError.ts",
+        "../../src/pages/MemoDetail.tsx"
+      ],
+      "mapSha256": "525356be7275f8cc13c34a682b2bc6245c6c618501d3046ad5ed5e184704efdc"
+    },
+    {
+      "file": "assets/MemoEditor-CHpxXf-4.js",
+      "sha256": "456178e1873d350a4c18233ca282851921fdb907cb30cb4bf427c15b8497600d",
+      "mappedSegments": 105294,
+      "projectSources": [
+        "../../src/components/MemoEditor/hooks/useAudioWaveform.ts",
+        "../../src/components/MemoEditor/components/VoiceWaveform.tsx",
+        "../../src/components/MemoEditor/components/AudioRecorderPanel.tsx",
+        "../../src/components/MemoEditor/Editor/markdownTagRanges.ts",
+        "../../src/components/MemoEditor/Editor/uploadAnchors.ts",
+        "../../src/components/MemoEditor/Editor/controller.ts",
+        "../../src/components/MemoEditor/formatting/commands.ts",
+        "../../src/components/MemoEditor/Editor/listIndent.ts",
+        "../../src/components/MemoEditor/Editor/formatting.ts",
+        "../../src/components/MemoEditor/Editor/viewportDecorations.ts",
+        "../../src/components/MemoEditor/Editor/headingDecorations.ts",
+        "../../src/components/MemoEditor/Editor/tagAutocomplete.ts",
+        "../../src/components/MemoEditor/Editor/tagMentionDecorations.ts",
+        "../../src/components/MemoEditor/Editor/theme.ts",
+        "../../src/components/MemoEditor/Editor/extensions.ts",
+        "../../src/components/MemoEditor/Editor/index.tsx",
+        "../../src/components/MemoEditor/state/actions.ts",
+        "../../src/components/MemoEditor/state/types.ts",
+        "../../src/components/MemoEditor/state/reducer.ts",
+        "../../src/components/MemoEditor/state/context.tsx",
+        "../../src/components/MemoEditor/components/EditorContent.tsx",
+        "../../src/components/MemoEditor/components/EditorMetadata.tsx",
+        "../../src/components/MemoEditor/constants.ts",
+        "../../src/components/MemoEditor/components/FocusModeOverlay.tsx",
+        "../../src/components/MemoEditor/components/TimestampPopover.tsx",
+        "../../src/components/MemoEditor/components/EditorSuggestions.tsx",
+        "../../src/components/MemoEditor/hooks/useBlobUrls.ts",
+        "../../src/components/MemoEditor/hooks/useAudioRecorder.ts",
+        "../../src/components/MemoEditor/services/cacheService.ts",
+        "../../src/components/MemoEditor/services/errorService.ts",
+        "../../src/components/MemoEditor/services/uploadService.ts",
+        "../../src/components/MemoEditor/services/memoService.ts",
+        "../../src/components/MemoEditor/services/transcriptionService.ts",
+        "../../src/components/MemoEditor/services/validationService.ts",
+        "../../src/components/MemoEditor/hooks/useAutoSave.ts",
+        "../../src/components/MemoEditor/hooks/useEditorActiveState.ts",
+        "../../src/components/MemoEditor/hooks/useElementWidth.ts",
+        "../../src/components/MemoEditor/services/mediaMetadataService.ts",
+        "../../src/components/MemoEditor/hooks/useFileUpload.ts",
+        "../../src/components/MemoEditor/hooks/useFocusMode.ts",
+        "../../src/components/MemoEditor/hooks/useInlineImageUpload.ts",
+        "../../src/components/MemoEditor/hooks/useLinkMemo.ts",
+        "../../src/components/MemoEditor/hooks/useLocation.ts",
+        "../../src/components/MemoEditor/hooks/useMemoInit.ts",
+        "../../src/components/MemoEditor/hooks/useMemoSave.ts",
+        "../../src/utils/platform.ts",
+        "../../src/components/map/useReverseGeocoding.ts",
+        "../../src/components/MemoEditor/Toolbar/InsertMenu.tsx",
+        "../../src/components/MemoEditor/Toolbar/VisibilitySelector.tsx",
+        "../../src/components/MemoEditor/Toolbar/EditorToolbar.tsx",
+        "../../src/components/MemoEditor/Toolbar/FormattingToolbar.tsx",
+        "../../src/components/MemoEditor/index.tsx"
+      ],
+      "mapSha256": "5ea917d4474b3e7eae8e9b810f9ea84f5c201d98e1bcf9f272d0d566047ff153"
+    },
+    {
+      "file": "assets/MemoListError-DTRelbLU.js",
+      "sha256": "3a9a514c8942ed52d5d7c5b0d7f080e12966df2d3086e278dfff78b9ad1e1006",
+      "mappedSegments": 191,
+      "projectSources": [
+        "../../src/components/PagedMemoList/MemoListError.tsx"
+      ],
+      "mapSha256": "dc19de334e4f33e19393ce2a832ec8b46070f8426a7aead354a69f2943ef5576"
+    },
+    {
+      "file": "assets/MemoMarkdownRenderer-BJfrGd97.js",
+      "sha256": "396d6180ae2367d215cbab59ab4a682f16d22e75dc279d51389ac6e02f96eef2",
+      "mappedSegments": 8541,
+      "projectSources": [
+        "../../src/components/MemoView/constants.ts",
+        "../../src/components/MemoView/MemoViewContext.tsx",
+        "../../src/types/markdown.ts",
+        "../../src/components/MemoContent/highlight.ts",
+        "../../src/components/MemoContent/utils.ts",
+        "../../src/components/MemoContent/MermaidBlock.tsx",
+        "../../src/components/MemoContent/CodeBlock.tsx",
+        "../../src/components/MemoContent/MarkdownRenderContext.tsx",
+        "../../src/lib/markdownStyles.ts",
+        "../../src/components/MemoContent/Mention.tsx",
+        "../../src/components/MemoContent/markdown/AnchorLink.tsx",
+        "../../src/components/MemoContent/markdown/Blockquote.tsx",
+        "../../src/components/MemoContent/markdown/Details.tsx",
+        "../../src/components/MemoContent/markdown/Heading.tsx",
+        "../../src/components/MemoContent/markdown/HorizontalRule.tsx",
+        "../../src/components/MemoContent/markdown/Image.tsx",
+        "../../src/components/MemoContent/markdown/InlineCode.tsx",
+        "../../src/components/MemoContent/markdown/Link.tsx",
+        "../../src/components/MemoContent/markdown/List.tsx",
+        "../../src/hooks/useNearViewport.ts",
+        "../../src/components/MemoContent/LinkMetadataCard.tsx",
+        "../../src/components/MemoContent/markdown/Paragraph.tsx",
+        "../../src/components/MemoContent/math.ts",
+        "../../src/components/MemoContent/Table.tsx",
+        "../../src/components/MemoContent/Tag.tsx",
+        "../../src/components/ui/checkbox.tsx",
+        "../../src/components/MemoContent/TaskListItem.tsx",
+        "../../src/components/MemoContent/TrustedIframe.ts",
+        "../../src/components/MemoContent/MemoMarkdownRenderer.tsx"
+      ],
+      "mapSha256": "689ac6e0d04fd9203c75ef67c58c8e920ab946b250e366d1f78eaa9fc298d1d8"
+    },
+    {
+      "file": "assets/MemoPanel-DObofFrv.js",
+      "sha256": "1c0f8ff01410719582f9753bc317d215e44d0c248874eb722b585e773eee5795",
+      "mappedSegments": 1034,
+      "projectSources": [
+        "../../src/components/MemoPanel/MemoPanel.tsx",
+        "../../src/components/MemoPanel/MemoPanelList.tsx"
+      ],
+      "mapSha256": "a6640027182161fc31dd5ed4c9a6048310fc7f7d56f48c6eabc6900dbd138996"
+    },
+    {
+      "file": "assets/MemoShareImageDialog-Ds2lllMr.js",
+      "sha256": "734a11c0dc3600953934de0270a0f8d7ec7b1c026a7eee887017fb12b3b623f2",
+      "mappedSegments": 4707,
+      "projectSources": [
+        "../../src/components/MemoActionMenu/memoShareImage.ts",
+        "../../src/components/MemoActionMenu/memoShareImagePreviewModel.ts",
+        "../../src/components/MemoActionMenu/MemoShareImagePreview.tsx",
+        "../../src/components/MemoActionMenu/MemoShareImageDialog.tsx"
+      ],
+      "mapSha256": "3408811b146c908f702dc3535ec3ab623bcf137e442f5e6d0f084ff26aff7850"
+    },
+    {
+      "file": "assets/MemoView-BYAqWg7N.js",
+      "sha256": "b36c3d5bf50532381c84771710c23187cd5e4974c4985bc009dc2c2839adab04",
+      "mappedSegments": 8998,
+      "projectSources": [
+        "../../src/components/ColumnGrid/ColumnGridContext.tsx",
+        "../../src/components/ClampedSection.tsx",
+        "../../src/components/MemoReactionListView/hooks.ts",
+        "../../src/components/MemoReactionListView/ReactionView.tsx",
+        "../../src/components/MemoReactionListView/ReactionSelector.tsx",
+        "../../src/components/MemoReactionListView/MemoReactionListView.tsx",
+        "../../src/components/MemoView/hooks/useImagePreview.ts",
+        "../../src/components/MemoView/hooks/useMemoHandlers.ts",
+        "../../src/components/MemoView/components/MemoBody.tsx",
+        "../../src/components/MemoView/components/MemoCommentListView.tsx",
+        "../../src/utils/markdown-task-actions.ts",
+        "../../src/components/MemoActionMenu/hooks.ts",
+        "../../src/components/MemoActionMenu/MemoMoveDialog.tsx",
+        "../../src/components/MemoActionMenu/MemoActionMenu.tsx",
+        "../../src/components/MemoView/components/MemoSpaceBadge.tsx",
+        "../../src/components/MemoView/components/MemoHeader.tsx",
+        "../../src/components/MemoView/components/MemoPinnedMark.tsx",
+        "../../src/components/MemoView/MemoView.tsx"
+      ],
+      "mapSha256": "e84b220a0594e3a111f412a4b1cc553daf6360f19a39bf6c02d154f1e5b80035"
+    },
+    {
+      "file": "assets/MemoViews-CmiNdn2Q.js",
+      "sha256": "c32cc212e54602beec4d8ccf3662c0978c72a419f5e607e1febb9106ceaaacde",
+      "mappedSegments": 2338,
+      "projectSources": [
+        "../../src/pages/MemoViews.tsx"
+      ],
+      "mapSha256": "d4e8dcdc4be2dea06c5283e15852353bcd6399be2516c0e098ebee82766a525c"
+    },
+    {
+      "file": "assets/NewMemoContext-CUHPWtpc.js",
+      "sha256": "51417442f1fe07b53c6f94ea5a52d40ecc84dc1b140fbfdce798c03216f785f4",
+      "mappedSegments": 10397,
+      "projectSources": [
+        "../../src/utils/mention-extraction.ts",
+        "../../src/components/MemoContent/MentionResolutionContext.tsx",
+        "../../src/utils/search-match.ts",
+        "../../src/components/MemoContent/useSearchMatchHighlight.ts",
+        "../../src/components/MemoContent/index.tsx",
+        "../../src/components/MemoEditor/types/attachment.ts",
+        "../../src/components/MemoMetadata/Attachment/AttachmentListEditor.tsx",
+        "../../src/components/MemoMetadata/Attachment/attachmentVisualClasses.ts",
+        "../../src/components/MemoMetadata/Attachment/visualGalleryLayout.ts",
+        "../../src/components/MemoMetadata/Attachment/AttachmentListView.tsx",
+        "../../src/components/MemoMetadata/Location/LocationDialog.tsx",
+        "../../src/components/MemoMetadata/Location/locationHelpers.ts",
+        "../../src/components/MemoMetadata/Location/LocationDisplayEditor.tsx",
+        "../../src/components/MemoMetadata/Location/LocationDisplayView.tsx",
+        "../../src/components/MemoMetadata/Relation/RelationRow.tsx",
+        "../../src/components/MemoMetadata/Relation/RelationRows.tsx",
+        "../../src/components/MemoMetadata/MemoMetadataRows.tsx",
+        "../../src/components/MemoPreview/MemoPreview.tsx",
+        "../../src/components/MemoMetadata/Relation/LinkMemoDialog.tsx",
+        "../../src/components/MemoMetadata/Relation/RelationListEditor.tsx",
+        "../../src/contexts/NewMemoContext.tsx"
+      ],
+      "mapSha256": "c6111f755dd3288c0e228123064cb2b7d6461ea0469a7e102facc94413bbafc5"
+    },
+    {
+      "file": "assets/PagedMemoList-DGP6zHfu.js",
+      "sha256": "15fc1291dbfc3d64e86d5bf5783632699c2c9684e8845cfd54678d322da7b3d9",
+      "mappedSegments": 4304,
+      "projectSources": [
+        "../../src/components/ColumnGrid/ColumnGrid.tsx",
+        "../../src/components/ColumnGrid/index.ts",
+        "../../src/components/MemoFilters.tsx",
+        "../../src/components/PagedMemoList/memoCardHeight.ts",
+        "../../src/components/PagedMemoList/PagedMemoList.tsx",
+        "../../src/components/PagedMemoList/index.ts"
+      ],
+      "mapSha256": "da4d9d5176aa3e4b855b902413eabaf7d4cbf65224f768c52ab335f625457846"
+    },
+    {
+      "file": "assets/PasswordSignInForm-CdfAzW68.js",
+      "sha256": "850bc4bd81450eac5b89a7003b4a880c6c25115dbc20103fdb4d4d18482c963d",
+      "mappedSegments": 235,
+      "projectSources": [
+        "../../src/components/PasswordSignInForm.tsx"
+      ],
+      "mapSha256": "ac54ba2be441ed4280cef7b5205cea2a6ffe4b87a814e68f99872806b1f89280"
+    },
+    {
+      "file": "assets/PermissionDenied-DTORuGXm.js",
+      "sha256": "c608915c18ceefa5db36a7e165655364a5b2af8ddbb3ca87cc6f9c0f62c9c487",
+      "mappedSegments": 75,
+      "projectSources": [
+        "../../src/pages/PermissionDenied.tsx"
+      ],
+      "mapSha256": "c3256478d999b7e86849ab73f673305599ef89972a9bd535d0f9cca75f7e549e"
+    },
+    {
+      "file": "assets/Placeholder-BvKuWjSf.js",
+      "sha256": "538fcc91a8b28e4ec7225aa422fe590e90ac820fa726f4bdf1bfb03875471af4",
+      "mappedSegments": 840,
+      "projectSources": [
+        "../../src/components/Placeholder/InkIllustration.tsx",
+        "../../src/components/Placeholder/index.tsx"
+      ],
+      "mapSha256": "c2f907069b7f036b85236060f0d792e13968c13e394c0d41b3ef6bb843e77d96"
+    },
+    {
+      "file": "assets/Separator-x2TfizAO.js",
+      "sha256": "ba32a25505cc87ac69d27e4c866f2559d41793cad460e36c6ab6ab96d4df1be8",
+      "mappedSegments": 44,
+      "projectSources": [],
+      "mapSha256": "f7b73d7710528e95fcb280d8037b355190f9e14c50c5034a07b81ef018723c00"
+    },
+    {
+      "file": "assets/Setting-CD9gNRft.js",
+      "sha256": "873b78ffe8b4b4765790e123f41dd29a92b7cd08ae4e136ea0d9f0191615a7f7",
+      "mappedSegments": 453,
+      "projectSources": [
+        "../../src/pages/Setting.tsx"
+      ],
+      "mapSha256": "0aac3161e2e1b203a15302fe71c199f1218ab3489f8a7961a79d8a47cca5ab09"
+    },
+    {
+      "file": "assets/SignIn-CiSTP1nb.js",
+      "sha256": "bcf5eaa76725ff0b547ddb2ac92e33b25e7c28fa9e24cf0a48bf593832ae3c7c",
+      "mappedSegments": 419,
+      "projectSources": [
+        "../../src/pages/SignIn.tsx"
+      ],
+      "mapSha256": "dbefad1917bb2faef2f3b0c6623953ea3df1db730c8d7114b4396e39368a1b3d"
+    },
+    {
+      "file": "assets/SignUp-CCKU86K9.js",
+      "sha256": "8fc0f78ad2c2b514c14956884c26db8c0c7e56c9536d9cbc34e0ecb327f217d0",
+      "mappedSegments": 646,
+      "projectSources": [
+        "../../src/pages/SignUp.tsx"
+      ],
+      "mapSha256": "3d81ef6c9b6c547371f3ad3b4f5e48fc151425058e11de0bac161c7ab7aa5b2f"
+    },
+    {
+      "file": "assets/UserProfile-C2mmEesA.js",
+      "sha256": "317cd4828ef6f7c4eaad641a10c47ea6d5b0bb159ca2ac6aed92a9c2d257c43b",
+      "mappedSegments": 1069,
+      "projectSources": [
+        "../../src/pages/UserProfile.tsx"
+      ],
+      "mapSha256": "4ea997d328c72599bc8e8efc6a1059370e47e81ae0cc8a3f0818d5468b65be70"
+    },
+    {
+      "file": "assets/_baseEach-BvjRjfKP.js",
+      "sha256": "c14fd99562c5f21c238800efa6e42af7017bfaaee560e8d180220cd82717b1d0",
+      "mappedSegments": 2020,
+      "projectSources": [],
+      "mapSha256": "d85d60ee733642f4acf51bb5765c8536aff7bb3a5a0b58c0ae49cc8ed015bdcb"
+    },
+    {
+      "file": "assets/_baseFlatten-CKhS2SX5.js",
+      "sha256": "ef39fb0e8442af632462db23de4471a7e8b6802f90f343b8eee041d114042e6e",
+      "mappedSegments": 83,
+      "projectSources": [],
+      "mapSha256": "dd3000a7e356bde10ebf0768fe4ed69800697513b985288d1d1ff11146df232d"
+    },
+    {
+      "file": "assets/_baseFor-C2VRbLXy.js",
+      "sha256": "d2a69c6e971fdc2043e3443d66afa87e25df5764e59821b40c2a68dbdccaf37a",
+      "mappedSegments": 1781,
+      "projectSources": [],
+      "mapSha256": "c2c46cb154ec3676bf19a21fe037a503e208aea7725266661fdde34fa9f062fe"
+    },
+    {
+      "file": "assets/_baseOrderBy-DC1k0i2P.js",
+      "sha256": "e23687afb5bcb73d8520f41c2c24aa161d6c115cc3ff5edb0667bd677dd86542",
+      "mappedSegments": 302,
+      "projectSources": [],
+      "mapSha256": "211e966633e48d01df189b7062c70b695bf43d55ce7132dccfc9a4ba901de08f"
+    },
+    {
+      "file": "assets/_baseUniq-CqeODpgU.js",
+      "sha256": "3ec684e87e0d6408d51c027e7a47297045eeb76ea22551235e5e3a996416ee41",
+      "mappedSegments": 294,
+      "projectSources": [],
+      "mapSha256": "b17fcee6d5a4079d55e6bbb40235641842bd908df3860601a0341abc426ee136"
+    },
+    {
+      "file": "assets/_getTag-DgSgH-lP.js",
+      "sha256": "c9f141770de75d1273db12f47e5186df9990968c5a441aa3be1d5c0e3a0490a7",
+      "mappedSegments": 193,
+      "projectSources": [],
+      "mapSha256": "33011350beda1a2f44582c8db42338d014561a732e4f02077ad139d6cfc1922f"
+    },
+    {
+      "file": "assets/_isIterateeCall-CgqZaj3U.js",
+      "sha256": "d9433f817e3cb97bbdaff026dda00223f38411b31677907edd86f2b4ca8c259e",
+      "mappedSegments": 306,
+      "projectSources": [],
+      "mapSha256": "4533021209756edddd6b5e53862ad0c852881350fd2cb1df0cf69430aa622b56"
+    },
+    {
+      "file": "assets/ar-CN5GyZve.js",
+      "sha256": "0e953d254c8c396eb0b7f1912ac1e538423f24e213a2e3670a9fe0eaa7ed84df",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ar.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "d96b126ce68cbe43449fbc90cde638dc1de120ecc2837e84f26da6bc0414cf86"
+    },
+    {
+      "file": "assets/arc-DgcGdgmL.js",
+      "sha256": "c2f9dc4184af6ca59a95edef7dc58381cb4920cb491b4c141a3b0c05db45009e",
+      "mappedSegments": 1167,
+      "projectSources": [],
+      "mapSha256": "979f2483c22e588c7dc5a025ce8a2cd5e1c0f36959aab23061a8f432af0c7912"
+    },
+    {
+      "file": "assets/architecture-7GRP2DOG-B74OtA6O.js",
+      "sha256": "500131f0a2446453378941f99bef543647f2a0e63bb8be14ee8e38fdf1b06fad",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/architectureDiagram-Q4EWVU46-BSwVXMQk.js",
+      "sha256": "c1d928c1ec2bdcb3a025c5c91d2563e567b806860ab0cc0deab66f24a5ff34c0",
+      "mappedSegments": 32995,
+      "projectSources": [],
+      "mapSha256": "41611d01b8c49b616016cce9e0bc1a5a755c61a60f3dea831f19dbae21576257"
+    },
+    {
+      "file": "assets/array-BifhSqXX.js",
+      "sha256": "4253cc4d9236c0c2db3058ed0969e211ca5bee783b884fc2d201d8f86cb115e3",
+      "mappedSegments": 19,
+      "projectSources": [],
+      "mapSha256": "a8805813c4fe4d3141d67b08115b14e94999ee05e64f1ed8c6cec28f164e8857"
+    },
+    {
+      "file": "assets/az-ChPuMgGv.js",
+      "sha256": "865949d00050fa80c5a01cf062dbb67451f448c5ac6c53d52ec0ba65cde47c1e",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/az.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "135228112bc8e6541d17cf7294cd5b78ee9259fd8891f3e558740c036d39ed67"
+    },
+    {
+      "file": "assets/bash-LmRjUKlR.js",
+      "sha256": "6364c3c72d946e5d9810cbc9f91db67ff8894aacf570f07f20512aa19c411d58",
+      "mappedSegments": 347,
+      "projectSources": [],
+      "mapSha256": "9942da56698e6243cbf35176c7e59dad25db14d59058cdccd0b99ebb793fd86f"
+    },
+    {
+      "file": "assets/bg-Bgoq7Va1.js",
+      "sha256": "2adef301c135f573eb69b47d4cea80c029103e415962478175c96b2b9099b79a",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/bg.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "5c2e3669e0833ddccf421c0283c76a996796ddddb35c5c386e32bb92fd0a9df2"
+    },
+    {
+      "file": "assets/blockDiagram-DXYQGD6D-D_d2D_9i.js",
+      "sha256": "bcdb6212573eb0c905846164e0381393db86ae159e23ebe042c4c2f52e3ad51b",
+      "mappedSegments": 16863,
+      "projectSources": [],
+      "mapSha256": "abb3b157511f2b1aedbe52dfca24136e393bf5fc654d289c64a09ad65865f534"
+    },
+    {
+      "file": "assets/button-Dd8rKTFC.js",
+      "sha256": "e33cac11d0972468951ecf51233a431638a01de9d103f0d27539e08875477e67",
+      "mappedSegments": 2646,
+      "projectSources": [
+        "../../src/components/ui/focus.ts",
+        "../../src/components/ui/button.tsx"
+      ],
+      "mapSha256": "0015f9d702d4f0fd701d1d8a8e4aa3f4b0476ee81ec030dfd47420845f16a1de"
+    },
+    {
+      "file": "assets/c-CVYb4e6m.js",
+      "sha256": "39a713c534c9001743b2597dfd0d55bfc3b8bc3bae0379e5449593499137190c",
+      "mappedSegments": 415,
+      "projectSources": [],
+      "mapSha256": "3b98f8b4cf1d4885aab4791233ef95b80da8cb120c5f0715ea8807308941b4f3"
+    },
+    {
+      "file": "assets/c4Diagram-AHTNJAMY-a1goN2pb.js",
+      "sha256": "7363c8d92493ed046fdfa00915f2dd1379fbea527a514e13ae9c8f798420192b",
+      "mappedSegments": 13222,
+      "projectSources": [],
+      "mapSha256": "3439425e7d67a0a6b8974586bb64a18c370bc51dd669bd978155da1dda59dc76"
+    },
+    {
+      "file": "assets/ca-BtG3wk-G.js",
+      "sha256": "0a1640c9d20812df8e7b4c4e57ca2473513dcff781116229101c991050089e9f",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ca.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "2e512de641e14883d6318c14a0c5320402e984fbceb5726081bf124111b684a2"
+    },
+    {
+      "file": "assets/channel-XuaNBHMH.js",
+      "sha256": "e20a4c718623be564183fb88adef464cfc1ff2346a9a872b673b1caf2feb6d98",
+      "mappedSegments": 14,
+      "projectSources": [],
+      "mapSha256": "0151a151a7f01a0f11613390a3cd33ffb4dff66d91c76cf3d6603d5b2294b2ab"
+    },
+    {
+      "file": "assets/chunk-4BX2VUAB-CFkoNRqD.js",
+      "sha256": "e83e42c87feb44383640231827e524dd347935f572fd88eda6a6c859bbc66a1c",
+      "mappedSegments": 31,
+      "projectSources": [],
+      "mapSha256": "ea1c800c4ae4ad8093a83727938e3a91d46ebf3dad0d45b7a0e9d1347e434c91"
+    },
+    {
+      "file": "assets/chunk-4TB4RGXK-BCh99Wsd.js",
+      "sha256": "a7c2152390b7d43fa6c41c5cc9e994d65ef40955e73154453f6492138aecc518",
+      "mappedSegments": 10204,
+      "projectSources": [],
+      "mapSha256": "f0f25bb642f29df7ff8f8958eb627d352729c9857194e2a042634e7e30641cb2"
+    },
+    {
+      "file": "assets/chunk-55IACEB6-BKjBfUxN.js",
+      "sha256": "79d9331f159e114b200b42753d1ae7aba0060d6850337ff32b2c9f28583f8379",
+      "mappedSegments": 38,
+      "projectSources": [],
+      "mapSha256": "261145e793a410b149a52e1d49cfd771cc617d986cd7b22feffc8f1edeed9699"
+    },
+    {
+      "file": "assets/chunk-5FUZZQ4R-BpCLJ_bF.js",
+      "sha256": "0875487bfb59376747052cd59a91eb4533820752dee3a4703b2cf662ec8244e4",
+      "mappedSegments": 25810,
+      "projectSources": [],
+      "mapSha256": "db9474f6a708f53d882ea3dc466541fb7e862f8e901591f3aa21bc94974e4d9d"
+    },
+    {
+      "file": "assets/chunk-5PVQY5BW-CWwtyand.js",
+      "sha256": "e4b32c0d4e5aa18a5f2fad7a931b46dec8a04f1d5b2efeea4f19ad1df470f272",
+      "mappedSegments": 6746,
+      "projectSources": [],
+      "mapSha256": "a4f77b650a6e90a35378dae59422fb4682a4fcd77646c5477f38f8cd179627d6"
+    },
+    {
+      "file": "assets/chunk-BSJP7CBP-D6OWOGXm.js",
+      "sha256": "6bef8c1b6c5ebdc5c4fdd0483b20f8cb90461411377485acbfa7d68aa95e557f",
+      "mappedSegments": 624,
+      "projectSources": [],
+      "mapSha256": "bbc4bbb83719b0f33fc4de3a48cd4da4180f5533204a1cf955b898dfbfc40b10"
+    },
+    {
+      "file": "assets/chunk-EDXVE4YY-qh2uAWze.js",
+      "sha256": "26f76c182bcd3c032ea28881e563e69c6edfaf2ea2b58c41a13706f6d9b4ce03",
+      "mappedSegments": 117,
+      "projectSources": [],
+      "mapSha256": "889f3ea45a0356ee0dade38bf5f1e9bb928b423f9dca16dec02a85f25938fa25"
+    },
+    {
+      "file": "assets/chunk-ENJZ2VHE-DbMuUotT.js",
+      "sha256": "6fa5549c63299b574a1af78263328d8d5bf55749ebf67a7afdf4f6153195a83a",
+      "mappedSegments": 7706,
+      "projectSources": [],
+      "mapSha256": "790d62b1a6bb08c1cfc0f5f84d9bdeb342ff18a2ce886022654a03c45e0b428c"
+    },
+    {
+      "file": "assets/chunk-FMBD7UC4-C9LJJTXZ.js",
+      "sha256": "edadeff9129a8e619542d8e9eadd8b510f2198bda5ddea9082a04fee5bea04ab",
+      "mappedSegments": 6,
+      "projectSources": [],
+      "mapSha256": "a21a45b47a93cc6d07c72e99a5eac3a10cd815cba1ec942b8a6d55fa0d3418e2"
+    },
+    {
+      "file": "assets/chunk-FOHPRMQF-C8Q44tbT.js",
+      "sha256": "fb4e6bf25ae917792dff9f744c7c59d37356ead67a110b5f705ad5e350349538",
+      "mappedSegments": 105412,
+      "projectSources": [],
+      "mapSha256": "d1c247295646205acaa80badf04e0010f23dc3fe708b9dee48db875497d9d1c2"
+    },
+    {
+      "file": "assets/chunk-ICPOFSXX-CS_V9nVt.js",
+      "sha256": "8d65ed623300f81ec25a67a9a705f2cf14a56e49be8d5f091aba25ca9ae5b452",
+      "mappedSegments": 32356,
+      "projectSources": [],
+      "mapSha256": "9044b197de3520e86c8ddbf34d8f44d1c70ee13e2be4fdd4a561f418372c3ad4"
+    },
+    {
+      "file": "assets/chunk-OYMX7WX6-BJf2t1kE.js",
+      "sha256": "7b9f4943c1756f61c6c4ee97c1b988559cff6fd4e2e58df26e33cf37d454c25f",
+      "mappedSegments": 7763,
+      "projectSources": [],
+      "mapSha256": "ce1c9de07f584b07dfdf99e6599269302ce301e67974d9f9838c3a6eee93c867"
+    },
+    {
+      "file": "assets/chunk-QZHKN3VN-DJ69aRtI.js",
+      "sha256": "80bcde4efbee53c428826e88c78322c2c8370320e35ef04398a8e1e4dfa54ecc",
+      "mappedSegments": 31,
+      "projectSources": [],
+      "mapSha256": "4ffa0f84bd896c1f91e8525448f7998596c2710440b0b16aa0cc9e10d80c3042"
+    },
+    {
+      "file": "assets/chunk-U2HBQHQK-gSvT9Fkk.js",
+      "sha256": "6fe7fc0fce5d8c06b6455cfe54baf0bc5f215e2163db544c2623d850f3b6a7de",
+      "mappedSegments": 11494,
+      "projectSources": [],
+      "mapSha256": "0e41abf9832ddaaea63270f2d06590715eea3fada6de8c17e915a4b3b936f304"
+    },
+    {
+      "file": "assets/chunk-X2U36JSP-GbKrCd0E.js",
+      "sha256": "01a42be7c1001bcc88e1da3b93bbdb5e51cd4119538dc8250d4514265a302c5e",
+      "mappedSegments": 376,
+      "projectSources": [],
+      "mapSha256": "ce0de14ade046781632e5a85a9645ae0b2eaec527ca4eb89d2dddf407992d899"
+    },
+    {
+      "file": "assets/chunk-YZCP3GAM-TR73ly8P.js",
+      "sha256": "54a2748a1c141c0f372b0475e2568bf7c121aefea1f9b0646202469ccfb11402",
+      "mappedSegments": 427,
+      "projectSources": [],
+      "mapSha256": "9a6ab288bf70a6bf14e9a23d3526fad5e749596aee93ecc606ea38641875653e"
+    },
+    {
+      "file": "assets/chunk-ZZ45TVLE-BbE5aTu7.js",
+      "sha256": "6ec2df68b4f54803e910093585b7cfbc3eadeb864ec934b33f6d96a70bb9e978",
+      "mappedSegments": 161,
+      "projectSources": [],
+      "mapSha256": "776e3a2e15b55174460b9b494b5b85ba168e58ca4588f35be9bd089647d22e84"
+    },
+    {
+      "file": "assets/classDiagram-6PBFFD2Q-DMHCZACG.js",
+      "sha256": "124484dc861be86c328190ed9ad1ead0cf7607c5858b86a6982deda110fd427e",
+      "mappedSegments": 34,
+      "projectSources": [],
+      "mapSha256": "125f9b9c81484b522dbf661281fadc19465d3b67d44823d0af10f4158b1686bd"
+    },
+    {
+      "file": "assets/classDiagram-v2-HSJHXN6E-DMHCZACG.js",
+      "sha256": "c234363b31c6a224850b8fa1b65e9b8ce55bd122d894807099e39342521e19c3",
+      "mappedSegments": 34,
+      "projectSources": [],
+      "mapSha256": "03f3deeb2dff9c85c1c299f7ad4a15a2b1ee0301ef50e4670a660bf414106b53"
+    },
+    {
+      "file": "assets/clone-CjvNu0yg.js",
+      "sha256": "d8176d578835855dd23bcf352652c7c1dfe8ebe635f36b75322e10fb9fb5809b",
+      "mappedSegments": 13,
+      "projectSources": [],
+      "mapSha256": "edb95501e350638ba6622b049a979aef42e7be86b2711a364b5987a963f9870a"
+    },
+    {
+      "file": "assets/connect-IQGqHt7s.js",
+      "sha256": "42147cdcec5b92a032246e1bec9011f06088407144f32b3c891d35ed55ecbba9",
+      "mappedSegments": 38747,
+      "projectSources": [
+        "../../src/auth-state.ts",
+        "../../src/types/proto/google/api/http_pb.ts",
+        "../../src/types/proto/google/api/annotations_pb.ts",
+        "../../src/types/proto/google/api/launch_stage_pb.ts",
+        "../../src/types/proto/google/api/client_pb.ts",
+        "../../src/types/proto/google/api/field_behavior_pb.ts",
+        "../../src/types/proto/api/v1/ai_service_pb.ts",
+        "../../src/types/proto/google/api/resource_pb.ts",
+        "../../src/types/proto/api/v1/attachment_service_pb.ts",
+        "../../src/types/proto/api/v1/common_pb.ts",
+        "../../src/types/proto/api/v1/space_service_pb.ts",
+        "../../src/types/proto/google/api/httpbody_pb.ts",
+        "../../src/types/proto/google/type/color_pb.ts",
+        "../../src/types/proto/api/v1/user_service_pb.ts",
+        "../../src/types/proto/api/v1/auth_service_pb.ts",
+        "../../src/types/proto/api/v1/idp_service_pb.ts",
+        "../../src/types/proto/api/v1/instance_service_pb.ts",
+        "../../src/types/proto/api/v1/memo_service_pb.ts",
+        "../../src/lib/space-display.ts",
+        "../../src/router/routes.ts",
+        "../../src/utils/redirect-safety.ts",
+        "../../src/utils/auth-redirect.ts",
+        "../../src/connect.ts"
+      ],
+      "mapSha256": "854417e2f662b3850495c5ccc7da54a58e2bdc30a0c7f4cc03b5e9abd8566fb4"
+    },
+    {
+      "file": "assets/constants-BAKSEW_s.js",
+      "sha256": "325851dd9b9e191cc1c75d7d997f153932b132bfcf9ae0518cc704e443456777",
+      "mappedSegments": 11,
+      "projectSources": [
+        "../../src/lib/constants.ts"
+      ],
+      "mapSha256": "d44e728516b7befa5fb256f363cfaaf81d850b5279e0c8dace46980f1c5cdccf"
+    },
+    {
+      "file": "assets/core-B3t5lAAT.js",
+      "sha256": "db9b66b9b178ff0b96d733aa26ed6be0e70125e980464b4b35e1248add92f816",
+      "mappedSegments": 5,
+      "projectSources": [],
+      "mapSha256": "db399139543384dc6e9fea4ddad86b1a6329dc083752cd1ef6a111b2b271536e"
+    },
+    {
+      "file": "assets/core-CX0E8Gvm.js",
+      "sha256": "b1fa4803a80be39150757a64c022d90c719905c40a29b016abd65692a9750da3",
+      "mappedSegments": 4428,
+      "projectSources": [],
+      "mapSha256": "2d9c5b45d07b20d01a3bf93a00fa3535907836e3c6d56a08f0231e4c37c9377d"
+    },
+    {
+      "file": "assets/cose-bilkent-S5V4N54A-X83g6AsS.js",
+      "sha256": "01ad7c338200f1c5c6b6a628ae1620b2aa98bff25353fce1af105600de9620a6",
+      "mappedSegments": 17505,
+      "projectSources": [],
+      "mapSha256": "a4b957a9beead6da37ae20f8ffcdf272267fde1cac055b3b97eb7bee06ec055b"
+    },
+    {
+      "file": "assets/cpp-V0F2hNk9.js",
+      "sha256": "90f70a98ac055651055722b3f56cd031384db532600c0672406079f86d0e394c",
+      "mappedSegments": 487,
+      "projectSources": [],
+      "mapSha256": "442bc316df50fc9f997459b84d8883474c65d09742783e432667c3c29777d82f"
+    },
+    {
+      "file": "assets/cs-BgZTIzyW.js",
+      "sha256": "93e9378efc8818caf2491289f23d6da3afa95216a62be90d7d65b29f37ffcd67",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/cs.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8c163ce5b294cfd958c21b8f6faf23b0546acccb61770cc2a55056b0c97ef8ef"
+    },
+    {
+      "file": "assets/csharp-GZmu99Fo.js",
+      "sha256": "bc93ad0efa1c50ca0104b4955449b621275b7059e40394a41b61443ba84d15d7",
+      "mappedSegments": 551,
+      "projectSources": [],
+      "mapSha256": "723f3d90c53404677a3fcafc786c1ac12756d01b36733ed5538dabd577d3e492"
+    },
+    {
+      "file": "assets/css-D5l_8KUR.js",
+      "sha256": "1eb65e77bb9e8cd569acde48e6b3e488e022f145f67f58fd030d77c03d96967b",
+      "mappedSegments": 355,
+      "projectSources": [],
+      "mapSha256": "1fb23796fb8263cf219f64ecf290cca1ab6f2981552fd833071fad24f43c2b42"
+    },
+    {
+      "file": "assets/cynefin-OW5HDTMX-3rvnt21w.js",
+      "sha256": "04eb545c2656a060f7d64570c5458c2d55263e5204d74b100fe9b939d3525c46",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/cytoscape.esm-Yq6u8L66.js",
+      "sha256": "5698d2472835ae41088e32313d1b85ae4a731f3d88f6cc745f156ff73a815aa4",
+      "mappedSegments": 107578,
+      "projectSources": [],
+      "mapSha256": "f58289e9d0e340dd81a2e1e93ad512a6c3a1f5b7f18a38dffede2de1d05b24f0"
+    },
+    {
+      "file": "assets/da-D4uFV3zq.js",
+      "sha256": "12b90d8aae0b405c96fbd902f0e9cc0de9131a4188d0b2b3a6ecad516ba2fb39",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/da.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "f936a73105c8a151739c5a9b25faa98ea49e8f1d8e70900fc30b63b79a9a57c9"
+    },
+    {
+      "file": "assets/dagre-18zHTz5e.js",
+      "sha256": "bf7e45d267895d172ff6dd9f1417026936d262471155f0e0b71af9c5be610214",
+      "mappedSegments": 9206,
+      "projectSources": [],
+      "mapSha256": "dff60a081fce776260681c54b0d5ebfc9451603eddd1d70daa4a903b1911a422"
+    },
+    {
+      "file": "assets/dagre-KV5264BT-BO6ZIlup.js",
+      "sha256": "f3e9c6ab643929f07723e254438efc309da8a58e5fb531436f53d3941ff628f5",
+      "mappedSegments": 2654,
+      "projectSources": [],
+      "mapSha256": "745d3376a219b1eed3ee8990dceb5f8c73b0b142be59add7f0ad61478af2fa2e"
+    },
+    {
+      "file": "assets/de-8D6R7Ot9.js",
+      "sha256": "87ba03351738c3cdd528a966c1b6af365100c3a5216890423dea1d625efc7bad",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/de.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8cc9e6de7703db5e8670ef3b6a2df00bdf3b681809797f8034e9f783a5f8e58c"
+    },
+    {
+      "file": "assets/defaultLocale-BFoDCU3G.js",
+      "sha256": "bd7147063102659dca1e427774537c1fba9fb95c5e399f1e550ba15357ec0a8d",
+      "mappedSegments": 1355,
+      "projectSources": [],
+      "mapSha256": "aa2c5c359a8941453d9ad4dbd8e9c7d06094f6a9d0909569444ab25fd9289090"
+    },
+    {
+      "file": "assets/deriveDefaultCreateTime-BkiNkwgq.js",
+      "sha256": "cc0701db2e3546f47562efdbe0d5494d611ca4b16238f8fc960ad8da174b8d66",
+      "mappedSegments": 54,
+      "projectSources": [
+        "../../src/components/MemoEditor/utils/deriveDefaultCreateTime.ts"
+      ],
+      "mapSha256": "3cecdb4a0ca5f34916e75ca8dcaea5bd3281f8bb77c32245e68449280dda9897"
+    },
+    {
+      "file": "assets/diagram-5BDNPKRD-QmYjwzU1.js",
+      "sha256": "91af77ebc300f5ad015720f566bad6e4d070e92cf08351f175bdac213dfa9672",
+      "mappedSegments": 568,
+      "projectSources": [],
+      "mapSha256": "78a72bf3765b7fec55f8ce67cbd933eec9238d82b2b5b435064e1855c975e621"
+    },
+    {
+      "file": "assets/diagram-G4DWMVQ6-Brm_apk6.js",
+      "sha256": "931720de2917d0f325922e24235326707b9e659297c48c89dd4a53748937ebca",
+      "mappedSegments": 3722,
+      "projectSources": [],
+      "mapSha256": "477498eb8b1a053db8f50217af7349092dd01fec2024d420175da9ccd7735dfb"
+    },
+    {
+      "file": "assets/diagram-MMDJMWI5-DBVCXmjf.js",
+      "sha256": "bcabbde72723bf0cddadb3ae99958c3d883c343f0f49855c73f66bb9b77190c3",
+      "mappedSegments": 1274,
+      "projectSources": [],
+      "mapSha256": "fa6d5d4ae6bd0220cad9fedf10b05e44a0bf40f69ed59f7494b83aa7be025946"
+    },
+    {
+      "file": "assets/diagram-TYMM5635-iYlAN7Fo.js",
+      "sha256": "15a16e62dc580a1b9b29359b7d3ac9bd3b9580bc4213e3bd10669b9e60b05955",
+      "mappedSegments": 790,
+      "projectSources": [],
+      "mapSha256": "d17f74449b5133131556c45057a93bb87cac5e21041515ae769c2e6fc38f91e5"
+    },
+    {
+      "file": "assets/dialog-BI5bcTCz.js",
+      "sha256": "993b8a9e136766d78f61a68e7d7a388b1a43b7d006e5ab3b3e6e0f66e459146f",
+      "mappedSegments": 2365,
+      "projectSources": [
+        "../../src/components/ui/dialog.tsx"
+      ],
+      "mapSha256": "b666469f2b3db8e3c84ecdecad6646e40e360dcf7e05fef9d3aa1bf1eb85c039"
+    },
+    {
+      "file": "assets/diff-CJb8JxGC.js",
+      "sha256": "d0f06bd870c93e261e0d1a8211995f3769f882505ab60e7129d8fa28ca16e837",
+      "mappedSegments": 84,
+      "projectSources": [],
+      "mapSha256": "8494186ef1550d34070f4d47033b6e63dcdf8147b289f73a7e719e5969999703"
+    },
+    {
+      "file": "assets/dist-BWMU1Z2M.js",
+      "sha256": "880161cfbc037bcd5ce7bafdd632bb4c0b70b9a6f98ccc4fe85d8b81cd7e1f31",
+      "mappedSegments": 2448,
+      "projectSources": [],
+      "mapSha256": "30404cb573eb95ff1b63c646f0ea41ebf6a09ca6ed96a7423562a1952cfc493a"
+    },
+    {
+      "file": "assets/dist-B_J_HbC0.js",
+      "sha256": "d08834800df31bc063b4f8fcb452f635cb513f642f82c4d2b9462a2195ebb3b7",
+      "mappedSegments": 381,
+      "projectSources": [],
+      "mapSha256": "97bc32fae65400b516f5b5752067e3f52682a833013ed4036f9f4f8a16af99b0"
+    },
+    {
+      "file": "assets/dist-D8nw-YAF.js",
+      "sha256": "16f9825da2340ffaf8dbc3f34d225bc2ee56ea32421c064a8f1105ce0f1c4d2a",
+      "mappedSegments": 11077,
+      "projectSources": [
+        "../../src/utils/i18n.ts",
+        "../../src/i18n.ts"
+      ],
+      "mapSha256": "30f8cc718f6b5fe8d68e3494b1b1e5de9f7f14904a56b18a2d3c34bd6468db16"
+    },
+    {
+      "file": "assets/dockerfile-C0zufGsU.js",
+      "sha256": "7c5849226ab7dfe09bc7f4722e8167e7490927ee6c35ba9e35ad283182f532b2",
+      "mappedSegments": 51,
+      "projectSources": [],
+      "mapSha256": "c88f608f05dc4ec7e680b184b51afe33db49f473b2717f9c01b2eeec71b61500"
+    },
+    {
+      "file": "assets/el-C6ya-QCq.js",
+      "sha256": "832fe007f75a867072deb1e408dd1734f45338eef1ffd82f81e6d29a0a6c07bf",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/el.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "3acb8f275ff5e86bc9b6a355f49b77f837506226b29ed949a78f76ad185dbadf"
+    },
+    {
+      "file": "assets/en-DakTyYCk.js",
+      "sha256": "24304a4c8625ee3d7e5cace87946bdee0021925cc9ab0e51678ab6a69360c2bb",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/en.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "de22baf59b9991827c872776d14fe23eb1bfd34854d13822ba38b2c25ec0468b"
+    },
+    {
+      "file": "assets/en-GB-BcQaoQvE.js",
+      "sha256": "69577281c081b17288854674b45bcde8243dbbb32bb73ed4c738b7b4877563c4",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/en-GB.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8561bd2b547269f23f79828004be8ba0b70ebfdd900a732d40ed3e4b1b6219f9"
+    },
+    {
+      "file": "assets/erDiagram-SMLLAGMA-C8fyNlhk.js",
+      "sha256": "abcb668d02cdc88aee8c4a969841a8495fa6144abf5ce2bacb3573d760a76540",
+      "mappedSegments": 6384,
+      "projectSources": [],
+      "mapSha256": "8e73f64b019ab3d8c2b20099d9158e5997b1278d58faaed4a15e20c4c8a56912"
+    },
+    {
+      "file": "assets/error-DDS2XFwP.js",
+      "sha256": "30dcd9f982cd7e5ef14aa8e2e688786e0c9860ac28a59509078e874b31f4a919",
+      "mappedSegments": 347,
+      "projectSources": [
+        "../../src/lib/error.ts"
+      ],
+      "mapSha256": "a29728cf7adbbff8a37c41c8f160e6f0f5405cafc7cfb476b53d7f72091a0f1e"
+    },
+    {
+      "file": "assets/es-98Sincb1.js",
+      "sha256": "e94e54eb4c95d763e557e585cb9bc81c85de93d5cc9d9f407753d938d1726de0",
+      "mappedSegments": 41042,
+      "projectSources": [],
+      "mapSha256": "5ec7689b721601fe6234d4c782926331b539be4ec3af06030eaa230d29e12750"
+    },
+    {
+      "file": "assets/es-DRazP7du.js",
+      "sha256": "2010245fe4dd960775b74a06542c676f62ff394e2a1591f287a886a6218429a6",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/es.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "c666465448d92d05e17365c07adb1f77ffc3094e9a14c4bc62891bac88798e54"
+    },
+    {
+      "file": "assets/et-BgkVLBOn.js",
+      "sha256": "14f9ca7a4a99761d14b49297103f6a5c09c8c4198cbc32bec074fe0aa0ae6bf5",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/et.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "b9b672e9cfc86912144171a76cafc976edddec31924108f79d474b35ccebdda3"
+    },
+    {
+      "file": "assets/eventmodeling-NTZA5JFV-D_erTzf_.js",
+      "sha256": "b00b1b752154ff2f5887af839cf07238a1a84a49b5162f4f6af4e88ce41b48b4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/fa-DH8hzKzr.js",
+      "sha256": "e898f47c0d59dfb98e269217cc05b839cd4808c123e17b4e8e49b3ad0d0d6c5e",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/fa.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8fa4af11c03137da518c9324f740fec261d202ecd4bb9ce82e8c84f4a0b7d0da"
+    },
+    {
+      "file": "assets/fi-GJpMhb9b.js",
+      "sha256": "9f7e851ba91a9a68f49778c4bab8fa87488b9087bb09d7bf7001e71ac4d41f1a",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/fi.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "eefa308779430bde221346012ce9b94b7eac5c0ec9301f9aa020c23d62d93d50"
+    },
+    {
+      "file": "assets/flowDiagram-DWJPFMVM-Cu1QavOD.js",
+      "sha256": "ad509e50dfeb410b7e67dc51bb8f55b4a91c34e2b82d44b7401f731117435abb",
+      "mappedSegments": 14000,
+      "projectSources": [],
+      "mapSha256": "d53ec3d4b94135fe83ad99f04ed63bab42d97be97ccca81cca2aaa4352205c59"
+    },
+    {
+      "file": "assets/format-COdcaRWg.js",
+      "sha256": "81573fd5b9e4e2de5d8f54b43a0b7566539f1502c20137c62203a9f6d13929f7",
+      "mappedSegments": 223,
+      "projectSources": [
+        "../../src/utils/format.ts"
+      ],
+      "mapSha256": "0dfe16136cdcb5162bcbb01e1df25dd2780687c6525421d48ce5466cad1350b6"
+    },
+    {
+      "file": "assets/fr-D1ViJ9-Q.js",
+      "sha256": "4e893f6978c6dec2543071f99630cbbca7e3db969bbcfa2eb6141560cf3255b9",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/fr.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "ee4b373b9e073316755937087031f95fb5caadd7ac2b53a82a8cd77d0123b090"
+    },
+    {
+      "file": "assets/full.esm-oRzPO_-t.js",
+      "sha256": "9273c0e585863bb5c100025ebbd3391d429bfd2acdc9cda710eb7c45deacaa98",
+      "mappedSegments": 15015,
+      "projectSources": [],
+      "mapSha256": "606ebdd6743fe5322930121eee8d43e2271532291227002fc5633fd004a834a3"
+    },
+    {
+      "file": "assets/ganttDiagram-T4ZO3ILL-DXJOSkhr.js",
+      "sha256": "ae23f43470449371dbfbf1f4cff058afde5650048952dba526476d3480abc2d2",
+      "mappedSegments": 17177,
+      "projectSources": [],
+      "mapSha256": "6096fd968faf1eeb92349ec2112a391b12d070e9491cc55134f3b9718701537a"
+    },
+    {
+      "file": "assets/gitGraph-4MIJSDKK-D_XmSWI4.js",
+      "sha256": "ec6cbd89fcaea78c885d81c235389969baf88432fcc84259a6a0ae56dd4fe459",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/gitGraphDiagram-UUTBAWPF-CvB8IhoU.js",
+      "sha256": "df84a4b35d07644f0491ac9fc0ea7ca0a7bd435f456fa9bdce33eeb709431af7",
+      "mappedSegments": 6561,
+      "projectSources": [],
+      "mapSha256": "3f21a9b73e918bfcadd92fbb2562899cf4f4d1b55fc8f0dc9a798dbc6281c7b6"
+    },
+    {
+      "file": "assets/github-Cdxh0oZg.js",
+      "sha256": "75ee0d5f0b6982dbe1c9c39aa4c7aacb7a3a2a860ce54474f6e222ea4a604d4c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "3d254b819f31bd800a84dc6006e9822b609de49d32ae8945fa831b30783acbf2"
+    },
+    {
+      "file": "assets/github-dark-dimmed-DM1EBY4E.js",
+      "sha256": "03921a58f935ac09f23ab28eec5e9cc0010a2d7a5dd873a1c6be8d828d46ffe6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "d4ef3aa50505159a3620ec0242cd0743955405348b5d46c36ec050186f85da6c"
+    },
+    {
+      "file": "assets/gl-DTISgMM5.js",
+      "sha256": "6bf3fe862285fb52986972b92e73cfdf847cddf582b654fb7dc32a05a4336e7c",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/gl.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "00ea01d93260ec42638a42a72ba2fe5f2e084c34936c17d43cbdabe077cdc873"
+    },
+    {
+      "file": "assets/go-B-PCS5zA.js",
+      "sha256": "62616dcb6e07f0b8a5fe103d46954cc698cf5aed98d24c7356c7d4f6c1058fd2",
+      "mappedSegments": 192,
+      "projectSources": [],
+      "mapSha256": "0ad992991200f8dedd286a28e6cf632603f8a9e11f4d1c0b119e235ec97b8702"
+    },
+    {
+      "file": "assets/graphlib-C7RzUUCE.js",
+      "sha256": "43a4a56c0e396357176c8816093e197d95d0189dd94e43697ed14e5d29c13186",
+      "mappedSegments": 2382,
+      "projectSources": [],
+      "mapSha256": "0e874363be02b7ab06f642299fac7ec7ddfaf97e13aa237dfe682c852e1bf4bf"
+    },
+    {
+      "file": "assets/graphql-BHHhacaR.js",
+      "sha256": "85e06e43c1ad239718d803ff946db35909fa82f538daff7eab3b9131c03276fb",
+      "mappedSegments": 112,
+      "projectSources": [],
+      "mapSha256": "beb73f22afeeeb1df99aef11a2afca926e292fd602afd67988a0d9b217994a29"
+    },
+    {
+      "file": "assets/he-DKVHZJz2.js",
+      "sha256": "0c0b0ff7d76f54d9fe48c5615ced6e37b7eb5971b8c559c98c811f6bbaab5ae1",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/he.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "64e184a811f850fe2dbd65642322152c63efaad692f4fb12759495c8dd31dcfb"
+    },
+    {
+      "file": "assets/hi-CiKDWh6g.js",
+      "sha256": "ad9c8a8e31a5f48f402d0a1360eb27dd9f670d8c4cbcb9cafb0bc0b26de47d47",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/hi.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "13e99d5db09126531dec98089f6cb265404ba7c1b04228ab0cade0c6088d0045"
+    },
+    {
+      "file": "assets/hr-CVhTLYtm.js",
+      "sha256": "15c982e45ce007e5cb6ade78ab5f6f2eb8e4db493a8db81f37da0790ccf20fa5",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/hr.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "4d36c02aaebf9e5a89e6ddd6f40668982b5e45fe61d881836aa704495ef184ff"
+    },
+    {
+      "file": "assets/hu--GGfb17k.js",
+      "sha256": "14ad8bc13c0066b64639d0fdcd43757825d8f9b2b7d40699a8d5cfabcc612a7f",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/hu.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "5bedf29ba4173c872799896e56ff65dd2864ff715ffffbd9d86b6c45c1e30003"
+    },
+    {
+      "file": "assets/id-BPDNIYoD.js",
+      "sha256": "5b57016c6715441c0fcb1f1bd1cd2031983855d3bae9d3971d4e215af0da2a47",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/id.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "c4597e599a89ec9644dfcda4cd8e55f5178b5ea37e177723ed5b6d022416a74d"
+    },
+    {
+      "file": "assets/index-V9xw4cKo.js",
+      "sha256": "da06cbc2058845c774ead9f71061d9ed25e8cc592890e2e93e8deeeaed0df6d6",
+      "mappedSegments": 262710,
+      "projectSources": [
+        "../../src/components/ErrorBoundary.tsx",
+        "../../src/components/ui/popup.ts",
+        "../../src/components/ui/tooltip.tsx",
+        "../../src/hooks/useInstanceQueries.ts",
+        "../../src/utils/attachment.ts",
+        "../../src/utils/managed-attachment.ts",
+        "../../src/contexts/InstanceContext.tsx",
+        "../../src/contexts/ViewContext.tsx",
+        "../../src/hooks/useLiveMemoRefresh.ts",
+        "../../src/hooks/useTokenRefreshOnFocus.ts",
+        "../../src/hooks/useNavigateTo.ts",
+        "../../src/hooks/useUserLocale.ts",
+        "../../src/utils/theme.ts",
+        "../../src/hooks/useUserTheme.ts",
+        "../../src/utils/oauth.ts",
+        "../../src/App.tsx",
+        "../../src/layouts/MainLayout.tsx",
+        "../../src/lib/cel-filter.ts",
+        "../../src/contexts/SpaceContext.tsx",
+        "../../src/contexts/MemoFilterContext.tsx",
+        "../../src/lib/calendar-utils.ts",
+        "../../src/lib/memo-views.ts",
+        "../../src/hooks/useMemoFilters.ts",
+        "../../src/hooks/useMemoSorting.ts",
+        "../../src/components/MapView/model.ts",
+        "../../src/components/MapView/useMapMemos.ts",
+        "../../src/components/AppSidebar/routes.ts",
+        "../../src/components/AppSidebar/sidebar-layout.ts",
+        "../../src/components/AppSidebar/SidebarRow.tsx",
+        "../../src/components/AppSidebar/SidebarSectionHeader.tsx",
+        "../../src/components/AppSidebar/SidebarSection.tsx",
+        "../../src/lib/memo-comments.ts",
+        "../../src/utils/markdown-manipulation.ts",
+        "../../src/utils/rehype-plugins/rehype-heading-id.ts",
+        "../../src/utils/remark-plugins/remark-disable-setext.ts",
+        "../../src/utils/remark-plugins/remark-preserve-type.ts",
+        "../../src/utils/remark-plugins/remark-split-mixed-task-lists.ts",
+        "../../src/utils/markdown-link.ts",
+        "../../src/utils/markdown-source-boundaries.ts",
+        "../../src/utils/memo-markdown-extension.ts",
+        "../../src/utils/gfm-email.ts",
+        "../../src/utils/gfm-url.ts",
+        "../../src/utils/username.ts",
+        "../../src/utils/mention-grammar.ts",
+        "../../src/utils/tag-unicode-data.ts",
+        "../../src/utils/tag-grammar.ts",
+        "../../src/utils/remark-plugins/remark-tag.ts",
+        "../../src/components/MemoContent/constants.ts",
+        "../../src/components/MemoContent/pipeline.ts",
+        "../../src/components/MemoMetadata/Relation/relationHelpers.ts",
+        "../../src/components/MemoMetadata/Relation/useResolvedRelationMemos.ts",
+        "../../src/components/MemoParentPlaceholder.tsx",
+        "../../src/components/MemoView/navigation.ts",
+        "../../src/components/ui/dropdown-menu.tsx",
+        "../../src/hooks/useDateFilterNavigation.ts",
+        "../../src/hooks/useDebouncedEffect.ts",
+        "../../src/hooks/useDelayedFlag.ts",
+        "../../src/hooks/useFilteredMemoStats.ts",
+        "../../src/hooks/useLoading.ts",
+        "../../src/hooks/useLocalStorage.ts",
+        "../../src/hooks/useMediaQuery.ts",
+        "../../src/hooks/useOverflowTitle.ts",
+        "../../src/utils/user.ts",
+        "../../src/components/MemoDetailSidebar/MemoOutline.tsx",
+        "../../src/components/ui/select.tsx",
+        "../../src/hooks/useMemoShareQueries.ts",
+        "../../src/components/MemoDetailSidebar/MemoSharePanel.tsx",
+        "../../src/components/MemoDetailSidebar/MemoDetailSidebar.tsx",
+        "../../src/components/ConfirmDialog/index.tsx",
+        "../../src/components/RelativeTime.tsx",
+        "../../src/hooks/useDialog.ts",
+        "../../src/components/ui/input.tsx",
+        "../../src/components/ui/label.tsx",
+        "../../src/components/ui/radio-group.tsx",
+        "../../src/components/ui/textarea.tsx",
+        "../../src/components/CreateAccessTokenDialog.tsx",
+        "../../src/components/Settings/SettingSection.tsx",
+        "../../src/components/Settings/AccessTokenSection.tsx",
+        "../../src/components/ui/separator.tsx",
+        "../../src/components/Settings/SettingGroup.tsx",
+        "../../src/components/Settings/SettingList.tsx",
+        "../../src/components/Settings/SettingTable.tsx",
+        "../../src/components/Settings/useInstanceSettingUpdater.ts",
+        "../../src/components/Settings/AISection.tsx",
+        "../../src/components/ui/switch.tsx",
+        "../../src/components/UpdateCustomizedProfileDialog.tsx",
+        "../../src/components/Settings/InstanceSection.tsx",
+        "../../src/components/ui/badge.tsx",
+        "../../src/components/Settings/InfoChip.tsx",
+        "../../src/components/UserAvatar.tsx",
+        "../../src/components/CreateUserDialog.tsx",
+        "../../src/components/Settings/MemberSection.tsx",
+        "../../src/lib/browser.ts",
+        "../../src/lib/memo-export.ts",
+        "../../src/components/Settings/MemoExportSection.tsx",
+        "../../src/components/Settings/MemoRelatedSettings.tsx",
+        "../../src/components/ChangeMemberPasswordDialog.tsx",
+        "../../src/components/UpdateAccountDialog.tsx",
+        "../../src/components/Settings/sso-display.ts",
+        "../../src/components/Settings/LinkedIdentitySection.tsx",
+        "../../src/components/Settings/UserStatsSection.tsx",
+        "../../src/components/Settings/MyAccountSection.tsx",
+        "../../src/components/Settings/SettingRow.tsx",
+        "../../src/components/Settings/NotificationSection.tsx",
+        "../../src/utils/memo.ts",
+        "../../src/components/ui/popover.tsx",
+        "../../src/components/LocalePicker.tsx",
+        "../../src/components/LocaleSelect.tsx",
+        "../../src/components/ThemeSelect.tsx",
+        "../../src/components/VisibilityIcon.tsx",
+        "../../src/components/Settings/PreferencesSection.tsx",
+        "../../src/components/Settings/ResourceStatsSection.tsx",
+        "../../src/components/ui/tabs.tsx",
+        "../../src/lib/space-emoji.ts",
+        "../../src/components/CustomIconPicker.tsx",
+        "../../src/components/SpaceIconPicker.tsx",
+        "../../src/components/CreateSpaceDialog.tsx",
+        "../../src/components/Settings/InviteSpaceMemberDialog.tsx",
+        "../../src/components/SpaceIcon.tsx",
+        "../../src/components/SpaceMark.tsx",
+        "../../src/components/SpaceRoleBadge.tsx",
+        "../../src/components/Settings/SpacesSection.tsx",
+        "../../src/components/CreateIdentityProviderDialog.tsx",
+        "../../src/components/LearnMore.tsx",
+        "../../src/components/Settings/SSOSection.tsx",
+        "../../src/components/Settings/StorageSection.tsx",
+        "../../src/lib/color.ts",
+        "../../src/components/Settings/TagsSection.tsx",
+        "../../src/components/CreateWebhookDialog.tsx",
+        "../../src/components/Settings/WebhookSection.tsx",
+        "../../src/components/Settings/settingSections.ts",
+        "../../src/components/ActivityCalendar/utils.ts",
+        "../../src/components/ActivityCalendar/cellStyles.ts",
+        "../../src/components/ActivityCalendar/CalendarCell.tsx",
+        "../../src/components/ActivityCalendar/monthDays.ts",
+        "../../src/components/ActivityCalendar/MonthCalendar.tsx",
+        "../../src/components/StatisticsView/MonthNavigator.tsx",
+        "../../src/components/StatisticsView/StatisticsView.tsx",
+        "../../src/contexts/AppSidebarContext.tsx",
+        "../../src/components/UserMenu.tsx",
+        "../../src/components/ui/sheet.tsx",
+        "../../src/utils/lazy.ts",
+        "../../src/components/MemoEditor/loader.ts",
+        "../../src/components/ui/visually-hidden.tsx",
+        "../../src/lib/suggestion-expression.ts",
+        "../../src/lib/context-suggestions.ts",
+        "../../src/lib/tag-suggestions.ts",
+        "../../src/lib/memo-suggestions.ts",
+        "../../src/hooks/useMemoSuggestions.ts",
+        "../../src/contexts/GlobalMemoEditorContext.tsx",
+        "../../src/components/MemoMetadata/Attachment/attachmentHelpers.ts",
+        "../../src/utils/media-item.ts",
+        "../../src/hooks/useAttachmentLibrary.ts",
+        "../../src/components/MemosLogo.tsx",
+        "../../src/components/AppSidebar/CommonSidebarContent.tsx",
+        "../../src/components/AppSidebar/SpaceSwitcher.tsx",
+        "../../src/components/TagTree.tsx",
+        "../../src/components/AppSidebar/TagsSection.tsx",
+        "../../src/components/MemoDisplaySettingMenu.tsx",
+        "../../src/components/MemoViewIcon.tsx",
+        "../../src/components/AppSidebar/ViewsSection.tsx",
+        "../../src/components/AppSidebar/AppSidebar.tsx",
+        "../../src/components/AppSidebar/QuickFindDialog.tsx",
+        "../../src/components/AppSidebar/useSidebarWidth.ts",
+        "../../src/components/AppSidebar/SidebarResizeHandle.tsx",
+        "../../src/layouts/RootLayout.tsx",
+        "../../src/router/guards.tsx",
+        "../../src/pages/NotFound.tsx",
+        "../../src/router/SpaceRoute.tsx",
+        "../../src/router/index.tsx",
+        "../../src/main.tsx"
+      ],
+      "mapSha256": "c69a175b2bfeb09e44983fc433cb34e7316fb5e4c8b2b028e7fda089c67e444b"
+    },
+    {
+      "file": "assets/info-A6RAGUB7-CvxoOwLg.js",
+      "sha256": "28c5983031954139b40e62dfc3266daaa5b32c2479986e4a17fc1701f8a70473",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/infoDiagram-42DDH7IO-DmiXH8Wb.js",
+      "sha256": "6906b1ba60a9d1b0e84e0fe7823654c5fa9904b6a79df3aa122f4e75872c6649",
+      "mappedSegments": 107,
+      "projectSources": [],
+      "mapSha256": "c5b0fe8aa01c16d2d450902bc30db947c3d16653d24f88588577ff221c73ff98"
+    },
+    {
+      "file": "assets/init-C-OQMol4.js",
+      "sha256": "457f2c98ab9c4f58ad2043398ee516b62054e89521bdc77abca4c520b9e1107d",
+      "mappedSegments": 32,
+      "projectSources": [],
+      "mapSha256": "42a064f5e43627fb8951016958b3dbde7d5ebffcdcbb90d63a33af25ce25d01c"
+    },
+    {
+      "file": "assets/ishikawaDiagram-UXIWVN3A-COLUyqpv.js",
+      "sha256": "e029512e6b02bac1a83446b2bafec60a22efc6b11f06bb33f6081661f50a96ab",
+      "mappedSegments": 4110,
+      "projectSources": [],
+      "mapSha256": "9d528d2dd802d9e0375cdbe04faf45e809fdf4f9d10735e46e7fc7e515e5e9fd"
+    },
+    {
+      "file": "assets/it-BbvpQvnZ.js",
+      "sha256": "ae08c930ec2ef4e8d100e031c2eeb67841be1bbe3179ce021acb0b515fb513f7",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/it.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "29c55e4c2eb9338621d7fe106b7f83d4d8a62ef39d282675eaccd0fc8084de78"
+    },
+    {
+      "file": "assets/ja-D19FqwNW.js",
+      "sha256": "de46e951db605e0f64cdcb1241dcfe7fc91714d0f23af8745cd6a3682047dd05",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ja.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "3acb9bf48d72405502353ef94e59ee2fcc9eac2711c1195be93aa2c1a0fcde5c"
+    },
+    {
+      "file": "assets/java-BaXwJpWq.js",
+      "sha256": "3e0dc2fc06f61dafaef5308043b78e7628e5d3695dfc74edd8c4dc7a027e4db7",
+      "mappedSegments": 386,
+      "projectSources": [],
+      "mapSha256": "a4612a39c5533340d344b90df74befe5b3e74bf10752bf15d4dd3cbde8808ad2"
+    },
+    {
+      "file": "assets/javascript-Clzd76_-.js",
+      "sha256": "198f1884c913ece177bd2f1c84575abe2d4bea99389d6d0679c981ac3e91b73a",
+      "mappedSegments": 1046,
+      "projectSources": [],
+      "mapSha256": "168c8dcb11ae44a7bad6db016ac55e88254c79aec01f801f24a83960298cf4d4"
+    },
+    {
+      "file": "assets/journeyDiagram-VCZTEJTY-DUU_sbI3.js",
+      "sha256": "d3a12bb834bccc4d02809ec9962b22f8a2698dcff23e6dea362872bf6713d030",
+      "mappedSegments": 5160,
+      "projectSources": [],
+      "mapSha256": "dcb73416b5a1b3c17cd12d86f207e85c5bfe6b515b60517d0fd53664222fc0dc"
+    },
+    {
+      "file": "assets/json-DS4EA3dC.js",
+      "sha256": "83b561762bc7146d840801c87c76e81fe11829b5b27c83c8fd4659b6b53f10b2",
+      "mappedSegments": 70,
+      "projectSources": [],
+      "mapSha256": "830db5bb6cde4f726a18e86b8b7a60081c1fdc5ff464ad5ed144710eb031995e"
+    },
+    {
+      "file": "assets/jsx-runtime-CxR3u8Q2.js",
+      "sha256": "28cdcde58edd6b11604a6b481bc9519becc5e05bf08d1bedc2b9fd0d862158da",
+      "mappedSegments": 1780,
+      "projectSources": [],
+      "mapSha256": "8bce2b521165d57658edff0532af9732ece29515c2aafbe987d2dbe7d8432900"
+    },
+    {
+      "file": "assets/ka-GE-D-9R-yrM.js",
+      "sha256": "17909a985de5ec5a7dbbf556305fc942318698a9395c3a1ee7ca902069285452",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ka-GE.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "66ae31075f351950f79d1466a5f1f5a50e2a331816903097e44e4ec57d8dd447"
+    },
+    {
+      "file": "assets/kanban-definition-6JOO6SKY-jxp1HfIw.js",
+      "sha256": "e8e9778bdd6c6392e8a4e709ed25763f5e505810b06b6421ce98c1fc99ca0e39",
+      "mappedSegments": 4458,
+      "projectSources": [],
+      "mapSha256": "52bc4598e2217352a633f5f5829d6cf9a1af1daeb3f9adbbb83633cfebf171c8"
+    },
+    {
+      "file": "assets/katex-DMEkaGgc.js",
+      "sha256": "71c8ad48a23cd30d71c87995bbd51bd2541cf1c0e061f41943a6ed5f6c4377af",
+      "mappedSegments": 55752,
+      "projectSources": [],
+      "mapSha256": "22b4e90f61c3ad093751d83988afd43b069755f2efb7a485004e5cfb38fa3a20"
+    },
+    {
+      "file": "assets/ko-BwN89SSu.js",
+      "sha256": "c90d72dea1c7a9f16702f1633c9dd9059a070a1bee9339466858643c002d62b4",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ko.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "58c3601259eeb5aff7b2522f1a6567f1a0017aca134506a4592f153695dbee59"
+    },
+    {
+      "file": "assets/kotlin-D_ESCULk.js",
+      "sha256": "35575c0d26b0de74a1ab160b8a619f32da774053509ca6b006edd0d599636561",
+      "mappedSegments": 495,
+      "projectSources": [],
+      "mapSha256": "5a158700523ce36aeb75100abeae969631759b2711aa8ca36581bf43f5d11d88"
+    },
+    {
+      "file": "assets/line-_J2mhsJP.js",
+      "sha256": "5a38d869265749b6e5d58d3ad5f4c9a9ac2439e5cf99972f0231f352f927ffc8",
+      "mappedSegments": 240,
+      "projectSources": [],
+      "mapSha256": "3c7ac5f8a57ced02f217a13b28eb02ce52fa46b36150b213afd0ce2631e021ec"
+    },
+    {
+      "file": "assets/linear-COFNYZ4B.js",
+      "sha256": "0244625bf38cfb7a385919804f995774d3010e50a8691e6e25c8de278facd960",
+      "mappedSegments": 1796,
+      "projectSources": [],
+      "mapSha256": "d97381c1ea82b0f3ca79dd67b8286e314fc9abeb8a6a044a8b9a8f11fb2e90d1"
+    },
+    {
+      "file": "assets/loader-BZspg-cW.js",
+      "sha256": "a7df917539df73701221ed03006a99fcd2ef7ba3c33686031a880e7ceb04db41",
+      "mappedSegments": 79,
+      "projectSources": [],
+      "mapSha256": "e75ce326edabeec13523618b6ebf5cea75b59d4aed18d697351a7f70b96da5c2"
+    },
+    {
+      "file": "assets/lt-CNFI8Hrx.js",
+      "sha256": "c823f36c2d4a980f62a5ff6401376649331c721a495c8aff4e46e7aeca424799",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/lt.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "db737e67477ddac4a4bc0299f8ed9be2ee3bb348d3121ac45a6792551b8f9775"
+    },
+    {
+      "file": "assets/lv-CPiGGOXl.js",
+      "sha256": "78b70172c3d8e88baf137404291fab4a0137a42c6694995f372764b11de91de1",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/lv.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "ef1c7b010cec6f7428835620e853830a89472bbd3fae00f65a2c93f3def93c24"
+    },
+    {
+      "file": "assets/maplibre-gl-worker-BrUFTOQQ.js",
+      "sha256": "6098e9c65ccd7ae56d6a3eb085c45d7004184aa48a68b5152edc7445e175d263",
+      "mappedSegments": 115445,
+      "projectSources": [],
+      "mapSha256": "f44ff514d94c6bb611d4fc612d97ed286900e0a1c112608ac3d31a2ada99e4b5"
+    },
+    {
+      "file": "assets/markdown-C8bVcNXx.js",
+      "sha256": "ac3c729e1b082e428c6627061c2e1c4d487f44a525c339bc7aed135646a6d7f4",
+      "mappedSegments": 390,
+      "projectSources": [],
+      "mapSha256": "b12474cb6c45d8e28bb39bd09acb0e510ea12cc5251a4c2fcb6a65eca946cb3b"
+    },
+    {
+      "file": "assets/mermaid-parser.core-S99gPqP4.js",
+      "sha256": "e15f1d5f23b0cd6e49abdf5d24435674dff9f2e36161d7cb793248d45cecaf68",
+      "mappedSegments": 2964,
+      "projectSources": [],
+      "mapSha256": "0ec194d7ebfb018b764e2bc8d8e109871130ef98b6fca84a972a08737eac315d"
+    },
+    {
+      "file": "assets/mermaid.core-DWh7q9Kl.js",
+      "sha256": "585fad762912cf025e7e68cf98ebb610c06060d179d2902303c7b3e71115cef1",
+      "mappedSegments": 15768,
+      "projectSources": [],
+      "mapSha256": "cd820eb78b46ddca18d22e79dee0bc2954e64d820e877acb1d684ab500e43540"
+    },
+    {
+      "file": "assets/mindmap-definition-QFDTVHPH-B_KzeZwH.js",
+      "sha256": "2afee578190dd82842a1645815a62202926e4a0e9922762e83061138f2d1d999",
+      "mappedSegments": 4608,
+      "projectSources": [],
+      "mapSha256": "897488f1bdb3270e0b61700d4a8479ccf8afab63e7231e9c13c41b02091495ca"
+    },
+    {
+      "file": "assets/mr-ExWG5VEQ.js",
+      "sha256": "b82632efb7ccbde74d7b63dda0929bb36e626b983e31826f199c25673670ab83",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/mr.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "9aee23be2bfacbacca8c17d3b261597251616dae690c17ccc5fa26b94d2ee40f"
+    },
+    {
+      "file": "assets/nb-_4SjUAG2.js",
+      "sha256": "3514f1b6e89294db534dcda739f9421f0c83d0af6df849228976264ca3a2c331",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/nb.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "cb6fdfb1348fc6e4fd938068eba0ad2162bcd28e02e8ac621f63a1be2b7b47cd"
+    },
+    {
+      "file": "assets/nl-BSCT3KYy.js",
+      "sha256": "e8b24d1503e57951bca395cbb0821bb3dac07e0462fc1684d9be3109304955eb",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/nl.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "11678743bf04d4a640955c79dc4ee99e2a7a4b643a9b9ba6a97783d6b1ca7220"
+    },
+    {
+      "file": "assets/ordinal-BDEzSJ7C.js",
+      "sha256": "bdcdd3ba25acc79958a186de4aafdc900944bbfc320c3af23109a0865b643dda",
+      "mappedSegments": 337,
+      "projectSources": [],
+      "mapSha256": "5f74f38637a10c598debe5430467fcf344c9400fab91b87bd2fdc0a297a7b2dc"
+    },
+    {
+      "file": "assets/packet-AYTQ26CC-DB1uVQua.js",
+      "sha256": "4a79fbe6255bb850456be2cc8c103497170aec233553abf7e80e67ef8584f0df",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/path-fybaL0A-.js",
+      "sha256": "d0fb5e182a6ce62abfdb5951977c63122367106daafec17901279a1c17329a2f",
+      "mappedSegments": 685,
+      "projectSources": [],
+      "mapSha256": "db84663c71f619ca9c80af77d97f602678d6083ef28a89f4b9f05fa6237ae4bb"
+    },
+    {
+      "file": "assets/php-5k5YNuRS.js",
+      "sha256": "299eaeae2b0f0c1cb6666992fbf546e83db1e9e787e42034972090ef9f59ffb8",
+      "mappedSegments": 795,
+      "projectSources": [],
+      "mapSha256": "ce5f4488dd97bf0512485d74d745e2a0a3bf19dfe9f58adf62238fae2f21e2bc"
+    },
+    {
+      "file": "assets/pie-WAS4IAKB-BiXhHytb.js",
+      "sha256": "89a961941d7ba193bd000880b3cc57a871177dc393419196ac4ca4bf8616999d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/pieDiagram-DEJITSTG-GuIbxyY5.js",
+      "sha256": "4987e8f911cdb5d7abe8b4bc4f3e6da6ebce0add320688fae1538672c152c88c",
+      "mappedSegments": 1104,
+      "projectSources": [],
+      "mapSha256": "301471abebd81cd0f1cc4dfede2deb46365bb9cd203c15a6d06bc2bb21e22761"
+    },
+    {
+      "file": "assets/pl-Br0yR5BD.js",
+      "sha256": "7933250a482bc250973dbcd08ea3e173698a73cf2d127dea4bd15ebd29e714e4",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/pl.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "93153ce6adab22424cc7bc22808812db1873bbf808718cc6a55c9569e4c42da1"
+    },
+    {
+      "file": "assets/positron-CsS4jeUl.js",
+      "sha256": "3989bb98547e24fd346d682b6d751241718d28804724d9e93f3cfbdbb92cd370",
+      "mappedSegments": 205510,
+      "projectSources": [
+        "../../src/components/map/positron.ts"
+      ],
+      "mapSha256": "356aab4b1dfc168c365c2ae89c4d56f3ebaa016f2710ebfa0cf5e3dda59f8319"
+    },
+    {
+      "file": "assets/preload-helper-BZ1Pz5am.js",
+      "sha256": "8820987e6a8afb54d776f21e305917e1ecf83cef678b4db38c2e5a405d04a8bf",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/pt-BR-Cp6lMa_D.js",
+      "sha256": "495c66e2820ba5b9632a6a0d656f4127b0b3144fd4ed9d2707756bd6834dd998",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/pt-BR.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8f43ee593ed51534e391c17f30ed9229fd8b41ed13c6538e612e10f4b5311cef"
+    },
+    {
+      "file": "assets/pt-PT-DW-7WJHf.js",
+      "sha256": "0e28ae4e7abd12e87e35f5f5cac86c1a0576474785deae15b7c84a64313da19c",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/pt-PT.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "1245462ee84d73db89381631f7dcc0394af2cc5ff28db2b9e2cafa9571a6774c"
+    },
+    {
+      "file": "assets/python-DwhXSSGr.js",
+      "sha256": "36a6083972eaac11af29e71c1e235fe49a7df8f57760f339eb2ad3aa5f7f28cb",
+      "mappedSegments": 463,
+      "projectSources": [],
+      "mapSha256": "b56e18e6018a625f2945a4967f7b726369c787afedf98cb8f7aec31af061afcb"
+    },
+    {
+      "file": "assets/quadrantDiagram-34T5L4WZ-XS5Zz8Sy.js",
+      "sha256": "8a6cb21a0e906229747b3b4c8dc591888eaa9389c8369c05a5fa346dabf12b71",
+      "mappedSegments": 7747,
+      "projectSources": [],
+      "mapSha256": "1c2b5445abe9dae9cf74f8994d245d05e300b7a0de0ff40794503133ef78196f"
+    },
+    {
+      "file": "assets/radar-RG4KPBEZ-CCX5GjoV.js",
+      "sha256": "0aacda49e596ceaaa903e320cfcec2e59ecba73dd63c5786d1d592eccd7fafdb",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/railroad-74A4TZTK-CXJfB8Oj.js",
+      "sha256": "6d064545ebc97c8577bdecd93407c0773a6849f388809927e638e641f0743736",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/railroad-abnf-HS5TGJTU-CTpSuxRX.js",
+      "sha256": "0702b6bafb86d6e9fd4acf2dfeede49841b3a9cd119b5e86d128a6526ead3fc4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/railroad-ebnf-LZEXJU2U-DmxmHPxu.js",
+      "sha256": "4d613c5bb15942caf505b8ff528f0571bf3944f78c9428a028f1deacd45ecb45",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/railroad-peg-WCYAUIDC-dB9fNlRw.js",
+      "sha256": "fa1f8bb38650d01b2add5b8f40cf1886b8ef109f755b8800d416f141f98c34a1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/react-dom-Yr-Mt9ce.js",
+      "sha256": "97ec513a698ca472f1d193db242a9117759089968e3bedc5454e061bae024cc2",
+      "mappedSegments": 686,
+      "projectSources": [],
+      "mapSha256": "a50056cdbf9a35b2a7eaeb2d89e2c30b953c4ed792b1749712db3e7d0d8533b9"
+    },
+    {
+      "file": "assets/requirementDiagram-MS252O5E-CkcCNfyS.js",
+      "sha256": "bf414d4f1ee4c4fc26c6bcac4b5e13d89f96acaebf930991ce9e365f81b683df",
+      "mappedSegments": 7386,
+      "projectSources": [],
+      "mapSha256": "af9c2c69c4ed21c569e38ea44aa6560b5af946949a709c2df08d586385e0683e"
+    },
+    {
+      "file": "assets/ro-C56Os-Wl.js",
+      "sha256": "0bc69b470c7086947c079ce1f2f9d2d45c20e8f8be3c535efdad2605dba56616",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ro.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "312368f3b27399017d88b0a9326804f32d09ffac11cae0f74e6bbee36dabadad"
+    },
+    {
+      "file": "assets/rolldown-runtime-Dd_uD5pT.js",
+      "sha256": "c5f0356f5d0918a3137e4e811fd18950efe8ac8f6bf84d1d4da7811c477a24d8",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/rough.esm-Dy-Kn_BL.js",
+      "sha256": "2eb2f64d07f311269d2dd80e787dd5503720ec3157ae295b9f627bfa851ae325",
+      "mappedSegments": 8874,
+      "projectSources": [],
+      "mapSha256": "c3e4b452a656fa4605c6a5f68f35f0f327f1ed31d5115847c5b838655f7bc6a3"
+    },
+    {
+      "file": "assets/ru-C3_4REe1.js",
+      "sha256": "e12b31233d6fdc453c8c316cd632f97dc59a86fa39f6b7cbc25188bb276c2003",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/ru.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "eaac9a28ec9c3ea83fba81c604c5956ec4f70dfb7df6bfad19218ed145bab47c"
+    },
+    {
+      "file": "assets/ruby-D6zc0cUO.js",
+      "sha256": "2141abbaa22110e2f11e332b736bd79f4d4d4b11ce8b195d43888c26c1911673",
+      "mappedSegments": 606,
+      "projectSources": [],
+      "mapSha256": "31ddb9808f8e77baacd4b868d37150a4bd093f4acbc5f4c8f6502ce3baf98c7a"
+    },
+    {
+      "file": "assets/rust-BECLvyNb.js",
+      "sha256": "5b60cb5fba4ebae6625fc04b5bced0b1b5a7e309f0c7352dbb50e4516bda3963",
+      "mappedSegments": 327,
+      "projectSources": [],
+      "mapSha256": "e9a1e931d667d5f2f0ef529f1d38fa86e2f7a9dcf7e9abb8d23e1bc4e80fa453"
+    },
+    {
+      "file": "assets/sankeyDiagram-XADWPNL6-RjxJG8XM.js",
+      "sha256": "16454e00f05b0dd56ed942cfb473188fb0c0e7eef79a22290546db3fcfbecfd5",
+      "mappedSegments": 5539,
+      "projectSources": [],
+      "mapSha256": "6bba51d60cc28b7071940502435952d88d2618b396d01de342a5d7b05ff24a1d"
+    },
+    {
+      "file": "assets/sequenceDiagram-FGHM5R23-DB1TWM3G.js",
+      "sha256": "480485c99a897f780d269a0354902db19c0bead8beff4c69da85afe833b29488",
+      "mappedSegments": 23356,
+      "projectSources": [],
+      "mapSha256": "84a169fc837e71937216bd29592092645a4a691343cab03dd47dba99fa64ef83"
+    },
+    {
+      "file": "assets/sk-DUJX1yh_.js",
+      "sha256": "ba5ca637c7ec5aa6d07b4ad7653f7c46c8986885496be85483dc8a23a15ce2ae",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/sk.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "f4380d0bcbdfc4ca1cb3d699023c6d57d85af12f4157f81e167345a16a8d999c"
+    },
+    {
+      "file": "assets/sl-CJseGSQh.js",
+      "sha256": "7aeabe17a4d48085e5f318daceccdb0842ce939e0c281b22a1c15a4cd10a98ff",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/sl.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "54e934564094feb8eea9ad2ab73b86c66b6d6f6582717d9fcc9101bb648f03d3"
+    },
+    {
+      "file": "assets/sql-DWRKyvJ-.js",
+      "sha256": "712eb50b5f681a7d1c70c63e756ba842b4cd726fae71700b869601d848cba364",
+      "mappedSegments": 301,
+      "projectSources": [],
+      "mapSha256": "d81044f29a2241a73b2761f61ea9c78952a29b358874a8c249b902935cfe977d"
+    },
+    {
+      "file": "assets/sr-DIyjWvCz.js",
+      "sha256": "75587d818758a4dadb12b136568b053e6bf1bf175117a8a0279c573664f5ff11",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/sr.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "41da9c17496c344d49e1b3e501d32a06b75c5976449f7f69c176eaea87d36026"
+    },
+    {
+      "file": "assets/src-BkPvtMYE.js",
+      "sha256": "249305d3a201b843fd586a2c9304f75363f488bfd7c26f5001d8c03556a5d4dd",
+      "mappedSegments": 10203,
+      "projectSources": [],
+      "mapSha256": "5b6cd01165269b1710279ab55d172ec759dfd90834c3ae007066f597f878718a"
+    },
+    {
+      "file": "assets/stateDiagram-FHFEXIEX-s22QukLM.js",
+      "sha256": "7817a5935c382db7f5d48887ea53bded1716c3216f6e31bf93ae06e15e54e356",
+      "mappedSegments": 2633,
+      "projectSources": [],
+      "mapSha256": "0c6639ee9d17c24c9dcf3e03179a20ab429c0b2be40a76da5cd1d74f0b0c386a"
+    },
+    {
+      "file": "assets/stateDiagram-v2-QKLJ7IA2-CJYWqes7.js",
+      "sha256": "a9fe2b0bb6ca4a42d35e68e435fce8dc9dc3c778bd15ce57d6967bdc76c142e5",
+      "mappedSegments": 36,
+      "projectSources": [],
+      "mapSha256": "8d283f8618a437425c8ddc3f7b744a86e56aa41afb98285eda570f9126c6f5c9"
+    },
+    {
+      "file": "assets/sun-C_nc0Bu9.js",
+      "sha256": "fd7841ce6b327bd196fd598b6f9939864a3782701636a660a81f4ce38fe30ea6",
+      "mappedSegments": 195,
+      "projectSources": [],
+      "mapSha256": "f940b0a72f00ff6346f777fc67e688e2d6ca68054909220d03d05e4f2caf4136"
+    },
+    {
+      "file": "assets/sv-Ctopnh_J.js",
+      "sha256": "724613328bb1cf2e1ba860d750d479296c0751a98e11b5aa87b9d834e613ade1",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/sv.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "5bcfe179aa192b51c9bb1bc77b6bb9c441170ba360289887269c2b4e8fdefbd1"
+    },
+    {
+      "file": "assets/swift-DoVWcw3Q.js",
+      "sha256": "e248beeb749b222b2341cad61ef4a7198548e078c282418f7a4a909c594b38b2",
+      "mappedSegments": 1413,
+      "projectSources": [],
+      "mapSha256": "663975a0cd42e1b74439808448463bf9e01ed5b85bb06ca5c34c1cae004f7419"
+    },
+    {
+      "file": "assets/th-BFO7lVQ8.js",
+      "sha256": "5dd1b83cbd4fc55479876c8e3769af11184ad47fc59b86fa9e487731ce10872a",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/th.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "6b00b796c1b6e28d0ade340a3dcf28f80f879cde1d3354fe092aa15f1cea57ac"
+    },
+    {
+      "file": "assets/timeline-definition-GMOUNBTQ-4FdNRu-i.js",
+      "sha256": "e8184f041885086f62a6d3a96246665b9dc21c313eef7b5cab46865137b44184",
+      "mappedSegments": 7001,
+      "projectSources": [],
+      "mapSha256": "2ed919bea1b55aec41b1a9a2ecab0f7a32a33073c1f174f4db137331a52acf3b"
+    },
+    {
+      "file": "assets/timestamp-Bi87NmhE.js",
+      "sha256": "24cdae1e32b70cb96c743cfce53ed2d67e55e1346bc47d19306b17ce56bac414",
+      "mappedSegments": 14299,
+      "projectSources": [],
+      "mapSha256": "6e10ce7ba0c7711b45b7684e17a508d35c605f89334909837a39138f258111fe"
+    },
+    {
+      "file": "assets/tr-DiS7PNUW.js",
+      "sha256": "daad1f0b866ab9dc70aa84e5acf5453fee87b2fd15f5b1784b093db4b7328b46",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/tr.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "956318f279c91b23f13ed7b4dc29dc12811625925e3bf9bea5c5b57762d51aa0"
+    },
+    {
+      "file": "assets/treeView-Q6P3EWNA-BIp8hedq.js",
+      "sha256": "a1ffd645f129ed5292758e26d66a9e4458d3cf1bba0eabba242344aedd9cd4b6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/treemap-WGGIJYW6-mqt29KF3.js",
+      "sha256": "bcba3e5507d2e09574679aa367464afe64e2af3a4f7023198cb921058fe56161",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/typescript-CutDp0Vw.js",
+      "sha256": "ac3166ac51dd47d2f212400d36b22377bcc6ad114d5f14cc12df0e7ce9a0292f",
+      "mappedSegments": 1298,
+      "projectSources": [],
+      "mapSha256": "df6dad8e15ae6b0e3076439959bab74354423326828c14edecdd9907d8a9d819"
+    },
+    {
+      "file": "assets/uk-B4k2qjV6.js",
+      "sha256": "556627aeda40d42c14d4ab9bcff5bc00017612d11d308fc84e3fcabab8c9f8c1",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/uk.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "1bcbea0d91029d92e008023776de0e0ff9bd80b998a70bf3daf66665b9a8cb69"
+    },
+    {
+      "file": "assets/useIdentityProviderQueries-Bzad_IEK.js",
+      "sha256": "9edd4580cd4649bfd4408fa47aac7396346b6616606479fe102af745be9a7a5f",
+      "mappedSegments": 275,
+      "projectSources": [
+        "../../src/components/IdentityProviderButtons.tsx",
+        "../../src/hooks/useIdentityProviderQueries.ts"
+      ],
+      "mapSha256": "6f89c317447669f44795ed7abfe5c5ebe6d6f34e6d79eda9d2041d01ec3f8c07"
+    },
+    {
+      "file": "assets/useOpenInteractionType-CycimVXx.js",
+      "sha256": "ee40db7fdfb83b22c9533cec756d3876e1b58a9d676fa55ad407c8d75c765344",
+      "mappedSegments": 11511,
+      "projectSources": [],
+      "mapSha256": "c4870bbe5612f315c716d3d850f35f61175835d5ff992cbbe46f455f0f1ad6c9"
+    },
+    {
+      "file": "assets/useSpaceQueries-3I69nXRF.js",
+      "sha256": "203f2ed09e4f5f95b12a4da9754c7bbcee8758c36a1661a1700fdc6bf2bcff85",
+      "mappedSegments": 5755,
+      "projectSources": [
+        "../../src/hooks/useAttachmentQueries.ts",
+        "../../src/lib/query-client.ts",
+        "../../src/hooks/useMemoQueries.ts",
+        "../../src/hooks/useSpaceQueries.ts"
+      ],
+      "mapSha256": "e60f2bdc58924f98245922137a363bf166d0e58391dc8ed03c9fa8b539f3bd7f"
+    },
+    {
+      "file": "assets/utils-Ce5lEiGU.js",
+      "sha256": "95c53814ceb91cc6f64a599298fe0b853ef4eeb560b45985a3b78c2dda1e55c5",
+      "mappedSegments": 6603,
+      "projectSources": [
+        "../../src/lib/utils.ts"
+      ],
+      "mapSha256": "97e5eea5eb51ea70b0eb76d7bca2af3fe7bd368eaa4807df865496604a3d5eee"
+    },
+    {
+      "file": "assets/vennDiagram-DHZGUBPP-C3LFQoMI.js",
+      "sha256": "a6eecfd7ef8edf17fe5034c8c4017fc933ba1f8e231258d2c020c06d02971994",
+      "mappedSegments": 11464,
+      "projectSources": [],
+      "mapSha256": "bd042fca392fd0b2903ac72c947e179bd7203ffe6893742189128cc65a0b0405"
+    },
+    {
+      "file": "assets/vi-62p2EJ0b.js",
+      "sha256": "8314223fca678c0f5b0047167d805b927a0e41fd3bed11c8efdfc8c2c724e46b",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/vi.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "1f558861e9af6ef5e25ca4dfad29faa0c3f69b41986352c907818cf3c256d433"
+    },
+    {
+      "file": "assets/wardley-WFR3VGLG-BZSm3h1g.js",
+      "sha256": "ab28276ff60816291bd89ff5b95a5f6e0eeb3fd557b048e4cfa08ee963a302bf",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/wardleyDiagram-NUSXRM2D-C0lpnYyA.js",
+      "sha256": "bd29715e6b271c3541221b50c4b47a5eafc0fb1bf326a9a4243e09b1efad4466",
+      "mappedSegments": 5758,
+      "projectSources": [],
+      "mapSha256": "022d85331fc13fb9e130881e9035f2b62b3619d57b2f6f2a065fefc1bf6a7172"
+    },
+    {
+      "file": "assets/x-CP233pcN.js",
+      "sha256": "f6fa73a7a0d3f024e8f2ffbdf30ba54feb3fef48425ff7e56db5fd39cc6b5613",
+      "mappedSegments": 81,
+      "projectSources": [],
+      "mapSha256": "92af53a1ff93e4419f8eaf50752712eac40d1fe33680a41faa30dc571b5c84dd"
+    },
+    {
+      "file": "assets/xml-DasnpDVC.js",
+      "sha256": "47f108dde0aa83fe98a0156772af882931668e5e82572b795827ec57c99613ca",
+      "mappedSegments": 382,
+      "projectSources": [],
+      "mapSha256": "83897adbcd75d6caa41f960fc36de36f78a5743adf490559431886a903e7705d"
+    },
+    {
+      "file": "assets/xychartDiagram-5P7HB3ND-BlV5TLh7.js",
+      "sha256": "f4b7d77dbf2c9a5c592547870d96fd92815d9a00fd6b7b6f5848be3b0995dcce",
+      "mappedSegments": 8930,
+      "projectSources": [],
+      "mapSha256": "4ac07171ccb0f35c15241ad9c24fdb84eb92517b4f5db31a283c3ce6551fff44"
+    },
+    {
+      "file": "assets/yaml-DjOhhVLG.js",
+      "sha256": "0a22bb0ea99a7f44c89f34f0a7de07878ff26d743aa721125838b677d4df45f7",
+      "mappedSegments": 324,
+      "projectSources": [],
+      "mapSha256": "aea5abee3a68a0abd246d97b71b08b8bb2ca3cc8864553d16fab86ff44cea6e6"
+    },
+    {
+      "file": "assets/zh-Hans-DJY5aOK6.js",
+      "sha256": "23dee8939ceb83c0846d9eeca52687b7549dba118291753dfba2693932f1edbf",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/zh-Hans.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "8c79aa0f399393b6a25c3d012d4324ec1514821409eaf10fc77ffd56f51a0b68"
+    },
+    {
+      "file": "assets/zh-Hant-BowYTxpl.js",
+      "sha256": "9dc22c56ecac654599154e0423e8f910eaa298772834e44a1d29c200c77462da",
+      "mappedSegments": 0,
+      "projectSources": [
+        "../../src/locales/zh-Hant.json"
+      ],
+      "mapStatus": "empty",
+      "mapSha256": "5f782b5ffa22a3190bd4981cdfcd7eb3b73efaaf3ebe29664bd5920759fe6ca9"
+    }
+  ],
+  "css": [
+    {
+      "file": "assets/BasemapLayer-hodKspcP.css",
+      "sha256": "1fd2d12341338b903a9604c9a391d9c657c099e58adc791f073708de6930d5ae",
+      "mapPresent": false
+    },
+    {
+      "file": "assets/Map-DAkLLzD2.css",
+      "sha256": "52edf11026061edc148e19cb2a040e58fbf68f72a2a92bc519529356f54f2192",
+      "mapPresent": false
+    },
+    {
+      "file": "assets/MathMarkdownRenderer-clGKiluf.css",
+      "sha256": "b4693b2a5746a7513195a2da079dc22cfa3344fdcad41e634ec44df966df646d",
+      "mapPresent": false
+    },
+    {
+      "file": "assets/MemoEditor-CaFsdePt.css",
+      "sha256": "ec667e874b83f5599d5edc72d6123f709d9ea57c65610431e5034e8639f88250",
+      "mapPresent": false
+    },
+    {
+      "file": "assets/index-IqDL5ssO.css",
+      "sha256": "c8b0858fa58edaafddaea809f0ccab17c99fa4dc070988c6943f07cc079b33b5",
+      "mapPresent": false
+    },
+    {
+      "file": "assets/positron-DSnsEFKn.css",
+      "sha256": "ae0a1d4d3eca1b5592289363eb765bd2e8cf3b8cfd43a47a1e1341c4575166e1",
+      "mapPresent": false
+    }
+  ],
+  "publicationEligible": false
+}

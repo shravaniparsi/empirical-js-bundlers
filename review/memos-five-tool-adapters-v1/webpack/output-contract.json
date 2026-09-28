@@ -1,0 +1,1636 @@
+{
+  "kind": "memos-five-tool-adapter-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "assets/1029.6763039d.js",
+      "sha256": "4cb47c0bf3a6e62130dff9a3803328a903d7ff094d8699c1f5c426a29561614e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1058.b98ff2c5.js",
+      "sha256": "ebbece26118e7aeae278a17b699ad393d8539f79f00b9be389a775c5150c9f61",
+      "mappedSegments": 167,
+      "projectSources": [],
+      "mapSha256": "b6b352b053cfef7dbc1d60add6fbee263d653838d5e88aafdc442201e38e52c2"
+    },
+    {
+      "file": "assets/11.0692024c.js",
+      "sha256": "c48eec0097f7f5b357ce7fcdc5fdbc386941b81df0fd1ee6729e4c9b6244d1ea",
+      "mappedSegments": 2,
+      "projectSources": [],
+      "mapSha256": "30778420e710d5b3805dbcb3f62dd76e1bc8035e9f24c1d1e0ebc7259b8bb43e"
+    },
+    {
+      "file": "assets/1103.3e92c0d4.js",
+      "sha256": "5b19542311ad5f4962027274c9d4bd21433692460421325e7b89598d9b08e143",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1496.47eb861a.js",
+      "sha256": "84948812389dc6ce4cce7ef1de4505fff88643f598683d98f8807792ad988312",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1519.a056d714.js",
+      "sha256": "5e967147a843bae8c5b97ead6d80384b122168578941929d3894b484d3d57530",
+      "mappedSegments": 221302,
+      "projectSources": [],
+      "mapSha256": "6c4014aada316ce78ec7fb1df04d6994c85a79aa7913002c7195e76d5ec9bc02"
+    },
+    {
+      "file": "assets/1550.cb48172e.js",
+      "sha256": "8b205e1193e6f4e3beadfb99327f062751346eab54fd0a67bf1526571dd97a74",
+      "mappedSegments": 5444,
+      "projectSources": [],
+      "mapSha256": "afefef5adcd0ed34c619387dd3afd301b211efa1bba60a5b4d6aac878194cff6"
+    },
+    {
+      "file": "assets/1587.15283677.js",
+      "sha256": "bdd8b6f66c86adff4a85c3b2ca546d4dec2433494e3e6810184ac3b71a03c6c5",
+      "mappedSegments": 1961,
+      "projectSources": [],
+      "mapSha256": "deb1fb4782c4fab94649953f5232b166f2466db555b7b74dc114865fd6876871"
+    },
+    {
+      "file": "assets/165.a763c573.js",
+      "sha256": "f35b6ccd6ae4965eb70918a070dac59fa5e1f83744fe706eeb34a262523e4d2d",
+      "mappedSegments": 89513,
+      "projectSources": [],
+      "mapSha256": "6fc29f23dda3719b361674aa0902a5b1afa2d9c646b9017a92fc607cc00d21d3"
+    },
+    {
+      "file": "assets/1752.d00807fe.js",
+      "sha256": "1581bf7c9e51b4417db04ff94d35610f112ec2eaf6a520c12851ab297b58a4da",
+      "mappedSegments": 5947,
+      "projectSources": [],
+      "mapSha256": "b5d750f5c5b17f3c97ac1e12551a6de223c5f6ce74df0619351f7353156220b4"
+    },
+    {
+      "file": "assets/1939.d24662d0.js",
+      "sha256": "215964c311c5db761e7ede12cea140d03f1ddde4a76f8c98b526773bf55a7082",
+      "mappedSegments": 7728,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/AudioAttachmentItem.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/MetadataSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MotionPhotoPlayer.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MotionPhotoPreview.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MediaMetadataDetails.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PreviewImageDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/VideoPoster.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/LazyLocationPicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/utils/media-metadata.ts"
+      ],
+      "mapSha256": "166b1db0e66705745fc673099fd303d42369d83755c202bb2d61dce54a2fbdbf"
+    },
+    {
+      "file": "assets/194.dbce8e66.js",
+      "sha256": "d371cdd39356ef5563614cadaec716d493409ba6e936c1ab6bd98a7259a01018",
+      "mappedSegments": 2106,
+      "projectSources": [],
+      "mapSha256": "6eb11f868bcc0ca698a184653b12c9008145d94fe1328543313240c6aa9509cb"
+    },
+    {
+      "file": "assets/2130.83d69dc0.js",
+      "sha256": "6d4fa73031941f22a15074833892ded68dd40dad6704088d9ab604b55f3695eb",
+      "mappedSegments": 31789,
+      "projectSources": [],
+      "mapSha256": "1da1d4e2e1923ee00c59e2248ef18b4ab066c7f92b29d8f0cc9c4e99a808d905"
+    },
+    {
+      "file": "assets/2204.f18c6d6d.js",
+      "sha256": "a91055cca2eaf475f3b2f6c566c499c7ada134ca6ef5300f4f0caefc23f875f0",
+      "mappedSegments": 81,
+      "projectSources": [],
+      "mapSha256": "5c8acf851dc4543c46086f847386f5559d269ff6aaf1231a47220b80598253f0"
+    },
+    {
+      "file": "assets/2223.2f15539d.js",
+      "sha256": "83540856e705f9b13ff17bd6cd03f79b3b146da43bd350d277244f5eefbccd08",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2354.dad27d41.js",
+      "sha256": "cc06e9874f3c165da6a18c89ee436209f06fb7ebbf85bfb24ffcd0d479aebda6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2355.96176d85.js",
+      "sha256": "1ba68d1a5c8ece81bcd2c58fc612d77e0c043c89a01b8abfa6627d0a2f284410",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/238.65012ff4.js",
+      "sha256": "ea6617cff2f193afeaf0583f46b0544d7947bc26a22f2077df86dc9861060d53",
+      "mappedSegments": 60311,
+      "projectSources": [],
+      "mapSha256": "b8fe777518f826c4b47cb7ec18baf4a52758adf7b8361f81112dee67244f941b"
+    },
+    {
+      "file": "assets/2508.f6d8cc56.js",
+      "sha256": "61fed67965303daa9dc267c992faf49cf2b764475ec70f5917fa922bea87b964",
+      "mappedSegments": 1516,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/About.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/lib/release-version.ts"
+      ],
+      "mapSha256": "db3f0f926d1139baa2c5e55de3e6ac86c4c476e423df516c0c72bd2e0b62c212"
+    },
+    {
+      "file": "assets/2609.1899d8b6.js",
+      "sha256": "78ef21ac82e9150c3ec010c9875c992c88070ecef9c9815d3ca7779b5decd164",
+      "mappedSegments": 211,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/Explore.tsx"
+      ],
+      "mapSha256": "be4eff9a26efbf874bc94e6dec51298abde7286901854ceadecab55bee6725d1"
+    },
+    {
+      "file": "assets/2708.f72cd921.js",
+      "sha256": "de777461bb84f155fc59a0d89d7889ad63d230cf0c9e7ae590e032fafc93454f",
+      "mappedSegments": 2424,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthFooter.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthPageLayout.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ChallengeWidget.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CredentialFields.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/IdentityProviderButtons.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PasswordSignInForm.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useIdentityProviderQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/pages/SignIn.tsx"
+      ],
+      "mapSha256": "a5615ceddb55e30cf0de028cf114aa77e021fc90ee524ffcd80c027af9ab4959"
+    },
+    {
+      "file": "assets/2711.ba6d8497.js",
+      "sha256": "c67f74f649cb6d498cd7bed996568a1b138b8002e93fd30108e0df59941d0dfd",
+      "mappedSegments": 414,
+      "projectSources": [],
+      "mapSha256": "f7bac96af323aa13ae96d893ed94b05645ea69ae9db52f82b7a9711081773b2a"
+    },
+    {
+      "file": "assets/2724.4a8584f5.js",
+      "sha256": "4bc5b681a34ca3db26c85e28194d22145fcd512729a22597c911c89ae93df460",
+      "mappedSegments": 1516,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/map/BasemapLayer.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useResolvedTheme.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/LocationPicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/map-utils.tsx"
+      ],
+      "mapSha256": "db8113be0984d3d3d6d6dc6565432adff4da9adba357e3dbbb02cfb2b98c9c17"
+    },
+    {
+      "file": "assets/2749.2b8e96f2.js",
+      "sha256": "d5c358311d21c82c026280277086d6e9a08ec03beb59748487030bcb5a0e671e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2753.d3c38d00.js",
+      "sha256": "8424cfa0d3e904feaa5abc5b63e5ba136e0f3016922d8b78d099dd899460647c",
+      "mappedSegments": 993,
+      "projectSources": [],
+      "mapSha256": "c6edfc994466d2e4bcb6ee000a3299723a66a876e97ed0872186267607cc9cfa"
+    },
+    {
+      "file": "assets/2774.f03dcd6a.js",
+      "sha256": "1f099a1f88e614a9cac3443ee5929b7657b751587bff4d90476210077c2d9e36",
+      "mappedSegments": 74191,
+      "projectSources": [],
+      "mapSha256": "f70f7c2cf9e8e79c9126301ab4f00ada6793eb79f4e9cce0e57f6fb7a636ea5f"
+    },
+    {
+      "file": "assets/2808.7ce5daa9.js",
+      "sha256": "c036d98e641e15d5039531e09fdb59725e6f2181c777f062cc6ca096ac40761e",
+      "mappedSegments": 213,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/Archived.tsx"
+      ],
+      "mapSha256": "ff6ed1902ca5cf23d42ad35b98ce1a6ad3032c2e0f7b02089e6b097bc1138b28"
+    },
+    {
+      "file": "assets/3016.f774d208.js",
+      "sha256": "fdd31e068a81d2cb30eccad700380a28bdc5cff5cf43171729f5720db7658a45",
+      "mappedSegments": 33,
+      "projectSources": [],
+      "mapSha256": "b853a3eac95adb43e21eeb2e1bee2b7779e6d0a4c459e6e87427609f21aa63bb"
+    },
+    {
+      "file": "assets/3110.f1a50bf9.js",
+      "sha256": "d20c4dcbd415848e5bca35cbb4ad6fa91fa08d577f3b914015ea08c87fe176ad",
+      "mappedSegments": 7460,
+      "projectSources": [],
+      "mapSha256": "241be791f1e2ed68db5262e3f2d5101f3a7eacf655f0db588497495ee4762535"
+    },
+    {
+      "file": "assets/3134.68e80da0.js",
+      "sha256": "e77b3fd13c8da7bcd3e213ff4fa4c9f465ba91ede69f2af4200958a6a6124d14",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3248.885fc551.js",
+      "sha256": "5f312674dc2024ced1d61d22f1c0eaa922e4a372c9a86a15031d42c4722d0c69",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3265.07060a6d.js",
+      "sha256": "c5598995853a41b22610d0a5af57ceed69d1f730432a788693017b2a50c88534",
+      "mappedSegments": 310,
+      "projectSources": [],
+      "mapSha256": "806f397bf49aed44792fe09f37d7151de0e1f5932d2a6320d9791e136e2d654b"
+    },
+    {
+      "file": "assets/3272.05b144a7.js",
+      "sha256": "b11d019ca1be0dcd90551bc05c77c6d7541c2d400ace0f6db6bb8444681e2b78",
+      "mappedSegments": 4332,
+      "projectSources": [],
+      "mapSha256": "34fdf78c6554bde9af1ef6f38eaca79d150bd3193ddcd8882b545246c3d28db9"
+    },
+    {
+      "file": "assets/3327.4f3c8072.js",
+      "sha256": "56c8953f2062cd50de4d752126a33fdcecdf5011571ebadf1771b9bd299bd3f1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3369.d6d92851.js",
+      "sha256": "7adfaf0ef814b70c7afd3e88c156f7ca429450bc5c84697a01e9fe16e2d19678",
+      "mappedSegments": 2374,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthFooter.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthPageLayout.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ChallengeWidget.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CredentialFields.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/IdentityProviderButtons.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useIdentityProviderQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/pages/SignUp.tsx"
+      ],
+      "mapSha256": "12593697c3337f1c893534f97c25bb94c3c26cebe37a820df47d9777a283553f"
+    },
+    {
+      "file": "assets/347.e23ab702.js",
+      "sha256": "ed9a04f41b27d28c9ab84676fd347d4fb901585049704e76605e0d781d95a3a9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3531.22a5e5cc.js",
+      "sha256": "ffd8cf938002c53ebddb7e5f828bbf83386772ef43afa486bce31057ff3f006e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3571.97950300.js",
+      "sha256": "d3a2c3e7617187d79e277436466f153a049e9210bdbdeafebd0df1947817bd11",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3636.e1f3484e.js",
+      "sha256": "391ce8379d4f2d5a4359fe90aad2c3c1ce877dbdf2495e987c06de35c604a810",
+      "mappedSegments": 16680,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/types/markdown.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/highlight.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/utils.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/MermaidBlock.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/CodeBlock.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/MarkdownRenderContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/lib/markdownStyles.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/Mention.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/AnchorLink.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Blockquote.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Details.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Heading.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/HorizontalRule.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Image.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/InlineCode.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Link.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/List.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/LinkMetadataCard.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/markdown/Paragraph.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/Table.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/Tag.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/checkbox.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/TaskListItem.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/TrustedIframe.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/MemoMarkdownRenderer.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/math.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/MentionResolutionContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/utils/search-match.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/useSearchMatchHighlight.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Location/locationHelpers.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/types/attachment.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/AttachmentListEditor.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/attachmentVisualClasses.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/visualGalleryLayout.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/AttachmentListView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Location/LocationDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Location/LocationDisplayEditor.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Location/LocationDisplayView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/RelationRow.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/RelationRows.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/MemoMetadataRows.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/LinkMemoDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/RelationListEditor.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoPreview/MemoPreview.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/MemoViewContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/constants.ts",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/NewMemoContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useNearViewport.ts"
+      ],
+      "mapSha256": "d8f3e119ed2c85045fe595bad9ec3d7b84b1734a6da8d95e67675d9f9baf43bd"
+    },
+    {
+      "file": "assets/3672.efa9d744.js",
+      "sha256": "1a340f37809cdb772fd0a912c25db1e4fa12a51ca043cbe3b313fd5422ae50e9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/368.5b41e738.js",
+      "sha256": "204ede0c440a6f721b7575cb1ee53d01b6563329a6f3b55c064c4f71ee0435bf",
+      "mappedSegments": 957,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/UserProfile.tsx"
+      ],
+      "mapSha256": "b5c327c17dd210b64df2bc35ac65452a04db9f066b8b6576b6db7e554fd10010"
+    },
+    {
+      "file": "assets/3708.68fd69fe.js",
+      "sha256": "84fb046c5ec1cdac5750b78b3c3035070d259d246ea63c32e459aef9f8234cc1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3736.f38a7468.js",
+      "sha256": "d1c3500724af32702f861c0752908f74f6c5b034e8a24a797cd554b9ab7184fa",
+      "mappedSegments": 345,
+      "projectSources": [],
+      "mapSha256": "aa1f18fcbe804ffa90a060eca871bdb424876aeba74c3261fdf8eea0fbf53d10"
+    },
+    {
+      "file": "assets/3930.9ecf7f7c.js",
+      "sha256": "26ba1839fc6118afa88861d975eefc34bf8e3c48028c02d4b93f1197ff03aa15",
+      "mappedSegments": 5665,
+      "projectSources": [],
+      "mapSha256": "611a56aa4720affc8dc24f69c16da18e681ff063229be941704e532062afbb46"
+    },
+    {
+      "file": "assets/4121.5a9169b6.js",
+      "sha256": "77deb1734f962018cdff7f01ee8433975eb3fbb372343e64ea09fe352c630b8f",
+      "mappedSegments": 12862,
+      "projectSources": [],
+      "mapSha256": "8807eabbfac7ea3773820f5dd59e2afc6eaed1f2870ee64542891b7669664ffc"
+    },
+    {
+      "file": "assets/4142.79152248.js",
+      "sha256": "f4ee560958a1c8dc0626a496f8f1e92a1c1d90e06155cd4b0d138f891ef90026",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4157.b4707892.js",
+      "sha256": "34d27056f8697eb8241cadcdd85a382d2357d2ae11ea1599cfdbd7e4e36f902f",
+      "mappedSegments": 1828,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/MemoViews.tsx"
+      ],
+      "mapSha256": "4f51c6cd831e1b3966ab4f6638bdf23095b441caefa2cfcb6b99febeb627c388"
+    },
+    {
+      "file": "assets/4174.da8c6163.js",
+      "sha256": "7693276afdaeeb1155ebc2f8cacd185ddc44224cdc38731260d85bbbfbd8d2ce",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/429.367c7775.js",
+      "sha256": "3ca1766860a59012e2c590729a7689a548d67ce7ce7299a97784b87c9b959c53",
+      "mappedSegments": 4496,
+      "projectSources": [],
+      "mapSha256": "1882f93a6dba2788bc43795fb317c081316e0312ba279f084022ae4d05e87404"
+    },
+    {
+      "file": "assets/4346.05bcd6aa.js",
+      "sha256": "0c0c3b538605d93ed44d7516b21f19e6f9ed21d6e8fe69b42f3bb7d80a76b9c7",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4365.91926055.js",
+      "sha256": "9801f03aceedd893beee085b58ae39d35f19aaedcc27a308e341ec0b72f59588",
+      "mappedSegments": 399,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/utils/deriveDefaultCreateTime.ts",
+        "webpack://benchmark-realworld-v2-memos/src/pages/Home.tsx"
+      ],
+      "mapSha256": "11212cdd084ff06f22d85c03f298a8d636aaf6b7ee2ab551ba23a31a8c7f4813"
+    },
+    {
+      "file": "assets/4378.aa7d74b3.js",
+      "sha256": "3d4714455c52b6055d8b5d97a7b36ec1bbb398809780e94a54b6a036c3ae330c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4433.8b9d195f.js",
+      "sha256": "7af5921cde91a3b653cb33e33a997e44bae0221adbc78bb41dcffbd6baf961ca",
+      "mappedSegments": 404,
+      "projectSources": [],
+      "mapSha256": "1ce49fec867156e210a06f888808be6aa371ed412382e5747cd88048b8a8da14"
+    },
+    {
+      "file": "assets/4524.e5400d5e.js",
+      "sha256": "56bfecdfa331833d1352bc5bdfda300706262fe8c49b97395c4f9d07254d67f8",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4552.fc0c841e.js",
+      "sha256": "3312cbcdfb3da935fe4dbf7c7b5d9e201908803f82290a9ddd206ee4d3a95800",
+      "mappedSegments": 9978,
+      "projectSources": [],
+      "mapSha256": "5df3dd8bac4f8668d1571e40f6bcb0354fe207cedd34acb3ba45b0c77d404292"
+    },
+    {
+      "file": "assets/4557.c92821b1.js",
+      "sha256": "b6bd2893d2b7d715167dc6356c28412e0a2dd8d807e98b808fed6e8ae3409db5",
+      "mappedSegments": 8973,
+      "projectSources": [],
+      "mapSha256": "9b966b9339bbbbb48ba055915e3fa74724fd6c75421c933e4a44deb5d3b2dd5d"
+    },
+    {
+      "file": "assets/4595.52e3af7a.js",
+      "sha256": "b1904535ba6ce0d8c78dc95a77d2626e5e85e87751374ba98e6ca6a26de1b5dc",
+      "mappedSegments": 2162,
+      "projectSources": [],
+      "mapSha256": "584c8dc62536efb7b375a83d0d5b23a3ad38bbd14e49a431f8403246b655c43a"
+    },
+    {
+      "file": "assets/4600.371d0bef.js",
+      "sha256": "fc09609e7dde6e86bd2ca511d183099a30a8c518f674552063e8eea83f9ff791",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4605.b011bb2f.js",
+      "sha256": "53c0d7180c82514f3926882721edf3d835ca9786c6e8a4b0555c3d38cc128d26",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4624.c6a55aa5.js",
+      "sha256": "29cf9ab07484a9a00419bf14dacb6707465f207104114c248e4e70114ba1662d",
+      "mappedSegments": 3716,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/AttachmentLibrary/AttachmentLibraryPrimitives.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AttachmentLibrary/AttachmentFileRows.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AttachmentLibrary/AttachmentLibraryEmptyState.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AttachmentLibrary/AttachmentLibraryStates.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AttachmentLibrary/AttachmentMediaGrid.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/pages/Attachments.tsx"
+      ],
+      "mapSha256": "c66b3db3000b4bb4448b94444492edaa604e2f3471ec049c2c3a22d3537ac4a4"
+    },
+    {
+      "file": "assets/4742.e12f9a33.js",
+      "sha256": "9b1aa3c5182d7b66c0825af18a9ecbe09754b38b50a1ba665ae8f32c27ed8853",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4836.0e35f770.js",
+      "sha256": "2dd5f1614b364bc3695813fb232bedfe31f3deb4ee97edd0a499d5ac6117e31f",
+      "mappedSegments": 33,
+      "projectSources": [],
+      "mapSha256": "18ff6d6ff8d18768e6cbebaddabab17596cfbcb6671a4a7c62b99a4ff12ad55f"
+    },
+    {
+      "file": "assets/4848.de484752.js",
+      "sha256": "6a5834228876c20c296204f6ec76778bb3cd44f2cf99d9a8932cb81e55b6ce83",
+      "mappedSegments": 3282,
+      "projectSources": [],
+      "mapSha256": "d9fd98a81544bc2fcd6b2317ead838336260efc38125f0b892cc4bd8fe4c74e3"
+    },
+    {
+      "file": "assets/4879.999f41a3.js",
+      "sha256": "4cf32bd9c395b924d751f91c263f6f92c1d472b3be6b18bad0063895a6a733ea",
+      "mappedSegments": 5336,
+      "projectSources": [],
+      "mapSha256": "1a60e1efdd06d56d30a1e39b088fe450873d204f94f5ba486a83a95cfc9c3caa"
+    },
+    {
+      "file": "assets/4887.e5b155a7.js",
+      "sha256": "a63396be30f39caf4125aaf9c0b0a5362694b75f90a7898839b3a76778fae3f5",
+      "mappedSegments": 641,
+      "projectSources": [],
+      "mapSha256": "e9fe51a701ddd61948870de535f9516958371a10276c7d32bb04659b9757f315"
+    },
+    {
+      "file": "assets/4926.3e4c33f5.js",
+      "sha256": "d13b92022084661c56f8ad52459df1cc2a49f89b605ad9f51ec34e4e8913c847",
+      "mappedSegments": 42,
+      "projectSources": [],
+      "mapSha256": "cb4a42d5d13f62ae5e763d15758c197ce9324e8634eb4c3e52875af3c8a3c41a"
+    },
+    {
+      "file": "assets/4943.83efbcf7.js",
+      "sha256": "8cc9e45bc9980d829084c46cef917fdc1d8eda18f8aa17fa3eee1c5ffcd48a02",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4948.139894f6.js",
+      "sha256": "3023d5969382495ae9183bbe2fa00083f5f5cf6be3b53eb9886cd4e3b471a5fa",
+      "mappedSegments": 409,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/Setting.tsx"
+      ],
+      "mapSha256": "39dbd3bb061f0b68a96ab35578fad4c8cc029d7a271a0f79d1bde0c02f1a3942"
+    },
+    {
+      "file": "assets/5090.7d132613.js",
+      "sha256": "0348ee18565b20d17fa80c25536307b923f15b5e59d8ef71064656a4570bdf4f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5130.4d31816a.js",
+      "sha256": "8e4b716233a94b9d12ae6c247ae18f7f193438276af9b0f7e892c9db8d1e712c",
+      "mappedSegments": 787,
+      "projectSources": [],
+      "mapSha256": "68f73030b8e490c836a75e7ad11e9df08d121614ef09b32682e012a9abae9f45"
+    },
+    {
+      "file": "assets/5176.648cf45a.js",
+      "sha256": "2b5a6970ad19331ae1fba31e4e700e3661f11121ba86f5b09c9a1124a4e467a9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5211.70dcc5c4.js",
+      "sha256": "f3543627185832eb623ff397ef54610346554e8255b0df242784eb452d0b6a98",
+      "mappedSegments": 669,
+      "projectSources": [],
+      "mapSha256": "99701d652984a863ef45223afa91a1d5729a512d6d415b0062d02db7b5687b7f"
+    },
+    {
+      "file": "assets/5262.b29c4a55.js",
+      "sha256": "2e9ee3adeb5163c237196fa30a7e9bad5a7b6c88018d1bd5e0edd3cf08adae21",
+      "mappedSegments": 476,
+      "projectSources": [],
+      "mapSha256": "3a6000d6784ac37d04fb1bdc521a3c025981968697db74304db2e5fd80d07738"
+    },
+    {
+      "file": "assets/5310.450feffc.js",
+      "sha256": "554544920fa647edcbcdefd6e7d3f48861668faf84ce554a178b374ea95e1317",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5322.9940c577.js",
+      "sha256": "4cc687632610124c979ad472e1f1cff20c0614143e1e4e4d618b6dc681773d3c",
+      "mappedSegments": 17978,
+      "projectSources": [],
+      "mapSha256": "1b229ffce666d14f35c38737a5de4738861cbeb5f6aca4315bf4daf62f3622c4"
+    },
+    {
+      "file": "assets/5387.4849c3c4.js",
+      "sha256": "84834d4354031eb34985bfdefcd2bab07d0385a05dc63f6c3dfde291876bebe4",
+      "mappedSegments": 1103,
+      "projectSources": [],
+      "mapSha256": "86aa4def03c5e01898124276997d657cb8d3c73b2ce80f29d02227dc801e924b"
+    },
+    {
+      "file": "assets/5449.7c92807a.js",
+      "sha256": "f26328dd9416a559c775cea577ffd126dc9219943e7269f02920dcaea5e99b3d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5496.0883b538.js",
+      "sha256": "b410355eb49c0c938699ab5689d43f2b0a3930d4e44a6137fcb28a7a18e0eed0",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5603.51b30df8.js",
+      "sha256": "5c82dcbab6c6734dced796bec74188ffa5b96ac47a38f2d1f48bc563c1c8351b",
+      "mappedSegments": 897,
+      "projectSources": [],
+      "mapSha256": "a3965dcb5e46be20f22e7a4940f0ef8aab84479849df8ed87192ba258ba658b9"
+    },
+    {
+      "file": "assets/5673.c2cf1a29.js",
+      "sha256": "7fecfbd9f4c460262e065beb83b5adaf214118d9a8fc78aeeae33da9ce744d44",
+      "mappedSegments": 2918,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoPanel/MemoPanel.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoPanel/MemoPanelList.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/BasemapLayer.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useResolvedTheme.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/map-utils.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MapView/MapCanvas.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/pages/Map.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MapView/MapView.tsx"
+      ],
+      "mapSha256": "1021168a31e5c0097620ed2360ec4c3bb701f340944667b84b783ef7999d124d"
+    },
+    {
+      "file": "assets/5698.fd6e4024.js",
+      "sha256": "1ddfcb7fa37687af2d986318d230e64688f734586e54e5c0706590eb1f535cb0",
+      "mappedSegments": 117646,
+      "projectSources": [],
+      "mapSha256": "f3b159f73a69740bcff123e919c6fc38ed621ee5a4598568c6d8415e5ec25798"
+    },
+    {
+      "file": "assets/5753.4c1fb3a4.js",
+      "sha256": "363882a7c868dbc04f3bc79661c85da226890fb318f1e504cc7868d81e4aac3a",
+      "mappedSegments": 6211,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/utils/deriveDefaultCreateTime.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoPanel/MemoPanel.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoPanel/MemoPanelList.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PagedMemoList/MemoListError.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/CalendarLink.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/paths.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/CalendarDayCell.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/CalendarGrid.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/MonthPicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/CalendarHeader.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/dayModel.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/useMonthMemos.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/CalendarView/CalendarView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/pages/Calendar.tsx"
+      ],
+      "mapSha256": "6653edc35664299264e09211f1fba6796f091ba2e97c57b9a8c962e81f9ee6f4"
+    },
+    {
+      "file": "assets/5784.711cfbe9.js",
+      "sha256": "33214b8f0e619bdebd4f6a2b3bc1cf8d728b67cc6ecdb7118d00954b433839b7",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5894.0438ee17.js",
+      "sha256": "e2c013139f0e3fbbe2236f1dd504201e8a76ed078328b885932c16feb365d671",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6004.acc9bc44.js",
+      "sha256": "95f48e64308051be4425ed8658755c413b202788142a748e7556f50cd1615b01",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6040.29c0cbda.js",
+      "sha256": "3cf88e4e24cc21b1beb2bc714a718a0f15d38ac56bd576ebcad6bf8a890be036",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6092.cb6ccddd.js",
+      "sha256": "39a8c492816cc2f3cea60957cc63a0c424236298e258f4383b8c7d1c1ea0505b",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6282.8a3bb226.js",
+      "sha256": "5dccf4abfe4c7b1072613440ba2d0abe0b6ff8732f9fc62265a4e4f3e3ee70d8",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6347.79981e01.js",
+      "sha256": "eb28cd533c8a19a097c68db01e2b29198f626603cad219457c9f3a502d9fa757",
+      "mappedSegments": 265,
+      "projectSources": [],
+      "mapSha256": "0933ef89b7661031d30663252614f473b83d56900528f63dcdc9021be0cc5dbc"
+    },
+    {
+      "file": "assets/6401.62d31b7b.js",
+      "sha256": "dbe08654bbd2897a1308361c39514957e2f7a4dce0e008166dc31f6b5cc890fd",
+      "mappedSegments": 6697,
+      "projectSources": [],
+      "mapSha256": "5211717206f71183a4bff1c3e09b60d04e0d8ee2a7c023b6081f941900a6f092"
+    },
+    {
+      "file": "assets/6445.b7bd8ad1.js",
+      "sha256": "b47c054510c52da06cfb970a529234a1095910389a0e63bd935676890565a888",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6480.0a661880.js",
+      "sha256": "3aceab77edaaaa8ee9bacc75e9829825e5227745e2a62402a86cddb6ffd9eebd",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6551.ea906ec5.js",
+      "sha256": "77e513079bd01029f5da53cbe4b38f76a2b38ef6f3094057aa737b2c557ef7e0",
+      "mappedSegments": 68,
+      "projectSources": [],
+      "mapSha256": "c202b37b443fd0457851730b595962a88abbf04e0b459940d286dea62ec3a114"
+    },
+    {
+      "file": "assets/6725.6d7bbf2a.js",
+      "sha256": "28f041fad45facd3c89eb329558c85a8e8db442cae859d00a8756383824df783",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/674.9ee129f0.js",
+      "sha256": "07b53804150e8850af718d6771435bae2d36d107e8ed79edacdb9195c4a9f5be",
+      "mappedSegments": 4760,
+      "projectSources": [],
+      "mapSha256": "37850578f4c23939d656c7a4240e9c8b24273e579c47c296453e181863f594e6"
+    },
+    {
+      "file": "assets/6759.f2c6f72e.js",
+      "sha256": "827725250fcc4900a8b80aa4e265dc16dca93ab8a3a4dd648f6fd539b90afc7b",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6808.483ce10b.js",
+      "sha256": "e42f0b26c62071c53c1e08ca5da2f0527b28273b1975d895a6cfcc68765e34a6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6938.57f589ae.js",
+      "sha256": "c5b9735cae0ee8d37bb1bc5a0110f007c2728512ee1ba2bf1359e8df5ac909d0",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7056.adb3c807.js",
+      "sha256": "db5f50496f2e598e7249e39abe7f6a6eb696343d38f33579dd69585e649f7c48",
+      "mappedSegments": 8225,
+      "projectSources": [],
+      "mapSha256": "2f2e366afb75c414c6074c9cd8bcc7426f5c91afb37eb1de4cea6839c6bad183"
+    },
+    {
+      "file": "assets/7089.76331784.js",
+      "sha256": "7d945f82102ac30d00b412970405fac75c8e43f6da92b4e41cf38afcbc25ac06",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7110.3b81bc47.js",
+      "sha256": "e45e865610ced376a4a777b3b97c2733f2eb8b57bf8a0f578732323a44833668",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7206.22ed3088.js",
+      "sha256": "b7580ed2afbb4a57305746931cfbe4cbdc5e2129ece6c88c14cd15897838dab8",
+      "mappedSegments": 367,
+      "projectSources": [],
+      "mapSha256": "99a18e4ff0705b11c104db5d1a54db369b698ce0ef57287be78c9ca3f24b5727"
+    },
+    {
+      "file": "assets/7402.b20578fd.js",
+      "sha256": "1af01f21ebaeb5f10c09a4a7c82718f2e7d047935f743bcf091d78f9a399cc9a",
+      "mappedSegments": 54,
+      "projectSources": [],
+      "mapSha256": "80c9cc0a47d538df36e6b0871ed9614917944250d1123a221e05b815c1a46e5e"
+    },
+    {
+      "file": "assets/7435.efa9fea2.js",
+      "sha256": "437a943d1470822374f7c8b74cc33644714f65a956cca196c860c68d4fb308ee",
+      "mappedSegments": 557,
+      "projectSources": [],
+      "mapSha256": "00a4411a3c8e0d530e60688e6f3220be5f51ce886c4969371a0c276c26c0ba69"
+    },
+    {
+      "file": "assets/7470.37a052b0.js",
+      "sha256": "7f1995ebba2d22e4cc0331c905311051a9277804db923c66e6681435dae9ec50",
+      "mappedSegments": 696,
+      "projectSources": [],
+      "mapSha256": "b414947f318ef03818872c5b4e0fcf85b9fa17393cd999ec6e76c3122a0bbe40"
+    },
+    {
+      "file": "assets/7483.aefbfd15.js",
+      "sha256": "5a3fc056f069ddd3329cb4e54f8866fc7f3d8161623d96ecf0ff4f02a5f036d2",
+      "mappedSegments": 8833,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/ClampedSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ColumnGrid/ColumnGridContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoReactionListView/hooks.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoReactionListView/ReactionView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoReactionListView/ReactionSelector.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoReactionListView/MemoReactionListView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/hooks/useImagePreview.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/components/MemoBody.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/hooks/useMemoHandlers.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/components/MemoCommentListView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/utils/markdown-task-actions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/hooks.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/MemoMoveDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/MemoActionMenu.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/components/MemoSpaceBadge.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/components/MemoHeader.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/components/MemoPinnedMark.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/MemoView.tsx"
+      ],
+      "mapSha256": "1e59fbf7ef5d72a893a1295e8c329c5e54c58e75852e9eeb42ac11ddbb8df341"
+    },
+    {
+      "file": "assets/7487.fd48a2ba.js",
+      "sha256": "46b45bd2ab1ecce774ee90baed2908aab5d52a38e9ffa10d3ecae10e4212a656",
+      "mappedSegments": 2275,
+      "projectSources": [],
+      "mapSha256": "d6abe0f16394f1ed9c046f6363f39a9894751d8e7d7c776d5687b9261abf28db"
+    },
+    {
+      "file": "assets/7549.9bfa7b32.js",
+      "sha256": "9927d505002cebbc99319730f5e9dd689f30a69aec1cafcf93004648822b42e0",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7563.abb897a8.js",
+      "sha256": "9c5937597bf874b553506f47369999817d026d01ce6feebef9e9898e7b7c1c13",
+      "mappedSegments": 3780,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/memoShareImage.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/memoShareImagePreviewModel.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/MemoShareImagePreview.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoActionMenu/MemoShareImageDialog.tsx"
+      ],
+      "mapSha256": "6e4fe1539be4117905f31461e03ba56f1eddda847638e9b14dda6f3e91a44374"
+    },
+    {
+      "file": "assets/7632.b586e8ad.js",
+      "sha256": "b3a76cec1639b59806e2f0a8edb02ae11e849c4cfee2ac036db526d5cae1b55c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7636.69b54a21.js",
+      "sha256": "210fedb030c9f2f989ed269a89fcb44cecc19296cd726f5683589bb66b62efce",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7751.a78e62ce.js",
+      "sha256": "882aaf6e1428728552f7662eb4707b67728ea63c045e76909295bb8f8bf25bf2",
+      "mappedSegments": 65,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/map/positron.ts"
+      ],
+      "mapSha256": "d1752b7df7590622ecbc16226092d311a8fd00f9d99a3b2286497dad6cebbb19"
+    },
+    {
+      "file": "assets/7833.dc15536c.js",
+      "sha256": "c66972c726292641d1ba5ccab8d2b7aca304c14afe5638da3cd74ae3b35e6555",
+      "mappedSegments": 3563,
+      "projectSources": [],
+      "mapSha256": "6a4aecaccc146393f0609220731ffa05cc797fbd7fac6229f96f4712d8054027"
+    },
+    {
+      "file": "assets/7841.57b8dffa.js",
+      "sha256": "25b113df2894d27a609eb475d7c1143ae06f5e140074774e04267bb3580bef95",
+      "mappedSegments": 1129,
+      "projectSources": [],
+      "mapSha256": "9768334f4dbc043b5d93b491e5f7c93a63c72b6144515f5962886bb880787bfe"
+    },
+    {
+      "file": "assets/7928.31f118f4.js",
+      "sha256": "8db896030169790837a4025ecfb3c8983a32432ed10b6a8f60e4c77ba7d94cc6",
+      "mappedSegments": 14688,
+      "projectSources": [],
+      "mapSha256": "7e3112614846f11a5ad464607d615fbdf2d474258193504d5ffcb07c69f812a2"
+    },
+    {
+      "file": "assets/7980.46a4673a.js",
+      "sha256": "440a8c5f06d635998b39e7d282378dd0a03ec34eed106e9b17236af10370f54b",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8078.3dd5285e.js",
+      "sha256": "7435182e611568003117beca680bce6ac685c5a6173c213c02c0dc73d144ed78",
+      "mappedSegments": 55,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/PermissionDenied.tsx"
+      ],
+      "mapSha256": "0d43144630c2f9b1aef57c2563ebb0348dde2ee733856ec42a1463a5becfe812"
+    },
+    {
+      "file": "assets/8109.f331cfd2.js",
+      "sha256": "d141513e7a8de9bee8caa1617578bcc2f3468ab2b2a6fda103fea628798bd737",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8207.254d13cd.js",
+      "sha256": "828fa258f6c59fb880e54ff0b2488f1469ca587bc6d4f0d92846d4f4ff104d83",
+      "mappedSegments": 645,
+      "projectSources": [],
+      "mapSha256": "5f63bf91c3ebb5df161b0f17acbefaa03a0ee42cff323f864ee20a3484914e83"
+    },
+    {
+      "file": "assets/8248.c2885e2e.js",
+      "sha256": "7d72151a971ba150372dd566524884f43783ad149742d2f1c6019b920c65d4aa",
+      "mappedSegments": 4479,
+      "projectSources": [],
+      "mapSha256": "ef2b71ab29a59cbb0146b3a793ab3fdee27b1b55a1763323caaa7b2b0e5a4c2d"
+    },
+    {
+      "file": "assets/8252.fe7a294d.js",
+      "sha256": "e67136dbe726072cbe6375737d64a015713b9943b589f0de50180f7abc6b1670",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8325.541dd4b9.js",
+      "sha256": "7e30ddf44ec71537f26ddcb5846c69af1c167b6f7a5a9ca5deafaa80c5a1b7cc",
+      "mappedSegments": 2173,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoCommentSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoDetailError.ts",
+        "webpack://benchmark-realworld-v2-memos/src/pages/MemoDetail.tsx"
+      ],
+      "mapSha256": "9bbbbaf154d1d6cf2e5a1ebbd9c12d492e3fd6ee162ec1da1a04718631956911"
+    },
+    {
+      "file": "assets/8326.f35a3a20.js",
+      "sha256": "0da716043ddd1830492aedfd59fcdffe6d063e135c3fcbb15ac7157594e3123c",
+      "mappedSegments": 27314,
+      "projectSources": [],
+      "mapSha256": "9e756b7a2418cb90200694c9092f6533385a241da463828f25fb6e4ff8d9b4f4"
+    },
+    {
+      "file": "assets/8334.180a8063.js",
+      "sha256": "0cc580b5fd0e00ed10a4fdd5f0c90657c636efd95febf22fd89fddd0415f290c",
+      "mappedSegments": 4270,
+      "projectSources": [],
+      "mapSha256": "287666820d27bc128d4a7540b20a56e3132779760515bd4821a291d1c47e0591"
+    },
+    {
+      "file": "assets/8365.60dc52b6.js",
+      "sha256": "2ac584fa14eadde5cf959c2db9134a54f0ff5b73790c1a06f00e971f3480f0ec",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8383.bfe3df13.js",
+      "sha256": "9ae62d7d6d81abf3a2a16bc7036fe4ee48d6261f3ae97271c16aae74f2ea398b",
+      "mappedSegments": 3255,
+      "projectSources": [],
+      "mapSha256": "7934172f09c4b4fb30275bc589d0e80697f4c186a2d5098ec5b7dafe4a866da5"
+    },
+    {
+      "file": "assets/8416.0ba0d0f1.js",
+      "sha256": "5dfc792c561e641915e0dac0602738b1b517fd88490e4f3b548229e6bc55d262",
+      "mappedSegments": 3689,
+      "projectSources": [],
+      "mapSha256": "5aaa0f9c90c0dec7ee443aeb15c7ad59d5dd8a60b80b6fb1748ba488e9e84d1f"
+    },
+    {
+      "file": "assets/8484.54326bcf.js",
+      "sha256": "a81efaf9026f27d59feb5b7713172da2a844c8ed8aa4e978dd319ebc68ca3541",
+      "mappedSegments": 9173,
+      "projectSources": [],
+      "mapSha256": "433fd509b456bb3f0c86a33c4fa5b6f6bd619eb3aa9769077fb10887a313bb94"
+    },
+    {
+      "file": "assets/8693.d06db53e.js",
+      "sha256": "c350dba7e1b112a333c381fc56f9af42f3565ca592fe9f524e720529d4e19f06",
+      "mappedSegments": 6414,
+      "projectSources": [],
+      "mapSha256": "b2139bfac4a8a037988b6f22dd9aafc24398284c71661fd73ceebc5073597d1b"
+    },
+    {
+      "file": "assets/8731.92f13a7e.js",
+      "sha256": "868d412f72379f1eaec7c83180a96731cfdd71ccc43431c2123dfec3424bdbff",
+      "mappedSegments": 88348,
+      "projectSources": [],
+      "mapSha256": "5c1b284eaaab376a091e57b75ae99772aa5fb574b8d6af867808fd7a033a8fdc"
+    },
+    {
+      "file": "assets/8762.9261e3a0.js",
+      "sha256": "27df72ffa2d2283c874c361986f0cac55f76da11375721fdf4e5173ffe434eef",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/884.c00d848b.js",
+      "sha256": "87d08c74f2e46bd2a3136037db3f242d5f639e58654eb62ae2dfcf4151e2b11e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8912.43c97286.js",
+      "sha256": "f3c41e6028c06c9b2735642d2aced6be26eeb53917af4282b681e0e5245c8e9a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/894.9490066a.js",
+      "sha256": "a2ec5abde98536ca127786f8dcb130ff8d054f13979c5094ff82a5b910cfdb6c",
+      "mappedSegments": 5537,
+      "projectSources": [],
+      "mapSha256": "de9d4f0bd8a81f1244bc099e62c8153dfafe892ca555a457fd30fad030a811be"
+    },
+    {
+      "file": "assets/8992.b73d9edb.js",
+      "sha256": "a9a984e358211555bfe5b2810f48546bc52bf9595a24e1c2af02ef0aa786aca0",
+      "mappedSegments": 1464,
+      "projectSources": [],
+      "mapSha256": "b1e874513c1c9c996535973d070ee11fdc3f6b02ba4a84a0727e7230ce3f3f3f"
+    },
+    {
+      "file": "assets/90.8fb9a9c7.js",
+      "sha256": "c71111e8c6f1b6cfa313d9e4fd1526a9676f07b5a5ef159ea04a372c6f1c7a74",
+      "mappedSegments": 34,
+      "projectSources": [],
+      "mapSha256": "482931c291db767f727e23e1f65c07d5931d837352b676fa78b1306fb059f8ab"
+    },
+    {
+      "file": "assets/9035.05b839a8.js",
+      "sha256": "7c2d90f5016e6ea51d0734d6771bb31a864f51ac1a791cfc4b06c06ba6dd7ff1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9075.83515b20.js",
+      "sha256": "167823529dd4e746009086373dba04d67d6e3422f49404e1d1bffebeb0d1bf26",
+      "mappedSegments": 95,
+      "projectSources": [],
+      "mapSha256": "677c9b97a1f694cd726d7f54e4258a9e9f54b63988670db485a73d6e84f883d6"
+    },
+    {
+      "file": "assets/9081.6f2fa005.js",
+      "sha256": "b7ba4568acb5333064470287f742b88d93b03c5c7e1cc8256e90af44e305e76d",
+      "mappedSegments": 281,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/pages/AuthCallback.tsx"
+      ],
+      "mapSha256": "9d6f79504c17a789f96c7470ca1b3439190e28077189275d575bf1518f194b19"
+    },
+    {
+      "file": "assets/9093.2d16e488.js",
+      "sha256": "7f0d0447e789d77f7f41c3356e64ae2989fb4547376044bf4a81347a5d93e5d4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9144.ba1730fa.js",
+      "sha256": "de8739b2f9eaa991890ddc87ac04a2df1626b810a6fc0e9d3d095693a13c857c",
+      "mappedSegments": 2552,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/utils/remark-plugins/remark-currency-safe-math.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/MathMarkdownRenderer.tsx"
+      ],
+      "mapSha256": "4f0e2dcb8729a0777d6018c4beb5e0aa26783dc6dbc3a42d6cca667e30a5abf6"
+    },
+    {
+      "file": "assets/9184.2eeb602e.js",
+      "sha256": "3fa35f86cfd11a744affd629dd56dd792e0adb307eea8edb818322d8c07a1ad7",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9191.39a5ace8.js",
+      "sha256": "7505de0ba4b890a433608c30f17a1ee69e59f6989a8d98f2225bb71a77434651",
+      "mappedSegments": 1092,
+      "projectSources": [],
+      "mapSha256": "c96c006879c4d010a08bd18e55b3e0f290d9f706bef36813493bd923ea1e22a6"
+    },
+    {
+      "file": "assets/9220.6b804d0c.js",
+      "sha256": "8f935b17541c081bac86a0a09bfb9a6d95f80c0b29148d7636598ed36e1bbc86",
+      "mappedSegments": 9379,
+      "projectSources": [],
+      "mapSha256": "4eb5fffa3007c36a7d8a5afd44f8a9f3541c7741fa9d9632d92d07477d19b6c1"
+    },
+    {
+      "file": "assets/9359.869bede3.js",
+      "sha256": "09379132bf23bbd3206d29cfaed28af8e2ff313615ec3f357e63702204d410f1",
+      "mappedSegments": 310,
+      "projectSources": [],
+      "mapSha256": "04dbf4af1554d0931f2e5e8606bf482c8923978ad49ffd43dcfa017038fd2eb4"
+    },
+    {
+      "file": "assets/9423.12eca4af.js",
+      "sha256": "2b873020fe10517065b2925b2b49f197e308a0334b11fd36ad5afc29f292b9f4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9510.dd6e8142.js",
+      "sha256": "12eb7572ea328a0e4226785581c04a16a97a136f32c2d854d87bb594e16c85e1",
+      "mappedSegments": 431,
+      "projectSources": [],
+      "mapSha256": "84e7a8e9fea779458c1c895cd67780509284eeb3ec5805be5272089e073e0c51"
+    },
+    {
+      "file": "assets/9590.a2d4fa39.js",
+      "sha256": "68d9e00459fee9e56d53951256a7d48b8bbfb47d8da9f517109e78227006665d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9596.c207d081.js",
+      "sha256": "b2ddbf323c5f270e7b1f5a37a1c54467b2ab1bf6ca3fc04b6308e23b9a2d6645",
+      "mappedSegments": 17547,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useAudioWaveform.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/VoiceWaveform.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/AudioRecorderPanel.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/markdownTagRanges.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/uploadAnchors.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/controller.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/formatting/commands.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/listIndent.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/formatting.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/viewportDecorations.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/headingDecorations.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/tagAutocomplete.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/tagMentionDecorations.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/theme.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/extensions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Editor/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/state/actions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/state/types.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/state/context.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/state/reducer.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/EditorContent.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/EditorMetadata.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/constants.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/FocusModeOverlay.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/TimestampPopover.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/components/EditorSuggestions.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useBlobUrls.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useAudioRecorder.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/cacheService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/errorService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/uploadService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/memoService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/transcriptionService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/validationService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useAutoSave.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useEditorActiveState.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/services/mediaMetadataService.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useFileUpload.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useInlineImageUpload.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/platform.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/map/useReverseGeocoding.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Toolbar/InsertMenu.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useLinkMemo.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useLocation.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Toolbar/VisibilitySelector.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Toolbar/EditorToolbar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/Toolbar/FormattingToolbar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useElementWidth.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useMemoInit.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useFocusMode.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/hooks/useMemoSave.ts"
+      ],
+      "mapSha256": "036e089d0a31ff47ee331b68a79e8c40e023109f0892041bf0ea388fbcf0c048"
+    },
+    {
+      "file": "assets/9686.bb01ced0.js",
+      "sha256": "780f810c5b59e5fe738b8f29d3ee288be81e76f7aa2061d3e82c02fa7803efc5",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9704.89482f5b.js",
+      "sha256": "3c0a6ddbed009aa97f1324fa882b21ad2bb145e9f62d8a73b651d19ef9cc3dae",
+      "mappedSegments": 166158,
+      "projectSources": [],
+      "mapSha256": "deb3eb792c85ab97fd192459f9679b4f1727209e37ff90ee009eac9c7f683013"
+    },
+    {
+      "file": "assets/9719.f73b0632.js",
+      "sha256": "08a49fe7e47ee149518eaf8937a578a7f03686d5a5e95de94b84d76e792d1d55",
+      "mappedSegments": 4842,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/PagedMemoList/MemoListError.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ColumnGrid/ColumnGrid.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ColumnGrid/index.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoFilters.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PagedMemoList/memoCardHeight.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/PagedMemoList/PagedMemoList.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PagedMemoList/index.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/Placeholder/InkIllustration.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Placeholder/index.tsx"
+      ],
+      "mapSha256": "35e59fcd824cbaa32559348ed3bdfae01f782760c7641a13455ce8893686aeb8"
+    },
+    {
+      "file": "assets/9755.86869828.js",
+      "sha256": "01458adcd8c0cd6f9b50c3ab40a6e74e37b0ec3e96933d9a70eb3fa17915c74d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9767.fda4bd19.js",
+      "sha256": "b597a66bcda8e0179a68cc3d82040731f216c8972e6f0f33c8c3adac464a0105",
+      "mappedSegments": 5210,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/Placeholder/InkIllustration.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Placeholder/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Inbox/MemoCommentMessage.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Inbox/MemoMentionMessage.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Inbox/SpaceInvitationMessage.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/pages/Inboxes.tsx"
+      ],
+      "mapSha256": "b4b746f2ecbd9d2b824bfbb83d6233c521a8b8b227c6409a8fbb8b762e9b90f3"
+    },
+    {
+      "file": "assets/9771.3361ffb7.js",
+      "sha256": "5fed5819e36ee584abf0d971b9918f1cdcd933b81a8a88b2ee07fdd1750f0a5c",
+      "mappedSegments": 2058,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthFooter.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AuthPageLayout.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ChallengeWidget.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CredentialFields.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/PasswordSignInForm.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/pages/AdminSignIn.tsx"
+      ],
+      "mapSha256": "73358afb44e20245f829fb78569f16d0f216070cfb64547d9e2a8ef68fe1d17a"
+    },
+    {
+      "file": "assets/9878.6b1e4e02.js",
+      "sha256": "8b198dd13ef18ebe786597da662d04e9397961c2636544c506b517fba0161686",
+      "mappedSegments": 58256,
+      "projectSources": [],
+      "mapSha256": "e30dbc5ef79e9d10ec0d231200c5952ab00b54dc66a9dccd7efba06863c7ed28"
+    },
+    {
+      "file": "assets/9914.84cc3454.js",
+      "sha256": "becfe0e8dd047e99a1239ef4f8b11c44aa5d004c11cfbf6b26604a685e33bc7c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9928.dd207128.js",
+      "sha256": "e954b8c3230ec2f8a306920c858e795697ca5c3557b859487f123f558fb251fb",
+      "mappedSegments": 525,
+      "projectSources": [],
+      "mapSha256": "43619a132d110a87e65788ddb5b25ac6b9a95d71478b06795eb73a81db488a8d"
+    },
+    {
+      "file": "assets/9943.86401289.js",
+      "sha256": "e7d2dd067f66a4eb5b4249eeae4b3a89b324bf7013475b79c268f49ae2072375",
+      "mappedSegments": 573,
+      "projectSources": [],
+      "mapSha256": "e6cb8b11655a98ae41d19baedc1fa0d0d466e507539bb371db4c49e9ef2ed702"
+    },
+    {
+      "file": "assets/9945.8cf9eba1.js",
+      "sha256": "29255464e2630e28a11c6649f086cfeb0bc8c4c3b722b5662470b194898d8234",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/main.b394981b.js",
+      "sha256": "5c552e76a3468effa7202cb07d23e71cfdf5e169584a3fbaefdc281c6a6aa2b8",
+      "mappedSegments": 109957,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-memos/src/auth-state.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ActivityCalendar/utils.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ActivityCalendar/cellStyles.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ActivityCalendar/CalendarCell.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ActivityCalendar/monthDays.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ActivityCalendar/MonthCalendar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/sidebar-layout.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/SidebarRow.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/SidebarSectionHeader.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/SidebarSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoDetailSidebar/MemoOutline.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoDetailSidebar/MemoSharePanel.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoDetailSidebar/MemoDetailSidebar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/StatisticsView/MonthNavigator.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/StatisticsView/StatisticsView.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/UserMenu.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/sheet.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemosLogo.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/CommonSidebarContent.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/SpaceSwitcher.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/TagTree.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/TagsSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoDisplaySettingMenu.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/ViewsSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/AppSidebar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/QuickFindDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/useSidebarWidth.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/SidebarResizeHandle.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/AppSidebar/routes.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ConfirmDialog/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CreateSpaceDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CustomIcon.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CustomIconPicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/lib/space-emoji.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ErrorBoundary.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/LocalePicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/LocaleSelect.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MapView/model.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MapView/useMapMemos.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/constants.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/rehype-plugins/rehype-heading-id.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/remark-plugins/remark-disable-setext.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/remark-plugins/remark-preserve-type.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/remark-plugins/remark-split-mixed-task-lists.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoContent/pipeline.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoEditor/loader.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Attachment/attachmentHelpers.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/relationHelpers.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoMetadata/Relation/useResolvedRelationMemos.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoParentPlaceholder.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoView/navigation.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/MemoViewIcon.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/RelativeTime.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/radio-group.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CreateAccessTokenDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SettingSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/AccessTokenSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SettingGroup.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SettingList.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SettingTable.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/useInstanceSettingUpdater.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/AISection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/UpdateCustomizedProfileDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/InstanceSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/InfoChip.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CreateUserDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/MemberSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/lib/memo-export.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/MemoExportSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/MemoRelatedSettings.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ChangeMemberPasswordDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/UpdateAccountDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/sso-display.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/LinkedIdentitySection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/UserStatsSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/MyAccountSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SettingRow.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/NotificationSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/PreferencesSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/ResourceStatsSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/InviteSpaceMemberDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SpacesSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CreateIdentityProviderDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/LearnMore.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/SSOSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/StorageSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/TagsSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/CreateWebhookDialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/WebhookSection.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/Settings/settingSections.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/SpaceIcon.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/SpaceIconPicker.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/SpaceMark.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/SpaceRoleBadge.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ThemeSelect.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/UserAvatar.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/VisibilityIcon.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/badge.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/button.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/dialog.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/dropdown-menu.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/focus.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/input.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/label.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/popover.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/popup.ts",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/select.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/separator.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/switch.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/tabs.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/textarea.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/tooltip.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/components/ui/visually-hidden.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/auth_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/connect.ts",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/AppSidebarContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/AuthContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/GlobalMemoEditorContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/InstanceContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/MemoFilterContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/SpaceContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/contexts/ViewContext.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useDateFilterNavigation.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useDebouncedEffect.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useLocalStorage.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useOverflowTitle.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useAttachmentLibrary.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useAttachmentQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useCurrentUser.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useDelayedFlag.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useDialog.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useFilteredMemoStats.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useInstanceQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useLiveMemoRefresh.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useLoading.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMediaQuery.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoFilters.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoShareQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoSorting.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useMemoSuggestions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useNavigateTo.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useSpaceQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useUserLocale.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useUserQueries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useUserTheme.ts",
+        "webpack://benchmark-realworld-v2-memos/src/i18n.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/browser.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/calendar-utils.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/cel-filter.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/color.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/constants.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/custom-icons.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/error.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/memo-comments.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/suggestion-expression.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/context-suggestions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/tag-suggestions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/memo-suggestions.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/memo-views.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/query-client.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/resource-names.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/space-display.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/tag.ts",
+        "webpack://benchmark-realworld-v2-memos/src/lib/utils.ts",
+        "webpack://benchmark-realworld-v2-memos/src/main.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/hooks/useTokenRefreshOnFocus.ts",
+        "webpack://benchmark-realworld-v2-memos/src/pages/NotFound.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/App.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/layouts/MainLayout.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/layouts/RootLayout.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/router/guards.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/router/SpaceRoute.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/router/index.tsx",
+        "webpack://benchmark-realworld-v2-memos/src/router/routes.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/ai_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/attachment_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/common_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/idp_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/instance_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/memo_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/space_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/httpbody_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/api/v1/user_service_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/http_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/annotations_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/launch_stage_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/client_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/field_behavior_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/api/resource_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/types/proto/google/type/color_pb.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/attachment.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/redirect-safety.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/auth-redirect.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/format.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/gfm-email.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/gfm-url.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/i18n.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/lazy.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/managed-attachment.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/markdown-link.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/markdown-manipulation.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/markdown-source-boundaries.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/media-item.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/memo-markdown-extension.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/memo.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/mention-grammar.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/oauth.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/remark-plugins/remark-tag.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/tag-grammar.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/tag-unicode-data.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/theme.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/user.ts",
+        "webpack://benchmark-realworld-v2-memos/src/utils/username.ts",
+        "webpack://benchmark-realworld-v2-memos/src/locales/%20lazy%20%5E\\.\\/.*\\.json$%20referencedExports:%20default,%20%20namespace%20object"
+      ],
+      "mapSha256": "89e3f880f2170a84f1ed296ecb72494da9431bb6966605793b9edd53278298cd"
+    }
+  ],
+  "css": [
+    {
+      "file": "assets/2724.b775c194.css",
+      "sha256": "5ed49a2cb03be861c9b2325d2c0c9bfbd2f547f6ef4b71f86356f2cde659c64c",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/4365.1115b5ff.css",
+      "sha256": "c52abdb88caf281ccd78a91dc61df44714f92f8ee065dbd1026a785e7bfedd65",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/5673.20af540c.css",
+      "sha256": "884e49a281bbbce12577e84ad8cf515288dc16756a190e555d96b5c658f17e20",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/5743.1115b5ff.css",
+      "sha256": "7fadd13245188c6ee97072eba8cca79a11533cfb252d36d302c2739e9c3fc292",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/5753.1115b5ff.css",
+      "sha256": "92d0bf32352080e73171ba41efeead1f957a5e0a8072bb0b99b3c7945d1a4aa5",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/6737.d6e6e78b.css",
+      "sha256": "b636b4d0feb48df359ec3f6c0cf4f4da2e837bace06e6feb4a2d621704948915",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/9704.4d13c9b8.css",
+      "sha256": "0a67398cd8fe8f83eb82eafce9ff5d5cd4ca9004a2a3ee0740c50bdfdd1101f1",
+      "mapPresent": true
+    },
+    {
+      "file": "assets/main.73eb64ce.css",
+      "sha256": "ac15b8e7aa545ff79666ee43c24417db28bc714eee2677856ac0ad724de7a6f6",
+      "mapPresent": true
+    }
+  ],
+  "publicationEligible": false
+}

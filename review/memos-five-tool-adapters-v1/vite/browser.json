@@ -1,0 +1,765 @@
+{
+  "publicationEligible": false,
+  "purpose": "Memos actual-backend functional acceptance",
+  "passed": true,
+  "checks": {
+    "actualBackendReady": true,
+    "signupSubmitted": true,
+    "signupAndLogin": true,
+    "homeComposerReady": true,
+    "homeComposerAcceptsInput": true,
+    "createAndRenderMarkdown": true,
+    "editNote": true,
+    "reloadPersistence": true,
+    "actualWriteResponses": true,
+    "sqlitePersistenceAfterShutdown": true
+  },
+  "errors": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ],
+  "cancellations": [
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "responses": [
+    {
+      "url": "/",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/index-IqDL5ssO.css",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/rolldown-runtime-Dd_uD5pT.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/preload-helper-BZ1Pz5am.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/jsx-runtime-CxR3u8Q2.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/timestamp-Bi87NmhE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/AuthContext-Ccb4OP9s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/error-DDS2XFwP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/useSpaceQueries-3I69nXRF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/connect-IQGqHt7s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/react-dom-Yr-Mt9ce.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseFor-C2VRbLXy.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_getTag-DgSgH-lP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseEach-BvjRjfKP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseOrderBy-DC1k0i2P.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dist-BWMU1Z2M.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/utils-Ce5lEiGU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dist-D8nw-YAF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseUniq-CqeODpgU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseFlatten-CKhS2SX5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/x-CP233pcN.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_isIterateeCall-CgqZaj3U.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/CustomIcon-DFARBqVR.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/sun-C_nc0Bu9.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/format-COdcaRWg.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/constants-BAKSEW_s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/button-Dd8rKTFC.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dialog-BI5bcTCz.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Separator-x2TfizAO.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/useOpenInteractionType-CycimVXx.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/index-V9xw4cKo.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/site.webmanifest",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/en-DakTyYCk.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/RefreshToken",
+      "status": 401,
+      "expectedAnonymousRefresh": true
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/android-chrome-192x192.png",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/SignIn-CiSTP1nb.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/PasswordSignInForm-CdfAzW68.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/CredentialFields-D6IC5bqZ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/loader-BZspg-cW.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/useIdentityProviderQueries-Bzad_IEK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/SignUp-CCKU86K9.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/CreateUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/SignIn",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/GetCurrentUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/api/v1/sse",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoEditor-CaFsdePt.css",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Home-zMyK3-ep.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoMarkdownRenderer-BJfrGd97.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/AudioAttachmentItem-CchWrMa7.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoView-BYAqWg7N.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/NewMemoContext-CUHPWtpc.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoListError-DTRelbLU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/PagedMemoList-DGP6zHfu.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/deriveDefaultCreateTime-BkiNkwgq.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Placeholder-BvKuWjSf.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoEditor-CHpxXf-4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListMemoViews",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserNotifications",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.SpaceService/ListSpaces",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/full-logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/CreateMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/GetMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/UpdateMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/preload-helper-BZ1Pz5am.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/rolldown-runtime-Dd_uD5pT.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/index-IqDL5ssO.css",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/jsx-runtime-CxR3u8Q2.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/timestamp-Bi87NmhE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/site.webmanifest",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/error-DDS2XFwP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/connect-IQGqHt7s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/AuthContext-Ccb4OP9s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/react-dom-Yr-Mt9ce.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/useSpaceQueries-3I69nXRF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseFor-C2VRbLXy.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_getTag-DgSgH-lP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dist-BWMU1Z2M.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseEach-BvjRjfKP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseOrderBy-DC1k0i2P.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/utils-Ce5lEiGU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_isIterateeCall-CgqZaj3U.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseUniq-CqeODpgU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dist-D8nw-YAF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/x-CP233pcN.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/_baseFlatten-CKhS2SX5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/sun-C_nc0Bu9.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/CustomIcon-DFARBqVR.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/button-Dd8rKTFC.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/useOpenInteractionType-CycimVXx.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/format-COdcaRWg.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Separator-x2TfizAO.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/constants-BAKSEW_s.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/dialog-BI5bcTCz.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/index-V9xw4cKo.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/en-DakTyYCk.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/GetCurrentUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/android-chrome-192x192.png",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Home-zMyK3-ep.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoEditor-CaFsdePt.css",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoView-BYAqWg7N.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoMarkdownRenderer-BJfrGd97.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/AudioAttachmentItem-CchWrMa7.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/NewMemoContext-CUHPWtpc.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/Placeholder-BvKuWjSf.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoListError-DTRelbLU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/PagedMemoList-DGP6zHfu.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/deriveDefaultCreateTime-BkiNkwgq.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/loader-BZspg-cW.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/MemoEditor-CHpxXf-4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListMemoViews",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserNotifications",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.SpaceService/ListSpaces",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/full-logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/api/v1/sse",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    }
+  ],
+  "source": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "binarySha256": "9432c3baf9982fc5ca4caa6115a3670760fd7226d90b628cdc147ecad6c81b21",
+  "frontend": {
+    "kind": "five-tool-adapter",
+    "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/dist",
+    "publicationEligible": false
+  },
+  "browserVersion": "Chrome/153.0.8010.52",
+  "sourceAfter": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "backendExitCode": 0,
+  "backendSignal": null,
+  "databaseFiles": [
+    {
+      "name": "memos_prod.db",
+      "sha256": "c2e0e2311096ad434f0d40c31734ea259c7aac8f4e5ab2eeab591543499d8cd9"
+    }
+  ]
+}
