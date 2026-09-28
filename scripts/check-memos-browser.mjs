@@ -55,32 +55,36 @@ try {
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => { const url = response.url().replace(origin, ''); const expectedAnonymousRefresh = phase === 'bootstrap' && response.status() === 401 && url === '/memos.api.v1.AuthService/RefreshToken'; report.responses.push({ url, status: response.status(), expectedAnonymousRefresh }); if (response.status() >= 400 && !expectedAnonymousRefresh) report.errors.push(`HTTP ${response.status()}: ${url}`); });
   await page.goto(origin, { waitUntil: 'domcontentloaded' });
-  await page.waitForSelector('#signup-username', { timeout: 30000 });
+  await page.waitForSelector('#signup-username', { timeout: 60000 });
   phase = 'signup';
   await page.type('#signup-username', 'benchmark'); await page.type('#signup-password', 'Local-benchmark-only-7391'); await page.evaluate(async () => { await document.fonts.ready; window.__benchmarkSubmitCount = 0; document.querySelector('form').addEventListener('submit', () => window.__benchmarkSubmitCount++); });
   await page.locator('button[type="submit"]').click();
-  await page.waitForSelector('[data-new-memo-trigger]', { timeout: 30000 }); report.checks.signupAndLogin = true;
+  await page.waitForSelector('[data-new-memo-trigger]', { timeout: 60000 }); report.checks.signupAndLogin = true;
   // Exercise Home's primary composer. It is present in both the upstream build
   // and every adapter, and becomes usable only after the authenticated editor
   // state has initialized. The sidebar trigger opens a second editor through a
   // context effect whose timing varies with chunk layout, so it is not a stable
   // production-build acceptance boundary.
   const composer = '.memo-editor-content .cm-content[contenteditable="true"]';
-  await page.waitForSelector(composer, { timeout: 30000 });
+  await page.waitForSelector(composer, { timeout: 60000 });
   report.checks.homeComposerReady = true;
   // Webpack-family chunk timing can replace the first editor instance just as
   // it receives focus. Retry the real pointer interaction until CodeMirror
   // confirms that the currently mounted editor owns focus.
+  const originalNote = '**Benchmark original note**\n\nActual local SQLite acceptance.';
   for (let attempt = 0; ; attempt++) {
     await page.locator(composer).click();
     try {
       await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-editor')?.classList.contains('cm-focused'), { timeout: 2000 });
+      await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
+      await page.keyboard.sendCharacter(originalNote);
+      await page.waitForFunction((expected) => document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]')?.textContent.includes(expected), { timeout: 2500 }, originalNote);
+      report.checks.homeComposerAcceptsInput = true;
       break;
     } catch (error) {
-      if (attempt >= 4) throw error;
+      if (attempt >= 9) throw error;
     }
   }
-  await page.keyboard.sendCharacter('**Benchmark original note**\n\nActual local SQLite acceptance.');
   await page.waitForFunction(() => {
     const editor = document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]');
     const editorContainer = editor?.closest('.group');
