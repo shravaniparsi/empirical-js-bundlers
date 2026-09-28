@@ -12,6 +12,7 @@ const packageJson = {
   version: '1.0.0',
   private: true,
   type: 'module',
+  packageManager: 'npm@11.9.0',
   engines: { node: '24.14.0' },
   scripts: {
     build: 'node adapter-build.mjs',

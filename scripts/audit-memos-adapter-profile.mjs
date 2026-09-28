@@ -16,6 +16,7 @@ const errors = [];
 const exact = (value) => typeof value === 'string' && /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(value);
 
 if (manifest.engines?.node !== '24.14.0') errors.push('Node engine must be exactly 24.14.0');
+if (manifest.packageManager !== 'npm@11.9.0') errors.push('Package manager must be exactly npm 11.9.0');
 for (const [section, expected] of [['dependencies', application], ['devDependencies', tools]]) {
   if (JSON.stringify(manifest[section]) !== JSON.stringify(Object.fromEntries(Object.entries(expected).sort()))) {
     errors.push(`${section} does not match its generated source registry`);

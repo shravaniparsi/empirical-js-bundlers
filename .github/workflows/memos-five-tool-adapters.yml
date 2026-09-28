@@ -55,10 +55,13 @@ jobs:
           sha256sum adapter-workspace/package-lock.json > adapter-evidence/package-lock.sha256
       - name: Install exact shared dependency closure
         working-directory: adapter-workspace
-        run: npm ci --include=dev --no-audit --no-fund | tee ../adapter-evidence/npm-ci.log
+        run: |
+          set -o pipefail
+          npx --yes npm@11.9.0 ci --include=dev --no-audit --no-fund 2>&1 | tee ../adapter-evidence/npm-ci.log
       - name: Verify patch and build native adapter
         working-directory: adapter-workspace
         run: |
+          set -o pipefail
           npm run verify | tee ../adapter-evidence/profile-verification.log
           npm run build | tee ../adapter-evidence/build.log
       - name: Validate output contract
