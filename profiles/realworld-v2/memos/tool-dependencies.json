@@ -13,6 +13,7 @@
   "@rspack/cli": "2.2.3",
   "@rspack/core": "2.2.3",
   "@tailwindcss/postcss": "4.2.4",
+  "@types/leaflet": "1.9.22",
   "@types/node": "24.12.2",
   "@types/react": "19.2.14",
   "@types/react-dom": "19.2.3",
