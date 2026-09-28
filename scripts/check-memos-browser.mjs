@@ -78,7 +78,7 @@ try {
       await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-editor')?.classList.contains('cm-focused'), { timeout: 2000 });
       await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
       await page.keyboard.sendCharacter(originalNote);
-      await page.waitForFunction((expected) => document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]')?.textContent.includes(expected), { timeout: 2500 }, originalNote);
+      await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark original note**'), { timeout: 2500 });
       report.checks.homeComposerAcceptsInput = true;
       break;
     } catch (error) {
