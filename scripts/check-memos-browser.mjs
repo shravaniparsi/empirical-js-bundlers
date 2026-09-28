@@ -68,7 +68,18 @@ try {
   const composer = '.memo-editor-content .cm-content[contenteditable="true"]';
   await page.waitForSelector(composer, { timeout: 30000 });
   report.checks.homeComposerReady = true;
-  await page.locator(composer).click();
+  // Webpack-family chunk timing can replace the first editor instance just as
+  // it receives focus. Retry the real pointer interaction until CodeMirror
+  // confirms that the currently mounted editor owns focus.
+  for (let attempt = 0; ; attempt++) {
+    await page.locator(composer).click();
+    try {
+      await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-editor')?.classList.contains('cm-focused'), { timeout: 2000 });
+      break;
+    } catch (error) {
+      if (attempt >= 4) throw error;
+    }
+  }
   await page.keyboard.sendCharacter('**Benchmark original note**\n\nActual local SQLite acceptance.');
   await page.waitForFunction(() => {
     const editor = document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]');

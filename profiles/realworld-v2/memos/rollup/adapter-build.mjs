@@ -3,6 +3,7 @@ import fsp from 'node:fs/promises';
 import path from 'node:path';
 import alias from '@rollup/plugin-alias';
 import commonjs from '@rollup/plugin-commonjs';
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 import json from '@rollup/plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
@@ -86,6 +87,7 @@ const bundle = await rollup({
     }),
     applicationTransform,
     applicationCss,
+    dynamicImportVars(),
     nodeResolve({ browser: true, extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.tsx', '.jsx'] }),
     commonjs(),
     json(),
