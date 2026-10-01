@@ -23,7 +23,7 @@ module.exports = {
   // Memos loads locale and query-devtools chunks during bootstrap. Rspack's
   // serve-mode lazy proxies can race their first hot-update request against
   // history fallback, which returns HTML for the pending JavaScript asset.
-  experiments: { ...(base.experiments || {}), lazyCompilation: false },
+  lazyCompilation: false,
   optimization: { minimize: false },
   devServer: { hot: true, historyApiFallback: true, client: { overlay: { errors: true, warnings: false } }, proxy: [{ context: ['/api', '/memos.api', '/file'], target: backend }] },
 };
