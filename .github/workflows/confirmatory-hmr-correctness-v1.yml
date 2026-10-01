@@ -8,13 +8,20 @@ on:
         default: all
         type: choice
         options: [all, synthetic, bulletproof]
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/development-v1/**'
+      - 'scripts/prepare-development-profile.mjs'
+      - 'scripts/check-bulletproof-hmr.mjs'
+      - '.github/workflows/confirmatory-hmr-correctness-v1.yml'
 permissions:
   contents: read
 env:
   PUPPETEER_SKIP_DOWNLOAD: 'true'
 jobs:
   synthetic:
-    if: github.event.repository.private == false && (inputs.suite == 'all' || inputs.suite == 'synthetic')
+    if: github.event.repository.private == false && (github.event_name == 'push' || inputs.suite == 'all' || inputs.suite == 'synthetic')
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
@@ -56,7 +63,7 @@ jobs:
           retention-days: 30
 
   bulletproof:
-    if: github.event.repository.private == false && (inputs.suite == 'all' || inputs.suite == 'bulletproof')
+    if: github.event.repository.private == false && (github.event_name == 'push' || inputs.suite == 'all' || inputs.suite == 'bulletproof')
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     strategy:
