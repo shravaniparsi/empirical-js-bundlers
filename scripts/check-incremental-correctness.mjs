@@ -76,6 +76,17 @@ const report = {
 function outputHas(marker) {
   const output = path.join(workspace, 'dist');
   if (!fs.existsSync(output)) return false;
+  const currentFilesManifest = path.join(output, '.benchmark-current-files.json');
+  if (fs.existsSync(currentFilesManifest)) {
+    const currentFiles = JSON.parse(fs.readFileSync(currentFilesManifest, 'utf8'));
+    if (!Array.isArray(currentFiles) || currentFiles.some((filename) => typeof filename !== 'string')) {
+      throw new Error('Invalid current-output manifest');
+    }
+    return currentFiles.some((filename) => {
+      const resolved = path.resolve(output, filename);
+      return resolved.startsWith(`${output}${path.sep}`) && fs.existsSync(resolved) && fs.readFileSync(resolved, 'utf8').includes(marker);
+    });
+  }
   const html = path.join(output, 'index.html');
   if (fs.existsSync(html)) {
     const source = fs.readFileSync(html, 'utf8');

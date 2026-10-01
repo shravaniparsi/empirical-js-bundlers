@@ -20,6 +20,7 @@ const build = (initial = false) => {
   buildNumber += 1;
   const entry = 'main-' + buildNumber + '.js';
   fs.writeFileSync('dist/' + entry, fs.readFileSync('src/App.tsx'));
+  fs.writeFileSync('dist/.benchmark-current-files.json', JSON.stringify([entry]));
   fs.writeFileSync('dist/index.html', '<script type="module" src="/' + entry + '"></script>');
   console.log(initial ? 'esbuild: initial build finished (0 errors)' : 'esbuild: build finished (0 errors)');
 };

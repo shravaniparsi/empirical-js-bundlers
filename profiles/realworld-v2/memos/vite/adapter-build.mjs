@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import path from 'node:path';
 import { build } from 'vite';
 import postcss from 'postcss';
@@ -6,6 +7,13 @@ import postcssConfig from './postcss.config.cjs';
 
 const applicationPattern = /[/\\]src[/\\].*\.[cm]?[jt]sx?$/;
 const watchMode = process.argv.includes('--watch');
+const currentOutputPlugin = {
+  name: 'benchmark-current-output-manifest',
+  writeBundle(_options, bundle) {
+    const files = Object.keys(bundle).filter((filename) => /\.(?:m?js|cjs)$/.test(filename)).sort();
+    fs.writeFileSync('dist/.benchmark-current-files.json', `${JSON.stringify(files)}\n`);
+  },
+};
 await build({
   configFile: false,
   root: process.cwd(),
@@ -25,7 +33,7 @@ await build({
       }
       return null;
     },
-  }],
+  }, ...(watchMode ? [currentOutputPlugin] : [])],
   build: {
     target: 'chrome107',
     outDir: 'dist',

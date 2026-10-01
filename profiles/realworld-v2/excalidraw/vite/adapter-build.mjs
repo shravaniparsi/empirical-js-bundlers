@@ -5,6 +5,13 @@ const require = createRequire(import.meta.url);
 const { orderedAliases } = require('./aliases.cjs');
 const { definitions } = require('./environment.cjs');
 const watchMode = process.argv.includes('--watch');
+const currentOutputPlugin = {
+  name: 'benchmark-current-output-manifest',
+  writeBundle(_options, bundle) {
+    const files = Object.keys(bundle).filter((filename) => /\.(?:m?js|cjs)$/.test(filename)).sort();
+    fs.writeFileSync('dist/.benchmark-current-files.json', `${JSON.stringify(files)}\n`);
+  },
+};
 const indexPlugin = {
   name: 'benchmark-index-name',
   writeBundle() {
@@ -20,7 +27,7 @@ await build({
   publicDir: 'public',
   define: definitions(),
   resolve: { alias: orderedAliases() },
-  plugins: [indexPlugin],
+  plugins: [indexPlugin, ...(watchMode ? [currentOutputPlugin] : [])],
   build: {
     target: 'chrome107',
     outDir: 'dist',
