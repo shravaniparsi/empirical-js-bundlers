@@ -56,6 +56,28 @@ const report = {
 function outputHas(marker) {
   const output = path.join(workspace, 'dist');
   if (!fs.existsSync(output)) return false;
+  const html = path.join(output, 'index.html');
+  if (fs.existsSync(html)) {
+    const source = fs.readFileSync(html, 'utf8');
+    const roots = [...source.matchAll(/<script\b[^>]*\bsrc=["']([^"']+\.(?:m?js|cjs))(?:\?[^"']*)?["']/gi)]
+      .map(match => match[1]);
+    if (roots.length) {
+      const queue = roots.map(specifier => path.resolve(output, specifier.replace(/^\//, '')));
+      const visited = new Set();
+      while (queue.length) {
+        const filename = queue.pop();
+        if (visited.has(filename) || !filename.startsWith(`${output}${path.sep}`) || !fs.existsSync(filename)) continue;
+        visited.add(filename);
+        const javascript = fs.readFileSync(filename, 'utf8');
+        if (javascript.includes(marker)) return true;
+        for (const match of javascript.matchAll(/(?:from\s*|import\s*\()\s*["']([^"']+\.(?:m?js|cjs))(?:\?[^"']*)?["']/g)) {
+          const specifier = match[1];
+          queue.push(specifier.startsWith('/') ? path.resolve(output, specifier.slice(1)) : path.resolve(path.dirname(filename), specifier));
+        }
+      }
+      return false;
+    }
+  }
   const pending = [output];
   while (pending.length) {
     const current = pending.pop();

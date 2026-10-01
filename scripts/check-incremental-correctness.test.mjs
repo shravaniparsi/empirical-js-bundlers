@@ -15,8 +15,12 @@ try {
   writeFileSync(path.join(workspace, 'configs/esbuild/watch.mjs'), `
 import fs from 'node:fs';
 fs.mkdirSync('dist', { recursive: true });
+let buildNumber = 0;
 const build = (initial = false) => {
-  fs.writeFileSync('dist/main.js', fs.readFileSync('src/App.tsx'));
+  buildNumber += 1;
+  const entry = 'main-' + buildNumber + '.js';
+  fs.writeFileSync('dist/' + entry, fs.readFileSync('src/App.tsx'));
+  fs.writeFileSync('dist/index.html', '<script type="module" src="/' + entry + '"></script>');
   console.log(initial ? 'esbuild: initial build finished (0 errors)' : 'esbuild: build finished (0 errors)');
 };
 build(true);
