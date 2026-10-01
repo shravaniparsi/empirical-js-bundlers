@@ -20,6 +20,10 @@ module.exports = {
     new rspack.DefinePlugin({ 'import.meta.env.DEV': 'true', 'import.meta.env.PROD': 'false', 'import.meta.env.MODE': JSON.stringify('development') }),
     new ReactRefreshPlugin(),
   ],
+  // Memos loads locale and query-devtools chunks during bootstrap. Rspack's
+  // serve-mode lazy proxies can race their first hot-update request against
+  // history fallback, which returns HTML for the pending JavaScript asset.
+  experiments: { ...(base.experiments || {}), lazyCompilation: false },
   optimization: { minimize: false },
   devServer: { hot: true, historyApiFallback: true, client: { overlay: { errors: true, warnings: false } }, proxy: [{ context: ['/api', '/memos.api', '/file'], target: backend }] },
 };
