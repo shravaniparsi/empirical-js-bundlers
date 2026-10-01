@@ -46,6 +46,26 @@ setInterval(() => {}, 1000);
   assert.equal(report.checks.sourceRestored, true);
   assert.equal(report.checks.processTreeStopped, true);
   assert.doesNotMatch(reportText, /durationMs|completedNs|startedNs|completionLine/);
+
+  const realworldCases = [
+    ['memos', '<div className="mt-4 flex items-start gap-2 rounded-lg border border-border bg-accent/50 px-3 py-2 text-[13px] leading-relaxed text-muted-foreground" />\n'],
+    ['excalidraw', '<button data-testid="main-menu-trigger" />\n'],
+  ];
+  for (const [editMode, source] of realworldCases) {
+    writeFileSync(path.join(workspace, 'src/App.tsx'), source);
+    const modeReportPath = path.join(workspace, 'evidence', `${editMode}.json`);
+    const modeRun = spawnSync(process.execPath, [path.join(root, 'scripts/check-incremental-correctness.mjs'), 'esbuild', workspace, modeReportPath, 'src/App.tsx', editMode], {
+      cwd: root,
+      encoding: 'utf8',
+      timeout: 30_000,
+    });
+    assert.equal(modeRun.status, 0, `${modeRun.stdout}\n${modeRun.stderr}`);
+    const modeReport = JSON.parse(readFileSync(modeReportPath, 'utf8'));
+    assert.equal(modeReport.passed, true);
+    assert.equal(modeReport.editMode, editMode);
+    assert.equal(modeReport.edits.length, 3);
+    assert.equal(modeReport.checks.sourceRestored, true);
+  }
 } finally {
   rmSync(workspace, { recursive: true, force: true });
 }

@@ -6,9 +6,9 @@ import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { IncrementalCompletionGate, incrementalCompletionPatterns } from './incremental-completion-gate.mjs';
 
-const [tool, workspaceArg, reportArg, targetArg = 'src/App.tsx'] = process.argv.slice(2);
-if (!Object.hasOwn(incrementalCompletionPatterns, tool) || !workspaceArg || !reportArg) {
-  throw new Error('Usage: check-incremental-correctness.mjs <vite|rspack|esbuild|webpack|rollup> <workspace> <NEW-report.json> [target-relative]');
+const [tool, workspaceArg, reportArg, targetArg = 'src/App.tsx', editMode = 'append'] = process.argv.slice(2);
+if (!Object.hasOwn(incrementalCompletionPatterns, tool) || !workspaceArg || !reportArg || !['append', 'memos', 'excalidraw'].includes(editMode)) {
+  throw new Error('Usage: check-incremental-correctness.mjs <vite|rspack|esbuild|webpack|rollup> <workspace> <NEW-report.json> [target-relative] [append|memos|excalidraw]');
 }
 const workspace = fs.realpathSync(workspaceArg);
 const reportPath = path.resolve(reportArg);
@@ -17,6 +17,23 @@ fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 const target = path.resolve(workspace, targetArg);
 if (!target.startsWith(`${workspace}${path.sep}`) || !fs.existsSync(target)) throw new Error('Target must be an existing file inside the workspace');
 const original = fs.readFileSync(target);
+const originalText = original.toString('utf8');
+const realworldAnchors = {
+  memos: 'className="mt-4 flex items-start gap-2 rounded-lg border border-border bg-accent/50 px-3 py-2 text-[13px] leading-relaxed text-muted-foreground"',
+  excalidraw: 'data-testid="main-menu-trigger"',
+};
+if (editMode !== 'append' && originalText.split(realworldAnchors[editMode]).length !== 2) {
+  throw new Error(`Expected one reviewed ${editMode} edit anchor in ${targetArg}`);
+}
+function editedSource(marker) {
+  if (editMode === 'memos') {
+    return Buffer.from(originalText.replace(realworldAnchors.memos, realworldAnchors.memos.replace('mt-4 ', `mt-4 ${marker} `)));
+  }
+  if (editMode === 'excalidraw') {
+    return Buffer.from(originalText.replace(realworldAnchors.excalidraw, `${realworldAnchors.excalidraw} data-benchmark-marker="${marker}"`));
+  }
+  return Buffer.concat([original, Buffer.from(`\n;globalThis[${JSON.stringify(`__${marker}`)}] = ${JSON.stringify(marker)};\n`)]);
+}
 const hash = value => createHash('sha256').update(value).digest('hex');
 const originalHash = hash(original);
 const logPath = reportPath.replace(/\.json$/, '.log');
@@ -46,6 +63,7 @@ const report = {
   tool,
   node: process.version,
   target: targetArg,
+  editMode,
   targetSha256Before: originalHash,
   lockSha256: fs.existsSync(path.join(workspace, 'package-lock.json')) ? hash(fs.readFileSync(path.join(workspace, 'package-lock.json'))) : null,
   command: [path.basename(command), ...args],
@@ -162,7 +180,7 @@ try {
   for (let edit = 1; edit <= 3; edit += 1) {
     const marker = `confirmatory_m3_correctness_${tool}_${edit}`;
     if (original.includes(marker) || outputHas(marker)) throw new Error(`marker ${marker} existed before edit`);
-    const modified = Buffer.concat([original, Buffer.from(`\n;globalThis[${JSON.stringify(`__${marker}`)}] = ${JSON.stringify(marker)};\n`)]);
+    const modified = editedSource(marker);
     const probe = gate.arm({ marker, markerPresent: outputHas, timeoutMs: 120_000 });
     fs.writeFileSync(target, modified);
     const completion = await probe.promise;
