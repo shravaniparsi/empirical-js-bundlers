@@ -7,7 +7,7 @@ data.
 
 The nine previously missing cells passed in [GitHub Actions run
 36829908004](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829908004)
-at commit `694e05458cfebc387d831444bd6b2b6aa72a460c`. Vite, Rspack, and
+at commit `694e054ab2093398ac7f0d468fd118765986daab`. Vite, Rspack, and
 Webpack each passed `xs-50`, `m-500`, and Bulletproof React. Every cell
 performed three settled edits, preserved the browser document and application
 state, detected an intentional reload, restored the edited source byte for
