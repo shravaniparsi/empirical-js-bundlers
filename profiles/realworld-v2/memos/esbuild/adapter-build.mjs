@@ -50,8 +50,30 @@ const applicationPlugin = {
   },
 };
 
+const watchMode = process.argv.includes('--watch');
+const finalize = (result) => {
+  const entry = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'src/main.tsx')?.[0];
+  if (!entry) throw new Error('esbuild did not report the Memos entry output');
+  copyPublic();
+  writeHtml(`/${entry.replace(/^dist\//, '')}`);
+  fs.writeFileSync('dist/metafile.json', `${JSON.stringify(result.metafile, null, 2)}\n`);
+};
+const completionPlugin = {
+  name: 'memos-watch-completion',
+  setup(build) {
+    build.onEnd((result) => {
+      if (result.errors.length) {
+        console.error(`esbuild: build finished (${result.errors.length} errors)`);
+        return;
+      }
+      finalize(result);
+      console.log('esbuild: build finished (0 errors)');
+    });
+  },
+};
+
 resetDist();
-const result = await esbuild.build({
+const buildOptions = {
   entryPoints: ['src/main.tsx'],
   outdir: 'dist/assets',
   entryNames: '[name]-[hash]',
@@ -75,10 +97,11 @@ const result = await esbuild.build({
     '.png': 'file', '.jpg': 'file', '.jpeg': 'file', '.gif': 'file', '.webp': 'file',
     '.svg': 'file', '.woff': 'file', '.woff2': 'file', '.ttf': 'file', '.eot': 'file',
   },
-  plugins: [queryPlugin, applicationPlugin],
-});
-const entry = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'src/main.tsx')?.[0];
-if (!entry) throw new Error('esbuild did not report the Memos entry output');
-copyPublic();
-writeHtml(`/${entry.replace(/^dist\//, '')}`);
-fs.writeFileSync('dist/metafile.json', `${JSON.stringify(result.metafile, null, 2)}\n`);
+  plugins: [queryPlugin, applicationPlugin, ...(watchMode ? [completionPlugin] : [])],
+};
+if (watchMode) {
+  const context = await esbuild.context(buildOptions);
+  await context.watch();
+} else {
+  finalize(await esbuild.build(buildOptions));
+}

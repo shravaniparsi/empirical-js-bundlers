@@ -5,6 +5,7 @@ import { transformApplication } from './transform.mjs';
 import postcssConfig from './postcss.config.cjs';
 
 const applicationPattern = /[/\\]src[/\\].*\.[cm]?[jt]sx?$/;
+const watchMode = process.argv.includes('--watch');
 await build({
   configFile: false,
   root: process.cwd(),
@@ -33,5 +34,6 @@ await build({
     minify: 'oxc',
     cssMinify: 'lightningcss',
     assetsInlineLimit: 0,
+    ...(watchMode ? { watch: {} } : {}),
   },
 });

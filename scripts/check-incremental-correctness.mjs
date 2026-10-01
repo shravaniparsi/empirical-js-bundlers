@@ -22,12 +22,14 @@ const originalHash = hash(original);
 const logPath = reportPath.replace(/\.json$/, '.log');
 const log = fs.createWriteStream(logPath, { flags: 'wx' });
 const bin = name => path.join(workspace, 'node_modules', '.bin', name);
+const adapterBuild = path.join(workspace, 'adapter-build.mjs');
+const usesRealworldAdapter = fs.existsSync(adapterBuild) && fs.existsSync(path.join(workspace, 'benchmark-profile.json'));
 const commands = {
-  vite: [bin('vite'), ['build', '--watch', '--mode', 'development', '--minify', 'false']],
+  vite: usesRealworldAdapter ? [process.execPath, ['adapter-build.mjs', '--watch']] : [bin('vite'), ['build', '--watch', '--mode', 'development', '--minify', 'false']],
   rspack: [bin('rspack'), ['build', '--watch', '--config', 'rspack.config.cjs']],
-  esbuild: [process.execPath, ['configs/esbuild/watch.mjs']],
+  esbuild: usesRealworldAdapter ? [process.execPath, ['adapter-build.mjs', '--watch']] : [process.execPath, ['configs/esbuild/watch.mjs']],
   webpack: [bin('webpack'), ['--watch', '--config', 'webpack.config.cjs']],
-  rollup: [bin('rollup'), ['-c', 'rollup.config.mjs', '-w']],
+  rollup: usesRealworldAdapter ? [process.execPath, ['adapter-build.mjs', '--watch']] : [bin('rollup'), ['-c', 'rollup.config.mjs', '-w']],
 };
 const initialPatterns = {
   vite: /built in/i,

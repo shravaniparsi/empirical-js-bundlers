@@ -29,8 +29,33 @@ const sassPlugin = {
   },
 };
 
+const watchMode = process.argv.includes('--watch');
+const finalize = async (result) => {
+  const entryRecord = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'excalidraw-app/index.tsx');
+  if (!entryRecord) throw new Error('esbuild did not report the Excalidraw entry output');
+  const [entry, entryMetadata] = entryRecord;
+  const stylesheet = entryMetadata.cssBundle;
+  if (!stylesheet) throw new Error('esbuild did not report the Excalidraw CSS bundle');
+  copyStatic();
+  writeHtml(`/${entry.replace(/^dist\//, '')}`, `/${stylesheet.replace(/^dist\//, '')}`);
+  await fsp.writeFile('dist/metafile.json', `${JSON.stringify(result.metafile, null, 2)}\n`);
+};
+const completionPlugin = {
+  name: 'excalidraw-watch-completion',
+  setup(build) {
+    build.onEnd(async (result) => {
+      if (result.errors.length) {
+        console.error(`esbuild: build finished (${result.errors.length} errors)`);
+        return;
+      }
+      await finalize(result);
+      console.log('esbuild: build finished (0 errors)');
+    });
+  },
+};
+
 resetDist();
-const result = await esbuild.build({
+const buildOptions = {
   entryPoints: ['excalidraw-app/index.tsx'],
   outdir: 'dist/assets',
   entryNames: '[name]-[hash]',
@@ -52,13 +77,11 @@ const result = await esbuild.build({
     '.png': 'file', '.jpg': 'file', '.jpeg': 'file', '.gif': 'file', '.webp': 'file',
     '.svg': 'file', '.woff': 'file', '.woff2': 'file', '.ttf': 'file', '.eot': 'file', '.excalidrawlib': 'file',
   },
-  plugins: [aliasPlugin, sassPlugin],
-});
-const entryRecord = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'excalidraw-app/index.tsx');
-if (!entryRecord) throw new Error('esbuild did not report the Excalidraw entry output');
-const [entry, entryMetadata] = entryRecord;
-const stylesheet = entryMetadata.cssBundle;
-if (!stylesheet) throw new Error('esbuild did not report the Excalidraw CSS bundle');
-copyStatic();
-writeHtml(`/${entry.replace(/^dist\//, '')}`, `/${stylesheet.replace(/^dist\//, '')}`);
-await fsp.writeFile('dist/metafile.json', `${JSON.stringify(result.metafile, null, 2)}\n`);
+  plugins: [aliasPlugin, sassPlugin, ...(watchMode ? [completionPlugin] : [])],
+};
+if (watchMode) {
+  const context = await esbuild.context(buildOptions);
+  await context.watch();
+} else {
+  await finalize(await esbuild.build(buildOptions));
+}

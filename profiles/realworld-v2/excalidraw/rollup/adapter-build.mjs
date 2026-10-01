@@ -8,7 +8,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import terser from '@rollup/plugin-terser';
 import url from '@rollup/plugin-url';
-import { rollup } from 'rollup';
+import { rollup, watch } from 'rollup';
 import postcss from 'rollup-plugin-postcss';
 import { copyStatic, htmlWithEntry, resetDist } from './build-helpers.mjs';
 import { transformApplication } from './transform.mjs';
@@ -34,8 +34,8 @@ const htmlPlugin = {
   },
 };
 
-resetDist();
-const bundle = await rollup({
+const watchMode = process.argv.includes('--watch');
+const inputOptions = {
   input: 'excalidraw-app/index.tsx',
   onwarn(warning, warn) {
     if (!['MODULE_LEVEL_DIRECTIVE', 'CIRCULAR_DEPENDENCY'].includes(warning.code)) warn(warning);
@@ -57,15 +57,36 @@ const bundle = await rollup({
     terser({ format: { comments: false } }),
     htmlPlugin,
   ],
-});
-await bundle.write({
+};
+const outputOptions = {
   dir: 'dist',
   format: 'es',
   sourcemap: true,
   entryFileNames: 'assets/[name]-[hash].js',
   chunkFileNames: 'assets/[name]-[hash].js',
   assetFileNames: 'assets/[name]-[hash][extname]',
-});
-await bundle.close();
-copyStatic();
-fs.writeFileSync('dist/rollup-build.json', `${JSON.stringify({ publicationEligible: false, tool: 'rollup' }, null, 2)}\n`);
+};
+const finalize = () => {
+  copyStatic();
+  fs.writeFileSync('dist/rollup-build.json', `${JSON.stringify({ publicationEligible: false, tool: 'rollup' }, null, 2)}\n`);
+};
+
+resetDist();
+if (watchMode) {
+  let pendingClose = Promise.resolve();
+  const watcher = watch({ ...inputOptions, output: outputOptions, watch: { clearScreen: false } });
+  watcher.on('event', (event) => {
+    if (event.code === 'BUNDLE_END') pendingClose = event.result.close();
+    else if (event.code === 'END') {
+      pendingClose.then(() => {
+        finalize();
+        console.log('created dist in watch rebuild');
+      }).catch((error) => console.error(`[!] Error: ${error.message}`));
+    } else if (event.code === 'ERROR') console.error(`[!] Error: ${event.error.message}`);
+  });
+} else {
+  const bundle = await rollup(inputOptions);
+  await bundle.write(outputOptions);
+  await bundle.close();
+  finalize();
+}
