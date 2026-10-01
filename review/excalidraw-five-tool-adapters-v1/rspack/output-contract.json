@@ -1,0 +1,899 @@
+{
+  "kind": "excalidraw-five-tool-adapter-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "assets/1112.ff304bca.js",
+      "sha256": "2ded0308ee5f2de3643ebce249ace1f2386c07b88e1e7f55c8862cb91d48e526",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1345.e8b64aeb.js",
+      "sha256": "97253afb8f1c49140db6f0ec1b642e199a9494c3a612cbc21e4339bdbbd4ff92",
+      "mappedSegments": 9137,
+      "projectSources": [],
+      "mapSha256": "78d2203c357317e535ba4ade3d0e12b85851d027fc2000e454b197fe79802c0d"
+    },
+    {
+      "file": "assets/1370.8c30eb49.js",
+      "sha256": "e4142b23a2c701e0a8d098092d2188295ddb20834926b1b900c4bdde718baab5",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1387.7976e7e1.js",
+      "sha256": "1d25f8a7d7e855161e3ffd154cf8fa632e81f9b5b28ca755dbf049914b94ecae",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1413.37dba235.js",
+      "sha256": "6853cf1d5756ef0747bf744440b7b9c0dcc44084756f9adda3cba380d6fcf132",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1501.052871c2.js",
+      "sha256": "eac388767dd8189456ffdda2d0447e4bdaaa9bda2478a1c65f8a84a4dd552c60",
+      "mappedSegments": 20196,
+      "projectSources": [],
+      "mapSha256": "2a1e23726ffaa93aaa4c9f459e18908d34c7a55f40dc35baab34b407d42f6cca"
+    },
+    {
+      "file": "assets/1537.b7f55e1f.js",
+      "sha256": "411457a67e76bad719e00bdf46324ca05101ebb16b3819a27bc3105bd7f1f816",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1598.1fd22562.js",
+      "sha256": "4a810c227cfd9ed397a4db0b530027eced44aea57a78f46d8e7620514cf1733b",
+      "mappedSegments": 410525,
+      "projectSources": [],
+      "mapSha256": "05298e85c1a0e5443f2f8f4695ed9fdfcce0b006e1b7c019abe462dfa50b3717"
+    },
+    {
+      "file": "assets/1630.b8932169.js",
+      "sha256": "63dfa141efa0f54ca782cc8a444410aae477e25ce2c205359874e6e865e2ee25",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1721.21fed9c5.js",
+      "sha256": "3f9b4fe94d46cf89be12874d1829ffd4b0a4cfb4871f97456f45ae5602548c3a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1734.e3360770.js",
+      "sha256": "130d76ab9c46e9ef6d75b85141be7d5df9b172b112ed0eba8b5c93d5d13d0203",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1741.92634d04.js",
+      "sha256": "7676223046b060943a2c206ad3a111e8eb069909a6c868376368c764d6b57a45",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1757.1cb07e35.js",
+      "sha256": "b0a05ba2dd2107f1978e735d5dcc3bd94494beadaa6563e9dc13de678ec59942",
+      "mappedSegments": 7894,
+      "projectSources": [],
+      "mapSha256": "f11b5b5c7027197155bfe5ca05d54a5dac1d7991551b74265f2b7b4b66f25237"
+    },
+    {
+      "file": "assets/1759.5aabd6ef.js",
+      "sha256": "14a9dfa505403d3d8202f874b970b1d6437bb21f6103ff8b45b95febe200590c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1767.e8f5e523.js",
+      "sha256": "ce1dcc1ac444bcedef475bcc46f543cb897e19671f6d0de57bf9eb5fe4b6b6a9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1794.e697e9a2.js",
+      "sha256": "4167dd0552466dea4bf839c3218b03885e983a1d0aa97744679fc0ad070223f5",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1811.5b36c1c1.js",
+      "sha256": "d63763173ef68c4cd2a5c2a9d7c2ba78df3025e69efc9e9b5056459aa85c3584",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/182.192509b7.js",
+      "sha256": "271eec24b54d9f7c074b58dbf322cfbd92fb70e39ff811f053a2a42168791b63",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/1850.b630ace6.js",
+      "sha256": "a8cac13719a600ca05f8c4eeefdabc818b17e17c5763ff2cea94c450018225ec",
+      "mappedSegments": 5207,
+      "projectSources": [],
+      "mapSha256": "08218538e400584335c1971bd1a7a92e5ffff32d4f92b9ca7abb22eecbd06208"
+    },
+    {
+      "file": "assets/1865.b90bfbf6.js",
+      "sha256": "5de7876bee6c402fe13efe0674a5341bead620987d1efa232427b51adc603430",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/188.d2d99786.js",
+      "sha256": "6226eee8895192c9d714ada4beb4ae38ee25cccd55791f8cc6053f4a16a73aa9",
+      "mappedSegments": 958,
+      "projectSources": [],
+      "mapSha256": "14b7b2da410c72a751c11f1e7db7b5a5aad207f55bf6c8d46d74ce85c243abca"
+    },
+    {
+      "file": "assets/1984.470e1f6b.js",
+      "sha256": "25715f71ba8acb95bc1204f7ddcb8b8a04f2581e8a2c23c2f4d647fe6a2f036e",
+      "mappedSegments": 15950,
+      "projectSources": [],
+      "mapSha256": "9400f47f2b285d2ceb492b1876a5ddde31965cf39a0786680f7ef8857f10eeb7"
+    },
+    {
+      "file": "assets/2004.af01ea85.js",
+      "sha256": "3a94cf4b25d8f0cbf3fd0e772cfa46cb5af81d734711c3715f7f625e08029398",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2064.c7810c80.js",
+      "sha256": "bc6a641e0652fa1da2b538b98e6314b782d8d52cb5fe4534b8928fe8a0fc2745",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2147.c4699ef7.js",
+      "sha256": "0fb5b8d617d921a6f350b05932336ed128b851b43bd030cfbe304bde575ce309",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2257.21762503.js",
+      "sha256": "cc537fae2775bcd46d45a32ff545c0031685a334c554ca55ee4a0a0a81fbabe4",
+      "mappedSegments": 6393,
+      "projectSources": [],
+      "mapSha256": "79b654a40ce094dabee9e2337f4c7754169403f368f5bd8c4d2b1b3987730ec5"
+    },
+    {
+      "file": "assets/2358.5b59e07d.js",
+      "sha256": "eec81dac487ddb1dc20bf7b736ea131d67a0abae25838b79a07e8550de29b3b8",
+      "mappedSegments": 2753,
+      "projectSources": [],
+      "mapSha256": "4c85dadcced47b2c4c8fd39e92a9f7b92f3aacf66ca124549f7e8959a1b6a3dd"
+    },
+    {
+      "file": "assets/2399.b3d3b1b5.js",
+      "sha256": "1e8c4d26c2d11eb0a37868738739b3e07cb7089768d59b60e36a9e22fd347553",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2466.76ca7821.js",
+      "sha256": "076faf78a3a7be079bf7ed1a70120de74c72629d6a7d139022a4c0fb10d3a5ef",
+      "mappedSegments": 39945,
+      "projectSources": [],
+      "mapSha256": "f770a9babc58ffb3228eb054c6bd9e14c025cd9ff9bcdd8462a473035065ec91"
+    },
+    {
+      "file": "assets/249.eaf6adba.js",
+      "sha256": "97c5769ef5a079a76bfc47a1e2da3a706bc726d1602ca8faee59a0312b56e133",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2507.ab5040db.js",
+      "sha256": "afad5b5950c387ace8120bb812a0243f6f2802728a9216d09ec27c99fc09c3e6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2661.d37c9542.js",
+      "sha256": "284eeaec3cea16ee5b6747d4ca2735431eaffc90e6f9b99f8887bfbdccb836ef",
+      "mappedSegments": 837,
+      "projectSources": [],
+      "mapSha256": "b20702649a786c8a845cc46440fd2b7b56550dc7d36b5b7b198a9535ff9d9634"
+    },
+    {
+      "file": "assets/2681.7130420b.js",
+      "sha256": "fc3b59f695d6945d54d43a2f1587fb8a463441f53aac51dba530e36acff6f8af",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2737.e9a19087.js",
+      "sha256": "5c955eda40b3d5af52119cf1cecc11fbce16d4e71b0c64c6b0f2071c53764559",
+      "mappedSegments": 3474,
+      "projectSources": [],
+      "mapSha256": "739157440352af56b7165c1cbe747391997f91c1a375dc3da797ccf0268b2e5b"
+    },
+    {
+      "file": "assets/283.429881bc.js",
+      "sha256": "84a52a0f8022281d0ae68692ab812c8fc136177524234a229a8c5d22492f86a1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2900.5ec565d1.js",
+      "sha256": "8cd7a4b06124d1e48641ae3825fe5ea491b82a94fa2647c6e59a228acef5ec57",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/2908.b19a30ca.js",
+      "sha256": "c0aea3eed0c030ee2e7dfd8602c565440f6323e9ecf59e3d6587d651cb2825de",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3305.365c7744.js",
+      "sha256": "3133a28cfcd4aa2348667fa257973c0a8c2db3efaa44fd80357040df43bce637",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/337.e915d071.js",
+      "sha256": "9cf368d7acb1e7dc53d70c6d317a7b82e225c28f3a109f74d6d4e2cce3f5521c",
+      "mappedSegments": 23314,
+      "projectSources": [],
+      "mapSha256": "ee09f9cd54a2eae3f42ca774f1c5e21ef440927f9b68611b268e30d5bb8a3077"
+    },
+    {
+      "file": "assets/3515.1b297ade.js",
+      "sha256": "4c58fd0b1e172305405373a4e383202932c19de638ccfa61f4c910e868c3c48c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3535.c57ce266.js",
+      "sha256": "e20e00d8e4301201549325808facd76b56035b512d21a8ab42db80ade36aafaf",
+      "mappedSegments": 60273,
+      "projectSources": [],
+      "mapSha256": "b01a3165cd6c2f8f730d5669258ddddc9b862da99cecaf6a3411d47f7b36ce54"
+    },
+    {
+      "file": "assets/3658.b0a71a9e.js",
+      "sha256": "bb8ba7790112a2a74a381ddc7b561f0cfd322b6935bfe0e43e05853216a4bf6e",
+      "mappedSegments": 456,
+      "projectSources": [],
+      "mapSha256": "a30bf26c1c1bfd844bb4fee274330936eff96803c4e848d74690b1a54e78e16b"
+    },
+    {
+      "file": "assets/3664.dc0677b9.js",
+      "sha256": "bbc0783b4826eab8774e893f305d6b043fdce77d8ec69365f0414b4f7816f79e",
+      "mappedSegments": 10332,
+      "projectSources": [],
+      "mapSha256": "1a8b8e06b8222b92e963c0653e44d74954266af7172ebe217c6862473ec3e6e3"
+    },
+    {
+      "file": "assets/3757.f797ae04.js",
+      "sha256": "52d4e91117cafa7dfe1dd4980407a178b3de4a436babd8de237a0f94c4837d36",
+      "mappedSegments": 2685,
+      "projectSources": [],
+      "mapSha256": "697e57ddc555d98b92ea84fe8380f03d7ea77218ba7265124c17bceac684884a"
+    },
+    {
+      "file": "assets/3889.10373cb9.js",
+      "sha256": "d4f3338c37ae1fa51f918319adcf23f66171f43258f116cdb31a2552309939ce",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3915.6b506d48.js",
+      "sha256": "6959d715cbecbbe301693b2074359ef7bb24dc122f1bbfd8f31a8cf41ed37518",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3929.43672c7c.js",
+      "sha256": "3b3e03388255d82c1114ce962a0f2d607ad05fc369fd8c298eb6a58e2cc420ae",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/3935.0d97a223.js",
+      "sha256": "9b1962d193d326ed1da4a6cb954ffc7e659a594df2c74bffc058183dd1d48fae",
+      "mappedSegments": 43,
+      "projectSources": [],
+      "mapSha256": "42dc053af9742e878af6f139936d833d4fbf39c15e3dc7910d772b9fc4c1c58a"
+    },
+    {
+      "file": "assets/4044.dfffd547.js",
+      "sha256": "f18eb4138340b82b02509a6ce208f37f2072beac273f6636d101ee042d30469e",
+      "mappedSegments": 43,
+      "projectSources": [],
+      "mapSha256": "7ac74033dbe399579907062c8ea3c6d3c8c626e4420123fb148b32694660e8ae"
+    },
+    {
+      "file": "assets/4102.5dd95830.js",
+      "sha256": "ce7afacab9674265f07608cd42486312b9e9ee9fe38060ac972119ffb2cb2144",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4271.7e3bc591.js",
+      "sha256": "2ab261edcffab33dfa3357d5d2e33518482157484097592f156da4af16ee2171",
+      "mappedSegments": 11603,
+      "projectSources": [],
+      "mapSha256": "5e0d6e9dbddd95d5cf07e00288abe159128c51d2fcf40c86a30d6b3e4378f78f"
+    },
+    {
+      "file": "assets/4292.53fa0656.js",
+      "sha256": "b885e50d18b65aca67f50da5f37f6b76c4263d0b2cd932ec744ff5f94886c46f",
+      "mappedSegments": 6891,
+      "projectSources": [],
+      "mapSha256": "f4d1fbc70feede34d31a1eff0226377d344ce40cae4816e16c6586c054a64119"
+    },
+    {
+      "file": "assets/4467.e73e4a48.js",
+      "sha256": "3199ae5b45ec138a8cbffa6f033e224a33650f0e7ca3a7a01631fdc534133e26",
+      "mappedSegments": 11343,
+      "projectSources": [],
+      "mapSha256": "0de9c688a16e4de9841b6152023229270f2342b32438019cdd22079705d14f0c"
+    },
+    {
+      "file": "assets/4489.ef5a21fa.js",
+      "sha256": "94798194374f0eda1a6b3369a3d21094a422579150c331b8eca159acf4c9f08b",
+      "mappedSegments": 1564,
+      "projectSources": [],
+      "mapSha256": "0d20bc65f95afa596298933af0a0dcf94945f0125ac6c782539c6a9a6cdb8aa6"
+    },
+    {
+      "file": "assets/459.08099149.js",
+      "sha256": "0858123e8248a39aa3baea9e4f6d3fa7fb05f481c2caf54cf63ca3c29f3ce049",
+      "mappedSegments": 43,
+      "projectSources": [],
+      "mapSha256": "7fa45b6cbc645f5b577c39e2c2121c27731b7f63c0cbecbdca31362e7e84e628"
+    },
+    {
+      "file": "assets/4630.39636ff2.js",
+      "sha256": "ad9319de5916783726e96bfd9598d7e504866a7e19688a62d1b338aa640b64f5",
+      "mappedSegments": 60,
+      "projectSources": [],
+      "mapSha256": "200ecc076581fd3b36f6787d3b116e3f35b59ec5bf7ce3d3f5e80b3d5205a2db"
+    },
+    {
+      "file": "assets/4914.ffaac024.js",
+      "sha256": "e8268c7195191104b40feb37b27d5f7945862ec351b72609d96e2a63332a796e",
+      "mappedSegments": 101,
+      "projectSources": [],
+      "mapSha256": "e58d947e33c2160ed9a9b48a8558e3c80c638bcccbc29f9db450706e717d2d4c"
+    },
+    {
+      "file": "assets/4936.87fefbef.js",
+      "sha256": "7b0d53d224e175a5edf1cb6a122fe3494ee94a6189c22ff3a80cb559c62b756b",
+      "mappedSegments": 68002,
+      "projectSources": [],
+      "mapSha256": "6ad63f02b4adb5bfb50d0630ba21f5ff24619af68a495dc45db83a52a945a2d3"
+    },
+    {
+      "file": "assets/4950.11a71e39.js",
+      "sha256": "accadd83ee4b9fe8f1c71d416fab16f32cf8363ef63bbc36a1a9d39b39206e68",
+      "mappedSegments": 124054,
+      "projectSources": [],
+      "mapSha256": "98941e89d147d09af3f5f8d6d21d8700341af3c930c278627c07b175e9f8d25a"
+    },
+    {
+      "file": "assets/4990.035ea5dc.js",
+      "sha256": "96a568ed957d5aaaae789dc9f098f9125f64e8bbd36ce69222655ad08ab7e7f6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/4995.1cfaccc8.js",
+      "sha256": "5a5892072478d8b89bfe5eae30d533149696753380648d5e8658545f70b4964f",
+      "mappedSegments": 2638,
+      "projectSources": [],
+      "mapSha256": "c923d21e7e09b5ff76f51bbe7a13c70e3cbb625823fd6ffe10576db0de7db121"
+    },
+    {
+      "file": "assets/5009.6034e1fb.js",
+      "sha256": "02fe09966526ecbb33929729f9ff475cff95d0bbfe03d98e68447ecd7994c0c5",
+      "mappedSegments": 1038,
+      "projectSources": [],
+      "mapSha256": "0f0bcf8244c980338ffc1a6cc52ac5cc812ca6a1cb0dffda5d750bf26e11e944"
+    },
+    {
+      "file": "assets/5056.3d757c1a.js",
+      "sha256": "ec47dc44aa76cf64259b043c24ab2950c1f3e1f619dd90347c742cd242fd2f7f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5153.50c24dce.js",
+      "sha256": "cc6f6cda52dde105627076957e055e625f0c9f66baa23bafddd384c17c5b1213",
+      "mappedSegments": 21835,
+      "projectSources": [],
+      "mapSha256": "87e2e4262890045925fdb2c6da5af420c201e63a6ca2c5faa36c6bf77b0d29e2"
+    },
+    {
+      "file": "assets/5344.5b37bacf.js",
+      "sha256": "9448487c54bc76bad928895ad803c40f03751aacab8ef21f856919965a498ecb",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/5407.81b3a2e7.js",
+      "sha256": "b02fc2ac2966a645437a27e90135146e1665402be679630cd52201795c9f6255",
+      "mappedSegments": 36,
+      "projectSources": [],
+      "mapSha256": "c0748d159d859220d528ecc6571d0773f182f2cc49ac0169fa5809ee0274859e"
+    },
+    {
+      "file": "assets/560.dccfde44.js",
+      "sha256": "8cc70785f65855a3464dd9be124355b3dd566d066cc5f1351b3abc4606d18716",
+      "mappedSegments": 5642,
+      "projectSources": [],
+      "mapSha256": "319f9d272b4482cab1f815a3de65458dabb0c5559a927feb1708569990ed756d"
+    },
+    {
+      "file": "assets/5734.49d34ea6.js",
+      "sha256": "c48296eadfe37ebc3e09bff6f35de08a2ad1479c764a37515ba44e62196851c4",
+      "mappedSegments": 15337,
+      "projectSources": [],
+      "mapSha256": "bb60b01cd8f75d132e2f30b1b8a1958e58a31c0bc509f34a0c481e100a8e81be"
+    },
+    {
+      "file": "assets/5851.299c4fd6.js",
+      "sha256": "6adc066eefd3c4c42f048aa83f70b0ab72c9f54bad47480c0cf77aee45aa413a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6013.dd7c3389.js",
+      "sha256": "030a75f1768cb3c4f48ce136dae5185bd5fa54de78fc6e53d6847d722537df85",
+      "mappedSegments": 12309,
+      "projectSources": [],
+      "mapSha256": "4ac417a4dc4bc6f25f2fb51aacc2fa6e09b9a908bc5bc379510191e54a2109c7"
+    },
+    {
+      "file": "assets/6185.a172a641.js",
+      "sha256": "0b1df95e818ff42aba04b1a3c0510dd34e7e6e3e1684c5e81b28656a9c3ee35a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6219.214d60e0.js",
+      "sha256": "cfaf03a0f9b62a65226be4c55e6693586084304a3e8bec914b56bd29dba33c46",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/625.b3dc0eca.js",
+      "sha256": "6f58432ececc8fd267ab0572f69bad4f885e4a236ec80e60719f19d92c535e3a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6380.df158e4d.js",
+      "sha256": "b1fbefa1df53d22c9e06b672a2e0e3906499a08405ec8d5270a0c364172004c4",
+      "mappedSegments": 5675,
+      "projectSources": [],
+      "mapSha256": "680186c55d8d18c659f2f8793cd1db2d1b805cf3d38a99899793034009f3ebba"
+    },
+    {
+      "file": "assets/6717.b1920a8a.js",
+      "sha256": "03d2128d150fd851b0661d6ecf6d09e20f109254c0b9dd9b6f5f1800121353c6",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/6848.bcdc67ba.js",
+      "sha256": "a9302d01f021c8eb0bbfc7c998ab158ff114b86110740447abd5d61f39c8f673",
+      "mappedSegments": 88264,
+      "projectSources": [],
+      "mapSha256": "9a5badd2005965655b085d4de2c0876d9cf362f93acc2f69c035e80a651e2784"
+    },
+    {
+      "file": "assets/7039.d3277bc2.js",
+      "sha256": "ff993eab59cb4fd31bd20ff1065cbddd94a240b3bcb0e12e6f8f882f68825702",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7153.09cc910e.js",
+      "sha256": "3a91bd80d61522c95bd0788e1f7b864e961d8f5ef02c838b1e044cbb245f9323",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7198.7056ffa3.js",
+      "sha256": "dff7811a9d9ab526415627d3782649dd126c27d2fbc27213bb9f11d44bc0c973",
+      "mappedSegments": 826,
+      "projectSources": [],
+      "mapSha256": "b3967f30ddf8591c3f164ea80ee861e2d58816604f59f01e0b32c77222fbefca"
+    },
+    {
+      "file": "assets/7279.4cdde6e4.js",
+      "sha256": "18eec76d64e9b4f0f198124a9f23215c5fc03d0a379cf2516103f5d10ef4409d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7315.b2d5b8bb.js",
+      "sha256": "ac4b365716f7fa193c5369c20507710d7696b8fae108af0328ff7f6ed33f6fac",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7576.30e1357f.js",
+      "sha256": "2e6d24b218a2a111ecd4c23c3ab442fb58a715d21e899f994798ccf2f17cf88c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7585.4fd379d9.js",
+      "sha256": "a728018a1773a4587498554921c040b221b1b27ea2f7f493597febab69575b43",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/7743.2ad4dfab.js",
+      "sha256": "8cdd57ed50bc850f2e53db5eec7a94bec81a0b34f60963ea13598b2d6e27aa60",
+      "mappedSegments": 3438,
+      "projectSources": [],
+      "mapSha256": "05f67427c6f059a101aef2c5a280b9ac97bdfe4eed01a7f6a7ac098874470130"
+    },
+    {
+      "file": "assets/7797.ff52dbf0.js",
+      "sha256": "5e7d34dfd6b4beb587b6daf9437369ae2d86d90f620e91f3832d33dade9eb743",
+      "mappedSegments": 7239,
+      "projectSources": [],
+      "mapSha256": "2584b7dae904d51c0c95613b2e511a63bdb6730eb622578e81dedcb226556d99"
+    },
+    {
+      "file": "assets/790.c3c2b97e.js",
+      "sha256": "9b57f772ff78a23b8c06f9cce1038345d8eda9bcd420b2dc001a11aa41edae05",
+      "mappedSegments": 9,
+      "projectSources": [],
+      "mapSha256": "5f3a1573e4b0d194ae238f99aa93f838d54ea3cd405d107d5749b35f301c554c"
+    },
+    {
+      "file": "assets/7936.fa3c44e7.js",
+      "sha256": "382e5ef3fcc3ab9cbbf41452361eb43ff61a235921c165c95cce7e6aed60807b",
+      "mappedSegments": 8846,
+      "projectSources": [],
+      "mapSha256": "d0eb77756b6eb5c5c41b55cce593af21a7c9a72fd535be1c62b6373317fa2882"
+    },
+    {
+      "file": "assets/8283.887d7a6a.js",
+      "sha256": "eee2d13a0d65598560e147c63251b02ff7e40aaa0544051ba14071d019c2a957",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8518.da63780f.js",
+      "sha256": "e16e075aa1cb4430d5fedd9cdfa13817a2377ff54c38e8a548cacbbd045a6ca4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8532.26a2e534.js",
+      "sha256": "a7678e8331a2a67793ef40f8462dd6ce29af34a700f4d3cb98e2451d8b98376f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8539.9b6efab2.js",
+      "sha256": "b55c54f90a33a357dae7208056635c8c432c27553b41f299483283b7d46dac9a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8599.cdca3d03.js",
+      "sha256": "bfe894c051b1ae8ae1cea6f62fb9506fb53809e8a5b9233614399e26b5c40bbc",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8640.ad5bebef.js",
+      "sha256": "cf5dc14ab46303f909993d8335071261b9b595468a8a47f8fad3599dad6030a1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8679.1eeb5b25.js",
+      "sha256": "5eb274028850b37d1703001c9410d23ddd0d375b9d2ee301c96a22caeab2583e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8701.925cff41.js",
+      "sha256": "3646cb758be9f5f1adb184c3bf88e4d046113f828d04119bcb0a96dfdd93f259",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8712.c91dbca5.js",
+      "sha256": "28e898f8a4beddba5bfdd824972236c6466c3267a45635d13e587b530810c36e",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/8769.8985ca92.js",
+      "sha256": "75bd12c6d589719857a29e018bb0802056c5cf769ad3bf6495fc7c28eb7d2e35",
+      "mappedSegments": 8520,
+      "projectSources": [],
+      "mapSha256": "4917e17efa0030df2991c9c1e3afff20ea04abb7dcbacfb9564e9160efe8067d"
+    },
+    {
+      "file": "assets/8775.194bfadb.js",
+      "sha256": "4efa6d6b5f21967ffbf896113fdcf44906a7207d9616154ad4a7cbab78c63ebd",
+      "mappedSegments": 6533,
+      "projectSources": [],
+      "mapSha256": "446ef8d95b47d3eee0e8905c723e81af3a80ff211e19c50dbc69033292d20282"
+    },
+    {
+      "file": "assets/9095.a143e25f.js",
+      "sha256": "62588640bff010fcba40e72065ac1f02fc6ef350fd5aa59b08e9372277a0e595",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9224.e29a7548.js",
+      "sha256": "74c3a4e432c8e474cc9541fbecbf1fdec89f5175df29a5cd89c69412f869cf97",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9275.3bf1d712.js",
+      "sha256": "f7dd3ef3fa8a67add5e6b19773af1578a841fe751df81d6aa5a7f5267d7f6777",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9339.1c021c45.js",
+      "sha256": "e1954dbade93724655b4ee023512a029cb7b99f5916ccff084fab7a8955a15d1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9449.610f25e5.js",
+      "sha256": "3586ce34a71f696e046856e54bee3b5ee0083c2cb1e0fe59b5a2bd30911c5daa",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9520.3e4804fd.js",
+      "sha256": "3114187fbe482398c4b8fa540945a819af4af76ca08c56d8fbe4a97453e35570",
+      "mappedSegments": 11644,
+      "projectSources": [],
+      "mapSha256": "3f4b55c8adaa7358623062098a9b8b854fce10b116ad15b6f0cecfcfba1a18f3"
+    },
+    {
+      "file": "assets/9559.d3c3c59b.js",
+      "sha256": "4946ea48a986cd02d22104e5f9af7eaaa57672eef795dbbbc33d9e6bd03267a3",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9579.b72dfa70.js",
+      "sha256": "5deb8a70f36dc0c10d7f3238dd68a0bda3b7c0b996f19073fc38e28a63ae3f05",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9615.5105d985.js",
+      "sha256": "9c9f20b0a2df6a81da3aa3e5b19bdc184a2ef874b659c309e9ea7ad154e9b77b",
+      "mappedSegments": 11584,
+      "projectSources": [],
+      "mapSha256": "cb10434886c16c82cf054756f10391b27169cd70b121ea6840155962ea206c8d"
+    },
+    {
+      "file": "assets/9705.d01d911b.js",
+      "sha256": "7bc3a79ee0791e357c754ad3614990e2beb03fd22c8e1cc1dc5cace9e80f27c1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/9966.6b450b76.js",
+      "sha256": "65636b464bc937cfa64325af3ea3d62e2a39a7be301e919b1ba094bf5309fbfe",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    },
+    {
+      "file": "assets/bug-issue-template.74803b29.js",
+      "sha256": "c3afa9c2bb1962eb373d8a1964d8a6d3894681aa870ba4a24e84b7447412b53a",
+      "mappedSegments": 7,
+      "projectSources": [],
+      "mapSha256": "b6cdfc9299ba2f131bf91eb0bfa38422324283f0692200172d5cbd17403a494d"
+    },
+    {
+      "file": "assets/main.438e24ac.js",
+      "sha256": "038945405f51fd96b71d72bbd8e59bfa69c610426019dadc7f52773074698b10",
+      "mappedSegments": 310221,
+      "projectSources": [
+        "webpack://benchmark-realworld-v2-excalidraw/packages/utils/src/export.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/binary-heap.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/bounds.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/constants.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/colors.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/font-metadata.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/queue.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/editorInterface.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/keys.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/points.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/promise-pool.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/utils.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/random.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/url.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/emitter.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/appEventBus.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/common/src/versionedSnapshotStore.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/binding.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/bounds.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/collision.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/comparisons.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/containerCache.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/cropElement.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/distance.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/elbowArrow.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/fractional-indexing/src/index.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/fractionalIndex.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/frame.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/groups.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/heading.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/align.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/newElement.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/arrowEndpointText.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/bucketFill.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/sortElements.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/duplicate.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/store.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/Scene.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/delta.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/distribute.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/dragElements.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/elementLink.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/embeddable.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/flowchart.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/zindex.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/arrows/focus.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/image.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/positionElementsOnGrid.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/resizeElements.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/transformHandles.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/resizeTest.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/showSelectedShapeActions.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/transform.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/arrows/helpers.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/arrowheads.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/convertToShape.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/index.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/linearElementEditor.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/mutateElement.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/renderElement.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/selection.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/shape.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/sizeHelpers.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/stickyNote.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/textElement.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/textMeasurements.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/textWrapping.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/typeChecks.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/element/src/utils.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/laser-pointer/src/math.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/laser-pointer/src/simplify.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/laser-pointer/src/state.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/constants.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/curve.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/ellipse.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/angle.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/pca.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/polygon.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/range.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/rectangle.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/segment.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/line.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/triangle.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/point.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/utils.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/math/src/vector.ts",
+        "webpack://benchmark-realworld-v2-excalidraw/packages/utils/src/shape.ts"
+      ],
+      "mapSha256": "3b8979c4f8ffdcfc27a2310657b577d85f15d0f629741dc25fb2b78ee583c755"
+    },
+    {
+      "file": "assets/socketIoClient.5d3ce4a1.js",
+      "sha256": "c3e4a27f3253248b1539c428d24db01379b5df218de03b694c616714870f49a1",
+      "mappedSegments": 10331,
+      "projectSources": [],
+      "mapSha256": "314fa1c6bb628ed86c5f53bb0df7e0b46a6f6d4d01b1f53c85067ab6c7dc1bb2"
+    },
+    {
+      "file": "service-worker.js",
+      "sha256": "6b7ade18de7f438e4a901d5e65b8adcaf89cf1d41d7ced3fd6cc6ebbb9d11319",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    }
+  ],
+  "css": [
+    {
+      "file": "assets/main.b51f7487.css",
+      "sha256": "d6b5684adf5b08934566cb3dd6b01b78415a425c468093f03519accff5b2ea0a",
+      "mapPresent": true
+    },
+    {
+      "file": "fonts/fonts.css",
+      "sha256": "45f1993459e438245df7a5d2ebeee5b6ac5f3c818a04d5cd4c86f2b0b122d398",
+      "mapPresent": false
+    }
+  ],
+  "publicationEligible": false
+}

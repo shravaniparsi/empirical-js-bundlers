@@ -1,4 +1,4 @@
-# Real-world expansion status — 2026-09-27
+# Real-world expansion status — 2026-09-30
 
 Branch: `codex/realworld-expansion-v1`. These checks are feasibility/correctness evidence, not publication observations.
 
@@ -15,9 +15,10 @@ Branch: `codex/realworld-expansion-v1`. These checks are feasibility/correctness
 - Memos actual-backend browser acceptance subsequently passed in [36092946515](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36092946515), at benchmark commit `94106c7`: signup/login, Markdown creation, editing, reload, successful native API writes, and exact SQLite content after shutdown. All 1,307 upstream files remained verified. See `review/native-hmr-continuation-v1/status.md` for this continuation and the larger HMR checks.
 - Fresh network fetch reproduction of the pinned Memos revision passed all 1,307 file hashes.
 - Memos five-tool production acceptance passed at benchmark commit `5aa3ab6` in matrix run [36366232069](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36366232069), with a matching successful upstream control in [36366232074](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36366232074). Vite, Rspack, esbuild, Webpack, and Rollup used the same 526-file application profile and exact npm lock. Every tool passed production output and application source-map checks, compiled the original Go backend, and passed signup, create, edit, reload, API-write, and post-shutdown SQLite checks. The hash-manifested evidence is under `review/memos-five-tool-adapters-v1/`.
+- Excalidraw five-tool production acceptance passed at benchmark commit `11ba2ab` in matrix run [36818086629](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36818086629). Vite, Rspack, esbuild, Webpack, and Rollup used the same pinned application graph, npm 11.9.0 lockfile, ten linked workspaces, and two hash-verified compatibility transforms. Every tool passed production output, application source-map, CSS, font, drawing, movement, reload-persistence, SVG-export, browser-error, and external-request checks. The shared validator also passed the Memos five-tool regression in [36817938228](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36817938228). The complete hash-manifested evidence is under `review/excalidraw-five-tool-adapters-v1/`.
 
-The old Node 22.16.0 production-v1 profile and these Node 24.14.0 feasibility builds are different environments. Memos has passed the five-tool correctness contract; Excalidraw has not. No fresh primary timing data have been collected; consolidated-v4 remains the only publication-authoritative corpus.
+The old Node 22.16.0 production-v1 profile and these Node 24.14.0 feasibility builds are different environments. Memos and Excalidraw have both passed their five-tool correctness contracts. No fresh primary timing data have been collected; consolidated-v4 remains the only publication-authoritative corpus.
 
 The expanded synthetic HMR matrix also passed all six development-v1 cells (three tools × 200/5,000 modules). See the continuation status for scopes and audit evidence.
 
-Remaining sequence: add and validate a second independently selected real-world five-tool workload; choose one final runtime and revalidate prior cells; extend HMR to the real-world profiles; freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.
+Remaining sequence: choose one final runtime and revalidate prior cells; extend HMR to the real-world profiles; freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.
