@@ -37,7 +37,9 @@ jobs:
       - name: Install browser harness dependencies
         env:
           PUPPETEER_SKIP_DOWNLOAD: 'true'
-        run: npm ci --ignore-scripts --no-audit --no-fund
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
       - name: Verify profile and pinned source
         run: |
           mkdir -p adapter-evidence
