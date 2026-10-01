@@ -23,6 +23,24 @@ The five-cell Bulletproof React matrix passed in [run 36826015073](https://githu
 
 The remaining M3 gate is the 10-cell matrix for Memos and Excalidraw.
 
+The missing matrix is implemented in
+`.github/workflows/incremental-correctness-v1.yml` as the `realworld` suite. It
+checks the pinned Memos and Excalidraw commits across all five production tools,
+uses the same reviewed active-graph targets as the accepted HMR harness, and
+uploads source, runtime, dependency-lock, adapter, process-log, and acceptance
+evidence. Results remain pending until the hosted workflow completes.
+
+## Primary-host Actions controller
+
+`.github/workflows/confirmatory-primary-host.yml` provides serialized
+`inspect`, `initialize`, `status`, and `audit` operations for a dedicated
+self-hosted macOS arm64 runner labeled `bundler-primary`. It requires durable
+campaign storage outside the Actions checkout, repeats the 60-second frozen
+host gate before initialization, and uploads authenticated controller
+snapshots. Setup and operating instructions are in
+`review/confirmatory-primary-host.md`. No measurement operation is exposed
+until the remaining correctness and full-process negative-control gates pass.
+
 ## Reproduction
 
 Run with the frozen runtime:
