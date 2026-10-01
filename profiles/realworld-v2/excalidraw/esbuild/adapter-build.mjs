@@ -30,6 +30,7 @@ const sassPlugin = {
 };
 
 const watchMode = process.argv.includes('--watch');
+let successfulWatchBuilds = 0;
 const finalize = async (result) => {
   const entryRecord = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'excalidraw-app/index.tsx');
   if (!entryRecord) throw new Error('esbuild did not report the Excalidraw entry output');
@@ -49,7 +50,10 @@ const completionPlugin = {
         return;
       }
       await finalize(result);
-      console.log('esbuild: build finished (0 errors)');
+      successfulWatchBuilds += 1;
+      console.log(successfulWatchBuilds === 1
+        ? 'esbuild: initial build finished (0 errors)'
+        : 'esbuild: build finished (0 errors)');
     });
   },
 };

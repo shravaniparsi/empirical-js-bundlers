@@ -51,6 +51,7 @@ const applicationPlugin = {
 };
 
 const watchMode = process.argv.includes('--watch');
+let successfulWatchBuilds = 0;
 const finalize = (result) => {
   const entry = Object.entries(result.metafile.outputs).find(([, value]) => value.entryPoint === 'src/main.tsx')?.[0];
   if (!entry) throw new Error('esbuild did not report the Memos entry output');
@@ -67,7 +68,10 @@ const completionPlugin = {
         return;
       }
       finalize(result);
-      console.log('esbuild: build finished (0 errors)');
+      successfulWatchBuilds += 1;
+      console.log(successfulWatchBuilds === 1
+        ? 'esbuild: initial build finished (0 errors)'
+        : 'esbuild: build finished (0 errors)');
     });
   },
 };
