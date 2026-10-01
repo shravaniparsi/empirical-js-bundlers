@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-collector-infrastructure-correctness",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "runtime": "Node.js 24.14.0",
+  "campaignLedger": {
+    "hashChained": true,
+    "physicallyAppended": true,
+    "exclusiveWriterLock": true,
+    "evidenceRehashedOnAudit": true,
+    "negativeControls": [
+      "ledger content tamper",
+      "skipped scheduled tool",
+      "cell after failed attempt",
+      "replacement limit exceeded",
+      "concurrent append serialization"
+    ],
+    "passed": true
+  },
+  "incrementalCompletionGate": {
+    "requiresPostEditSuccess": true,
+    "requiresUniqueMarkerInOutput": true,
+    "negativeControls": [
+      "stale pre-edit success",
+      "post-edit success for output without marker",
+      "failed compilation",
+      "marker check failure",
+      "completion timeout",
+      "split output chunks"
+    ],
+    "passed": true,
+    "actualToolWorkloadMatrixValidated": false
+  },
+  "remaining": [
+    "Validate M3 against all 40 planned tool/workload cells",
+    "Finish nine remaining planned M4 correctness cells",
+    "Exercise full collector negative controls with real processes and outputs",
+    "Pass the 60-second low-load host gate before campaign initialization"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "algorithm": "sha256",
+  "publicationEligible": false,
+  "files": {
+    "review/confirmatory-collector-v1/status.md": "b16e0fe9f7b268b1b081bc2c3b72ef7fe2c52e0ce4aafeeffb9bd7a062bea394",
+    "review/confirmatory-collector-v1/acceptance.json": "b798e929bfa7941f7d823ac6011948fe20e0c3c91699e9693992b3853c600a6a",
+    "scripts/confirmatory-campaign.mjs": "6dbcabb5de70ebe3c71fd2741810d6cea3832abc973ab9335259d4c291420020",
+    "scripts/test-confirmatory-campaign.mjs": "60fb00df950ba80bbd70e01d5dcebe8c74921baab12795f00bb849b3cc667368",
+    "scripts/incremental-completion-gate.mjs": "74f6d3556022d9e298c148a2bd72df2e7cceeaebf04a49d8c52243faaf939eea",
+    "scripts/incremental-completion-gate.test.mjs": "8a4b43d13929a7b76c7cb517b9e3520987a98601af1da66818d99872bcd6eb98"
+  }
+}
