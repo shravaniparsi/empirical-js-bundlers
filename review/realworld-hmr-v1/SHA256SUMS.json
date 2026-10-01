@@ -1,0 +1,206 @@
+[
+  {
+    "path": "acceptance.json",
+    "sha256": "81015b4d265a2130237f4b1b2ff1f75e4a34430adfc282061d58ebd53cf7f604"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/acceptance-server.log",
+    "sha256": "35ccc68c55bd66ccb30d4a4e6184fe9e5287592ba215af5af15e14ad117bd15b"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/acceptance.json",
+    "sha256": "2e2a27b0da187761e34f59a0eeaffd855abf3dc9534513a97400cc445befc594"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/adapter-preparation.json",
+    "sha256": "286608b89ab56edc897dbd42aeff7e86dc449ec7e28f0b5d02073721fe60ceb8"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/benchmark-profile.json",
+    "sha256": "dad928c94302a4f103f5b688d341d8aaf65c51526e6a06887a46c0f3492bd60b"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/package-lock.sha256",
+    "sha256": "78b94848a4e72744675e2f1024a6ff8c50a2735c12e64cc0ec4ba3218c5f0ebc"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-rspack/source.json",
+    "sha256": "56a09f7559575a7caa225dd9c9dc2da20fbb069f192d6438e66f5b71020ce1f0"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/acceptance-server.log",
+    "sha256": "788295679f30ad59c6a9df4450f799d5df7f3175a89240c25a2fc0a065380e4e"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/acceptance.json",
+    "sha256": "cb816281e439fb0060bb876f71bf222e95bd6294c2e4ef9b6cc9b5b0d94dde70"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/adapter-preparation.json",
+    "sha256": "e38ac90358259937de4967d8afa1919fad91aeb733ac36b168b9d39226f9ad6a"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/benchmark-profile.json",
+    "sha256": "36c5111e867757013f85a735ab77474e9e0299ecf5eb414eb2b9779b2ff7a16b"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/package-lock.sha256",
+    "sha256": "78b94848a4e72744675e2f1024a6ff8c50a2735c12e64cc0ec4ba3218c5f0ebc"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-vite/source.json",
+    "sha256": "56a09f7559575a7caa225dd9c9dc2da20fbb069f192d6438e66f5b71020ce1f0"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/acceptance-server.log",
+    "sha256": "f1917e441aa8a28a1de176c2ff5f7f277419be353b93b9c878cbb866701f21f8"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/acceptance.json",
+    "sha256": "3a721118f94eb467801daac23f399a216b6d7d5cce5e4e6485f2212d903625b6"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/adapter-preparation.json",
+    "sha256": "ce37512e60c101cfb7f63bab92c87cb1fc212b8cdb521384abc85bfc2b7bcc63"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/benchmark-profile.json",
+    "sha256": "42b0b583da0f35475e3e10e62439b8d42e7276d8053496ff627a7f2d6f11b4d6"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/package-lock.sha256",
+    "sha256": "78b94848a4e72744675e2f1024a6ff8c50a2735c12e64cc0ec4ba3218c5f0ebc"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-excalidraw-webpack/source.json",
+    "sha256": "56a09f7559575a7caa225dd9c9dc2da20fbb069f192d6438e66f5b71020ce1f0"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/acceptance-backend.log",
+    "sha256": "f8a42dac892938ad8dd1fb330120e3d8ff41048f56dc94fb7339c367d9ec1448"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/acceptance-server.log",
+    "sha256": "c88dd4b824a13d48056955eadd3f5ef9511ae6d1c395c9cf3f7c7cd2c38c9b7a"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/acceptance.json",
+    "sha256": "de1a59304f505de80c3e45011e8ac7f35e5ecbe246ec60ceeedc45b10462b5e4"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/adapter-preparation.json",
+    "sha256": "db8dabcfc4eede2fc89edc666e0e44a14b0329a5c5a2102bd68e842334773382"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/backend-build.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/benchmark-profile.json",
+    "sha256": "e5004df9c2d6df370aac023a7d69135e4158fe580fabeaae1708696dcf68e61c"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/package-lock.sha256",
+    "sha256": "7766ffc55109471f68870b20eed512207e4e1443f5a17be9cae0c03b5ba5b6e6"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-rspack/source.json",
+    "sha256": "459276ce149c20e24c296a3f8d46315cca87a0c05e23586252b596759a572618"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/acceptance-backend.log",
+    "sha256": "959822962461f842d66043dcda88e6b9149a3704cd7401093a1de9bda9b56867"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/acceptance-server.log",
+    "sha256": "ea03ab4ef2ce53f400d978eec3a41d06274b993513a76ff8132783f5f5cf2c57"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/acceptance.json",
+    "sha256": "ef00371ea0604094054f4a87a1659217b712fea1de22240d26d4428ae2a819fa"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/adapter-preparation.json",
+    "sha256": "d5038767635db959c4217634908d47c67bc2585ace8ccbe57e60bb9f105abe5f"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/backend-build.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/benchmark-profile.json",
+    "sha256": "8a2d792a2be815a53031c39bebea387338741dae675d3dc0cf4b2b1dc6cb6ff0"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/package-lock.sha256",
+    "sha256": "7766ffc55109471f68870b20eed512207e4e1443f5a17be9cae0c03b5ba5b6e6"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-vite/source.json",
+    "sha256": "459276ce149c20e24c296a3f8d46315cca87a0c05e23586252b596759a572618"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/acceptance-backend.log",
+    "sha256": "4ebb7bf4fdbca2916f182cd5030f17c98f512e45894577ef922e46f51683cc99"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/acceptance-server.log",
+    "sha256": "5c08236870242851c2cc3d707a5cb6386477598bc979cf46dd232f66ef7cfa67"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/acceptance.json",
+    "sha256": "c2b56c0c8ca9ddb4611f0eb014fdb6902ef7a88855940ff7439b091ed7fbc743"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/adapter-preparation.json",
+    "sha256": "e8eb0eb5586caf2cf518351c0d7010702a76c3831d4195be886eb6b88eded7b9"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/backend-build.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/benchmark-profile.json",
+    "sha256": "0ab077669361be91836d1a6f271d26a0c489a629f6d4823102eb651c63fa4afe"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/package-lock.sha256",
+    "sha256": "7766ffc55109471f68870b20eed512207e4e1443f5a17be9cae0c03b5ba5b6e6"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/runtime.json",
+    "sha256": "61bb483aea7cb9194ba16993247640b38974a7ab481715b08c493b0e148fa119"
+  },
+  {
+    "path": "artifacts/realworld-hmr-v1-memos-webpack/source.json",
+    "sha256": "459276ce149c20e24c296a3f8d46315cca87a0c05e23586252b596759a572618"
+  },
+  {
+    "path": "run-metadata.json",
+    "sha256": "e5578f9a68c3eb0f81b0a7e3d7d49af8918dd1c6932731ad3aaf1cfc58a705c8"
+  },
+  {
+    "path": "status.md",
+    "sha256": "4357d1627f578a9d8a20f4e9cfcb3f004ddd31b3304137f06eac459cb558267a"
+  }
+]

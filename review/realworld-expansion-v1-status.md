@@ -21,4 +21,6 @@ Node 24.14.0 is now the frozen common runtime. Run [36819476193](https://github.
 
 The expanded synthetic HMR matrix also passed all six development-v1 cells (three tools × 200/5,000 modules). See the continuation status for scopes and audit evidence.
 
-Remaining sequence: complete the implemented six-cell real-world HMR cloud acceptance (the local Excalidraw/Vite pilot passes); freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.
+Real-world HMR correctness passed all six Memos/Excalidraw × Vite/Rspack/Webpack cells in [run 36822789535](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822789535) on Node 24.14.0. All 18 settled edits preserved the browser document and application state without navigation; reload controls and byte-for-byte restoration passed. Production regressions also passed for all five Memos and all five Excalidraw adapters. The hash-manifested evidence is under `review/realworld-hmr-v1/`.
+
+Remaining sequence: freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.

@@ -1,0 +1,18 @@
+time=2026-10-01T06:04:51.049Z level=INFO msg="initializing new database with latest schema" file=migration/sqlite/LATEST.sql
+time=2026-10-01T06:04:51.056Z level=INFO msg="database initialized successfully" schemaVersion=0.31.8
+Memos dev started successfully!
+Data directory: /tmp/memos-hmr-6FnmWz
+Database driver: sqlite
+Server running on 127.0.0.1:44197
+Access your memos at: http://127.0.0.1:44197
+Access mode: private
+time=2026-10-01T06:05:08.552Z level=INFO msg="client error" method=/memos.api.v1.AuthService/RefreshToken error="unauthenticated: refresh token not found"
+time=2026-10-01T06:05:08.557Z level=INFO msg=OK method=/memos.api.v1.InstanceService/BatchGetInstanceSettings
+time=2026-10-01T06:05:08.560Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceSetting
+time=2026-10-01T06:05:08.561Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceProfile
+time=2026-10-01T06:05:14.374Z level=INFO msg="client error" method=/memos.api.v1.AuthService/RefreshToken error="unauthenticated: refresh token not found"
+time=2026-10-01T06:05:14.384Z level=INFO msg=OK method=/memos.api.v1.InstanceService/BatchGetInstanceSettings
+time=2026-10-01T06:05:14.385Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceProfile
+time=2026-10-01T06:05:14.386Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceSetting
+time=2026-10-01T06:05:15.774Z level=INFO msg="server shutting down"
+time=2026-10-01T06:05:15.776Z level=INFO msg="memos stopped properly"
