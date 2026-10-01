@@ -37,10 +37,17 @@
       "edits": 75,
       "passed": true
     },
+    "bulletproofMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36826015073",
+      "headSha": "c814928f65ef1157ec62484de16b8ef86ff36569",
+      "cells": 5,
+      "edits": 15,
+      "passed": true
+    },
     "realWorldMatrixValidated": false
   },
   "remaining": [
-    "Validate M3 against the 15 planned real-world tool/workload cells",
+    "Validate M3 against the 10 planned Memos and Excalidraw cells",
     "Finish nine remaining planned M4 correctness cells",
     "Exercise full collector negative controls with real processes and outputs",
     "Pass the 60-second low-load host gate before campaign initialization"
