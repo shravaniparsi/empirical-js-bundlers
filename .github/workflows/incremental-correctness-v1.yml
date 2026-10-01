@@ -1,18 +1,13 @@
 name: Incremental completion correctness v1
 on:
   workflow_dispatch:
-  push:
-    branches: [codex/realworld-expansion-v1]
-    paths:
-      - 'profiles/production-v1/**'
-      - 'profiles/runtime-v1/**'
-      - 'scripts/check-incremental-correctness.mjs'
-      - 'scripts/incremental-completion-gate.mjs'
-      - 'scripts/incremental-completion-gate.test.mjs'
-      - 'scripts/prepare-production-profile.mjs'
-      - 'scripts/prepare-submission-pilot.mjs'
-      - 'tier1-synthetic/generate-project.ts'
-      - '.github/workflows/incremental-correctness-v1.yml'
+    inputs:
+      suite:
+        description: Correctness matrix to run
+        required: true
+        default: all
+        type: choice
+        options: [all, synthetic, bulletproof]
 permissions:
   contents: read
 jobs:
@@ -31,7 +26,7 @@ jobs:
       - run: node scripts/check-incremental-correctness.test.mjs
 
   synthetic:
-    if: github.event.repository.private == false
+    if: github.event.repository.private == false && (inputs.suite == 'all' || inputs.suite == 'synthetic')
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     strategy:
@@ -64,5 +59,42 @@ jobs:
         if: always()
         with:
           name: incremental-correctness-${{ matrix.tool }}-${{ matrix.size }}
+          path: incremental-evidence/
+          retention-days: 30
+
+  bulletproof:
+    if: github.event.repository.private == false && (inputs.suite == 'all' || inputs.suite == 'bulletproof')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+    env:
+      PROFILE_REVISION: m3-correctness-${{ matrix.tool }}-bulletproof
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Prepare frozen Bulletproof React profile
+        run: node scripts/prepare-production-profile.mjs realworld app
+      - name: Install exact tool workspace
+        run: npm ci --prefix '.submission-pilot/bulletproof-corrected-m3-correctness-${{ matrix.tool }}-bulletproof/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Validate post-edit completion and output identity
+        run: |
+          mkdir -p incremental-evidence
+          node scripts/check-incremental-correctness.mjs \
+            '${{ matrix.tool }}' \
+            '.submission-pilot/bulletproof-corrected-m3-correctness-${{ matrix.tool }}-bulletproof/${{ matrix.tool }}' \
+            'incremental-evidence/acceptance.json' \
+            'src/app/index.tsx'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: incremental-correctness-${{ matrix.tool }}-bulletproof
           path: incremental-evidence/
           retention-days: 30
