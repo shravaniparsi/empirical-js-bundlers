@@ -4,11 +4,13 @@ Replication data and scripts for the empirical study:
 
 > **Benchmarking JavaScript Bundlers at Scale: A Two-Tier Empirical Study of Vite, Rspack, esbuild, Webpack, and Rollup**
 >
-> Submitted to the *Journal of Systems and Software* (Elsevier)
+> Manuscript in preparation; not submitted
 
 ## Overview
 
-The authoritative consolidated corpus contains 1,945 raw observations, 1,390 analysis units, and 1,265 inferential-test units across five production-ready JavaScript bundlers, 11 measured metrics, five synthetic scales (50–5,000 modules), and one scoped Bulletproof React replication.
+The historical publication-authoritative corpus contains 1,945 raw observations, 1,390 analysis units, and 1,265 inferential-test units across five production-ready JavaScript bundlers, 11 measured metrics, five synthetic scales (50–5,000 modules), and one scoped Bulletproof React replication. It remains valid evidence for the earlier study epoch, but it will not be pooled with the fresh confirmatory campaign now being prepared.
+
+The expanded study has passed five-tool production acceptance for Memos and Excalidraw, real-world HMR correctness for Vite/Rspack/Webpack, and common-runtime revalidation on Node 24.14.0. The preregistered local protocol and deterministic randomized schedule are in [`protocols/confirmatory-v1`](protocols/confirmatory-v1/README.md). No new timing measurements have been collected under that protocol yet.
 
 | Tool | Version | Language |
 |------|---------|----------|
@@ -35,6 +37,8 @@ The authoritative consolidated corpus contains 1,945 raw observations, 1,390 ana
 │   ├── validated-analysis.ts # Authoritative fail-closed analysis
 │   ├── analysis.ts           # Legacy pipeline
 │   └── analysis.py           # Legacy alternative
+├── protocols/
+│   └── confirmatory-v1/      # Frozen new-study design and run schedule
 ├── scripts/
 │   ├── run-all.sh          # Main measurement harness
 │   ├── run-single.sh       # Single tool×size measurement
@@ -51,13 +55,24 @@ The authoritative consolidated corpus contains 1,945 raw observations, 1,390 ana
 └── tier2-realworld/        # Bulletproof React adaptations
 ```
 
-## Environment
+## Historical measurement environment
 
 All measurements were collected on:
 - **Hardware:** Apple M2 Pro (12-core, 32 GB RAM)
 - **OS:** macOS 26.5.1 (build 25F80)
 - **Node.js:** v22.16.0
 - **npm:** 10.9.2
+
+The new confirmatory campaign is frozen to Node.js 24.14.0. Its physical-host fingerprint will be archived at campaign start and its measurements will remain separate from the historical Node 22.16.0 corpus.
+
+## Confirmatory campaign
+
+```bash
+npm run protocol:generate
+npm run protocol:audit
+```
+
+The audit verifies the frozen 420-block schedule and 1,740 independent process/session units. GitHub-hosted runners are used for correctness only; publication timing must run sequentially on a fixed physical host.
 
 ## Reproducing the Analysis
 

@@ -10,4 +10,6 @@ The first diagnostic run exposed Rspack CLI's default lazy compilation for web a
 
 Production behavior remained intact. The Memos five-tool regression passed in [run 36822362193](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822362193), and the Excalidraw five-tool regression passed in [run 36822462163](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822462163).
 
-The next publication gate is protocol freeze: define the hypotheses, primary outcomes, sampling unit, run count, randomization, warm-up and cache policy, exclusions, multiplicity control, statistical model, effect sizes, uncertainty intervals, and stopping/change-control rules before collecting new timing observations.
+The protocol-freeze gate is now implemented in `protocols/confirmatory-v1`. It defines the hypotheses, primary outcomes, sampling units, fixed run counts, deterministic randomized block schedule, warm-up and cache policy, exclusions, multiplicity control, paired analysis, effect sizes, uncertainty intervals, stopping rule, and change control before new timing observations.
+
+The next gate is collector readiness: implement the schedule executor and append-only attempt ledger, validate M3 completion markers and M4 latency boundaries for every planned workload, exercise negative controls, and record the fixed physical-host fingerprint. No new timing value is publication-eligible until those checks and the frozen protocol audit pass.

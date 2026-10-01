@@ -5,6 +5,8 @@
   "description": "Empirical Evaluation of Rust-Based JavaScript Bundlers — Replication Package",
   "type": "module",
   "scripts": {
+    "protocol:generate": "node scripts/generate-confirmatory-schedule.mjs",
+    "protocol:audit": "node scripts/audit-confirmatory-protocol.mjs",
     "generate:xs": "tsx tier1-synthetic/generate-project.ts --size 50 --seed 42 --output tier1-synthetic/projects/xs-50",
     "generate:s": "tsx tier1-synthetic/generate-project.ts --size 200 --seed 42 --output tier1-synthetic/projects/s-200",
     "generate:m": "tsx tier1-synthetic/generate-project.ts --size 500 --seed 42 --output tier1-synthetic/projects/m-500",
