@@ -1,0 +1,68 @@
+name: Incremental completion correctness v1
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/production-v1/**'
+      - 'profiles/runtime-v1/**'
+      - 'scripts/check-incremental-correctness.mjs'
+      - 'scripts/incremental-completion-gate.mjs'
+      - 'scripts/incremental-completion-gate.test.mjs'
+      - 'scripts/prepare-production-profile.mjs'
+      - 'scripts/prepare-submission-pilot.mjs'
+      - 'tier1-synthetic/generate-project.ts'
+      - '.github/workflows/incremental-correctness-v1.yml'
+permissions:
+  contents: read
+jobs:
+  negative-controls:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: node scripts/incremental-completion-gate.test.mjs
+      - run: node scripts/check-incremental-correctness.test.mjs
+
+  synthetic:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+        size: [xs-50, s-200, m-500, l-2000, xl-5000]
+    env:
+      PROFILE_REVISION: m3-correctness-${{ matrix.tool }}-${{ matrix.size }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Prepare frozen synthetic profile
+        run: node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+      - name: Install exact tool workspace
+        run: npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-m3-correctness-${{ matrix.tool }}-${{ matrix.size }}/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Validate post-edit completion and output identity
+        run: |
+          mkdir -p incremental-evidence
+          node scripts/check-incremental-correctness.mjs \
+            '${{ matrix.tool }}' \
+            '.submission-pilot/${{ matrix.size }}-corrected-m3-correctness-${{ matrix.tool }}-${{ matrix.size }}/${{ matrix.tool }}' \
+            'incremental-evidence/acceptance.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: incremental-correctness-${{ matrix.tool }}-${{ matrix.size }}
+          path: incremental-evidence/
+          retention-days: 30
