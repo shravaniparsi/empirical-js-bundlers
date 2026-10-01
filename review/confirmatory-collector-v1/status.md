@@ -59,8 +59,17 @@ Run with the frozen runtime:
 /Users/shravaniparsi/.cache/codex-runtimes/node-v24.14.0-darwin-arm64/bin/node scripts/audit-confirmatory-protocol.mjs
 ```
 
-The remaining pre-collection software gate is the full-process negative-control
-suite: source drift, orphan process, malformed timing output, stale completion,
-full reload, and state loss must all be rejected. After that suite passes, the
-dedicated primary host must pass its 60-second environment gate before campaign
-initialization.
+The full-process negative-control suite passed in [run
+36830947918](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36830947918)
+at commit `1818750bd6a65a4a952b8098f50dde8042523e38`. A valid real child
+process and emitted marker were accepted. Stale completion, wrong output,
+source drift, a live process group, malformed or ambiguous macOS timing output,
+full-page reload, application-state loss, and a failed reload control were each
+rejected. The shared finalizer is `scripts/confirmatory-cell-acceptance.mjs`.
+
+The next implementation step is the metric-specific primary cell executor that
+invokes M1, M2/M10/M11, M3, and M4 and submits each result through that shared
+finalizer. After it passes integration controls, the fixed macOS arm64 runner
+must pass the 60-second environment gate before campaign initialization. The
+full campaign then contains 1,740 scheduled processes or sessions; no hosted
+correctness result can replace them.

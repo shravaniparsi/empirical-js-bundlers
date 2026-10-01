@@ -63,8 +63,9 @@
     }
   },
   "remaining": [
-    "Exercise full collector negative controls with real processes and outputs",
-    "Pass the 60-second low-load host gate before campaign initialization"
+    "Implement and validate metric-specific primary cell execution against the shared acceptance guard",
+    "Provision the fixed macOS arm64 primary runner and pass the 60-second host gate before campaign initialization",
+    "Collect all 1,740 scheduled processes/sessions before confirmatory analysis"
   ],
   "hmrCorrectnessGate": {
     "runtime": "Node.js 24.14.0",
@@ -85,5 +86,21 @@
     "correctnessEdits": 54,
     "passed": true,
     "evidence": "review/confirmatory-collector-v1/m4/acceptance.json"
+  },
+  "fullProcessNegativeControls": {
+    "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36830947918",
+    "headSha": "1818750bd6a65a4a952b8098f50dde8042523e38",
+    "realProcessBaselineAccepted": true,
+    "rejected": [
+      "stale completion",
+      "wrong output",
+      "source drift",
+      "orphan process",
+      "malformed timing output",
+      "full-page reload",
+      "application state loss",
+      "failed reload detector control"
+    ],
+    "passed": true
   }
 }
