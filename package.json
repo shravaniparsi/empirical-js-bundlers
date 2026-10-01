@@ -11,6 +11,7 @@
     "campaign:test": "node scripts/test-confirmatory-campaign.mjs",
     "incremental-gate:test": "node scripts/incremental-completion-gate.test.mjs",
     "incremental-harness:test": "node scripts/check-incremental-correctness.test.mjs",
+    "collector-controls:test": "node scripts/confirmatory-cell-acceptance.test.mjs",
     "generate:xs": "tsx tier1-synthetic/generate-project.ts --size 50 --seed 42 --output tier1-synthetic/projects/xs-50",
     "generate:s": "tsx tier1-synthetic/generate-project.ts --size 200 --seed 42 --output tier1-synthetic/projects/s-200",
     "generate:m": "tsx tier1-synthetic/generate-project.ts --size 500 --seed 42 --output tier1-synthetic/projects/m-500",
