@@ -1,0 +1,73 @@
+name: Excalidraw five-tool adapter acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/realworld-v2/excalidraw/**'
+      - 'scripts/prepare-excalidraw-adapter.mjs'
+      - 'scripts/audit-excalidraw-adapter-profile.mjs'
+      - 'scripts/check-excalidraw-browser.mjs'
+      - 'scripts/check-excalidraw-adapter-output.mjs'
+      - 'scripts/check-production-contract.mjs'
+      - '.github/workflows/excalidraw-five-tool-adapters.yml'
+permissions:
+  contents: read
+jobs:
+  adapter:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: excalidraw/excalidraw
+          ref: 5db42c3ddbbdc44d10120ab2f18e0864d083e268
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - name: Install browser harness dependencies
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify profile and pinned source
+        run: |
+          mkdir -p adapter-evidence
+          node scripts/verify-realworld-source.mjs excalidraw upstream > adapter-evidence/source.json
+          node scripts/audit-excalidraw-adapter-profile.mjs adapter-evidence/profile-audit.json
+          node scripts/prepare-excalidraw-adapter.mjs upstream adapter-workspace '${{ matrix.tool }}' | tee adapter-evidence/preparation.log
+          cp adapter-workspace/adapter-preparation.json adapter-evidence/
+          cp adapter-workspace/benchmark-profile.json adapter-evidence/
+          sha256sum adapter-workspace/package-lock.json > adapter-evidence/package-lock.sha256
+      - name: Install exact shared dependency closure
+        working-directory: adapter-workspace
+        run: |
+          set -o pipefail
+          npx --yes npm@11.9.0 ci --include=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund 2>&1 | tee ../adapter-evidence/npm-ci.log
+      - name: Verify and build native adapter
+        working-directory: adapter-workspace
+        run: |
+          set -o pipefail
+          node verify-profile.mjs | tee ../adapter-evidence/profile-verification.log
+          node adapter-build.mjs 2>&1 | tee ../adapter-evidence/build.log
+      - name: Validate output contract
+        run: node scripts/check-excalidraw-adapter-output.mjs adapter-workspace/dist adapter-evidence/output-contract.json
+      - name: Exercise drawing, editing, persistence and SVG export
+        timeout-minutes: 8
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: node scripts/check-excalidraw-browser.mjs adapter-workspace/dist adapter-evidence/browser upstream
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: excalidraw-adapter-${{ matrix.tool }}
+          path: adapter-evidence/
+          retention-days: 30

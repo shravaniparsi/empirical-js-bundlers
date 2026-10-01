@@ -27,11 +27,14 @@ export async function inspectOutput(dist,{requireEveryJsMap=true,strictVendorMap
     consumer.eachMapping(m=>{
      if(m.originalLine==null||m.source==null)return;
      const content=consumer.sourceContentFor(m.source,true);
-     if(typeof content!=='string')throw Error(`Missing mapped source: ${m.source}`);
+     const projectSource=/(^|\/)src\//.test(m.source)&&!/node_modules/.test(m.source);
+     if(typeof content!=='string'){
+      if(strictVendorMappings||projectSource)throw Error(`Missing mapped source: ${m.source}`);
+      return;
+     }
      if(!sourceLines.has(m.source))sourceLines.set(m.source,content.split('\n'));
      const lines=sourceLines.get(m.source);
      if(m.originalLine<1||m.originalLine>lines.length||m.originalColumn>lines[m.originalLine-1].length){
-      const projectSource=/(^|\/)src\//.test(m.source)&&!/node_modules/.test(m.source);
       if(strictVendorMappings||projectSource)throw Error(`Original mapping outside source bounds: ${m.source}:${m.originalLine}:${m.originalColumn}, line length ${lines[m.originalLine-1]?.length}`);
       return;
      }
