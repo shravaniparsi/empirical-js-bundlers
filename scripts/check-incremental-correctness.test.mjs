@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { chmodSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -67,6 +67,37 @@ setInterval(() => {}, 1000);
     assert.equal(modeReport.edits.length, 3);
     assert.equal(modeReport.checks.sourceRestored, true);
   }
+
+  // Webpack/Rspack lazy chunks are named from runtime tables, not static import
+  // syntax. Confirm that a marker in a current lazy chunk is still accepted.
+  mkdirSync(path.join(workspace, 'node_modules/.bin'), { recursive: true });
+  const fakeWebpack = path.join(workspace, 'node_modules/.bin/webpack');
+  writeFileSync(fakeWebpack, `#!/usr/bin/env node
+const fs = require('node:fs');
+fs.mkdirSync('dist', { recursive: true });
+const build = () => {
+  fs.writeFileSync('dist/index.html', '<script src="/runtime.js"></script>');
+  fs.writeFileSync('dist/runtime.js', 'globalThis.loadLazy = () => "dynamic-current.js";');
+  fs.writeFileSync('dist/dynamic-current.js', fs.readFileSync('src/App.tsx'));
+  console.log('webpack compiled successfully');
+};
+build();
+let timer;
+fs.watch('src/App.tsx', () => { clearTimeout(timer); timer = setTimeout(build, 20); });
+setInterval(() => {}, 1000);
+`);
+  chmodSync(fakeWebpack, 0o755);
+  writeFileSync(path.join(workspace, 'src/App.tsx'), 'export const App = () => null;\n');
+  const lazyReportPath = path.join(workspace, 'evidence', 'webpack-lazy.json');
+  const lazyRun = spawnSync(process.execPath, [path.join(root, 'scripts/check-incremental-correctness.mjs'), 'webpack', workspace, lazyReportPath], {
+    cwd: root,
+    encoding: 'utf8',
+    timeout: 30_000,
+  });
+  assert.equal(lazyRun.status, 0, `${lazyRun.stdout}\n${lazyRun.stderr}`);
+  const lazyReport = JSON.parse(readFileSync(lazyReportPath, 'utf8'));
+  assert.equal(lazyReport.passed, true);
+  assert.equal(lazyReport.edits.length, 3);
 } finally {
   rmSync(workspace, { recursive: true, force: true });
 }

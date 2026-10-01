@@ -88,7 +88,11 @@ function outputHas(marker) {
     });
   }
   const html = path.join(output, 'index.html');
-  if (fs.existsSync(html)) {
+  // Webpack and Rspack encode lazy-chunk relationships in runtime tables rather
+  // than static import specifiers. Scan their emitted JS set; a unique marker
+  // must also disappear after the restoration build, so orphaned stale chunks
+  // cannot create a passing cycle.
+  if (fs.existsSync(html) && !['rspack', 'webpack'].includes(tool)) {
     const source = fs.readFileSync(html, 'utf8');
     const roots = [...source.matchAll(/<script\b[^>]*\bsrc=["']([^"']+\.(?:m?js|cjs))(?:\?[^"']*)?["']/gi)]
       .map(match => match[1]);
