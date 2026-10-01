@@ -1,0 +1,262 @@
+assets by path assets/*.js 10.6 MiB 162 assets
+assets by path assets/*.ttf 502 KiB 20 assets
+assets by path assets/*.woff 296 KiB 20 assets
+assets by path assets/*.woff2 254 KiB
+  asset assets/KaTeX_AMS-Regular.73ea273a.woff2 27.4 KiB [emitted] [immutable] [from: node_modules/katex/dist/fonts/KaTeX_AMS-Regular.woff2]
+  + 19 assets
+assets by path assets/*.css 265 KiB
+  assets by chunk 92.3 KiB (id hint: vendors) 2 assets
+  + 6 assets
+assets by path assets/*.png 3.34 KiB
+  asset assets/marker-icon.2b3e1faf.png 1.43 KiB [emitted] [immutable] [from: node_modules/leaflet/dist/images/marker-icon.png]
+  + 2 assets
+asset assets/maplibre-gl-worker.6fccecbc.mjs 18.5 KiB [emitted] [immutable] [from: node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url] [minimized] (auxiliary id hint: vendors)
+asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.c2470945.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 28311 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.56d33de7.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.53add3f6.js 4.12 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.56d33de7.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 25733 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.c2470945.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.1a114ce2.js 4.08 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.c2470945.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 24956 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.da969825.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.de3375e6.js 4.12 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.da969825.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 24925 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.c2470945.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.1a114ce2.js 4.08 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.c2470945.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 24661 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.a922f2bb.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.2d1d962b.js 4.12 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.a922f2bb.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 24260 ms
+assets by status 11.2 MiB [cached] 232 assets
+assets by path . 714 KiB
+  asset assets/main.c2470945.js 709 KiB [emitted] [immutable] [minimized] [big] (name: main) 1 related asset
+  asset assets/3369.1a114ce2.js 4.08 KiB [emitted] [immutable] [minimized] 1 related asset
+  asset index.html 1.12 KiB [emitted]
+Entrypoint main [big] 2.05 MiB (8.13 MiB) = assets/1519.a056d714.js 1.23 MiB assets/main.73eb64ce.css 137 KiB assets/main.c2470945.js 709 KiB 3 auxiliary assets
+orphan modules 6.51 MiB (javascript) 1.03 MiB (asset) 5.27 KiB (runtime) [orphan] 1819 modules
+runtime modules 14.3 KiB 15 modules
+built modules 19.5 MiB (javascript) 307 KiB (css/mini-extract) 18.6 KiB (asset) [built]
+  modules by path ./node_modules/ 15.3 MiB (javascript) 122 KiB (css/mini-extract) 18.6 KiB (asset)
+    javascript modules 15.3 MiB 974 modules
+    css modules 122 KiB 4 modules
+    asset modules 18.6 KiB (asset) 4.25 KiB (javascript)
+      ./node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url 18.6 KiB (asset) 42 bytes (javascript) [built] [code generated]
+      + 2 modules
+  modules by path ./src/ 4.21 MiB (javascript) 185 KiB (css/mini-extract)
+    javascript modules 2.34 MiB 187 modules
+    json modules 1.87 MiB 45 modules
+    css modules 185 KiB
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./tailwind-entry-loader.cjs!./src/index.css 180 KiB [built] [code generated]
+      css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MemoEditor/Editor/editor.css 4.85 KiB [built] [code generated]
+
+WARNING in ./node_modules/maplibre-gl/dist/maplibre-gl.mjs 5:36125-36151
+Critical dependency: the request of a dependency is an expression
+ @ ./src/components/map/positron.ts
+ @ ./src/components/map/BasemapLayer.tsx 34:23-43
+ @ ./src/components/MapView/MapCanvas.tsx
+ @ ./src/components/MapView/MapView.tsx 17:0-50 155:20-29 210:30-38
+ @ ./src/pages/Map.tsx 1:0-55 2:15-22
+ @ ./src/router/index.tsx
+ @ ./src/main.tsx
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 1 warning in 24556 ms
+[webpack-cli] Gracefully shutting down. To force exit, press ^C again. Please wait...

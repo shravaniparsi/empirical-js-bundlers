@@ -44,12 +44,46 @@
       "edits": 15,
       "passed": true
     },
-    "realWorldMatrixValidated": false
+    "realWorldMatrixValidated": true,
+    "realWorldMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054",
+      "headSha": "5b52dc84240df365af256cd5b6c5d2bed031ea27",
+      "applications": [
+        "memos",
+        "excalidraw"
+      ],
+      "cells": 10,
+      "edits": 30,
+      "passed": true
+    },
+    "completeMatrix": {
+      "cells": 40,
+      "edits": 120,
+      "passed": true
+    }
   },
   "remaining": [
-    "Validate M3 against the 10 planned Memos and Excalidraw cells",
-    "Finish nine remaining planned M4 correctness cells",
     "Exercise full collector negative controls with real processes and outputs",
     "Pass the 60-second low-load host gate before campaign initialization"
-  ]
+  ],
+  "hmrCorrectnessGate": {
+    "runtime": "Node.js 24.14.0",
+    "workloads": [
+      "xs-50",
+      "m-500",
+      "xl-5000",
+      "bulletproof-react",
+      "memos",
+      "excalidraw"
+    ],
+    "tools": [
+      "vite",
+      "rspack",
+      "webpack"
+    ],
+    "cells": 18,
+    "correctnessEdits": 54,
+    "passed": true,
+    "evidence": "review/confirmatory-collector-v1/m4/acceptance.json"
+  }
 }

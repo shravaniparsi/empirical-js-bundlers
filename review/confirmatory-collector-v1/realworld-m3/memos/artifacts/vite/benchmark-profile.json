@@ -1,0 +1,8 @@
+{
+  "tool": "vite",
+  "toolVersion": "8.3.0",
+  "application": "memos",
+  "applicationCommit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+  "publicationEligible": false,
+  "purpose": "adapter correctness validation"
+}

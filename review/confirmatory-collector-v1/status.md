@@ -21,14 +21,22 @@ The complete 25-cell synthetic matrix passed in [GitHub Actions run 36824749919]
 
 The five-cell Bulletproof React matrix passed in [run 36826015073](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36826015073) at commit `c814928f65ef1157ec62484de16b8ef86ff36569`. An earlier diagnostic run correctly exposed that Rollup retained orphaned content-hashed chunks. The final gate follows the JavaScript graph referenced by the current `index.html`, so stale unreferenced files cannot satisfy or block marker checks. All five final cells passed three edit/revert cycles.
 
-The remaining M3 gate is the 10-cell matrix for Memos and Excalidraw.
+The 10-cell Memos and Excalidraw matrix passed in [run
+36829734054](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054)
+at commit `5b52dc84240df365af256cd5b6c5d2bed031ea27`. Together with the
+accepted synthetic and Bulletproof React runs, M3 now has passing correctness
+evidence for all 40 planned cells and 120 edit/revert cycles. The reports retain
+source, runtime, dependency-lock, adapter, process-log, and acceptance evidence
+and contain no harness latency fields.
 
-The missing matrix is implemented in
-`.github/workflows/incremental-correctness-v1.yml` as the `realworld` suite. It
-checks the pinned Memos and Excalidraw commits across all five production tools,
-uses the same reviewed active-graph targets as the accepted HMR harness, and
-uploads source, runtime, dependency-lock, adapter, process-log, and acceptance
-evidence. Results remain pending until the hosted workflow completes.
+The complete 18-cell M4 matrix also passes on Node 24.14.0. The nine missing
+`xs-50`, `m-500`, and Bulletproof React cells passed in [run
+36829908004](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829908004).
+The earlier runtime revalidation supplies the three `xl-5000` cells, and the
+accepted real-world HMR run supplies the six Memos and Excalidraw cells. Across
+54 correctness edits, the browser document and application state were
+preserved, intentional reload controls were detected, sources were restored,
+and process trees stopped. Details and the nine new reports are under `m4/`.
 
 ## Primary-host Actions controller
 
@@ -51,4 +59,8 @@ Run with the frozen runtime:
 /Users/shravaniparsi/.cache/codex-runtimes/node-v24.14.0-darwin-arm64/bin/node scripts/audit-confirmatory-protocol.mjs
 ```
 
-The next collector gate is the correctness-only 10-cell Memos and Excalidraw M3 matrix. It must not emit or retain comparative timing values.
+The remaining pre-collection software gate is the full-process negative-control
+suite: source drift, orphan process, malformed timing output, stale completion,
+full reload, and state loss must all be rejected. After that suite passes, the
+dedicated primary host must pass its 60-second environment gate before campaign
+initialization.

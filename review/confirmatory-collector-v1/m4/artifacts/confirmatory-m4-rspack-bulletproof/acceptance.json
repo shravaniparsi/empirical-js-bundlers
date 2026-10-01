@@ -1,0 +1,65 @@
+{
+  "kind": "bulletproof-react-hmr-correctness-not-latency-data",
+  "application": "bulletproof-react",
+  "tool": "rspack",
+  "publicationEligible": false,
+  "node": "v24.14.0",
+  "target": "src/features/auth/components/register-form.tsx",
+  "originalSourceSha256": "2e2904429abb8ce0f0d6ad89cdc9ac824ec2ea9364cedb8da73a630d07e73f1f",
+  "lockSha256": "0138dba0f27b07f3144b77ab146692db5036601f9206ded4bcc2ff8f79e51aba",
+  "developmentProfile": {
+    "id": "development-v1",
+    "kind": "realworld",
+    "tool": "rspack",
+    "publicationEligible": false,
+    "productionBaseSha256": "44718783c87d636b179fabc3b43d48bd960d8dc721a423b1b57034843cbef46e",
+    "changes": [
+      "Enable historyApiFallback for direct SPA routes",
+      "Disable serve-mode lazy compilation to avoid dynamic-chunk fallback races"
+    ],
+    "effectiveConfigSha256": "8933219942837ac383838c4c907cc9408ea01338c792bdff41551eac48371126"
+  },
+  "checks": {
+    "fixtureApiReady": true,
+    "developmentServerReady": true,
+    "applicationStateEstablished": true,
+    "threeSettledEdits": true,
+    "reloadControlDetected": true,
+    "sourceRestored": true,
+    "developmentServerStopped": true,
+    "fixtureApiStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "benchmark-hmr-edit-1",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    },
+    {
+      "edit": 2,
+      "marker": "benchmark-hmr-edit-2",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    },
+    {
+      "edit": 3,
+      "marker": "benchmark-hmr-edit-3",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "passed": true,
+  "browserVersion": "Chrome/153.0.8010.52"
+}
