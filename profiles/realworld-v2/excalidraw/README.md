@@ -18,3 +18,5 @@ node scripts/audit-excalidraw-adapter-profile.mjs /tmp/excalidraw-profile-audit.
 ```
 
 The GitHub Actions workflow performs clean source checkout, source verification, npm installation, native build, output validation, and browser acceptance independently for each tool.
+
+Vite, Rspack, and Webpack additionally expose development adapters for HMR correctness checks. The acceptance harness draws a real rectangle, edits the pinned `MainMenu` component three times, verifies the browser document and scene survive after each settle period, exercises a deliberate reload control, and restores the source byte-for-byte. Esbuild and Rollup remain production-build comparators because these adapters do not provide native HMR servers. HMR acceptance reports contain no latency values and are not publication-eligible measurements.

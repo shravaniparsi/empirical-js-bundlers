@@ -16,6 +16,7 @@ const packageJson = {
   engines: { node: '24.14.0' },
   scripts: {
     build: 'node adapter-build.mjs',
+    dev: 'node adapter-dev.mjs',
     postinstall: 'node apply-protobuf-patch.mjs',
     verify: 'node verify-profile.mjs',
   },

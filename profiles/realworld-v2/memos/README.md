@@ -6,4 +6,6 @@ All tools use one exact application manifest, one lockfile, the Babel React Comp
 
 Bundlers retain their native module graph, chunking, asset emission, CSS integration, and minification stages. Resource-query adapters preserve Memos's three Vite-specific contracts: CSS as text for `?raw` and `?inline`, and a URL for the standalone MapLibre worker file with `?worker&url`. These differences are part of the toolchain adapter and must be described in the paper.
 
-The profile requires Node 24.14.0. Moving the confirmatory campaign to Node 24 remains a separate revalidation decision. Every report produced here is marked `publicationEligible: false`.
+The profile requires Node 24.14.0. Vite, Rspack, and Webpack also expose development adapters for HMR correctness checks. Those checks edit the pinned `SignUp` component, require both credential fields and the browser document to survive three settled updates, exercise a deliberate reload control, and restore the source byte-for-byte. Esbuild and Rollup remain production-build comparators because these adapters do not provide native HMR servers.
+
+Every report produced here is marked `publicationEligible: false`; correctness checks cannot be analyzed as timing observations.

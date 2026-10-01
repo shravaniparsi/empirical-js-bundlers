@@ -12,11 +12,15 @@ const lockBytes = fs.readFileSync(path.join(profile, 'common/package-lock.json')
 const lock = JSON.parse(lockBytes);
 const sourceRegistry = JSON.parse(fs.readFileSync(path.join(root, 'workloads/realworld-v1/registry.json'))).applications.find((row) => row.id === 'excalidraw');
 const errors = [];
+const sorted = (value) => Object.fromEntries(Object.entries(value || {}).sort());
 if (!sourceRegistry) errors.push('Excalidraw is absent from the pinned workload registry');
 if (manifest.packageManager !== 'npm@11.9.0') errors.push('Adapter package manager must be npm@11.9.0');
 if (manifest.engines?.node !== '24.14.0') errors.push('Adapter Node engine must be 24.14.0');
+if (manifest.scripts?.dev !== 'node adapter-dev.mjs') errors.push('Development adapter command is not pinned');
 if (lock.lockfileVersion !== 3) errors.push('Expected npm lockfileVersion 3');
 if (lock.packages?.['']?.name !== manifest.name) errors.push('Lockfile root does not match package manifest');
+if (JSON.stringify(sorted(lock.packages?.['']?.devDependencies)) !== JSON.stringify(sorted(manifest.devDependencies))) errors.push('Lockfile root tool dependencies differ from package manifest');
+if (Object.values(lock.packages || {}).filter((entry) => entry?.link).length !== 10) errors.push('Lockfile does not contain all ten pinned upstream workspace links');
 for (const name of ['vite', '@rspack/core', 'esbuild', 'webpack', 'rollup']) {
   const version = manifest.devDependencies?.[name];
   if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version || '')) errors.push(`${name} is not exactly pinned`);
@@ -26,6 +30,9 @@ for (const tool of ['vite', 'rspack', 'esbuild', 'webpack', 'rollup']) {
   const metadata = JSON.parse(fs.readFileSync(path.join(profile, tool, 'profile.json')));
   if (metadata.publicationEligible !== false) errors.push(`${tool} profile is not quarantined from publication claims`);
   if (!fs.existsSync(path.join(profile, tool, 'adapter-build.mjs'))) errors.push(`${tool} adapter build is absent`);
+}
+for (const tool of ['vite', 'rspack', 'webpack']) {
+  if (!fs.existsSync(path.join(profile, tool, 'adapter-dev.mjs'))) errors.push(`${tool} development adapter is absent`);
 }
 const report = {
   kind: 'excalidraw-five-tool-adapter-profile-audit',

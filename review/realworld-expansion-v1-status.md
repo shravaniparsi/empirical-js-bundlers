@@ -21,4 +21,4 @@ Node 24.14.0 is now the frozen common runtime. Run [36819476193](https://github.
 
 The expanded synthetic HMR matrix also passed all six development-v1 cells (three tools × 200/5,000 modules). See the continuation status for scopes and audit evidence.
 
-Remaining sequence: extend HMR to the real-world profiles; freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.
+Remaining sequence: complete the implemented six-cell real-world HMR cloud acceptance (the local Excalidraw/Vite pilot passes); freeze the sampling and analysis protocol; collect new randomized independent sessions; update analysis and manuscript.

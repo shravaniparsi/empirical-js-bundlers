@@ -14,11 +14,13 @@ const lockBytes = fs.readFileSync(path.join(profile, 'common/package-lock.json')
 const lock = JSON.parse(lockBytes);
 const errors = [];
 const exact = (value) => typeof value === 'string' && /^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(value);
+const sorted = (value) => Object.fromEntries(Object.entries(value || {}).sort());
 
 if (manifest.engines?.node !== '24.14.0') errors.push('Node engine must be exactly 24.14.0');
 if (manifest.packageManager !== 'npm@11.9.0') errors.push('Package manager must be exactly npm 11.9.0');
+if (manifest.scripts?.dev !== 'node adapter-dev.mjs') errors.push('Development adapter command is not pinned');
 for (const [section, expected] of [['dependencies', application], ['devDependencies', tools]]) {
-  if (JSON.stringify(manifest[section]) !== JSON.stringify(Object.fromEntries(Object.entries(expected).sort()))) {
+  if (JSON.stringify(sorted(manifest[section])) !== JSON.stringify(sorted(expected))) {
     errors.push(`${section} does not match its generated source registry`);
   }
   for (const [name, version] of Object.entries(expected)) {
@@ -32,12 +34,15 @@ for (const [section, expected] of [['dependencies', application], ['devDependenc
   }
 }
 const lockRoot = lock.packages?.[''];
-if (JSON.stringify(lockRoot?.dependencies) !== JSON.stringify(manifest.dependencies)) errors.push('Lockfile root application dependencies differ from package.json');
-if (JSON.stringify(lockRoot?.devDependencies) !== JSON.stringify(manifest.devDependencies)) errors.push('Lockfile root tool dependencies differ from package.json');
+if (JSON.stringify(sorted(lockRoot?.dependencies)) !== JSON.stringify(sorted(manifest.dependencies))) errors.push('Lockfile root application dependencies differ from package.json');
+if (JSON.stringify(sorted(lockRoot?.devDependencies)) !== JSON.stringify(sorted(manifest.devDependencies))) errors.push('Lockfile root tool dependencies differ from package.json');
 for (const tool of ['vite', 'rspack', 'esbuild', 'webpack', 'rollup']) {
   const metadata = JSON.parse(fs.readFileSync(path.join(profile, tool, 'profile.json')));
   if (metadata.publicationEligible !== false) errors.push(`${tool} profile is not quarantined from publication claims`);
   if (!fs.existsSync(path.join(profile, tool, 'adapter-build.mjs'))) errors.push(`${tool} adapter-build.mjs is absent`);
+}
+for (const tool of ['vite', 'rspack', 'webpack']) {
+  if (!fs.existsSync(path.join(profile, tool, 'adapter-dev.mjs'))) errors.push(`${tool} development adapter is absent`);
 }
 const report = {
   kind: 'memos-five-tool-adapter-profile-audit',

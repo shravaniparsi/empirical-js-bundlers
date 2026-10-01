@@ -1,0 +1,85 @@
+name: Real-world HMR correctness v1
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/realworld-v2/memos/**'
+      - 'profiles/realworld-v2/excalidraw/**'
+      - 'profiles/runtime-v1/**'
+      - 'scripts/check-realworld-hmr.mjs'
+      - 'scripts/prepare-memos-adapter.mjs'
+      - 'scripts/prepare-excalidraw-adapter.mjs'
+      - 'scripts/verify-realworld-source.mjs'
+      - '.github/workflows/realworld-hmr-v1.yml'
+permissions:
+  contents: read
+jobs:
+  hmr:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        application: [memos, excalidraw]
+        tool: [vite, rspack, webpack]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.application == 'memos' && 'usememos/memos' || 'excalidraw/excalidraw' }}
+          ref: ${{ matrix.application == 'memos' && '05a2c6db7a3e926c9142a635f42f7af0f078c81d' || '5db42c3ddbbdc44d10120ab2f18e0864d083e268' }}
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - uses: actions/setup-go@v5
+        if: matrix.application == 'memos'
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
+      - name: Install harness
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Record runtime and verify source
+        run: |
+          mkdir -p hmr-evidence
+          node scripts/audit-runtime-policy.mjs hmr-evidence/runtime.json
+          node scripts/verify-realworld-source.mjs '${{ matrix.application }}' upstream > hmr-evidence/source.json
+      - name: Prepare adapter
+        run: |
+          if [ '${{ matrix.application }}' = memos ]; then
+            node scripts/prepare-memos-adapter.mjs upstream/web adapter-workspace '${{ matrix.tool }}'
+          else
+            node scripts/prepare-excalidraw-adapter.mjs upstream adapter-workspace '${{ matrix.tool }}'
+          fi
+          cp adapter-workspace/adapter-preparation.json hmr-evidence/
+          cp adapter-workspace/benchmark-profile.json hmr-evidence/
+          sha256sum adapter-workspace/package-lock.json > hmr-evidence/package-lock.sha256
+      - name: Install exact adapter closure
+        working-directory: adapter-workspace
+        run: |
+          if [ '${{ matrix.application }}' = memos ]; then
+            npx --yes npm@11.9.0 ci --include=dev --no-audit --no-fund
+          else
+            npx --yes npm@11.9.0 ci --include=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund
+          fi
+      - name: Compile original Memos backend
+        if: matrix.application == 'memos'
+        working-directory: upstream
+        run: go build -mod=readonly -o ../memos-server ./cmd/memos > ../hmr-evidence/backend-build.log 2>&1
+      - name: Exercise three settled edits, state retention, reload detector and restoration
+        timeout-minutes: 15
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: node scripts/check-realworld-hmr.mjs '${{ matrix.application }}' '${{ matrix.tool }}' adapter-workspace hmr-evidence/acceptance.json ${{ matrix.application == 'memos' && 'memos-server' || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: realworld-hmr-v1-${{ matrix.application }}-${{ matrix.tool }}
+          path: hmr-evidence/
+          retention-days: 30
