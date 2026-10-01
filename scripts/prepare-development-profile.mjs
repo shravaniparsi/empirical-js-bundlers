@@ -14,10 +14,12 @@ const hash = file => createHash('sha256').update(fs.readFileSync(file)).digest('
 const canonical = new URL(`../profiles/production-v1/${kind}/${tool}/${name}`, import.meta.url);
 if (hash(config) !== hash(canonical)) throw new Error('Workspace does not match canonical production-v1 configuration');
 const receipt = { id: 'development-v1', kind, tool, publicationEligible: false, productionBaseSha256: hash(config), changes: [] };
-if (tool === 'rspack') {
-  fs.copyFileSync(config, path.join(workspace, 'rspack.production-base.cjs'), fs.constants.COPYFILE_EXCL);
-  fs.copyFileSync(new URL('../profiles/development-v1/rspack.config.cjs', import.meta.url), config);
+if (tool === 'rspack' || tool === 'webpack') {
+  const baseName = `${tool}.production-base.cjs`;
+  fs.copyFileSync(config, path.join(workspace, baseName), fs.constants.COPYFILE_EXCL);
+  fs.copyFileSync(new URL(`../profiles/development-v1/${tool}.config.cjs`, import.meta.url), config);
   receipt.changes.push('Enable historyApiFallback for direct SPA routes');
+  if (tool === 'rspack') receipt.changes.push('Disable serve-mode lazy compilation to avoid dynamic-chunk fallback races');
 }
 receipt.effectiveConfigSha256 = hash(config);
 fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + '\n', { flag: 'wx' });

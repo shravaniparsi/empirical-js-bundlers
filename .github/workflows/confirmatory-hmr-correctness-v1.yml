@@ -49,8 +49,6 @@ jobs:
         timeout-minutes: 15
         env:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
-          HMR_STATE_ROUTE: '/'
-          HMR_STATE_SELECTOR: 'input[id="AuthTextArea-field"]'
         run: |
           mkdir -p hmr-evidence
           node scripts/audit-runtime-policy.mjs hmr-evidence/runtime.json

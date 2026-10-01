@@ -74,6 +74,7 @@ try {
     const text = `${heading} edit ${edit}`;
     fs.writeFileSync(source, original.replace(headingMarkup, headingMarkup.replace(heading, text)));
     await page.waitForFunction(text => document.querySelector('h1')?.textContent === text, { timeout: 60000 }, text);
+    await new Promise(resolve => setTimeout(resolve, 1000));
     const observedToken = await page.evaluate(() => window.__benchmarkDocumentToken);
     const observedState = await page.$eval(input, element => element.value);
     const passed = observedToken === token && observedState === state && navigations === 0;
