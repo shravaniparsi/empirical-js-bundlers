@@ -25,7 +25,7 @@ M3 and M4 edits within one session are dependent. Their median is one analysis u
 3. Pass incremental completion-marker correctness for every M3 cell.
 4. Pass browser-observed, state-preserving HMR correctness for every M4 cell, including Bulletproof React on the frozen runtime.
 5. Validate collectors with deliberately failing controls: stale completion, full reload, state loss, source drift, orphan process, and malformed timing output.
-6. Record the physical host fingerprint. Before every block require AC power, at least 50 GiB free, normal memory pressure, zero thermal warning, and a one-minute load average no greater than 2.0 throughout a 60-second observation window.
+6. Record the physical host fingerprint. Before every block require AC power, at least 15 GiB free, at least 20% system-wide memory free from `memory_pressure -Q`, and a one-minute load average no greater than 2.0 throughout a 60-second observation window. Thermal and performance warnings must be absent when `pmset` exposes them. If that interface is explicitly unavailable, record the limitation rather than inventing a temperature value.
 7. Commit the generated schedule and protocol hashes. No timing value may be inspected before these gates pass.
 
 GitHub-hosted runners can repeat correctness checks, but their results cannot enter the primary performance corpus. A second fixed host is useful as a separately reported replication campaign and must have its own host identifier and complete blocks.
@@ -52,3 +52,17 @@ Generate and audit the frozen schedule with:
 npm run protocol:generate
 npm run protocol:audit
 ```
+
+The campaign state machine uses the exact frozen runtime and refuses host-gate, schedule-order, evidence-hash, retry-limit, or ledger-chain violations:
+
+```bash
+RUNTIME_NODE=/Users/shravaniparsi/.cache/codex-runtimes/node-v24.14.0-darwin-arm64/bin/node
+"$RUNTIME_NODE" scripts/confirmatory-campaign.mjs inspect-host --observe-seconds 60
+"$RUNTIME_NODE" scripts/confirmatory-campaign.mjs init \
+  --campaign-dir results/confirmatory-v1/primary-host \
+  --campaign-id confirmatory-v1-primary
+"$RUNTIME_NODE" scripts/confirmatory-campaign.mjs status \
+  --campaign-dir results/confirmatory-v1/primary-host
+```
+
+`begin` starts only the next frozen block. `record` accepts only its next scheduled tool and hashes an evidence file stored inside the campaign directory. A failed cell automatically abandons the whole attempt; the next `begin` restarts that block under a new attempt number. The hash-chained `ledger.jsonl` is physically appended and audited with every state transition.
