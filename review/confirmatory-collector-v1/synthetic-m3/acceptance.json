@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic-incremental-correctness-matrix",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36824749919",
+  "headSha": "23dd28348477db4eb8abd63a8eb191a58f863208",
+  "node": "24.14.0",
+  "cells": 25,
+  "edits": 75,
+  "passed": true,
+  "reports": [
+    {
+      "tool": "esbuild",
+      "size": "l-2000",
+      "report": "esbuild-l-2000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "esbuild",
+      "size": "m-500",
+      "report": "esbuild-m-500.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "esbuild",
+      "size": "s-200",
+      "report": "esbuild-s-200.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "esbuild",
+      "size": "xl-5000",
+      "report": "esbuild-xl-5000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "esbuild",
+      "size": "xs-50",
+      "report": "esbuild-xs-50.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "size": "l-2000",
+      "report": "rollup-l-2000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "size": "m-500",
+      "report": "rollup-m-500.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "size": "s-200",
+      "report": "rollup-s-200.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "size": "xl-5000",
+      "report": "rollup-xl-5000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "size": "xs-50",
+      "report": "rollup-xs-50.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "size": "l-2000",
+      "report": "rspack-l-2000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "size": "m-500",
+      "report": "rspack-m-500.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "size": "s-200",
+      "report": "rspack-s-200.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "size": "xl-5000",
+      "report": "rspack-xl-5000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "size": "xs-50",
+      "report": "rspack-xs-50.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "size": "l-2000",
+      "report": "vite-l-2000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "size": "m-500",
+      "report": "vite-m-500.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "size": "s-200",
+      "report": "vite-s-200.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "size": "xl-5000",
+      "report": "vite-xl-5000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "size": "xs-50",
+      "report": "vite-xs-50.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "size": "l-2000",
+      "report": "webpack-l-2000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "size": "m-500",
+      "report": "webpack-m-500.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "size": "s-200",
+      "report": "webpack-s-200.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "size": "xl-5000",
+      "report": "webpack-xl-5000.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "size": "xs-50",
+      "report": "webpack-xs-50.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    }
+  ]
+}

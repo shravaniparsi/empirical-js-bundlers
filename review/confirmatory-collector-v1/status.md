@@ -15,7 +15,11 @@ The host gate checks exact Node 24.14.0, arm64 architecture, AC power, free disk
 1. the selected tool emits a new success event after the edit; and
 2. emitted output contains that edit's unique marker.
 
-The negative controls confirm that a stale pre-edit success, a post-edit success for the wrong output, a failed compilation, an unreadable output, and a timeout cannot produce an accepted completion. Split stdout chunks are also covered. These tests validate the primitive only; every one of the 40 planned tool/workload M3 cells must still demonstrate its actual success/failure messages, output marker, source restoration, and process cleanup before measurement.
+The negative controls confirm that a stale pre-edit success, a post-edit success for the wrong output, a failed compilation, an unreadable output, and a timeout cannot produce an accepted completion. Split stdout chunks are also covered.
+
+The complete 25-cell synthetic matrix passed in [GitHub Actions run 36824749919](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36824749919) at commit `23dd28348477db4eb8abd63a8eb191a58f863208`. All five tools passed at all five scales. Each cell performed three edit/revert cycles, required the unique edit marker in emitted JavaScript, rejected completion for stale output, restored the source byte-for-byte, and terminated its process tree. The 25 reports cover 75 accepted correctness edits and contain no harness latency fields.
+
+The remaining M3 gate is the 15-cell real-world matrix: five tools across Bulletproof React, Memos, and Excalidraw.
 
 ## Reproduction
 
@@ -27,4 +31,4 @@ Run with the frozen runtime:
 /Users/shravaniparsi/.cache/codex-runtimes/node-v24.14.0-darwin-arm64/bin/node scripts/audit-confirmatory-protocol.mjs
 ```
 
-The next collector gate is a correctness-only M3 matrix over five tools and eight workloads. It must not emit or retain comparative timing values.
+The next collector gate is the correctness-only 15-cell real-world M3 matrix. It must not emit or retain comparative timing values.

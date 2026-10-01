@@ -30,10 +30,17 @@
       "split output chunks"
     ],
     "passed": true,
-    "actualToolWorkloadMatrixValidated": false
+    "syntheticMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36824749919",
+      "headSha": "23dd28348477db4eb8abd63a8eb191a58f863208",
+      "cells": 25,
+      "edits": 75,
+      "passed": true
+    },
+    "realWorldMatrixValidated": false
   },
   "remaining": [
-    "Validate M3 against all 40 planned tool/workload cells",
+    "Validate M3 against the 15 planned real-world tool/workload cells",
     "Finish nine remaining planned M4 correctness cells",
     "Exercise full collector negative controls with real processes and outputs",
     "Pass the 60-second low-load host gate before campaign initialization"
