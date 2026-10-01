@@ -10,6 +10,7 @@ const profile = path.join(root, 'profiles/realworld-v2/excalidraw');
 const manifest = JSON.parse(fs.readFileSync(path.join(profile, 'common/package.json')));
 const lockBytes = fs.readFileSync(path.join(profile, 'common/package-lock.json'));
 const lock = JSON.parse(lockBytes);
+const lockSha256 = crypto.createHash('sha256').update(lockBytes).digest('hex');
 const sourceRegistry = JSON.parse(fs.readFileSync(path.join(root, 'workloads/realworld-v1/registry.json'))).applications.find((row) => row.id === 'excalidraw');
 const errors = [];
 const sorted = (value) => Object.fromEntries(Object.entries(value || {}).sort());
@@ -29,6 +30,7 @@ for (const name of ['vite', '@rspack/core', 'esbuild', 'webpack', 'rollup']) {
 for (const tool of ['vite', 'rspack', 'esbuild', 'webpack', 'rollup']) {
   const metadata = JSON.parse(fs.readFileSync(path.join(profile, tool, 'profile.json')));
   if (metadata.publicationEligible !== false) errors.push(`${tool} profile is not quarantined from publication claims`);
+  if (metadata.lockfileSha256 !== lockSha256) errors.push(`${tool} profile lock hash differs from the canonical lockfile`);
   if (!fs.existsSync(path.join(profile, tool, 'adapter-build.mjs'))) errors.push(`${tool} adapter build is absent`);
 }
 for (const tool of ['vite', 'rspack', 'webpack']) {
@@ -40,7 +42,7 @@ const report = {
   publicationEligible: false,
   applicationCommit: sourceRegistry?.commit,
   lockfileVersion: lock.lockfileVersion,
-  lockfileSha256: crypto.createHash('sha256').update(lockBytes).digest('hex'),
+  lockfileSha256: lockSha256,
   workspacePackages: Object.keys(lock.packages || {}).filter((name) => lock.packages[name]?.link).length,
   errors,
 };
