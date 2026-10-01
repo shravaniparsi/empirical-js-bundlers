@@ -96,8 +96,8 @@ export class IncrementalCompletionGate {
 
 export const incrementalCompletionPatterns = Object.freeze({
   vite: { successPattern: /built in/i, failurePattern: /error during build|build failed/i },
-  rspack: { successPattern: /compiled successfully/i, failurePattern: /compiled with \d+ error|failed to compile/i },
-  webpack: { successPattern: /compiled successfully/i, failurePattern: /compiled with \d+ error|failed to compile/i },
+  rspack: { successPattern: /compiled (?:successfully|with \d+ warnings?)/i, failurePattern: /compiled with \d+ errors?|failed to compile/i },
+  webpack: { successPattern: /compiled (?:successfully|with \d+ warnings?)/i, failurePattern: /compiled with \d+ errors?|failed to compile/i },
   esbuild: { successPattern: /build finished \(0 errors\)/i, failurePattern: /build finished \([1-9]\d* errors?\)|build failed/i },
   rollup: { successPattern: /created .+ in /i, failurePattern: /rollup error|\[!\] error/i }
 });

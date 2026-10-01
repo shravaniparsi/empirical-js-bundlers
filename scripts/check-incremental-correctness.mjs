@@ -50,9 +50,9 @@ const commands = {
 };
 const initialPatterns = {
   vite: /built in/i,
-  rspack: /compiled successfully/i,
+  rspack: /compiled (?:successfully|with \d+ warnings?)/i,
   esbuild: /initial build finished \(0 errors\)/i,
-  webpack: /compiled successfully/i,
+  webpack: /compiled (?:successfully|with \d+ warnings?)/i,
   rollup: /created .+ in /i,
 };
 const [command, args] = commands[tool];

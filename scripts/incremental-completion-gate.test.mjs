@@ -33,6 +33,13 @@ chunked.ingest('bu');
 chunked.ingest('ilt in 25ms\n');
 assert.equal((await chunkedProbe.promise).completionLine, 'built in 25ms');
 
+// Successful compilations with warnings are terminal; warnings are retained as
+// evidence but must not be mistaken for a timeout or an error.
+const warned = new IncrementalCompletionGate({ ...incrementalCompletionPatterns.webpack });
+const warnedProbe = warned.arm({ marker: 'edit-warning', markerPresent: async () => true, timeoutMs: 1000 });
+warned.ingest('webpack 5.111.1 compiled with 1 warning in 48580 ms\n');
+assert.match((await warnedProbe.promise).completionLine, /1 warning/);
+
 // A failed build rejects immediately even if an older output contains a marker.
 const failed = new IncrementalCompletionGate({ ...incrementalCompletionPatterns.rspack });
 const failedProbe = failed.arm({ marker: 'edit-3', markerPresent: async () => true, timeoutMs: 1000 });
