@@ -83,6 +83,11 @@
   "environmentGate": {
     "power": "AC power required",
     "concurrency": "no other benchmark cell and no user-initiated heavy workload",
+    "minimumFreeDiskGiB": 50,
+    "maximumOneMinuteLoadAverage": 2.0,
+    "loadGateObservationSeconds": 60,
+    "memoryPressure": "macOS memory-pressure status must be normal before a block",
+    "thermalState": "macOS thermal warning level must be zero before a block",
     "preBlock": [
       "runtime and lock hashes match the frozen profile",
       "source and configuration hashes match",
@@ -91,6 +96,15 @@
       "previous benchmark process tree is absent"
     ],
     "rule": "if a gate fails, postpone the entire block before observing an outcome"
+  },
+  "timeoutsSeconds": {
+    "M1Readiness": 300,
+    "M2Build": 1200,
+    "M3SessionStartup": 600,
+    "M3Update": 120,
+    "M4SessionStartup": 600,
+    "M4Update": 120,
+    "gracefulShutdown": 30
   },
   "exclusions": {
     "allowed": [

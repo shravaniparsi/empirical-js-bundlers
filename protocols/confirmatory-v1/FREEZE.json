@@ -4,9 +4,9 @@
   "frozenDate": "2026-09-30",
   "publicationEligible": false,
   "files": {
-    "protocols/confirmatory-v1/protocol.json": "2b0f70ac316d2822d2e35f0c603585edcacc0e97dd1f82fcb8d109d0ab379e12",
+    "protocols/confirmatory-v1/protocol.json": "3aa70339cec44b3781b9ba85a7ca616ce860693ad2232c760dae62e3aa6c5192",
     "protocols/confirmatory-v1/schedule.json": "48c8b41ff7383dee808d4cae8a2412ee642980f9d47d31268544b6901d8c005c",
-    "protocols/confirmatory-v1/README.md": "27c73ec071ce4a734fe5ec8a4ecfd91370a7d156b0aa344bdb9008dafebf9476",
+    "protocols/confirmatory-v1/README.md": "b2ca99fb21f3790a4f7e8a46e8ba0fdb401b24b8ff6b421c18e5f7419b39f8a3",
     "protocols/confirmatory-v1/analysis-plan.md": "be13f942cb236c596434550a95c8281b5be0fae299fa6e08520627dabc0fea32"
   },
   "note": "Any content change requires a new protocol version and a new freeze manifest before additional confirmatory measurements."

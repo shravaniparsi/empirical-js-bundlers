@@ -25,7 +25,7 @@ M3 and M4 edits within one session are dependent. Their median is one analysis u
 3. Pass incremental completion-marker correctness for every M3 cell.
 4. Pass browser-observed, state-preserving HMR correctness for every M4 cell, including Bulletproof React on the frozen runtime.
 5. Validate collectors with deliberately failing controls: stale completion, full reload, state loss, source drift, orphan process, and malformed timing output.
-6. Record the physical host fingerprint and pre-block load/free-disk/power gates.
+6. Record the physical host fingerprint. Before every block require AC power, at least 50 GiB free, normal memory pressure, zero thermal warning, and a one-minute load average no greater than 2.0 throughout a 60-second observation window.
 7. Commit the generated schedule and protocol hashes. No timing value may be inspected before these gates pass.
 
 GitHub-hosted runners can repeat correctness checks, but their results cannot enter the primary performance corpus. A second fixed host is useful as a separately reported replication campaign and must have its own host identifier and complete blocks.
