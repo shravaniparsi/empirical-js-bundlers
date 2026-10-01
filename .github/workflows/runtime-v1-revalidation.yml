@@ -5,7 +5,16 @@ on:
     branches: [codex/realworld-expansion-v1]
     paths:
       - 'profiles/runtime-v1/**'
+      - 'profiles/production-v1/**'
       - 'scripts/audit-runtime-policy.mjs'
+      - 'scripts/audit-production-profile.mjs'
+      - 'scripts/run-production-profile.mjs'
+      - 'scripts/prepare-production-profile.mjs'
+      - 'scripts/prepare-development-profile.mjs'
+      - 'scripts/check-production-contract.mjs'
+      - 'scripts/check-production-browser.mjs'
+      - 'scripts/check-realworld-browser.mjs'
+      - 'scripts/check-hmr-browser.mjs'
       - '.github/workflows/runtime-v1-revalidation.yml'
 permissions:
   contents: read
