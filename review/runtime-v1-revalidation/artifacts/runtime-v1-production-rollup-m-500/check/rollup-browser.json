@@ -1,0 +1,341 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/m-500-corrected-runtime-v1-rollup-m-500/rollup/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main-CCmpQ1VP.css",
+      "status": 200
+    },
+    {
+      "url": "/main-CCmpQ1VP.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AuthHeatmap-BzwNjb0c.js",
+      "status": 200
+    },
+    {
+      "url": "/BarChart-PzpYOQd5.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/DashboardPieChart-CbQrxepg.js",
+      "status": 200
+    },
+    {
+      "url": "/OrdersDivider1-C4j0VtCg.js",
+      "status": 200
+    },
+    {
+      "url": "/DashboardTag-CwIBsHPW.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/OrdersSticky-az1W1LXm.js",
+      "status": 200
+    },
+    {
+      "url": "/OrdersAvatar1-D4VqocQa.js",
+      "status": 200
+    },
+    {
+      "url": "/UsersHeader-DMjxU7lu.js",
+      "status": 200
+    },
+    {
+      "url": "/AnalyticsCollapse-C-AfVwYh.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/NotificationsLabel-CkyaXaCm.js",
+      "status": 200
+    },
+    {
+      "url": "/BillingTimePicker-CjXXOq1i.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AnalyticsTag-vTbZNIkA.js",
+      "status": 200
+    },
+    {
+      "url": "/AnalyticsTreeView1-DU6KbQ74.js",
+      "status": 200
+    },
+    {
+      "url": "/InventoryTooltip-B6bvW8EL.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReportsSpinner-X7B_4NlP.js",
+      "status": 200
+    },
+    {
+      "url": "/ReportsStepper-C2aDnlnj.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/BillingTextArea-BUyYlCFf.js",
+      "status": 200
+    },
+    {
+      "url": "/InventoryStepper-BwxM0v1U.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ShippingFileUpload-DJo4kLmR.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/PaymentsCard-B7NcjrFd.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReviewsPopover-CdiT4gDa.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/main-CCmpQ1VP.css",
+      "status": 200
+    },
+    {
+      "url": "/main-CCmpQ1VP.js",
+      "status": 200
+    },
+    {
+      "url": "/AuthHeatmap-BzwNjb0c.js",
+      "status": 200
+    },
+    {
+      "url": "/BarChart-PzpYOQd5.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "ShopDash",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 1451
+    },
+    {
+      "path": "/dashboard",
+      "mainTextLength": 1150
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1242
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 1083
+    },
+    {
+      "path": "/notifications",
+      "mainTextLength": 1155
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 1162
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 1166
+    },
+    {
+      "path": "/billing",
+      "mainTextLength": 1058
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 1118
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 1613
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 1040
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 1241
+    }
+  ],
+  "fixture": {
+    "size": 500,
+    "seed": 42,
+    "expectedRoutes": 12
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

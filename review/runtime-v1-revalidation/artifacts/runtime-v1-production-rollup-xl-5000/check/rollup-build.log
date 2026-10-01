@@ -1,0 +1,11 @@
+
+> benchmark-production-v1-synthetic-rollup@1.0.0 build
+> NODE_ENV=production rollup -c rollup.config.mjs
+
+[36m
+[1msrc/main.tsx[22m → [1mdist[22m...[39m
+[1m[33m(!) Circular dependencies[39m[22m
+node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+node_modules/recharts/es6/util/ChartUtils.js -> node_modules/recharts/es6/util/getLegendProps.js -> node_modules/recharts/es6/util/ChartUtils.js
+[32mcreated [1mdist[22m in [1m12m 23.6s[22m[39m

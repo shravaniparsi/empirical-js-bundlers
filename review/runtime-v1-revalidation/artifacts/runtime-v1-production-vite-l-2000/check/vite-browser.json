@@ -1,0 +1,1205 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/l-2000-corrected-runtime-v1-vite-l-2000/vite/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-CVnaFy26.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/generateCategoricalChart-CDUenrjF.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-3VdiR9jf.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersHeatmap-BWUT5dEX.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersHeatmap-BRMGTnkO.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthStepper-D1RELuwX.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthNavBar-C2Hu4Yrx.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthNavBar-Ku9pK08i.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthStepper-pZjXABZF.css",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/OrdersAvatar-aY7WHl8t.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/OrdersAvatar-DkK5A_mE.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/OrdersResponsive-CxhDfkgx.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/OrdersResponsive-C2medytd.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersPagination-C4cdTcV5.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/TagsDetail-CX68zdx3.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersPagination-B-K7JyLo.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/SettingsTimeline-Dnvh1PIf.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/IntegrationsScore-HBxiGeXS.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/SettingsTimeline-B1w4gBVA.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ShippingToggle-c7rXGH0n.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/ShippingToggle-BTwB1G2I.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AnalyticsAvatar-C4_ixqnp.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AnalyticsAvatar-CkSM-yRa.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReportsPolling-3D18UAkV.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReportsPreview-DIOerOBo.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReportsRank-BodL2THA.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReportsPolling-B1hvixa6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/InventorySlider-C2X_daeD.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/InventoryProvider-CZqQycBr.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/InventorySlider-BJBq0qR4.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/CatalogHeader1-Di_aFDYt.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ShippingBanner-CfN4MKJJ.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/CatalogHeader1-ChKsPgS_.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/ShippingBanner-BDCowd5v.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/PaymentsTabs-LAx0DS90.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/PaymentsTabs-DWQejoea.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReviewsAccordion-waHna1OU.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ReviewsAccordion-C-MF_Muu.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/CatalogGrid-BGubZWfW.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/DocumentsBadge1-CgYYm9kM.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/CatalogTimeline1-Cm87K9Tq.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/CatalogGrid-Ll3G59Q_.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ProfileRangeSlider-D-dXDvX7.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ProfileRangeSlider-DzpDFrxl.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/AdminSummary-Obslb5eN.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AdminSummary-BV_1_wO9.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuditList-5pSS-WFD.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuditList-uhkOqXbn.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/TagsAutocomplete-C5obXvrt.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/TagsAutocomplete-B44AQiBV.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/DocumentsPieChart-DGpXiblE.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/DocumentsPieChart-CXSq_Lrr.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/IntegrationsPagination-17ydNREt.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/IntegrationsPagination-BlUN9CTe.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/WebhooksRadio-BEmvuLAK.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/WebhooksRadio-DxX-QPFs.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ApiKeysTreeView-CTb3RFDo.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ApiKeysTreeView-DEqHMDcU.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/assets/ThemesScore-B1jDHxaD.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/ThemesScore-C49fqXNl.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-CVnaFy26.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/generateCategoricalChart-CDUenrjF.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-3VdiR9jf.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersHeatmap-BWUT5dEX.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthNavBar-C2Hu4Yrx.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthStepper-pZjXABZF.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/UsersHeatmap-BRMGTnkO.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthNavBar-Ku9pK08i.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthStepper-D1RELuwX.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "MegaRepo",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 2901
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1995
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 2211
+    },
+    {
+      "path": "/settings",
+      "mainTextLength": 2825
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 2500
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 2988
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 2264
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 2921
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 2560
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 3186
+    },
+    {
+      "path": "/catalog",
+      "mainTextLength": 2838
+    },
+    {
+      "path": "/profile",
+      "mainTextLength": 2319
+    },
+    {
+      "path": "/admin",
+      "mainTextLength": 2735
+    },
+    {
+      "path": "/audit",
+      "mainTextLength": 2535
+    },
+    {
+      "path": "/tags",
+      "mainTextLength": 2310
+    },
+    {
+      "path": "/documents",
+      "mainTextLength": 2380
+    },
+    {
+      "path": "/integrations",
+      "mainTextLength": 1732
+    },
+    {
+      "path": "/webhooks",
+      "mainTextLength": 2472
+    },
+    {
+      "path": "/api-keys",
+      "mainTextLength": 2548
+    },
+    {
+      "path": "/themes",
+      "mainTextLength": 1669
+    }
+  ],
+  "fixture": {
+    "size": 2000,
+    "seed": 42,
+    "expectedRoutes": 20
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

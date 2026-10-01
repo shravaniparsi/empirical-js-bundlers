@@ -1,0 +1,353 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/m-500-corrected-runtime-v1-rspack-m-500/rspack/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main.2a6f9c716f671aa6.css",
+      "status": 200
+    },
+    {
+      "url": "/main.8c8707ff628485f6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/99.a22f3b54e73a9179.css",
+      "status": 200
+    },
+    {
+      "url": "/99.1bd416ad7db38c1e.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/299.8cd4be945bffa93d.css",
+      "status": 200
+    },
+    {
+      "url": "/299.7382115a0741ddbd.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/905.2192e9fe981875c3.css",
+      "status": 200
+    },
+    {
+      "url": "/905.ab76533aa39e36f4.js",
+      "status": 200
+    },
+    {
+      "url": "/431.ba7b8a4506ed972f.css",
+      "status": 200
+    },
+    {
+      "url": "/431.c01f558b70f4fd11.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/855.6ce4d453389c7d01.css",
+      "status": 200
+    },
+    {
+      "url": "/855.3e2dce0e1c98dad2.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/180.f6f8ffd21ba40eba.css",
+      "status": 200
+    },
+    {
+      "url": "/180.f3babfe066529841.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/229.605de560d6b6c2d8.css",
+      "status": 200
+    },
+    {
+      "url": "/229.0af2a0664de2e535.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/989.0f58e358ca3d18a3.css",
+      "status": 200
+    },
+    {
+      "url": "/989.a61c4e2174b05f3e.js",
+      "status": 200
+    },
+    {
+      "url": "/223.c44495edb322c95d.css",
+      "status": 200
+    },
+    {
+      "url": "/223.7519f3087d14c9d5.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/657.f2e9b30d47e4cec4.css",
+      "status": 200
+    },
+    {
+      "url": "/657.decd454f0a241b87.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/602.c1cbdaf4d7b54aaf.css",
+      "status": 200
+    },
+    {
+      "url": "/602.fee88d36e14ec1e4.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/248.05c840c9213613e8.css",
+      "status": 200
+    },
+    {
+      "url": "/248.662c7d06915d3e5e.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/main.2a6f9c716f671aa6.css",
+      "status": 200
+    },
+    {
+      "url": "/main.8c8707ff628485f6.js",
+      "status": 200
+    },
+    {
+      "url": "/99.a22f3b54e73a9179.css",
+      "status": 200
+    },
+    {
+      "url": "/99.1bd416ad7db38c1e.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "ShopDash",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 1451
+    },
+    {
+      "path": "/dashboard",
+      "mainTextLength": 1150
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1242
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 1083
+    },
+    {
+      "path": "/notifications",
+      "mainTextLength": 1155
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 1162
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 1166
+    },
+    {
+      "path": "/billing",
+      "mainTextLength": 1058
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 1118
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 1613
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 1040
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 1241
+    }
+  ],
+  "fixture": {
+    "size": 500,
+    "seed": 42,
+    "expectedRoutes": 12
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

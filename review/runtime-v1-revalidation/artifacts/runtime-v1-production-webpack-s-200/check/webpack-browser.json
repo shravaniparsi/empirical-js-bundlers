@@ -1,0 +1,217 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/s-200-corrected-runtime-v1-webpack-s-200/webpack/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main.7227d4470670b12cf5fd.css",
+      "status": 200
+    },
+    {
+      "url": "/865.dd1d98550df9bdb6c742.js",
+      "status": 200
+    },
+    {
+      "url": "/main.6d60e539704401c9fa1c.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/112.f502868ce3ac53b9bf22.css",
+      "status": 200
+    },
+    {
+      "url": "/112.3cfa1e46c272c8a99d08.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/538.311e7c0853f85820bee4.css",
+      "status": 200
+    },
+    {
+      "url": "/538.e0ce6514b0a40c1144de.js",
+      "status": 200
+    },
+    {
+      "url": "/29.798e2dfbbcc95a748016.css",
+      "status": 200
+    },
+    {
+      "url": "/29.10f9f8c8bd249cc6a110.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/137.49c78ae0114b766403f3.css",
+      "status": 200
+    },
+    {
+      "url": "/137.789ab2e1ac98a4f1e310.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/products",
+      "status": 200
+    },
+    {
+      "url": "/main.7227d4470670b12cf5fd.css",
+      "status": 200
+    },
+    {
+      "url": "/main.6d60e539704401c9fa1c.js",
+      "status": 200
+    },
+    {
+      "url": "/865.dd1d98550df9bdb6c742.js",
+      "status": 200
+    },
+    {
+      "url": "/112.f502868ce3ac53b9bf22.css",
+      "status": 200
+    },
+    {
+      "url": "/112.3cfa1e46c272c8a99d08.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "TaskBoard",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/products",
+      "mainTextLength": 692
+    },
+    {
+      "path": "/notifications",
+      "mainTextLength": 1006
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 456
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 671
+    }
+  ],
+  "fixture": {
+    "size": 200,
+    "seed": 42,
+    "expectedRoutes": 4
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

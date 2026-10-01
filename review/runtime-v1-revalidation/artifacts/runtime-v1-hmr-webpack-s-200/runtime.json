@@ -1,0 +1,12 @@
+{
+  "kind": "runtime-v1-audit",
+  "passed": true,
+  "publicationEligible": false,
+  "expectedNode": "24.14.0",
+  "actualNode": "24.14.0",
+  "v8": "13.6.233.17-node.41",
+  "platform": "linux",
+  "architecture": "x64",
+  "policySha256": "c4a876104e5d5bce69d05f723bd93b397d3db5e8a24ed2886c30a486d24337f5",
+  "errors": []
+}

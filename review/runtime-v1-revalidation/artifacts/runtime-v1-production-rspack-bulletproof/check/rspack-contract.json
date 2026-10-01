@@ -1,0 +1,240 @@
+{
+  "kind": "production-v1-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "157.be742142.js",
+      "sha256": "d3bdc49a27179f96d828174fc96eb2c9bd31f28e2cc50f992e47fe71bda6b08b",
+      "mappedSegments": 15294,
+      "projectSources": [],
+      "mapSha256": "d733f9e16e6d8325385715709dbf8a738e40e70887ae011e4b31819b1a82cc8d"
+    },
+    {
+      "file": "240.3438d0ae.js",
+      "sha256": "1cb94b20ebae17a9f888792dfc047a13d3fd3893a7944f81e00f53cf604a0c8f",
+      "mappedSegments": 1416,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/api/update-profile.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/components/update-profile.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/profile.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "c9ca53cf9977790d84a02801ab7a9e30322ac5bd2ce5432207e115c0f033264f"
+    },
+    {
+      "file": "255.9932abc3.js",
+      "sha256": "aa03e17c24732aa3d87a825ba3f3dcca48fa5c5352d0288d81eae36a49bbcac3",
+      "mappedSegments": 7366,
+      "projectSources": [],
+      "mapSha256": "f3dca530fb76bcc91dd38eda2e342bd14c93fd3704563dd8915607aa06c1ba20"
+    },
+    {
+      "file": "359.87da6172.js",
+      "sha256": "cbd7c39039ae7e0b07ebbc997be7949c1d09ef746f4b28380261d601200af295",
+      "mappedSegments": 152,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/landing.tsx"
+      ],
+      "mapSha256": "f6781b6c779abb46ab77ccbf5bd3e7f09239fc14918791094f50dbbf3a3d7356"
+    },
+    {
+      "file": "472.669361bd.js",
+      "sha256": "a18acbebd9034789d5cfbaf6c539f36b205265dafc7e6bc3b6208d78b10e191e",
+      "mappedSegments": 1491,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/auth/components/register-form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/auth/register.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/teams/api/get-teams.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/layouts/auth-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "db9416c591f33e0854f1b831840207d790abff87bab99582d345747b59b03373"
+    },
+    {
+      "file": "492.2b38b21f.js",
+      "sha256": "a8f9f74ab4dc0343bc0c348a6f26c5b7785ba6f607f6b97e8f068a822533e3be",
+      "mappedSegments": 381,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/api/get-users.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/api/delete-user.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/components/delete-user.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/users/components/users-list.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/users.tsx"
+      ],
+      "mapSha256": "91abd5918585b69b3df4f653642d9c84788fe493409878b40647d25ec96711ef"
+    },
+    {
+      "file": "516.d408d462.js",
+      "sha256": "5ef6db20dff524f25daa1292b2f265cf2f46b1fab2cd74c72905ec74543e336a",
+      "mappedSegments": 102,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/dashboard.tsx"
+      ],
+      "mapSha256": "98f6b084ca13fcad2954c4bcf09e1ccf82de1dbb1f0b77041c6785a0efd691b4"
+    },
+    {
+      "file": "52.aa956d48.js",
+      "sha256": "4b0df942f9aa0344e95e4fc698da8b922180cd32c577d1c845a8d42d098f1fa1",
+      "mappedSegments": 27,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/not-found.tsx"
+      ],
+      "mapSha256": "01acc62e9e158269832f6dd462233be1871140ae20b8ebc32a24539902ccef35"
+    },
+    {
+      "file": "572.b4ff7c24.js",
+      "sha256": "c9a583583210bc03f724168174d1c7ef2bc902080b1bb1f69146c69d1133f0cb",
+      "mappedSegments": 1274,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/auth/components/login-form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/auth/login.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/layouts/auth-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "84a511e5a2166e03cfab981ac53de0c1e49e48a303ecbafe64063f9e8c7cc3a2"
+    },
+    {
+      "file": "583.af094146.js",
+      "sha256": "1c95c00e1901c041ae310a232580256f6663f9ab6533bae120b5b4cbed77607c",
+      "mappedSegments": 3548,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/dialog/dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/dialog/confirmation-dialog/confirmation-dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/table/pagination.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/table/table.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/hooks/use-disclosure.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/utils/format.ts"
+      ],
+      "mapSha256": "501a7cad57cce2ea8e56c1f8c968b782356b24a628b6b96dd744505f5ae2862e"
+    },
+    {
+      "file": "862.39d1d822.js",
+      "sha256": "24e7134fa7e1d257f7bd33086b64612438cb97442636fbef405a590accdc4663",
+      "mappedSegments": 2125,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/get-discussions.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/create-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/components/create-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/delete-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/components/delete-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/components/discussions-list.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/discussions/discussions.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/api/get-comments.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/get-discussion.ts"
+      ],
+      "mapSha256": "ad1f3d44c6237e41845b9337f6f94520f34a668fd8b679c0ef59723365b0865d"
+    },
+    {
+      "file": "957.0fa79472.js",
+      "sha256": "ccf21bef8b66b01f13170837632bf41d8a2c9157a57005d0b041fbe8e88bd0ca",
+      "mappedSegments": 2802,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/md-preview/md-preview.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/api/delete-comment.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/components/delete-comment.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/components/comments-list.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/api/create-comment.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/components/create-comment.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/components/comments.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/update-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/components/update-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/components/discussion-view.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/discussions/discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/dialog/dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/dialog/confirmation-dialog/confirmation-dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/comments/api/get-comments.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/features/discussions/api/get-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/hooks/use-disclosure.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/utils/format.ts"
+      ],
+      "mapSha256": "f949e075fde9de0fd93f149b1739527adcf7d3cb491c1d41f32a13c9661ebf44"
+    },
+    {
+      "file": "main.3d13d545.js",
+      "sha256": "d2f8940d35f2e4d216e6acf47b8fd2ae772c48589ee878294779f8d280aa3628",
+      "mappedSegments": 119861,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/layouts/content-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/dropdown/dropdown.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/layouts/dashboard-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/seo/head.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/button/button.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/drawer/drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/link/link.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/notifications/notification.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/notifications/notifications-store.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/notifications/notifications.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/ui/spinner/spinner.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/config/paths.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/config/env.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/lib/api-client.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/lib/auth.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/lib/authorization.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/components/errors/main.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/lib/react-query.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/provider.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/routes/app/root.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/router.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/app/index.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/testing/mocks/index.ts",
+        "webpack://benchmark-production-v1-realworld-rspack/src/main.tsx",
+        "webpack://benchmark-production-v1-realworld-rspack/src/utils/cn.ts"
+      ],
+      "mapSha256": "14d8de41bbe98eb4ff3e089a8f7a3acece96ba603fd2ce11a00e81e9c3c2821d"
+    }
+  ],
+  "css": [
+    {
+      "file": "main.css",
+      "sha256": "bcc8b9a72ba21cd16944484948ee7a4554149f8ef2d0ab8205e4df888506f9c1",
+      "mapPresent": true
+    }
+  ],
+  "publicationEligible": false
+}

@@ -1,0 +1,38 @@
+
+> benchmark-production-v1-realworld-vite@1.0.0 build
+> node profile-build.mjs
+
+
+> benchmark-production-v1-realworld-vite@1.0.0 build:bundler
+> vite build
+
+[33mThe plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the [1mresolve.tsconfigPaths[22m option. You can remove the plugin and set [1mresolve.tsconfigPaths: true[22m in your Vite config instead.[39m
+[36mvite v8.3.0 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 1763 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                           0.72 kB │ gzip:   0.39 kB
+dist/assets/logo-C6NmkKBA.svg             2.63 kB │ gzip:   1.27 kB
+dist/assets/index-haM7c6ED.css           41.45 kB │ gzip:   7.87 kB
+dist/assets/queryOptions-Dfvzj6n2.js      0.08 kB │ gzip:   0.10 kB │ map:     0.41 kB
+dist/assets/pen-D0uLNwXV.js               0.18 kB │ gzip:   0.18 kB │ map:     0.73 kB
+dist/assets/use-disclosure-CDkSgeze.js    0.28 kB │ gzip:   0.22 kB │ map:     0.89 kB
+dist/assets/not-found-ClM6H-Tf.js         0.44 kB │ gzip:   0.33 kB │ map:     0.91 kB
+dist/assets/dashboard-8PwRcjQ3.js         1.09 kB │ gzip:   0.46 kB │ map:     2.38 kB
+dist/assets/auth-layout-GiLLlHqn.js       1.11 kB │ gzip:   0.59 kB │ map:     3.06 kB
+dist/assets/login-9lc4nl8C.js             1.27 kB │ gzip:   0.65 kB │ map:     4.27 kB
+dist/assets/users-CDy2_8Dq.js             1.93 kB │ gzip:   1.00 kB │ map:     7.95 kB
+dist/assets/get-discussion-Bona41dm.js    1.94 kB │ gzip:   0.88 kB │ map:     8.91 kB
+dist/assets/register-ETVChzZx.js          2.47 kB │ gzip:   1.15 kB │ map:     8.77 kB
+dist/assets/landing-Ci2JnibU.js           2.51 kB │ gzip:   1.30 kB │ map:     5.33 kB
+dist/assets/profile-CoXIRA_m.js           2.87 kB │ gzip:   1.17 kB │ map:     9.07 kB
+dist/assets/discussions-BjenWFGK.js       3.71 kB │ gzip:   1.52 kB │ map:    16.64 kB
+dist/assets/table-DDpTkxIW.js             4.35 kB │ gzip:   1.42 kB │ map:    15.12 kB
+dist/assets/dialog-diZuakRB.js           10.61 kB │ gzip:   4.45 kB │ map:    29.36 kB
+dist/assets/form-Bi6zVk1j.js             29.37 kB │ gzip:  11.08 kB │ map:   176.32 kB
+dist/assets/discussion-BfQRlNLg.js       61.13 kB │ gzip:  20.70 kB │ map:   254.85 kB
+dist/assets/paths-tNRv1b5K.js           100.26 kB │ gzip:  33.73 kB │ map:   551.03 kB
+dist/assets/index-sDoMqPk4.js           370.96 kB │ gzip: 116.99 kB │ map: 1,988.08 kB
+
+[32m✓ built in 983ms[39m

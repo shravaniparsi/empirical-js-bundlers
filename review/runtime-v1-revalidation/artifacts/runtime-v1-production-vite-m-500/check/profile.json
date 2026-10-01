@@ -1,0 +1,35 @@
+{
+  "profile": "production-v1",
+  "publicationEligible": false,
+  "kind": "synthetic",
+  "size": "m-500",
+  "contractSha256": "44540706a3807f2f6807c4bb9fbeb4aed2c84576d1fe329c7561234350c11980",
+  "tools": {
+    "vite": {
+      "package-lock.json": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+      "package.json": "750a203c8b56c8f5c9e0b756bcfd3d1df6983b3fa200ab70dda2dc0c918c153b",
+      "vite.config.ts": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629"
+    },
+    "rspack": {
+      "package-lock.json": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+      "package.json": "1a69b503e76320be19847c2b28ba4799f0693e0c57adf96ff3222870967654c3",
+      "rspack.config.cjs": "80e7b36c11f96f558902c2d5d79cd1d9a5930a9cf086d5bb1428cd30f23956c8"
+    },
+    "esbuild": {
+      "build.mjs": "0810f6b8146f6c44c58b1de8653adaa2e7a8f3e3471f91301bdd21fe0f573700",
+      "package-lock.json": "e6594e17907022ed0a26b905842714de5152046bbe4708fb5365423f6d344e54",
+      "package.json": "15384d1408d76ba341435d6b5636c87d9ae88302ab46e44696f290ae757a2b39",
+      "watch.mjs": "a105d82372dd1670781864cf7dd55ce0f063c90a3c33f1631613dfcd7d4f6657"
+    },
+    "webpack": {
+      "package-lock.json": "6ca1de624ed34f35a4a6506d393a8c6d8a813309bb987069b9cbd08a0df0f607",
+      "package.json": "c1a8f662671067259b37bd06cb961a4865df5e505c914642273e1d39d6bffe26",
+      "webpack.config.cjs": "c46927de7995caed857b385132b96ca811666e20e11225b62925f4fb91540e84"
+    },
+    "rollup": {
+      "package-lock.json": "03cbb7985836b92840bd3a9f95bfccb302db9c1f541a63fb05255f46e4e35160",
+      "package.json": "7111b88b1070848ea287217a305238ae9d173c84f0d3073c2f21fa495c2fc11a",
+      "rollup.config.mjs": "cf7a0b3085e409e2c88ae18287a4a3190221eecd33903cc02bdb6aadd0eaed8a"
+    }
+  }
+}
