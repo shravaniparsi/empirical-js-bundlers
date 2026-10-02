@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-capacity-diagnostic",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "36950096302",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36950096302",
+  "repositoryCommit": "9d59a22502369b645525a44d2d49ace8dd5e5baf",
+  "artifactId": "11203742569",
+  "artifactName": "cloud-capacity-synthetic-xl",
+  "downloadedArtifactZipSha256": "0896fcc8c00a635af4859f61cc5071a949f32052a8002bc9fb02d0320bb91798",
+  "result": "diagnostic-failure",
+  "buildResult": "passed in 18m31s",
+  "failureReason": "pilot omitted profiles/production-v1/validation npm install, so output contract could not load acorn",
+  "primaryUse": "forbidden"
+}

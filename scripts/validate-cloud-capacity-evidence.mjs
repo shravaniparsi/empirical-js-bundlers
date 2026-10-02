@@ -30,7 +30,9 @@ for (const workload of ['synthetic-xl', 'memos', 'excalidraw']) {
   requireTrue(runner.publicationEligible === false && runner.newPrimaryMeasurements === 0, `${workload}: pilot eligibility metadata drift`);
   requireTrue(runner.node === 'v24.14.0', `${workload}: Node drift`);
   requireTrue(runner.architecture === 'arm64' && runner.runnerImage === 'macos14', `${workload}: runner family drift`);
-  requireTrue(typeof runner.runnerImageVersion === 'string' && runner.runnerImageVersion.length > 0, `${workload}: runner image version missing`);
+  requireTrue(runner.runnerImageVersion === '20260831.0302.1', `${workload}: runner image version drift`);
+  const macos = fs.readFileSync(path.join(root, workload, 'macos.txt'), 'utf8');
+  requireTrue(/ProductVersion:\s*14\.8\.9/.test(macos) && /BuildVersion:\s*23J631/.test(macos), `${workload}: macOS version drift`);
   const hardware = fs.readFileSync(path.join(root, workload, 'hardware.txt'), 'utf8');
   requireTrue(hardware.includes('Chip: Apple M1 (Virtual)'), `${workload}: Apple M1 virtual chip not verified`);
   requireTrue(hardware.includes('Total Number of Cores: 3'), `${workload}: three-core runner not verified`);
@@ -49,7 +51,9 @@ const synthetic = readJson('synthetic-xl/profile/summary.json');
 requireTrue(synthetic.length === 1 && synthetic[0].tool === 'rollup' && synthetic[0].kind === 'synthetic' && synthetic[0].size === 'xl-5000', 'synthetic-xl: unexpected exercised profile');
 requireTrue(synthetic[0]?.passed === true && ['install', 'build', 'contract', 'browser'].every(step => synthetic[0]?.[step]?.exitCode === 0), 'synthetic-xl: largest Rollup profile did not pass every step');
 requireTrue(readJson('synthetic-xl/profile/rollup-contract.json').passed === true, 'synthetic-xl: output contract failed');
-requireTrue(readJson('synthetic-xl/profile/rollup-browser.json').passed === true, 'synthetic-xl: browser acceptance failed');
+const syntheticBrowser = readJson('synthetic-xl/profile/rollup-browser.json');
+requireTrue(syntheticBrowser.passed === true, 'synthetic-xl: browser acceptance failed');
+requireTrue(syntheticBrowser.browserVersion === 'Chrome/154.0.8037.57', 'synthetic-xl: Chrome version drift');
 
 for (const workload of ['memos', 'excalidraw']) {
   const source = readJson(`${workload}/source.json`);
@@ -58,6 +62,7 @@ for (const workload of ['memos', 'excalidraw']) {
   requireTrue(source.publicationEligible === false && source.id === workload && source.filesVerified > 0, `${workload}: pinned source verification failed`);
   requireTrue(output.passed === true && output.errors.length === 0, `${workload}: output contract failed`);
   requireTrue(browser.passed === true && browser.errors.length === 0, `${workload}: browser acceptance failed`);
+  requireTrue(browser.browserVersion === 'Chrome/154.0.8037.57', `${workload}: Chrome version drift`);
   requireTrue(Object.values(browser.checks).every(Boolean), `${workload}: incomplete browser checks`);
 }
 
