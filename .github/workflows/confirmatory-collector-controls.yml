@@ -6,6 +6,12 @@ on:
     paths:
       - 'scripts/confirmatory-cell-acceptance.mjs'
       - 'scripts/confirmatory-cell-acceptance.test.mjs'
+      - 'scripts/confirmatory-production-cell.mjs'
+      - 'scripts/confirmatory-production-block.mjs'
+      - 'scripts/confirmatory-workspace-contract.mjs'
+      - 'scripts/confirmatory-workspace-contract.test.mjs'
+      - 'scripts/confirmatory-campaign.mjs'
+      - 'package.json'
       - '.github/workflows/confirmatory-collector-controls.yml'
 permissions:
   contents: read
@@ -23,6 +29,8 @@ jobs:
       - run: npm ci --include=dev --no-audit --no-fund
       - name: Reject every declared cell failure mode
         run: node scripts/confirmatory-cell-acceptance.test.mjs collector-control-evidence/acceptance.json
+      - name: Verify production executor and sealed workspace controls
+        run: npm run production-executor:check
       - uses: actions/upload-artifact@v4
         if: always()
         with:

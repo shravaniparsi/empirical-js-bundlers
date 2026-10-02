@@ -1,7 +1,24 @@
 import fs from 'node:fs';
+import path from 'node:path';
 import { createHash } from 'node:crypto';
 
 const hash = (value) => createHash('sha256').update(value).digest('hex');
+
+export function hashTree(root, ignoredNames = new Set(['dist', 'node_modules'])) {
+  const resolved = fs.realpathSync(root);
+  const rows = [];
+  const walk = current => {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+      if (ignoredNames.has(entry.name)) continue;
+      const filename = path.join(current, entry.name);
+      if (entry.isDirectory()) walk(filename);
+      else if (entry.isFile()) rows.push(`${path.relative(resolved, filename).split(path.sep).join('/')}\0${hash(fs.readFileSync(filename))}`);
+      else throw new Error(`unsupported source entry: ${filename}`);
+    }
+  };
+  walk(resolved);
+  return hash(`${rows.join('\n')}\n`);
+}
 
 export function parseMacOSTimeOutput(text) {
   if (typeof text !== 'string') throw new Error('timing output must be text');
@@ -46,5 +63,44 @@ export function acceptConfirmatoryCell(input) {
     outputIdentityVerified: true,
     processTreeStopped: true,
     hmrValidated: input.hmr !== undefined,
+  };
+}
+
+export function acceptProductionBuildCell(input) {
+  const required = [
+    'sourceRoot', 'sourceBeforeSha256', 'processGroupPid', 'processStartedNs',
+    'processCompletedNs', 'buildExitCode', 'timingText', 'contractReportPath',
+    'browserReportPath', 'processCleanupRequired'
+  ];
+  for (const name of required) if (input[name] === undefined || input[name] === null) throw new Error(`missing ${name}`);
+  const sourceAfterSha256 = hashTree(input.sourceRoot, new Set(input.ignoredSourceNames ?? ['dist', 'node_modules']));
+  if (sourceAfterSha256 !== input.sourceBeforeSha256) throw new Error('source drift detected');
+  if (processGroupAlive(input.processGroupPid)) throw new Error('orphan process group detected');
+  if (input.processCleanupRequired !== false) throw new Error('production build left a descendant process');
+  if (BigInt(input.processCompletedNs) <= BigInt(input.processStartedNs)) throw new Error('stale process completion detected');
+  if (input.buildExitCode !== 0) throw new Error(`production build exited ${input.buildExitCode}`);
+  const timing = parseMacOSTimeOutput(input.timingText);
+  const readPassingReport = (filename, label) => {
+    let report;
+    try { report = JSON.parse(fs.readFileSync(filename, 'utf8')); }
+    catch { throw new Error(`${label} report is missing or invalid`); }
+    if (report.passed !== true) throw new Error(`${label} validation failed`);
+    return report;
+  };
+  readPassingReport(input.contractReportPath, 'output contract');
+  readPassingReport(input.browserReportPath, 'browser');
+  return {
+    accepted: true,
+    sourceAfterSha256,
+    processTreeStopped: true,
+    outputContractValidated: true,
+    browserValidated: true,
+    outcomes: {
+      M2Milliseconds: timing.realSeconds * 1000,
+      M10PeakRssBytes: timing.rssBytes,
+      M11CpuSeconds: timing.userSeconds + timing.systemSeconds,
+      userSeconds: timing.userSeconds,
+      systemSeconds: timing.systemSeconds,
+    },
   };
 }

@@ -7,7 +7,7 @@ on:
         required: true
         default: inspect
         type: choice
-        options: [inspect, initialize, status, audit]
+        options: [inspect, initialize, status, audit, validate-production-executor, measure-production-block]
       campaign_id:
         description: Immutable campaign identifier used only by initialize
         required: false
@@ -24,9 +24,10 @@ concurrency:
 jobs:
   controller:
     runs-on: [self-hosted, macOS, ARM64, bundler-primary]
-    timeout-minutes: 15
+    timeout-minutes: 180
     env:
       CAMPAIGN_DIR: ${{ vars.CONFIRMATORY_CAMPAIGN_DIR }}
+      WORKSPACE_DIR: ${{ vars.CONFIRMATORY_WORKSPACE_DIR }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -57,6 +58,43 @@ jobs:
           npm ci --include=dev --no-audit --no-fund
           npm run protocol:audit
           npm run campaign:test
+          npm run collector-controls:test
+          npm run production-executor:check
+      - name: Validate durable production workspace contract
+        if: inputs.operation == 'validate-production-executor'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set repository variable CONFIRMATORY_WORKSPACE_DIR to an absolute durable path on the primary host.' >&2
+            exit 1
+          fi
+          case "$WORKSPACE_DIR" in
+            /*) ;;
+            *) echo 'CONFIRMATORY_WORKSPACE_DIR must be an absolute path.' >&2; exit 1 ;;
+          esac
+          checkout="$(pwd -P)"
+          case "$WORKSPACE_DIR/" in
+            "$checkout"/*) echo 'Prepared workspaces must be outside the Actions checkout.' >&2; exit 1 ;;
+          esac
+          test -d "$WORKSPACE_DIR"
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-workspace-contract.mjs verify "$WORKSPACE_DIR" > primary-host-evidence/workspace-contract.json
+      - name: Execute next frozen production block
+        if: inputs.operation == 'measure-production-block'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set CONFIRMATORY_WORKSPACE_DIR before measurement.' >&2
+            exit 1
+          fi
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-production-block.mjs \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            --workspace-root "$WORKSPACE_DIR" \
+            --memos-backend "$WORKSPACE_DIR/_support/memos-server" \
+            > primary-host-evidence/production-block.json
       - name: Inspect dedicated host for 60 seconds
         if: inputs.operation == 'inspect'
         run: |

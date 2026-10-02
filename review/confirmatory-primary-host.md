@@ -44,3 +44,40 @@ to the same ledger.
 
 The primary campaign must not be initialized until every correctness gate and
 full-process negative control required by `protocols/confirmatory-v1` passes.
+
+## Durable production workspaces
+
+Set `CONFIRMATORY_WORKSPACE_DIR` to a second absolute directory outside the
+Actions checkout. The production executor expects this immutable layout:
+
+```text
+<root>/<workload>/<tool>/
+<root>/_sources/memos/
+<root>/_sources/excalidraw/
+<root>/_support/memos-server
+```
+
+Every workload/tool directory must contain its reviewed `package.json`, exact
+`package-lock.json`, and installed `node_modules`. Synthetic sizes and
+Bulletproof React come from `prepare-production-profile.mjs`; Memos and
+Excalidraw come from their pinned adapter preparation scripts. The two source
+directories retain the pinned upstream trees used by the browser gates, and
+the Memos server is compiled from its pinned source with `go build
+-mod=readonly`.
+
+Run the controller's `validate-production-executor` operation after preparing
+the directory and sealing it once with
+`node scripts/confirmatory-workspace-contract.mjs seal <root>`. The operation
+recomputes the seal for all 40 production cells without collecting a
+measurement. Each seal covers the source and configuration tree, package and
+lock files, and npm's installed dependency lock. A production cell then
+runs `scripts/confirmatory-production-cell.mjs`; only the reviewed build command
+is inside `/usr/bin/time -l`. Profile checks, cache deletion, hashes, output
+contract validation, and browser validation remain untimed acceptance gates.
+
+The `measure-production-block` operation executes exactly one next scheduled
+M2/M10/M11 block. It refuses a different metric family, a checkout commit that
+differs from the campaign manifest, an active interrupted block, a failed host
+gate, workspace-seal drift, or a tool-order mismatch. One cell failure is
+recorded with its evidence and abandons the complete attempt according to the
+frozen replacement rule.

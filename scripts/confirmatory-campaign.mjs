@@ -205,7 +205,7 @@ export function deriveCampaignState(schedule, events, maximumReplacementAttempts
   return state;
 }
 
-async function loadCampaign(campaignDir) {
+export async function loadCampaign(campaignDir) {
   const [manifest, ledgerText, schedule, protocol, freeze] = await Promise.all([
     readJson(path.join(campaignDir, 'campaign.json')),
     readFile(path.join(campaignDir, 'ledger.jsonl'), 'utf8'),
@@ -273,7 +273,7 @@ async function initCampaign(campaignDir, campaignId) {
   return auditCampaign(campaignDir);
 }
 
-async function beginBlock(campaignDir, requestedBlock) {
+export async function beginBlock(campaignDir, requestedBlock) {
   const loaded = await loadCampaign(campaignDir);
   if (loaded.state.active) throw new Error(`block ${loaded.state.active.block.blockId} is already active`);
   const next = loaded.schedule.blocks.find(block => !loaded.state.completedBlocks.has(block.blockId));
@@ -284,7 +284,7 @@ async function beginBlock(campaignDir, requestedBlock) {
   return auditCampaign(campaignDir);
 }
 
-async function recordCell(campaignDir, tool, statusValue, evidencePath, reason) {
+export async function recordCell(campaignDir, tool, statusValue, evidencePath, reason) {
   const loaded = await loadCampaign(campaignDir);
   if (!loaded.state.active) throw new Error('no active block');
   const { block, attempt, passedTools } = loaded.state.active;

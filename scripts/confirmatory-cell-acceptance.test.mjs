@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { acceptConfirmatoryCell, parseMacOSTimeOutput, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
+import { acceptConfirmatoryCell, acceptProductionBuildCell, hashTree, parseMacOSTimeOutput, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
 
 if (process.platform === 'win32') throw new Error('process-group controls require POSIX');
 const reportPath = process.argv[2] ? path.resolve(process.argv[2]) : null;
@@ -49,6 +49,40 @@ try {
   assert.deepEqual(parseMacOSTimeOutput(timeText), { realSeconds: 1.25, userSeconds: 0.8, systemSeconds: 0.2, rssBytes: 104857600 });
   assert.equal(acceptConfirmatoryCell(baseline).accepted, true);
 
+  const contractReport = path.join(root, 'contract.json');
+  const browserReport = path.join(root, 'browser.json');
+  fs.writeFileSync(contractReport, '{"passed":true}\n');
+  fs.writeFileSync(browserReport, '{"passed":true}\n');
+  const production = {
+    sourceRoot: root,
+    sourceBeforeSha256: hashTree(root, new Set(['contract.json', 'browser.json', 'output.js'])),
+    ignoredSourceNames: ['contract.json', 'browser.json', 'output.js'],
+    processGroupPid: pid,
+    processStartedNs: '100',
+    processCompletedNs: '200',
+    buildExitCode: 0,
+    timingText: timeText,
+    contractReportPath: contractReport,
+    browserReportPath: browserReport,
+    processCleanupRequired: false,
+  };
+  assert.deepEqual(acceptProductionBuildCell(production).outcomes, {
+    M2Milliseconds: 1250,
+    M10PeakRssBytes: 104857600,
+    M11CpuSeconds: 1,
+    userSeconds: 0.8,
+    systemSeconds: 0.2,
+  });
+  fs.writeFileSync(contractReport, '{"passed":false}\n');
+  assert.throws(() => acceptProductionBuildCell(production), /output contract validation failed/);
+  fs.writeFileSync(contractReport, '{"passed":true}\n');
+  fs.writeFileSync(browserReport, 'not json');
+  assert.throws(() => acceptProductionBuildCell(production), /browser report is missing or invalid/);
+  fs.writeFileSync(browserReport, '{"passed":true}\n');
+  assert.throws(() => acceptProductionBuildCell({ ...production, buildExitCode: 1 }), /production build exited 1/);
+  assert.throws(() => acceptProductionBuildCell({ ...production, processCompletedNs: '99' }), /stale process completion/);
+  assert.throws(() => acceptProductionBuildCell({ ...production, processCleanupRequired: true }), /left a descendant process/);
+
   expectRejection('staleCompletion', /stale completion/, { ...baseline, completionObservedNs: '99' });
   fs.writeFileSync(output, 'globalThis.marker = "wrong";\n');
   expectRejection('wrongOutput', /output marker not found/, baseline);
@@ -74,6 +108,7 @@ try {
     newPrimaryMeasurements: 0,
     realProcessBaselineAccepted: true,
     controls,
+    productionBuildAcceptance: true,
     passed: Object.values(controls).every(Boolean),
   };
   if (reportPath) {

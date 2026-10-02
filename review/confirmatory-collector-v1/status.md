@@ -41,13 +41,31 @@ and process trees stopped. Details and the nine new reports are under `m4/`.
 ## Primary-host Actions controller
 
 `.github/workflows/confirmatory-primary-host.yml` provides serialized
-`inspect`, `initialize`, `status`, and `audit` operations for a dedicated
+`inspect`, `initialize`, `status`, `audit`, production-workspace validation,
+and one-block production measurement operations for a dedicated
 self-hosted macOS arm64 runner labeled `bundler-primary`. It requires durable
 campaign storage outside the Actions checkout, repeats the 60-second frozen
 host gate before initialization, and uploads authenticated controller
 snapshots. Setup and operating instructions are in
-`review/confirmatory-primary-host.md`. No measurement operation is exposed
-until the remaining correctness and full-process negative-control gates pass.
+`review/confirmatory-primary-host.md`. The production operation refuses to run
+unless M2/M10/M11 is the next frozen block, so the current M1-first schedule
+cannot be bypassed.
+
+## Production build executor
+
+`scripts/confirmatory-production-cell.mjs` implements the shared M2/M10/M11
+process boundary. A single `/usr/bin/time -l` invocation yields wall time,
+peak RSS, and user-plus-system CPU time. The cell is accepted only after exact
+runtime and sealed-workspace checks, source restoration, process-group
+termination, strict timing parsing, the workload-specific output contract, and
+the browser behavior gate all pass. Cache clearing and every correctness check
+are outside the timed interval.
+
+The durable workspace seal covers all 40 workload/tool trees and npm's
+installed dependency locks. The seal is copied into every cell's evidence.
+Local controls reject malformed timing, failed builds, stale completion,
+source drift, descendant processes, and failed or invalid correctness reports.
+No primary timing observation has been collected.
 
 ## Reproduction
 
@@ -67,9 +85,9 @@ source drift, a live process group, malformed or ambiguous macOS timing output,
 full-page reload, application-state loss, and a failed reload control were each
 rejected. The shared finalizer is `scripts/confirmatory-cell-acceptance.mjs`.
 
-The next implementation step is the metric-specific primary cell executor that
-invokes M1, M2/M10/M11, M3, and M4 and submits each result through that shared
-finalizer. After it passes integration controls, the fixed macOS arm64 runner
+The next implementation step is the M1 primary cell executor, followed by the
+M3 and M4 session executors. After they pass integration controls, the fixed
+macOS arm64 runner
 must pass the 60-second environment gate before campaign initialization. The
 full campaign then contains 1,740 scheduled processes or sessions; no hosted
 correctness result can replace them.

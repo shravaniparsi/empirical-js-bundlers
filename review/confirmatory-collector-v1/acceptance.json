@@ -63,7 +63,8 @@
     }
   },
   "remaining": [
-    "Implement and validate metric-specific primary cell execution against the shared acceptance guard",
+    "Validate the M2/M10/M11 executor in GitHub Actions and prepare the sealed 40-cell workspace on the primary host",
+    "Implement and validate the M1, M3, and M4 primary executors",
     "Provision the fixed macOS arm64 primary runner and pass the 60-second host gate before campaign initialization",
     "Collect all 1,740 scheduled processes/sessions before confirmatory analysis"
   ],
@@ -102,5 +103,18 @@
       "failed reload detector control"
     ],
     "passed": true
+  },
+  "productionBuildExecutor": {
+    "metrics": ["M2", "M10", "M11"],
+    "sameInvocation": true,
+    "strictMacOSTimeParser": true,
+    "sealedWorkspaceRequired": true,
+    "outputContractRequired": true,
+    "browserValidationRequired": true,
+    "sourceRestorationRequired": true,
+    "processTreeTerminationRequired": true,
+    "primaryMeasurementsCollected": 0,
+    "localControlsPassed": true,
+    "githubActionsValidationPending": true
   }
 }
