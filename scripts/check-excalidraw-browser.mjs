@@ -22,7 +22,7 @@ function fontResponse(relativePath) {
   report.fontFixtures.push({ path: relativePath, sha256: record.sha256 });
   return body;
 }
-const report = { publicationEligible: false, purpose: 'Upstream offline functional acceptance', passed: false, checks: {}, errors: [], externalRequests: [], fontFixtures: [], suppressedAnalyticsRequests: [], harnessAdaptations: ['Pinned upstream font files served as local CDN fixtures', 'Known analytics script replaced with an empty local response', 'Native save picker disabled to exercise upstream browser download fallback'] };
+const report = { publicationEligible: false, purpose: 'Upstream offline functional acceptance', passed: false, checks: {}, errors: [], ignoredConsoleMessages: [], externalRequests: [], fontFixtures: [], suppressedAnalyticsRequests: [], harnessAdaptations: ['Pinned upstream font files served as local CDN fixtures', 'Known analytics script replaced with an empty local response', 'Native save picker disabled to exercise upstream browser download fallback'] };
 const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2', '.json': 'application/json', '.webmanifest': 'application/manifest+json' };
 const server = http.createServer((req, res) => {
   try {
@@ -55,7 +55,15 @@ try {
       report.suppressedAnalyticsRequests.push(request.url()); request.respond({ status: 200, contentType: 'text/javascript', body: '/* analytics intentionally disabled by local acceptance harness */' });
     } else { report.externalRequests.push(request.url()); request.abort(); }
   });
-  page.on('console', message => { if (message.type() === 'error') report.errors.push('Console: ' + message.text()); });
+  page.on('console', message => {
+    if (message.type() !== 'error') return;
+    const text = message.text();
+    if (text === 'Permissions policy violation: unload is not allowed in this document.') {
+      report.ignoredConsoleMessages.push({ text, reason: 'Chromium permissions-policy diagnostic; no application exception or failed response' });
+      return;
+    }
+    report.errors.push('Console: ' + text);
+  });
   page.on('pageerror', error => report.errors.push(error.message));
   page.on('response', response => { if (response.status() >= 400) report.errors.push(`HTTP ${response.status()}: ${response.url().replace(origin, '')}`); });
   await page.goto(origin, { waitUntil: 'networkidle0', timeout: 60000 });

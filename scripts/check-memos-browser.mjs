@@ -13,6 +13,7 @@ if (!reportArg) throw new Error('Usage: check-memos-browser.mjs <pinned-source> 
 const source = fs.realpathSync(sourceArg), binary = fs.realpathSync(binaryArg), reportDir = path.resolve(reportArg);
 fs.mkdirSync(reportDir, { recursive: false });
 const report = { publicationEligible: false, purpose: 'Memos actual-backend functional acceptance', passed: false, checks: {}, errors: [], console: [], cancellations: [], responses: [], source: verifySource('memos', source), binarySha256: sha256(fs.readFileSync(binary)) };
+const primaryModifier = process.platform === 'darwin' ? 'Meta' : 'Control';
 const dist = distArg ? fs.realpathSync(distArg) : path.join(source, 'web/dist');
 report.frontend = distArg ? { kind: 'five-tool-adapter', dist, publicationEligible: false } : { kind: 'upstream-vite', dist };
 const data = path.join(reportDir, 'database'); fs.mkdirSync(data);
@@ -85,7 +86,7 @@ try {
     await page.locator(composer).click();
     try {
       await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-editor')?.classList.contains('cm-focused'), { timeout: 2000 });
-      await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
+      await page.keyboard.down(primaryModifier); await page.keyboard.press('KeyA'); await page.keyboard.up(primaryModifier);
       await page.keyboard.sendCharacter(originalNote);
       await page.waitForFunction(() => document.querySelector('.memo-editor-content .cm-content[contenteditable="true"]')?.textContent.includes('**Benchmark original note**'), { timeout: 2500 });
       report.checks.homeComposerAcceptsInput = true;
@@ -112,7 +113,7 @@ try {
     if (!editor) return false; editor.setAttribute('data-benchmark-edit-target', 'true'); return true;
   });
   await page.locator('[data-benchmark-edit-target="true"]').click();
-  await page.keyboard.down('Control'); await page.keyboard.press('KeyA'); await page.keyboard.up('Control');
+  await page.keyboard.down(primaryModifier); await page.keyboard.press('KeyA'); await page.keyboard.up(primaryModifier);
   await page.keyboard.sendCharacter('**Benchmark edited note**\n\nPersist this exact revision.');
   await page.waitForFunction(() => document.querySelector('[data-benchmark-edit-target="true"]')?.textContent.includes('**Benchmark edited note**'));
   await page.keyboard.down('Control'); await page.keyboard.press('Enter'); await page.keyboard.up('Control');

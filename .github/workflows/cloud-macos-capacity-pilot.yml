@@ -74,7 +74,18 @@ jobs:
           npm ci --include=dev --no-audit --no-fund
           npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
           mkdir -p capacity-evidence
+          {
+            echo '{'
+            echo '  "publicationEligible": false,'
+            echo '  "newPrimaryMeasurements": 0,'
+            echo "  \"node\": \"$(node --version)\","
+            echo "  \"architecture\": \"$(uname -m)\","
+            echo "  \"runnerImage\": \"$ImageOS\","
+            echo "  \"runnerImageVersion\": \"$ImageVersion\""
+            echo '}'
+          } > capacity-evidence/runner.json
           system_profiler SPHardwareDataType > capacity-evidence/hardware.txt
+          sw_vers > capacity-evidence/macos.txt
           df -h > capacity-evidence/disk-before.txt
           memory_pressure -Q > capacity-evidence/memory-before.txt
       - name: Prepare and install largest Memos adapter
@@ -122,7 +133,18 @@ jobs:
           npm ci --include=dev --no-audit --no-fund
           npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
           mkdir -p capacity-evidence
+          {
+            echo '{'
+            echo '  "publicationEligible": false,'
+            echo '  "newPrimaryMeasurements": 0,'
+            echo "  \"node\": \"$(node --version)\","
+            echo "  \"architecture\": \"$(uname -m)\","
+            echo "  \"runnerImage\": \"$ImageOS\","
+            echo "  \"runnerImageVersion\": \"$ImageVersion\""
+            echo '}'
+          } > capacity-evidence/runner.json
           system_profiler SPHardwareDataType > capacity-evidence/hardware.txt
+          sw_vers > capacity-evidence/macos.txt
           df -h > capacity-evidence/disk-before.txt
           memory_pressure -Q > capacity-evidence/memory-before.txt
       - name: Prepare and install largest Excalidraw adapter
