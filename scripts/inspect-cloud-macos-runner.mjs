@@ -44,6 +44,8 @@ try {
 const freeDisk = freeDiskGiB(path.dirname(output));
 const freeMemoryMatch = memoryPressure.output.match(/System-wide memory free percentage:\s*(\d+)%/);
 const freeMemoryPercent = freeMemoryMatch ? Number(freeMemoryMatch[1]) : null;
+const macosProductVersion = swvers.output.match(/ProductVersion:\s*([^\s]+)/)?.[1] ?? null;
+const macosBuildVersion = swvers.output.match(/BuildVersion:\s*([^\s]+)/)?.[1] ?? null;
 const identity = {
   architecture: os.arch(),
   logicalCores: os.cpus().length,
@@ -66,6 +68,9 @@ const checks = {
   githubHosted: { expected: true, actual: process.env.GITHUB_ACTIONS === 'true' && process.env.RUNNER_ENVIRONMENT === 'github-hosted' },
   runnerOS: { expected: 'macOS', actual: process.env.RUNNER_OS ?? null },
   runnerLabelFamily: { expected: 'macos-14', actual: process.env.ImageOS ?? null, acceptedImageOS: /^macos14(?:$|\.)/.test(process.env.ImageOS ?? '') },
+  runnerImageVersion: { expected: '20260831.0302.1', actual: process.env.ImageVersion ?? null },
+  macosProductVersion: { expected: '14.8.9', actual: macosProductVersion },
+  macosBuildVersion: { expected: '23J631', actual: macosBuildVersion },
   architecture: { expected: 'arm64', actual: os.arch() },
   runnerArch: { expected: 'ARM64', actual: process.env.RUNNER_ARCH ?? null },
   logicalCores: { minimum: 3, actual: os.cpus().length },
@@ -73,11 +78,14 @@ const checks = {
   freeDiskGiB: { minimum: 20, actual: freeDisk },
   freeMemoryPercent: { minimum: 50, actual: freeMemoryPercent },
   node: { expected: 'v24.14.0', actual: process.version },
-  chromeAvailable: { expected: true, actual: chromeVersion !== null, version: chromeVersion, launchError: chromeLaunchError },
+  chrome: { expected: 'Chrome/154.0.8037.57', actual: chromeVersion, launchError: chromeLaunchError },
 };
 checks.githubHosted.pass = checks.githubHosted.actual === checks.githubHosted.expected;
 checks.runnerOS.pass = checks.runnerOS.actual === checks.runnerOS.expected;
 checks.runnerLabelFamily.pass = checks.runnerLabelFamily.acceptedImageOS;
+checks.runnerImageVersion.pass = checks.runnerImageVersion.actual === checks.runnerImageVersion.expected;
+checks.macosProductVersion.pass = checks.macosProductVersion.actual === checks.macosProductVersion.expected;
+checks.macosBuildVersion.pass = checks.macosBuildVersion.actual === checks.macosBuildVersion.expected;
 checks.architecture.pass = checks.architecture.actual === checks.architecture.expected;
 checks.runnerArch.pass = checks.runnerArch.actual === checks.runnerArch.expected;
 checks.logicalCores.pass = checks.logicalCores.actual >= checks.logicalCores.minimum;
@@ -85,7 +93,7 @@ checks.memoryGiB.pass = checks.memoryGiB.actual >= checks.memoryGiB.minimum;
 checks.freeDiskGiB.pass = freeDisk !== null && freeDisk >= checks.freeDiskGiB.minimum;
 checks.freeMemoryPercent.pass = freeMemoryPercent !== null && freeMemoryPercent >= checks.freeMemoryPercent.minimum;
 checks.node.pass = checks.node.actual === checks.node.expected;
-checks.chromeAvailable.pass = chromeVersion !== null;
+checks.chrome.pass = checks.chrome.actual === checks.chrome.expected;
 
 const report = {
   schemaVersion: 1,

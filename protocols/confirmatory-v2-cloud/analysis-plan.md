@@ -2,7 +2,7 @@
 
 ## Questions and hypotheses
 
-For M1--M4, the question is whether the eligible toolchain changes user-observable development or build latency for a fixed workload on the declared GitHub-hosted `macos-14` Apple M1 environment family. For M10 and M11, it is whether the toolchain changes peak RSS or CPU demand during the same accepted production build.
+For M1--M4, the question is whether the eligible toolchain changes user-observable development or build latency for a fixed workload on the exact frozen GitHub-hosted `macos-14` Apple M1 image. For M10 and M11, it is whether the toolchain changes peak RSS or CPU demand during the same accepted production build.
 
 For each metric, workload, and eligible non-reference tool, the confirmatory null hypothesis is that the paired log outcome has zero location shift relative to Webpack. The two-sided alternative is a nonzero shift. These hypotheses concern the complete configured toolchain; they do not isolate implementation language or bundler core.
 
@@ -30,7 +30,7 @@ Report medians, IQRs, empirical cumulative distributions, and all raw values. Re
 
 All pairwise tool contrasts, alternative estimators, first-observation sensitivity, application-specific subgroup discussion, and comparisons with consolidated-v4 are exploratory. They cannot replace a failed primary result or alter the frozen family correction.
 
-Runner image version is recorded for every block. Report block counts and descriptive outcomes by `ImageVersion`, and repeat primary effect estimation within each image-version stratum that has at least five complete blocks for the applicable workload. This sensitivity analysis can qualify generalizability but cannot change the prespecified pooled-within-environment primary decision rule.
+Runner image version is recorded and must equal the frozen version for every block. An image change pauses collection before an outcome is observed and requires a new protocol version; cross-image observations cannot be pooled for confirmatory inference.
 
 ## Missing data and protocol deviations
 

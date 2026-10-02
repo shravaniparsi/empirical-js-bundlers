@@ -16,7 +16,7 @@ Every block artifact must contain the runner label, `ImageOS`, `ImageVersion`, h
 
 The workload, tool, metric, sample-count, randomization, exclusion, and inferential plans remain those defined in `protocol.json`: 420 complete blocks and 1,740 process/session units across five synthetic sizes and Bulletproof React, Memos, and Excalidraw. M3 and M4 still reduce five measured edits within a restarted session to one median analysis unit.
 
-The claim boundary changes. Results estimate paired tool differences on GitHub-hosted standard `macos-14` Apple M1 virtual machines during the collection window. They do not represent a consumer Mac or a single fixed physical machine. Runner image versions are recorded and receive the prespecified sensitivity analysis in `analysis-plan.md`.
+The claim boundary changes. Results estimate paired tool differences on the frozen GitHub-hosted standard `macos-14` Apple M1 image. They do not represent a consumer Mac or a single fixed physical machine. Every block must match the frozen `ImageOS`, `ImageVersion`, macOS build, Node, and Chrome versions; an image update pauses the campaign before collection continues.
 
 ## Evidence lifecycle
 

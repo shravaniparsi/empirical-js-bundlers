@@ -8,14 +8,19 @@
     "policy": "profiles/runtime-v1/policy.json",
     "node": "24.14.0",
     "runnerLabel": "macos-14",
-    "architecture": "arm64"
+    "runnerImageOS": "macos14",
+    "runnerImageVersion": "20260831.0302.1",
+    "architecture": "arm64",
+    "macosProductVersion": "14.8.9",
+    "macosBuildVersion": "23J631",
+    "chrome": "Chrome/154.0.8037.57"
   },
   "hostPolicy": {
     "primary": "GitHub-hosted standard macos-14 Apple Silicon runner; one complete randomized block per fresh virtual machine",
     "allocationUnit": "the fresh virtual machine is the blocking unit; every tool in a block runs serially on that same virtual machine",
-    "runnerImage": "record ImageOS and ImageVersion for every block; image updates remain within this declared macos-14 environment family and receive version-stratified sensitivity analysis",
+    "runnerImage": "require and record ImageOS macos14 and ImageVersion 20260831.0302.1 for every block; any image update pauses collection and requires versioned change control",
     "concurrency": "only one block job may run at a time; tools within a block run serially and may never overlap",
-    "scope": "claims apply to the GitHub-hosted macos-14 Apple M1 environment during the collection window",
+    "scope": "claims apply to the exact declared GitHub-hosted macos-14 Apple M1 image",
     "crossEnvironment": "physical-host, larger-runner, Intel, Linux, Windows, diagnostic, pilot, and confirmatory-v1 values are never pooled with this campaign"
   },
   "tools": {
@@ -90,15 +95,17 @@
   "environmentGate": {
     "freshRunner": "each attempt begins in a newly allocated GitHub-hosted job with no earlier benchmark cell in that virtual machine",
     "runnerLabel": "macos-14",
+    "runnerImageOS": "macos14",
+    "runnerImageVersion": "20260831.0302.1",
     "architecture": "arm64",
     "minimumLogicalCores": 3,
     "minimumMemoryGiB": 7,
     "minimumFreeDiskGiB": 20,
     "minimumMemoryFreePercent": 50,
     "memoryPressure": "macOS memory_pressure -Q must report at least 50 percent system-wide memory free immediately before the block",
-    "backgroundState": "record load average, process inventory, runner image, macOS, Chrome, Node, memory, and disk before and after every block; do not trim observations retrospectively using these diagnostics",
+    "backgroundState": "record load average, process inventory, exact runner image, macOS, Chrome, Node, memory, and disk before and after every block; do not trim observations retrospectively using these diagnostics",
     "preBlock": [
-      "runner label, architecture, core count, and memory match the frozen environment family",
+      "runner label, ImageOS, ImageVersion, macOS build, Chrome, architecture, core count, and memory match the frozen environment",
       "runtime, dependency-lock, source, profile, schedule, and executor hashes match the freeze manifest",
       "required free disk threshold passes",
       "required free-memory threshold passes",
@@ -158,6 +165,6 @@
     "affectedData": "observations collected under different protocol versions are never pooled for confirmatory inference",
     "supersession": "confirmatory-v1 collected zero primary observations and is retained as superseded design history; it contributes no observations to v2",
     "artifactDurability": "download and hash every completed or failed job artifact before GitHub retention expiry; publicationEligible cannot become true until the raw corpus is stored in a durable public repository with a persistent identifier",
-    "unlock": "publicationEligible may become true only after the planned matrix is complete, manifests validate, exclusions are audited, runner-image sensitivity analysis is complete, durable archival is verified, and analysis reproduces from the archived corpus"
+    "unlock": "publicationEligible may become true only after the planned matrix is complete, manifests validate, exclusions are audited, exact runner-image consistency is verified, durable archival is verified, and analysis reproduces from the archived corpus"
   }
 }
