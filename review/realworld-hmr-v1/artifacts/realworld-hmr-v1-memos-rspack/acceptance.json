@@ -1,0 +1,56 @@
+{
+  "kind": "real-world-hmr-correctness-not-latency-data",
+  "application": "memos",
+  "tool": "rspack",
+  "publicationEligible": false,
+  "node": "v24.14.0",
+  "target": "src/pages/SignUp.tsx",
+  "originalSourceSha256": "51dac2918a64883a41dc4066fa27863bc0d0d36a2de23ae3b385941d519767c1",
+  "lockSha256": "a88798d771375bfd2fedd63b7b4ad736b4b367a268faa7fee1c179d13bfd05f7",
+  "checks": {
+    "actualBackendReady": true,
+    "developmentServerReady": true,
+    "applicationStateEstablished": true,
+    "threeSettledEdits": true,
+    "reloadControlDetected": true,
+    "sourceRestored": true,
+    "developmentServerStopped": true,
+    "backendStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "benchmark-hmr-edit-1",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    },
+    {
+      "edit": 2,
+      "marker": "benchmark-hmr-edit-2",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    },
+    {
+      "edit": 3,
+      "marker": "benchmark-hmr-edit-3",
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "console": [
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+    "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+  ],
+  "passed": true,
+  "browserVersion": "Chrome/154.0.8037.57"
+}

@@ -1,0 +1,157 @@
+name: Confirmatory primary-host controller
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Readiness operation to perform on the dedicated host
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, initialize, status, audit, validate-workspace, measure-development-block, measure-production-block]
+      campaign_id:
+        description: Immutable campaign identifier used only by initialize
+        required: false
+        default: confirmatory-v1-primary
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: confirmatory-v1-primary-host
+  cancel-in-progress: false
+
+jobs:
+  controller:
+    runs-on: [self-hosted, macOS, ARM64, bundler-primary]
+    timeout-minutes: 180
+    env:
+      CAMPAIGN_DIR: ${{ vars.CONFIRMATORY_CAMPAIGN_DIR }}
+      WORKSPACE_DIR: ${{ vars.CONFIRMATORY_WORKSPACE_DIR }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - name: Require durable campaign storage outside the checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$CAMPAIGN_DIR" ]; then
+            echo 'Set repository variable CONFIRMATORY_CAMPAIGN_DIR to an absolute durable path on the primary host.' >&2
+            exit 1
+          fi
+          case "$CAMPAIGN_DIR" in
+            /*) ;;
+            *) echo 'CONFIRMATORY_CAMPAIGN_DIR must be an absolute path.' >&2; exit 1 ;;
+          esac
+          checkout="$(pwd -P)"
+          case "$CAMPAIGN_DIR/" in
+            "$checkout"/*) echo 'Campaign storage must be outside the Actions checkout because checkout cleanup can remove evidence.' >&2; exit 1 ;;
+          esac
+          mkdir -p "$(dirname "$CAMPAIGN_DIR")"
+      - name: Audit frozen protocol and controller tests
+        run: |
+          npm ci --include=dev --no-audit --no-fund
+          npm run protocol:audit
+          npm run campaign:test
+          npm run collector-controls:test
+          npm run production-executor:check
+      - name: Validate durable production workspace contract
+        if: inputs.operation == 'validate-workspace'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set repository variable CONFIRMATORY_WORKSPACE_DIR to an absolute durable path on the primary host.' >&2
+            exit 1
+          fi
+          case "$WORKSPACE_DIR" in
+            /*) ;;
+            *) echo 'CONFIRMATORY_WORKSPACE_DIR must be an absolute path.' >&2; exit 1 ;;
+          esac
+          checkout="$(pwd -P)"
+          case "$WORKSPACE_DIR/" in
+            "$checkout"/*) echo 'Prepared workspaces must be outside the Actions checkout.' >&2; exit 1 ;;
+          esac
+          test -d "$WORKSPACE_DIR"
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-workspace-contract.mjs verify "$WORKSPACE_DIR" > primary-host-evidence/workspace-contract.json
+      - name: Execute next frozen production block
+        if: inputs.operation == 'measure-production-block'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set CONFIRMATORY_WORKSPACE_DIR before measurement.' >&2
+            exit 1
+          fi
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-production-block.mjs \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            --workspace-root "$WORKSPACE_DIR" \
+            --memos-backend "$WORKSPACE_DIR/_support/memos-server" \
+            > primary-host-evidence/production-block.json
+      - name: Execute next frozen M1 block
+        if: inputs.operation == 'measure-development-block'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set CONFIRMATORY_WORKSPACE_DIR before measurement.' >&2
+            exit 1
+          fi
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-development-block.mjs \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            --workspace-root "$WORKSPACE_DIR" \
+            --memos-backend "$WORKSPACE_DIR/_support/memos-server" \
+            > primary-host-evidence/development-block.json
+      - name: Inspect dedicated host for 60 seconds
+        if: inputs.operation == 'inspect'
+        run: |
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-campaign.mjs inspect-host --observe-seconds 60 > primary-host-evidence/host-inspection.json
+          node -e "const r=require('./primary-host-evidence/host-inspection.json'); if(!r.pass) process.exit(1)"
+      - name: Initialize immutable campaign
+        if: inputs.operation == 'initialize'
+        run: |
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-campaign.mjs init \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            --campaign-id '${{ inputs.campaign_id }}' \
+            > primary-host-evidence/campaign-status.json
+      - name: Read campaign status
+        if: inputs.operation == 'status'
+        run: |
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-campaign.mjs status \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            > primary-host-evidence/campaign-status.json
+      - name: Audit campaign ledger and evidence
+        if: inputs.operation == 'audit'
+        run: |
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-campaign.mjs audit \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            > primary-host-evidence/campaign-audit.json
+      - name: Snapshot authenticated campaign metadata
+        if: always() && inputs.operation != 'inspect'
+        shell: bash
+        run: |
+          if [ -f "$CAMPAIGN_DIR/campaign.json" ]; then
+            cp "$CAMPAIGN_DIR/campaign.json" primary-host-evidence/campaign.json
+          fi
+          if [ -f "$CAMPAIGN_DIR/ledger.jsonl" ]; then
+            cp "$CAMPAIGN_DIR/ledger.jsonl" primary-host-evidence/ledger.jsonl
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confirmatory-primary-host-${{ inputs.operation }}-${{ github.run_id }}
+          path: primary-host-evidence/
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,43 @@
+name: Confirmatory collector negative controls
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'scripts/confirmatory-cell-acceptance.mjs'
+      - 'scripts/confirmatory-cell-acceptance.test.mjs'
+      - 'scripts/confirmatory-production-cell.mjs'
+      - 'scripts/confirmatory-production-block.mjs'
+      - 'scripts/confirmatory-workspace-contract.mjs'
+      - 'scripts/confirmatory-workspace-contract.test.mjs'
+      - 'scripts/confirmatory-campaign.mjs'
+      - 'scripts/confirmatory-development-cell.mjs'
+      - 'scripts/confirmatory-development-block.mjs'
+      - 'package.json'
+      - '.github/workflows/confirmatory-collector-controls.yml'
+permissions:
+  contents: read
+jobs:
+  full-process-controls:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Reject every declared cell failure mode
+        run: node scripts/confirmatory-cell-acceptance.test.mjs collector-control-evidence/acceptance.json
+      - name: Verify production executor and sealed workspace controls
+        run: npm run production-executor:check
+      - name: Verify development executor syntax
+        run: npm run development-executor:check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confirmatory-collector-negative-controls
+          path: collector-control-evidence/
+          retention-days: 30

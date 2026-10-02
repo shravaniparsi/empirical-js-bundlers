@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m1-executor-correctness",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M1",
+  "workload": "xs-50",
+  "tool": "vite",
+  "runtime": "v24.14.0",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xs-50-corrected-confirmatory-m1-control/vite",
+  "accepted": true,
+  "correctnessOnly": true,
+  "cachePolicy": {
+    "removed": [
+      "dist",
+      ".vite",
+      ".rspack",
+      ".cache",
+      "node_modules/.cache",
+      "node_modules/.vite"
+    ],
+    "operatingSystemPageCacheDropped": false
+  },
+  "sourceBeforeSha256": "f48499745732da5cc4841089c55c06b95199f09540b9228759671d3a2b2eac95",
+  "command": {
+    "executable": "npm",
+    "args": [
+      "run",
+      "dev",
+      "--",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "33891",
+      "--strictPort"
+    ],
+    "cwd": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xs-50-corrected-confirmatory-m1-control/vite"
+  },
+  "serverAliveAtReadiness": true,
+  "sourceAfterSha256": "f48499745732da5cc4841089c55c06b95199f09540b9228759671d3a2b2eac95",
+  "processTreeStopped": true,
+  "browserReadinessValidated": true,
+  "files": [
+    {
+      "path": "browser-readiness.json",
+      "bytes": 126,
+      "sha256": "9f742ea440616d94069d86550645f19071f3196989efc71c8c7bbc94fd2e5c18"
+    },
+    {
+      "path": "development-server.log",
+      "bytes": 263,
+      "sha256": "260202cf34a96f6f0c93a985a4f98641443e1cdd5be03a813f8fb6c9673ba09a"
+    }
+  ]
+}

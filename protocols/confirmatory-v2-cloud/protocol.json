@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "id": "confirmatory-v2-cloud-m1",
+  "status": "draft-premeasurement",
+  "draftDate": "2026-10-01",
+  "publicationEligible": false,
+  "runtime": {
+    "policy": "profiles/runtime-v1/policy.json",
+    "node": "24.14.0",
+    "runnerLabel": "macos-14",
+    "runnerImageOS": "macos14",
+    "runnerImageVersion": "20260831.0302.1",
+    "architecture": "arm64",
+    "macosProductVersion": "14.8.9",
+    "macosBuildVersion": "23J631",
+    "chrome": "Chrome/154.0.8037.57"
+  },
+  "hostPolicy": {
+    "primary": "GitHub-hosted standard macos-14 Apple Silicon runner; one complete randomized block per fresh virtual machine",
+    "allocationUnit": "the fresh virtual machine is the blocking unit; every tool in a block runs serially on that same virtual machine",
+    "runnerImage": "require and record ImageOS macos14 and ImageVersion 20260831.0302.1 for every block; any image update pauses collection and requires versioned change control",
+    "concurrency": "only one block job may run at a time; tools within a block run serially and may never overlap",
+    "scope": "claims apply to the exact declared GitHub-hosted macos-14 Apple M1 image",
+    "crossEnvironment": "physical-host, larger-runner, Intel, Linux, Windows, diagnostic, pilot, and confirmatory-v1 values are never pooled with this campaign"
+  },
+  "tools": {
+    "production": ["vite", "rspack", "esbuild", "webpack", "rollup"],
+    "nativeDevelopment": ["vite", "rspack", "webpack"],
+    "reference": "webpack"
+  },
+  "workloads": {
+    "syntheticAll": ["xs-50", "s-200", "m-500", "l-2000", "xl-5000"],
+    "syntheticDevelopment": ["xs-50", "m-500", "xl-5000"],
+    "realWorld": ["bulletproof-react", "memos", "excalidraw"]
+  },
+  "primaryFamilies": [
+    {
+      "metric": "M1",
+      "outcome": "development server cold-start readiness in milliseconds",
+      "tools": "nativeDevelopment",
+      "workloads": ["xs-50", "m-500", "xl-5000", "bulletproof-react", "memos", "excalidraw"],
+      "blocks": 20,
+      "samplingUnit": "one fresh development-server process",
+      "withinSessionMeasuredUpdates": 0
+    },
+    {
+      "metric": "M2-M10-M11",
+      "outcome": "production build wall time, peak RSS, and CPU seconds from the same invocation",
+      "tools": "production",
+      "workloads": ["xs-50", "s-200", "m-500", "l-2000", "xl-5000", "bulletproof-react", "memos", "excalidraw"],
+      "blocks": 20,
+      "samplingUnit": "one fresh production-build process",
+      "withinSessionMeasuredUpdates": 0
+    },
+    {
+      "metric": "M3",
+      "outcome": "incremental rebuild latency in milliseconds",
+      "tools": "production",
+      "workloads": ["xs-50", "s-200", "m-500", "l-2000", "xl-5000", "bulletproof-react", "memos", "excalidraw"],
+      "blocks": 10,
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "withinSessionMeasuredUpdates": 5
+    },
+    {
+      "metric": "M4",
+      "outcome": "state-preserving HMR latency in milliseconds",
+      "tools": "nativeDevelopment",
+      "workloads": ["xs-50", "m-500", "xl-5000", "bulletproof-react", "memos", "excalidraw"],
+      "blocks": 10,
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "withinSessionMeasuredUpdates": 5
+    }
+  ],
+  "secondaryOutcomes": {
+    "M5-M9": "descriptive output-contract measurements from accepted M2 complete blocks 1, 10, and 20 for each tool and workload; no extra builds and no null-hypothesis tests",
+    "M12": "prespecified power-law scaling of M2 over the five synthetic sizes; descriptive slope and size-stratified bootstrap interval because different size blocks run on different virtual machines",
+    "allPairwiseComparisons": "exploratory; clearly separated from reference-tool confirmatory contrasts"
+  },
+  "randomization": {
+    "design": "position-balanced randomized complete blocks within metric and workload",
+    "seed": "confirmatory-v2-cloud-m1|2026-10-01|sha256-balanced-order-v1",
+    "schedule": "protocols/confirmatory-v2-cloud/schedule.json",
+    "parallelBlocks": false,
+    "maximumConcurrentBlocks": 1,
+    "parallelToolsWithinBlock": false
+  },
+  "cacheAndWarmup": {
+    "M1": "remove declared tool caches and outputs before each process; do not drop operating-system page cache; no timed warmup",
+    "M2-M10-M11": "remove declared tool caches and outputs before each process; do not drop operating-system page cache; no timed warmup",
+    "M3-M4": "start a fresh session, perform one untimed stabilization edit, then five measured edits with a settled completion condition",
+    "betweenTools": "restore byte-identical source and verify process-tree termination before the next scheduled cell"
+  },
+  "environmentGate": {
+    "freshRunner": "each attempt begins in a newly allocated GitHub-hosted job with no earlier benchmark cell in that virtual machine",
+    "runnerLabel": "macos-14",
+    "runnerImageOS": "macos14",
+    "runnerImageVersion": "20260831.0302.1",
+    "architecture": "arm64",
+    "minimumLogicalCores": 3,
+    "minimumMemoryGiB": 7,
+    "minimumFreeDiskGiB": 20,
+    "minimumMemoryFreePercent": 50,
+    "memoryPressure": "macOS memory_pressure -Q must report at least 50 percent system-wide memory free immediately before the block",
+    "backgroundState": "record load average, process inventory, exact runner image, macOS, Chrome, Node, memory, and disk before and after every block; do not trim observations retrospectively using these diagnostics",
+    "preBlock": [
+      "runner label, ImageOS, ImageVersion, macOS build, Chrome, architecture, core count, and memory match the frozen environment",
+      "runtime, dependency-lock, source, profile, schedule, and executor hashes match the freeze manifest",
+      "required free disk threshold passes",
+      "required free-memory threshold passes",
+      "previous benchmark process tree is absent"
+    ],
+    "rule": "if a gate fails, postpone the entire block before observing an outcome"
+  },
+  "timeoutsSeconds": {
+    "M1Readiness": 300,
+    "M2Build": 1800,
+    "M3SessionStartup": 600,
+    "M3Update": 120,
+    "M4SessionStartup": 600,
+    "M4Update": 120,
+    "gracefulShutdown": 30
+  },
+  "exclusions": {
+    "allowed": [
+      "nonzero process exit",
+      "declared timeout",
+      "missing or ambiguous completion marker",
+      "source-restoration or hash failure",
+      "process-cleanup failure",
+      "functional output-contract failure",
+      "M4 full-page navigation, lost application state, browser error, or failed reload-detector control"
+    ],
+    "forbidden": [
+      "statistical outlier removal",
+      "removal because a value changes a ranking or significance result",
+      "retrospective warmup deletion",
+      "mixing a diagnostic, pilot, failed, or superseded campaign into confirmatory data"
+    ],
+    "replacement": "retain the failed job artifact and reason, discard the entire incomplete randomized block from confirmatory inference, and rerun it under a new attempt identifier on a newly allocated virtual machine",
+    "maximumReplacementAttempts": 2,
+    "afterMaximum": "pause the affected family and invoke change control; do not silently continue"
+  },
+  "analysis": {
+    "alpha": 0.05,
+    "contrast": "each non-reference tool versus Webpack within the same metric and workload",
+    "test": "two-sided paired Wilcoxon signed-rank test over complete blocks",
+    "effect": "Hodges-Lehmann paired shift on log outcomes, exponentiated as a typical ratio",
+    "interval": "95% paired-block bootstrap confidence interval with 10000 deterministic resamples",
+    "multiplicity": "Holm adjustment across every confirmatory contrast in the metric family",
+    "descriptive": "raw observations, failures, block order, median, IQR, and empirical distribution",
+    "M3-M4Reduction": "one median per independent session before any inferential analysis",
+    "missingness": "complete-block primary analysis; report all missing and replacement attempts",
+    "claimRule": "a primary difference claim requires adjusted p < 0.05 and a confidence interval excluding ratio 1; practical magnitude is reported without a post-hoc threshold"
+  },
+  "stopping": {
+    "rule": "fixed sample counts only",
+    "interimInference": false,
+    "earlyStopping": false
+  },
+  "changeControl": {
+    "freeze": "after capacity and deliberately failing collector controls pass, commit and hash this protocol, schedule, workflow, executors, source inventories, dependency locks, and profiles before the first timing observation",
+    "measurementChange": "any runtime, dependency, workload, configuration, collector, completion condition, exclusion, sample-count, or analysis change creates a new protocol version",
+    "affectedData": "observations collected under different protocol versions are never pooled for confirmatory inference",
+    "supersession": "confirmatory-v1 collected zero primary observations and is retained as superseded design history; it contributes no observations to v2",
+    "artifactDurability": "download and hash every completed or failed job artifact before GitHub retention expiry; publicationEligible cannot become true until the raw corpus is stored in a durable public repository with a persistent identifier",
+    "unlock": "publicationEligible may become true only after the planned matrix is complete, manifests validate, exclusions are audited, exact runner-image consistency is verified, durable archival is verified, and analysis reproduces from the archived corpus"
+  }
+}

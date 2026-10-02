@@ -1,0 +1,8 @@
+
+> benchmark-production-v1-realworld-esbuild@1.0.0 build
+> node profile-build.mjs
+
+
+> benchmark-production-v1-realworld-esbuild@1.0.0 build:bundler
+> node configs/esbuild/build.mjs
+

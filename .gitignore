@@ -31,3 +31,7 @@ results/validated-reruns/*
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Isolated correctness and measurement pilots
+.submission-pilot/
+!/package-lock.json

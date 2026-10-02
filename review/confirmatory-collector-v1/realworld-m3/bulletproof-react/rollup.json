@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "incremental-completion-correctness-not-latency-data",
+  "publicationEligible": false,
+  "tool": "rollup",
+  "node": "v24.14.0",
+  "target": "src/app/index.tsx",
+  "targetSha256Before": "2a2279b0a85f895804452feb7934b0f42ce6c37461a7e7119c486c0f3c8ae7fb",
+  "lockSha256": "c9f4f9f70f98bef4acea510a61770ac5ab0c16150c46baf406f01cfa14296128",
+  "command": [
+    "rollup",
+    "-c",
+    "rollup.config.mjs",
+    "-w"
+  ],
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "threeEditAndRevertCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "confirmatory_m3_correctness_rollup_1",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 2,
+      "marker": "confirmatory_m3_correctness_rollup_2",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 3,
+      "marker": "confirmatory_m3_correctness_rollup_3",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "2a2279b0a85f895804452feb7934b0f42ce6c37461a7e7119c486c0f3c8ae7fb"
+}

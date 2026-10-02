@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "kind": "bulletproof-react-incremental-correctness-matrix",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36826015073",
+  "headSha": "c814928f65ef1157ec62484de16b8ef86ff36569",
+  "node": "24.14.0",
+  "cells": 5,
+  "edits": 15,
+  "passed": true,
+  "reports": [
+    {
+      "tool": "esbuild",
+      "report": "esbuild.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "report": "rollup.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "report": "rspack.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "report": "vite.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "report": "webpack.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    }
+  ]
+}

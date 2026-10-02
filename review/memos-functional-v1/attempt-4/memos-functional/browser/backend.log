@@ -1,0 +1,14 @@
+time=2026-09-25T04:00:13.866Z level=INFO msg="initializing new database with latest schema" file=migration/sqlite/LATEST.sql
+time=2026-09-25T04:00:13.871Z level=INFO msg="database initialized successfully" schemaVersion=0.31.8
+Memos dev started successfully!
+Data directory: /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/memos-evidence/browser/database
+Database driver: sqlite
+Server running on 127.0.0.1:42341
+Access your memos at: http://127.0.0.1:42341
+Access mode: private
+time=2026-09-25T04:00:15.396Z level=INFO msg="client error" method=/memos.api.v1.AuthService/RefreshToken error="unauthenticated: refresh token not found"
+time=2026-09-25T04:00:15.397Z level=INFO msg=OK method=/memos.api.v1.InstanceService/BatchGetInstanceSettings
+time=2026-09-25T04:00:15.398Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceProfile
+time=2026-09-25T04:00:15.399Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceSetting
+time=2026-09-25T04:00:45.846Z level=INFO msg="server shutting down"
+time=2026-09-25T04:00:45.848Z level=INFO msg="memos stopped properly"

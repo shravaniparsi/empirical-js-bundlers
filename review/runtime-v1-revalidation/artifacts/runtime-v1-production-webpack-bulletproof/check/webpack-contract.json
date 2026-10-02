@@ -1,0 +1,240 @@
+{
+  "kind": "production-v1-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "180.00df34dd.js",
+      "sha256": "e410ff0e7498b0c1d2ed6018375273669e03b63693d73bb58bf0ae1db8787039",
+      "mappedSegments": 2625,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/dialog/dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/dialog/confirmation-dialog/confirmation-dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/table/pagination.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/table/table.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/hooks/use-disclosure.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/utils/format.ts"
+      ],
+      "mapSha256": "ff7706ba182cd7f1824513c4f30fe9537d1f17ff449f3148d9aa64f04da0e039"
+    },
+    {
+      "file": "229.9755bb0f.js",
+      "sha256": "7a80acb806af77e077c3f3d583dcae3fa906271e17e5868c58644c3b8c6ffb42",
+      "mappedSegments": 1161,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/auth/components/register-form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/teams/api/get-teams.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/auth/register.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/layouts/auth-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "3fa1347dae2bac7fed455ebbb9788932357997f8d534fa2db5c2d9d75bd661c4"
+    },
+    {
+      "file": "290.3947a73a.js",
+      "sha256": "4b8b7b13a3540d782be67923f1047203170e3461c83b7d04bd4ec72deb7804ba",
+      "mappedSegments": 1110,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/api/update-profile.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/components/update-profile.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/profile.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "a1d2004672fe4a7df5c25936d06c5a9c70e8e819387ca3eeead35752489642bd"
+    },
+    {
+      "file": "340.164a8da7.js",
+      "sha256": "c82ca92493afa02fb268306009d2ff75b56de4dbb789a508063cb828fa192f8f",
+      "mappedSegments": 10296,
+      "projectSources": [],
+      "mapSha256": "b8cd9f879937cc3c38686535145f968d2042fb54b3b32ceede71df249c595f19"
+    },
+    {
+      "file": "407.11ae0881.js",
+      "sha256": "129cb9465b1c7f3b0d6ec2b1ca787d0861d8a258ceb4a08bcef3ca5b06503a7e",
+      "mappedSegments": 2190,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/md-preview/md-preview.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/api/delete-comment.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/components/delete-comment.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/components/comments-list.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/api/create-comment.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/components/create-comment.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/components/comments.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/update-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/components/update-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/components/discussion-view.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/discussions/discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/dialog/dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/dialog/confirmation-dialog/confirmation-dialog.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/api/get-comments.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/get-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/hooks/use-disclosure.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/utils/format.ts"
+      ],
+      "mapSha256": "d38772eb23205a137941dac6cf7505bc1ed52807f35b502979f9c0c43cc0d672"
+    },
+    {
+      "file": "462.8233334d.js",
+      "sha256": "ada97fe43f6b6d6b52083631c1c696f4643dad8b9f0f1207c2274249dd3455ab",
+      "mappedSegments": 985,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/auth/components/login-form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/auth/login.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/layouts/auth-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "c2e8d564f13eb4c6a5c76aca4a7652937ffa585abd5da58c250c6ab6e9d50358"
+    },
+    {
+      "file": "477.166a6782.js",
+      "sha256": "a5d5d80113baaf7055c15b16bc3a17a715a1b61f250712b89419d34647d300db",
+      "mappedSegments": 5508,
+      "projectSources": [],
+      "mapSha256": "52435ad93dad1814b80a59a5be3128b22d698a6946e506595b6b2b5ccf300045"
+    },
+    {
+      "file": "620.fb81ade9.js",
+      "sha256": "5a55726afdd08b2f7b2cc2719da7924ddc5fa7f90b68e34ae3630040982bcff1",
+      "mappedSegments": 187,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/landing.tsx"
+      ],
+      "mapSha256": "89d5955493fc875e87899d63c0d453d7eb5193e8772b43ff9873e19783e7d53e"
+    },
+    {
+      "file": "725.000171f5.js",
+      "sha256": "be1b4fecbb9757d95b9087f3f0e3d598baca93c43e4237e28ffa9d21efc8abe8",
+      "mappedSegments": 294,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/api/get-users.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/api/delete-user.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/components/delete-user.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/users/components/users-list.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/users.tsx"
+      ],
+      "mapSha256": "023b861e83c7e74f05a620887ce0187ea85b69bf01a57b0d55cafa480d544e49"
+    },
+    {
+      "file": "777.7200a362.js",
+      "sha256": "c438e94ec0d476e02693d35599ba241cfde699e1b8bf788c821f7c94bc0b7939",
+      "mappedSegments": 1540,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/get-discussions.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/create-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/components/create-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/delete-discussion.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/components/delete-discussion.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/components/discussions-list.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/discussions/discussions.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/label.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/error.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/field-wrapper.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/input.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/select.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/textarea.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/form-drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/form/switch.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/comments/api/get-comments.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/features/discussions/api/get-discussion.ts"
+      ],
+      "mapSha256": "b96e2831293ec19f5ca64dfb762c982caab34f3fae906203bc5d206ac970c67f"
+    },
+    {
+      "file": "89.a80a705b.js",
+      "sha256": "cc125b4956117ed4351ae4e768cf7455bac9b9794ae2a8f5d96cbbd056ee9f5a",
+      "mappedSegments": 129,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/dashboard.tsx"
+      ],
+      "mapSha256": "f95af8da12a05438de4a7bf72a284c40b72a1fbf964eabf553126f2908b7c2ab"
+    },
+    {
+      "file": "985.65e91375.js",
+      "sha256": "047d411bf1c84eb17040e0f92b754488a3bc840f49ca9cf28d0d89ef4abc2864",
+      "mappedSegments": 36,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/not-found.tsx"
+      ],
+      "mapSha256": "ca55f04564e59a49c3466a984225b9c3ba3686acef7541f6a8134d5ecd5cd51e"
+    },
+    {
+      "file": "main.820ff0a8.js",
+      "sha256": "bd5da5002972772e9dbfbf35ebc0b6a72a2df7b89cd16ff1d91aea0286ad3346",
+      "mappedSegments": 87641,
+      "projectSources": [
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/layouts/content-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/dropdown/dropdown.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/layouts/dashboard-layout.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/seo/head.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/button/button.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/drawer/drawer.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/link/link.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/notifications/notification.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/notifications/notifications-store.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/notifications/notifications.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/ui/spinner/spinner.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/config/paths.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/config/env.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/lib/api-client.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/lib/auth.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/lib/authorization.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/utils/cn.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/components/errors/main.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/lib/react-query.ts",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/provider.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/routes/app/root.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/router.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/app/index.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/main.tsx",
+        "webpack://benchmark-production-v1-realworld-webpack/src/testing/mocks/index.ts"
+      ],
+      "mapSha256": "f6bcda75c08609003d8dcfa5b9f7fba967c60a11da5606b1103ef383f70c1fe4"
+    }
+  ],
+  "css": [
+    {
+      "file": "main.6feb542b.css",
+      "sha256": "0e52ee808c644ca02614f92293f0efe9367d95d11862af93f26005b556fb2e93",
+      "mapPresent": true
+    }
+  ],
+  "publicationEligible": false
+}

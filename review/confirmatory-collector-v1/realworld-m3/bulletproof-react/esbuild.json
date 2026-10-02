@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "incremental-completion-correctness-not-latency-data",
+  "publicationEligible": false,
+  "tool": "esbuild",
+  "node": "v24.14.0",
+  "target": "src/app/index.tsx",
+  "targetSha256Before": "2a2279b0a85f895804452feb7934b0f42ce6c37461a7e7119c486c0f3c8ae7fb",
+  "lockSha256": "dedcfd7bad8dcbec892a49a2f17d25dc5fda8ce2589f32338f43ad75924270c5",
+  "command": [
+    "node",
+    "configs/esbuild/watch.mjs"
+  ],
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "threeEditAndRevertCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "confirmatory_m3_correctness_esbuild_1",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 1
+    },
+    {
+      "edit": 2,
+      "marker": "confirmatory_m3_correctness_esbuild_2",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 3,
+      "marker": "confirmatory_m3_correctness_esbuild_3",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "2a2279b0a85f895804452feb7934b0f42ce6c37461a7e7119c486c0f3c8ae7fb"
+}

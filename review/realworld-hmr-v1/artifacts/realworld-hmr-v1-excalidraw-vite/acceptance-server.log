@@ -1,0 +1,58 @@
+
+> benchmark-realworld-v2-excalidraw@1.0.0 dev
+> node adapter-dev.mjs --host 127.0.0.1 --port 35273
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m35273[22m/[39m
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "../packages/excalidraw/css/variables.module.scss";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    excalidraw-app/index.scss 1:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "../../packages/excalidraw/css/variables.module.scss";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "../../packages/excalidraw/css/variables.module.scss";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+
+[2m6:05:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m6:05:32 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/packages/excalidraw/index.tsx, /packages/excalidraw/components/LayerUI.tsx[22m
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/packages/excalidraw/index.tsx[22m Could not Fast Refresh ("CommandPalette" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/collab/Collab.tsx, /excalidraw-app/components/ExportToExcalidrawPlus.tsx, /excalidraw-app/components/AppFooter.tsx, /excalidraw-app/components/AppMainMenu.tsx, /excalidraw-app/components/AppWelcomeScreen.tsx, /excalidraw-app/app-language/LanguageList.tsx, /excalidraw-app/ExcalidrawPlusIframeExport.tsx, /excalidraw-app/components/AI.tsx, /excalidraw-app/CustomStats.tsx, /excalidraw-app/components/AppSidebar.tsx[22m
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/collab/Collab.tsx[22m Could not Fast Refresh ("activeRoomLinkAtom" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/share/ShareDialog.tsx[22m
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/components/ExportToExcalidrawPlus.tsx[22m Could not Fast Refresh ("exportToExcalidrawPlus" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx[22m
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/packages/excalidraw/index.tsx, /packages/excalidraw/components/LayerUI.tsx[22m
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/packages/excalidraw/index.tsx[22m Could not Fast Refresh ("CommandPalette" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/collab/Collab.tsx, /excalidraw-app/components/ExportToExcalidrawPlus.tsx, /excalidraw-app/components/AppFooter.tsx, /excalidraw-app/components/AppMainMenu.tsx, /excalidraw-app/components/AppWelcomeScreen.tsx, /excalidraw-app/app-language/LanguageList.tsx, /excalidraw-app/ExcalidrawPlusIframeExport.tsx, /excalidraw-app/components/AI.tsx, /excalidraw-app/CustomStats.tsx, /excalidraw-app/components/AppSidebar.tsx[22m
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/collab/Collab.tsx[22m Could not Fast Refresh ("activeRoomLinkAtom" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/share/ShareDialog.tsx[22m
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/components/ExportToExcalidrawPlus.tsx[22m Could not Fast Refresh ("exportToExcalidrawPlus" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx[22m
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/packages/excalidraw/index.tsx, /packages/excalidraw/components/LayerUI.tsx[22m
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/packages/excalidraw/index.tsx[22m Could not Fast Refresh ("CommandPalette" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/collab/Collab.tsx, /excalidraw-app/components/ExportToExcalidrawPlus.tsx, /excalidraw-app/components/AppFooter.tsx, /excalidraw-app/components/AppMainMenu.tsx, /excalidraw-app/components/AppWelcomeScreen.tsx, /excalidraw-app/app-language/LanguageList.tsx, /excalidraw-app/ExcalidrawPlusIframeExport.tsx, /excalidraw-app/components/AI.tsx, /excalidraw-app/CustomStats.tsx, /excalidraw-app/components/AppSidebar.tsx[22m
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/collab/Collab.tsx[22m Could not Fast Refresh ("activeRoomLinkAtom" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx, /excalidraw-app/share/ShareDialog.tsx[22m
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/excalidraw-app/components/ExportToExcalidrawPlus.tsx[22m Could not Fast Refresh ("exportToExcalidrawPlus" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m6:05:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/excalidraw-app/App.tsx[22m
+[2m6:05:38 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/packages/excalidraw/index.tsx, /packages/excalidraw/components/LayerUI.tsx[22m

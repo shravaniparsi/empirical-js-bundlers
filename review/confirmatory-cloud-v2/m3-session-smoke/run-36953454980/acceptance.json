@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-smoke-validation",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "expectedCells": 5,
+  "valid": true,
+  "errors": []
+}

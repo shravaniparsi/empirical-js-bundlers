@@ -1,0 +1,65 @@
+{
+  "kind": "real-world-hmr-v1-acceptance",
+  "publicationEligible": false,
+  "status": "accepted-correctness-evidence",
+  "run": {
+    "databaseId": 36822789535,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822789535",
+    "headSha": "e9f452f175a11b5c15667bd106a107a56dea1e2d",
+    "conclusion": "success",
+    "jobs": 6
+  },
+  "runtime": {
+    "node": "24.14.0",
+    "policySha256": "c4a876104e5d5bce69d05f723bd93b397d3db5e8a24ed2886c30a486d24337f5"
+  },
+  "matrix": {
+    "applications": ["memos", "excalidraw"],
+    "tools": ["vite", "rspack", "webpack"],
+    "cells": 6,
+    "settledEditsPerCell": 3,
+    "totalSettledEdits": 18,
+    "passedCells": 6
+  },
+  "requiredChecks": [
+    "actual upstream component edited",
+    "application state established before editing",
+    "browser document preserved across every edit",
+    "application state preserved across every edit",
+    "zero main-frame navigations across every edit",
+    "one-second settle check after every observed update",
+    "deliberate reload positive control detected",
+    "edited source restored byte-for-byte",
+    "development-server process group stopped",
+    "actual Memos backend ready and stopped for Memos cells"
+  ],
+  "productionRegressions": [
+    {
+      "application": "memos",
+      "run": 36822362193,
+      "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822362193",
+      "conclusion": "success",
+      "jobs": 5
+    },
+    {
+      "application": "excalidraw",
+      "run": 36822462163,
+      "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822462163",
+      "conclusion": "success",
+      "jobs": 5
+    }
+  ],
+  "diagnostics": [
+    {
+      "run": 36822084110,
+      "accepted": false,
+      "finding": "Memos/Rspack bootstrap used serve-mode lazy compilation; a first hot-update request raced history fallback and received HTML."
+    },
+    {
+      "run": 36822462159,
+      "accepted": false,
+      "finding": "The first fix placed lazyCompilation under experiments; Rspack CLI reads the top-level option."
+    }
+  ],
+  "scope": "Correctness and feasibility only. These reports intentionally contain no HMR latency observations and cannot support performance claims."
+}

@@ -1,0 +1,36 @@
+
+> benchmark-production-v1-synthetic-rspack@1.0.0 dev
+> rspack serve --config rspack.config.cjs --host 127.0.0.1 --port 36083
+
+  ➜  Local:    http://127.0.0.1:36083/
+
+<i> [rspack-dev-middleware] wait until bundle finished: /
+Rspack compiled [1m[32msuccessfully[39m[22m in 109 ms
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_dashboard_DashboardPaginated_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_products_ProductsScatter_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_orders_OrdersStepper_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_users_UsersSnackbar_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_settings_SettingsAutocomplete_tsx_lazy-compilation-proxy.js
+Rspack compiled [1m[32msuccessfully[39m[22m in 231 ms
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_auth_AuthStepper_tsx_lazy-compilation-proxy.16a11fda75dc3c4b.hot-update.js
+<i> [rspack-dev-middleware] wait until bundle finished: /main.16a11fda75dc3c4b.hot-update.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_analytics_AnalyticsSkeleton_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_reports_ReportsTabs_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_billing_BillingFileUpload_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_inventory_InventoryHeader_tsx_lazy-compilation-proxy.js
+Rspack compiled [1m[32msuccessfully[39m[22m in 524 ms
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_audit_AuditTooltip_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_checkout_CheckoutLineChart_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_profile_ProfileToast_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_admin_AdminErrorBoundary_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_tags_TagsBreadcrumb_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_categories_CategoriesProvider_tsx_lazy-compilation-proxy.js
+Rspack compiled [1m[32msuccessfully[39m[22m in 924 ms
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_workflows_WorkflowsTag_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_integrations_IntegrationsAreaChart_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_webhooks_WebhooksProgress_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_api-keys_ApiKeysColorPicker_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_themes_ThemesRadio_tsx_lazy-compilation-proxy.js
+<i> [rspack-dev-middleware] wait until bundle finished: /src_features_localization_LocalizationLabel_tsx_lazy-compilation-proxy.js
+Rspack compiled [1m[32msuccessfully[39m[22m in 228 ms
+<i> [rspack-dev-server] Gracefully shutting down. Press ^C again to force exit...

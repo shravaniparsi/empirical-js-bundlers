@@ -1,0 +1,51 @@
+
+> benchmark-production-v1-realworld-webpack@1.0.0 build
+> node profile-build.mjs
+
+
+> benchmark-production-v1-realworld-webpack@1.0.0 build:bundler
+> NODE_ENV=production webpack --mode production --config webpack.config.cjs
+
+assets by path [1m[32m*.js[39m[22m 634 KiB
+  assets by chunk 87.8 KiB (id hint: vendors)
+    asset [1m[32m340.164a8da7.js[39m[22m 63.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m (id hint: vendors) 2 related assets
+    asset [1m[32m477.166a6782.js[39m[22m 24.1 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m (id hint: vendors) 1 related asset
+  + 11 assets
+asset [1m[32mmain.6feb542b.css[39m[22m 41.6 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m (name: main) 1 related asset
+asset [1m[32m6ce24c58023cc2f8fd88.svg[39m[22m 2.57 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: src/assets/logo.svg] (auxiliary name: main)
+asset [1m[32mindex.html[39m[22m 527 bytes [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 515 KiB (2.45 MiB) = [1m[32mmain.6feb542b.css[39m[22m 41.6 KiB [1m[32mmain.820ff0a8.js[39m[22m 474 KiB 3 auxiliary assets
+orphan modules 1.47 MiB (javascript) 860 bytes (runtime) [1m[33m[orphan][39m[22m 209 modules
+runtime modules 8.32 KiB 15 modules
+cacheable modules 2.07 MiB (javascript) 54.1 KiB (css/mini-extract) 2.57 KiB (asset)
+  modules by path [1m./node_modules/[39m[22m 1.55 MiB
+    modules by path [1m./node_modules/@tanstack/[39m[22m 63.6 KiB 19 modules
+    modules by path [1m./node_modules/@radix-ui/[39m[22m 576 KiB 19 modules
+    modules by path [1m./node_modules/lucide-react/dist/esm/[39m[22m 5.74 KiB 7 modules
+    modules by path [1m./node_modules/react/[39m[22m 8 KiB 4 modules
+    modules by path [1m./node_modules/react-dom/[39m[22m 130 KiB 2 modules
+    modules by path [1m./node_modules/scheduler/[39m[22m 4.33 KiB 2 modules
+    + 15 modules
+  modules by path [1m./src/[39m[22m 536 KiB (javascript) 54.1 KiB (css/mini-extract) 2.57 KiB (asset)
+    javascript modules 536 KiB 30 modules
+    css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/index.css[39m[22m 54.1 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./src/assets/logo.svg[39m[22m 2.57 KiB (asset) 42 bytes (javascript) [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1masset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  main.820ff0a8.js (474 KiB)[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mentrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (515 KiB)
+      main.6feb542b.css
+      main.820ff0a8.js
+[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mwebpack performance recommendations: 
+The runtime is part of the initial chunk of main. It describes every other chunk, so a change anywhere in the build rewrites these assets and clients download them again.
+Set 'optimization.runtimeChunk' to emit the runtime as its own chunk.
+For more info visit https://webpack.js.org/configuration/optimization/#optimizationruntimechunk[39m[22m
+
+webpack 5.111.1 compiled with [1m[33m3 warnings[39m[22m in 7141 ms

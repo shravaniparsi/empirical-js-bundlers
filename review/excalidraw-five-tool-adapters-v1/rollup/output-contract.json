@@ -1,0 +1,983 @@
+{
+  "kind": "excalidraw-five-tool-adapter-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "assets/CodeMirrorEditor-CVQb22g9.js",
+      "sha256": "91dd858787a6d42c13b809be0bcc1ace9e7ee9fdea7a1c9d7ed06d3bff1de015",
+      "mappedSegments": 62833,
+      "projectSources": [],
+      "mapSha256": "b26cbc7a302e6bc727e3572020ba05415b876399dd09c19bfbe5d5727bd7fd9c"
+    },
+    {
+      "file": "assets/_basePickBy-DBDeQpEz.js",
+      "sha256": "041e7769c4114242067591e674b93185fe4d8c2471c75ce1751096a2aea0b5c5",
+      "mappedSegments": 614,
+      "projectSources": [],
+      "mapSha256": "03c7a6d739d622efd10a70bd12db5b4db19f2e2eae589b71f1b79eca5879518e"
+    },
+    {
+      "file": "assets/_baseUniq-B6taUsBF.js",
+      "sha256": "2603e381235f525ce86008cd52b4c6d33aba42e8186ddba77090a66784e2c55a",
+      "mappedSegments": 2631,
+      "projectSources": [],
+      "mapSha256": "7c72740b09a67c090ec4d1fbb619de8047719ce9d6139870ac9804f61eccff09"
+    },
+    {
+      "file": "assets/ar-SA-D4iWC4fG.js",
+      "sha256": "1ab6fdbbc52a7e08c97c434054b98b6cd9ef7f99edecbb0638e378086437077d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "5ff2daeebb34ee5421d129ed2e18bece3dff964be6fd516df4828d19b409a9e1"
+    },
+    {
+      "file": "assets/arc-CHAPxj-H.js",
+      "sha256": "57782dbc8e65df31fa939769b74c90bb9e2d4ed1414e805d98a84d708a29cfd4",
+      "mappedSegments": 1005,
+      "projectSources": [],
+      "mapSha256": "36c4d13f8d7b150f7d0c6dc2255e1cf0d105a0330ac41d31a38f39eb92479cf1"
+    },
+    {
+      "file": "assets/architectureDiagram-VXUJARFQ-H7CVoMRb.js",
+      "sha256": "03a64702c03f59fb7f428f028f62659899f22ef7cece168e9fdca072f63977c2",
+      "mappedSegments": 27630,
+      "projectSources": [],
+      "mapSha256": "0af9f687781c776129fb3332b284507a993e428c282cdcec2802527ff843ddba"
+    },
+    {
+      "file": "assets/az-AZ-CMHM1-Pg.js",
+      "sha256": "9a726bef3e6b75681d503f7bad6b31616eb4b3b89dc4cecae38cb827e24675a0",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "7ea8195965ef62ff1f5077a53da3f916bd9177b038a4e205c5defa575f587431"
+    },
+    {
+      "file": "assets/bg-BG-COTokv0e.js",
+      "sha256": "95114b288887ccd94a1a36c6ca99fc7e2faef1c52421d5f9c79a2b6db451a6a4",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "bbb9c071a556f05da6e8b5ca2654837bfd2b59f2dc83158b78be8efffaab937b"
+    },
+    {
+      "file": "assets/blockDiagram-VD42YOAC-DGEVG5D7.js",
+      "sha256": "8a54e56a37762fe35d58a32c7685c928ef12d4a016a3595bce01a95ed83b8f75",
+      "mappedSegments": 13657,
+      "projectSources": [],
+      "mapSha256": "11ae9f45751732115206d6ca64f15ba4c3a6c923ece2ae7110b25a2b4d8cde25"
+    },
+    {
+      "file": "assets/bn-BD-rd1UsjBF.js",
+      "sha256": "aaea4418fe63c43efada52917bc95fd94ad850373ffe805771d0c8ee95369d52",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "b240c6c4b958b1c8dd0b5c4db2f2fc941ac0b2cdff3d8a9039672d1e07a57a6f"
+    },
+    {
+      "file": "assets/bn-IN-rd1UsjBF.js",
+      "sha256": "5b9fc74ba4da5e0b97586abb68a5e29c43102f6ab33cca0519534e44d2c07627",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "bdc78b6d381a39b0fbd38a636444205951219f6557c75ba3070d7b79d67656d4"
+    },
+    {
+      "file": "assets/bug-issue-template-Xp940i3h.js",
+      "sha256": "67ad454bb05a9e9e8a35ab0b89e97cf7e5ec5b474c206b6d748efa3167608804",
+      "mappedSegments": 5,
+      "projectSources": [],
+      "mapSha256": "0b9093ea6b8871d65f49f4af471f11bd45ee6af76656665319f673f3cc28d222"
+    },
+    {
+      "file": "assets/c4Diagram-YG6GDRKO-BAYKYTc_.js",
+      "sha256": "5ab0b8a26e831e74279fb2872d84c5aa24f3104ed48c96b4a350d71b2aee4ba9",
+      "mappedSegments": 11297,
+      "projectSources": [],
+      "mapSha256": "d96c0f318eb88389bf18eb5e16d2e617ad3ca2b0915271bf17fa16b96be9686a"
+    },
+    {
+      "file": "assets/ca-ES-DLsPEQM_.js",
+      "sha256": "660d8edc84e42545fdb12dfc5519167c077bcaa26c17659b7ce6651a7ff49b87",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "218d3a197b2b2469fa46174100911417e87ae89d2403ccafb4208652399e5aa4"
+    },
+    {
+      "file": "assets/channel-D-Ojqhb7.js",
+      "sha256": "24639485640b2e304eaad7eb2fcfa25525df898730df4ad9dfa998469a04ebd5",
+      "mappedSegments": 12,
+      "projectSources": [],
+      "mapSha256": "e4234503757438fd46271f8558c670715d84133b1a08c82a031f005a0dc37482"
+    },
+    {
+      "file": "assets/chunk-4BX2VUAB-B2vZJFDt.js",
+      "sha256": "4b6646eb281039b9c23799699a4d197f1b379dc66b2e970fa4b4728b964de391",
+      "mappedSegments": 26,
+      "projectSources": [],
+      "mapSha256": "a83d0aeefd7414836b7ce8a5ea06f1d921c26621c68ce12ce7079c030ac4302b"
+    },
+    {
+      "file": "assets/chunk-55IACEB6-CST2ser-.js",
+      "sha256": "fbe03a13eae3673317d866e02f4dbcccb19cdf44026bd32d9fb9af4267f85ce8",
+      "mappedSegments": 28,
+      "projectSources": [],
+      "mapSha256": "198fa4f64ea45a413a1e8f05b6d494817703a7986e2b1fc53fd9743071a56165"
+    },
+    {
+      "file": "assets/chunk-B4BG7PRW-Yr1XuQdu.js",
+      "sha256": "ae8bda75f90fb01b6913ca11812ebcaec4e13b60026c1cca92b398e95c39082b",
+      "mappedSegments": 8409,
+      "projectSources": [],
+      "mapSha256": "ffe670f3ac96ba435cfad1472048b4c5f74c6db06056f79b369a83ca8738fe3b"
+    },
+    {
+      "file": "assets/chunk-DI55MBZ5-uYwxgPWd.js",
+      "sha256": "dedab9200692cbacbd6c29d39d2046a750686e9d1b86279df0e9c37067f76bc2",
+      "mappedSegments": 6406,
+      "projectSources": [],
+      "mapSha256": "3952a3821c92afd4185d05e7f6cb28ea337f362d3afe1fb9a6fa283e5c8392a6"
+    },
+    {
+      "file": "assets/chunk-FMBD7UC4-CVPkw7C1.js",
+      "sha256": "5949aebd1160fccf12d2cd38a8c0dd8d52b3061e82c04d238d60a8c59e0cf630",
+      "mappedSegments": 6,
+      "projectSources": [],
+      "mapSha256": "3bf7418b7b302df5ead37fcf39eea071e699531aa07001ee93f20dae7acd9db3"
+    },
+    {
+      "file": "assets/chunk-QN33PNHL-B4zkqS1k.js",
+      "sha256": "5f995b9673f6f4872e162a700a16d26280e70f2438bba499644cf3e39224da56",
+      "mappedSegments": 101,
+      "projectSources": [],
+      "mapSha256": "c7cab111734c48a758e039859519355cef987a80b11ab4b2ff5fa5a724099a3d"
+    },
+    {
+      "file": "assets/chunk-QZHKN3VN-BeWw2jmH.js",
+      "sha256": "2258b7393ca54425e931604359c3ef57c3fb446d2d43dc93810d3b45be4cd31b",
+      "mappedSegments": 25,
+      "projectSources": [],
+      "mapSha256": "b6068b91be765dde6a7043e59772f75af81c0356006e55b0b7cf4c52f4406e65"
+    },
+    {
+      "file": "assets/chunk-TZMSLE5B-CsKjKZC8.js",
+      "sha256": "fa7e9cca1f7acc52691e4e2641196f4d1eb7363a9373a9980bbe9528cfd7634f",
+      "mappedSegments": 293,
+      "projectSources": [],
+      "mapSha256": "e48637148b426253013ffc48043048fe1efc40a244c62fc76e24a5872344a153"
+    },
+    {
+      "file": "assets/classDiagram-2ON5EDUG-BUIMex03.js",
+      "sha256": "5e4cae0b207dfe1f739bb869ceb88bf42e9fd04ce54be8ef4ee3d1687030f1bf",
+      "mappedSegments": 30,
+      "projectSources": [],
+      "mapSha256": "85ea4fccbb71609d2f89fa965677e8dedf68238d85069a2c9638fb52ff43a7de"
+    },
+    {
+      "file": "assets/classDiagram-v2-WZHVMYZB-BUIMex03.js",
+      "sha256": "07d4c7cfb359a97b8755f112a0b9fb6c3b2149bdf289a32ea8ef8f528e368cf2",
+      "mappedSegments": 30,
+      "projectSources": [],
+      "mapSha256": "a9f1b2559961575ac02e750da1376d18dc6e5f6e9a8616e2d310309ea63e8dcf"
+    },
+    {
+      "file": "assets/clone-CmUuwX6U.js",
+      "sha256": "9aa7783cd75587d7ebacc388de20efe8a1482dc6e1c5d2f5129a9c39e43398a3",
+      "mappedSegments": 8,
+      "projectSources": [],
+      "mapSha256": "75a1c2245080b5a39f8d7790251655399692e1d64ae1298c8e5f91c1b7bda120"
+    },
+    {
+      "file": "assets/cose-bilkent-S5V4N54A-DWnQ1PHn.js",
+      "sha256": "fc193b836d49d96cca191e63ae70a7affb9fd57d75dc69f9a32fcbbbae30c73f",
+      "mappedSegments": 14946,
+      "projectSources": [],
+      "mapSha256": "5973a615073fc7e2f2fc05f67dae80957397aeecb62bc9127702fa07965e0f34"
+    },
+    {
+      "file": "assets/cs-CZ-DglLFbLx.js",
+      "sha256": "62739ecfb85723feb223a17eedc9405c0b092fb2907ca45627ad9bb88dda6402",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "0484fb3171f840c3cb62d370f6ae3622045715af002742bb8edbf7c2bdf85309"
+    },
+    {
+      "file": "assets/cytoscape.esm-CRd2Xfjm.js",
+      "sha256": "e582ba42baef4a51c34ae402e1b4d9839525d6e4afb21a14e67381c925807b19",
+      "mappedSegments": 92602,
+      "projectSources": [],
+      "mapSha256": "3145cc022eb53d29b6c19facc31034d5a57ec02f36597143907274be8a2e3464"
+    },
+    {
+      "file": "assets/da-DK-4V4LhEAE.js",
+      "sha256": "2dc6c206c9f9833c9c391f9c911f5d665b36ef3c58a882c7ddfca28e645212c1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "b6b728f81a0880b1a4db96e8df408857c70c13885c471e048cdc3460986cd436"
+    },
+    {
+      "file": "assets/dagre-6UL2VRFP-DSlQk009.js",
+      "sha256": "17e17ff4588aec4b9d47e7fdba276a8a6623ded8f60f7ef21320832d5e198c70",
+      "mappedSegments": 2134,
+      "projectSources": [],
+      "mapSha256": "74b83fca5c1231383aec3a1e0b8d9b2e7792e0b14bbabbc9d375a9491e45a04b"
+    },
+    {
+      "file": "assets/de-CH-BvAcNTUm.js",
+      "sha256": "72eb2784a2d3a68950b0f5fa3046fc5627c90094645946f92f2a96e6a13d91be",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "5bd9961a65fd3edd0d15f0224e4e168c13f0bf300648b7420e4f6fa749c15769"
+    },
+    {
+      "file": "assets/de-DE-BvAcNTUm.js",
+      "sha256": "d2767a53a0480fc6e9766164d16d949d66de69c36a7de9b17b366274300e9a92",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "725a7c4d09385b568ee580e4a623e83d84a508a9495e69ac6ae0c093d3dd226f"
+    },
+    {
+      "file": "assets/defaultLocale-BcMa4e9o.js",
+      "sha256": "1868ae58a6c5d92dd354028b2e709f7feb2d46128fa14783151dcf38a32db1a5",
+      "mappedSegments": 1114,
+      "projectSources": [],
+      "mapSha256": "c27ba569038bb0bc54a9a7c83dcbf6a2a3a0c5dacb15e7e7d128010c97c63ab1"
+    },
+    {
+      "file": "assets/diagram-PSM6KHXK-Ltp06e8B.js",
+      "sha256": "90e6c91bb97d9477312b3557a0d9607c0fbefee6cfee38c69b4a5a12d18142b2",
+      "mappedSegments": 3011,
+      "projectSources": [],
+      "mapSha256": "ab2f28cc108f388c22989a0b0f101fdd2865000ffa59beee5dd4d2a1fb2adcfa"
+    },
+    {
+      "file": "assets/diagram-QEK2KX5R-BG0jICuB.js",
+      "sha256": "04e0a4ae4bf6f55504044de658fd9c8190282300654ac71337010a11d975b7cd",
+      "mappedSegments": 1023,
+      "projectSources": [],
+      "mapSha256": "f01f5a4ea4daccd3d8936ed90a98655d1a79f43e41729e41f712204023d8bb42"
+    },
+    {
+      "file": "assets/diagram-S2PKOQOG-Bl28UnU7.js",
+      "sha256": "bd688780099ccf72ad207e767c9d11eaf84df404c8ac1611f3c16efd3b970eb6",
+      "mappedSegments": 635,
+      "projectSources": [],
+      "mapSha256": "9758404de492f755d9f432c64c7f44d1cc4b9abd8c98b385468272882b2cf492"
+    },
+    {
+      "file": "assets/el-GR-C9xCduDW.js",
+      "sha256": "e0794c82e757af5e67caf15a98550a48172e19e153e25dc5350a972bc7d8d94a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "6ea9610e71ea1b0e08d982a9e4882204af7b5759f7b7c36e3a4f2a3ab8c9de77"
+    },
+    {
+      "file": "assets/erDiagram-Q2GNP2WA-BaWrFeLC.js",
+      "sha256": "b5f1cb588486ad1a5947c588d6e9ac2cc3e37441fb8bcee0f034fdcb7e45344d",
+      "mappedSegments": 5142,
+      "projectSources": [],
+      "mapSha256": "1d1a52d25d0b6e0335cc90db2fcb5a334cd2bdb617fb6b44246a203a75e965f0"
+    },
+    {
+      "file": "assets/es-ES-D3Jz-3Kz.js",
+      "sha256": "617a6162e5fbe59cf1bfc6f9dc05a49fb7bf19c7d519ab932577895f908cefc3",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "f832f0604ea2722635ea5d15b650e830e02ac8950712e617e7b643fdbc404613"
+    },
+    {
+      "file": "assets/eu-ES-CjcdN3FE.js",
+      "sha256": "56b980b987e1e80c410d7ddc8998d607497ba7ea45accdc8ce7d148b940b5ae9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "a955d355d1ef6da8909f70be6ff083d4c8c345b7c85c107fc6d34e573609bddf"
+    },
+    {
+      "file": "assets/fa-IR-DenoL560.js",
+      "sha256": "14ceb9a0568b741b3c935ba9499d8f4a358dce9277d7a48fa3d889ea1ba71d11",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "e2de62a8a3a503f246e5f9e9953e68d2b46b52c921165ed5701d11be7034561a"
+    },
+    {
+      "file": "assets/fi-FI-tpB7AySd.js",
+      "sha256": "192107db0a484e3eb7c7aac7b03f9d81b3c8ab4c8e8f996a3751546bced3d9fa",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "acd7b0c451c822b4cd19077e43a753a38c8796df59e1b38150e42fed5d07d5e2"
+    },
+    {
+      "file": "assets/flowDiagram-NV44I4VS-Da9yH2Rs.js",
+      "sha256": "5e94daf29a25422949881090872ad0a80bd4d5251ea37cda2f67f8a804a5929f",
+      "mappedSegments": 11864,
+      "projectSources": [],
+      "mapSha256": "4c5a927e9ad0a630756f30b29eabe939a624202da8d47764ba326dbadf1209e8"
+    },
+    {
+      "file": "assets/fr-FR-ZpQSZraB.js",
+      "sha256": "d9737ffddc8d4afa3505072f851b434242cfd9d5af9801be2ac32b589d5a8d6d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "5b5eeb8b80c30cc9095f5e19145649b49c320ece819aec6ea170d05b0295ef77"
+    },
+    {
+      "file": "assets/ganttDiagram-JELNMOA3-BnPLi9gl.js",
+      "sha256": "033420c1678d2c290e8eb3381dd77a38d3e028996341dab1a30ac83e30de90c4",
+      "mappedSegments": 13991,
+      "projectSources": [],
+      "mapSha256": "732f3460aa3b09970b10884e8be3dea00cfe6e4e89cf0fe86ae6b2283ddd82f6"
+    },
+    {
+      "file": "assets/gitGraphDiagram-NY62KEGX-cK4XiA59.js",
+      "sha256": "2633036ce1c95dade1765ddc2adcb2ea9ad8f025530c15a40d26bc92c263b089",
+      "mappedSegments": 4503,
+      "projectSources": [],
+      "mapSha256": "a84b9d4074cab3649e43380e5bb9b2da5f7fc353fc81b9d8708b10470f26e5b9"
+    },
+    {
+      "file": "assets/gl-ES-BTHGt0Et.js",
+      "sha256": "b00e2062c497f6c17dd98614fc53b72d09a00f5fc62bf1d5e36ec1e3346ce4c8",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "e33c138a7f23612b811053e9fa56b41e4bf9c67ef68b7df2424efdc0f56c92c8"
+    },
+    {
+      "file": "assets/graph-D8XOJB6b.js",
+      "sha256": "c65a4e440cbcf5418e9ca27438030710c95bfa5bf6127a7bcc6aa4fea8939a02",
+      "mappedSegments": 1210,
+      "projectSources": [],
+      "mapSha256": "cc413cf7605f19bdb840c1b606282c246b44aa4183938a9efec8c6509e343dd4"
+    },
+    {
+      "file": "assets/he-IL-BoMaVegk.js",
+      "sha256": "027e940d1dc1998bf324de0fa4836bc9abf90b95fc1af4a647eab21eabdbff3a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "7d512056856b0e57232e03865965d8b85f1cc496098f3b45aec2f82bb52fca0b"
+    },
+    {
+      "file": "assets/hi-IN-Bl4Hlr2H.js",
+      "sha256": "227355793f3d2b5f8057b1cd16e925ab2b44f83fb5276ff2897b7f64294e5fe9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "304176d67bf360e5448e23bfa815017a2878d5e57521de4f6911d071d252fffd"
+    },
+    {
+      "file": "assets/hu-HU-x_98Lfs0.js",
+      "sha256": "50b37487b10010ac17d693999dd5e417bc811fece13b451fc074977882c96943",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "3d351b7142a1522724e190702673b015c36cf36baf82e12b7290dffa2cd62093"
+    },
+    {
+      "file": "assets/id-ID-CNxIBFg8.js",
+      "sha256": "394a0aac617fcecea06d320f98aefb63b71a38c4a1ea5a9ea511fada4786e799",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "d33088f57cd4e5ebcafcb9843350d9e376956af1c94394461a604fa37f9e5842"
+    },
+    {
+      "file": "assets/image-blob-reduce.esm-DSisAv9V.js",
+      "sha256": "c1754a975265e1dd5a47aea505601c30fe15070c6aeb287470d18d891014d33a",
+      "mappedSegments": 8633,
+      "projectSources": [],
+      "mapSha256": "9271b69c0987ee18ba2f0e93bae01343cc5959f3bfd42bf42b1eaa8d3285103c"
+    },
+    {
+      "file": "assets/index-BB_ZqnP1.js",
+      "sha256": "1e8a51dec0faf6efa3572c4eb93b52a6d9694842ddde6d642add5b24f5dc47d9",
+      "mappedSegments": 459654,
+      "projectSources": [
+        "../../packages/common/src/binary-heap.ts",
+        "../../packages/math/src/utils.ts",
+        "../../packages/math/src/angle.ts",
+        "../../packages/math/src/vector.ts",
+        "../../packages/math/src/point.ts",
+        "../../packages/math/src/constants.ts",
+        "../../packages/math/src/curve.ts",
+        "../../packages/math/src/ellipse.ts",
+        "../../packages/math/src/line.ts",
+        "../../packages/math/src/pca.ts",
+        "../../packages/math/src/polygon.ts",
+        "../../packages/math/src/range.ts",
+        "../../packages/math/src/segment.ts",
+        "../../packages/math/src/triangle.ts",
+        "../../packages/common/src/colors.ts",
+        "../../packages/common/src/constants.ts",
+        "../../packages/common/src/font-metadata.ts",
+        "../../packages/common/src/queue.ts",
+        "../../packages/common/src/editorInterface.ts",
+        "../../packages/common/src/keys.ts",
+        "../../packages/common/src/points.ts",
+        "../../packages/common/src/promise-pool.ts",
+        "../../packages/common/src/utils.ts",
+        "../../packages/common/src/random.ts",
+        "../../packages/common/src/url.ts",
+        "../../packages/common/src/emitter.ts",
+        "../../packages/common/src/appEventBus.ts",
+        "../../packages/common/src/versionedSnapshotStore.ts",
+        "../../packages/utils/src/shape.ts",
+        "../../packages/laser-pointer/src/math.ts",
+        "../../packages/laser-pointer/src/simplify.ts",
+        "../../packages/laser-pointer/src/state.ts",
+        "../../packages/element/src/cropElement.ts",
+        "../../packages/element/src/typeChecks.ts",
+        "../../packages/element/src/distance.ts",
+        "../../packages/element/src/heading.ts",
+        "../../packages/element/src/elbowArrow.ts",
+        "../../packages/element/src/mutateElement.ts",
+        "../../packages/element/src/containerCache.ts",
+        "../../packages/element/src/textMeasurements.ts",
+        "../../packages/element/src/textWrapping.ts",
+        "../../packages/element/src/textElement.ts",
+        "../../packages/element/src/stickyNote.ts",
+        "../../packages/element/src/utils.ts",
+        "../../packages/math/src/rectangle.ts",
+        "../../packages/element/src/comparisons.ts",
+        "../../packages/element/src/collision.ts",
+        "../../packages/element/src/binding.ts",
+        "../../packages/element/src/linearElementEditor.ts",
+        "../../packages/element/src/groups.ts",
+        "../../packages/element/src/selection.ts",
+        "../../packages/fractional-indexing/src/index.ts",
+        "../../packages/element/src/fractionalIndex.ts",
+        "../../packages/element/src/frame.ts",
+        "../../packages/element/src/renderElement.ts",
+        "../../packages/element/src/shape.ts",
+        "../../packages/element/src/bounds.ts",
+        "../../packages/element/src/sizeHelpers.ts",
+        "../../packages/element/src/align.ts",
+        "../../packages/element/src/newElement.ts",
+        "../../packages/element/src/arrowEndpointText.ts",
+        "../../packages/element/src/bucketFill.ts",
+        "../../packages/element/src/sortElements.ts",
+        "../../packages/element/src/duplicate.ts",
+        "../../packages/element/src/store.ts",
+        "../../packages/element/src/Scene.ts",
+        "../../packages/element/src/delta.ts",
+        "../../packages/element/src/distribute.ts",
+        "../../packages/element/src/dragElements.ts",
+        "../../packages/element/src/elementLink.ts",
+        "../../packages/element/src/embeddable.ts",
+        "../../packages/element/src/flowchart.ts",
+        "../../packages/element/src/zindex.ts",
+        "../../packages/element/src/arrows/focus.ts",
+        "../../packages/element/src/image.ts",
+        "../../packages/element/src/positionElementsOnGrid.ts",
+        "../../packages/element/src/resizeElements.ts",
+        "../../packages/element/src/transformHandles.ts",
+        "../../packages/element/src/resizeTest.ts",
+        "../../packages/element/src/transform.ts",
+        "../../packages/element/src/arrows/helpers.ts",
+        "../../packages/element/src/arrowheads.ts",
+        "../../packages/element/src/convertToShape.ts",
+        "../../packages/element/src/index.ts",
+        "../../packages/utils/src/export.ts",
+        "../../packages/common/src/bounds.ts",
+        "../../packages/element/src/showSelectedShapeActions.ts"
+      ],
+      "mapSha256": "5cdd64d62fbc25ce543facd581864818c01072b4b7f028d1b8aa249f887d2c70"
+    },
+    {
+      "file": "assets/index-BtwzgRRn.js",
+      "sha256": "f7e8d4d837f8f57c5e12c41bb41a05401bf2f84006a01b486e37d760bab88fe5",
+      "mappedSegments": 7132,
+      "projectSources": [],
+      "mapSha256": "8118835a9f00da53d3a3278f6bd24f7f93d04dcb6d87ff76fe3b3477755856ba"
+    },
+    {
+      "file": "assets/infoDiagram-WHAUD3N6-ky4jccCJ.js",
+      "sha256": "546a3a62613242c5668f685dfd344712fdebd590b0813231bf94fb51b23d0e19",
+      "mappedSegments": 78,
+      "projectSources": [],
+      "mapSha256": "3c8cea5dfcc36175e67ba383397f4cbaac1159d1b6190216e6f6370681c137c3"
+    },
+    {
+      "file": "assets/init-DxfFsZOS.js",
+      "sha256": "44fa183f95516f4683a3f347ae82c9369c0803ef1fa9f3422b78f90d36ab2535",
+      "mappedSegments": 25,
+      "projectSources": [],
+      "mapSha256": "fb67cea98bd2ba73afcfb437eb85a5a48291c3650f735d4d66b39fd83fa974e2"
+    },
+    {
+      "file": "assets/it-IT-DZehAvE1.js",
+      "sha256": "28e66df006783c8c71d044808b3455477e966ac864c52a5e657e7d56de9d2fcd",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "7fe8ab85136d2c896da35fa43a6c0d169ab0ea2b93287f1da4deb9d336f81a33"
+    },
+    {
+      "file": "assets/ja-JP-DT5u163r.js",
+      "sha256": "64b61fe63570a8928fd045c8866c5a67575bcee290754e62f52f3be2929a11f2",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "5303ef00f5ea7f97adfa62b66dceea68b69dee64c4237e98abcf9efa958fd8d0"
+    },
+    {
+      "file": "assets/journeyDiagram-XKPGCS4Q-CiMgqTq8.js",
+      "sha256": "5aa0ee5249fd27c9c26928233a4977d37f027971693416003da1e4de5763c1b6",
+      "mappedSegments": 4261,
+      "projectSources": [],
+      "mapSha256": "051cd2366eff1585c4308f77f66dce9a7b733dee79eaaa04f9c1567ece4dd77f"
+    },
+    {
+      "file": "assets/kaa-DlRVTFdb.js",
+      "sha256": "1e531dd36c56cc05edbcdb78cbbd06e9d28261d2530d1fff447df84c77fd46a9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "b894dad8f5b2e40465cacbe401bad5d41bd3d9c7968281ed3ae8d421893c5e52"
+    },
+    {
+      "file": "assets/kab-KAB-BgE1eEos.js",
+      "sha256": "5ba523bf1b7970ebaa5454a9c31b7fc95fd636a106450d881adb3b313486d7c1",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "67f9a13a424e776664b411696428d1b3a5d7548cf9558db25075ac2f168e01ad"
+    },
+    {
+      "file": "assets/kanban-definition-3W4ZIXB7-BWX0x0CK.js",
+      "sha256": "321796c9e8159181ebfb318466c2e51362b7d0e367ba031dd128171e777c7afd",
+      "mappedSegments": 3706,
+      "projectSources": [],
+      "mapSha256": "8a1203145f854e4790feddcf9c1a483a6190e955a6fc442cc9beec20c711a614"
+    },
+    {
+      "file": "assets/katex-gvtNVudL.js",
+      "sha256": "1b669b9f0d52c47bf6dd9b484a87a5ac357949ffcd225caf85a0ef929b1ac2c2",
+      "mappedSegments": 49162,
+      "projectSources": [],
+      "mapSha256": "9110e022b4064ac15961a26b05cbc929dd89f795aa191f41d12163a950eb3a7c"
+    },
+    {
+      "file": "assets/kk-KZ-DpLDJT2a.js",
+      "sha256": "be6f446772a357046702e0691560cfa197412bfc8ce43ce0b79ca57f9f1d1c90",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "31eeaab7b6be7f018321944fe279b0fc0a79b615ec14dfb4d83a1ea437962827"
+    },
+    {
+      "file": "assets/km-KH-C99VbB_s.js",
+      "sha256": "fb48adc34047818d95610c65d2df29798dd774f04904896a3601c82c5e19a3f9",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "91e48489c2fd7f98ba3c412353c19b943019153d9d07090e2cd8ba00871c62a9"
+    },
+    {
+      "file": "assets/ko-KR-sx4ToUwf.js",
+      "sha256": "57a796fe293957eaf6065c44672035163f8dd5e374c72540934c711b8540f7de",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "963f682558b94cde623388dcd6ae98059873571f781ac98e306ebe26e3310605"
+    },
+    {
+      "file": "assets/ku-TR-DSqpi9hs.js",
+      "sha256": "712d140d22e70f4a2a66afadbda8192f9d02edd8beb4f310967fc9268b325561",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "437bf66fef7010d1117befb65ffe326b0e6b826280155ded1e15f9a08e76da79"
+    },
+    {
+      "file": "assets/layout-Dncg27en.js",
+      "sha256": "e4962b8554d8fc2895478216c740f73d9f82927b0db44ebd3ba62ba9745abea1",
+      "mappedSegments": 6865,
+      "projectSources": [],
+      "mapSha256": "3abb342eafa4bafb70599eeb38c31ddd55ceb21b7ee4b9b7c1d298de59e14fb2"
+    },
+    {
+      "file": "assets/linear-DfyxdOV8.js",
+      "sha256": "8cd6efe02766200ee0af84930e2bb0f0ea0bad0ee5202c89a0c07061d297e076",
+      "mappedSegments": 1500,
+      "projectSources": [],
+      "mapSha256": "560504f6512fa57c123d95a44509e3b6bb23f8a7fded0a799b696624775cc832"
+    },
+    {
+      "file": "assets/lt-LT-CGio0SwL.js",
+      "sha256": "4d770bdaff71f5b584c6268c4becc322cd847aa85966dc73fd5f3df0f76b4acb",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "f5f04c68beafc88d8b39fc4f393a7902322cf8cffab773f643142957c9d5866c"
+    },
+    {
+      "file": "assets/lv-LV-DGg4YLT0.js",
+      "sha256": "c09b29fecfd8cc040ba05ad331c3e9b964ec7c3e956192b19258dd2a956099a0",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "4d2bfe6684f5704cd4f166d320a1ee21d85d8d72f86ef410c4af28822a861c77"
+    },
+    {
+      "file": "assets/mindmap-definition-VGOIOE7T-D4ZSdwcw.js",
+      "sha256": "c0e7dd43c13345bb94072d5787a815bbf156eb5df1f0099c50f30ae4e05f13d4",
+      "mappedSegments": 3766,
+      "projectSources": [],
+      "mapSha256": "f93aa3c1b390ca91637cb654378fb621765d5f389ead233ccad215e691ae2705"
+    },
+    {
+      "file": "assets/mr-IN-BBfnc5iY.js",
+      "sha256": "d9f50e1d2773ea5666f369e4b4425e5151ad250287e0caff25c88fd98c2955ac",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "95edefc60731ad93bb21d02eba9e637e8627bd6ed1bd6be4bf69b26129ec2d0b"
+    },
+    {
+      "file": "assets/my-MM-BcmS5Mcd.js",
+      "sha256": "fe82c400ab04c523721253a3280d43f06305f02a09d0455fe35a15ca95a2716d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "f3adcd398a1c70363c0da6c99dd2a4c93613656eb03db7a361916a907847a0dd"
+    },
+    {
+      "file": "assets/nb-NO-CHcs1FGN.js",
+      "sha256": "ebd35110d20ad3806dacc60ca1ce1774911405a47fbc842849259bcc91c44fd8",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "24619f008c64cb870dc984e12c2d7285d13fb35a815b453181d48a9f38c421e8"
+    },
+    {
+      "file": "assets/nl-NL-B-fS-18R.js",
+      "sha256": "8f3523b3dde433c0aef9f7bca8ae7464de5cfb3fe58c79f6f727bd9a0ea49229",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "1dd1d54679bf8d1252b82d6f54188ae5c34688827b83db3534c6496358440acf"
+    },
+    {
+      "file": "assets/nn-NO-Cchdn0p4.js",
+      "sha256": "68a520719eaa033c6276a48a3a2ee7bb0586ecd3a47adb91434cd491daf26b4f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "909cd0610a54191bfe85787317e203cf3f4ffb74e848b0ccfb731c0dea92d0dd"
+    },
+    {
+      "file": "assets/oc-FR-Dvxllwb3.js",
+      "sha256": "f16b83417b20154dd5877935ddbef150a4052acdc1c784b4f8e04e839ca35730",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "a10957272932d0431fa511a65066f761b57452159e10b35f17e3f99d58104d85"
+    },
+    {
+      "file": "assets/ordinal-D69kwKDp.js",
+      "sha256": "59c19e8dddc4dc32e7e973f6026c409dbbf30ecce336c4ad473e5cf8f1e032a1",
+      "mappedSegments": 278,
+      "projectSources": [],
+      "mapSha256": "ce40e3ca7bf63b5a529e377752b268633c04116ee4026cb010975917f987bd09"
+    },
+    {
+      "file": "assets/pa-IN-Cqu9t3By.js",
+      "sha256": "d5f6e49c5dac754c482cbbad12de54e84da39b072eb1832d513d119cee7b9e7d",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "1b0ee29b82d60887598ebd616b34c56795f03a2a7b52dc834013ab68309b82cd"
+    },
+    {
+      "file": "assets/pica-C0Ks3h7X.js",
+      "sha256": "202f371547c2ac62a863b96f1ecc824c8c532bf84dd09a61e5ff02d2f3781210",
+      "mappedSegments": 5942,
+      "projectSources": [],
+      "mapSha256": "ff3e37843d5eeb248bf4cfe663026ae850356d1985251c612fe091a3ad2166ad"
+    },
+    {
+      "file": "assets/pieDiagram-ADFJNKIX-Do56DZuC.js",
+      "sha256": "cab90d660957a0ec100bb2656c03ceac14c253a7a575cc56914402c919af5e4c",
+      "mappedSegments": 825,
+      "projectSources": [],
+      "mapSha256": "cc4a8b954ba7072153f9806bef5ccddb2f5270f8b369cafaaf952d603f42b181"
+    },
+    {
+      "file": "assets/pl-PL-CDnedrFT.js",
+      "sha256": "bd229adf339da90075c7a7893a117b443e46a319e904a0871bd42af01747e747",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "06793073d8f032d2154c37cd3f8410118a7e7b919158b552a01be93ddea2bec1"
+    },
+    {
+      "file": "assets/pt-BR-5G2d7hME.js",
+      "sha256": "9dcc08b567b58620b5fa1add84a59575065ad2febb0149946ca4cc451e3d065c",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "c80ae3c05d15e16e7d9e428aac3bbf718596eb182c44cc1155eeeafb098462ec"
+    },
+    {
+      "file": "assets/pt-PT-BiD1ZUl7.js",
+      "sha256": "60f99ad7cc254ed429520a754992729077f6b21c3115032cfe3402a05e63cb02",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "afe0a550c5d0dff9bd62cc27c68444762a2f06adee34c31efb16a08f1a686633"
+    },
+    {
+      "file": "assets/qrcode.chunk-CgVfxtMe.js",
+      "sha256": "6c2d48d125335e79b0fe2877dddf2fb5fbaad52487f3817a277350b978633608",
+      "mappedSegments": 2748,
+      "projectSources": [],
+      "mapSha256": "25c615f4f9766571d1e21565f8531dd02d4edee9620376fc0814338f4ff13d07"
+    },
+    {
+      "file": "assets/quadrantDiagram-AYHSOK5B-O0ePdK8S.js",
+      "sha256": "381e1a1293c7dcfab1998014434b20c232120504088b58fd175940c9200c04a7",
+      "mappedSegments": 6641,
+      "projectSources": [],
+      "mapSha256": "a9a4d41aa91bbd2afac544b384613f1d7b52e502aa2cfafb74b662c8317fe1f6"
+    },
+    {
+      "file": "assets/random-username.esm-D_fiS58J.js",
+      "sha256": "1fec737393f6a79e5a8f0c321dfbdcae8a877ed10ff618b21460e1911286cf75",
+      "mappedSegments": 15,
+      "projectSources": [],
+      "mapSha256": "0e10526662751520e022fc257598adf2b758f6094b0db70f7a55dbd72b81fe85"
+    },
+    {
+      "file": "assets/requirementDiagram-UZGBJVZJ-Bn6hdAMR.js",
+      "sha256": "5ee8a7873cc4dd7f5addb7d799020a858c5422268284cbb95cf70d8650d7bd03",
+      "mappedSegments": 6307,
+      "projectSources": [],
+      "mapSha256": "c40fe2de77ad4324a15c61d81a68ecf68ec932e5b399ddc209be6a146cea137c"
+    },
+    {
+      "file": "assets/ro-RO-z51mB8Vj.js",
+      "sha256": "a8b0b8739db59b89721ca1ed482149ec8353d33e9951ec3848c0347e9f40439b",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "43b717e24c47fcd37b6f45f7f0f537fc95caec28b64d79a8063cbed7c6bd7b4e"
+    },
+    {
+      "file": "assets/roundRect-BXJG8y6z.js",
+      "sha256": "17464aed06e6e1dfa17ac607e45115b4d4fa0846a3cf3addf2383914d2b98b42",
+      "mappedSegments": 731,
+      "projectSources": [],
+      "mapSha256": "a235573366d7a4c703dd8090bd688e086cfd5a5c42296504df8ead1d7d3e2fa0"
+    },
+    {
+      "file": "assets/ru-RU-DDSuKHJ8.js",
+      "sha256": "43c8d78332fd18befa87b19c2fd4201ad92330b9e036b0e9d0dc15001e423dbc",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "cdb5d8aadb558a270bf8e525a9b5f7acbb9b7454361f657cc1efe2e3427c9bd8"
+    },
+    {
+      "file": "assets/sankeyDiagram-TZEHDZUN-BsYx-9pM.js",
+      "sha256": "cffd24772a96df04c78a2a4a539c351fdaa31c6d80bd0fd7cb6bbb366c18bc71",
+      "mappedSegments": 4748,
+      "projectSources": [],
+      "mapSha256": "0054d9bbc7d581d46d2343318d0b2ae030e6724c0c243aefae8dc9f0df1ccb0c"
+    },
+    {
+      "file": "assets/sequenceDiagram-WL72ISMW-vBFBdPk3.js",
+      "sha256": "4b56999e71fc011a3b299973808351149397c99b0b8b9972558bdb34ba5e61fe",
+      "mappedSegments": 16577,
+      "projectSources": [],
+      "mapSha256": "8117577c9b7fa821f67774de5121cdde44a8f8597663fb97ed050bf4d74e5f55"
+    },
+    {
+      "file": "assets/si-LK-7N8MWkwf.js",
+      "sha256": "cd6450f903951d39da0b1d482c0973422115e4440ad2a68ae24454bdd887c9de",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "27bc1e29763d5a6332b13a9b7cdacfaaa2262db3483049dc95fe083c7a592e88"
+    },
+    {
+      "file": "assets/sk-SK-DCH5XnWc.js",
+      "sha256": "f834f5a5e0e686d1765487c643a98af039e321297cff0cfb84fd306404a497fd",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "b25a58c099d2cae27b4a0733f49f3fabf91331dc16f4fa91c4cff44b99847a03"
+    },
+    {
+      "file": "assets/sl-SI-oino9te6.js",
+      "sha256": "2876f5a373cfaceac58daa41410cabff417ea19d684f7553debc282164bb31f3",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "76795dc4ad03868df353c35b0e96f2a8f6e93db8e663d4cf80b257b8669854a7"
+    },
+    {
+      "file": "assets/stateDiagram-FKZM4ZOC-CR4g3gFR.js",
+      "sha256": "75470b447f2d2ab4947558f428e923e5da0952af7d3308a95828693e2dc38549",
+      "mappedSegments": 1975,
+      "projectSources": [],
+      "mapSha256": "f7b47dcad9628c99182ccf0e0c9885ea094cd19586a49226b3e8a6378dd0ce68"
+    },
+    {
+      "file": "assets/stateDiagram-v2-4FDKWEC3-Bf0LiojY.js",
+      "sha256": "75a9064ac89fa9a13aed1395e55e88808b99282193d07858dd18819524ec281e",
+      "mappedSegments": 31,
+      "projectSources": [],
+      "mapSha256": "ffe1da3cf901ef75a1006270402d6325fb682c9f19d3e4778889b917dedcd5fc"
+    },
+    {
+      "file": "assets/subset-shared.chunk-y9ZeX18V.js",
+      "sha256": "5ae33b84faa4540ed20af09fc3a0380d0cdf28c3dd52986d16d5877755ee000c",
+      "mappedSegments": 8251,
+      "projectSources": [],
+      "mapSha256": "cb8f3ab00cf9a93a351826a8b7e22e8acae9f208ae801516ae6a044333db5357"
+    },
+    {
+      "file": "assets/subset-worker.chunk-D3sIrNTV.js",
+      "sha256": "cfb32f66d90cad76af86629301b5739613917b48ad58b06eb998f4cb0b207380",
+      "mappedSegments": 37,
+      "projectSources": [],
+      "mapSha256": "8b22df4730ba24a43f32aa6392fd34c5e53cebbfdef01864203eb8d911509e39"
+    },
+    {
+      "file": "assets/sv-SE-npyiG-Tw.js",
+      "sha256": "856683dfc88cac68811a8c24dffc78a6e5f7faa4fdfa872b581bb3bb5a17f003",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "8ef3544baf62b1864a2017e33830e2296a80f6ef0d925f424d689b7c9b8ef5e6"
+    },
+    {
+      "file": "assets/ta-IN-CDtWREnH.js",
+      "sha256": "1527cad5086892278d8758f941ff213e14ab677b163ca4e02b82f5df2767a77b",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "7fde145e58128ed5df8fb281fb7957f5e3fff38a53945d07f15c553827033663"
+    },
+    {
+      "file": "assets/th-TH-DAkX2itn.js",
+      "sha256": "88ca2e178c7ada5f7c087252fe7d86fb4f400382d75661423e9755a10b22ac97",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "679f1139441e5102d926830d03d123ee02576d8df8cf5177c00d94f8e53b7d62"
+    },
+    {
+      "file": "assets/timeline-definition-IT6M3QCI-B9SZMXYW.js",
+      "sha256": "8a7d2cfc6f989149f6745d74e4443668c2e35212a4755f2899ef7e111ca98ab5",
+      "mappedSegments": 4465,
+      "projectSources": [],
+      "mapSha256": "018252112a7f6cd70c1b5f871574b923383e52e59831910be8713718012a39ad"
+    },
+    {
+      "file": "assets/tr-TR-DwjdqMln.js",
+      "sha256": "b342ccffaa511af7d307deb87c5d9892f91c6c261684598b76734b09bf1df23a",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "c90b7cd553b4bca315475d23d88201f5532f89064326f76f84a5c0a41c54e094"
+    },
+    {
+      "file": "assets/treemap-KMMF4GRG-Da6_zKyX.js",
+      "sha256": "c13b873195e008449589efbc041bf379129b89c1b17e92578b4df918f41ecee4",
+      "mappedSegments": 49724,
+      "projectSources": [],
+      "mapSha256": "c3290a79fafc96db43e94a134a12df35786e6388e4daf04e71a58b178e859171"
+    },
+    {
+      "file": "assets/uk-UA-g2DNgxjq.js",
+      "sha256": "66a27bcf69de717f12e1b247dbcee2f1d78475730808e6bcf48c8bba29636a1f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "f4e987d4a0780c4c3bf6396371f6d8a5acfd54677e381f432dfbf9c67fca7875"
+    },
+    {
+      "file": "assets/uz-UZ-Bol2pFMe.js",
+      "sha256": "14008aef1dcc0e5be22b95faaf07767478167914cc838a184dc2fe17fa50c552",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "8b768635a63254d191f86eb4d4937e0a66785acca6c12dd79d936520a4379d95"
+    },
+    {
+      "file": "assets/vi-VN-Bn4Jiinm.js",
+      "sha256": "9aa5be7cd18ee98aaf8dcfe015942408aefaed36ae27d7c20e8a958c5aa12503",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "7c0f3dee46a244d00d28a5ee11ce7f72b4fb44224dd054cc3496ee4ba24bfcd2"
+    },
+    {
+      "file": "assets/xychartDiagram-PRI3JC2R-DdHY8mf2.js",
+      "sha256": "f5ed4146ede64cbfd1dcc8b05f5bffae0ce8e9cf7a94fbf449ab24b730ca7d5d",
+      "mappedSegments": 7585,
+      "projectSources": [],
+      "mapSha256": "28e9766a8dcd880ee9b87f7acc83002e98c609c18d0da3f5e5f38d278b7dfbb6"
+    },
+    {
+      "file": "assets/zh-CN-DEfbTm4u.js",
+      "sha256": "64cbe783c9525dc7b60eff0fb14063e1e0b1e5429f2cace3682a20966f9ab62f",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "31c04009755aac190e1b2e6970bbaddb2b239711138cb81ffd0a2dfb775d0a2b"
+    },
+    {
+      "file": "assets/zh-HK-BMCx-z-5.js",
+      "sha256": "7030eb7a629fde8ef80d062c22d47e3e3c754448fc09d3b16ffd6d9e1f7f7048",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "65f42002685b3e25bd757792daeed7b81d87697fe4f7c9dde4b25d12ec6151b8"
+    },
+    {
+      "file": "assets/zh-TW-CWee1tI9.js",
+      "sha256": "9f6baee64f37b539ab5e5ed0aa7af3a748c4576421eb03ff24deb83bc9c0be81",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "empty",
+      "mapSha256": "5901c8acecd7aeebe20d3596e0747999a59e85033224e59f5f4623bb24183f86"
+    },
+    {
+      "file": "service-worker.js",
+      "sha256": "6b7ade18de7f438e4a901d5e65b8adcaf89cf1d41d7ced3fd6cc6ebbb9d11319",
+      "mappedSegments": 0,
+      "projectSources": [],
+      "mapStatus": "absent"
+    }
+  ],
+  "css": [
+    {
+      "file": "fonts/fonts.css",
+      "sha256": "45f1993459e438245df7a5d2ebeee5b6ac5f3c818a04d5cd4c86f2b0b122d398",
+      "mapPresent": false
+    },
+    {
+      "file": "index-BB_ZqnP1.css",
+      "sha256": "64f25ab187955f120d70350556aa42ad89d4dc454f3ff8adef92885d661d4493",
+      "mapPresent": true
+    }
+  ],
+  "publicationEligible": false
+}

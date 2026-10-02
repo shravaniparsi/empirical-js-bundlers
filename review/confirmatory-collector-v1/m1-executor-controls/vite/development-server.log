@@ -1,0 +1,8 @@
+
+> benchmark-production-v1-synthetic-vite@1.0.0 dev
+> vite --host 127.0.0.1 --port 33891 --strictPort
+
+
+  [32m[1mVITE[22m v8.3.0[39m  [2mready in [0m[1m233[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m33891[22m/[39m

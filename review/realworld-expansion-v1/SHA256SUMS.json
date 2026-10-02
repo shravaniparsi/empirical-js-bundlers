@@ -1,0 +1,357 @@
+[
+  {
+    "path": "acceptance.json",
+    "bytes": 1026,
+    "sha256": "881f7e96e4e5b5d4c73fedaf533c323fd5002c87582695e307e47b1d13afdfb5"
+  },
+  {
+    "path": "attempt-1/github-run.json",
+    "bytes": 4695,
+    "sha256": "fa8738456fea1bacb376fbf4d4e41781c3c29746fb27862d34c832b45816e766"
+  },
+  {
+    "path": "attempt-1/upstream-excalidraw/build.log",
+    "bytes": 71817,
+    "sha256": "1e942d34042aa4680af7b2b5274dd1c9b8567fc04ef01f4ec2a31b1bf4e1c089"
+  },
+  {
+    "path": "attempt-1/upstream-excalidraw/install.log",
+    "bytes": 39793,
+    "sha256": "940f6aaa990cb4e30a4f54c9aa442827248ba91e3d207aa039fb253f56fbd88a"
+  },
+  {
+    "path": "attempt-1/upstream-excalidraw/output-manifest.json",
+    "bytes": 86696,
+    "sha256": "0c4c5ec80bea932361b4c792cd92b968aae69f98370e5f0addc795f6a760627a"
+  },
+  {
+    "path": "attempt-1/upstream-excalidraw/package-manager.log",
+    "bytes": 8,
+    "sha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+  },
+  {
+    "path": "attempt-1/upstream-excalidraw/receipt.json",
+    "bytes": 2254,
+    "sha256": "584be9bdbe7d0e70f9a51e194c4d6f304c94380c9762bbce31e2bc024d8b42d4"
+  },
+  {
+    "path": "attempt-1/upstream-memos/build.log",
+    "bytes": 25940,
+    "sha256": "d710a52394e9f6d621ed45cfb9d93651968263203dad321ccf60e9728833ffb9"
+  },
+  {
+    "path": "attempt-1/upstream-memos/install.log",
+    "bytes": 2401,
+    "sha256": "3c8de6a4ecd9a03dcf502cb466749568ee0861f662ab841ecfab23e5caed79aa"
+  },
+  {
+    "path": "attempt-1/upstream-memos/output-manifest.json",
+    "bytes": 46562,
+    "sha256": "6dab0945d62dcf0f8ba9a50f03fdac6f6c968b91aa93aeedbce8750067a94f5e"
+  },
+  {
+    "path": "attempt-1/upstream-memos/package-manager.log",
+    "bytes": 7,
+    "sha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+  },
+  {
+    "path": "attempt-1/upstream-memos/receipt.json",
+    "bytes": 2186,
+    "sha256": "96ff6009d40764dbc06edfccdffc6bc9fcc9a3556734e196ca9ae213a50d2ff4"
+  },
+  {
+    "path": "attempt-2/github-run.json",
+    "bytes": 5441,
+    "sha256": "64a4249786bdae3960f2dbcfff2a66166105911e13a481bebcaa666a58a2734a"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/browser/browser.json",
+    "bytes": 1457,
+    "sha256": "9c1ec20542ddfee603b07ff46fee84e8805615c815b5ac34595a515f39b6d449"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/browser/browser.png",
+    "bytes": 68214,
+    "sha256": "9cb9923eb26f188edf43c5646a718b59d60f9de9f98058e7c45bf8f7537d4ea5"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/browser/page.html",
+    "bytes": 49007,
+    "sha256": "cb1d2496f3d023a426dadb7b9ca22b95613073cb0164eb7e6f6946c21da89e11"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/build.log",
+    "bytes": 71817,
+    "sha256": "eeccbeb1423515f3cb5411fcf01491d0855dc15bad0b73de49b4fc64df959ed6"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/install.log",
+    "bytes": 39793,
+    "sha256": "0c0176e8b9771f56faf148030b4f4846082dcf0565bda6d2c8eaa4b3757726a5"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/output-manifest.json",
+    "bytes": 86696,
+    "sha256": "9b83b2b09ccd79dc1736bfc6f23c6c0d64a55c0ebe6b589412c833f74f6f04ad"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/package-manager.log",
+    "bytes": 8,
+    "sha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+  },
+  {
+    "path": "attempt-2/upstream-excalidraw/receipt.json",
+    "bytes": 2254,
+    "sha256": "7da189bcb32d2e11e94ffdfb14c90d701d981aab001c2e5a226c48bce300dbbc"
+  },
+  {
+    "path": "attempt-2/upstream-memos/build.log",
+    "bytes": 25940,
+    "sha256": "66ac902a3724fc187e33a1e8863dad0d50cdc4116c9ed4d31cc45868467c93c8"
+  },
+  {
+    "path": "attempt-2/upstream-memos/install.log",
+    "bytes": 2461,
+    "sha256": "204b841dcd676efa8f65740dc9b617eeb2cfaa26a8b8febe8d8d1ee6b5ab40d0"
+  },
+  {
+    "path": "attempt-2/upstream-memos/output-manifest.json",
+    "bytes": 46562,
+    "sha256": "6dab0945d62dcf0f8ba9a50f03fdac6f6c968b91aa93aeedbce8750067a94f5e"
+  },
+  {
+    "path": "attempt-2/upstream-memos/package-manager.log",
+    "bytes": 7,
+    "sha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+  },
+  {
+    "path": "attempt-2/upstream-memos/receipt.json",
+    "bytes": 2186,
+    "sha256": "944751422433194ac01df1c7502549d1091460c2f4bbf4350c17cba47f944d41"
+  },
+  {
+    "path": "attempt-3/github-run.json",
+    "bytes": 5441,
+    "sha256": "0912a7ab1022ab91b274f8f57f5608c151fad15d57b9ed56bd7023f9bb2377b0"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/browser/browser.json",
+    "bytes": 2351,
+    "sha256": "60a674f5e335f9182b956485fbdbaac44276f20322d8dc72728d4715c69e0b62"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/browser/browser.png",
+    "bytes": 72654,
+    "sha256": "2fa521a3253cc4e7c9435418a37cf1b0e99c3174f20f7671119673a250020dc9"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/browser/page.html",
+    "bytes": 49535,
+    "sha256": "bb2b954bc162c30184365d7ec89ea4fd9a817cbc1aac860298e975c6bb20436d"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/build.log",
+    "bytes": 71817,
+    "sha256": "0e46f9135c401a693ba27be6245ed04a53b12d17ec4c1b8135d064f0bdfb442f"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/install.log",
+    "bytes": 39793,
+    "sha256": "f2320c8a7e62c09627923db4c3175c2fb3c4df47cf2a9f8a1c0f20c8bce15bf9"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/output-manifest.json",
+    "bytes": 86696,
+    "sha256": "9218d608a5cc14d7979389cbe207814eea697da4f2b0478cc269331091cb991d"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/package-manager.log",
+    "bytes": 8,
+    "sha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+  },
+  {
+    "path": "attempt-3/upstream-excalidraw/receipt.json",
+    "bytes": 2254,
+    "sha256": "4603757d1425f63f1a3254b354e633823e45b5609ac61ce8e9e31016490dda75"
+  },
+  {
+    "path": "attempt-3/upstream-memos/build.log",
+    "bytes": 25939,
+    "sha256": "70229c84df3c9f1d87038a8142d7ec81f309601631f6da7ce1b052083749531a"
+  },
+  {
+    "path": "attempt-3/upstream-memos/install.log",
+    "bytes": 2403,
+    "sha256": "b1757b5267d557b013dc392b3da57478116975e4dfc9afaae0f777b7d671878c"
+  },
+  {
+    "path": "attempt-3/upstream-memos/output-manifest.json",
+    "bytes": 46562,
+    "sha256": "6dab0945d62dcf0f8ba9a50f03fdac6f6c968b91aa93aeedbce8750067a94f5e"
+  },
+  {
+    "path": "attempt-3/upstream-memos/package-manager.log",
+    "bytes": 7,
+    "sha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+  },
+  {
+    "path": "attempt-3/upstream-memos/receipt.json",
+    "bytes": 2186,
+    "sha256": "84de46c15cd0d03621d1642c7e0c79afdbc907461b757f85c66419b767f3ddd9"
+  },
+  {
+    "path": "attempt-4/github-run.json",
+    "bytes": 5441,
+    "sha256": "18bfe3f7997fdbefbff2b103d6748477a00401ce13816a89324c61a804e7b1d3"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/browser/browser.json",
+    "bytes": 2012,
+    "sha256": "2260c1f8a56c59cb641cfc8bac1b220d77c75a05f6faaad8bd4499afec7ff083"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/browser/browser.png",
+    "bytes": 72696,
+    "sha256": "81b5d050af4b8f64decaa0c4428857abfb091357d81ea299061f934237b83aaa"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/browser/page.html",
+    "bytes": 49535,
+    "sha256": "93b7100a10d4f4ccb3f8e2b88afc941b239123ee8be5772454a17266ab35f3cd"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/build.log",
+    "bytes": 71817,
+    "sha256": "f2ac7979d9c77bed25ae22cc19c13b051e2cba039290f70f47ec19a54ad570ad"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/install.log",
+    "bytes": 39793,
+    "sha256": "7906ee60a5a5d19c1165098767b936cc65f0008aa71aa7f24de1799b940dd7ca"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/output-manifest.json",
+    "bytes": 86696,
+    "sha256": "0aff45a8dd50d67462983897f047fa0e0d99960e9f73945f28c209310412e7b1"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/package-manager.log",
+    "bytes": 8,
+    "sha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+  },
+  {
+    "path": "attempt-4/upstream-excalidraw/receipt.json",
+    "bytes": 2254,
+    "sha256": "9a2482caf05a9a9af3f094cae3313eb20fb2cc143e49a8aaac536e57f7d39c4b"
+  },
+  {
+    "path": "attempt-4/upstream-memos/build.log",
+    "bytes": 25940,
+    "sha256": "85c237de7349b882b2fc5b17bd05ee722893ac326a7235b4a3fa8250b9e8af2a"
+  },
+  {
+    "path": "attempt-4/upstream-memos/install.log",
+    "bytes": 2459,
+    "sha256": "ccb5a8f5c2b2af1f7064bb9be029f09c15cb3077f74de96b13d2f637c56c34d9"
+  },
+  {
+    "path": "attempt-4/upstream-memos/output-manifest.json",
+    "bytes": 46562,
+    "sha256": "6dab0945d62dcf0f8ba9a50f03fdac6f6c968b91aa93aeedbce8750067a94f5e"
+  },
+  {
+    "path": "attempt-4/upstream-memos/package-manager.log",
+    "bytes": 7,
+    "sha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+  },
+  {
+    "path": "attempt-4/upstream-memos/receipt.json",
+    "bytes": 2186,
+    "sha256": "2bd22aa6b74e7bee8532dfb83cd8ddff9628db1b09fc394d5a38d586a06b66b5"
+  },
+  {
+    "path": "attempt-5/github-run.json",
+    "bytes": 5441,
+    "sha256": "1cdc2e6012728095d2e9487b1fe29bcbd9cae2745e1a600ff196bcccacc46699"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/browser/browser.json",
+    "bytes": 4139,
+    "sha256": "f0a0b9a45852765465b39b6de8f46af19c4ffc50dc37e7c105fe7671e8732126"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/browser/browser.png",
+    "bytes": 72720,
+    "sha256": "7a8c83380d1218e8877d4ffc3068353a2bb80c89d94be6143d5302ffa634a39d"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/browser/downloads/Untitled-2026-09-25-0341.svg",
+    "bytes": 1224,
+    "sha256": "e0829c59514c32bd1cee26b582cb359cc8744247832e56491989fd62acf97bbb"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/browser/page.html",
+    "bytes": 49098,
+    "sha256": "12950b69f2bb02e97538b97f65e6043a03c4a2fe2dda528032e86afb965e8e8d"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/build.log",
+    "bytes": 71817,
+    "sha256": "61e170ecf50013b27197e218384bcf6d80707bdcc6e33b3687a2f4c684763598"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/install.log",
+    "bytes": 39793,
+    "sha256": "e8bb77d42a489a286b794f946859dd008205bdbdea59d0ebc5dd7f4356d185d6"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/output-manifest.json",
+    "bytes": 86696,
+    "sha256": "9ca3440baa70b0b65ee323f68eadf498c84182c8a569a4a1643787a5f8c17eea"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/package-manager.log",
+    "bytes": 8,
+    "sha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+  },
+  {
+    "path": "attempt-5/upstream-excalidraw/receipt.json",
+    "bytes": 2254,
+    "sha256": "c22958d64fdcdf4cf91ff2948b15f61341aab625a73451c5e951a9e4d272bcf0"
+  },
+  {
+    "path": "attempt-5/upstream-memos/build.log",
+    "bytes": 25940,
+    "sha256": "2c9426b7ac9e53907d6a61c65bbddd71fbd904b045d29b2a9b8d1bdb165a463f"
+  },
+  {
+    "path": "attempt-5/upstream-memos/install.log",
+    "bytes": 2403,
+    "sha256": "51ac5e3aed313dd892e106fb5620991952a88229a98419b2a68762b7b857781a"
+  },
+  {
+    "path": "attempt-5/upstream-memos/output-manifest.json",
+    "bytes": 46562,
+    "sha256": "6dab0945d62dcf0f8ba9a50f03fdac6f6c968b91aa93aeedbce8750067a94f5e"
+  },
+  {
+    "path": "attempt-5/upstream-memos/package-manager.log",
+    "bytes": 7,
+    "sha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+  },
+  {
+    "path": "attempt-5/upstream-memos/receipt.json",
+    "bytes": 2186,
+    "sha256": "3a2c29d332669867072b95f68fee385e56dfcf40fd016a8818a5aafa247dcbf8"
+  },
+  {
+    "path": "fetch-reproduction.log",
+    "bytes": 978,
+    "sha256": "fdf022ea3e2345cc446a0cb715eb07c0d891257786e4dd95fcc0bb83d92a8a16"
+  },
+  {
+    "path": "source-guard-checks.json",
+    "bytes": 409,
+    "sha256": "5a16ab6fa3cda36fd537641735483f00ced351358f0b5e53749d451120a0854a"
+  }
+]

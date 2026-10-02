@@ -1,0 +1,100 @@
+name: Confirmatory HMR correctness v1
+on:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: Missing protocol matrix to run
+        required: true
+        default: all
+        type: choice
+        options: [all, synthetic, bulletproof]
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/development-v1/**'
+      - 'scripts/prepare-development-profile.mjs'
+      - 'scripts/check-bulletproof-hmr.mjs'
+      - '.github/workflows/confirmatory-hmr-correctness-v1.yml'
+permissions:
+  contents: read
+env:
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+jobs:
+  synthetic:
+    if: github.event.repository.private == false && (github.event_name == 'push' || inputs.suite == 'all' || inputs.suite == 'synthetic')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+        size: [xs-50, m-500]
+    env:
+      PROFILE_REVISION: confirmatory-m4-${{ matrix.tool }}-${{ matrix.size }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - name: Install harness
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Prepare exact development profile
+        run: |
+          node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-confirmatory-m4-${{ matrix.tool }}-${{ matrix.size }}/${{ matrix.tool }}'
+          npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-confirmatory-m4-${{ matrix.tool }}-${{ matrix.size }}/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Exercise three settled edits, state retention, reload detector and restoration
+        timeout-minutes: 15
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: |
+          mkdir -p hmr-evidence
+          node scripts/audit-runtime-policy.mjs hmr-evidence/runtime.json
+          node scripts/check-hmr-browser.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-confirmatory-m4-${{ matrix.tool }}-${{ matrix.size }}/${{ matrix.tool }}' hmr-evidence/acceptance.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confirmatory-m4-${{ matrix.tool }}-${{ matrix.size }}
+          path: hmr-evidence/
+          retention-days: 30
+
+  bulletproof:
+    if: github.event.repository.private == false && (github.event_name == 'push' || inputs.suite == 'all' || inputs.suite == 'bulletproof')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+    env:
+      PROFILE_REVISION: confirmatory-m4-${{ matrix.tool }}-bulletproof
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - name: Install harness
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Prepare exact Bulletproof React development profile
+        run: |
+          node scripts/prepare-production-profile.mjs realworld app
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' '.submission-pilot/bulletproof-corrected-confirmatory-m4-${{ matrix.tool }}-bulletproof/${{ matrix.tool }}' realworld
+          npm ci --prefix '.submission-pilot/bulletproof-corrected-confirmatory-m4-${{ matrix.tool }}-bulletproof/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Exercise three settled edits, form-state retention, reload detector and restoration
+        timeout-minutes: 15
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: |
+          mkdir -p hmr-evidence
+          node scripts/audit-runtime-policy.mjs hmr-evidence/runtime.json
+          node scripts/check-bulletproof-hmr.mjs '${{ matrix.tool }}' '.submission-pilot/bulletproof-corrected-confirmatory-m4-${{ matrix.tool }}-bulletproof/${{ matrix.tool }}' hmr-evidence/acceptance.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: confirmatory-m4-${{ matrix.tool }}-bulletproof
+          path: hmr-evidence/
+          retention-days: 30

@@ -1,0 +1,22 @@
+[
+  {
+    "path": "acceptance.json",
+    "bytes": 6893,
+    "sha256": "6b3ceb9e9fb37bf7525ccc02b516a65f214d233a3b6504fb47e356984f8b81b0"
+  },
+  {
+    "path": "overlay-isolation.json",
+    "bytes": 413,
+    "sha256": "6a7a020ad6e446d18458ef8dd9494c2756ccb412435811861e7d8e40509e246b"
+  },
+  {
+    "path": "overlay-preparation.log",
+    "bytes": 944,
+    "sha256": "481441a64718a1bb9da8d1b50704134dd79798872aa60637648309ee627d539b"
+  },
+  {
+    "path": "status.md",
+    "bytes": 4712,
+    "sha256": "147e77abc705c2d63acc05e6eea54f5a2f813befa72325b1c804b2b4602d1062"
+  }
+]

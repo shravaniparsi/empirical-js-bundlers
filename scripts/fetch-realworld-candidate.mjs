@@ -1,0 +1,15 @@
+import { existsSync, mkdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { candidate, verifySource } from './verify-realworld-source.mjs';
+const [id, destinationArg] = process.argv.slice(2);
+if (!id || !destinationArg) throw new Error('Usage: fetch-realworld-candidate.mjs <memos|excalidraw> <NEW-destination>');
+const app = candidate(id), destination = resolve(destinationArg);
+if (existsSync(destination)) throw new Error('Refusing to overwrite an existing checkout');
+mkdirSync(destination, { recursive: true });
+const git = args => execFileSync('git', args, { cwd: destination, stdio: 'inherit' });
+git(['init']);
+git(['remote', 'add', 'origin', app.repository]);
+git(['fetch', '--depth=1', 'origin', app.commit]);
+git(['checkout', '--detach', 'FETCH_HEAD']);
+console.log(JSON.stringify(verifySource(id, destination), null, 2));

@@ -1,0 +1,158 @@
+
+> benchmark-realworld-v2-memos@1.0.0 dev
+> node adapter-dev.mjs --host 127.0.0.1 --port 38173
+
+<i> [webpack-dev-server] [HPM] Proxy created: /api,/memos.api,/file  -> http://127.0.0.1:36923
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://127.0.0.1:38173/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36m/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+assets by path [1m[32massets/*.js[39m[22m 63.6 MiB
+  assets by chunk 36 MiB (id hint: vendors)
+    assets by status [1m[33m32.2 MiB[39m[22m [1m[33m[big][39m[22m
+      asset [1m[33massets/vendors-node_modules_mermaid_dist_mermaid_core_mjs.js[39m[22m [1m[33m5.32 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (id hint: vendors)
+      + 18 assets
+    + 31 assets
+  + 119 assets
+assets by info 1.05 MiB [1m[32m[immutable][39m[22m
+  assets by path [1m[32massets/*.ttf[39m[22m 502 KiB 20 assets
+  assets by path [1m[32massets/*.woff[39m[22m 296 KiB 20 assets
+  assets by path [1m[32massets/*.woff2[39m[22m 254 KiB 20 assets
+  assets by path [1m[32massets/*.png[39m[22m 3.34 KiB 3 assets
+  asset [1m[32massets/maplibre-gl-worker.542df2d0.mjs[39m[22m 18.6 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url] (auxiliary id hint: vendors)
+asset [1m[32mindex.html[39m[22m 1.16 KiB [1m[32m[emitted][39m[22m
+orphan modules 747 KiB [1m[33m[orphan][39m[22m 255 modules
+runtime modules 33.4 KiB 18 modules
+modules by path [1m./node_modules/[39m[22m 17.9 MiB (javascript) 1.05 MiB (asset)
+  javascript modules 17.9 MiB 2268 modules
+  asset modules 1.05 MiB (asset) 6.83 KiB (javascript) 66 modules
+modules by path [1m./src/[39m[22m 5.14 MiB 491 modules
+modules by mime type [1mimage/svg+xml[39m[22m 33.2 KiB
+  [1mdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3..[39m[22m 297 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3..[39m[22m 431 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3..[39m[22m 297 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3..[39m[22m 431 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mdata:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3..[39m[22m 281 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  + 26 modules
+
+[1m[33mWARNING[39m[22m in [1m./node_modules/maplibre-gl/dist/maplibre-gl.mjs[39m[22m [1m[32m5:36125-36151[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./src/components/map/positron.ts 5:0-43 8:0-12
+ @ ./src/components/map/BasemapLayer.tsx 39:23-43
+ @ ./src/components/MapView/MapCanvas.tsx 15:0-61 233:20-32
+ @ ./src/components/MapView/MapView.tsx 21:0-50 160:20-29 215:30-38
+ @ ./src/pages/Map.tsx 4:0-55 5:15-22
+ @ ./src/router/index.tsx 22:43-64
+ @ ./src/main.tsx 24:0-30 115:28-34
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m1 warning[39m[22m in 21419 ms
+(node:2609) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+assets by status 43.7 MiB [1m[32m[cached][39m[22m 231 assets
+assets by status 21 MiB [1m[32m[emitted][39m[22m
+  assets by info 30.6 KiB [1m[32m[immutable][39m[22m
+    asset [1m[32msrc_pages_SignUp_tsx.a9f370a36be0b2a87306.hot-update.js[39m[22m 29.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+    asset [1m[32mmain.a9f370a36be0b2a87306.hot-update.js[39m[22m 837 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+    asset [1m[32mmain.a9f370a36be0b2a87306.hot-update.json[39m[22m 51 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+  assets by path [1m[32massets/*.js[39m[22m 21 MiB
+    asset [1m[33massets/main.js[39m[22m [1m[33m20.9 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32massets/src_pages_SignUp_tsx.js[39m[22m 55.1 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 1.16 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 20.9 MiB = [1m[32massets/main.js[39m[22m 20.9 MiB [1m[32mmain.a9f370a36be0b2a87306.hot-update.js[39m[22m 837 bytes
+cached modules 23.8 MiB (javascript) 1.05 MiB (asset) [1m[32m[cached][39m[22m 3110 modules
+runtime modules 33.4 KiB 18 modules
+[1m./src/pages/SignUp.tsx[39m[22m 8.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./node_modules/maplibre-gl/dist/maplibre-gl.mjs[39m[22m [1m[32m5:36125-36151[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./src/components/map/positron.ts 5:0-43 8:0-12
+ @ ./src/components/map/BasemapLayer.tsx 39:23-43
+ @ ./src/components/MapView/MapCanvas.tsx 15:0-61 233:20-32
+ @ ./src/components/MapView/MapView.tsx 21:0-50 160:20-29 215:30-38
+ @ ./src/pages/Map.tsx 4:0-55 5:15-22
+ @ ./src/router/index.tsx 22:43-64
+ @ ./src/main.tsx 24:0-30 115:28-34
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m1 warning[39m[22m in 1037 ms
+assets by status 43.7 MiB [1m[32m[cached][39m[22m 231 assets
+assets by status 21 MiB [1m[32m[emitted][39m[22m
+  assets by info 30.6 KiB [1m[32m[immutable][39m[22m
+    asset [1m[32msrc_pages_SignUp_tsx.ae4650dee3b9a63cba69.hot-update.js[39m[22m 29.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+    asset [1m[32mmain.ae4650dee3b9a63cba69.hot-update.js[39m[22m 837 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+    asset [1m[32mmain.ae4650dee3b9a63cba69.hot-update.json[39m[22m 51 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+  assets by path [1m[32massets/*.js[39m[22m 21 MiB
+    asset [1m[33massets/main.js[39m[22m [1m[33m20.9 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32massets/src_pages_SignUp_tsx.js[39m[22m 55.1 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 1.16 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 20.9 MiB = [1m[32massets/main.js[39m[22m 20.9 MiB [1m[32mmain.ae4650dee3b9a63cba69.hot-update.js[39m[22m 837 bytes
+cached modules 23.8 MiB (javascript) 1.05 MiB (asset) [1m[32m[cached][39m[22m 3110 modules
+runtime modules 33.4 KiB 18 modules
+[1m./src/pages/SignUp.tsx[39m[22m 8.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./node_modules/maplibre-gl/dist/maplibre-gl.mjs[39m[22m [1m[32m5:36125-36151[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./src/components/map/positron.ts 5:0-43 8:0-12
+ @ ./src/components/map/BasemapLayer.tsx 39:23-43
+ @ ./src/components/MapView/MapCanvas.tsx 15:0-61 233:20-32
+ @ ./src/components/MapView/MapView.tsx 21:0-50 160:20-29 215:30-38
+ @ ./src/pages/Map.tsx 4:0-55 5:15-22
+ @ ./src/router/index.tsx 22:43-64
+ @ ./src/main.tsx 24:0-30 115:28-34
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m1 warning[39m[22m in 696 ms
+assets by status 43.7 MiB [1m[32m[cached][39m[22m 231 assets
+assets by status 21 MiB [1m[32m[emitted][39m[22m
+  assets by info 30.6 KiB [1m[32m[immutable][39m[22m
+    asset [1m[32msrc_pages_SignUp_tsx.e2cccf1fb40984a217e5.hot-update.js[39m[22m 29.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+    asset [1m[32mmain.e2cccf1fb40984a217e5.hot-update.js[39m[22m 837 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+    asset [1m[32mmain.e2cccf1fb40984a217e5.hot-update.json[39m[22m 51 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+  assets by path [1m[32massets/*.js[39m[22m 21 MiB
+    asset [1m[33massets/main.js[39m[22m [1m[33m20.9 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32massets/src_pages_SignUp_tsx.js[39m[22m 55.1 KiB [1m[32m[emitted][39m[22m
+  asset [1m[32mindex.html[39m[22m 1.16 KiB [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 20.9 MiB = [1m[32massets/main.js[39m[22m 20.9 MiB [1m[32mmain.e2cccf1fb40984a217e5.hot-update.js[39m[22m 837 bytes
+cached modules 23.8 MiB (javascript) 1.05 MiB (asset) [1m[32m[cached][39m[22m 3110 modules
+runtime modules 33.4 KiB 18 modules
+[1m./src/pages/SignUp.tsx[39m[22m 8.3 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./node_modules/maplibre-gl/dist/maplibre-gl.mjs[39m[22m [1m[32m5:36125-36151[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./src/components/map/positron.ts 5:0-43 8:0-12
+ @ ./src/components/map/BasemapLayer.tsx 39:23-43
+ @ ./src/components/MapView/MapCanvas.tsx 15:0-61 233:20-32
+ @ ./src/components/MapView/MapView.tsx 21:0-50 160:20-29 215:30-38
+ @ ./src/pages/Map.tsx 4:0-55 5:15-22
+ @ ./src/router/index.tsx 22:43-64
+ @ ./src/main.tsx 24:0-30 115:28-34
+
+1 warning has detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m1 warning[39m[22m in 651 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...
+<i> [webpack-dev-server] [HPM] server close signal received: closing proxy server

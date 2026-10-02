@@ -1,0 +1,389 @@
+
+> benchmark-realworld-v2-excalidraw@1.0.0 dev
+> node adapter-dev.mjs --host 127.0.0.1 --port 39463
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://127.0.0.1:39463/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36m/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+[BABEL] Note: The code generator has deoptimised the styling of /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/packages/excalidraw/subset/harfbuzz/harfbuzz-wasm.ts as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/packages/excalidraw/subset/woff2/woff2-wasm.ts as it exceeds the max of 500KB.
+<i> [webpack-dev-middleware] wait until bundle finished: /
+assets by path [1m[32massets/*.woff2[39m[22m 12.5 MiB
+  asset [1m[32massets/Xiaolai-Regular-f6032fc06eb20480f096199713f70885.9835a08a.woff2[39m[22m 82.1 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: packages/excalidraw/fonts/Xiaolai/Xiaolai-Regular-f6032fc06eb20480f096199713f70885.woff2] (auxiliary name: main)
+  asset [1m[32massets/Xiaolai-Regular-51a0e808bbc8361236ac521a119758a3.0bb6b702.woff2[39m[22m 79.6 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: packages/excalidraw/fonts/Xiaolai/Xiaolai-Regular-51a0e808bbc8361236ac521a119758a3.woff2] (auxiliary name: main)
+  asset [1m[32massets/Xiaolai-Regular-829615148e6357d826b9242eb7fbbd1e.f36488d0.woff2[39m[22m 78.3 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: packages/excalidraw/fonts/Xiaolai/Xiaolai-Regular-829615148e6357d826b9242eb7fbbd1e.woff2] (auxiliary name: main)
+  asset [1m[32massets/Xiaolai-Regular-b6fd38ca30869792244804b04bc058da.f11d0647.woff2[39m[22m 75.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: packages/excalidraw/fonts/Xiaolai/Xiaolai-Regular-b6fd38ca30869792244804b04bc058da.woff2] (auxiliary name: main)
+  asset [1m[32massets/Xiaolai-Regular-7f855356ab893b0d2b9c1c83b8116f0e.7b85c8aa.woff2[39m[22m 75.6 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: packages/excalidraw/fonts/Xiaolai/Xiaolai-Regular-7f855356ab893b0d2b9c1c83b8116f0e.woff2] (auxiliary name: main)
+  + 229 assets
+assets by path [1m[32massets/*.js[39m[22m 56.5 MiB
+  assets by chunk 18.6 MiB (id hint: vendors)
+    assets by status [1m[33m15.4 MiB[39m[22m [1m[33m[big][39m[22m
+      asset [1m[33massets/vendors-node_modules_mermaid_node_modules_mermaid-js_parser_dist_mermaid-parser_core_mjs.js[39m[22m [1m[33m3.48 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (id hint: vendors)
+      + 14 assets
+    + 26 assets
+  + 91 assets
+asset [1m[32mindex.html[39m[22m 514 bytes [1m[32m[emitted][39m[22m
+orphan modules 1.01 MiB [1m[33m[orphan][39m[22m 542 modules
+runtime modules 33.4 KiB 18 modules
+javascript modules 19 MiB
+  modules by path [1m./node_modules/[39m[22m 12.5 MiB 1470 modules
+  modules by path [1m./packages/[39m[22m 6.3 MiB 582 modules
+  modules by path [1m./excalidraw-app/[39m[22m 246 KiB 46 modules
+  [1m./benchmark-pwa-register.mjs[39m[22m 1.28 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+asset modules 12.5 MiB (asset) 10.5 KiB (javascript) 237 modules
+json modules 1.26 MiB
+  [1m./packages/excalidraw/locales/en.json[39m[22m 27.4 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./packages/excalidraw/locales/percentages.json[39m[22m 640 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./packages/excalidraw/locales/ar-SA.json[39m[22m 23.2 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./packages/excalidraw/locales/az-AZ.json[39m[22m 13.7 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./packages/excalidraw/locales/bg-BG.json[39m[22m 19.8 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  + 53 modules
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m85:19-41[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m88:21-45[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/collab/CollabError.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/collab/CollabError.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/collab/CollabError.tsx 9:0-28
+ @ ./excalidraw-app/App.tsx 42:0-77 245:35-59 739:55-66
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/index.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/index.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/index.scss 8:6-146 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-116 75:0-116 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/App.tsx 50:0-22
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/share/ShareDialog.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/share/ShareDialog.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/share/ShareDialog.tsx 20:0-28
+ @ ./excalidraw-app/App.tsx 41:0-72 240:42-62 795:28-39
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+2 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m5 warnings[39m[22m in 9965 ms
+assets by status 37.3 MiB [1m[32m[cached][39m[22m 365 assets
+assets by status 31.8 MiB [1m[32m[emitted][39m[22m
+  assets by chunk 31.8 MiB (name: main)
+    asset [1m[33massets/main.js[39m[22m [1m[33m31.8 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32mmain.16bdce9c9e3e1cd4a70b.hot-update.js[39m[22m 15.9 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+  asset [1m[32mindex.html[39m[22m 514 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.16bdce9c9e3e1cd4a70b.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 31.8 MiB (12.5 MiB) = [1m[32massets/main.js[39m[22m 31.8 MiB [1m[32mmain.16bdce9c9e3e1cd4a70b.hot-update.js[39m[22m 15.9 KiB 234 auxiliary assets
+cached modules 21.3 MiB (javascript) 12.5 MiB (asset) [1m[32m[cached][39m[22m 2935 modules
+runtime modules 33.4 KiB 18 modules
+[1m./packages/excalidraw/components/main-menu/MainMenu.tsx[39m[22m 4.37 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m85:19-41[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m88:21-45[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/collab/CollabError.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/collab/CollabError.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/collab/CollabError.tsx 9:0-28
+ @ ./excalidraw-app/App.tsx 42:0-77 245:35-59 739:55-66
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/index.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/index.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/index.scss 8:6-146 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-116 75:0-116 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/App.tsx 50:0-22
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/share/ShareDialog.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/share/ShareDialog.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/share/ShareDialog.tsx 20:0-28
+ @ ./excalidraw-app/App.tsx 41:0-72 240:42-62 795:28-39
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+2 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m5 warnings[39m[22m in 461 ms
+assets by status 37.3 MiB [1m[32m[cached][39m[22m 365 assets
+assets by status 31.8 MiB [1m[32m[emitted][39m[22m
+  assets by chunk 31.8 MiB (name: main)
+    asset [1m[33massets/main.js[39m[22m [1m[33m31.8 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32mmain.4e5f325dc38de6ee4227.hot-update.js[39m[22m 15.9 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+  asset [1m[32mindex.html[39m[22m 514 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.4e5f325dc38de6ee4227.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 31.8 MiB (12.5 MiB) = [1m[32massets/main.js[39m[22m 31.8 MiB [1m[32mmain.4e5f325dc38de6ee4227.hot-update.js[39m[22m 15.9 KiB 234 auxiliary assets
+cached modules 21.3 MiB (javascript) 12.5 MiB (asset) [1m[32m[cached][39m[22m 2935 modules
+runtime modules 33.4 KiB 18 modules
+[1m./packages/excalidraw/components/main-menu/MainMenu.tsx[39m[22m 4.37 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m85:19-41[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m88:21-45[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/collab/CollabError.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/collab/CollabError.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/collab/CollabError.tsx 9:0-28
+ @ ./excalidraw-app/App.tsx 42:0-77 245:35-59 739:55-66
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/index.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/index.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/index.scss 8:6-146 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-116 75:0-116 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/App.tsx 50:0-22
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/share/ShareDialog.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/share/ShareDialog.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/share/ShareDialog.tsx 20:0-28
+ @ ./excalidraw-app/App.tsx 41:0-72 240:42-62 795:28-39
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+2 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m5 warnings[39m[22m in 404 ms
+assets by status 37.3 MiB [1m[32m[cached][39m[22m 365 assets
+assets by status 31.8 MiB [1m[32m[emitted][39m[22m
+  assets by chunk 31.8 MiB (name: main)
+    asset [1m[33massets/main.js[39m[22m [1m[33m31.8 MiB[39m[22m [1m[32m[emitted][39m[22m [1m[33m[big][39m[22m (name: main)
+    asset [1m[32mmain.4729423452a6b0c66aa7.hot-update.js[39m[22m 15.9 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main)
+  asset [1m[32mindex.html[39m[22m 514 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.4729423452a6b0c66aa7.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 31.8 MiB (12.5 MiB) = [1m[32massets/main.js[39m[22m 31.8 MiB [1m[32mmain.4729423452a6b0c66aa7.hot-update.js[39m[22m 15.9 KiB 234 auxiliary assets
+cached modules 21.3 MiB (javascript) 12.5 MiB (asset) [1m[32m[cached][39m[22m 2935 modules
+runtime modules 33.4 KiB 18 modules
+[1m./packages/excalidraw/components/main-menu/MainMenu.tsx[39m[22m 4.37 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m85:19-41[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./packages/excalidraw/subset/woff2/woff2-bindings.ts[39m[22m [1m[32m88:21-45[39m[22m
+[1mCritical dependency: the request of a dependency is an expression[39m[22m
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 13:0-40 37:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 14:0-45 50:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts 73:19-50
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 5:0-70 47:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 14:0-58 251:18-36
+ @ ./packages/excalidraw/index.tsx 328:0-38 328:0-38
+ @ ./excalidraw-app/App.tsx 4:0-197 188:18-35 212:24-40 221:26-44 398:29-60 416:27-52 522:29-54 686:33-43 741:32-56 783:28-44 922:10-26 922:63-81 933:34-55
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/collab/CollabError.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/collab/CollabError.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/collab/CollabError.tsx 9:0-28
+ @ ./excalidraw-app/App.tsx 42:0-77 245:35-59 739:55-66
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/index.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/index.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/index.scss 8:6-146 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-116 75:0-116 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/App.tsx 50:0-22
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/share/ShareDialog.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+[1mModule Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+Sass @import rules are [1m[33mdeprecated[39m[22m[1m and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+[39m[22m
+ @ ./excalidraw-app/share/ShareDialog.scss 8:6-158 20:17-24 24:7-21 50:25-39 51:36-47 51:50-64 56:54-65 56:68-82 62:42-53 62:56-70 64:21-28 76:22-29 76:33-47 76:50-64 75:0-128 75:0-128 55:6-65:7 53:4-66:5
+ @ ./excalidraw-app/share/ShareDialog.tsx 20:0-28
+ @ ./excalidraw-app/App.tsx 41:0-72 240:42-62 795:28-39
+ @ ./excalidraw-app/index.tsx 7:0-34 14:30-43
+
+2 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with [1m[33m5 warnings[39m[22m in 392 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...

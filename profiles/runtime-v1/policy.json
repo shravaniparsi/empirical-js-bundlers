@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "runtime-v1",
+  "decisionDate": "2026-09-30",
+  "runtime": {
+    "name": "Node.js",
+    "version": "24.14.0",
+    "releaseLine": "24.x",
+    "codename": "Krypton"
+  },
+  "statusAtDecision": {
+    "phase": "Active LTS",
+    "maintenanceStart": "2026-10-20",
+    "endOfLife": "2028-04-30",
+    "source": "https://github.com/nodejs/Release"
+  },
+  "scope": [
+    "production-v1 synthetic correctness",
+    "production-v1 Bulletproof React correctness",
+    "development-v1 synthetic HMR correctness",
+    "realworld-v2 Memos correctness",
+    "realworld-v2 Excalidraw correctness",
+    "future confirmatory measurement campaigns"
+  ],
+  "decisionRationale": [
+    "The supported Node 24 LTS line covers the planned study and publication period.",
+    "The exact patch version already passed the complete Memos and Excalidraw five-tool acceptance suites.",
+    "Freezing an exact patch version prevents silent runtime drift during correctness revalidation and later measurements.",
+    "Older Node 22 correctness cells must pass again on this runtime before confirmatory measurements begin."
+  ],
+  "changeControl": "Any runtime or patch-version change requires a new policy version and complete correctness revalidation before further publication-eligible measurements.",
+  "publicationEligible": false
+}

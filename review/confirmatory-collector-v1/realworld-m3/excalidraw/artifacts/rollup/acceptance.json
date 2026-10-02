@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "incremental-completion-correctness-not-latency-data",
+  "publicationEligible": false,
+  "tool": "rollup",
+  "node": "v24.14.0",
+  "target": "packages/excalidraw/components/main-menu/MainMenu.tsx",
+  "editMode": "excalidraw",
+  "targetSha256Before": "66adfcb89a2dfb3cf202ed2af17261f7ec3730121cc7b7c5d41d6c0142fa8443",
+  "lockSha256": "62cafb23b3e50c796ec59967264ffc95347373530bc249258081c6f1f4549565",
+  "command": [
+    "node",
+    "adapter-build.mjs",
+    "--watch"
+  ],
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "threeEditAndRevertCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "confirmatory_m3_correctness_rollup_1",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 2,
+      "marker": "confirmatory_m3_correctness_rollup_2",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 3,
+      "marker": "confirmatory_m3_correctness_rollup_3",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "66adfcb89a2dfb3cf202ed2af17261f7ec3730121cc7b7c5d41d6c0142fa8443"
+}

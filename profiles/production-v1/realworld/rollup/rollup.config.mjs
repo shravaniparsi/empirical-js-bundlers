@@ -1,0 +1,34 @@
+// Production profile v1; separate from historical and correctness-pilot configs.
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import swc from '@rollup/plugin-swc';
+import postcss from 'rollup-plugin-postcss';
+import replace from '@rollup/plugin-replace';
+import html from '@rollup/plugin-html';
+import alias from '@rollup/plugin-alias';
+import url from '@rollup/plugin-url';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+export default {
+  input: 'src/main.tsx',
+  output: { dir: 'dist', format: 'es', sourcemap: true, entryFileNames: '[name]-[hash].js', chunkFileNames: 'chunk-[hash].js' },
+  plugins: [
+    alias({ entries: [{ find: '@', replacement: path.resolve(__dirname, 'src') }] }),
+    replace({ preventAssignment: true,
+      'import.meta.env.MODE': JSON.stringify('production'),
+      'import.meta.env.DEV': 'false', 'import.meta.env.PROD': 'true', 'import.meta.env.SSR': 'false',
+      'import.meta.env.BASE_URL': JSON.stringify('/'), 'process.env.NODE_ENV': JSON.stringify('production'),
+      'import.meta.env': JSON.stringify({ DEV: false, PROD: true, MODE: 'production', VITE_APP_API_URL: '/api', VITE_APP_ENABLE_API_MOCKING: 'false' }) }),
+    postcss({ sourceMap: true, extract: true, minimize: true }),
+    url({ include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.gif'], limit: 0, fileName: 'assets/[hash][extname]', publicPath: '/', destDir: 'dist' }),
+    resolve({ extensions: ['.tsx', '.ts', '.jsx', '.js'], browser: true }),
+    commonjs(),
+    swc({ include: /\.[jt]sx?$/, swc: { sourceMaps: true, inputSourceMap: false, minify: true, jsc: { target: 'es2022', parser: { syntax: 'typescript', tsx: true }, transform: { react: { runtime: 'automatic' } }, minify: { compress: true, mangle: true } } } }),
+    html({ template: ({ files }) => {
+      const js = (files.js || []).filter(f => f.isEntry).map(f => `<script type="module" src="/${f.fileName}"></script>`).join('');
+      const css = (files.css || []).map(f => `<link rel="stylesheet" href="/${f.fileName}">`).join('');
+      return `<!DOCTYPE html><html><head><meta charset="utf-8"><title>App</title>${css}</head><body><div id="root"></div>${js}</body></html>`;
+    }}),
+  ],
+};

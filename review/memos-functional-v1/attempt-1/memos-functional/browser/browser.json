@@ -1,0 +1,195 @@
+{
+  "publicationEligible": false,
+  "purpose": "Memos actual-backend functional acceptance",
+  "passed": false,
+  "checks": {
+    "actualBackendReady": true
+  },
+  "errors": [
+    "HTTP 401: /memos.api.v1.AuthService/RefreshToken",
+    "Waiting for selector `[data-new-memo-trigger]` failed"
+  ],
+  "responses": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/assets/preload-helper-DzyYoeor.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-BIW_r7Gn.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/rolldown-runtime-zSbnoVup.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/jsx-runtime-DxKf3yUy.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/utils-C1SsKtx7.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/utils-vendor-Dm-DezCy.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/x-CtTvJjTW.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/react-dom-De4ljgjk.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/button-BTLUO-yx.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/dist-CvdIes0Y.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/useOpenInteractionType-DNo85QpA.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/Separator-02dTvn7k.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/dialog-BW46Hk1h.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/AuthContext-CJFdcArH.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/timestamp-ClJq5768.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/error-DZ4qshD2.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/useSpaceQueries-DS7YvM7w.js",
+      "status": 200
+    },
+    {
+      "url": "/site.webmanifest",
+      "status": 200
+    },
+    {
+      "url": "/assets/connect-DMat5fhN.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/dist-DSRFmU1K.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/sun-Bo3JRAOp.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/CustomIcon-CMPQ0Kyp.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/format-B-cX1LH3.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/NotFound-Zmmoi_9b.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/constants-C-PTC7bS.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-D_xJxUE1.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/en-BdEglQzG.js",
+      "status": 200
+    },
+    {
+      "url": "/memos.api.v1.AuthService/RefreshToken",
+      "status": 401
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200
+    },
+    {
+      "url": "/android-chrome-192x192.png",
+      "status": 200
+    },
+    {
+      "url": "/assets/SignIn-CK-Rr1_k.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/CredentialFields-yjGFuevy.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/useIdentityProviderQueries-CSNDMJPr.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/loader-BI48Mu4j.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/PasswordSignInForm-pqWBkYlI.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/SignUp-CZ_w5soT.js",
+      "status": 200
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200
+    }
+  ],
+  "source": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "binarySha256": "9432c3baf9982fc5ca4caa6115a3670760fd7226d90b628cdc147ecad6c81b21",
+  "browserVersion": "Chrome/153.0.8010.52",
+  "backendExitCode": 0,
+  "backendSignal": null,
+  "databaseFiles": [
+    {
+      "name": "memos_prod.db",
+      "sha256": "d4ecdd4d7ac3b018ba64a746a598f1cb1e02734d481a33d8d5f0a9cb8f1fc940"
+    }
+  ]
+}

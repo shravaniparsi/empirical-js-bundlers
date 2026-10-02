@@ -1,0 +1,8 @@
+{
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "node": "v24.14.0",
+  "architecture": "arm64",
+  "runnerImage": "macos14",
+  "runnerImageVersion": "20260831.0302.1"
+}

@@ -244,7 +244,7 @@ function planComponents(config: Config, rng: ReturnType<typeof createPRNG>): Com
     }
   }
 
-  // Mark 5% as dead modules (imported by nothing — tree-shaking test)
+  // Mark 5% as unreferenced control modules (not a tree-shaking measurement)
   const deadCount = Math.max(1, Math.floor(components.length * 0.05));
   const shuffled = rng.shuffle(components.map((_, i) => i));
   for (let i = 0; i < deadCount; i++) {
@@ -271,90 +271,55 @@ function planComponents(config: Config, rng: ReturnType<typeof createPRNG>): Com
 // § 5. Dependency Graph Generator
 // ─────────────────────────────────────────────────────────────────────────────
 
-function buildDependencyGraph(
-  components: ComponentPlan[],
-  rng: ReturnType<typeof createPRNG>
-): void {
-  const byFolder = new Map<string, ComponentPlan[]>();
-  for (const c of components) {
-    const list = byFolder.get(c.featureFolder) || [];
-    list.push(c);
-    byFolder.set(c.featureFolder, list);
-  }
-  const allFolders = [...byFolder.keys()];
-
-  for (const comp of components) {
-    if (comp.isDeadModule) continue;
-
-    const siblings = (byFolder.get(comp.featureFolder) || []).filter(
-      c => c.id !== comp.id && !c.isDeadModule
-    );
-
-    // Each component imports 1-3 siblings (same feature folder)
-    const siblingCount = Math.min(rng.int(1, 3), siblings.length);
-    const pickedSiblings = rng.shuffle(siblings).slice(0, siblingCount);
-    for (const s of pickedSiblings) {
-      if (!comp.imports.includes(s.id)) {
-        comp.imports.push(s.id);
-      }
-    }
-
-    // 10% chance of cross-feature import
-    if (rng.random() < 0.10 && allFolders.length > 1) {
-      const otherFolders = allFolders.filter(f => f !== comp.featureFolder);
-      const targetFolder = rng.pick(otherFolders);
-      const targets = (byFolder.get(targetFolder) || []).filter(c => !c.isDeadModule);
-      if (targets.length > 0) {
-        const target = rng.pick(targets);
-        if (!comp.imports.includes(target.id)) {
-          comp.imports.push(target.id);
-        }
-      }
-    }
-  }
-
-  // Create hub components (imported by 20+ parents) — pick top ~2%
-  const hubCount = Math.max(1, Math.floor(components.length * 0.02));
-  const nonDead = components.filter(c => !c.isDeadModule);
-  const hubs = rng.shuffle(nonDead).slice(0, hubCount);
-  for (const hub of hubs) {
-    const potentialParents = nonDead.filter(
-      c => c.id !== hub.id && !c.imports.includes(hub.id)
-    );
-    const parentCount = Math.min(rng.int(20, 30), potentialParents.length);
-    const parents = rng.shuffle(potentialParents).slice(0, parentCount);
-    for (const p of parents) {
-      p.imports.push(hub.id);
-    }
-  }
-
-  // Detect and break circular imports
-  breakCircularImports(components);
+function entryRoots(components: ComponentPlan[]): ComponentPlan[] {
+  const roots = new Map<string, ComponentPlan>();
+  for (const comp of components) if (!comp.isDeadModule && !roots.has(comp.featureFolder)) roots.set(comp.featureFolder, comp);
+  return [...roots.values()];
 }
 
-function breakCircularImports(components: ComponentPlan[]): void {
-  const visited = new Set<number>();
-  const stack = new Set<number>();
-
-  function dfs(id: number): boolean {
-    if (stack.has(id)) return true;
-    if (visited.has(id)) return false;
-    visited.add(id);
-    stack.add(id);
-    const comp = components[id];
-    comp.imports = comp.imports.filter(depId => {
-      const hasCycle = dfs(depId);
-      return !hasCycle;
-    });
-    stack.delete(id);
-    return false;
-  }
-
+function buildDependencyGraph(components: ComponentPlan[], rng: ReturnType<typeof createPRNG>): void {
+  // A four-way tree per feature guarantees reachability and bounded render depth.
+  // Extra shared-leaf edges exercise reuse without exponentially expanding subtrees.
+  const folders = new Map<string, ComponentPlan[]>();
   for (const comp of components) {
-    visited.clear();
-    stack.clear();
-    dfs(comp.id);
+    comp.imports = [];
+    if (comp.isDeadModule) continue;
+    const group = folders.get(comp.featureFolder) ?? [];
+    group.push(comp); folders.set(comp.featureFolder, group);
   }
+  for (const group of folders.values()) {
+    for (let index = 1; index < group.length; index++) group[Math.floor((index - 1) / 4)].imports.push(group[index].id);
+  }
+  const leaves = components.filter(comp => !comp.isDeadModule && !comp.isRouteEntry && comp.imports.length === 0);
+  for (const comp of components.filter(comp => comp.imports.length > 0)) {
+    const local = leaves.filter(leaf => leaf.featureFolder === comp.featureFolder && !comp.imports.includes(leaf.id));
+    for (const leaf of rng.shuffle(local).slice(0, rng.int(0, 2))) comp.imports.push(leaf.id);
+    if (rng.random() < 0.1) {
+      const cross = leaves.filter(leaf => leaf.featureFolder !== comp.featureFolder);
+      if (cross.length) comp.imports.push(rng.pick(cross).id);
+    }
+  }
+}
+
+function auditGraph(components: ComponentPlan[]) {
+  const visited = new Set<number>();
+  const active = new Set<number>();
+  const cache = new Map<number, { expanded: number; depth: number }>();
+  function visit(id: number): { expanded: number; depth: number } {
+    if (active.has(id)) throw new Error('Cycle in generated component graph');
+    visited.add(id);
+    if (cache.has(id)) return cache.get(id)!;
+    active.add(id);
+    const children = components[id].imports.map(visit);
+    active.delete(id);
+    const result = { expanded: 1 + children.reduce((sum, child) => sum + child.expanded, 0), depth: 1 + Math.max(0, ...children.map(child => child.depth)) };
+    cache.set(id, result); return result;
+  }
+  const roots = entryRoots(components).map(comp => ({ id: comp.id, file: comp.filePath, lazy: comp.isRouteEntry, ...visit(comp.id) }));
+  const expected = components.filter(comp => !comp.isDeadModule).length;
+  const expanded = roots.reduce((sum, root) => sum + root.expanded, 0);
+  if (visited.size !== expected || expanded > components.length * 8) throw new Error('Generated graph violates coverage/render budget');
+  return { policy: 'feature trees with shared leaves; no static imports of route roots', reachableComponents: visited.size, expandedRenderUpperBound: expanded, maxImportDepth: Math.max(...roots.map(root => root.depth)), roots, nodes: components.map(comp => ({ id: comp.id, file: comp.filePath, dead: comp.isDeadModule, imports: comp.imports })) };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -391,6 +356,19 @@ function generateComponent(
   }
 }
 
+function renderFixture(comp: ComponentPlan, name = comp.name): string {
+  const props: Partial<Record<ComponentPlan['category'], string>> = {
+    navigation: 'items={[{ id: "overview", label: "Overview" }, { id: "details", label: "Details" }]} activeId="overview"',
+    'chart-viz': 'data={[{ name: "A", value: 12 }, { name: "B", value: 18 }]}',
+    'form-control': `label="${comp.name}" name="${comp.name}"`,
+    feedback: 'message="Benchmark notification"',
+    utility: 'children={null}',
+    'data-fetching': 'url="data:application/json,%7B%22status%22%3A%22ready%22%7D"',
+    'data-display': 'items={Array.of({ id: "fixture-1", title: "Task", description: "Benchmark item", status: "active", createdAt: new Date("2026-01-01T00:00:00Z"), updatedAt: new Date("2026-01-01T00:00:00Z"), priority: 1, assignee: "Analyst", tags: ["benchmark"] })}',
+  };
+  return `<${name} ${props[comp.category] ?? ''} />`;
+}
+
 function buildChildImports(comp: ComponentPlan, children: ComponentPlan[]): string {
   return children
     .map(c => `import ${c.name} from '${getRelativeImport(comp.filePath, c.filePath)}';`)
@@ -398,7 +376,7 @@ function buildChildImports(comp: ComponentPlan, children: ComponentPlan[]): stri
 }
 
 function buildChildRender(children: ComponentPlan[]): string {
-  return children.map(c => `      <${c.name} />`).join('\n');
+  return children.map(c => `      ${renderFixture(c)}`).join('\n');
 }
 
 // ── 6.1 Data Display (cards, lists, tables) ──
@@ -491,8 +469,8 @@ export default function ${comp.name}({
               onClick={() => handleToggle(item.id)}
             >
               <div className={styles.itemHeader}>
-                <span className={styles.itemTitle}>{picked.${fields[0]}}</span>
-${fields.includes('createdAt') ? `                <time className={styles.timestamp}>{format(item.createdAt, 'MMM dd, yyyy')}</time>` : `                <span className={styles.meta}>{picked.${fields[1] || fields[0]}}</span>`}
+                <span className={styles.itemTitle}>{String(picked.${fields[0]} ?? '')}</span>
+${fields.includes('createdAt') ? `                <time className={styles.timestamp}>{format(item.createdAt, 'MMM dd, yyyy')}</time>` : `                <span className={styles.meta}>{String(picked.${fields[1] || fields[0]} ?? '')}</span>`}
               </div>
 ${rng.random() > 0.5 ? `              {isExpanded && (
                 <div className={styles.details}>
@@ -2019,8 +1997,7 @@ function generateAppEntry(
 ): { appTsx: string; mainTsx: string; indexHtml: string } {
   const routeEntries = components.filter(c => c.isRouteEntry);
   const hasRoutes = routeEntries.length > 0;
-  const nonRouteNonDead = components.filter(c => !c.isRouteEntry && !c.isDeadModule);
-  const topComponents = nonRouteNonDead.slice(0, Math.min(5, nonRouteNonDead.length));
+  const topComponents = entryRoots(components).filter(c => !c.isRouteEntry);
 
   const appTsx = `import { ${hasRoutes ? "Suspense, lazy" : "Suspense"} } from 'react';
 ${hasRoutes ? "import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';" : ''}
@@ -2044,8 +2021,8 @@ ${routeEntries.map(c => `            <li><Link to="/${c.featureFolder}">${capita
         <main className="main">
           <Suspense fallback={<div className="loading">Loading…</div>}>
             <Routes>
-              <Route path="/" element={<div className="home">${topComponents.map(c => `<${c.name} />`).join(' ')}</div>} />
-${routeEntries.map(c => `              <Route path="/${c.featureFolder}/*" element={<${c.name}Page />} />`).join('\n')}
+              <Route path="/" element={<div className="home">${topComponents.map(c => renderFixture(c)).join(' ')}</div>} />
+${routeEntries.map(c => `              <Route path="/${c.featureFolder}/*" element={${renderFixture(c, `${c.name}Page`)}} />`).join('\n')}
             </Routes>
           </Suspense>
         </main>
@@ -2055,7 +2032,7 @@ ${routeEntries.map(c => `              <Route path="/${c.featureFolder}/*" eleme
         <h1>TaskBoard</h1>
       </header>
       <main className="main">
-${topComponents.map(c => `        <${c.name} />`).join('\n')}
+${topComponents.map(c => `        ${renderFixture(c)}`).join('\n')}
       </main>
     </div>`}
   );
@@ -2171,6 +2148,7 @@ function capitalize(str: string): string {
 
 function main() {
   const config = parseArgs();
+  if (fs.existsSync(config.outputDir)) throw new Error('Refusing to overwrite an existing fixture; choose a new output directory');
   const rng = createPRNG(config.seed);
   const sizeConfig = getSizeConfig(config.size);
 
@@ -2184,6 +2162,7 @@ function main() {
   // Step 2: Build dependency graph
   console.log('  [2/6] Building dependency graph...');
   buildDependencyGraph(components, rng);
+  const graph = auditGraph(components);
 
   // Step 3: Generate components
   console.log('  [3/6] Generating components...');
@@ -2200,6 +2179,12 @@ function main() {
   writeFile(config.outputDir, 'src/utils/helpers.ts', generateSharedUtils());
   writeFile(config.outputDir, 'src/types/index.ts', generateSharedTypes());
   writeFile(config.outputDir, 'src/App.css', generateAppCss());
+  writeFile(config.outputDir, 'src/assets.d.ts', `declare module '*.module.css' {
+  const classes: Record<string, string>;
+  export default classes;
+}
+declare module '*.css';
+`);
 
   // Step 5: Generate entry point
   console.log('  [5/6] Generating entry point & config...');
@@ -2220,7 +2205,12 @@ function main() {
     categories.set(c.category, (categories.get(c.category) || 0) + 1);
   }
 
+  writeFile(config.outputDir, 'GRAPH.json', JSON.stringify(graph, null, 2) + '\n');
   const manifest = {
+    generatorVersion: 'submission-v2-bounded-graph',
+    reachableComponents: graph.reachableComponents,
+    expandedRenderUpperBound: graph.expandedRenderUpperBound,
+    maxImportDepth: graph.maxImportDepth,
     generatedAt: new Date().toISOString(),
     seed: config.seed,
     size: config.size,

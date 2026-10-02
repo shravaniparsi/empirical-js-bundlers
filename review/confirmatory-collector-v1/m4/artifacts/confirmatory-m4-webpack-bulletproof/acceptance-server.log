@@ -1,0 +1,101 @@
+
+> benchmark-production-v1-realworld-webpack@1.0.0 dev
+> webpack serve --mode development --config webpack.config.cjs --host 127.0.0.1 --port 37369
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://127.0.0.1:37369/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36m/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/bulletproof-corrected-confirmatory-m4-webpack-bulletproof/webpack/public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+assets by path [1m[32m*.js[39m[22m 5.07 MiB
+  assets by chunk 787 KiB (id hint: vendors)
+    asset [1m[32mvendors-node_modules_tanstack_query-devtools_build_Devtools_WIIHGP5G_js.d97e155e.js[39m[22m 500 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (id hint: vendors) 1 related asset
+    asset [1m[32mvendors-node_modules_dompurify_dist_purify_js-node_modules_lucide-react_dist_esm_icons_pen_js-752a08.36521cd3.js[39m[22m 157 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (id hint: vendors) 1 related asset
+    asset [1m[32mvendors-node_modules_hookform_resolvers_zod_dist_zod_mjs-node_modules_radix-ui_react-label_di-4c5c18.93e3fca7.js[39m[22m 114 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (id hint: vendors) 1 related asset
+    asset [1m[32mvendors-node_modules_dayjs_dayjs_min_js-node_modules_lucide-react_dist_esm_icons_archive-x_js-bba8e8.65164c63.js[39m[22m 16.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (id hint: vendors) 1 related asset
+  + 13 assets
+asset [1m[32m6ce24c58023cc2f8fd88.svg[39m[22m 2.57 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [from: src/assets/logo.svg] (auxiliary name: main)
+asset [1m[32mindex.html[39m[22m 542 bytes [1m[32m[emitted][39m[22m
+orphan modules 293 KiB [1m[33m[orphan][39m[22m 20 modules
+runtime modules 34.5 KiB 18 modules
+modules by path [1m./node_modules/[39m[22m 3.81 MiB 296 modules
+modules by path [1m./src/[39m[22m 492 KiB (javascript) 2.57 KiB (asset)
+  modules by path [1m./src/components/[39m[22m 197 KiB 40 modules
+  modules by path [1m./src/features/[39m[22m 122 KiB 26 modules
+  modules by path [1m./src/app/[39m[22m 74.5 KiB 13 modules
+  modules by path [1m./src/lib/[39m[22m 11 KiB 4 modules
+  modules by path [1m./src/*.css[39m[22m 75.2 KiB 2 modules
+  modules by path [1m./src/config/*.ts[39m[22m 4.6 KiB 2 modules
+  modules by path [1m./src/utils/*.ts[39m[22m 2.83 KiB 2 modules
+  + 4 modules
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 2733 ms
+assets by status 1.23 MiB [1m[32m[cached][39m[22m 16 assets
+assets by status 3.87 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.87 MiB
+    assets by chunk 3.81 MiB (name: main)
+      asset [1m[32mmain.1ad478b4.js[39m[22m 3.81 MiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (name: main) 1 related asset
+      asset [1m[32mmain.11700f287d1b1b2b9890.hot-update.js[39m[22m 1.63 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.4eca85bb.js[39m[22m 41 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.11700f287d1b1b2b9890.hot-update.js[39m[22m 17.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m 1 related asset
+  asset [1m[32mindex.html[39m[22m 542 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.11700f287d1b1b2b9890.hot-update.json[39m[22m 63 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 3.81 MiB (3.97 MiB) = [1m[32mmain.1ad478b4.js[39m[22m 3.81 MiB [1m[32mmain.11700f287d1b1b2b9890.hot-update.js[39m[22m 1.63 KiB 3 auxiliary assets
+cached modules 4.49 MiB (javascript) 2.57 KiB (asset) [1m[32m[cached][39m[22m 407 modules
+runtime modules 34.5 KiB 18 modules
+javascript modules 85.8 KiB
+  ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/index.css[39m[22m 72.9 KiB [1m[33m[built][39m[22m
+  [1m./src/features/auth/components/register-form.tsx[39m[22m 12.9 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 260 ms
+assets by status 1.23 MiB [1m[32m[cached][39m[22m 16 assets
+assets by status 3.87 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.87 MiB
+    assets by chunk 3.81 MiB (name: main)
+      asset [1m[32mmain.c87c1ed1.js[39m[22m 3.81 MiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (name: main) 1 related asset
+      asset [1m[32mmain.f09296a624a46b1f4095.hot-update.js[39m[22m 1.63 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.29772bfc.js[39m[22m 41 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.f09296a624a46b1f4095.hot-update.js[39m[22m 17.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m 1 related asset
+  asset [1m[32mindex.html[39m[22m 542 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.f09296a624a46b1f4095.hot-update.json[39m[22m 63 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 3.81 MiB (3.97 MiB) = [1m[32mmain.c87c1ed1.js[39m[22m 3.81 MiB [1m[32mmain.f09296a624a46b1f4095.hot-update.js[39m[22m 1.63 KiB 3 auxiliary assets
+cached modules 4.49 MiB (javascript) 2.57 KiB (asset) [1m[32m[cached][39m[22m 407 modules
+runtime modules 34.5 KiB 18 modules
+javascript modules 85.8 KiB
+  ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/index.css[39m[22m 72.9 KiB [1m[33m[built][39m[22m
+  [1m./src/features/auth/components/register-form.tsx[39m[22m 12.9 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 189 ms
+assets by status 1.23 MiB [1m[32m[cached][39m[22m 16 assets
+assets by status 3.87 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.87 MiB
+    assets by chunk 3.81 MiB (name: main)
+      asset [1m[32mmain.e4bc3512.js[39m[22m 3.81 MiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (name: main) 1 related asset
+      asset [1m[32mmain.3f0f732f6747c76fc73b.hot-update.js[39m[22m 1.63 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.6700c330.js[39m[22m 41 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.3f0f732f6747c76fc73b.hot-update.js[39m[22m 17.7 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m 1 related asset
+  asset [1m[32mindex.html[39m[22m 542 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.3f0f732f6747c76fc73b.hot-update.json[39m[22m 63 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 3.81 MiB (3.97 MiB) = [1m[32mmain.e4bc3512.js[39m[22m 3.81 MiB [1m[32mmain.3f0f732f6747c76fc73b.hot-update.js[39m[22m 1.63 KiB 3 auxiliary assets
+cached modules 4.49 MiB (javascript) 2.57 KiB (asset) [1m[32m[cached][39m[22m 407 modules
+runtime modules 34.5 KiB 18 modules
+javascript modules 85.8 KiB
+  ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/index.css[39m[22m 72.9 KiB [1m[33m[built][39m[22m
+  [1m./src/features/auth/components/register-form.tsx[39m[22m 12.9 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 246 ms
+assets by status 1.23 MiB [1m[32m[cached][39m[22m 16 assets
+assets by status 3.87 MiB [1m[32m[emitted][39m[22m
+  assets by path [1m[32m*.js[39m[22m 3.87 MiB
+    assets by chunk 3.81 MiB (name: main)
+      asset [1m[32mmain.8e169871.js[39m[22m 3.81 MiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m (name: main) 1 related asset
+      asset [1m[32mmain.dab4634f1451dc23fa30.hot-update.js[39m[22m 1.63 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.74bcb586.js[39m[22m 41 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m 1 related asset
+    asset [1m[32msrc_app_routes_auth_register_tsx.dab4634f1451dc23fa30.hot-update.js[39m[22m 17.6 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m 1 related asset
+  asset [1m[32mindex.html[39m[22m 542 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.dab4634f1451dc23fa30.hot-update.json[39m[22m 63 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 3.81 MiB (3.97 MiB) = [1m[32mmain.8e169871.js[39m[22m 3.81 MiB [1m[32mmain.dab4634f1451dc23fa30.hot-update.js[39m[22m 1.63 KiB 3 auxiliary assets
+cached modules 4.49 MiB (javascript) 2.57 KiB (asset) [1m[32m[cached][39m[22m 407 modules
+runtime modules 34.5 KiB 18 modules
+javascript modules 85.8 KiB
+  ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js![1m./src/index.css[39m[22m 72.9 KiB [1m[33m[built][39m[22m
+  [1m./src/features/auth/components/register-form.tsx[39m[22m 12.9 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 190 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...

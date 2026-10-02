@@ -1,0 +1,6371 @@
+{
+  "schemaVersion": 1,
+  "protocol": "confirmatory-v2-cloud-m1",
+  "seed": "confirmatory-v2-cloud-m1|2026-10-01|sha256-balanced-order-v1",
+  "generator": "scripts/generate-confirmatory-v2-cloud-schedule.mjs",
+  "ordering": "metric and workload groups are fixed; SHA-256-ranked base orders are cyclically rotated to balance tool position within each complete cycle",
+  "blocks": [
+    {
+      "blockId": "M1|xs-50|b01",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b02",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 2,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b03",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b04",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 4,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b05",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b06",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b07",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b08",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b09",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b10",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b11",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 11,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b12",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 12,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b13",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 13,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b14",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 14,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b15",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 15,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b16",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b17",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 17,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b18",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 18,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b19",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 19,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xs-50|b20",
+      "metric": "M1",
+      "workload": "xs-50",
+      "block": 20,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b01",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b02",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b03",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b04",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b05",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b06",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b07",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b08",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b09",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b10",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b11",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 11,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b12",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 12,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b13",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 13,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b14",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 14,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b15",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 15,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b16",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b17",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 17,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b18",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 18,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b19",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 19,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|m-500|b20",
+      "metric": "M1",
+      "workload": "m-500",
+      "block": 20,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b01",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 1,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b02",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b03",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b04",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b05",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b06",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b07",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b08",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b09",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b10",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b11",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 11,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b12",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 12,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b13",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 13,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b14",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 14,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b15",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 15,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b16",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b17",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 17,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b18",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 18,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b19",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 19,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|xl-5000|b20",
+      "metric": "M1",
+      "workload": "xl-5000",
+      "block": 20,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b01",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b02",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b03",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b04",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 4,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b05",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b06",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 6,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b07",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b08",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b09",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b10",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b11",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 11,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b12",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 12,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b13",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 13,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b14",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 14,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b15",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 15,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b16",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 16,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b17",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 17,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b18",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 18,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b19",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|bulletproof-react|b20",
+      "metric": "M1",
+      "workload": "bulletproof-react",
+      "block": 20,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b01",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b02",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b03",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b04",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b05",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b06",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b07",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b08",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b09",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b10",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b11",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 11,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b12",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 12,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b13",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 13,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b14",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 14,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b15",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 15,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b16",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b17",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 17,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b18",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 18,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b19",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|memos|b20",
+      "metric": "M1",
+      "workload": "memos",
+      "block": 20,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b01",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b02",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b03",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b04",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b05",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b06",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 6,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b07",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b08",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b09",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b10",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b11",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 11,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b12",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 12,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b13",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 13,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b14",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 14,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b15",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 15,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b16",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 16,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b17",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 17,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b18",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 18,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b19",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 19,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M1|excalidraw|b20",
+      "metric": "M1",
+      "workload": "excalidraw",
+      "block": 20,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh development-server process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b01",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 1,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b02",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 2,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "rspack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b03",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b04",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 4,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "esbuild",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b05",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rollup",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b06",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 6,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b07",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 7,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b08",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 8,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b09",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 9,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "vite",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b10",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b11",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 11,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b12",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 12,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b13",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 13,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b14",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 14,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "webpack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b15",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 15,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "vite",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b16",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 16,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b17",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 17,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "rspack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b18",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 18,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "vite",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b19",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xs-50|b20",
+      "metric": "M2-M10-M11",
+      "workload": "xs-50",
+      "block": 20,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b01",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 1,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b02",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 2,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b03",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b04",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b05",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b06",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 6,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b07",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b08",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b09",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b10",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 10,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b11",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 11,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b12",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 12,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b13",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 13,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b14",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 14,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b15",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 15,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b16",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 16,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b17",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 17,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b18",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 18,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b19",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 19,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|s-200|b20",
+      "metric": "M2-M10-M11",
+      "workload": "s-200",
+      "block": 20,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b01",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 1,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "rspack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b02",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b03",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b04",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 4,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b05",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "webpack",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b06",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 6,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b07",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b08",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b09",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b10",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 10,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b11",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 11,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b12",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 12,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b13",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 13,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b14",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 14,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b15",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 15,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b16",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 16,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b17",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 17,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b18",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 18,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b19",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 19,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|m-500|b20",
+      "metric": "M2-M10-M11",
+      "workload": "m-500",
+      "block": 20,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b01",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b02",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 2,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b03",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b04",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 4,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rspack",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b05",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b06",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 6,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b07",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 7,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "rollup",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b08",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b09",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 9,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "esbuild",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b10",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rspack",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b11",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 11,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b12",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 12,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b13",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 13,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rspack",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b14",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 14,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b15",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 15,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b16",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 16,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rollup",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b17",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 17,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b18",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 18,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b19",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|l-2000|b20",
+      "metric": "M2-M10-M11",
+      "workload": "l-2000",
+      "block": 20,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b01",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b02",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 2,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b03",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 3,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b04",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b05",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 5,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b06",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b07",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 7,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b08",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b09",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 9,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b10",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b11",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 11,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b12",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 12,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b13",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 13,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b14",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 14,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b15",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 15,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b16",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 16,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rollup",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b17",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 17,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b18",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 18,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "esbuild",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b19",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "webpack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|xl-5000|b20",
+      "metric": "M2-M10-M11",
+      "workload": "xl-5000",
+      "block": 20,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b01",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b02",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 2,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b03",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b04",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 4,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b05",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 5,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b06",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "esbuild",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b07",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rollup",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b08",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 8,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b09",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 9,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "rspack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b10",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b11",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 11,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rspack",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b12",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 12,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b13",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 13,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "rollup",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b14",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 14,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "esbuild",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b15",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 15,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b16",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b17",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 17,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b18",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 18,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b19",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 19,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|bulletproof-react|b20",
+      "metric": "M2-M10-M11",
+      "workload": "bulletproof-react",
+      "block": 20,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b01",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 1,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b02",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 2,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b03",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b04",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 4,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b05",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b06",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 6,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b07",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b08",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b09",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 9,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b10",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b11",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 11,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b12",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 12,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "rspack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b13",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 13,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "vite",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b14",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 14,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b15",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 15,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b16",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 16,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b17",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 17,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b18",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 18,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b19",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 19,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|memos|b20",
+      "metric": "M2-M10-M11",
+      "workload": "memos",
+      "block": 20,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b01",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 1,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "vite",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b02",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b03",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b04",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 4,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b05",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 5,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b06",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 6,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rspack",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b07",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 7,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b08",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "rollup",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b09",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b10",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 10,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "esbuild",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b11",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 11,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b12",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 12,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b13",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 13,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b14",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 14,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b15",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 15,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b16",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 16,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b17",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 17,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b18",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 18,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b19",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 19,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M2-M10-M11|excalidraw|b20",
+      "metric": "M2-M10-M11",
+      "workload": "excalidraw",
+      "block": 20,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one fresh production-build process",
+      "untimedWarmupUpdates": 0,
+      "measuredUpdates": 0
+    },
+    {
+      "blockId": "M3|xs-50|b01",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 1,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b02",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b03",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b04",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b05",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 5,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b06",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 6,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b07",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b08",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b09",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 9,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xs-50|b10",
+      "metric": "M3",
+      "workload": "xs-50",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b01",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b02",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b03",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 3,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b04",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 4,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b05",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b06",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 6,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b07",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 7,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "vite",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b08",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b09",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "esbuild",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|s-200|b10",
+      "metric": "M3",
+      "workload": "s-200",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rollup",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b01",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 1,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b02",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 2,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b03",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b04",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b05",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 5,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b06",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b07",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b08",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 8,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b09",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|m-500|b10",
+      "metric": "M3",
+      "workload": "m-500",
+      "block": 10,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b01",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b02",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 2,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b03",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 3,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b04",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 4,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b05",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b06",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b07",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 7,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b08",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 8,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b09",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 9,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|l-2000|b10",
+      "metric": "M3",
+      "workload": "l-2000",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "esbuild",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b01",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 1,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b02",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b03",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 3,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b04",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "rollup",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b05",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "rollup",
+        "vite",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b06",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b07",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 7,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b08",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 8,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b09",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 9,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|xl-5000|b10",
+      "metric": "M3",
+      "workload": "xl-5000",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b01",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 1,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b02",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 2,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b03",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b04",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 4,
+      "toolOrder": [
+        "rollup",
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b05",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b06",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b07",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 7,
+      "toolOrder": [
+        "rollup",
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b08",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b09",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|bulletproof-react|b10",
+      "metric": "M3",
+      "workload": "bulletproof-react",
+      "block": 10,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rollup",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b01",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b02",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b03",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 3,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b04",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 4,
+      "toolOrder": [
+        "esbuild",
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b05",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b06",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 6,
+      "toolOrder": [
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b07",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 7,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b08",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b09",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|memos|b10",
+      "metric": "M3",
+      "workload": "memos",
+      "block": 10,
+      "toolOrder": [
+        "esbuild",
+        "vite",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b01",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 1,
+      "toolOrder": [
+        "rollup",
+        "esbuild",
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b02",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 2,
+      "toolOrder": [
+        "esbuild",
+        "rspack",
+        "vite",
+        "webpack",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b03",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack",
+        "rollup",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b04",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rollup",
+        "esbuild",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b05",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rollup",
+        "esbuild",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b06",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "esbuild",
+        "rollup",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b07",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "esbuild",
+        "rollup",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b08",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 8,
+      "toolOrder": [
+        "esbuild",
+        "rollup",
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b09",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 9,
+      "toolOrder": [
+        "rollup",
+        "rspack",
+        "webpack",
+        "vite",
+        "esbuild"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M3|excalidraw|b10",
+      "metric": "M3",
+      "workload": "excalidraw",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite",
+        "esbuild",
+        "rollup"
+      ],
+      "samplingUnit": "one independently restarted watch session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b01",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 1,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b02",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b03",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b04",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b05",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b06",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b07",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b08",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b09",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xs-50|b10",
+      "metric": "M4",
+      "workload": "xs-50",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b01",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 1,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b02",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 2,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b03",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b04",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b05",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 5,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b06",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b07",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b08",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b09",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|m-500|b10",
+      "metric": "M4",
+      "workload": "m-500",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b01",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b02",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b03",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b04",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b05",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b06",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b07",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 7,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b08",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 8,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b09",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|xl-5000|b10",
+      "metric": "M4",
+      "workload": "xl-5000",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b01",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b02",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b03",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b04",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b05",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b06",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b07",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 7,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b08",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b09",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 9,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|bulletproof-react|b10",
+      "metric": "M4",
+      "workload": "bulletproof-react",
+      "block": 10,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b01",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 1,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b02",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b03",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 3,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b04",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 4,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b05",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 5,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b06",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 6,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b07",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 7,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b08",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b09",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|memos|b10",
+      "metric": "M4",
+      "workload": "memos",
+      "block": 10,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b01",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 1,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b02",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 2,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b03",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 3,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b04",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 4,
+      "toolOrder": [
+        "webpack",
+        "vite",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b05",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 5,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b06",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 6,
+      "toolOrder": [
+        "rspack",
+        "webpack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b07",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 7,
+      "toolOrder": [
+        "rspack",
+        "vite",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b08",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 8,
+      "toolOrder": [
+        "vite",
+        "webpack",
+        "rspack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b09",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 9,
+      "toolOrder": [
+        "webpack",
+        "rspack",
+        "vite"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    },
+    {
+      "blockId": "M4|excalidraw|b10",
+      "metric": "M4",
+      "workload": "excalidraw",
+      "block": 10,
+      "toolOrder": [
+        "vite",
+        "rspack",
+        "webpack"
+      ],
+      "samplingUnit": "one independently restarted browser and development-server session summarized by its measured-update median",
+      "untimedWarmupUpdates": 1,
+      "measuredUpdates": 5
+    }
+  ],
+  "blockCount": 420,
+  "independentUnitCount": 1740
+}

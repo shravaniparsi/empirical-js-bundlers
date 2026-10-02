@@ -1,0 +1,152 @@
+{
+  "kind": "scoped-bulletproof-react-correctness-with-fixture-api",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-haM7c6ED.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/paths-tNRv1b5K.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-sDoMqPk4.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "url": "/assets/landing-Ci2JnibU.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/logo-C6NmkKBA.svg",
+      "status": 200
+    },
+    {
+      "url": "/assets/login-9lc4nl8C.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/use-disclosure-CDkSgeze.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/form-Bi6zVk1j.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/auth-layout-GiLLlHqn.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "url": "/assets/dashboard-8PwRcjQ3.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/get-discussion-Bona41dm.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/queryOptions-Dfvzj6n2.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/discussions-BjenWFGK.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/table-DDpTkxIW.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/dialog-diZuakRB.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/app/discussions",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-haM7c6ED.css",
+      "status": 200
+    },
+    {
+      "url": "/assets/paths-tNRv1b5K.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/index-sDoMqPk4.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/assets/discussions-BjenWFGK.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/queryOptions-Dfvzj6n2.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/get-discussion-Bona41dm.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/use-disclosure-CDkSgeze.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/dialog-diZuakRB.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/form-Bi6zVk1j.js",
+      "status": 200
+    },
+    {
+      "url": "/assets/table-DDpTkxIW.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/assets/logo-C6NmkKBA.svg",
+      "status": 200
+    }
+  ],
+  "checks": {
+    "landing": true,
+    "tailwindStyles": true,
+    "logoLoaded": true,
+    "loginAndDashboard": true,
+    "discussions": true,
+    "directRouteReload": true
+  },
+  "browserVersion": "Chrome/154.0.8037.57"
+}

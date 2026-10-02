@@ -1,0 +1,82 @@
+name: Memos five-tool adapter acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/realworld-v2/memos/**'
+      - 'scripts/prepare-memos-adapter.mjs'
+      - 'scripts/audit-memos-adapter-profile.mjs'
+      - 'scripts/check-memos-browser.mjs'
+      - 'scripts/check-memos-adapter-output.mjs'
+      - 'scripts/check-production-contract.mjs'
+      - '.github/workflows/memos-five-tool-adapters.yml'
+permissions:
+  contents: read
+jobs:
+  adapter:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: usememos/memos
+          ref: 05a2c6db7a3e926c9142a635f42f7af0f078c81d
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
+      - name: Install validation dependencies
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: |
+          npm ci --include=dev --no-audit --no-fund
+          npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+      - name: Verify profile and pinned source
+        run: |
+          mkdir -p adapter-evidence
+          node scripts/verify-realworld-source.mjs memos upstream > adapter-evidence/source.json
+          node scripts/audit-memos-adapter-profile.mjs adapter-evidence/profile-audit.json
+          node scripts/prepare-memos-adapter.mjs upstream/web adapter-workspace '${{ matrix.tool }}' | tee adapter-evidence/preparation.log
+          cp adapter-workspace/adapter-preparation.json adapter-evidence/
+          cp adapter-workspace/benchmark-profile.json adapter-evidence/
+          sha256sum adapter-workspace/package-lock.json > adapter-evidence/package-lock.sha256
+      - name: Install exact shared dependency closure
+        working-directory: adapter-workspace
+        run: |
+          set -o pipefail
+          npx --yes npm@11.9.0 ci --include=dev --no-audit --no-fund 2>&1 | tee ../adapter-evidence/npm-ci.log
+      - name: Verify patch and build native adapter
+        working-directory: adapter-workspace
+        run: |
+          set -o pipefail
+          npm run verify | tee ../adapter-evidence/profile-verification.log
+          npm run build | tee ../adapter-evidence/build.log
+      - name: Validate output contract
+        run: node scripts/check-memos-adapter-output.mjs adapter-workspace/dist adapter-evidence/output-contract.json
+      - name: Compile original Memos backend
+        working-directory: upstream
+        run: go build -mod=readonly -o ../memos-server ./cmd/memos > ../adapter-evidence/backend-build.log 2>&1
+      - name: Exercise adapter against actual backend and SQLite
+        timeout-minutes: 7
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: node scripts/check-memos-browser.mjs upstream memos-server adapter-evidence/browser adapter-workspace/dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: memos-adapter-${{ matrix.tool }}
+          path: adapter-evidence/
+          retention-days: 30

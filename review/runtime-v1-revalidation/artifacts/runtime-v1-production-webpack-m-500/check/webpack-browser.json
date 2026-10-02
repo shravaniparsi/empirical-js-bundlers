@@ -1,0 +1,361 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/m-500-corrected-runtime-v1-webpack-m-500/webpack/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main.51e215b7cfbc0fdbcc94.css",
+      "status": 200
+    },
+    {
+      "url": "/main.6afff1667fc01598dee9.js",
+      "status": 200
+    },
+    {
+      "url": "/533.b8fff83d2c82d4e40be6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/347.9c12e29317afad4b93d6.css",
+      "status": 200
+    },
+    {
+      "url": "/347.d23bae0e08383ecefa8e.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/112.810fe51cf76644c40886.css",
+      "status": 200
+    },
+    {
+      "url": "/112.5756dea117035a3f8cb0.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/415.74ddf4036e67ce129b01.css",
+      "status": 200
+    },
+    {
+      "url": "/415.a04352a57109438ef1d9.js",
+      "status": 200
+    },
+    {
+      "url": "/371.9427b4eec1e8674ae08d.css",
+      "status": 200
+    },
+    {
+      "url": "/371.8c40a7dc319f64f97441.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/548.8379d5c5b6b28e2ade6f.css",
+      "status": 200
+    },
+    {
+      "url": "/548.9e92a0b95d9e31c26e0f.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/55.f49db43668c3a885f6a7.css",
+      "status": 200
+    },
+    {
+      "url": "/55.24fd684ae0bfd8a3fc00.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/641.b90eeeb7800401cd5df4.css",
+      "status": 200
+    },
+    {
+      "url": "/641.9b3a9dd2ab7d6be0100f.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/7.c7796e81ae71ba0f91f1.css",
+      "status": 200
+    },
+    {
+      "url": "/7.55aa95520f032fa6f13b.js",
+      "status": 200
+    },
+    {
+      "url": "/871.45325de93cc605010b4b.css",
+      "status": 200
+    },
+    {
+      "url": "/871.33d458427a27ef2f6de2.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/63.9f3dea94bcb342aa271e.css",
+      "status": 200
+    },
+    {
+      "url": "/63.f325b21b56ac897a1d33.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/411.ef00a5c07390f32e0b47.css",
+      "status": 200
+    },
+    {
+      "url": "/411.268c7b42721bf82ac5f1.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/646.4f8de920e4c24a73f37a.css",
+      "status": 200
+    },
+    {
+      "url": "/646.ea73b9c1e47c48452335.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/main.51e215b7cfbc0fdbcc94.css",
+      "status": 200
+    },
+    {
+      "url": "/main.6afff1667fc01598dee9.js",
+      "status": 200
+    },
+    {
+      "url": "/533.b8fff83d2c82d4e40be6.js",
+      "status": 200
+    },
+    {
+      "url": "/347.9c12e29317afad4b93d6.css",
+      "status": 200
+    },
+    {
+      "url": "/347.d23bae0e08383ecefa8e.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "ShopDash",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 1451
+    },
+    {
+      "path": "/dashboard",
+      "mainTextLength": 1150
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1242
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 1083
+    },
+    {
+      "path": "/notifications",
+      "mainTextLength": 1155
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 1162
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 1166
+    },
+    {
+      "path": "/billing",
+      "mainTextLength": 1058
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 1118
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 1613
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 1040
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 1241
+    }
+  ],
+  "fixture": {
+    "size": 500,
+    "seed": 42,
+    "expectedRoutes": 12
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

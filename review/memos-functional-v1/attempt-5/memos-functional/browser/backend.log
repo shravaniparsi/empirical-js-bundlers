@@ -1,0 +1,26 @@
+time=2026-09-25T04:02:11.677Z level=INFO msg="initializing new database with latest schema" file=migration/sqlite/LATEST.sql
+time=2026-09-25T04:02:11.680Z level=INFO msg="database initialized successfully" schemaVersion=0.31.8
+Memos dev started successfully!
+Data directory: /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/memos-evidence/browser/database
+Database driver: sqlite
+Server running on 127.0.0.1:43027
+Access your memos at: http://127.0.0.1:43027
+Access mode: private
+time=2026-09-25T04:02:15.731Z level=INFO msg="client error" method=/memos.api.v1.AuthService/RefreshToken error="unauthenticated: refresh token not found"
+time=2026-09-25T04:02:15.732Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceProfile
+time=2026-09-25T04:02:15.733Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceSetting
+time=2026-09-25T04:02:15.733Z level=INFO msg=OK method=/memos.api.v1.InstanceService/BatchGetInstanceSettings
+time=2026-09-25T04:02:16.467Z level=INFO msg=OK method=/memos.api.v1.UserService/CreateUser
+time=2026-09-25T04:02:16.586Z level=INFO msg=OK method=/memos.api.v1.AuthService/SignIn
+time=2026-09-25T04:02:16.746Z level=INFO msg=OK method=/memos.api.v1.AuthService/GetCurrentUser
+time=2026-09-25T04:02:16.750Z level=INFO msg=OK method=/memos.api.v1.UserService/ListUserSettings
+time=2026-09-25T04:02:16.853Z level=INFO msg=OK method=/memos.api.v1.InstanceService/BatchGetInstanceSettings
+time=2026-09-25T04:02:16.853Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceProfile
+time=2026-09-25T04:02:17.226Z level=INFO msg=OK method=/memos.api.v1.UserService/ListMemoViews
+time=2026-09-25T04:02:17.228Z level=INFO msg=OK method=/memos.api.v1.UserService/GetUserStats
+time=2026-09-25T04:02:17.229Z level=INFO msg=OK method=/memos.api.v1.UserService/ListUserNotifications
+time=2026-09-25T04:02:17.232Z level=INFO msg=OK method=/memos.api.v1.InstanceService/GetInstanceSetting
+time=2026-09-25T04:02:17.234Z level=INFO msg=OK method=/memos.api.v1.MemoService/ListMemos
+time=2026-09-25T04:02:17.234Z level=INFO msg=OK method=/memos.api.v1.SpaceService/ListSpaces
+time=2026-09-25T04:02:47.594Z level=INFO msg="server shutting down"
+time=2026-09-25T04:02:47.653Z level=INFO msg="memos stopped properly"

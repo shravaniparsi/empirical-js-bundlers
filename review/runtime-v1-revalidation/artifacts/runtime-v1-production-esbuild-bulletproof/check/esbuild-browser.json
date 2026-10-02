@@ -1,0 +1,192 @@
+{
+  "kind": "scoped-bulletproof-react-correctness-with-fixture-api",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main.css",
+      "status": 200
+    },
+    {
+      "url": "/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-FX4MRXJL.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4EZTGLQG.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-QLKPXP3J.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-DI7MAZ3N.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-B37KQLV6.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-5FOJTBTB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-HEJF6QCW.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "url": "/landing-OBPOCVIV.js",
+      "status": 200
+    },
+    {
+      "url": "/logo-P4A3INCU.svg",
+      "status": 200
+    },
+    {
+      "url": "/login-VDBW7XIO.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4HRVAGY2.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-A55YIFE2.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-5U6HDCOZ.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "url": "/dashboard-UDHVQ2VG.js",
+      "status": 200
+    },
+    {
+      "url": "/discussions-QDTQGVHC.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-LNRLUP6W.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-E3PWCKEO.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-7PG5ZGCU.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/app/discussions",
+      "status": 200
+    },
+    {
+      "url": "/main.css",
+      "status": 200
+    },
+    {
+      "url": "/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-FX4MRXJL.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-QLKPXP3J.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4EZTGLQG.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-B37KQLV6.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-5FOJTBTB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-DI7MAZ3N.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-HEJF6QCW.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/discussions-QDTQGVHC.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-LNRLUP6W.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-7PG5ZGCU.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-5U6HDCOZ.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-E3PWCKEO.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-A55YIFE2.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/logo-P4A3INCU.svg",
+      "status": 200
+    }
+  ],
+  "checks": {
+    "landing": true,
+    "tailwindStyles": true,
+    "logoLoaded": true,
+    "loginAndDashboard": true,
+    "discussions": true,
+    "directRouteReload": true
+  },
+  "browserVersion": "Chrome/154.0.8037.57"
+}

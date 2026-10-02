@@ -1,0 +1,10 @@
+
+> benchmark-realworld-v2-memos@1.0.0 dev
+> node adapter-dev.mjs --host 127.0.0.1 --port 43007
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m43007[22m/[39m
+[2m6:04:23 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m6:04:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SignUp.tsx[22m
+[2m6:04:28 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SignUp.tsx[22m
+[2m6:04:29 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SignUp.tsx[22m
+[2m6:04:31 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/SignUp.tsx[22m

@@ -1,0 +1,12 @@
+
+> benchmark-production-v1-realworld-rspack@1.0.0 dev
+> rspack serve --config rspack.config.cjs --host 127.0.0.1 --port 40293
+
+  ➜  Local:    http://127.0.0.1:40293/
+
+<i> [rspack-dev-middleware] wait until bundle finished: /
+Rspack compiled [1m[32msuccessfully[39m[22m in 1.19 s
+Rspack compiled [1m[32msuccessfully[39m[22m in 120 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 72 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 75 ms
+<i> [rspack-dev-server] Gracefully shutting down. Press ^C again to force exit...

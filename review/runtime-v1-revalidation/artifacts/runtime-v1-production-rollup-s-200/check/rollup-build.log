@@ -1,0 +1,7 @@
+
+> benchmark-production-v1-synthetic-rollup@1.0.0 build
+> NODE_ENV=production rollup -c rollup.config.mjs
+
+[36m
+[1msrc/main.tsx[22m → [1mdist[22m...[39m
+[32mcreated [1mdist[22m in [1m7.7s[22m[39m

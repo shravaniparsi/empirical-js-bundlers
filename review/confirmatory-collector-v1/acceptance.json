@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-collector-infrastructure-correctness",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "runtime": "Node.js 24.14.0",
+  "campaignLedger": {
+    "hashChained": true,
+    "physicallyAppended": true,
+    "exclusiveWriterLock": true,
+    "evidenceRehashedOnAudit": true,
+    "negativeControls": [
+      "ledger content tamper",
+      "skipped scheduled tool",
+      "cell after failed attempt",
+      "replacement limit exceeded",
+      "concurrent append serialization"
+    ],
+    "passed": true
+  },
+  "incrementalCompletionGate": {
+    "requiresPostEditSuccess": true,
+    "requiresUniqueMarkerInOutput": true,
+    "negativeControls": [
+      "stale pre-edit success",
+      "post-edit success for output without marker",
+      "failed compilation",
+      "marker check failure",
+      "completion timeout",
+      "split output chunks"
+    ],
+    "passed": true,
+    "syntheticMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36824749919",
+      "headSha": "23dd28348477db4eb8abd63a8eb191a58f863208",
+      "cells": 25,
+      "edits": 75,
+      "passed": true
+    },
+    "bulletproofMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36826015073",
+      "headSha": "c814928f65ef1157ec62484de16b8ef86ff36569",
+      "cells": 5,
+      "edits": 15,
+      "passed": true
+    },
+    "realWorldMatrixValidated": true,
+    "realWorldMatrix": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054",
+      "headSha": "5b52dc84240df365af256cd5b6c5d2bed031ea27",
+      "applications": [
+        "memos",
+        "excalidraw"
+      ],
+      "cells": 10,
+      "edits": 30,
+      "passed": true
+    },
+    "completeMatrix": {
+      "cells": 40,
+      "edits": 120,
+      "passed": true
+    }
+  },
+  "remaining": [
+    "Prepare and seal the separate 40-cell production and 18-cell development workspaces on the primary host",
+    "Implement and validate the M3 and M4 primary session executors",
+    "Provision the fixed macOS arm64 primary runner and pass the 60-second host gate before campaign initialization",
+    "Collect all 1,740 scheduled processes/sessions before confirmatory analysis"
+  ],
+  "hmrCorrectnessGate": {
+    "runtime": "Node.js 24.14.0",
+    "workloads": [
+      "xs-50",
+      "m-500",
+      "xl-5000",
+      "bulletproof-react",
+      "memos",
+      "excalidraw"
+    ],
+    "tools": [
+      "vite",
+      "rspack",
+      "webpack"
+    ],
+    "cells": 18,
+    "correctnessEdits": 54,
+    "passed": true,
+    "evidence": "review/confirmatory-collector-v1/m4/acceptance.json"
+  },
+  "fullProcessNegativeControls": {
+    "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36830947918",
+    "headSha": "1818750bd6a65a4a952b8098f50dde8042523e38",
+    "realProcessBaselineAccepted": true,
+    "rejected": [
+      "stale completion",
+      "wrong output",
+      "source drift",
+      "orphan process",
+      "malformed timing output",
+      "full-page reload",
+      "application state loss",
+      "failed reload detector control"
+    ],
+    "passed": true
+  },
+  "productionBuildExecutor": {
+    "metrics": ["M2", "M10", "M11"],
+    "sameInvocation": true,
+    "strictMacOSTimeParser": true,
+    "sealedWorkspaceRequired": true,
+    "outputContractRequired": true,
+    "browserValidationRequired": true,
+    "sourceRestorationRequired": true,
+    "processTreeTerminationRequired": true,
+    "primaryMeasurementsCollected": 0,
+    "localControlsPassed": true,
+    "githubActionsValidationPending": false,
+    "githubActions": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948044526",
+      "headSha": "6ea619178e7af5f60305b2bd04baf86f1544e289",
+      "passed": true
+    }
+  },
+  "developmentReadinessExecutor": {
+    "metric": "M1",
+    "freshProcessRequired": true,
+    "browserConfirmedReadiness": true,
+    "browserLaunchExcludedFromTiming": true,
+    "backendFixturesExcludedFromTiming": true,
+    "sealedDevelopmentWorkspaceRequired": true,
+    "primaryMeasurementsCollected": 0,
+    "localControlsPassed": true,
+    "githubActionsValidationPending": false,
+    "githubActions": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601442",
+      "sharedControlsRun": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601313",
+      "headSha": "1c4c74c2a84e6259ec3aa6821e3f659b97a70bf7",
+      "toolsPassed": ["vite", "rspack", "webpack"],
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "kind": "runtime-v1-common-runtime-revalidation",
+  "passed": true,
+  "publicationEligible": false,
+  "reason": "Correctness and comparability evidence only; no performance timings were collected as study observations.",
+  "commit": "20e864556785b485b721158a18bb31c3d773bc57",
+  "runtime": {
+    "name": "Node.js",
+    "version": "24.14.0",
+    "policy": "profiles/runtime-v1/policy.json",
+    "policySha256": "c4a876104e5d5bce69d05f723bd93b397d3db5e8a24ed2886c30a486d24337f5"
+  },
+  "run": {
+    "id": 36819476193,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36819476193",
+    "conclusion": "success",
+    "jobs": 32,
+    "successfulJobs": 32
+  },
+  "revalidatedCells": {
+    "syntheticProduction": {
+      "count": 20,
+      "tools": ["vite", "rspack", "esbuild", "webpack", "rollup"],
+      "sizes": ["s-200", "m-500", "l-2000", "xl-5000"]
+    },
+    "bulletproofReactProduction": {
+      "count": 5,
+      "tools": ["vite", "rspack", "esbuild", "webpack", "rollup"]
+    },
+    "syntheticHmr": {
+      "count": 6,
+      "tools": ["vite", "rspack", "webpack"],
+      "sizes": ["s-200", "xl-5000"]
+    }
+  },
+  "existingRuntimeV1Evidence": {
+    "memosFiveToolRun": 36817938228,
+    "excalidrawFiveToolRun": 36818086629
+  },
+  "diagnosticRun": {
+    "id": 36818992901,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36818992901",
+    "successfulJobs": 31,
+    "failedJobs": 1,
+    "failure": "The Bulletproof/Rspack lock had been generated with legacy peer resolution and strict npm 11 rejected the omitted peer closure before build execution.",
+    "oldLockSha256": "e5217520bf3d52c12082abebb40fe3200b48c9eb4db1cb9cad9de48e4ec1ea04",
+    "repairedLockSha256": "0138dba0f27b07f3144b77ab146692db5036601f9206ded4bcc2ff8f79e51aba"
+  },
+  "evidenceChecks": {
+    "runtimeReceipts": 32,
+    "productionSummaries": 25,
+    "productionContracts": 25,
+    "productionBrowserReports": 25,
+    "hmrAcceptanceReports": 6,
+    "dependencyAuditPassed": true,
+    "allReportsPassed": true
+  }
+}

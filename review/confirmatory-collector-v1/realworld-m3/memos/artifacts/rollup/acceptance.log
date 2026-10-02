@@ -1,0 +1,630 @@
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@bufbuild/protobuf/dist/esm/wire/size-delimited.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:14): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/error-json.js (14:22): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/async-iterable.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/promise-client.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/callback-client.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/duration-format-ponyfill.js (7:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (1:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:30): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@github/relative-time-element/dist/relative-time-element.js (6:38): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (27:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol/invoke-implementation.js (34:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-connect/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/connect-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc-web/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:21): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (14:29): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (21:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (22:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect/dist/esm/protocol-grpc/transport.js (27:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:15): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (14:23): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:24): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+node_modules/@connectrpc/connect-web/dist/esm/grpc-web-transport.js (15:32): The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten
+Circular dependency: src/i18n.ts -> src/utils/i18n.ts -> src/i18n.ts
+Circular dependency: node_modules/@base-ui/react/utils/popups/index.mjs -> node_modules/@base-ui/react/utils/popups/store.mjs -> node_modules/@base-ui/react/floating-ui-react/utils/getEmptyRootContext.mjs -> node_modules/@base-ui/react/utils/popups/index.mjs
+Circular dependency: src/contexts/AuthContext.tsx -> src/hooks/useUserQueries.ts -> src/hooks/useCurrentUser.ts -> src/contexts/AuthContext.tsx
+Circular dependency: src/router/index.tsx -> src/layouts/RootLayout.tsx -> src/components/AppSidebar/index.ts -> src/components/AppSidebar/AppSidebar.tsx -> src/components/UserMenu.tsx -> src/router/index.tsx
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/data.js -> node_modules/d3-selection/src/selection/enter.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/exit.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/merge.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/sort.js -> node_modules/d3-selection/src/selection/index.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/array.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-interpolate/src/value.js -> node_modules/d3-interpolate/src/object.js -> node_modules/d3-interpolate/src/value.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/filter.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/merge.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/select.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/selectAll.js -> node_modules/d3-transition/src/transition/index.js
+Circular dependency: node_modules/d3-transition/src/transition/index.js -> node_modules/d3-transition/src/transition/transition.js -> node_modules/d3-transition/src/transition/index.js
+created dist in watch rebuild

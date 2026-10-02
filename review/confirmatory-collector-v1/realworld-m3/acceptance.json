@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v1-realworld-m3-correctness",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "plannedApplications": [
+    "bulletproof-react",
+    "memos",
+    "excalidraw"
+  ],
+  "tools": [
+    "vite",
+    "rspack",
+    "esbuild",
+    "webpack",
+    "rollup"
+  ],
+  "cells": 15,
+  "edits": 45,
+  "passed": true,
+  "evidence": [
+    {
+      "application": "bulletproof-react",
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36826015073",
+      "headSha": "c814928f65ef1157ec62484de16b8ef86ff36569",
+      "path": "bulletproof-react/acceptance.json",
+      "cells": 5
+    },
+    {
+      "application": "memos",
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054",
+      "headSha": "5b52dc84240df365af256cd5b6c5d2bed031ea27",
+      "path": "memos/acceptance.json",
+      "cells": 5
+    },
+    {
+      "application": "excalidraw",
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054",
+      "headSha": "5b52dc84240df365af256cd5b6c5d2bed031ea27",
+      "path": "excalidraw/acceptance.json",
+      "cells": 5
+    }
+  ]
+}
