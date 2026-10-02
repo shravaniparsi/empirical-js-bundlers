@@ -30,8 +30,17 @@ const swvers = command('sw_vers');
 const hardware = command('system_profiler', ['SPHardwareDataType', '-json']);
 const memoryPressure = command('memory_pressure', ['-Q']);
 const processInventory = command('ps', ['-axo', 'pid,ppid,command']);
-const chromePath = puppeteer.executablePath();
-const chrome = command(chromePath, ['--version']);
+let chromeVersion = null;
+let chromeLaunchError = null;
+let browser;
+try {
+  browser = await puppeteer.launch({ headless: true });
+  chromeVersion = await browser.version();
+} catch (error) {
+  chromeLaunchError = error.message;
+} finally {
+  await browser?.close().catch(() => {});
+}
 const freeDisk = freeDiskGiB(path.dirname(output));
 const freeMemoryMatch = memoryPressure.output.match(/System-wide memory free percentage:\s*(\d+)%/);
 const freeMemoryPercent = freeMemoryMatch ? Number(freeMemoryMatch[1]) : null;
@@ -64,7 +73,7 @@ const checks = {
   freeDiskGiB: { minimum: 20, actual: freeDisk },
   freeMemoryPercent: { minimum: 50, actual: freeMemoryPercent },
   node: { expected: 'v24.14.0', actual: process.version },
-  chromeAvailable: { expected: true, actual: chrome.ok, version: chrome.output || null },
+  chromeAvailable: { expected: true, actual: chromeVersion !== null, version: chromeVersion, launchError: chromeLaunchError },
 };
 checks.githubHosted.pass = checks.githubHosted.actual === checks.githubHosted.expected;
 checks.runnerOS.pass = checks.runnerOS.actual === checks.runnerOS.expected;
@@ -76,7 +85,7 @@ checks.memoryGiB.pass = checks.memoryGiB.actual >= checks.memoryGiB.minimum;
 checks.freeDiskGiB.pass = freeDisk !== null && freeDisk >= checks.freeDiskGiB.minimum;
 checks.freeMemoryPercent.pass = freeMemoryPercent !== null && freeMemoryPercent >= checks.freeMemoryPercent.minimum;
 checks.node.pass = checks.node.actual === checks.node.expected;
-checks.chromeAvailable.pass = chrome.ok;
+checks.chromeAvailable.pass = chromeVersion !== null;
 
 const report = {
   schemaVersion: 1,
@@ -95,7 +104,8 @@ const report = {
     hardware: hardware.output || null,
     memoryPressure: memoryPressure.output || null,
     processInventory: processInventory.output || null,
-    chromeVersion: chrome.output || null,
+    chromeVersion,
+    chromeLaunchError,
   },
   checks,
   passed: Object.values(checks).every(check => check.pass),
