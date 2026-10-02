@@ -115,6 +115,11 @@
     "processTreeTerminationRequired": true,
     "primaryMeasurementsCollected": 0,
     "localControlsPassed": true,
-    "githubActionsValidationPending": true
+    "githubActionsValidationPending": false,
+    "githubActions": {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948044526",
+      "headSha": "6ea619178e7af5f60305b2bd04baf86f1544e289",
+      "passed": true
+    }
   }
 }

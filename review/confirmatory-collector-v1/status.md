@@ -65,7 +65,11 @@ The durable workspace seal covers all 40 workload/tool trees and npm's
 installed dependency locks. The seal is copied into every cell's evidence.
 Local controls reject malformed timing, failed builds, stale completion,
 source drift, descendant processes, and failed or invalid correctness reports.
-No primary timing observation has been collected.
+The same controls and sealed-workspace tests passed in [GitHub Actions run
+36948044526](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948044526)
+at commit `6ea619178e7af5f60305b2bd04baf86f1544e289`. The retained artifact is
+under `production-executor-controls/`. No primary timing observation has been
+collected.
 
 ## Reproduction
 
