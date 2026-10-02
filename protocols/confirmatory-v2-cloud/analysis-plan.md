@@ -12,7 +12,7 @@ For each metric, workload, and eligible non-reference tool, the confirmatory nul
 - M3: the median of five measured updates in one independently restarted watch session.
 - M4: the median of five measured state-preserving updates in one independently restarted browser/server session.
 
-One fresh GitHub-hosted virtual machine executes one entire randomized block. Every tool in that block runs serially in the frozen order. Independent block jobs may run concurrently because they do not share a virtual machine. The paired comparison therefore controls VM-level variation within a block; virtual machines are never treated as interchangeable unblocked replicates.
+One fresh GitHub-hosted virtual machine executes one entire randomized block. Every tool in that block runs serially in the frozen order, and only one block job runs at a time. The paired comparison therefore controls VM-level variation within a block; virtual machines are never treated as interchangeable unblocked replicates.
 
 The untimed first M3/M4 edit stabilizes the session and is never eligible for later reclassification as a measured observation. Raw update values remain available for distribution and sensitivity plots.
 

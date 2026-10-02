@@ -14,7 +14,7 @@
     "primary": "GitHub-hosted standard macos-14 Apple Silicon runner; one complete randomized block per fresh virtual machine",
     "allocationUnit": "the fresh virtual machine is the blocking unit; every tool in a block runs serially on that same virtual machine",
     "runnerImage": "record ImageOS and ImageVersion for every block; image updates remain within this declared macos-14 environment family and receive version-stratified sensitivity analysis",
-    "concurrency": "independent block jobs may run concurrently because each receives an isolated virtual machine; tools within a block may never overlap",
+    "concurrency": "only one block job may run at a time; tools within a block run serially and may never overlap",
     "scope": "claims apply to the GitHub-hosted macos-14 Apple M1 environment during the collection window",
     "crossEnvironment": "physical-host, larger-runner, Intel, Linux, Windows, diagnostic, pilot, and confirmatory-v1 values are never pooled with this campaign"
   },
@@ -77,7 +77,8 @@
     "design": "position-balanced randomized complete blocks within metric and workload",
     "seed": "confirmatory-v2-cloud-m1|2026-10-01|sha256-balanced-order-v1",
     "schedule": "protocols/confirmatory-v2-cloud/schedule.json",
-    "parallelBlocks": true,
+    "parallelBlocks": false,
+    "maximumConcurrentBlocks": 1,
     "parallelToolsWithinBlock": false
   },
   "cacheAndWarmup": {

@@ -17,7 +17,7 @@ if (protocol.status !== 'draft-premeasurement') fail('draft must remain draft-pr
 if (protocol.publicationEligible !== false) fail('draft must remain publicationEligible=false');
 if (protocol.runtime.node !== '24.14.0' || protocol.runtime.runnerLabel !== 'macos-14' || protocol.runtime.architecture !== 'arm64') fail('target runtime drift');
 if (protocol.hostPolicy.allocationUnit?.includes('every tool in a block runs serially') !== true) fail('VM blocking rule missing');
-if (protocol.randomization.parallelBlocks !== true || protocol.randomization.parallelToolsWithinBlock !== false) fail('parallelism contract drift');
+if (protocol.randomization.parallelBlocks !== false || protocol.randomization.maximumConcurrentBlocks !== 1 || protocol.randomization.parallelToolsWithinBlock !== false) fail('parallelism contract drift');
 if (protocol.tools.reference !== 'webpack') fail('reference tool drift');
 if (protocol.analysis.alpha !== 0.05 || !protocol.analysis.interval.includes('10000')) fail('analysis contract drift');
 if (protocol.stopping.interimInference !== false || protocol.stopping.earlyStopping !== false) fail('data-dependent stopping enabled');

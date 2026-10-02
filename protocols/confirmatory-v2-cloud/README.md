@@ -6,7 +6,7 @@ The protocol remains `draft-premeasurement` and `publicationEligible: false`. Do
 
 ## Blocking and execution
 
-One fresh GitHub-hosted job executes one complete randomized block for one metric and workload. All scheduled tools run serially, in the frozen position-balanced order, on that same virtual machine. Independent blocks may run in parallel on isolated virtual machines. The VM is therefore the blocking unit, and inference uses only within-VM paired contrasts.
+One fresh GitHub-hosted job executes one complete randomized block for one metric and workload. Only one block job runs at a time, and all scheduled tools run serially in the frozen position-balanced order on that VM. The VM is therefore the blocking unit, and inference uses only within-VM paired contrasts. Sequential jobs also avoid load created by this campaign on other hosted VMs that may share provider capacity.
 
 Setup is untimed. Each job checks out pinned sources, verifies source and lock hashes, prepares one tool workspace at a time, runs the scheduled cell, verifies restoration and process cleanup, and removes that tool workspace before preparing the next. This limits storage while preserving the same canonical source and reviewed profile for every tool in the block.
 
