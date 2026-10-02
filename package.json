@@ -13,6 +13,7 @@
     "incremental-harness:test": "node scripts/check-incremental-correctness.test.mjs",
     "collector-controls:test": "node scripts/confirmatory-cell-acceptance.test.mjs",
     "production-executor:check": "node --check scripts/confirmatory-production-cell.mjs && node --check scripts/confirmatory-production-block.mjs && node scripts/confirmatory-workspace-contract.test.mjs",
+    "development-executor:check": "node --check scripts/confirmatory-development-cell.mjs && node --check scripts/confirmatory-development-block.mjs",
     "generate:xs": "tsx tier1-synthetic/generate-project.ts --size 50 --seed 42 --output tier1-synthetic/projects/xs-50",
     "generate:s": "tsx tier1-synthetic/generate-project.ts --size 200 --seed 42 --output tier1-synthetic/projects/s-200",
     "generate:m": "tsx tier1-synthetic/generate-project.ts --size 500 --seed 42 --output tier1-synthetic/projects/m-500",

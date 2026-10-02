@@ -64,7 +64,7 @@
   },
   "remaining": [
     "Validate the M2/M10/M11 executor in GitHub Actions and prepare the sealed 40-cell workspace on the primary host",
-    "Implement and validate the M1, M3, and M4 primary executors",
+    "Complete GitHub Actions validation of the M1 executor, then implement and validate the M3 and M4 primary executors",
     "Provision the fixed macOS arm64 primary runner and pass the 60-second host gate before campaign initialization",
     "Collect all 1,740 scheduled processes/sessions before confirmatory analysis"
   ],
@@ -121,5 +121,16 @@
       "headSha": "6ea619178e7af5f60305b2bd04baf86f1544e289",
       "passed": true
     }
+  },
+  "developmentReadinessExecutor": {
+    "metric": "M1",
+    "freshProcessRequired": true,
+    "browserConfirmedReadiness": true,
+    "browserLaunchExcludedFromTiming": true,
+    "backendFixturesExcludedFromTiming": true,
+    "sealedDevelopmentWorkspaceRequired": true,
+    "primaryMeasurementsCollected": 0,
+    "localControlsPassed": true,
+    "githubActionsValidationPending": true
   }
 }

@@ -5,7 +5,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { acceptConfirmatoryCell, acceptProductionBuildCell, hashTree, parseMacOSTimeOutput, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
+import { acceptConfirmatoryCell, acceptDevelopmentReadinessCell, acceptProductionBuildCell, hashTree, parseMacOSTimeOutput, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
 
 if (process.platform === 'win32') throw new Error('process-group controls require POSIX');
 const reportPath = process.argv[2] ? path.resolve(process.argv[2]) : null;
@@ -83,6 +83,28 @@ try {
   assert.throws(() => acceptProductionBuildCell({ ...production, processCompletedNs: '99' }), /stale process completion/);
   assert.throws(() => acceptProductionBuildCell({ ...production, processCleanupRequired: true }), /left a descendant process/);
 
+  const readinessReport = path.join(root, 'readiness.json');
+  fs.writeFileSync(readinessReport, '{"passed":true,"httpReady":true,"applicationReady":true}\n');
+  const readiness = {
+    sourceRoot: root,
+    sourceBeforeSha256: hashTree(root, new Set(['contract.json', 'browser.json', 'readiness.json', 'output.js'])),
+    ignoredSourceNames: ['contract.json', 'browser.json', 'readiness.json', 'output.js'],
+    processGroupPid: pid,
+    processStartedNs: '1000000',
+    readinessObservedNs: '3500000',
+    processCleanupRequired: false,
+    readinessReportPath: readinessReport,
+    declaredCachesCleared: true,
+  };
+  assert.deepEqual(acceptDevelopmentReadinessCell(readiness).outcomes, { M1Milliseconds: 2.5 });
+  assert.throws(() => acceptDevelopmentReadinessCell({ ...readiness, readinessObservedNs: '999999' }), /stale readiness/);
+  assert.throws(() => acceptDevelopmentReadinessCell({ ...readiness, declaredCachesCleared: false }), /caches were not cleared/);
+  fs.writeFileSync(readinessReport, '{"passed":false,"httpReady":true,"applicationReady":true}\n');
+  assert.throws(() => acceptDevelopmentReadinessCell(readiness), /browser readiness validation failed/);
+  fs.writeFileSync(readinessReport, 'invalid');
+  assert.throws(() => acceptDevelopmentReadinessCell(readiness), /report is missing or invalid/);
+  fs.writeFileSync(readinessReport, '{"passed":true,"httpReady":true,"applicationReady":true}\n');
+
   expectRejection('staleCompletion', /stale completion/, { ...baseline, completionObservedNs: '99' });
   fs.writeFileSync(output, 'globalThis.marker = "wrong";\n');
   expectRejection('wrongOutput', /output marker not found/, baseline);
@@ -109,6 +131,7 @@ try {
     realProcessBaselineAccepted: true,
     controls,
     productionBuildAcceptance: true,
+    developmentReadinessAcceptance: true,
     passed: Object.values(controls).every(Boolean),
   };
   if (reportPath) {

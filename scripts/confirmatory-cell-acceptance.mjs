@@ -104,3 +104,31 @@ export function acceptProductionBuildCell(input) {
     },
   };
 }
+
+export function acceptDevelopmentReadinessCell(input) {
+  const required = [
+    'sourceRoot', 'sourceBeforeSha256', 'processGroupPid', 'processStartedNs',
+    'readinessObservedNs', 'processCleanupRequired', 'readinessReportPath',
+    'declaredCachesCleared'
+  ];
+  for (const name of required) if (input[name] === undefined || input[name] === null) throw new Error(`missing ${name}`);
+  const sourceAfterSha256 = hashTree(input.sourceRoot, new Set(input.ignoredSourceNames ?? ['dist', 'node_modules']));
+  if (sourceAfterSha256 !== input.sourceBeforeSha256) throw new Error('source drift detected');
+  if (processGroupAlive(input.processGroupPid)) throw new Error('orphan process group detected');
+  if (input.processCleanupRequired !== false) throw new Error('development server left a descendant process');
+  if (input.declaredCachesCleared !== true) throw new Error('declared development caches were not cleared');
+  const startedNs = BigInt(input.processStartedNs);
+  const readinessNs = BigInt(input.readinessObservedNs);
+  if (readinessNs <= startedNs) throw new Error('stale readiness detected');
+  let report;
+  try { report = JSON.parse(fs.readFileSync(input.readinessReportPath, 'utf8')); }
+  catch { throw new Error('browser readiness report is missing or invalid'); }
+  if (report.passed !== true || report.applicationReady !== true || report.httpReady !== true) throw new Error('browser readiness validation failed');
+  return {
+    accepted: true,
+    sourceAfterSha256,
+    processTreeStopped: true,
+    browserReadinessValidated: true,
+    outcomes: { M1Milliseconds: Number(readinessNs - startedNs) / 1e6 },
+  };
+}

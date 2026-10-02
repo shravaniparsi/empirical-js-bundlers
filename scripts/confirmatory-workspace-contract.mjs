@@ -7,6 +7,8 @@ import { hashTree } from './confirmatory-cell-acceptance.mjs';
 
 const workloads = ['xs-50', 's-200', 'm-500', 'l-2000', 'xl-5000', 'bulletproof-react', 'memos', 'excalidraw'];
 const tools = ['vite', 'rspack', 'esbuild', 'webpack', 'rollup'];
+const developmentWorkloads = ['xs-50', 'm-500', 'xl-5000', 'bulletproof-react', 'memos', 'excalidraw'];
+const developmentTools = ['vite', 'rspack', 'webpack'];
 const manifestName = 'confirmatory-workspaces.json';
 const ignoredNames = ['dist', 'node_modules', '.vite', '.rspack', '.cache'];
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -16,19 +18,26 @@ export function inspectConfirmatoryWorkspace(rootArg) {
   const cells = [];
   for (const workload of workloads) {
     for (const tool of tools) {
-      const workspace = path.join(root, workload, tool);
+      const workspace = path.join(root, 'production', workload, tool);
       const required = ['package.json', 'package-lock.json'];
       const missing = required.filter(name => !fs.existsSync(path.join(workspace, name)));
       const hasDependencies = fs.existsSync(path.join(workspace, 'node_modules'));
-      cells.push({ workload, tool, workspace, missing, hasDependencies, ready: missing.length === 0 && hasDependencies });
+      cells.push({ family: 'production', workload, tool, workspace, missing, hasDependencies, ready: missing.length === 0 && hasDependencies });
     }
+  }
+  for (const workload of developmentWorkloads) for (const tool of developmentTools) {
+    const workspace = path.join(root, 'development', workload, tool);
+    const required = ['package.json', 'package-lock.json'];
+    const missing = required.filter(name => !fs.existsSync(path.join(workspace, name)));
+    const hasDependencies = fs.existsSync(path.join(workspace, 'node_modules'));
+    cells.push({ family: 'development', workload, tool, workspace, missing, hasDependencies, ready: missing.length === 0 && hasDependencies });
   }
   const support = {
     memosSource: fs.statSync(path.join(root, '_sources', 'memos'), { throwIfNoEntry: false })?.isDirectory() === true,
     memosBackend: fs.statSync(path.join(root, '_support', 'memos-server'), { throwIfNoEntry: false })?.isFile() === true,
     excalidrawSource: fs.statSync(path.join(root, '_sources', 'excalidraw'), { throwIfNoEntry: false })?.isDirectory() === true,
   };
-  const missingCells = cells.filter(cell => !cell.ready).map(cell => `${cell.workload}/${cell.tool}`);
+  const missingCells = cells.filter(cell => !cell.ready).map(cell => `${cell.family}/${cell.workload}/${cell.tool}`);
   const passed = missingCells.length === 0 && Object.values(support).every(Boolean);
   return {
     schemaVersion: 1,
@@ -47,9 +56,13 @@ export function sealConfirmatoryWorkspace(rootArg) {
   const inspection = inspectConfirmatoryWorkspace(rootArg);
   if (!inspection.passed) throw new Error(`workspace is incomplete: ${inspection.missingCells.join(', ')}`);
   const cells = {};
-  for (const workload of workloads) for (const tool of tools) {
-    const key = `${workload}/${tool}`;
-    const workspace = path.join(inspection.root, workload, tool);
+  const planned = [
+    ...workloads.flatMap(workload => tools.map(tool => ['production', workload, tool])),
+    ...developmentWorkloads.flatMap(workload => developmentTools.map(tool => ['development', workload, tool])),
+  ];
+  for (const [family, workload, tool] of planned) {
+    const key = `${family}/${workload}/${tool}`;
+    const workspace = path.join(inspection.root, family, workload, tool);
     const dependencyLock = path.join(workspace, 'node_modules', '.package-lock.json');
     if (!fs.existsSync(dependencyLock)) throw new Error(`${key} has no installed dependency lock`);
     cells[key] = {

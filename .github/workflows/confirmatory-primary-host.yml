@@ -7,7 +7,7 @@ on:
         required: true
         default: inspect
         type: choice
-        options: [inspect, initialize, status, audit, validate-production-executor, measure-production-block]
+        options: [inspect, initialize, status, audit, validate-workspace, measure-development-block, measure-production-block]
       campaign_id:
         description: Immutable campaign identifier used only by initialize
         required: false
@@ -61,7 +61,7 @@ jobs:
           npm run collector-controls:test
           npm run production-executor:check
       - name: Validate durable production workspace contract
-        if: inputs.operation == 'validate-production-executor'
+        if: inputs.operation == 'validate-workspace'
         shell: bash
         run: |
           set -euo pipefail
@@ -95,6 +95,21 @@ jobs:
             --workspace-root "$WORKSPACE_DIR" \
             --memos-backend "$WORKSPACE_DIR/_support/memos-server" \
             > primary-host-evidence/production-block.json
+      - name: Execute next frozen M1 block
+        if: inputs.operation == 'measure-development-block'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$WORKSPACE_DIR" ]; then
+            echo 'Set CONFIRMATORY_WORKSPACE_DIR before measurement.' >&2
+            exit 1
+          fi
+          mkdir -p primary-host-evidence
+          node scripts/confirmatory-development-block.mjs \
+            --campaign-dir "$CAMPAIGN_DIR" \
+            --workspace-root "$WORKSPACE_DIR" \
+            --memos-backend "$WORKSPACE_DIR/_support/memos-server" \
+            > primary-host-evidence/development-block.json
       - name: Inspect dedicated host for 60 seconds
         if: inputs.operation == 'inspect'
         run: |

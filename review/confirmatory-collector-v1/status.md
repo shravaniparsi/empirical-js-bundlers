@@ -61,7 +61,8 @@ termination, strict timing parsing, the workload-specific output contract, and
 the browser behavior gate all pass. Cache clearing and every correctness check
 are outside the timed interval.
 
-The durable workspace seal covers all 40 workload/tool trees and npm's
+The durable workspace seal covers separate production and development trees
+(40 production cells and 18 native-development cells) plus npm's
 installed dependency locks. The seal is copied into every cell's evidence.
 Local controls reject malformed timing, failed builds, stale completion,
 source drift, descendant processes, and failed or invalid correctness reports.
@@ -89,8 +90,10 @@ source drift, a live process group, malformed or ambiguous macOS timing output,
 full-page reload, application-state loss, and a failed reload control were each
 rejected. The shared finalizer is `scripts/confirmatory-cell-acceptance.mjs`.
 
-The next implementation step is the M1 primary cell executor, followed by the
-M3 and M4 session executors. After they pass integration controls, the fixed
+The M1 executor now has a browser-confirmed readiness boundary and a serialized
+block operation; its three-tool GitHub Actions integration gate is pending.
+The next implementation work is the M3 and M4 session executors. After the remaining executors pass
+integration controls, the fixed
 macOS arm64 runner
 must pass the 60-second environment gate before campaign initialization. The
 full campaign then contains 1,740 scheduled processes or sessions; no hosted

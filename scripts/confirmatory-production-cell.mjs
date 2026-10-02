@@ -111,8 +111,8 @@ export async function collectProductionCell(options) {
   if (process.version !== 'v24.14.0') throw new Error(`expected Node v24.14.0, received ${process.version}`);
   if (!workloads.has(options.workload) || !tools.has(options.tool)) throw new Error('unknown workload or tool');
   const workspaceRoot = fs.realpathSync(options.workspaceRoot);
-  const workspace = requireInside(workspaceRoot, path.join(workspaceRoot, options.workload, options.tool), 'tool workspace');
-  const sealed = verifyConfirmatoryWorkspace(workspaceRoot, `${options.workload}/${options.tool}`);
+  const workspace = requireInside(workspaceRoot, path.join(workspaceRoot, 'production', options.workload, options.tool), 'tool workspace');
+  const sealed = verifyConfirmatoryWorkspace(workspaceRoot, `production/${options.workload}/${options.tool}`);
   if (!sealed.passed) throw new Error(sealed.errors.join('; '));
   const upstreamRoot = ['memos', 'excalidraw'].includes(options.workload)
     ? requireInside(workspaceRoot, path.join(workspaceRoot, '_sources', options.workload), 'upstream source')
