@@ -115,7 +115,7 @@
   },
   "timeoutsSeconds": {
     "M1Readiness": 300,
-    "M2Build": 1200,
+    "M2Build": 1800,
     "M3SessionStartup": 600,
     "M3Update": 120,
     "M4SessionStartup": 600,

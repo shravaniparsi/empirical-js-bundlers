@@ -1,13 +1,18 @@
 name: Cloud macOS capacity pilot
 on:
   workflow_dispatch:
-  push:
-    branches: [codex/realworld-expansion-v1]
-    paths: ['.github/workflows/cloud-macos-capacity-pilot.yml']
+    inputs:
+      suite:
+        description: Capacity suite to run
+        required: true
+        default: all
+        type: choice
+        options: [all, synthetic, realworld]
 permissions:
   contents: read
 jobs:
   synthetic-xl:
+    if: inputs.suite == 'all' || inputs.suite == 'synthetic'
     runs-on: macos-14
     timeout-minutes: 60
     env:
@@ -18,7 +23,9 @@ jobs:
         with:
           node-version-file: profiles/runtime-v1/.node-version
           cache: npm
-      - run: npm ci --include=dev --no-audit --no-fund
+      - run: |
+          npm ci --include=dev --no-audit --no-fund
+          npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
       - name: Record runner capacity
         run: |
           mkdir -p capacity-evidence
@@ -52,6 +59,7 @@ jobs:
           retention-days: 30
 
   memos:
+    if: inputs.suite == 'all' || inputs.suite == 'realworld'
     runs-on: macos-14
     timeout-minutes: 90
     steps:
@@ -115,6 +123,7 @@ jobs:
           retention-days: 30
 
   excalidraw:
+    if: inputs.suite == 'all' || inputs.suite == 'realworld'
     runs-on: macos-14
     timeout-minutes: 90
     steps:
