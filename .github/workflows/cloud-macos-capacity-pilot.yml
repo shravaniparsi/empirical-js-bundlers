@@ -1,6 +1,9 @@
 name: Cloud macOS capacity pilot
 on:
   workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths: ['.github/workflows/cloud-macos-capacity-pilot.yml']
 permissions:
   contents: read
 jobs:
