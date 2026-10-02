@@ -69,8 +69,8 @@
     }
   ],
   "secondaryOutcomes": {
-    "M5-M9": "descriptive output-contract measurements from three clean builds per tool and workload; no null-hypothesis tests",
-    "M12": "prespecified power-law scaling of M2 over the five synthetic sizes; descriptive slope and bootstrap interval",
+    "M5-M9": "descriptive output-contract measurements from accepted M2 complete blocks 1, 10, and 20 for each tool and workload; no extra builds and no null-hypothesis tests",
+    "M12": "prespecified power-law scaling of M2 over the five synthetic sizes; descriptive slope and size-stratified bootstrap interval because different size blocks run on different virtual machines",
     "allPairwiseComparisons": "exploratory; clearly separated from reference-tool confirmatory contrasts"
   },
   "randomization": {

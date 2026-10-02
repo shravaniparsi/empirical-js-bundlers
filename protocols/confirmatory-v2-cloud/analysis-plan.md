@@ -26,7 +26,7 @@ Construct a 95% interval by resampling complete block IDs with replacement 10,00
 
 ## Descriptive and secondary analysis
 
-Report medians, IQRs, empirical cumulative distributions, and all raw values. Report failure and replacement rates by tool and workload. M5--M9 receive no significance tests. M12 fits `log(M2) = intercept + slope * log(module count)` for each tool over the five synthetic sizes and uses block bootstrap intervals; it is a descriptive within-range scaling model and not an extrapolation claim.
+Report medians, IQRs, empirical cumulative distributions, and all raw values. Report failure and replacement rates by tool and workload. M5--M9 use the output-contract evidence from accepted M2 complete blocks 1, 10, and 20; they require no extra build and receive no significance tests. M12 fits `log(M2) = intercept + slope * log(module count)` for each tool over the five synthetic sizes. Its bootstrap independently resamples complete blocks within each size before refitting because a block number does not identify the same VM across sizes. It is a descriptive within-range scaling model and not an extrapolation claim.
 
 All pairwise tool contrasts, alternative estimators, first-observation sensitivity, application-specific subgroup discussion, and comparisons with consolidated-v4 are exploratory. They cannot replace a failed primary result or alter the frozen family correction.
 

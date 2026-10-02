@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-environment-control-evidence",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "36950537135",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36950537135",
+  "repositoryCommit": "54e093104fe5c087988d40d82710eea62c2da895",
+  "artifactId": "11203880927",
+  "artifactName": "cloud-runner-environment-control",
+  "downloadedArtifactZipSha256": "48b5d37e21b4e9e08f2360e712ae571076fbbaa214620590e17b8375dea1620a",
+  "result": "passed",
+  "note": "The preceding run 36950443091 failed only because the diagnostic invoked the browser binary with --version; Puppeteer launch was adopted and this control proves the actual browser path used by the collectors."
+}
