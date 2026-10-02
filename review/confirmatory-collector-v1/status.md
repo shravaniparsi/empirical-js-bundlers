@@ -91,7 +91,15 @@ full-page reload, application-state loss, and a failed reload control were each
 rejected. The shared finalizer is `scripts/confirmatory-cell-acceptance.mjs`.
 
 The M1 executor now has a browser-confirmed readiness boundary and a serialized
-block operation; its three-tool GitHub Actions integration gate is pending.
+block operation. Vite, Rspack, and Webpack passed the fresh-process integration
+gate in [GitHub Actions run
+36948601442](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601442)
+at commit `1c4c74c2a84e6259ec3aa6821e3f659b97a70bf7`. The shared acceptance and
+58-cell workspace-seal controls passed in [run
+36948601313](https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601313).
+The retained reports contain no timing values and are under
+`m1-executor-controls/`.
+
 The next implementation work is the M3 and M4 session executors. After the remaining executors pass
 integration controls, the fixed
 macOS arm64 runner

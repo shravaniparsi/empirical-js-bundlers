@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m1-executor-correctness",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M1",
+  "workload": "xs-50",
+  "tool": "webpack",
+  "runtime": "v24.14.0",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xs-50-corrected-confirmatory-m1-control/webpack",
+  "accepted": true,
+  "correctnessOnly": true,
+  "cachePolicy": {
+    "removed": [
+      "dist",
+      ".vite",
+      ".rspack",
+      ".cache",
+      "node_modules/.cache",
+      "node_modules/.vite"
+    ],
+    "operatingSystemPageCacheDropped": false
+  },
+  "sourceBeforeSha256": "671d2c5af9f573f5a9dfbc84dc6e19bfb150cf3e344d2f24421f699cc84d249b",
+  "command": {
+    "executable": "npm",
+    "args": [
+      "run",
+      "dev",
+      "--",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "43903"
+    ],
+    "cwd": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xs-50-corrected-confirmatory-m1-control/webpack"
+  },
+  "serverAliveAtReadiness": true,
+  "sourceAfterSha256": "671d2c5af9f573f5a9dfbc84dc6e19bfb150cf3e344d2f24421f699cc84d249b",
+  "processTreeStopped": true,
+  "browserReadinessValidated": true,
+  "files": [
+    {
+      "path": "browser-readiness.json",
+      "bytes": 126,
+      "sha256": "9f742ea440616d94069d86550645f19071f3196989efc71c8c7bbc94fd2e5c18"
+    },
+    {
+      "path": "development-server.log",
+      "bytes": 2338,
+      "sha256": "0dacc4061a09452ca84065b4506116adf72d1c5f5bae34a58a11549c792dd792"
+    }
+  ]
+}

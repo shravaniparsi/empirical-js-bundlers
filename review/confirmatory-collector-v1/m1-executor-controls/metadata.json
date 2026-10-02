@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m1-executor-controls",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "repository": "shravaniparsi/empirical-js-bundlers",
+  "headSha": "1c4c74c2a84e6259ec3aa6821e3f659b97a70bf7",
+  "m1Run": {
+    "id": 36948601442,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601442",
+    "tools": ["vite", "rspack", "webpack"],
+    "workload": "xs-50",
+    "passed": true
+  },
+  "sharedControlsRun": {
+    "id": 36948601313,
+    "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36948601313",
+    "passed": true
+  },
+  "validated": [
+    "fresh development-server process",
+    "browser-confirmed application readiness",
+    "server alive at readiness",
+    "source tree unchanged",
+    "process group terminated",
+    "no primary timing value retained",
+    "separate 40-cell production and 18-cell development workspace seals"
+  ]
+}
