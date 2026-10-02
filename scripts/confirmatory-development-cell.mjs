@@ -9,6 +9,7 @@ import { pathToFileURL } from 'node:url';
 import puppeteer from 'puppeteer';
 import { acceptDevelopmentReadinessCell, hashTree, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
 import { verifyConfirmatoryWorkspace } from './confirmatory-workspace-contract.mjs';
+import { verifyCloudCellWorkspace } from './cloud-cell-workspace-seal.mjs';
 
 const tools = new Set(['vite', 'rspack', 'webpack']);
 const workloads = new Set(['xs-50', 'm-500', 'xl-5000', 'bulletproof-react', 'memos', 'excalidraw']);
@@ -114,15 +115,19 @@ export async function collectDevelopmentReadinessCell(options) {
   if (!workloads.has(options.workload) || !tools.has(options.tool)) throw new Error('unknown workload or tool');
   const workspaceRoot = fs.realpathSync(options.workspaceRoot);
   const workspace = fs.realpathSync(options.workspace ?? path.join(workspaceRoot, 'development', options.workload, options.tool));
+  let cloudSeal = null;
   if (!options.correctnessOnly) {
-    if (process.platform !== 'darwin') throw new Error('primary M1 timing requires the fixed macOS host');
-    const sealed = verifyConfirmatoryWorkspace(workspaceRoot, `development/${options.workload}/${options.tool}`);
+    if (process.platform !== 'darwin') throw new Error('primary M1 timing requires macOS');
+    cloudSeal = options.cloudWorkspaceSealPath
+      ? verifyCloudCellWorkspace({ workspace, seal: options.cloudWorkspaceSealPath })
+      : null;
+    const sealed = cloudSeal ?? verifyConfirmatoryWorkspace(workspaceRoot, `development/${options.workload}/${options.tool}`);
     if (!sealed.passed) throw new Error(sealed.errors.join('; '));
   }
   const evidenceDir = path.resolve(options.evidenceDir);
   if (fs.existsSync(evidenceDir)) throw new Error(`refusing to overwrite evidence: ${evidenceDir}`);
   fs.mkdirSync(evidenceDir, { recursive: true });
-  if (!options.correctnessOnly) fs.copyFileSync(path.join(workspaceRoot, 'confirmatory-workspaces.json'), path.join(evidenceDir, 'workspace-seal.json'), fs.constants.COPYFILE_EXCL);
+  if (!options.correctnessOnly) fs.copyFileSync(options.cloudWorkspaceSealPath ?? path.join(workspaceRoot, 'confirmatory-workspaces.json'), path.join(evidenceDir, 'workspace-seal.json'), fs.constants.COPYFILE_EXCL);
   if (options.hostGatePath) {
     const gate = JSON.parse(fs.readFileSync(options.hostGatePath, 'utf8'));
     if (gate.pass !== true) throw new Error('pre-block host gate did not pass');
@@ -135,6 +140,7 @@ export async function collectDevelopmentReadinessCell(options) {
     newPrimaryMeasurements: options.correctnessOnly ? 0 : 1,
     metric: 'M1', workload: options.workload, tool: options.tool, runtime: process.version,
     workspace, accepted: false, correctnessOnly: Boolean(options.correctnessOnly),
+    workspaceSealKind: options.correctnessOnly ? null : cloudSeal ? 'confirmatory-v2-cloud-cell-workspace-seal' : 'confirmatory-primary-workspace-seal',
     cachePolicy: { removed: ['dist', '.vite', '.rspack', '.cache', 'node_modules/.cache', 'node_modules/.vite'], operatingSystemPageCacheDropped: false },
   };
   let browser;
@@ -240,8 +246,13 @@ export async function collectDevelopmentReadinessCell(options) {
     evidence.sourceAfterSha256 = accepted.sourceAfterSha256;
     evidence.processTreeStopped = accepted.processTreeStopped;
     evidence.browserReadinessValidated = accepted.browserReadinessValidated;
+    if (cloudSeal) {
+      const postMeasurementSeal = verifyCloudCellWorkspace({ workspace, seal: options.cloudWorkspaceSealPath });
+      evidence.postMeasurementWorkspaceSeal = postMeasurementSeal;
+      if (!postMeasurementSeal.passed) throw new Error(`post-measurement cloud workspace seal failed: ${postMeasurementSeal.errors.join('; ')}`);
+    }
     if (!options.correctnessOnly) evidence.outcomes = accepted.outcomes;
-  } catch (error) { evidence.error ??= error.message; }
+  } catch (error) { evidence.accepted = false; evidence.error ??= error.message; }
   const files = [];
   const walk = current => { for (const entry of fs.readdirSync(current, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) { const filename = path.join(current, entry.name); if (entry.isDirectory()) walk(filename); else if (entry.isFile()) { const bytes = fs.readFileSync(filename); files.push({ path: path.relative(evidenceDir, filename).split(path.sep).join('/'), bytes: bytes.length, sha256: sha256(bytes) }); } } };
   walk(evidenceDir);
@@ -258,6 +269,7 @@ async function main() {
     workspaceRoot: args['workspace-root'], workspace: args.workspace, evidenceDir: args['evidence-dir'],
     workload: args.workload, tool: args.tool, memosBackend: args['memos-backend'],
     timeoutMs: args['timeout-ms'], hostGatePath: args['host-gate'], correctnessOnly: args['correctness-only'],
+    cloudWorkspaceSealPath: args['cloud-workspace-seal'],
   });
   console.log(JSON.stringify({ accepted: result.accepted, correctnessOnly: result.correctnessOnly, workload: result.workload, tool: result.tool, outcomes: result.outcomes }));
 }

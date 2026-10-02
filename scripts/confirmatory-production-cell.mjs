@@ -7,6 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { acceptProductionBuildCell, hashTree, processGroupAlive } from './confirmatory-cell-acceptance.mjs';
 import { verifyConfiguration } from './verify-production-configuration.mjs';
 import { verifyConfirmatoryWorkspace } from './confirmatory-workspace-contract.mjs';
+import { verifyCloudCellWorkspace } from './cloud-cell-workspace-seal.mjs';
 
 const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const tools = new Set(['vite', 'rspack', 'esbuild', 'webpack', 'rollup']);
@@ -111,8 +112,11 @@ export async function collectProductionCell(options) {
   if (process.version !== 'v24.14.0') throw new Error(`expected Node v24.14.0, received ${process.version}`);
   if (!workloads.has(options.workload) || !tools.has(options.tool)) throw new Error('unknown workload or tool');
   const workspaceRoot = fs.realpathSync(options.workspaceRoot);
-  const workspace = requireInside(workspaceRoot, path.join(workspaceRoot, 'production', options.workload, options.tool), 'tool workspace');
-  const sealed = verifyConfirmatoryWorkspace(workspaceRoot, `production/${options.workload}/${options.tool}`);
+  const workspace = requireInside(workspaceRoot, options.workspace ?? path.join(workspaceRoot, 'production', options.workload, options.tool), 'tool workspace');
+  const cloudSeal = options.cloudWorkspaceSealPath
+    ? verifyCloudCellWorkspace({ workspace, seal: options.cloudWorkspaceSealPath, repository })
+    : null;
+  const sealed = cloudSeal ?? verifyConfirmatoryWorkspace(workspaceRoot, `production/${options.workload}/${options.tool}`);
   if (!sealed.passed) throw new Error(sealed.errors.join('; '));
   const upstreamRoot = ['memos', 'excalidraw'].includes(options.workload)
     ? requireInside(workspaceRoot, path.join(workspaceRoot, '_sources', options.workload), 'upstream source')
@@ -121,7 +125,8 @@ export async function collectProductionCell(options) {
   const evidenceDir = path.resolve(options.evidenceDir);
   if (fs.existsSync(evidenceDir)) throw new Error(`refusing to overwrite evidence: ${evidenceDir}`);
   fs.mkdirSync(evidenceDir, { recursive: true });
-  const workspaceSealBytes = fs.readFileSync(path.join(workspaceRoot, 'confirmatory-workspaces.json'));
+  const workspaceSealPath = options.cloudWorkspaceSealPath ?? path.join(workspaceRoot, 'confirmatory-workspaces.json');
+  const workspaceSealBytes = fs.readFileSync(workspaceSealPath);
   fs.writeFileSync(path.join(evidenceDir, 'workspace-seal.json'), workspaceSealBytes, { flag: 'wx' });
   let hostGate = null;
   if (options.hostGatePath) {
@@ -143,6 +148,7 @@ export async function collectProductionCell(options) {
     cachePolicy: { removed: ['dist', '.vite', '.rspack', '.cache', 'node_modules/.cache'], operatingSystemPageCacheDropped: false },
     accepted: false,
     workspaceSealVerified: true,
+    workspaceSealKind: cloudSeal ? 'confirmatory-v2-cloud-cell-workspace-seal' : 'confirmatory-primary-workspace-seal',
     workspaceSealSha256: sha256(workspaceSealBytes),
     preBlockHostGate: hostGate ? { capturedAt: hostGate.capturedAt, fingerprintSha256: hostGate.fingerprintSha256, passed: true } : null,
   };
@@ -184,7 +190,13 @@ export async function collectProductionCell(options) {
       browserReportPath: validation.browserReport,
     });
     Object.assign(evidence, accepted);
+    if (cloudSeal) {
+      const postMeasurementSeal = verifyCloudCellWorkspace({ workspace, seal: options.cloudWorkspaceSealPath, repository });
+      evidence.postMeasurementWorkspaceSeal = postMeasurementSeal;
+      if (!postMeasurementSeal.passed) throw new Error(`post-measurement cloud workspace seal failed: ${postMeasurementSeal.errors.join('; ')}`);
+    }
   } catch (error) {
+    evidence.accepted = false;
     evidence.error = error.message;
   }
   const evidenceFiles = [];
@@ -210,12 +222,14 @@ async function main() {
   for (const name of ['workspace-root', 'evidence-dir', 'workload', 'tool']) if (!args[name]) throw new Error(`missing --${name}`);
   const result = await collectProductionCell({
     workspaceRoot: args['workspace-root'],
+    workspace: args.workspace,
     evidenceDir: args['evidence-dir'],
     workload: args.workload,
     tool: args.tool,
     memosBackend: args['memos-backend'],
     timeoutMs: args['timeout-ms'],
     hostGatePath: args['host-gate'],
+    cloudWorkspaceSealPath: args['cloud-workspace-seal'],
   });
   console.log(JSON.stringify({ accepted: result.accepted, workload: result.workload, tool: result.tool, outcomes: result.outcomes }));
 }
