@@ -1,5 +1,8 @@
 name: Confirmatory M3 session controls
 on:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths: ['.github/workflows/confirmatory-m3-session-controls.yml']
   workflow_dispatch:
     inputs:
       suite:
@@ -12,7 +15,7 @@ permissions:
   contents: read
 jobs:
   synthetic:
-    if: inputs.suite == 'smoke' || inputs.suite == 'synthetic' || inputs.suite == 'all'
+    if: github.event_name == 'push' || inputs.suite == 'smoke' || inputs.suite == 'synthetic' || inputs.suite == 'all'
     runs-on: macos-14
     timeout-minutes: 90
     strategy:
@@ -20,7 +23,7 @@ jobs:
       max-parallel: 3
       matrix:
         tool: [vite, rspack, esbuild, webpack, rollup]
-        size: ${{ fromJSON(inputs.suite == 'smoke' && '["xs-50"]' || '["xs-50","s-200","m-500","l-2000","xl-5000"]') }}
+        size: ${{ fromJSON((github.event_name == 'push' || inputs.suite == 'smoke') && '["xs-50"]' || '["xs-50","s-200","m-500","l-2000","xl-5000"]') }}
     env:
       PROFILE_REVISION: m3-session-control-${{ matrix.tool }}-${{ matrix.size }}
     steps:
