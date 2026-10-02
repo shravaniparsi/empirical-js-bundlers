@@ -1,0 +1,147 @@
+name: Cloud macOS capacity pilot
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-xl:
+    runs-on: macos-14
+    timeout-minutes: 60
+    env:
+      PROFILE_REVISION: cloud-capacity-pilot-v1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Record runner capacity
+        run: |
+          mkdir -p capacity-evidence
+          {
+            echo '{'
+            echo '  "publicationEligible": false,'
+            echo '  "newPrimaryMeasurements": 0,'
+            echo "  \"node\": \"$(node --version)\","
+            echo "  \"architecture\": \"$(uname -m)\","
+            echo "  \"runnerImage\": \"$ImageOS\","
+            echo "  \"runnerImageVersion\": \"$ImageVersion\""
+            echo '}'
+          } > capacity-evidence/runner.json
+          system_profiler SPHardwareDataType > capacity-evidence/hardware.txt
+          sw_vers > capacity-evidence/macos.txt
+          df -h > capacity-evidence/disk-before.txt
+          memory_pressure -Q > capacity-evidence/memory-before.txt
+      - name: Exercise largest synthetic production profile
+        run: node scripts/run-production-profile.mjs synthetic xl-5000 capacity-evidence/profile rollup
+      - name: Record final capacity
+        if: always()
+        run: |
+          df -h > capacity-evidence/disk-after.txt
+          memory_pressure -Q > capacity-evidence/memory-after.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cloud-capacity-synthetic-xl
+          path: capacity-evidence/
+          if-no-files-found: error
+          retention-days: 30
+
+  memos:
+    runs-on: macos-14
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: usememos/memos
+          ref: 05a2c6db7a3e926c9142a635f42f7af0f078c81d
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
+      - run: |
+          npm ci --include=dev --no-audit --no-fund
+          npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+          mkdir -p capacity-evidence
+          system_profiler SPHardwareDataType > capacity-evidence/hardware.txt
+          df -h > capacity-evidence/disk-before.txt
+          memory_pressure -Q > capacity-evidence/memory-before.txt
+      - name: Prepare and install largest Memos adapter
+        run: |
+          node scripts/verify-realworld-source.mjs memos upstream > capacity-evidence/source.json
+          node scripts/prepare-memos-adapter.mjs upstream/web adapter-workspace rollup > capacity-evidence/preparation.json
+          cd adapter-workspace
+          npx --yes npm@11.9.0 ci --include=dev --no-audit --no-fund
+          npm run verify
+          npm run build
+      - run: node scripts/check-memos-adapter-output.mjs adapter-workspace/dist capacity-evidence/output-contract.json
+      - name: Compile and exercise actual Memos backend
+        run: |
+          (cd upstream && go build -mod=readonly -o ../memos-server ./cmd/memos)
+          node scripts/check-memos-browser.mjs upstream memos-server capacity-evidence/browser adapter-workspace/dist
+      - name: Record final capacity
+        if: always()
+        run: |
+          df -h > capacity-evidence/disk-after.txt
+          memory_pressure -Q > capacity-evidence/memory-after.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cloud-capacity-memos
+          path: capacity-evidence/
+          if-no-files-found: error
+          retention-days: 30
+
+  excalidraw:
+    runs-on: macos-14
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: excalidraw/excalidraw
+          ref: 5db42c3ddbbdc44d10120ab2f18e0864d083e268
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: |
+          npm ci --include=dev --no-audit --no-fund
+          npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+          mkdir -p capacity-evidence
+          system_profiler SPHardwareDataType > capacity-evidence/hardware.txt
+          df -h > capacity-evidence/disk-before.txt
+          memory_pressure -Q > capacity-evidence/memory-before.txt
+      - name: Prepare and install largest Excalidraw adapter
+        run: |
+          node scripts/verify-realworld-source.mjs excalidraw upstream > capacity-evidence/source.json
+          node scripts/prepare-excalidraw-adapter.mjs upstream adapter-workspace rollup > capacity-evidence/preparation.json
+          cd adapter-workspace
+          npx --yes npm@11.9.0 ci --include=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund
+          node verify-profile.mjs
+          node adapter-build.mjs
+      - run: node scripts/check-excalidraw-adapter-output.mjs adapter-workspace/dist capacity-evidence/output-contract.json
+      - name: Exercise drawing and persistence
+        run: node scripts/check-excalidraw-browser.mjs adapter-workspace/dist capacity-evidence/browser upstream
+      - name: Record final capacity
+        if: always()
+        run: |
+          df -h > capacity-evidence/disk-after.txt
+          memory_pressure -Q > capacity-evidence/memory-after.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cloud-capacity-excalidraw
+          path: capacity-evidence/
+          if-no-files-found: error
+          retention-days: 30
