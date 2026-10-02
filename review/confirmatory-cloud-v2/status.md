@@ -11,6 +11,7 @@
 - The accepted three-workload capacity corpus combines only the passing jobs, contains 47 hash-manifested files, and passes `validate-cloud-capacity-evidence.mjs`. It remains capacity/correctness evidence with zero primary observations.
 - Per-cell ephemeral workspace sealing and source/dependency restoration controls pass locally. The M1 and M2/M10/M11 collectors support the cloud seal before and after a cell while retaining their existing physical-host path.
 - The M3 primary session executor is implemented with one untimed stabilization edit, five measured edit/revert cycles, marker-confirmed output identity, session-median reduction, process cleanup, source restoration, post-session seal verification, and a freeze-manifest lock. Its six-cycle correctness control passes locally and records zero primary measurements.
+- Exact-image M3 smoke run 36953454980 passed all five tools on `xs-50`. The 19-file archive revalidates each runner gate, all 30 edit/revert cycles, source and process cleanup, internal evidence hashes, absence of primary outcomes, and zero primary eligibility.
 - These controls record no primary performance observations and remain `publicationEligible: false`.
 
 Run 36949697335 is a superseded diagnostic. Its Memos failure exposed a macOS keyboard-modifier assumption, and its Excalidraw failure exposed a Chrome 154 permissions-policy diagnostic. Both functional paths had otherwise succeeded. The harness corrections are explicit and the superseded run was cancelled once the corrected run was active.
@@ -19,7 +20,7 @@ Run 36949697335 is a superseded diagnostic. Its Memos failure exposed a macOS ke
 
 1. Integrate the passed cloud cell seal with M4 and immutable per-block artifact manifests.
 2. Build the one-block-per-job M1 and M2/M10/M11 cloud orchestrators around the existing collectors.
-3. Validate M3 across the cloud correctness matrix; implement M4 primary session execution and its deliberately failing controls.
+3. Expand the passing M3 smoke control to the remaining 35 cells; implement M4 primary session execution and its deliberately failing controls.
 4. Implement block-artifact validation, replacement-attempt auditing, download registration, and corpus consolidation.
 5. Pass the complete executor-control matrix on the exact frozen `macos-14` image.
 6. Freeze the protocol, schedule, workflows, executors, profiles, source inventories, and dependency locks before observing a primary outcome.

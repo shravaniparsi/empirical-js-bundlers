@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-smoke-evidence",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "36953454980",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36953454980",
+  "repositoryCommit": "562bba83ab49de29c4710d8a9e0464bb64b2f91b",
+  "result": "five of five exact-image smoke cells passed",
+  "scope": "Correctness control only; diagnostic durations are forbidden from primary analysis."
+}
