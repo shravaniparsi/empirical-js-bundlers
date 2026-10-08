@@ -7,8 +7,8 @@ import os from 'node:os';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 
-const [outputArg] = process.argv.slice(2);
-if (!outputArg) throw new Error('Usage: inspect-cloud-macos-runner.mjs <NEW-report.json>');
+const [outputArg, phase = 'pre'] = process.argv.slice(2);
+if (!outputArg || !['pre', 'post'].includes(phase)) throw new Error('Usage: inspect-cloud-macos-runner.mjs <NEW-report.json> [pre|post]');
 const output = path.resolve(outputArg);
 if (fs.existsSync(output)) throw new Error(`Refusing to overwrite ${output}`);
 fs.mkdirSync(path.dirname(output), { recursive: true });
@@ -97,7 +97,8 @@ checks.chrome.pass = checks.chrome.actual === checks.chrome.expected;
 
 const report = {
   schemaVersion: 1,
-  kind: 'confirmatory-v2-cloud-pre-block-environment',
+  kind: `confirmatory-v2-cloud-${phase}-block-environment`,
+  phase,
   protocol: 'confirmatory-v2-cloud-m1',
   publicationEligible: false,
   newPrimaryMeasurements: 0,
@@ -116,7 +117,9 @@ const report = {
     chromeLaunchError,
   },
   checks,
-  passed: Object.values(checks).every(check => check.pass),
+  passed: phase === 'pre'
+    ? Object.values(checks).every(check => check.pass)
+    : Object.entries(checks).filter(([name]) => !['freeDiskGiB', 'freeMemoryPercent'].includes(name)).every(([, check]) => check.pass),
 };
 // Collectors use `pass`; retain `passed` for the existing control validators.
 report.pass = report.passed;

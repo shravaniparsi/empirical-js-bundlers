@@ -95,6 +95,10 @@ export function finalizeCloudBlockArtifact({
   if (preBlock.identity?.imageOS !== 'macos15' || !preBlock.identity?.imageVersion) throw new Error('pre-block runner identity does not match macos-15');
   const postBlockPath = path.join(attemptDir, 'post-block-host.json');
   if (!correctnessOnly && !fs.statSync(postBlockPath, { throwIfNoEntry: false })?.isFile()) throw new Error('primary block artifact requires post-block-host.json');
+  if (!correctnessOnly) {
+    const postBlock = readJson(postBlockPath, 'post-block environment report');
+    if (postBlock.phase !== 'post' || postBlock.fingerprintSha256 !== preBlock.fingerprintSha256) throw new Error('post-block report does not describe the same runner');
+  }
 
   const cells = [];
   let stopped = false;
