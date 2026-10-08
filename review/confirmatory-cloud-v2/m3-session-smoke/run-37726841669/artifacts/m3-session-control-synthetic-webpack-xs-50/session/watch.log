@@ -1,0 +1,114 @@
+<w> [ReactRefreshPlugin] Hot Module Replacement (HMR) is not enabled! React Refresh requires HMR to function properly.
+asset vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB [emitted] (id hint: vendors) 1 related asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+orphan modules 443 KiB [orphan] 269 modules
+runtime modules 5.33 KiB 10 modules
+cacheable modules 2.38 MiB
+  modules by path ./node_modules/ 1.56 MiB 224 modules
+  modules by path ./src/ 833 KiB
+    modules by path ./src/features/ 820 KiB 142 modules
+    modules by path ./src/*.tsx 9.13 KiB
+      ./src/main.tsx 2.14 KiB [built] [code generated]
+      ./src/App.tsx 6.98 KiB [built] [code generated]
+    modules by path ./src/*.css 3.79 KiB
+      ./src/App.css 1.1 KiB [built] [code generated]
+      ./node_modules/css-loader/dist/cjs.js!./src/App.css 2.69 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 1479 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 133 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 98 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 123 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 67 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 66 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 73 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 78 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 77 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 116 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 87 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 7.07 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 81 ms
+assets by status 1.71 MiB [cached] 1 asset
+asset main.js 1.32 MiB [emitted] (name: main) 1 related asset
+asset index.html 433 bytes [emitted]
+Entrypoint main 3.03 MiB (2.59 MiB) = vendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-7f56a8.js 1.71 MiB main.js 1.32 MiB 2 auxiliary assets
+cached modules 2.8 MiB [cached] 638 modules
+runtime modules 5.33 KiB 10 modules
+./src/App.tsx 6.98 KiB [built] [code generated]
+webpack 5.111.1 compiled successfully in 66 ms

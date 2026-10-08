@@ -1,0 +1,11 @@
+0c9410ef4c164a69336a75f46a3c174c80d0d8ea7896171415a2cf1fda3c15a8  ./acceptance.json
+b1b36f9287cfd552b7fd5a7b2d9e1b244beca5d4518be0b8981562b34f225051  ./artifacts/m4-session-control-synthetic-rspack-xs-50/pre-block.json
+ad7bb83cabb2164c5e9d4c6a6e80f14b462e15532ffa99bebd2c194aee52ff74  ./artifacts/m4-session-control-synthetic-rspack-xs-50/session/server.log
+c02287110757c3029adeb2aa6a6bf8aeb5fa677d92941fdd32af5ae19e554238  ./artifacts/m4-session-control-synthetic-rspack-xs-50/session/session.json
+2f85eb231d338ca375a79c073d5a4aa8835794d0688c439cba943bf8515baf3e  ./artifacts/m4-session-control-synthetic-vite-xs-50/pre-block.json
+c10da823d6fb514f95aa3a2455499f322059b0b2e8893b0b6dbdc12a25a11845  ./artifacts/m4-session-control-synthetic-vite-xs-50/session/server.log
+5b3864e8ef8ad73002a463b25b8a9fc9dbfe59b193269da09cca074357224746  ./artifacts/m4-session-control-synthetic-vite-xs-50/session/session.json
+e91cc8b584217ddcab790d54f0c0c88f2cda98c7a133a71eb9eea5ddcc7c42f2  ./artifacts/m4-session-control-synthetic-webpack-xs-50/pre-block.json
+7984f9e72c2636692e213a046f3a13f938f5ee7fc93dcd1055fddfceb6dc2e98  ./artifacts/m4-session-control-synthetic-webpack-xs-50/session/server.log
+9797823f42796f8af755252a0d5699d34779338f7cd44a775b893436a3ab144c  ./artifacts/m4-session-control-synthetic-webpack-xs-50/session/session.json
+2ae2f043e7604bd113ef75c974d163d21700f2da6980f22e51405a41da6b3fec  ./metadata.json

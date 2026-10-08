@@ -1,0 +1,17 @@
+a83e2d814177dc1851e33a91b1e1480b09726631498c9a382aa8421191a57a31  ./acceptance.json
+945404b05beff7dd64ab7e6b2e8fed678fbd646772748c49e248dd2212f11f47  ./artifacts/m3-session-control-synthetic-esbuild-xs-50/pre-block.json
+aed1e7e9d6591d02b591d5fb19ee00e8f1e511b809b6e2db047958e38a9d5ee1  ./artifacts/m3-session-control-synthetic-esbuild-xs-50/session/session.json
+15fd888604caab7fa7ec967de35d304c77d301a02458c197d84f128973b5ed53  ./artifacts/m3-session-control-synthetic-esbuild-xs-50/session/watch.log
+4ee7e1d8d66ce9aa1cf6942ee39b5a9ad1cbf65a9221ddfb7fb25cc3af5da7b6  ./artifacts/m3-session-control-synthetic-rollup-xs-50/pre-block.json
+b637cd3d3991326153430176e2202d85c13dd533916b1471bd499d14deb48c70  ./artifacts/m3-session-control-synthetic-rollup-xs-50/session/session.json
+67555bfbae81d05349596c152dd8a3d8e9315a49252b3a523968eb1f189a4543  ./artifacts/m3-session-control-synthetic-rollup-xs-50/session/watch.log
+c46a5c6aabd434e8ad07a4a826c347878e30ac4877a043233a9b03842dc0032a  ./artifacts/m3-session-control-synthetic-rspack-xs-50/pre-block.json
+12765c23bc0cf7353e1e9d574ad0c378c9be938737e15e9eae2581af2815a1c4  ./artifacts/m3-session-control-synthetic-rspack-xs-50/session/session.json
+56aa7f1c0a8fed6ddd708520a452bceae236a1ef85f2a9c9735f45cfac4a479b  ./artifacts/m3-session-control-synthetic-rspack-xs-50/session/watch.log
+9ddee8dff21bd548425812b51010667f5bc8b7d056fcd3b94eabb5968aaa1c9b  ./artifacts/m3-session-control-synthetic-vite-xs-50/pre-block.json
+509de10ab2263ea6368d23516f9e0895b1105658b9d4bd4e59e55ba4f74b1703  ./artifacts/m3-session-control-synthetic-vite-xs-50/session/session.json
+cd29472923c474a565b0d9a2cc4db2ecf4a1a12f6058faa3a298e10adab5d933  ./artifacts/m3-session-control-synthetic-vite-xs-50/session/watch.log
+1f8f577aaf93efc1918fba021fc716d580fe9b0302b72d3fc5cd7818e8a801c9  ./artifacts/m3-session-control-synthetic-webpack-xs-50/pre-block.json
+57ff7811c824b2996bc0987274714e6eaa8cda564a8098abef036d71578a2303  ./artifacts/m3-session-control-synthetic-webpack-xs-50/session/session.json
+93510cb1e6e11abd11231a53a9b3a792715bf0e87e117868770cd535196c7f89  ./artifacts/m3-session-control-synthetic-webpack-xs-50/session/watch.log
+b2e9a07b0fcde004813017dc3559bd4e2f9b2e906d56a4fcbdf96f6a83bd4cc6  ./metadata.json
