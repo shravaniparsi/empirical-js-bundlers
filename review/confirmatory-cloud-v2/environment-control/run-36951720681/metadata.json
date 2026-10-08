@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-exact-environment-control-evidence",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "36951720681",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36951720681",
+  "repositoryCommit": "597829becb9cb5c7eed67b4dca3e8098fc9d89c7",
+  "artifactId": "11204830063",
+  "artifactName": "cloud-runner-environment-control",
+  "downloadedArtifactZipSha256": "5ccfc77f4e88297a090a4417b50dcfbbc0a53433e56dbfaa553050c07b020728",
+  "result": "passed",
+  "note": "All exact image, macOS build, Node, Chrome, CPU, memory, disk, and hosted-runner gates passed."
+}

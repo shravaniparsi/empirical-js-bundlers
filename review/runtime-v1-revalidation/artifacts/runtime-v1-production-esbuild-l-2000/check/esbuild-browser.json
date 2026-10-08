@@ -1,0 +1,1213 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/l-2000-corrected-runtime-v1-esbuild-l-2000/esbuild/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/src/main.css",
+      "status": 200
+    },
+    {
+      "url": "/src/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-IGMQ3JSB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-36M7OKDH.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-7E5XGWRL.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4QFCY6MN.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-PTAY3U7P.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4WJR3P4X.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-XYM2GA3M.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-OQSGJ4JW.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-BAJD2TFX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-OG2LOK4T.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-QEOJBGWB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-GAMNGVA7.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-CVBMON3F.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-BTFPL2MC.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-RQYPHIQX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-NZ2CA464.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AuthStepper-ZO7YPIKX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-SAOV3G6Y.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-73KTSR4B.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/OrdersResponsive-7RVE25CX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-UKQE2SZV.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/UsersPagination-5TLRQ5SS.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-ZJ73SSDV.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/SettingsTimeline-YMQXLXTI.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-5ZAHS2Y2.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AnalyticsAvatar-3PGJR4WS.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-3DSMW5ZY.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReportsPolling-6BHK73H3.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-3KNDRETF.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-PNCNWAGA.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/InventorySlider-GGR4O4TM.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4MQXPZUX.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ShippingBanner-VFXYN6YM.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-BTYXOPA5.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/PaymentsTabs-YKN55A2E.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReviewsAccordion-5L6A54K4.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/CatalogGrid-VM3VR2UD.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-Z7FRB65T.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-B3B4HE5P.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ProfileRangeSlider-VLHITJT4.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AdminSummary-5Q7QXF5H.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AuditList-TGPZCYDF.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/TagsAutocomplete-NUV5CHGD.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/DocumentsPieChart-NUA5WMDC.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/IntegrationsPagination-QZRJHH6K.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/WebhooksRadio-MARF425I.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ApiKeysTreeView-QYZP5UPE.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ThemesScore-ZSOK2HE7.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/src/main.css",
+      "status": 200
+    },
+    {
+      "url": "/src/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-IGMQ3JSB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-7E5XGWRL.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-36M7OKDH.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-PTAY3U7P.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4WJR3P4X.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4QFCY6MN.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-XYM2GA3M.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-BAJD2TFX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-OQSGJ4JW.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-OG2LOK4T.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-GAMNGVA7.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-QEOJBGWB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-CVBMON3F.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-BTFPL2MC.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-RQYPHIQX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-NZ2CA464.js",
+      "status": 200
+    },
+    {
+      "url": "/AuthStepper-ZO7YPIKX.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-SAOV3G6Y.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-73KTSR4B.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "MegaRepo",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 2901
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1996
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 2211
+    },
+    {
+      "path": "/settings",
+      "mainTextLength": 2825
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 2500
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 2988
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 2264
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 2921
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 2560
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 3186
+    },
+    {
+      "path": "/catalog",
+      "mainTextLength": 2838
+    },
+    {
+      "path": "/profile",
+      "mainTextLength": 2319
+    },
+    {
+      "path": "/admin",
+      "mainTextLength": 2735
+    },
+    {
+      "path": "/audit",
+      "mainTextLength": 2535
+    },
+    {
+      "path": "/tags",
+      "mainTextLength": 2310
+    },
+    {
+      "path": "/documents",
+      "mainTextLength": 2380
+    },
+    {
+      "path": "/integrations",
+      "mainTextLength": 1732
+    },
+    {
+      "path": "/webhooks",
+      "mainTextLength": 2472
+    },
+    {
+      "path": "/api-keys",
+      "mainTextLength": 2548
+    },
+    {
+      "path": "/themes",
+      "mainTextLength": 1669
+    }
+  ],
+  "fixture": {
+    "size": 2000,
+    "seed": 42,
+    "expectedRoutes": 20
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

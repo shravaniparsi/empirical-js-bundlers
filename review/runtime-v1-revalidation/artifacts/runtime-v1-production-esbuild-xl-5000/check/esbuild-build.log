@@ -1,0 +1,4 @@
+
+> benchmark-production-v1-synthetic-esbuild@1.0.0 build
+> node configs/esbuild/build.mjs
+

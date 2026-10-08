@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-correctness-control",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M3",
+  "workload": "xs-50",
+  "tool": "esbuild",
+  "node": "v24.14.0",
+  "target": "src/App.tsx",
+  "editMode": "append",
+  "targetSha256Before": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "lockSha256": "e6594e17907022ed0a26b905842714de5152046bbe4708fb5365423f6d344e54",
+  "command": [
+    "node",
+    "configs/esbuild/watch.mjs"
+  ],
+  "correctnessOnly": true,
+  "untimedWarmupUpdates": 1,
+  "measuredUpdatesPlanned": 5,
+  "workspaceSealVerified": null,
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "oneWarmupAndFiveMeasuredCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 0,
+      "phase": "warmup",
+      "marker": "confirmatory_m3_warmup_esbuild_0",
+      "diagnosticDurationMs": 1610.645834,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 1,
+      "completionLine": "esbuild: build finished (0 errors)"
+    },
+    {
+      "edit": 1,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_esbuild_1",
+      "diagnosticDurationMs": 166.279958,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "esbuild: build finished (0 errors)"
+    },
+    {
+      "edit": 2,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_esbuild_2",
+      "diagnosticDurationMs": 185.472542,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "esbuild: build finished (0 errors)"
+    },
+    {
+      "edit": 3,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_esbuild_3",
+      "diagnosticDurationMs": 210.714459,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "esbuild: build finished (0 errors)"
+    },
+    {
+      "edit": 4,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_esbuild_4",
+      "diagnosticDurationMs": 240.876042,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "esbuild: build finished (0 errors)"
+    },
+    {
+      "edit": 5,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_esbuild_5",
+      "diagnosticDurationMs": 268.14775,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "esbuild: build finished (0 errors)"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "files": [
+    {
+      "path": "watch.log",
+      "bytes": 531,
+      "sha256": "15fd888604caab7fa7ec967de35d304c77d301a02458c197d84f128973b5ed53"
+    }
+  ]
+}

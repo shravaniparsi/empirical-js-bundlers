@@ -1,0 +1,20 @@
+[
+  {
+    "tool": "webpack",
+    "kind": "synthetic",
+    "size": "l-2000",
+    "passed": true,
+    "install": {
+      "exitCode": 0
+    },
+    "build": {
+      "exitCode": 0
+    },
+    "contract": {
+      "exitCode": 0
+    },
+    "browser": {
+      "exitCode": 0
+    }
+  }
+]

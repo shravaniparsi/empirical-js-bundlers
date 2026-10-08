@@ -1,0 +1,13 @@
+
+> benchmark-production-v1-synthetic-rspack@1.0.0 dev
+> rspack serve --config rspack.config.cjs --host 127.0.0.1 --port 33349
+
+  ➜  Local:    http://127.0.0.1:33349/
+
+<i> [rspack-dev-middleware] wait until bundle finished: /
+Rspack compiled [1m[32msuccessfully[39m[22m in 577 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 44 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 41 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 43 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 64 ms
+<i> [rspack-dev-server] Gracefully shutting down. Press ^C again to force exit...

@@ -1,0 +1,108 @@
+{
+  "kind": "scoped-bulletproof-react-correctness-with-fixture-api",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/main.6feb542b.css",
+      "status": 200
+    },
+    {
+      "url": "/main.820ff0a8.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "url": "/620.fb81ade9.js",
+      "status": 200
+    },
+    {
+      "url": "/6ce24c58023cc2f8fd88.svg",
+      "status": 200
+    },
+    {
+      "url": "/462.8233334d.js",
+      "status": 200
+    },
+    {
+      "url": "/477.166a6782.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "url": "/89.a80a705b.js",
+      "status": 200
+    },
+    {
+      "url": "/180.00df34dd.js",
+      "status": 200
+    },
+    {
+      "url": "/777.7200a362.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/app/discussions",
+      "status": 200
+    },
+    {
+      "url": "/main.6feb542b.css",
+      "status": 200
+    },
+    {
+      "url": "/main.820ff0a8.js",
+      "status": 200
+    },
+    {
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "url": "/477.166a6782.js",
+      "status": 200
+    },
+    {
+      "url": "/180.00df34dd.js",
+      "status": 200
+    },
+    {
+      "url": "/777.7200a362.js",
+      "status": 200
+    },
+    {
+      "url": "/api/discussions?page=1",
+      "status": 200
+    },
+    {
+      "url": "/6ce24c58023cc2f8fd88.svg",
+      "status": 200
+    }
+  ],
+  "checks": {
+    "landing": true,
+    "tailwindStyles": true,
+    "logoLoaded": true,
+    "loginAndDashboard": true,
+    "discussions": true,
+    "directRouteReload": true
+  },
+  "browserVersion": "Chrome/154.0.8037.57"
+}

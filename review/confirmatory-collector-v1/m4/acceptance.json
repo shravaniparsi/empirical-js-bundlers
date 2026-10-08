@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v1-m4-correctness-gate",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "runtime": "Node.js 24.14.0",
+  "plannedMatrix": {
+    "workloads": [
+      "xs-50",
+      "m-500",
+      "xl-5000",
+      "bulletproof-react",
+      "memos",
+      "excalidraw"
+    ],
+    "tools": [
+      "vite",
+      "rspack",
+      "webpack"
+    ],
+    "cells": 18
+  },
+  "acceptedEvidence": [
+    {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829908004",
+      "headSha": "694e054ab2093398ac7f0d468fd118765986daab",
+      "workloads": [
+        "xs-50",
+        "m-500",
+        "bulletproof-react"
+      ],
+      "cells": 9,
+      "archivedHere": true
+    },
+    {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36819476193",
+      "headSha": "20e864556785b485b721158a18bb31c3d773bc57",
+      "workloads": [
+        "xl-5000"
+      ],
+      "cells": 3,
+      "evidence": "review/runtime-v1-revalidation/artifacts/runtime-v1-hmr-*-xl-5000/"
+    },
+    {
+      "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36822789535",
+      "headSha": "e9f452f175a11b5c15667bd106a107a56dea1e2d",
+      "workloads": [
+        "memos",
+        "excalidraw"
+      ],
+      "cells": 6,
+      "evidence": "review/realworld-hmr-v1/artifacts/"
+    }
+  ],
+  "checks": {
+    "threeStatePreservingEditsPerCell": true,
+    "reloadDetectorPositiveControl": true,
+    "sourceRestored": true,
+    "processTreesStopped": true,
+    "noLatencyObservations": true
+  },
+  "newRunReports": [
+    {
+      "tool": "rspack",
+      "workload": "bulletproof-react",
+      "path": "artifacts/confirmatory-m4-rspack-bulletproof/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "fixtureApiReady": true,
+        "developmentServerReady": true,
+        "applicationStateEstablished": true,
+        "threeSettledEdits": true,
+        "reloadControlDetected": true,
+        "sourceRestored": true,
+        "developmentServerStopped": true,
+        "fixtureApiStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "workload": "m-500",
+      "path": "artifacts/confirmatory-m4-rspack-m-500/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "workload": "xs-50",
+      "path": "artifacts/confirmatory-m4-rspack-xs-50/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "workload": "bulletproof-react",
+      "path": "artifacts/confirmatory-m4-vite-bulletproof/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "fixtureApiReady": true,
+        "developmentServerReady": true,
+        "applicationStateEstablished": true,
+        "threeSettledEdits": true,
+        "reloadControlDetected": true,
+        "sourceRestored": true,
+        "developmentServerStopped": true,
+        "fixtureApiStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "workload": "m-500",
+      "path": "artifacts/confirmatory-m4-vite-m-500/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "workload": "xs-50",
+      "path": "artifacts/confirmatory-m4-vite-xs-50/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "workload": "bulletproof-react",
+      "path": "artifacts/confirmatory-m4-webpack-bulletproof/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "fixtureApiReady": true,
+        "developmentServerReady": true,
+        "applicationStateEstablished": true,
+        "threeSettledEdits": true,
+        "reloadControlDetected": true,
+        "sourceRestored": true,
+        "developmentServerStopped": true,
+        "fixtureApiStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "workload": "m-500",
+      "path": "artifacts/confirmatory-m4-webpack-m-500/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "workload": "xs-50",
+      "path": "artifacts/confirmatory-m4-webpack-xs-50/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    }
+  ],
+  "cells": 18,
+  "correctnessEdits": 54,
+  "passed": true
+}

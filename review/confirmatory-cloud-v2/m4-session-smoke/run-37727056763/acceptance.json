@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m4-session-smoke-validation",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "expectedCells": 3,
+  "valid": true,
+  "errors": []
+}

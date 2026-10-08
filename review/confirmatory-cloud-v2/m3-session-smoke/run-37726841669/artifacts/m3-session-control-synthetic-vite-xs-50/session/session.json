@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-correctness-control",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M3",
+  "workload": "xs-50",
+  "tool": "vite",
+  "node": "v24.14.0",
+  "target": "src/App.tsx",
+  "editMode": "append",
+  "targetSha256Before": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+  "command": [
+    "vite",
+    "build",
+    "--watch",
+    "--mode",
+    "development",
+    "--minify",
+    "false"
+  ],
+  "correctnessOnly": true,
+  "untimedWarmupUpdates": 1,
+  "measuredUpdatesPlanned": 5,
+  "workspaceSealVerified": null,
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "oneWarmupAndFiveMeasuredCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 0,
+      "phase": "warmup",
+      "marker": "confirmatory_m3_warmup_vite_0",
+      "diagnosticDurationMs": 328.014084,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 304ms."
+    },
+    {
+      "edit": 1,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_vite_1",
+      "diagnosticDurationMs": 276.447667,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 254ms."
+    },
+    {
+      "edit": 2,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_vite_2",
+      "diagnosticDurationMs": 265.2205,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 243ms."
+    },
+    {
+      "edit": 3,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_vite_3",
+      "diagnosticDurationMs": 253.035958,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 234ms."
+    },
+    {
+      "edit": 4,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_vite_4",
+      "diagnosticDurationMs": 380.936666,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 355ms."
+    },
+    {
+      "edit": 5,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_vite_5",
+      "diagnosticDurationMs": 314.8895,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "built in 289ms."
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "files": [
+    {
+      "path": "watch.log",
+      "bytes": 4470,
+      "sha256": "cd29472923c474a565b0d9a2cc4db2ecf4a1a12f6058faa3a298e10adab5d933"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m4-session-correctness-control",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M4",
+  "workload": "xs-50",
+  "tool": "rspack",
+  "node": "v24.14.0",
+  "target": "src/App.tsx",
+  "targetSha256Before": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "lockSha256": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+  "correctnessOnly": true,
+  "untimedWarmupUpdates": 1,
+  "measuredUpdatesPlanned": 5,
+  "workspaceSealVerified": null,
+  "checks": {
+    "developmentServerReady": true,
+    "applicationStateEstablished": true,
+    "oneWarmupAndFiveMeasuredCycles": true,
+    "ignoredNetworkDiagnosticsExplained": true,
+    "reloadControlDetected": true,
+    "sourceRestored": true,
+    "developmentServerStopped": true
+  },
+  "edits": [
+    {
+      "edit": 0,
+      "phase": "warmup",
+      "marker": "confirmatory-m4-warmup-rspack-0",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 211.301958
+    },
+    {
+      "edit": 1,
+      "phase": "measured",
+      "marker": "confirmatory-m4-measured-rspack-1",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 148.8395419999997
+    },
+    {
+      "edit": 2,
+      "phase": "measured",
+      "marker": "confirmatory-m4-measured-rspack-2",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 194.86941699999988
+    },
+    {
+      "edit": 3,
+      "phase": "measured",
+      "marker": "confirmatory-m4-measured-rspack-3",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 193.63574999999946
+    },
+    {
+      "edit": 4,
+      "phase": "measured",
+      "marker": "confirmatory-m4-measured-rspack-4",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 187.09220900000037
+    },
+    {
+      "edit": 5,
+      "phase": "measured",
+      "marker": "confirmatory-m4-measured-rspack-5",
+      "markerObserved": true,
+      "documentPreserved": true,
+      "statePreserved": true,
+      "navigations": 0,
+      "settled": true,
+      "browserErrors": 0,
+      "sourceRestorationUpdated": true,
+      "diagnosticDurationMs": 278.9952090000006
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "ignoredConsoleMessages": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "ignoredHttpResponses": [
+    {
+      "status": 404,
+      "url": "http://127.0.0.1:49198/favicon.ico"
+    }
+  ],
+  "passed": true,
+  "command": [
+    "npm",
+    "run",
+    "dev",
+    "--",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "49198"
+  ],
+  "browserVersion": "Chrome/154.0.8037.57",
+  "reloadControl": {
+    "navigationObserved": true,
+    "documentReplaced": true
+  },
+  "targetSha256After": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "files": [
+    {
+      "path": "server.log",
+      "bytes": 785,
+      "sha256": "ad7bb83cabb2164c5e9d4c6a6e80f14b462e15532ffa99bebd2c194aee52ff74"
+    }
+  ]
+}

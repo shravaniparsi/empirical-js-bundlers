@@ -1,0 +1,170 @@
+name: Node 24 common-runtime revalidation
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - 'profiles/runtime-v1/**'
+      - 'profiles/production-v1/**'
+      - 'scripts/audit-runtime-policy.mjs'
+      - 'scripts/audit-production-profile.mjs'
+      - 'scripts/run-production-profile.mjs'
+      - 'scripts/prepare-production-profile.mjs'
+      - 'scripts/prepare-development-profile.mjs'
+      - 'scripts/check-production-contract.mjs'
+      - 'scripts/check-production-browser.mjs'
+      - 'scripts/check-realworld-browser.mjs'
+      - 'scripts/check-hmr-browser.mjs'
+      - '.github/workflows/runtime-v1-revalidation.yml'
+permissions:
+  contents: read
+env:
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+
+jobs:
+  profile-audit:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+      - name: Audit frozen runtime and production profile
+        run: |
+          mkdir -p runtime-evidence
+          node scripts/audit-runtime-policy.mjs runtime-evidence/runtime.json
+          node scripts/audit-production-profile.mjs runtime-evidence/dependency-audit.json
+          node --test scripts/generator.test.mjs scripts/production-contract.test.mjs scripts/production-profile-audit.test.mjs scripts/production-configuration.test.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-v1-profile-audit
+          path: runtime-evidence/
+          retention-days: 30
+
+  synthetic-production:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+        size: [s-200, m-500, l-2000, xl-5000]
+    env:
+      PROFILE_REVISION: runtime-v1-${{ matrix.tool }}-${{ matrix.size }}
+      PROFILE_RELEASE_DEPENDENCIES: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+      - name: Record runtime and runner
+        run: |
+          mkdir -p runtime-evidence
+          node scripts/audit-runtime-policy.mjs runtime-evidence/runtime.json
+          uname -a > runtime-evidence/host.txt
+          lscpu >> runtime-evidence/host.txt
+          free -b >> runtime-evidence/host.txt
+          node --version >> runtime-evidence/host.txt
+          npm --version >> runtime-evidence/host.txt
+          browser_path="$(command -v google-chrome)"
+          "$browser_path" --version >> runtime-evidence/host.txt
+          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Revalidate production cell
+        run: node scripts/run-production-profile.mjs synthetic '${{ matrix.size }}' runtime-evidence/check '${{ matrix.tool }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-v1-production-${{ matrix.tool }}-${{ matrix.size }}
+          path: runtime-evidence/
+          retention-days: 30
+
+  bulletproof-production:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        tool: [vite, rspack, esbuild, webpack, rollup]
+    env:
+      PROFILE_REVISION: runtime-v1-${{ matrix.tool }}-bulletproof
+      PROFILE_RELEASE_DEPENDENCIES: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: npm ci --prefix profiles/production-v1/validation --ignore-scripts --no-audit --no-fund
+      - name: Record runtime and runner
+        run: |
+          mkdir -p runtime-evidence
+          node scripts/audit-runtime-policy.mjs runtime-evidence/runtime.json
+          uname -a > runtime-evidence/host.txt
+          lscpu >> runtime-evidence/host.txt
+          free -b >> runtime-evidence/host.txt
+          node --version >> runtime-evidence/host.txt
+          npm --version >> runtime-evidence/host.txt
+          browser_path="$(command -v google-chrome)"
+          "$browser_path" --version >> runtime-evidence/host.txt
+          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Revalidate Bulletproof React production cell
+        run: node scripts/run-production-profile.mjs realworld app runtime-evidence/check '${{ matrix.tool }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-v1-production-${{ matrix.tool }}-bulletproof
+          path: runtime-evidence/
+          retention-days: 30
+
+  synthetic-hmr:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+        size: [s-200, xl-5000]
+    env:
+      PROFILE_REVISION: runtime-v1-${{ matrix.tool }}-${{ matrix.size }}-hmr
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+      - run: node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-runtime-v1-${{ matrix.tool }}-${{ matrix.size }}-hmr/${{ matrix.tool }}'
+      - run: npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-runtime-v1-${{ matrix.tool }}-${{ matrix.size }}-hmr/${{ matrix.tool }}' --include=dev --no-audit --no-fund
+      - name: Validate edits, state persistence, reload detection and restoration
+        timeout-minutes: 12
+        env:
+          HMR_STATE_ROUTE: "${{ matrix.size == 'xl-5000' && '/dashboard' || '/' }}"
+          HMR_STATE_SELECTOR: '${{ matrix.size == ''xl-5000'' && ''input[id="DashboardToggle-field"]'' || ''input[id="AuthTextArea-field"]'' }}'
+        run: |
+          mkdir -p runtime-evidence/hmr
+          node scripts/audit-runtime-policy.mjs runtime-evidence/runtime.json
+          export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"
+          node scripts/check-hmr-browser.mjs '${{ matrix.tool }}' '.submission-pilot/${{ matrix.size }}-corrected-runtime-v1-${{ matrix.tool }}-${{ matrix.size }}-hmr/${{ matrix.tool }}' runtime-evidence/hmr/acceptance.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-v1-hmr-${{ matrix.tool }}-${{ matrix.size }}
+          path: runtime-evidence/
+          retention-days: 30

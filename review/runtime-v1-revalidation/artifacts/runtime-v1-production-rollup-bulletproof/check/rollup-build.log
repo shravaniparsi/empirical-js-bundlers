@@ -1,0 +1,11 @@
+
+> benchmark-production-v1-realworld-rollup@1.0.0 build
+> node profile-build.mjs
+
+
+> benchmark-production-v1-realworld-rollup@1.0.0 build:bundler
+> NODE_ENV=production rollup -c rollup.config.mjs
+
+[36m
+[1msrc/main.tsx[22m → [1mdist[22m...[39m
+[32mcreated [1mdist[22m in [1m8.3s[22m[39m

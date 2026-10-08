@@ -1,0 +1,164 @@
+name: Confirmatory M4 session controls
+on:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths:
+      - '.github/workflows/confirmatory-m4-session-controls.yml'
+      - 'scripts/confirmatory-hmr-session.mjs'
+      - 'scripts/hmr-session-acceptance.mjs'
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: Correctness matrix to run
+        required: true
+        default: smoke
+        type: choice
+        options: [smoke, synthetic, bulletproof, realworld, all]
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    if: github.event_name == 'push' || inputs.suite == 'smoke' || inputs.suite == 'synthetic' || inputs.suite == 'all'
+    runs-on: macos-15
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+        size: ${{ fromJSON((github.event_name == 'push' || inputs.suite == 'smoke') && '["xs-50"]' || '["xs-50","m-500","xl-5000"]') }}
+    env:
+      PROFILE_REVISION: m4-session-control-${{ matrix.tool }}-${{ matrix.size }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Verify target cloud environment
+        run: node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
+      - name: Prepare and install development profile
+        run: |
+          node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
+          workspace='.submission-pilot/${{ matrix.size }}-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}'
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' "$workspace"
+          npm ci --prefix "$workspace" --include=dev --no-audit --no-fund
+      - name: Exercise state-preserving warmup and five measured-code paths
+        run: |
+          node scripts/confirmatory-hmr-session.mjs \
+            --tool '${{ matrix.tool }}' \
+            --workload '${{ matrix.size }}' \
+            --workspace '.submission-pilot/${{ matrix.size }}-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' \
+            --evidence-dir control-evidence/session \
+            --correctness-only
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m4-session-control-synthetic-${{ matrix.tool }}-${{ matrix.size }}
+          path: control-evidence/
+          if-no-files-found: error
+          retention-days: 30
+
+  bulletproof:
+    if: inputs.suite == 'bulletproof' || inputs.suite == 'all'
+    runs-on: macos-15
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        tool: [vite, rspack, webpack]
+    env:
+      PROFILE_REVISION: m4-session-control-${{ matrix.tool }}-bulletproof
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Verify target cloud environment
+        run: node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
+      - name: Prepare and install Bulletproof React development profile
+        run: |
+          node scripts/prepare-production-profile.mjs realworld app
+          workspace='.submission-pilot/bulletproof-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}'
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' "$workspace" realworld
+          npm ci --prefix "$workspace" --include=dev --no-audit --no-fund
+      - name: Exercise state-preserving warmup and five measured-code paths
+        run: |
+          node scripts/confirmatory-hmr-session.mjs \
+            --tool '${{ matrix.tool }}' \
+            --workload bulletproof-react \
+            --workspace '.submission-pilot/bulletproof-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' \
+            --evidence-dir control-evidence/session \
+            --correctness-only
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m4-session-control-bulletproof-${{ matrix.tool }}
+          path: control-evidence/
+          if-no-files-found: error
+          retention-days: 30
+
+  realworld:
+    if: inputs.suite == 'realworld' || inputs.suite == 'all'
+    runs-on: macos-15
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        application: [memos, excalidraw]
+        tool: [vite, rspack, webpack]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.application == 'memos' && 'usememos/memos' || 'excalidraw/excalidraw' }}
+          ref: ${{ matrix.application == 'memos' && '05a2c6db7a3e926c9142a635f42f7af0f078c81d' || '5db42c3ddbbdc44d10120ab2f18e0864d083e268' }}
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: profiles/runtime-v1/.node-version
+          cache: npm
+      - uses: actions/setup-go@v5
+        if: matrix.application == 'memos'
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
+      - run: npm ci --include=dev --no-audit --no-fund
+      - name: Verify environment and prepare development adapter
+        run: |
+          node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
+          node scripts/verify-realworld-source.mjs '${{ matrix.application }}' upstream > control-evidence/source.json
+          if [ '${{ matrix.application }}' = memos ]; then
+            node scripts/prepare-memos-adapter.mjs upstream/web adapter-workspace '${{ matrix.tool }}'
+            npx --yes npm@11.9.0 ci --prefix adapter-workspace --include=dev --no-audit --no-fund
+            (cd upstream && go build -mod=readonly -o ../memos-server ./cmd/memos)
+          else
+            node scripts/prepare-excalidraw-adapter.mjs upstream adapter-workspace '${{ matrix.tool }}'
+            npx --yes npm@11.9.0 ci --prefix adapter-workspace --include=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund
+          fi
+      - name: Exercise state-preserving warmup and five measured-code paths
+        run: |
+          backend_args=()
+          if [ '${{ matrix.application }}' = memos ]; then
+            backend_args=(--memos-backend memos-server)
+          fi
+          node scripts/confirmatory-hmr-session.mjs \
+            --tool '${{ matrix.tool }}' \
+            --workload '${{ matrix.application }}' \
+            --workspace adapter-workspace \
+            --evidence-dir control-evidence/session \
+            --correctness-only \
+            "${backend_args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: m4-session-control-${{ matrix.application }}-${{ matrix.tool }}
+          path: control-evidence/
+          if-no-files-found: error
+          retention-days: 30

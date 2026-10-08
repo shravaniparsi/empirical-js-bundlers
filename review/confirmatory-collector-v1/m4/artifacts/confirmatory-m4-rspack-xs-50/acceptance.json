@@ -1,0 +1,91 @@
+{
+  "kind": "real-component-hmr-correctness-not-latency-data",
+  "tool": "rspack",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xs-50-corrected-confirmatory-m4-rspack-xs-50/rspack",
+  "publicationEligible": false,
+  "heading": "TaskBoard",
+  "passed": true,
+  "edits": [
+    {
+      "edit": 1,
+      "text": "TaskBoard edit 1",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 2,
+      "text": "TaskBoard edit 2",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 3,
+      "text": "TaskBoard edit 3",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    }
+  ],
+  "errors": [],
+  "originalSourceSha256": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "fixture": {
+    "generatorVersion": "submission-v2-bounded-graph",
+    "reachableComponents": 48,
+    "expandedRenderUpperBound": 58,
+    "maxImportDepth": 3,
+    "generatedAt": "2026-10-01T07:22:46.323Z",
+    "seed": 42,
+    "size": 50,
+    "tier": "xs",
+    "components": 50,
+    "deadModules": 2,
+    "routeEntries": 0,
+    "totalImportEdges": 53,
+    "totalSourceLines": 8123,
+    "featureFolders": 5,
+    "categoryDistribution": {
+      "navigation": 5,
+      "chart-viz": 6,
+      "data-display": 14,
+      "form-control": 9,
+      "feedback": 6,
+      "data-fetching": 3,
+      "layout": 6,
+      "utility": 1
+    }
+  },
+  "lockSha256": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+  "developmentProfile": {
+    "id": "development-v1",
+    "kind": "synthetic",
+    "tool": "rspack",
+    "publicationEligible": false,
+    "productionBaseSha256": "80e7b36c11f96f558902c2d5d79cd1d9a5930a9cf086d5bb1428cd30f23956c8",
+    "changes": [
+      "Enable historyApiFallback for direct SPA routes",
+      "Disable serve-mode lazy compilation to avoid dynamic-chunk fallback races"
+    ],
+    "effectiveConfigSha256": "8933219942837ac383838c4c907cc9408ea01338c792bdff41551eac48371126"
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "stateRoute": "/",
+  "stateControl": {
+    "tag": "INPUT",
+    "type": "password",
+    "name": "AuthTextArea",
+    "id": "AuthTextArea-field"
+  },
+  "phase": "reload-control",
+  "initialState": "hmr-state-sentinel",
+  "reloadControlDetected": true,
+  "sourceRestored": true,
+  "serverStopped": true
+}

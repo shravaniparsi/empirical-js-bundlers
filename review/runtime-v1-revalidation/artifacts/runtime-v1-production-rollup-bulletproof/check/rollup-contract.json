@@ -1,0 +1,251 @@
+{
+  "kind": "production-v1-output-contract",
+  "passed": true,
+  "errors": [],
+  "javascript": [
+    {
+      "file": "chunk-4sSq6p9Q.js",
+      "sha256": "019582056cfdf68687587beb00625a1a6ac91310ed9988f616409d52c6207d18",
+      "mappedSegments": 1140,
+      "projectSources": [
+        "../src/components/ui/table/pagination.tsx",
+        "../src/components/ui/table/table.tsx"
+      ],
+      "mapSha256": "88c32c1391696f272e0b0c6a27589a94b8b7df99acb0cd3d681a313f8d301546"
+    },
+    {
+      "file": "chunk-B-cbXmjX.js",
+      "sha256": "f468a6d16db7dedc664dec0ee0d5e99d4bb0b11e9067379af5b0ec0500d49e50",
+      "mappedSegments": 522,
+      "projectSources": [
+        "../src/features/users/api/get-users.ts",
+        "../src/features/users/api/delete-user.ts",
+        "../src/features/users/components/delete-user.tsx",
+        "../src/features/users/components/users-list.tsx",
+        "../src/app/routes/app/users.tsx"
+      ],
+      "mapSha256": "bdc28de51ad38cd48e26cdbaa4a784d184db25d033535c1f6a0a3c5d59e1b85a"
+    },
+    {
+      "file": "chunk-BKQXBV40.js",
+      "sha256": "393b0bbb47916cbc357a769dca91e01b025ae8732f3db706c7cbef83c3065bec",
+      "mappedSegments": 223,
+      "projectSources": [
+        "../src/app/routes/app/dashboard.tsx"
+      ],
+      "mapSha256": "f1343f988f99e4fc1ab7f5012ef6d83b5fb30a7af816895053bcb3a8953f4d40"
+    },
+    {
+      "file": "chunk-BW_17YUL.js",
+      "sha256": "55d336f48af83ccde56c2006a755ad0de10ccacb27658c8a8d913971af4cda04",
+      "mappedSegments": 296,
+      "projectSources": [
+        "../src/app/routes/landing.tsx"
+      ],
+      "mapSha256": "470369f63849ceb2de7882881a311a247862e6c202a12e5b19449333297e835d"
+    },
+    {
+      "file": "chunk-By2fS4sM.js",
+      "sha256": "2825cd6b31548ff160a9bdc40d0b6762926916455f95aa7e4703401ed7011b30",
+      "mappedSegments": 574,
+      "projectSources": [
+        "../src/features/comments/api/get-comments.ts",
+        "../src/features/discussions/api/get-discussion.ts"
+      ],
+      "mapSha256": "820ecd70ea56aed566e837a4bafbba907f1c5d7a41d466ca4f13f19ed66eb4f7"
+    },
+    {
+      "file": "chunk-CBObinW2.js",
+      "sha256": "af5a87a6123bfcc324e8682ce5ec9db59d3576ffed6eedd0060b8bc4606ff41c",
+      "mappedSegments": 74,
+      "projectSources": [
+        "../src/hooks/use-disclosure.ts"
+      ],
+      "mapSha256": "c3c2e8bb840a6911d801fe61fb452e25ee3d6097448a54c30703bc8fdb184705"
+    },
+    {
+      "file": "chunk-CEvkGwAW.js",
+      "sha256": "df02664d8cefb69a16417023b7de75bfaa7f53558093dc19e761990ac59f5e94",
+      "mappedSegments": 19527,
+      "projectSources": [
+        "../src/components/ui/md-preview/md-preview.tsx",
+        "../src/features/comments/api/delete-comment.ts",
+        "../src/features/comments/components/delete-comment.tsx",
+        "../src/features/comments/components/comments-list.tsx",
+        "../src/features/comments/api/create-comment.ts",
+        "../src/features/comments/components/create-comment.tsx",
+        "../src/features/comments/components/comments.tsx",
+        "../src/features/discussions/api/update-discussion.ts",
+        "../src/features/discussions/components/update-discussion.tsx",
+        "../src/features/discussions/components/discussion-view.tsx",
+        "../src/app/routes/app/discussions/discussion.tsx"
+      ],
+      "mapSha256": "e6ed5623e72950cb82faaecf02238bab099a1f23d5789de0eb7e480e357010ea"
+    },
+    {
+      "file": "chunk-CM3y2Cby.js",
+      "sha256": "018321781bb7aa5cf6075e060331bd26055d0ad2b98905d150824ce0755ed4b1",
+      "mappedSegments": 81,
+      "projectSources": [
+        "../src/components/layouts/content-layout.tsx"
+      ],
+      "mapSha256": "64643622f37eb6a21d8c04bb520674ce5ac5994f08263bea2f8da25fafeabea1"
+    },
+    {
+      "file": "chunk-CRv9RII4.js",
+      "sha256": "b73c4658cf100358be5ffa777cc4a9bcffe9057d1224b3a9dbcaed677281d699",
+      "mappedSegments": 303,
+      "projectSources": [
+        "../src/features/auth/components/login-form.tsx",
+        "../src/app/routes/auth/login.tsx"
+      ],
+      "mapSha256": "47315b2b2c694aab97d960ded322bd663e8d6e64f6b39e4fc45dd83ba972a143"
+    },
+    {
+      "file": "chunk-CfIP4aNy.js",
+      "sha256": "fa6b44919e26a374def6cd3389fc33fa8e8f72cae838ea6aea405bcb42fe50f9",
+      "mappedSegments": 15177,
+      "projectSources": [
+        "../src/components/ui/form/label.tsx",
+        "../src/components/ui/form/form.tsx",
+        "../src/components/ui/form/error.tsx",
+        "../src/components/ui/form/field-wrapper.tsx",
+        "../src/components/ui/form/input.tsx",
+        "../src/components/ui/form/textarea.tsx",
+        "../src/components/ui/form/switch.tsx"
+      ],
+      "mapSha256": "b9dd888315d434816d2f7c72bf790fcba3fd6c8d423e03e9a852244ecc066c12"
+    },
+    {
+      "file": "chunk-ChsHFz_I.js",
+      "sha256": "19aa06cfa00e0cf44bbefa74d6bf8e81472c292e71abb26f50ab0cecbc292d4c",
+      "mappedSegments": 709,
+      "projectSources": [
+        "../src/components/ui/form/select.tsx",
+        "../src/features/auth/components/register-form.tsx",
+        "../src/features/teams/api/get-teams.ts",
+        "../src/app/routes/auth/register.tsx"
+      ],
+      "mapSha256": "bdf971ea92fe64da6b5f831f3ed3587d0d20499bd6204e297a4fede5dc39566c"
+    },
+    {
+      "file": "chunk-D5Jl_urL.js",
+      "sha256": "4258ff21e416c18a12649bffb91e6436dee369a5d44da3fd44ac05546c197851",
+      "mappedSegments": 750,
+      "projectSources": [
+        "../src/features/users/api/update-profile.ts",
+        "../src/features/users/components/update-profile.tsx",
+        "../src/app/routes/app/profile.tsx"
+      ],
+      "mapSha256": "1e170aa48b467839c82e1e184c90987c8ddd58649fafeb9e46a662580185bf3d"
+    },
+    {
+      "file": "chunk-D6blcAGJ.js",
+      "sha256": "6b526bdd6cfa2a7e0426760d1ba6beed1dbb5442187998e32f911c5b5e6e9078",
+      "mappedSegments": 213,
+      "projectSources": [
+        "../src/components/ui/form/form-drawer.tsx"
+      ],
+      "mapSha256": "e293d20fd2e726c9009763aab6c03f8b14e3853adef32b9a0781d33edda911fe"
+    },
+    {
+      "file": "chunk-DPXiUvRJ.js",
+      "sha256": "a05e3e667b519e87c71dcbcdd43ea6fb19beec659dab704198117d2446473311",
+      "mappedSegments": 207,
+      "projectSources": [
+        "../src/components/layouts/auth-layout.tsx"
+      ],
+      "mapSha256": "cd9f6e7e7b750c6e28453de30feaf7d32ffa0d10ba8f33a7eaf29c4cf5eb0325"
+    },
+    {
+      "file": "chunk-DahvgqAE.js",
+      "sha256": "aff09702f1eb0b239a7431721daaf4bd1d529d74a6968e0e3bf49e768ead22d7",
+      "mappedSegments": 56,
+      "projectSources": [
+        "../src/app/routes/not-found.tsx"
+      ],
+      "mapSha256": "982ecfe90d289b9a6271e20a9ab421d07eb694bc80c5a467d1535b14dcd8143a"
+    },
+    {
+      "file": "chunk-Dyy8JC6t.js",
+      "sha256": "c4cfb2bd0ee2b4a70068f048602aebe0f55ef548581cbc07b07d818eaf299c72",
+      "mappedSegments": 8,
+      "projectSources": [],
+      "mapSha256": "095e1adad0056e56c3da51a201c145c7660eec2306c08e99c2e3623fdda71b1c"
+    },
+    {
+      "file": "chunk-YVSw3jBv.js",
+      "sha256": "90d63a1e7ead7f8f9b3158b90b359cdc74807141a487c4ea543acdd1fb52fa17",
+      "mappedSegments": 18,
+      "projectSources": [],
+      "mapSha256": "24e2cfa661c26a808e93324d1307b56d8bd7e3bd2f667223812ec8c8a0d587a9"
+    },
+    {
+      "file": "chunk-dtByl0ES.js",
+      "sha256": "6297e94106bfed5dc847796ac916f0982d02cd98b8635f132416f94c714fb857",
+      "mappedSegments": 1058,
+      "projectSources": [
+        "../src/features/discussions/api/get-discussions.ts",
+        "../src/features/discussions/api/create-discussion.ts",
+        "../src/features/discussions/components/create-discussion.tsx",
+        "../src/features/discussions/api/delete-discussion.ts",
+        "../src/features/discussions/components/delete-discussion.tsx",
+        "../src/features/discussions/components/discussions-list.tsx",
+        "../src/app/routes/app/discussions/discussions.tsx"
+      ],
+      "mapSha256": "d25bc52fef03faa38389e1d95cf2c2aa64e9e4b3c051c514babee0171f64571e"
+    },
+    {
+      "file": "chunk-is72ve99.js",
+      "sha256": "9dbe8568073d446e0cfc844ec44d5cf940269623aa9c91a8963842accdf5a087",
+      "mappedSegments": 3879,
+      "projectSources": [
+        "../src/utils/format.ts",
+        "../src/components/ui/dialog/dialog.tsx",
+        "../src/components/ui/dialog/confirmation-dialog/confirmation-dialog.tsx"
+      ],
+      "mapSha256": "75ebccba163a0072486c1032b0dbfb91e0b324c0966876e850b1680480494f69"
+    },
+    {
+      "file": "main-BJ1oVbba.js",
+      "sha256": "0b6dd86ce6c7489afa5312677680b60c24aaff69bb360d535414cbd24b9920ce",
+      "mappedSegments": 230240,
+      "projectSources": [
+        "../src/utils/cn.ts",
+        "../src/components/ui/spinner/spinner.tsx",
+        "../src/components/ui/button/button.tsx",
+        "../src/components/errors/main.tsx",
+        "../src/components/ui/notifications/notification.tsx",
+        "../src/components/ui/notifications/notifications-store.ts",
+        "../src/components/ui/notifications/notifications.tsx",
+        "../src/config/paths.ts",
+        "../src/config/env.ts",
+        "../src/lib/api-client.ts",
+        "../src/lib/auth.tsx",
+        "../src/lib/react-query.ts",
+        "../src/app/provider.tsx",
+        "../src/components/seo/head.tsx",
+        "../src/assets/logo.svg",
+        "../src/components/ui/drawer/drawer.tsx",
+        "../src/lib/authorization.tsx",
+        "../src/components/ui/dropdown/dropdown.tsx",
+        "../src/components/ui/link/link.tsx",
+        "../src/components/layouts/dashboard-layout.tsx",
+        "../src/app/routes/app/root.tsx",
+        "../src/app/router.tsx",
+        "../src/app/index.tsx",
+        "../src/testing/mocks/index.ts",
+        "../src/main.tsx"
+      ],
+      "mapSha256": "f67a2f5aec0236206f6ec936b8affe165c906072260395ee832a1a63ab13d0e8"
+    }
+  ],
+  "css": [
+    {
+      "file": "main-BJ1oVbba.css",
+      "sha256": "34f497662797a4cb84a943544fe216ef36e587907ac04273f0dbae4b29da377a",
+      "mapPresent": true
+    }
+  ],
+  "publicationEligible": false
+}

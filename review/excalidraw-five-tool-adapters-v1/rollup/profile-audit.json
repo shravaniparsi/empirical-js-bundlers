@@ -1,0 +1,10 @@
+{
+  "kind": "excalidraw-five-tool-adapter-profile-audit",
+  "passed": true,
+  "publicationEligible": false,
+  "applicationCommit": "5db42c3ddbbdc44d10120ab2f18e0864d083e268",
+  "lockfileVersion": 3,
+  "lockfileSha256": "19bf547fe73dbdaf89d4bcdaec103f8f58f1b4354d3cb301acdd256ca54cea05",
+  "workspacePackages": 10,
+  "errors": []
+}

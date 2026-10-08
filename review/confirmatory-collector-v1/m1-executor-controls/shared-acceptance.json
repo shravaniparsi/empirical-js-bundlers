@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-cell-full-process-negative-controls",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "realProcessBaselineAccepted": true,
+  "controls": {
+    "staleCompletion": true,
+    "wrongOutput": true,
+    "sourceDrift": true,
+    "orphanProcess": true,
+    "malformedTiming": true,
+    "fullReload": true,
+    "stateLoss": true,
+    "reloadControlFailure": true
+  },
+  "productionBuildAcceptance": true,
+  "developmentReadinessAcceptance": true,
+  "passed": true
+}

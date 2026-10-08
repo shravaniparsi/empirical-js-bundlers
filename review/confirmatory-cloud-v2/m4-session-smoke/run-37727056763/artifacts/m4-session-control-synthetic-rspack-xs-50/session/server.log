@@ -1,0 +1,21 @@
+
+> benchmark-production-v1-synthetic-rspack@1.0.0 dev
+> rspack serve --config rspack.config.cjs --host 127.0.0.1 --port 49198
+
+  ➜  Local:    http://127.0.0.1:49198/
+
+Rspack compiled successfully in 237 ms
+Rspack compiled successfully in 85 ms
+Rspack compiled successfully in 36 ms
+Rspack compiled successfully in 42 ms
+Rspack compiled successfully in 19 ms
+Rspack compiled successfully in 20 ms
+Rspack compiled successfully in 25 ms
+Rspack compiled successfully in 22 ms
+Rspack compiled successfully in 27 ms
+Rspack compiled successfully in 29 ms
+Rspack compiled successfully in 28 ms
+Rspack compiled successfully in 85 ms
+Rspack compiled successfully in 27 ms
+Rspack compiled successfully in 131 ms
+<i> [rspack-dev-server] Gracefully shutting down. Press ^C again to force exit...

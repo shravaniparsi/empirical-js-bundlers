@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "kind": "excalidraw-incremental-correctness-matrix",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36829734054",
+  "headSha": "5b52dc84240df365af256cd5b6c5d2bed031ea27",
+  "node": "24.14.0",
+  "cells": 5,
+  "edits": 15,
+  "passed": true,
+  "reports": [
+    {
+      "tool": "esbuild",
+      "report": "artifacts/esbuild/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rollup",
+      "report": "artifacts/rollup/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "rspack",
+      "report": "artifacts/rspack/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "vite",
+      "report": "artifacts/vite/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    },
+    {
+      "tool": "webpack",
+      "report": "artifacts/webpack/acceptance.json",
+      "passed": true,
+      "edits": 3,
+      "checks": {
+        "initialBuildSucceeded": true,
+        "initialOutputExists": true,
+        "threeEditAndRevertCycles": true,
+        "sourceRestored": true,
+        "processTreeStopped": true
+      }
+    }
+  ]
+}

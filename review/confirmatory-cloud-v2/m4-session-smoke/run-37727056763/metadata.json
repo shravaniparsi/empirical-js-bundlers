@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m4-session-smoke-evidence",
+  "protocol": "confirmatory-v2-cloud-m1",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "37727056763",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/37727056763",
+  "repositoryCommit": "fa12d761454bfa23afd936a87bcdeed57cc85c3c",
+  "runnerFamily": "macos-15",
+  "result": "three of three synthetic smoke cells passed",
+  "scope": "Correctness control only; diagnostic durations are forbidden from primary analysis."
+}

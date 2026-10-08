@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-capacity-pilot-validation",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "valid": true,
+  "workloads": [
+    "synthetic-xl",
+    "memos",
+    "excalidraw"
+  ],
+  "errors": []
+}

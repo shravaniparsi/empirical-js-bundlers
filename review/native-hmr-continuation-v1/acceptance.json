@@ -1,0 +1,186 @@
+{
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "memos": {
+    "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36092946515",
+    "testedCommit": "94106c7d2a464f4c318d99ddec75320ebaf2c720",
+    "node": "24.14.0",
+    "go": "1.27.0",
+    "checks": {
+      "actualBackendReady": true,
+      "signupAndLogin": true,
+      "createAndRenderMarkdown": true,
+      "editNote": true,
+      "reloadPersistence": true,
+      "actualWriteResponses": true,
+      "sqlitePersistenceAfterShutdown": true
+    },
+    "upstreamSourceVerified": {
+      "id": "memos",
+      "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+      "filesVerified": 1307,
+      "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+      "publicationEligible": false
+    }
+  },
+  "hmr": {
+    "run": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36093638637",
+    "testedCommit": "083ed49e241ba9f15e40a98e0e8cb0203f4c6e07",
+    "node": "22.16.0",
+    "independentCorrectnessSessions": 6,
+    "sequentialEditsPerSession": 3,
+    "cells": [
+      {
+        "cell": "hmr-rspack-s-200",
+        "tool": "rspack",
+        "stateRoute": "/",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "AuthTextArea",
+          "id": "AuthTextArea-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "b45d429264fea1d53fe1ccef65a813547fca81f610abf6dc5b9a1b2598fbff80",
+        "lockSha256": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "rspack",
+          "publicationEligible": false,
+          "productionBaseSha256": "80e7b36c11f96f558902c2d5d79cd1d9a5930a9cf086d5bb1428cd30f23956c8",
+          "changes": [
+            "Enable historyApiFallback for direct SPA routes"
+          ],
+          "effectiveConfigSha256": "2a8c7a0ec2ea5410be964cf895eb59fd7970853736342f01fcd92e4ae738906b"
+        }
+      },
+      {
+        "cell": "hmr-rspack-xl-5000",
+        "tool": "rspack",
+        "stateRoute": "/dashboard",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "DashboardToggle",
+          "id": "DashboardToggle-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "96f389880f3d09becac07584bfaac032e9fd39da28383c49759438bdb2565b41",
+        "lockSha256": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "rspack",
+          "publicationEligible": false,
+          "productionBaseSha256": "80e7b36c11f96f558902c2d5d79cd1d9a5930a9cf086d5bb1428cd30f23956c8",
+          "changes": [
+            "Enable historyApiFallback for direct SPA routes"
+          ],
+          "effectiveConfigSha256": "2a8c7a0ec2ea5410be964cf895eb59fd7970853736342f01fcd92e4ae738906b"
+        }
+      },
+      {
+        "cell": "hmr-vite-s-200",
+        "tool": "vite",
+        "stateRoute": "/",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "AuthTextArea",
+          "id": "AuthTextArea-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "b45d429264fea1d53fe1ccef65a813547fca81f610abf6dc5b9a1b2598fbff80",
+        "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "vite",
+          "publicationEligible": false,
+          "productionBaseSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629",
+          "changes": [],
+          "effectiveConfigSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629"
+        }
+      },
+      {
+        "cell": "hmr-vite-xl-5000",
+        "tool": "vite",
+        "stateRoute": "/dashboard",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "DashboardToggle",
+          "id": "DashboardToggle-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "96f389880f3d09becac07584bfaac032e9fd39da28383c49759438bdb2565b41",
+        "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "vite",
+          "publicationEligible": false,
+          "productionBaseSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629",
+          "changes": [],
+          "effectiveConfigSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629"
+        }
+      },
+      {
+        "cell": "hmr-webpack-s-200",
+        "tool": "webpack",
+        "stateRoute": "/",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "AuthTextArea",
+          "id": "AuthTextArea-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "b45d429264fea1d53fe1ccef65a813547fca81f610abf6dc5b9a1b2598fbff80",
+        "lockSha256": "6ca1de624ed34f35a4a6506d393a8c6d8a813309bb987069b9cbd08a0df0f607",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "webpack",
+          "publicationEligible": false,
+          "productionBaseSha256": "c46927de7995caed857b385132b96ca811666e20e11225b62925f4fb91540e84",
+          "changes": [],
+          "effectiveConfigSha256": "c46927de7995caed857b385132b96ca811666e20e11225b62925f4fb91540e84"
+        }
+      },
+      {
+        "cell": "hmr-webpack-xl-5000",
+        "tool": "webpack",
+        "stateRoute": "/dashboard",
+        "stateControl": {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "DashboardToggle",
+          "id": "DashboardToggle-field"
+        },
+        "passed": true,
+        "edits": 3,
+        "originalSourceSha256": "96f389880f3d09becac07584bfaac032e9fd39da28383c49759438bdb2565b41",
+        "lockSha256": "6ca1de624ed34f35a4a6506d393a8c6d8a813309bb987069b9cbd08a0df0f607",
+        "developmentProfile": {
+          "id": "development-v1",
+          "tool": "webpack",
+          "publicationEligible": false,
+          "productionBaseSha256": "c46927de7995caed857b385132b96ca811666e20e11225b62925f4fb91540e84",
+          "changes": [],
+          "effectiveConfigSha256": "c46927de7995caed857b385132b96ca811666e20e11225b62925f4fb91540e84"
+        }
+      }
+    ]
+  },
+  "productionProfileChanged": false,
+  "remaining": [
+    "Five-tool adapters for both independent apps",
+    "Cross-tool dependency audits and output contracts",
+    "Common runtime revalidation",
+    "Real-world HMR acceptance",
+    "Frozen sampling and analysis protocol",
+    "Fresh independent measurements and manuscript analysis"
+  ]
+}

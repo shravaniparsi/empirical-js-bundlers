@@ -1,0 +1,39 @@
+{
+  "profile": "production-v1",
+  "publicationEligible": false,
+  "kind": "realworld",
+  "size": null,
+  "contractSha256": "44540706a3807f2f6807c4bb9fbeb4aed2c84576d1fe329c7561234350c11980",
+  "tools": {
+    "vite": {
+      "package-lock.json": "cd183f3d52ea806d318fb9d3879e7eecc0d1c77fc461274fa1b40860f3909305",
+      "package.json": "702e4f7edadb15dc8a1bc476d2d8bb752febda3faaa4008d987ade779a7840d0",
+      "vite.config.ts": "5432effd246c74f01282c72415f43334f8a2014f5dbbcfa944670f94beeec2f5",
+      "profile-build.mjs": "188ec012a86c3e88ccc42470d318b3e9099689a7768341a50ff089ff8d897f7b"
+    },
+    "rspack": {
+      "package-lock.json": "0138dba0f27b07f3144b77ab146692db5036601f9206ded4bcc2ff8f79e51aba",
+      "package.json": "5b35fb4627fad64795fd7b294b06dbb03509ff35029de71662a5f4eb51909794",
+      "rspack.config.cjs": "44718783c87d636b179fabc3b43d48bd960d8dc721a423b1b57034843cbef46e",
+      "profile-build.mjs": "188ec012a86c3e88ccc42470d318b3e9099689a7768341a50ff089ff8d897f7b"
+    },
+    "esbuild": {
+      "build.mjs": "9892e8144817300d6262e3847d5506f1d881bb160dd170236f75c869459b633e",
+      "package-lock.json": "dedcfd7bad8dcbec892a49a2f17d25dc5fda8ce2589f32338f43ad75924270c5",
+      "package.json": "ab1b9ea4ac17d52cae3fb301cec6c75cad7cbcd88230cc928a8144c585b80a9c",
+      "profile-build.mjs": "188ec012a86c3e88ccc42470d318b3e9099689a7768341a50ff089ff8d897f7b"
+    },
+    "webpack": {
+      "package-lock.json": "3b54ba22837a3a4319da16a998ce0c6a8e20cc7bef2febb74f9c9a51a9cd2547",
+      "package.json": "f61fe6f15910acc8d93647de57c2d969cb31ac04f09dcd166af67e7493972667",
+      "webpack.config.cjs": "c9491fa7b46d7875b4a5d537a5e93257a347ab15a276779924d5014a9d2c7ac9",
+      "profile-build.mjs": "188ec012a86c3e88ccc42470d318b3e9099689a7768341a50ff089ff8d897f7b"
+    },
+    "rollup": {
+      "package-lock.json": "c9f4f9f70f98bef4acea510a61770ac5ab0c16150c46baf406f01cfa14296128",
+      "package.json": "118ad701ee65672b61f16ba0c3459b7d6ca1cb6ca37d8058ab754152ef67a7d7",
+      "rollup.config.mjs": "dc6600601be6b75fbb5c7662657cfd434ea10012c60351ba1ca4d0d159bc6d7c",
+      "profile-build.mjs": "188ec012a86c3e88ccc42470d318b3e9099689a7768341a50ff089ff8d897f7b"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "excalidraw",
+  "purpose": "Upstream feasibility only; not comparative timing",
+  "publicationEligible": false,
+  "node": "v24.14.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "startedAt": "2026-09-25T03:40:10.173Z",
+  "steps": [
+    {
+      "name": "package-manager",
+      "args": [
+        "yarn",
+        "--version"
+      ],
+      "cwd": ".",
+      "startedAt": "2026-09-25T03:40:10.275Z",
+      "endedAt": "2026-09-25T03:40:10.478Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "84f7e5842635f748545ad7ca26b31b147aeba83c9cc4a8652c9852b2b8f8b0c1"
+    },
+    {
+      "name": "install",
+      "args": [
+        "yarn",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "cwd": ".",
+      "startedAt": "2026-09-25T03:40:10.478Z",
+      "endedAt": "2026-09-25T03:41:01.230Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "e8bb77d42a489a286b794f946859dd008205bdbdea59d0ebc5dd7f4356d185d6"
+    },
+    {
+      "name": "build",
+      "args": [
+        "yarn",
+        "--cwd",
+        "excalidraw-app",
+        "build:app:docker"
+      ],
+      "cwd": ".",
+      "startedAt": "2026-09-25T03:41:01.310Z",
+      "endedAt": "2026-09-25T03:41:29.130Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "61e170ecf50013b27197e218384bcf6d80707bdcc6e33b3687a2f4c684763598"
+    }
+  ],
+  "status": "build-passed-browser-not-validated",
+  "before": {
+    "id": "excalidraw",
+    "commit": "5db42c3ddbbdc44d10120ab2f18e0864d083e268",
+    "filesVerified": 1297,
+    "inventorySha256": "1645f0400e7c5ccbad50f0d8e5ba967df6bd06e3d26fe84b88aa7d119a4e8f01",
+    "publicationEligible": false
+  },
+  "afterInstall": {
+    "id": "excalidraw",
+    "commit": "5db42c3ddbbdc44d10120ab2f18e0864d083e268",
+    "filesVerified": 1297,
+    "inventorySha256": "1645f0400e7c5ccbad50f0d8e5ba967df6bd06e3d26fe84b88aa7d119a4e8f01",
+    "publicationEligible": false
+  },
+  "afterBuild": {
+    "id": "excalidraw",
+    "commit": "5db42c3ddbbdc44d10120ab2f18e0864d083e268",
+    "filesVerified": 1297,
+    "inventorySha256": "1645f0400e7c5ccbad50f0d8e5ba967df6bd06e3d26fe84b88aa7d119a4e8f01",
+    "publicationEligible": false
+  },
+  "outputFiles": 490,
+  "finishedAt": "2026-09-25T03:41:29.268Z"
+}

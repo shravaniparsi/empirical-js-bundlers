@@ -1,0 +1,88 @@
+{
+  "kind": "real-component-hmr-correctness-not-latency-data",
+  "tool": "vite",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/m-500-corrected-confirmatory-m4-vite-m-500/vite",
+  "publicationEligible": false,
+  "heading": "ShopDash",
+  "passed": true,
+  "edits": [
+    {
+      "edit": 1,
+      "text": "ShopDash edit 1",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 2,
+      "text": "ShopDash edit 2",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    },
+    {
+      "edit": 3,
+      "text": "ShopDash edit 3",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true,
+      "observedState": "hmr-state-sentinel"
+    }
+  ],
+  "errors": [],
+  "originalSourceSha256": "6e814618da5a7e277d1eb96c7f635454feb9d54aa94e7a4ddbc3a961746abb46",
+  "fixture": {
+    "generatorVersion": "submission-v2-bounded-graph",
+    "reachableComponents": 475,
+    "expandedRenderUpperBound": 603,
+    "maxImportDepth": 4,
+    "generatedAt": "2026-10-01T07:22:45.049Z",
+    "seed": 42,
+    "size": 500,
+    "tier": "m",
+    "components": 500,
+    "deadModules": 25,
+    "routeEntries": 12,
+    "totalImportEdges": 588,
+    "totalSourceLines": 79205,
+    "featureFolders": 15,
+    "categoryDistribution": {
+      "navigation": 57,
+      "chart-viz": 51,
+      "data-display": 122,
+      "form-control": 76,
+      "feedback": 57,
+      "data-fetching": 33,
+      "layout": 76,
+      "utility": 28
+    }
+  },
+  "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+  "developmentProfile": {
+    "id": "development-v1",
+    "kind": "synthetic",
+    "tool": "vite",
+    "publicationEligible": false,
+    "productionBaseSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629",
+    "changes": [],
+    "effectiveConfigSha256": "ccf91454b97ba39043f5011af540ff10c1c0b47f7e98eefb26afcad599945629"
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "stateRoute": "/",
+  "stateControl": {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "ProductsSlider",
+    "id": "ProductsSlider-field"
+  },
+  "phase": "reload-control",
+  "initialState": "hmr-state-sentinel",
+  "reloadControlDetected": true,
+  "sourceRestored": true,
+  "serverStopped": true
+}

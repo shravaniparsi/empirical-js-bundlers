@@ -1,0 +1,10 @@
+
+> benchmark-production-v1-synthetic-rspack@1.0.0 build
+> NODE_ENV=production rspack build --config rspack.config.cjs
+
+[1m[33mWARNING[39m[22m in [33m⚠[0m asset size limit: The following asset(s) exceed the recommended size limit (300.000 KiB). This can impact web performance.
+  [2m│[0m Assets:
+  [2m│[0m   6246.f601ed584195eaef.js (444.617 KiB)
+[0m
+
+Rspack compiled with [1m[33m1 warning[39m[22m in 5.32 s

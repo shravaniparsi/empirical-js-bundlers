@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "incremental-completion-correctness-not-latency-data",
+  "publicationEligible": false,
+  "tool": "esbuild",
+  "node": "v24.14.0",
+  "target": "src/pages/SignUp.tsx",
+  "editMode": "memos",
+  "targetSha256Before": "51dac2918a64883a41dc4066fa27863bc0d0d36a2de23ae3b385941d519767c1",
+  "lockSha256": "a88798d771375bfd2fedd63b7b4ad736b4b367a268faa7fee1c179d13bfd05f7",
+  "command": [
+    "node",
+    "adapter-build.mjs",
+    "--watch"
+  ],
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "threeEditAndRevertCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 1,
+      "marker": "confirmatory_m3_correctness_esbuild_1",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 2,
+      "marker": "confirmatory_m3_correctness_esbuild_2",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    },
+    {
+      "edit": 3,
+      "marker": "confirmatory_m3_correctness_esbuild_3",
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "51dac2918a64883a41dc4066fa27863bc0d0d36a2de23ae3b385941d519767c1"
+}

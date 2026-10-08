@@ -1,0 +1,381 @@
+{
+  "kind": "synthetic-production-correctness",
+  "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/m-500-corrected-runtime-v1-esbuild-m-500/esbuild/dist",
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "/",
+      "status": 200
+    },
+    {
+      "url": "/src/main.css",
+      "status": 200
+    },
+    {
+      "url": "/src/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-S5XQBQYV.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-HQZNQE7J.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-Q4JTDVZ4.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-VI7K4PSI.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-H7CA2I3S.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4TZN5EFY.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "url": "/AuthHeatmap-IOHNS4J6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/DashboardPieChart-TADGXPO3.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-MSU2F6XE.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-CG6XYJ4V.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/OrdersSticky-7EXYKMB4.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-QNNFYR3J.js",
+      "status": 200
+    },
+    {
+      "url": "/UsersHeader-M2X3QSJH.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-ZFTSDJOC.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/NotificationsLabel-NU72IOUU.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-6UN23YY2.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/AnalyticsTag-K7Y45LCB.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-PMU5R7H7.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-G25AEMFK.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReportsSpinner-MLTRPHMD.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-MCWEEMJR.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/BillingTextArea-RG5KTDQL.js",
+      "status": 200
+    },
+    {
+      "url": "/InventoryStepper-FEOCY3RO.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ShippingFileUpload-EUKPR6IO.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/PaymentsCard-AEUGFID6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/ReviewsPopover-RJNDWIFN.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    },
+    {
+      "url": "/auth",
+      "status": 200
+    },
+    {
+      "url": "/src/main.css",
+      "status": 200
+    },
+    {
+      "url": "/src/main.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-S5XQBQYV.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-HQZNQE7J.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-VI7K4PSI.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-Q4JTDVZ4.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-H7CA2I3S.js",
+      "status": 200
+    },
+    {
+      "url": "/chunk-4TZN5EFY.js",
+      "status": 200
+    },
+    {
+      "url": "/AuthHeatmap-IOHNS4J6.js",
+      "status": 200
+    },
+    {
+      "url": "data:application/json,%7B%22status%22%3A%22ready%22%7D",
+      "status": 200
+    }
+  ],
+  "heading": "ShopDash",
+  "stylesheetCount": 1,
+  "routes": [
+    {
+      "path": "/auth",
+      "mainTextLength": 1451
+    },
+    {
+      "path": "/dashboard",
+      "mainTextLength": 1150
+    },
+    {
+      "path": "/orders",
+      "mainTextLength": 1242
+    },
+    {
+      "path": "/users",
+      "mainTextLength": 1083
+    },
+    {
+      "path": "/notifications",
+      "mainTextLength": 1155
+    },
+    {
+      "path": "/analytics",
+      "mainTextLength": 1162
+    },
+    {
+      "path": "/reports",
+      "mainTextLength": 1166
+    },
+    {
+      "path": "/billing",
+      "mainTextLength": 1058
+    },
+    {
+      "path": "/inventory",
+      "mainTextLength": 1118
+    },
+    {
+      "path": "/shipping",
+      "mainTextLength": 1613
+    },
+    {
+      "path": "/payments",
+      "mainTextLength": 1040
+    },
+    {
+      "path": "/reviews",
+      "mainTextLength": 1241
+    }
+  ],
+  "fixture": {
+    "size": 500,
+    "seed": 42,
+    "expectedRoutes": 12
+  },
+  "browserVersion": "Chrome/154.0.8037.57",
+  "rootChildren": 1,
+  "navigationDisplay": "flex",
+  "directRouteReload": true
+}

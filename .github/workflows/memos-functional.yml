@@ -1,0 +1,49 @@
+name: Memos actual backend acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/realworld-expansion-v1]
+    paths: ['scripts/check-memos-browser.mjs', '.github/workflows/memos-functional.yml']
+permissions:
+  contents: read
+jobs:
+  memos:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: usememos/memos
+          ref: 05a2c6db7a3e926c9142a635f42f7af0f078c81d
+          path: upstream
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.14.0'
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
+      - run: npm install --global pnpm@11.0.1 --no-audit --no-fund
+      - run: node scripts/run-realworld-baseline.mjs memos upstream memos-evidence
+      - name: Compile original backend with pinned Go modules
+        run: |
+          go version > memos-evidence/go-version.txt
+          cd upstream
+          go build -mod=readonly -o ../memos-server ./cmd/memos > ../memos-evidence/backend-build.log 2>&1
+      - env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci --include=dev --no-audit --no-fund
+      - name: Exercise actual local backend
+        timeout-minutes: 5
+        run: |
+          export PUPPETEER_EXECUTABLE_PATH="$(command -v google-chrome)"
+          node scripts/check-memos-browser.mjs upstream memos-server memos-evidence/browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: memos-functional
+          path: memos-evidence/
+          retention-days: 30

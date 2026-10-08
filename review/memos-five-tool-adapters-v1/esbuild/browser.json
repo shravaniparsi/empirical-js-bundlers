@@ -1,0 +1,900 @@
+{
+  "publicationEligible": false,
+  "purpose": "Memos actual-backend functional acceptance",
+  "passed": true,
+  "checks": {
+    "actualBackendReady": true,
+    "signupSubmitted": true,
+    "signupAndLogin": true,
+    "homeComposerReady": true,
+    "homeComposerAcceptsInput": true,
+    "createAndRenderMarkdown": true,
+    "editNote": true,
+    "reloadPersistence": true,
+    "actualWriteResponses": true,
+    "sqlitePersistenceAfterShutdown": true
+  },
+  "errors": [],
+  "console": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    }
+  ],
+  "cancellations": [
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "reason": "net::ERR_ABORTED"
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "responses": [
+    {
+      "url": "/",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/site.webmanifest",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/main-DZHBLSJC.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-CUQUZATG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-JQMTRFRE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-24UQPBWF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-X7IZGSWO.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-A4TJQZIG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-IB37IMP3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-D2KV35WV.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NLEOJWZ5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WDUIWBMQ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DSM7NIIX.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-UODF6TOV.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-UE27LXWI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-USRBJPWD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-GH6GYLYD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-7YG3KK4I.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HFMRDMX2.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-5QEWPYE5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-AOLVD6ML.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-SGIC5UFY.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NJMYOOR4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-LLJS5LK3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WOGSRTU4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NEYTPK6S.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-PWEG5G6R.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-37BPXA2I.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-QZMNBPVI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-3HW3O2NK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-V6QGKYLD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-GM56Y5F5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-RTIOVRNE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-R76VL2A4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-ROLBODPN.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-FYHCVUWI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HZ3NHBKU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XQIWYZJE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WSCWBSVK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XESGJUOX.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-EKJROJ6S.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HSLWS6VP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-7XOK2PVK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-F6KIKAMF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DBIN5AFJ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-en-ZUXBAKKP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/RefreshToken",
+      "status": 401,
+      "expectedAnonymousRefresh": true
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/android-chrome-192x192.png",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-SignIn-QPH4CQAY.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-ADUUL3KN.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-I4NZJ3L3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-5X7IPTDK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-SignUp-SO2O5SJ2.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/CreateUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/SignIn",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/GetCurrentUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/api/v1/sse",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-Home-J522TIM5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WIPO5LXD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-OFJINNSU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XSYAF4NG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-RC3UE7PJ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-CAXDQVR5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-IDELQY73.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NN2CIVJM.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DAZNCVZM.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-VAAZ5FO3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-FS6QLJK3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WNHIZCVB.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListMemoViews",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserNotifications",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.SpaceService/ListSpaces",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/full-logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/CreateMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-MemoEditor-WIOA4I62.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/GetMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/UpdateMemo",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/site.webmanifest",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/main-DZHBLSJC.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-CUQUZATG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-JQMTRFRE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-24UQPBWF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-X7IZGSWO.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-A4TJQZIG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-IB37IMP3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-D2KV35WV.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DSM7NIIX.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NLEOJWZ5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WDUIWBMQ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-UE27LXWI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-UODF6TOV.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-USRBJPWD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-7YG3KK4I.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-AOLVD6ML.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-LLJS5LK3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-GH6GYLYD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HFMRDMX2.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-5QEWPYE5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-SGIC5UFY.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NJMYOOR4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NEYTPK6S.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WOGSRTU4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-PWEG5G6R.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-37BPXA2I.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WSCWBSVK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-3HW3O2NK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-V6QGKYLD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XESGJUOX.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-QZMNBPVI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-RTIOVRNE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-ROLBODPN.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-GM56Y5F5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-R76VL2A4.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XQIWYZJE.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-EKJROJ6S.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HZ3NHBKU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-F6KIKAMF.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-FYHCVUWI.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-7XOK2PVK.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-HSLWS6VP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DBIN5AFJ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-en-ZUXBAKKP.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.AuthService/GetCurrentUser",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/android-chrome-192x192.png",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/BatchGetInstanceSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserSettings",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-Home-J522TIM5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WIPO5LXD.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-XSYAF4NG.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-OFJINNSU.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-RC3UE7PJ.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-DAZNCVZM.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-CAXDQVR5.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-IDELQY73.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-NN2CIVJM.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-VAAZ5FO3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-FS6QLJK3.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/assets/chunk-chunk-WNHIZCVB.js",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListMemoViews",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/full-logo.webp",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.InstanceService/GetInstanceSetting",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/GetUserStats",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.UserService/ListUserNotifications",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.SpaceService/ListSpaces",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/memos.api.v1.MemoService/ListMemos",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    },
+    {
+      "url": "/api/v1/sse",
+      "status": 200,
+      "expectedAnonymousRefresh": false
+    }
+  ],
+  "source": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "binarySha256": "9432c3baf9982fc5ca4caa6115a3670760fd7226d90b628cdc147ecad6c81b21",
+  "frontend": {
+    "kind": "five-tool-adapter",
+    "dist": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/dist",
+    "publicationEligible": false
+  },
+  "browserVersion": "Chrome/153.0.8010.52",
+  "sourceAfter": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "backendExitCode": 0,
+  "backendSignal": null,
+  "databaseFiles": [
+    {
+      "name": "memos_prod.db",
+      "sha256": "567345e7ca5500da9b4a64c048f9e2a7479eccb93bc0fdd9efd849921d36143c"
+    }
+  ]
+}

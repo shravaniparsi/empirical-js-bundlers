@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-correctness-control",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M3",
+  "workload": "xs-50",
+  "tool": "webpack",
+  "node": "v24.14.0",
+  "target": "src/App.tsx",
+  "editMode": "append",
+  "targetSha256Before": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "lockSha256": "6ca1de624ed34f35a4a6506d393a8c6d8a813309bb987069b9cbd08a0df0f607",
+  "command": [
+    "webpack",
+    "--watch",
+    "--config",
+    "webpack.config.cjs"
+  ],
+  "correctnessOnly": true,
+  "untimedWarmupUpdates": 1,
+  "measuredUpdatesPlanned": 5,
+  "workspaceSealVerified": null,
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "oneWarmupAndFiveMeasuredCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 0,
+      "phase": "warmup",
+      "marker": "confirmatory_m3_warmup_webpack_0",
+      "diagnosticDurationMs": 214.405834,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 133 ms"
+    },
+    {
+      "edit": 1,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_webpack_1",
+      "diagnosticDurationMs": 213.923125,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 123 ms"
+    },
+    {
+      "edit": 2,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_webpack_2",
+      "diagnosticDurationMs": 115.011417,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 66 ms"
+    },
+    {
+      "edit": 3,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_webpack_3",
+      "diagnosticDurationMs": 109.216416,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 78 ms"
+    },
+    {
+      "edit": 4,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_webpack_4",
+      "diagnosticDurationMs": 161.4255,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 116 ms"
+    },
+    {
+      "edit": 5,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_webpack_5",
+      "diagnosticDurationMs": 126.435292,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "webpack 5.111.1 compiled successfully in 81 ms"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "files": [
+    {
+      "path": "watch.log",
+      "bytes": 7256,
+      "sha256": "93510cb1e6e11abd11231a53a9b3a792715bf0e87e117868770cd535196c7f89"
+    }
+  ]
+}

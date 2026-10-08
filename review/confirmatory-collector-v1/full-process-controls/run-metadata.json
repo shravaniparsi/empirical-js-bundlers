@@ -1,0 +1,9 @@
+{
+  "databaseId": 36830947918,
+  "name": "Confirmatory collector negative controls",
+  "status": "completed",
+  "conclusion": "success",
+  "headSha": "1818750bd6a65a4a952b8098f50dde8042523e38",
+  "url": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36830947918",
+  "jobs": 1
+}

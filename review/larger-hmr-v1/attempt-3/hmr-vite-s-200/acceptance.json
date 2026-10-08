@@ -1,0 +1,73 @@
+{
+  "kind": "real-component-hmr-correctness-not-latency-data",
+  "tool": "vite",
+  "workspace": "/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/s-200-corrected-hmr-expanded-v1/vite",
+  "publicationEligible": false,
+  "heading": "TaskBoard",
+  "passed": true,
+  "edits": [
+    {
+      "edit": 1,
+      "text": "TaskBoard edit 1",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true
+    },
+    {
+      "edit": 2,
+      "text": "TaskBoard edit 2",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true
+    },
+    {
+      "edit": 3,
+      "text": "TaskBoard edit 3",
+      "statePreserved": true,
+      "documentPreserved": true,
+      "navigations": 0,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "originalSourceSha256": "b45d429264fea1d53fe1ccef65a813547fca81f610abf6dc5b9a1b2598fbff80",
+  "fixture": {
+    "generatorVersion": "submission-v2-bounded-graph",
+    "reachableComponents": 190,
+    "expandedRenderUpperBound": 254,
+    "maxImportDepth": 3,
+    "generatedAt": "2026-09-25T03:55:38.965Z",
+    "seed": 42,
+    "size": 200,
+    "tier": "s",
+    "components": 200,
+    "deadModules": 10,
+    "routeEntries": 4,
+    "totalImportEdges": 244,
+    "totalSourceLines": 32065,
+    "featureFolders": 10,
+    "categoryDistribution": {
+      "navigation": 22,
+      "chart-viz": 15,
+      "data-display": 51,
+      "form-control": 34,
+      "feedback": 23,
+      "data-fetching": 16,
+      "layout": 31,
+      "utility": 8
+    }
+  },
+  "lockSha256": "fb7f9cad8e309d34241086e66754dec4cc6b2856ad85ba21c123ef79cb764474",
+  "browserVersion": "Chrome/153.0.8010.52",
+  "stateRoute": "/",
+  "stateControl": {
+    "tag": "INPUT",
+    "type": "email",
+    "name": "AuthTextArea"
+  },
+  "reloadControlDetected": true,
+  "sourceRestored": true,
+  "serverStopped": true
+}

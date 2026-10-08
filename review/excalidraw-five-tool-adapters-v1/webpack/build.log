@@ -1,0 +1,92 @@
+[BABEL] Note: The code generator has deoptimised the styling of /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/packages/excalidraw/subset/woff2/woff2-wasm.ts as it exceeds the max of 500KB.
+[BABEL] Note: The code generator has deoptimised the styling of /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/packages/excalidraw/subset/harfbuzz/harfbuzz-wasm.ts as it exceeds the max of 500KB.
+assets by path assets/*.woff2 12.5 MiB
+  assets by chunk 12.4 MiB (auxiliary name: main) 230 assets
+  asset assets/Assistant-Bold.14280543.woff2 19.9 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Bold.woff2]
+  asset assets/Assistant-Medium.0196e013.woff2 19.8 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Medium.woff2]
+  asset assets/Assistant-Regular.667df7ca.woff2 19.8 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Regular.woff2]
+  asset assets/Assistant-SemiBold.590ad9e4.woff2 19.7 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-SemiBold.woff2]
+assets by path assets/*.js 8.39 MiB
+  assets by chunk 3.75 MiB (id hint: vendors)
+    assets by status 2.67 MiB [big]
+      asset assets/3488.49da0fda.js 1.4 MiB [emitted] [immutable] [minimized] [big] (id hint: vendors) 1 related asset
+      + 4 assets
+    + 26 assets
+  + 79 assets
+asset assets/main.750b7e7e.css 190 KiB [emitted] [immutable] [minimized] (name: main) 1 related asset
+asset index.html 585 bytes [emitted]
+Entrypoint main [big] 2.93 MiB (24.4 MiB) = assets/3488.49da0fda.js 1.4 MiB assets/main.750b7e7e.css 190 KiB assets/main.ed3462fd.js 1.34 MiB 233 auxiliary assets
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 82:19-41
+Critical dependency: the request of a dependency is an expression
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 10:0-40 34:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 11:0-45 47:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 2:0-70 44:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 11:0-58 248:18-36
+ @ ./packages/excalidraw/index.tsx
+ @ ./excalidraw-app/App.tsx 1:0-197 185:18-35 208:24-40 217:26-44 394:29-60 412:27-52 518:29-54 682:33-43 737:32-56 779:28-44 925:34-55
+ @ ./excalidraw-app/index.tsx 5:0-34 12:30-43
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 85:21-45
+Critical dependency: the request of a dependency is an expression
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts 10:0-40 34:6-14
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts 11:0-45 47:12-21
+ @ ./packages/excalidraw/subset/subset-main.ts
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts 2:0-70 44:29-58
+ @ ./packages/excalidraw/fonts/Fonts.ts 11:0-58 248:18-36
+ @ ./packages/excalidraw/index.tsx
+ @ ./excalidraw-app/App.tsx 1:0-197 185:18-35 208:24-40 217:26-44 394:29-60 412:27-52 518:29-54 682:33-43 737:32-56 779:28-44 925:34-55
+ @ ./excalidraw-app/index.tsx 5:0-34 12:30-43
+
+WARNING in ./excalidraw-app/collab/CollabError.scss (./excalidraw-app/collab/CollabError.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+Module Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+ @ ./excalidraw-app/collab/CollabError.scss
+ @ ./excalidraw-app/collab/CollabError.tsx 6:0-28
+ @ ./excalidraw-app/App.tsx 39:0-77 241:35-59 735:55-66
+ @ ./excalidraw-app/index.tsx 5:0-34 12:30-43
+
+WARNING in ./excalidraw-app/index.scss (./excalidraw-app/index.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+Module Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/index.scss 1:9  root stylesheet
+ @ ./excalidraw-app/index.scss
+ @ ./excalidraw-app/App.tsx 47:0-22
+ @ ./excalidraw-app/index.tsx 5:0-34 12:30-43
+
+WARNING in ./excalidraw-app/share/ShareDialog.scss (./excalidraw-app/share/ShareDialog.scss.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+Module Warning (from ./node_modules/sass-loader/dist/cjs/index.js):
+Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+0 | @import "../../packages/excalidraw/css/variables.module.scss";
+
+
+excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+ @ ./excalidraw-app/share/ShareDialog.scss
+ @ ./excalidraw-app/share/ShareDialog.tsx 14:0-28
+ @ ./excalidraw-app/App.tsx 38:0-72 236:42-62 791:28-39
+ @ ./excalidraw-app/index.tsx 5:0-34 12:30-43
+
+2 warnings have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.
+
+webpack 5.111.1 compiled with 5 warnings in 25271 ms

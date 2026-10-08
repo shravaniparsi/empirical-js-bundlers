@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-correctness-control",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "metric": "M3",
+  "workload": "xs-50",
+  "tool": "rspack",
+  "node": "v24.14.0",
+  "target": "src/App.tsx",
+  "editMode": "append",
+  "targetSha256Before": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "lockSha256": "4084e5ecb4a8a72c820e6e4f21afd9b853c3368ae9590f9c8a6f8291281479f7",
+  "command": [
+    "rspack",
+    "build",
+    "--watch",
+    "--config",
+    "rspack.config.cjs"
+  ],
+  "correctnessOnly": true,
+  "untimedWarmupUpdates": 1,
+  "measuredUpdatesPlanned": 5,
+  "workspaceSealVerified": null,
+  "checks": {
+    "initialBuildSucceeded": true,
+    "initialOutputExists": true,
+    "oneWarmupAndFiveMeasuredCycles": true,
+    "sourceRestored": true,
+    "processTreeStopped": true
+  },
+  "edits": [
+    {
+      "edit": 0,
+      "phase": "warmup",
+      "marker": "confirmatory_m3_warmup_rspack_0",
+      "diagnosticDurationMs": 33.777208,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 13 ms"
+    },
+    {
+      "edit": 1,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_rspack_1",
+      "diagnosticDurationMs": 34.95475,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 12 ms"
+    },
+    {
+      "edit": 2,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_rspack_2",
+      "diagnosticDurationMs": 31.606875,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 13 ms"
+    },
+    {
+      "edit": 3,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_rspack_3",
+      "diagnosticDurationMs": 37.643333,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 15 ms"
+    },
+    {
+      "edit": 4,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_rspack_4",
+      "diagnosticDurationMs": 41.055875,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 17 ms"
+    },
+    {
+      "edit": 5,
+      "phase": "measured",
+      "marker": "confirmatory_m3_measured_rspack_5",
+      "diagnosticDurationMs": 38.640291,
+      "postEditSuccess": true,
+      "markerObserved": true,
+      "sourceRestorationRebuilt": true,
+      "staleSuccessesIgnored": 0,
+      "completionLine": "Rspack compiled successfully in 15 ms"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetSha256After": "bcc01963787b1b0ab74b5bc91d4752b011d9e7b40638dff3710fdd93a4a584fb",
+  "files": [
+    {
+      "path": "watch.log",
+      "bytes": 494,
+      "sha256": "56aa7f1c0a8fed6ddd708520a452bceae236a1ef85f2a9c9735f45cfac4a479b"
+    }
+  ]
+}

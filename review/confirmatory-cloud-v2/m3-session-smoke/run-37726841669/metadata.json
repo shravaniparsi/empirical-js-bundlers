@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-m3-session-smoke-evidence",
+  "protocol": "confirmatory-v2-cloud-m1",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "workflowRunId": "37726841669",
+  "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/37726841669",
+  "repositoryCommit": "305418f8feb7b44f5be96fe056a74b2d3bb3caab",
+  "runnerFamily": "macos-15",
+  "result": "five of five smoke cells passed",
+  "scope": "Correctness control only; diagnostic durations are forbidden from primary analysis."
+}

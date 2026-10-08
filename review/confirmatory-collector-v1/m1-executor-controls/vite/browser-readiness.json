@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "httpReady": true,
+  "applicationReady": true,
+  "route": "/",
+  "selector": "h1",
+  "pageErrors": []
+}

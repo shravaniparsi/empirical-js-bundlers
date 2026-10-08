@@ -1,0 +1,48 @@
+
+> benchmark-production-v1-synthetic-webpack@1.0.0 build
+> NODE_ENV=production webpack --mode production --config webpack.config.cjs
+
+assets by path [1m[32m*.js[39m[22m 1.58 MiB
+  asset [1m[33m533.b8fff83d2c82d4e40be6.js[39m[22m [1m[33m753 KiB[39m[22m [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m [1m[33m[big][39m[22m (id hint: vendors) 2 related assets
+  asset [1m[32mmain.6afff1667fc01598dee9.js[39m[22m 177 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m (name: main) 1 related asset
+  asset [1m[32m548.9e92a0b95d9e31c26e0f.js[39m[22m 61.1 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  asset [1m[32m55.24fd684ae0bfd8a3fc00.js[39m[22m 60.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  asset [1m[32m871.33d458427a27ef2f6de2.js[39m[22m 60.4 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  + 9 assets
+assets by path [1m[32m*.css[39m[22m 526 KiB
+  asset [1m[32mmain.51e215b7cfbc0fdbcc94.css[39m[22m 104 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m (name: main) 1 related asset
+  asset [1m[32m641.b90eeeb7800401cd5df4.css[39m[22m 37.3 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  asset [1m[32m55.f49db43668c3a885f6a7.css[39m[22m 36.8 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  asset [1m[32m548.8379d5c5b6b28e2ade6f.css[39m[22m 36.5 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  asset [1m[32m347.9c12e29317afad4b93d6.css[39m[22m 36.1 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[minimized][39m[22m 1 related asset
+  + 8 assets
+asset [1m[32mindex.html[39m[22m 408 bytes [1m[32m[emitted][39m[22m
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m 1.01 MiB (4.34 MiB) = [1m[32m533.b8fff83d2c82d4e40be6.js[39m[22m 753 KiB [1m[32mmain.51e215b7cfbc0fdbcc94.css[39m[22m 104 KiB [1m[32mmain.6afff1667fc01598dee9.js[39m[22m 177 KiB 3 auxiliary assets
+orphan modules 5.42 MiB (javascript) 377 KiB (runtime) [1m[33m[orphan][39m[22m 3746 modules
+runtime modules 13.1 KiB 16 modules
+cacheable modules 632 KiB (css/mini-extract) 4.62 MiB (javascript)
+  modules by path [1m./src/[39m[22m 632 KiB (css/mini-extract) 2.3 MiB (javascript)
+    css modules 632 KiB 449 modules
+    javascript modules 2.3 MiB 27 modules
+  modules by path [1m./node_modules/[39m[22m 2.32 MiB 270 modules
+
+[1m[33mWARNING[39m[22m in [1masset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  533.b8fff83d2c82d4e40be6.js (753 KiB)
+    Largest modules: ./node_modules/react-dom/cjs/react-dom-client.production.js (611 KiB), ./node_modules/react-router/dist/development/chunk-UVKPFVEO.mjs (352 KiB), ./node_modules/recharts/es6/chart/generateCategoricalChart.js + 16 modules (180 KiB)[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mentrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (1.01 MiB)
+      533.b8fff83d2c82d4e40be6.js
+      main.51e215b7cfbc0fdbcc94.css
+      main.6afff1667fc01598dee9.js
+[39m[22m
+
+[1m[33mWARNING[39m[22m in [1mwebpack performance recommendations: 
+The runtime is part of the initial chunk of main. It describes every other chunk, so a change anywhere in the build rewrites these assets and clients download them again.
+Set 'optimization.runtimeChunk' to emit the runtime as its own chunk.
+For more info visit https://webpack.js.org/configuration/optimization/#optimizationruntimechunk[39m[22m
+
+webpack 5.111.1 compiled with [1m[33m3 warnings[39m[22m in 12775 ms

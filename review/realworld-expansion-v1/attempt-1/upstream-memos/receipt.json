@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "memos",
+  "purpose": "Upstream feasibility only; not comparative timing",
+  "publicationEligible": false,
+  "node": "v24.14.0",
+  "platform": "linux",
+  "architecture": "x64",
+  "startedAt": "2026-09-25T03:29:24.355Z",
+  "steps": [
+    {
+      "name": "package-manager",
+      "args": [
+        "pnpm",
+        "--version"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-09-25T03:29:24.412Z",
+      "endedAt": "2026-09-25T03:29:24.909Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "3d3aad929a4646e7d6fecbd0aec700f5c09276ee9764c63d805cd4cb7ae11e37"
+    },
+    {
+      "name": "install",
+      "args": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-09-25T03:29:24.922Z",
+      "endedAt": "2026-09-25T03:29:28.872Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "3c8de6a4ecd9a03dcf502cb466749568ee0861f662ab841ecfab23e5caed79aa"
+    },
+    {
+      "name": "build",
+      "args": [
+        "pnpm",
+        "build"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-09-25T03:29:28.912Z",
+      "endedAt": "2026-09-25T03:29:44.146Z",
+      "exitCode": 0,
+      "signal": null,
+      "logSha256": "d710a52394e9f6d621ed45cfb9d93651968263203dad321ccf60e9728833ffb9"
+    }
+  ],
+  "status": "build-passed-browser-not-validated",
+  "before": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "afterInstall": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "afterBuild": {
+    "id": "memos",
+    "commit": "05a2c6db7a3e926c9142a635f42f7af0f078c81d",
+    "filesVerified": 1307,
+    "inventorySha256": "ee000791a3c7735ed0065006d32851eb3dfe4b42afc3bfb1053895b95f6dc14a",
+    "publicationEligible": false
+  },
+  "outputFiles": 297,
+  "finishedAt": "2026-09-25T03:29:44.214Z"
+}

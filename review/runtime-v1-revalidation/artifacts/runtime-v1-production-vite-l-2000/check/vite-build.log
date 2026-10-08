@@ -1,0 +1,77 @@
+
+> benchmark-production-v1-synthetic-vite@1.0.0 build
+> vite build
+
+[36mvite v8.3.0 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 5256 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                       0.50 kB │ gzip:   0.32 kB
+dist/assets/ShippingToggle-BTwB1G2I.css               1.07 kB │ gzip:   0.51 kB
+dist/assets/UsersHeatmap-BWUT5dEX.css                 1.14 kB │ gzip:   0.52 kB
+dist/assets/OrdersAvatar-DkK5A_mE.css                 1.59 kB │ gzip:   0.59 kB
+dist/assets/AuthNavBar-C2Hu4Yrx.css                   1.66 kB │ gzip:   0.67 kB
+dist/assets/CatalogHeader1-Di_aFDYt.css               2.78 kB │ gzip:   0.91 kB
+dist/assets/AdminSummary-Obslb5eN.css                 9.59 kB │ gzip:   2.58 kB
+dist/assets/AnalyticsAvatar-C4_ixqnp.css              9.59 kB │ gzip:   2.60 kB
+dist/assets/ApiKeysTreeView-CTb3RFDo.css              9.59 kB │ gzip:   2.59 kB
+dist/assets/AuditList-5pSS-WFD.css                    9.59 kB │ gzip:   2.59 kB
+dist/assets/AuthStepper-pZjXABZF.css                  9.59 kB │ gzip:   2.59 kB
+dist/assets/CatalogGrid-BGubZWfW.css                  9.59 kB │ gzip:   2.59 kB
+dist/assets/DocumentsPieChart-DGpXiblE.css            9.59 kB │ gzip:   2.59 kB
+dist/assets/IntegrationsPagination-17ydNREt.css       9.59 kB │ gzip:   2.59 kB
+dist/assets/InventorySlider-C2X_daeD.css              9.59 kB │ gzip:   2.59 kB
+dist/assets/OrdersResponsive-CxhDfkgx.css             9.59 kB │ gzip:   2.59 kB
+dist/assets/PaymentsTabs-LAx0DS90.css                 9.59 kB │ gzip:   2.60 kB
+dist/assets/ProfileRangeSlider-D-dXDvX7.css           9.59 kB │ gzip:   2.58 kB
+dist/assets/ReportsPolling-3D18UAkV.css               9.59 kB │ gzip:   2.60 kB
+dist/assets/ReviewsAccordion-waHna1OU.css             9.59 kB │ gzip:   2.60 kB
+dist/assets/SettingsTimeline-Dnvh1PIf.css             9.59 kB │ gzip:   2.59 kB
+dist/assets/ShippingBanner-CfN4MKJJ.css               9.59 kB │ gzip:   2.60 kB
+dist/assets/TagsAutocomplete-C5obXvrt.css             9.59 kB │ gzip:   2.60 kB
+dist/assets/ThemesScore-B1jDHxaD.css                  9.59 kB │ gzip:   2.61 kB
+dist/assets/UsersPagination-C4cdTcV5.css              9.59 kB │ gzip:   2.58 kB
+dist/assets/WebhooksRadio-BEmvuLAK.css                9.59 kB │ gzip:   2.58 kB
+dist/assets/index-CVnaFy26.css                       10.30 kB │ gzip:   2.78 kB
+dist/assets/InventoryProvider-CZqQycBr.js             0.82 kB │ gzip:   0.44 kB │ map:     3.85 kB
+dist/assets/ShippingToggle-c7rXGH0n.js                1.84 kB │ gzip:   0.94 kB │ map:     7.66 kB
+dist/assets/DocumentsBadge1-CgYYm9kM.js               1.91 kB │ gzip:   0.88 kB │ map:     6.82 kB
+dist/assets/IntegrationsScore-HBxiGeXS.js             1.93 kB │ gzip:   0.88 kB │ map:     6.92 kB
+dist/assets/CatalogTimeline1-Cm87K9Tq.js              1.93 kB │ gzip:   0.88 kB │ map:     6.85 kB
+dist/assets/AuthNavBar-Ku9pK08i.js                    2.21 kB │ gzip:   1.04 kB │ map:     7.87 kB
+dist/assets/ReportsPreview-DIOerOBo.js                2.35 kB │ gzip:   0.94 kB │ map:     7.99 kB
+dist/assets/ReportsRank-BodL2THA.js                   2.70 kB │ gzip:   0.96 kB │ map:     8.86 kB
+dist/assets/UsersHeatmap-BRMGTnkO.js                  2.73 kB │ gzip:   1.19 kB │ map:     8.33 kB
+dist/assets/TagsDetail-CX68zdx3.js                    2.73 kB │ gzip:   0.98 kB │ map:     8.88 kB
+dist/assets/OrdersAvatar-aY7WHl8t.js                  2.93 kB │ gzip:   1.00 kB │ map:     9.40 kB
+dist/assets/CatalogHeader1-ChKsPgS_.js                3.32 kB │ gzip:   1.37 kB │ map:    10.73 kB
+dist/assets/ThemesScore-C49fqXNl.js                 102.73 kB │ gzip:  12.60 kB │ map:   373.06 kB
+dist/assets/UsersPagination-B-K7JyLo.js             117.58 kB │ gzip:  13.17 kB │ map:   425.84 kB
+dist/assets/OrdersResponsive-C2medytd.js            119.85 kB │ gzip:  14.98 kB │ map:   419.56 kB
+dist/assets/IntegrationsPagination-BlUN9CTe.js      120.65 kB │ gzip:  14.69 kB │ map:   435.45 kB
+dist/assets/InventorySlider-BJBq0qR4.js             122.50 kB │ gzip:  13.36 kB │ map:   443.14 kB
+dist/assets/ApiKeysTreeView-DEqHMDcU.js             124.34 kB │ gzip:  14.62 kB │ map:   447.89 kB
+dist/assets/ShippingBanner-BDCowd5v.js              125.17 kB │ gzip:  14.15 kB │ map:   441.14 kB
+dist/assets/TagsAutocomplete-B44AQiBV.js            125.24 kB │ gzip:  15.09 kB │ map:   445.43 kB
+dist/assets/ProfileRangeSlider-DzpDFrxl.js          126.91 kB │ gzip:  15.61 kB │ map:   456.46 kB
+dist/assets/ReviewsAccordion-C-MF_Muu.js            127.10 kB │ gzip:  14.98 kB │ map:   463.94 kB
+dist/assets/PaymentsTabs-DWQejoea.js                127.66 kB │ gzip:  16.58 kB │ map:   462.59 kB
+dist/assets/AnalyticsAvatar-CkSM-yRa.js             128.35 kB │ gzip:  14.81 kB │ map:   470.92 kB
+dist/assets/DocumentsPieChart-CXSq_Lrr.js           130.07 kB │ gzip:  15.31 kB │ map:   466.75 kB
+dist/assets/SettingsTimeline-B1w4gBVA.js            130.69 kB │ gzip:  17.88 kB │ map:   470.58 kB
+dist/assets/AdminSummary-BV_1_wO9.js                131.24 kB │ gzip:  15.39 kB │ map:   475.21 kB
+dist/assets/WebhooksRadio-DxX-QPFs.js               132.77 kB │ gzip:  15.82 kB │ map:   479.72 kB
+dist/assets/AuthStepper-D1RELuwX.js                 133.04 kB │ gzip:  15.72 kB │ map:   478.17 kB
+dist/assets/CatalogGrid-Ll3G59Q_.js                 133.42 kB │ gzip:  16.66 kB │ map:   469.33 kB
+dist/assets/ReportsPolling-B1hvixa6.js              136.18 kB │ gzip:  16.73 kB │ map:   479.72 kB
+dist/assets/AuditList-uhkOqXbn.js                   136.22 kB │ gzip:  15.62 kB │ map:   488.79 kB
+dist/assets/generateCategoricalChart-CDUenrjF.js    465.43 kB │ gzip: 123.39 kB │ map: 2,140.91 kB
+dist/assets/index-3VdiR9jf.js                     1,615.21 kB │ gzip: 230.51 kB │ map: 5,109.28 kB
+
+[33m[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32m✓ built in 5.36s[39m

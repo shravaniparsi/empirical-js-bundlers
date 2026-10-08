@@ -1,0 +1,93 @@
+
+> benchmark-production-v1-synthetic-webpack@1.0.0 dev
+> webpack serve --mode development --config webpack.config.cjs --host 127.0.0.1 --port 42829
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: [36mhttp://127.0.0.1:42829/[39m
+<i> [webpack-dev-server] Content not from webpack is served from '[36m/home/runner/work/empirical-js-bundlers/empirical-js-bundlers/.submission-pilot/xl-5000-corrected-hmr-expanded-v1/webpack/public[39m' directory
+<i> [webpack-dev-server] 404s will fallback to '[36m/index.html[39m'
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+<i> [webpack-dev-middleware] wait until bundle finished: /
+assets by chunk 3.87 MiB (id hint: vendors)
+  asset [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-cd83a9.js[39m[22m 1.91 MiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+  asset [1m[32mvendors-node_modules_recharts_es6_cartesian_CartesianGrid_js-node_modules_recharts_es6_cartes-6d8993.js[39m[22m 1.83 MiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+  asset [1m[32mvendors-node_modules_recharts_es6_chart_PieChart_js.js[39m[22m 73.1 KiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+  asset [1m[32mvendors-node_modules_recharts_es6_chart_AreaChart_js.js[39m[22m 32.5 KiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+  asset [1m[32mvendors-node_modules_recharts_es6_chart_LineChart_js.js[39m[22m 30.4 KiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
++ 174 assets
+Entrypoint [1mmain[39m[22m 2.17 MiB (2.29 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-cd83a9.js[39m[22m 1.91 MiB [1m[32mmain.js[39m[22m 268 KiB 2 auxiliary assets
+orphan modules 630 KiB [1m[33m[orphan][39m[22m 301 modules
+runtime modules 34.9 KiB 19 modules
+modules by path [1m./src/features/[39m[22m 83.3 MiB 13758 modules
+modules by path [1m./node_modules/[39m[22m 3.25 MiB 679 modules
+modules by path [1m./src/*.tsx[39m[22m 135 KiB
+  [1m./src/main.tsx[39m[22m 2.1 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./src/App.tsx[39m[22m 133 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+modules by path [1m./src/*.css[39m[22m 4.91 KiB
+  [1m./src/App.css[39m[22m 2.22 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  ./node_modules/css-loader/dist/cjs.js![1m./src/App.css[39m[22m 2.69 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 43062 ms
+assets by status 142 MiB [1m[32m[cached][39m[22m 177 assets
+assets by path [1m[32m.[39m[22m 468 KiB
+  assets by path [1m[32m*.js[39m[22m 467 KiB
+    asset [1m[32mmain.js[39m[22m 268 KiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.6ee6c66f3dc1ff778f8a.hot-update.js[39m[22m 199 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 433 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.6ee6c66f3dc1ff778f8a.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 2.37 MiB (2.32 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-cd83a9.js[39m[22m 1.91 MiB [1m[32mmain.js[39m[22m 268 KiB [1m[32mmain.6ee6c66f3dc1ff778f8a.hot-update.js[39m[22m 199 KiB 3 auxiliary assets
+cached modules 87.2 MiB [1m[32m[cached][39m[22m 14741 modules
+runtime modules 34.9 KiB 19 modules
+[1m./src/App.tsx[39m[22m 133 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 4060 ms
+assets by status 142 MiB [1m[32m[cached][39m[22m 177 assets
+assets by path [1m[32m.[39m[22m 468 KiB
+  assets by path [1m[32m*.js[39m[22m 467 KiB
+    asset [1m[32mmain.js[39m[22m 268 KiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.d99b6b4c8075e2744141.hot-update.js[39m[22m 199 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 433 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.d99b6b4c8075e2744141.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 2.37 MiB (2.32 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-cd83a9.js[39m[22m 1.91 MiB [1m[32mmain.js[39m[22m 268 KiB [1m[32mmain.d99b6b4c8075e2744141.hot-update.js[39m[22m 199 KiB 3 auxiliary assets
+cached modules 87.2 MiB [1m[32m[cached][39m[22m 14741 modules
+runtime modules 34.9 KiB 19 modules
+[1m./src/App.tsx[39m[22m 133 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 3551 ms
+assets by status 142 MiB [1m[32m[cached][39m[22m 177 assets
+assets by path [1m[32m.[39m[22m 468 KiB
+  assets by path [1m[32m*.js[39m[22m 467 KiB
+    asset [1m[32mmain.js[39m[22m 268 KiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+    asset [1m[32mmain.ea97590b34ae250ff5c0.hot-update.js[39m[22m 199 KiB [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m (name: main) 1 related asset
+  asset [1m[32mindex.html[39m[22m 433 bytes [1m[32m[emitted][39m[22m
+  asset [1m[32mmain.ea97590b34ae250ff5c0.hot-update.json[39m[22m 28 bytes [1m[32m[emitted][39m[22m [1m[32m[immutable][39m[22m [1m[32m[hmr][39m[22m
+Entrypoint [1mmain[39m[22m 2.37 MiB (2.32 MiB) = [1m[32mvendors-node_modules_pmmmwh_react-refresh-webpack-plugin_lib_runtime_RefreshUtils_js-node_mod-cd83a9.js[39m[22m 1.91 MiB [1m[32mmain.js[39m[22m 268 KiB [1m[32mmain.ea97590b34ae250ff5c0.hot-update.js[39m[22m 199 KiB 3 auxiliary assets
+cached modules 87.2 MiB [1m[32m[cached][39m[22m 14741 modules
+runtime modules 34.9 KiB 19 modules
+[1m./src/App.tsx[39m[22m 133 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.111.1 compiled [1m[32msuccessfully[39m[22m in 3471 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...

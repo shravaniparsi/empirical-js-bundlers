@@ -1,0 +1,10 @@
+{
+  "kind": "memos-five-tool-adapter-profile-audit",
+  "passed": true,
+  "publicationEligible": false,
+  "applicationDependencies": 59,
+  "toolDependencies": 36,
+  "lockfileVersion": 3,
+  "lockfileSha256": "216d39db228d71434cb3dc9815922c2c18336de4283eca74f9cd9678044fbbb4",
+  "errors": []
+}

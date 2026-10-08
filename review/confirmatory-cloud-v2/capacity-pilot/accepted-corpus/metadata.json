@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-capacity-pilot-corpus",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "validated": true,
+  "target": {
+    "runnerLabel": "macos-14",
+    "imageOS": "macos14",
+    "imageVersion": "20260831.0302.1",
+    "architecture": "arm64",
+    "node": "v24.14.0",
+    "macos": "14.8.9 (23J631)",
+    "chrome": "Chrome/154.0.8037.57"
+  },
+  "components": [
+    {
+      "workload": "synthetic-xl",
+      "workflowRunId": "36951823345",
+      "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36951823345",
+      "repositoryCommit": "b3c990bce446455e6df110f55774098e4c171dd0",
+      "artifactId": "11204916643",
+      "artifactZipSha256": "41d4686b3927899a03d0a2e9f3464a83396e48f1cdf1dd131b42a21c298c4527",
+      "result": "passed"
+    },
+    {
+      "workload": "memos",
+      "workflowRunId": "36950096302",
+      "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36950096302",
+      "repositoryCommit": "9d59a22502369b645525a44d2d49ace8dd5e5baf",
+      "artifactId": "11203735936",
+      "artifactZipSha256": "556d850e36324240893471627112ba0cfa76f7ed25dd6d4cf1b90f9a89e0527c",
+      "result": "passed"
+    },
+    {
+      "workload": "excalidraw",
+      "workflowRunId": "36950096302",
+      "workflowUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/36950096302",
+      "repositoryCommit": "9d59a22502369b645525a44d2d49ace8dd5e5baf",
+      "artifactId": "11204305459",
+      "artifactZipSha256": "d908a2fdf7e0b716aae86cfcb9dab47153e6fe7f70680ec2d36469cc10f2e6e2",
+      "result": "passed"
+    }
+  ],
+  "scope": "Capacity and correctness only; no primary performance observations."
+}

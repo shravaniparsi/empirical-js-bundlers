@@ -38,16 +38,17 @@ const result = await esbuild.build({
   plugins: [cssModulesPlugin()],
 });
 
-// Copy index.html and inject script
+// Use metadata, not output ordering: lazy chunks are not HTML entry scripts.
 const html = fs.readFileSync('index.html', 'utf-8');
-const outputs = Object.keys(result.metafile.outputs);
-const entryJs = outputs.find(f => f.endsWith('.js') && !f.includes('chunk'));
-const injectedHtml = html.replace(
-  '<script type="module" src="/src/main.tsx"></script>',
-  `<script type="module" src="/${entryJs}"></script>`
-);
-fs.writeFileSync(path.join(outdir, 'index.html'), injectedHtml);
-
-// Report
-const analyzeText = await esbuild.analyzeMetafile(result.metafile);
-console.log(analyzeText);
+const entry = Object.entries(result.metafile.outputs).find(([, info]) =>
+  info.entryPoint === 'src/main.tsx');
+if (!entry) throw new Error('Missing main.tsx entry in esbuild output metadata');
+const [entryJs, info] = entry;
+const publicUrl = file => '/' + path.relative(outdir, file).split(path.sep).join('/');
+const marker = '<script type="module" src="/src/main.tsx"></script>';
+if (!html.includes(marker)) throw new Error('Missing source entry in HTML template');
+const tags = [
+  info.cssBundle ? `<link rel="stylesheet" href="${publicUrl(info.cssBundle)}">` : '',
+  `<script type="module" src="${publicUrl(entryJs)}"></script>`,
+].filter(Boolean).join('\n');
+fs.writeFileSync(path.join(outdir, 'index.html'), html.replace(marker, tags));

@@ -1,0 +1,59 @@
+
+> benchmark-realworld-v2-excalidraw@1.0.0 dev
+> node adapter-dev.mjs --host 127.0.0.1 --port 43335
+
+  ➜  Local:    http://127.0.0.1:43335/
+
+<i> [rspack-dev-middleware] wait until bundle finished: /
+<i> [rspack-dev-middleware] wait until bundle finished: /
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/collab/CollabError.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/collab/CollabError.scss)
+  [33m⚠[0m Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  [2m│[0m Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  [2m│[0m Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  [2m│[0m 
+  [2m│[0m More info and automated migrator: https://sass-lang.com/d/import
+  [2m│[0m 
+  [2m│[0m 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  [2m│[0m 
+  [2m│[0m 
+  [2m│[0m excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  [2m│[0m 
+[0m
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/index.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/index.scss)
+  [33m⚠[0m Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  [2m│[0m Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  [2m│[0m Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  [2m│[0m 
+  [2m│[0m More info and automated migrator: https://sass-lang.com/d/import
+  [2m│[0m 
+  [2m│[0m 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  [2m│[0m 
+  [2m│[0m 
+  [2m│[0m excalidraw-app/index.scss 1:9  root stylesheet
+  [2m│[0m 
+[0m
+
+[1m[33mWARNING[39m[22m in [1m./excalidraw-app/share/ShareDialog.scss[39m[22m (./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs/index.js!./excalidraw-app/share/ShareDialog.scss)
+  [33m⚠[0m Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  [2m│[0m Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  [2m│[0m Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  [2m│[0m 
+  [2m│[0m More info and automated migrator: https://sass-lang.com/d/import
+  [2m│[0m 
+  [2m│[0m 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  [2m│[0m 
+  [2m│[0m 
+  [2m│[0m excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  [2m│[0m 
+[0m
+
+Rspack compiled with [1m[33m3 warnings[39m[22m in 1.73 s
+<i> [rspack-dev-middleware] wait until bundle finished: /assets/Excalifont-Regular-a88b72a24fb54c9f94e3b5fdaa7481c9.80824133.woff2
+<i> [rspack-dev-middleware] wait until bundle finished: /favicon.ico
+Rspack compiled [1m[32msuccessfully[39m[22m in 127 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 40 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 63 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 48 ms
+Rspack compiled [1m[32msuccessfully[39m[22m in 52 ms
+<i> [rspack-dev-server] Gracefully shutting down. Press ^C again to force exit...

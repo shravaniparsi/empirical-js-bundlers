@@ -1,0 +1,106 @@
+assets by path assets/*.woff2 12.5 MiB
+  assets by chunk 12.4 MiB (auxiliary name: main) 230 assets
+  asset assets/Assistant-Bold.c8f39f24.woff2 19.9 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Bold.woff2]
+  asset assets/Assistant-Medium.1e75d8e6.woff2 19.8 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Medium.woff2]
+  asset assets/Assistant-Regular.7acbabb8.woff2 19.8 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-Regular.woff2]
+  asset assets/Assistant-SemiBold.167acbf8.woff2 19.7 KiB [emitted] [immutable] [from: packages/excalidraw/fonts/Assistant/Assistant-SemiBold.woff2]
+assets by path assets/*.js 8.44 MiB
+  assets by chunk 3.83 MiB (id hint: vendors)
+    asset assets/1598.1fd22562.js 1.5 MiB [emitted] [immutable] [big] (id hint: vendors)
+    asset assets/4950.11a71e39.js 419 KiB [emitted] [immutable] [big] (id hint: vendors)
+    asset assets/4936.87fefbef.js 322 KiB [emitted] [immutable] [big] (id hint: vendors)
+    + 29 assets
+  + 80 assets
+asset assets/main.b51f7487.css 218 KiB [emitted] [immutable] (name: main)
+asset index.html 586 bytes [emitted]
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+      
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts
+ @ ./packages/excalidraw/subset/subset-main.ts
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts
+ @ ./packages/excalidraw/fonts/Fonts.ts
+ @ ./packages/excalidraw/index.tsx
+ @ ./excalidraw-app/App.tsx
+ @ ./excalidraw-app/index.tsx
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts
+ @ ./packages/excalidraw/subset/subset-main.ts
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts
+ @ ./packages/excalidraw/fonts/Fonts.ts
+ @ ./packages/excalidraw/index.tsx
+ @ ./excalidraw-app/App.tsx
+ @ ./excalidraw-app/index.tsx
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+ @ ./packages/excalidraw/subset/woff2/woff2-loader.ts
+ @ ./packages/excalidraw/subset/subset-shared.chunk.ts
+ @ ./packages/excalidraw/subset/subset-main.ts
+ @ ./packages/excalidraw/fonts/ExcalidrawFontFace.ts
+ @ ./packages/excalidraw/fonts/Fonts.ts
+ @ ./packages/excalidraw/index.tsx
+ @ ./excalidraw-app/App.tsx
+ @ ./excalidraw-app/index.tsx
+
+Rspack 2.2.3 compiled with 6 warnings in 3.86 s

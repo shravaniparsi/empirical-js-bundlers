@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "protocol": "confirmatory-v1",
+  "frozenDate": "2026-09-30",
+  "publicationEligible": false,
+  "files": {
+    "protocols/confirmatory-v1/protocol.json": "31050f2145cd486928c1395b7b95645e86535c3c07a1a279ccd334988a6ce3b1",
+    "protocols/confirmatory-v1/schedule.json": "48c8b41ff7383dee808d4cae8a2412ee642980f9d47d31268544b6901d8c005c",
+    "protocols/confirmatory-v1/README.md": "8721c7407d76407210ea75172db164e7cba6bd344093d1c4cb4c0794af11b262",
+    "protocols/confirmatory-v1/analysis-plan.md": "be13f942cb236c596434550a95c8281b5be0fae299fa6e08520627dabc0fea32"
+  },
+  "note": "Any content change requires a new protocol version and a new freeze manifest before additional confirmatory measurements."
+}

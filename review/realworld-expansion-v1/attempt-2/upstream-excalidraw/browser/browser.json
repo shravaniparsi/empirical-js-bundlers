@@ -1,0 +1,30 @@
+{
+  "publicationEligible": false,
+  "purpose": "Upstream offline functional acceptance",
+  "passed": false,
+  "checks": {
+    "canvasVisible": true,
+    "drawRectangle": true,
+    "moveRectangle": true,
+    "reloadPersistence": true
+  },
+  "errors": [
+    "HTTP 404: /assets/Assistant-Regular.woff2",
+    "HTTP 404: /assets/Assistant-Bold.woff2",
+    "HTTP 404: /assets/Assistant-Medium.woff2",
+    "SVG download timed out"
+  ],
+  "externalRequests": [
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Excalifont/Excalifont-Regular-a88b72a24fb54c9f94e3b5fdaa7481c9.woff2",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Nunito/Nunito-Regular-XRXI3I6Li01BKofiOc5wtlZ2di8HDIkhdTQ3j6zbXWjgeg.woff2",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Assistant/Assistant-SemiBold.woff2",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/ComicShanns/ComicShanns-Regular-279a7b317d12eb88de06167bd672b4b4.woff2",
+    "https://scripts.simpleanalyticscdn.com/latest.js",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Assistant/Assistant-Regular.woff2",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Assistant/Assistant-Bold.woff2",
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/oss/fonts/Assistant/Assistant-Medium.woff2",
+    "https://scripts.simpleanalyticscdn.com/latest.js"
+  ],
+  "responses": [],
+  "browserVersion": "Chrome/153.0.8010.52"
+}

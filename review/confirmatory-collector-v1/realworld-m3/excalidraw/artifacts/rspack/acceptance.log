@@ -1,0 +1,455 @@
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 4.08 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 3.81 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 3.52 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 3.46 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 3.65 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 4.04 s
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/collab/CollabError.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/collab/CollabError.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/index.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/index.scss 1:9  root stylesheet
+  │
+
+WARNING in ⚠ Module Warning (from /home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/node_modules/sass-loader/dist/cjs/index.js):
+  │ Deprecation Warning on line 0, column 8 of file:///home/runner/work/empirical-js-bundlers/empirical-js-bundlers/adapter-workspace/excalidraw-app/share/ShareDialog.scss:0:8:
+  │ Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+  │ 
+  │ More info and automated migrator: https://sass-lang.com/d/import
+  │ 
+  │ 0 | @import "../../packages/excalidraw/css/variables.module.scss";
+  │ 
+  │ 
+  │ excalidraw-app/share/ShareDialog.scss 1:9  root stylesheet
+  │
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts
+  ⚠ Module parse warning:
+  ╰─▶   ⚠ "__dirname" is used and has been mocked. Remove it from your code, or set `node.__dirname` to disable this warning.
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 79:30-81:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[77:0]
+ 77 │                     let ret;
+ 78 │                     if (!nodeFS) {
+ 79 │ ╭─▶                     nodeFS = require([
+ 80 │ │                           "fs"
+ 81 │ ╰─▶                     ].join());
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+    ╰────
+
+WARNING in ./packages/excalidraw/subset/woff2/woff2-bindings.ts 84:32-86:30
+  ⚠ Critical dependency: the request of a dependency is an expression
+    ╭─[82:0]
+ 82 │                     }
+ 83 │                     if (!nodePath) {
+ 84 │ ╭─▶                     nodePath = require([
+ 85 │ │                           "path"
+ 86 │ ╰─▶                     ].join());
+ 87 │                     }
+ 88 │                     filename = nodePath.normalize(filename);
+    ╰────
+
+Rspack compiled with 6 warnings in 4.01 s

@@ -1,0 +1,22 @@
+{
+  "node": "v22.16.0",
+  "results": [
+    {
+      "check": "pinned original accepted",
+      "passed": true
+    },
+    {
+      "check": "source mutation rejected",
+      "passed": true,
+      "message": "Source changed: web/package.json"
+    },
+    {
+      "check": "restored original accepted",
+      "passed": true
+    },
+    {
+      "check": "unknown candidate rejected",
+      "passed": true
+    }
+  ]
+}
