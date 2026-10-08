@@ -13,7 +13,7 @@ permissions:
 jobs:
   synthetic-xl:
     if: inputs.suite == 'all' || inputs.suite == 'synthetic'
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 60
     env:
       PROFILE_REVISION: cloud-capacity-pilot-v1
@@ -60,7 +60,7 @@ jobs:
 
   memos:
     if: inputs.suite == 'all' || inputs.suite == 'realworld'
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -124,7 +124,7 @@ jobs:
 
   excalidraw:
     if: inputs.suite == 'all' || inputs.suite == 'realworld'
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4

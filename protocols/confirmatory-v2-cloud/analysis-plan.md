@@ -2,7 +2,7 @@
 
 ## Questions and hypotheses
 
-For M1--M4, the question is whether the eligible toolchain changes user-observable development or build latency for a fixed workload on the exact frozen GitHub-hosted `macos-14` Apple M1 image. For M10 and M11, it is whether the toolchain changes peak RSS or CPU demand during the same accepted production build.
+For M1--M4, the question is whether the eligible toolchain changes user-observable development or build latency for a fixed workload on GitHub-hosted standard `macos-15` Apple Silicon runners during the collection window. For M10 and M11, it is whether the toolchain changes peak RSS or CPU demand during the same accepted production build.
 
 For each metric, workload, and eligible non-reference tool, the confirmatory null hypothesis is that the paired log outcome has zero location shift relative to Webpack. The two-sided alternative is a nonzero shift. These hypotheses concern the complete configured toolchain; they do not isolate implementation language or bundler core.
 
@@ -30,7 +30,7 @@ Report medians, IQRs, empirical cumulative distributions, and all raw values. Re
 
 All pairwise tool contrasts, alternative estimators, first-observation sensitivity, application-specific subgroup discussion, and comparisons with consolidated-v4 are exploratory. They cannot replace a failed primary result or alter the frozen family correction.
 
-Runner image version is recorded and must equal the frozen version for every block. An image change pauses collection before an outcome is observed and requires a new protocol version; cross-image observations cannot be pooled for confirmatory inference.
+Runner `ImageVersion` and macOS patch/build are recorded for every block. GitHub's weekly image rollout is a prespecified block-level nuisance factor: all tools in a complete block share one VM and image, while primary effects use only within-block paired contrasts. Report complete-block counts by image version, estimates within each version having enough blocks, and leave-one-image-version-out estimates. These checks assess heterogeneity and cannot be used to select or remove blocks. A runner-label, `ImageOS`, architecture, macOS-major, Node, or pinned-browser change pauses collection and requires change control.
 
 ## Missing data and protocol deviations
 
@@ -40,4 +40,4 @@ Every deviation receives an immutable ID, timestamp, affected cell, evidence pat
 
 ## Claim boundaries
 
-Results are conditional on the frozen versions, configurations, workloads, and GitHub-hosted `macos-14` Apple M1 environment during the collection window. They do not estimate performance on a consumer Mac or a fixed physical host. Real-world diversity supports transfer beyond the synthetic generator but does not establish universal bundler rankings. CPU seconds are a CPU-demand proxy, not direct energy consumption. HMR claims cover only accepted native HMR workflows and the frozen edit scenarios.
+Results are conditional on the frozen dependencies, configurations, workloads, and GitHub-hosted standard `macos-15` Apple Silicon runner family during the collection window. They do not estimate performance on a consumer Mac or a fixed physical host. Real-world diversity supports transfer beyond the synthetic generator but does not establish universal bundler rankings. CPU seconds are a CPU-demand proxy, not direct energy consumption. HMR claims cover only accepted native HMR workflows and the frozen edit scenarios.

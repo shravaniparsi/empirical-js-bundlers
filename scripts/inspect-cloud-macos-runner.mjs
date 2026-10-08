@@ -67,10 +67,10 @@ const sha256 = value => createHash('sha256').update(value).digest('hex');
 const checks = {
   githubHosted: { expected: true, actual: process.env.GITHUB_ACTIONS === 'true' && process.env.RUNNER_ENVIRONMENT === 'github-hosted' },
   runnerOS: { expected: 'macOS', actual: process.env.RUNNER_OS ?? null },
-  runnerLabelFamily: { expected: 'macos-14', actual: process.env.ImageOS ?? null, acceptedImageOS: /^macos14(?:$|\.)/.test(process.env.ImageOS ?? '') },
-  runnerImageVersion: { expected: '20260831.0302.1', actual: process.env.ImageVersion ?? null },
-  macosProductVersion: { expected: '14.8.9', actual: macosProductVersion },
-  macosBuildVersion: { expected: '23J631', actual: macosBuildVersion },
+  runnerLabelFamily: { expected: 'macos-15', actual: process.env.ImageOS ?? null, acceptedImageOS: /^macos15(?:$|\.)/.test(process.env.ImageOS ?? '') },
+  runnerImageVersionRecorded: { expected: 'nonempty', actual: process.env.ImageVersion ?? null },
+  macosMajorVersion: { expected: '15', actual: macosProductVersion?.split('.')[0] ?? null },
+  macosBuildVersionRecorded: { expected: 'nonempty', actual: macosBuildVersion },
   architecture: { expected: 'arm64', actual: os.arch() },
   runnerArch: { expected: 'ARM64', actual: process.env.RUNNER_ARCH ?? null },
   logicalCores: { minimum: 3, actual: os.cpus().length },
@@ -83,9 +83,9 @@ const checks = {
 checks.githubHosted.pass = checks.githubHosted.actual === checks.githubHosted.expected;
 checks.runnerOS.pass = checks.runnerOS.actual === checks.runnerOS.expected;
 checks.runnerLabelFamily.pass = checks.runnerLabelFamily.acceptedImageOS;
-checks.runnerImageVersion.pass = checks.runnerImageVersion.actual === checks.runnerImageVersion.expected;
-checks.macosProductVersion.pass = checks.macosProductVersion.actual === checks.macosProductVersion.expected;
-checks.macosBuildVersion.pass = checks.macosBuildVersion.actual === checks.macosBuildVersion.expected;
+checks.runnerImageVersionRecorded.pass = typeof checks.runnerImageVersionRecorded.actual === 'string' && checks.runnerImageVersionRecorded.actual.length > 0;
+checks.macosMajorVersion.pass = checks.macosMajorVersion.actual === checks.macosMajorVersion.expected;
+checks.macosBuildVersionRecorded.pass = typeof checks.macosBuildVersionRecorded.actual === 'string' && checks.macosBuildVersionRecorded.actual.length > 0;
 checks.architecture.pass = checks.architecture.actual === checks.architecture.expected;
 checks.runnerArch.pass = checks.runnerArch.actual === checks.runnerArch.expected;
 checks.logicalCores.pass = checks.logicalCores.actual >= checks.logicalCores.minimum;
@@ -118,6 +118,8 @@ const report = {
   checks,
   passed: Object.values(checks).every(check => check.pass),
 };
+// Collectors use `pass`; retain `passed` for the existing control validators.
+report.pass = report.passed;
 fs.writeFileSync(output, `${JSON.stringify(report, null, 2)}\n`, { flag: 'wx' });
 console.log(JSON.stringify({ passed: report.passed, identity, checks }, null, 2));
 process.exitCode = report.passed ? 0 : 1;

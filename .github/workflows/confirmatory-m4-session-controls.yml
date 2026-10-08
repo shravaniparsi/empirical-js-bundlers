@@ -1,8 +1,11 @@
-name: Confirmatory M3 session controls
+name: Confirmatory M4 session controls
 on:
   push:
     branches: [codex/realworld-expansion-v1]
-    paths: ['.github/workflows/confirmatory-m3-session-controls.yml']
+    paths:
+      - '.github/workflows/confirmatory-m4-session-controls.yml'
+      - 'scripts/confirmatory-hmr-session.mjs'
+      - 'scripts/hmr-session-acceptance.mjs'
   workflow_dispatch:
     inputs:
       suite:
@@ -22,10 +25,10 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        tool: [vite, rspack, esbuild, webpack, rollup]
-        size: ${{ fromJSON((github.event_name == 'push' || inputs.suite == 'smoke') && '["xs-50"]' || '["xs-50","s-200","m-500","l-2000","xl-5000"]') }}
+        tool: [vite, rspack, webpack]
+        size: ${{ fromJSON((github.event_name == 'push' || inputs.suite == 'smoke') && '["xs-50"]' || '["xs-50","m-500","xl-5000"]') }}
     env:
-      PROFILE_REVISION: m3-session-control-${{ matrix.tool }}-${{ matrix.size }}
+      PROFILE_REVISION: m4-session-control-${{ matrix.tool }}-${{ matrix.size }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,24 +36,26 @@ jobs:
           node-version-file: profiles/runtime-v1/.node-version
           cache: npm
       - run: npm ci --include=dev --no-audit --no-fund
-      - name: Verify exact cloud environment
+      - name: Verify target cloud environment
         run: node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
-      - name: Prepare and install frozen synthetic profile
+      - name: Prepare and install development profile
         run: |
           node scripts/prepare-production-profile.mjs synthetic '${{ matrix.size }}'
-          npm ci --prefix '.submission-pilot/${{ matrix.size }}-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' --include=dev --no-audit --no-fund
-      - name: Exercise one warmup and five measured-code paths without primary eligibility
+          workspace='.submission-pilot/${{ matrix.size }}-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}'
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' "$workspace"
+          npm ci --prefix "$workspace" --include=dev --no-audit --no-fund
+      - name: Exercise state-preserving warmup and five measured-code paths
         run: |
-          node scripts/confirmatory-incremental-session.mjs \
+          node scripts/confirmatory-hmr-session.mjs \
             --tool '${{ matrix.tool }}' \
+            --workload '${{ matrix.size }}' \
             --workspace '.submission-pilot/${{ matrix.size }}-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' \
             --evidence-dir control-evidence/session \
-            --workload '${{ matrix.size }}' \
             --correctness-only
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: m3-session-control-synthetic-${{ matrix.tool }}-${{ matrix.size }}
+          name: m4-session-control-synthetic-${{ matrix.tool }}-${{ matrix.size }}
           path: control-evidence/
           if-no-files-found: error
           retention-days: 30
@@ -63,9 +68,9 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        tool: [vite, rspack, esbuild, webpack, rollup]
+        tool: [vite, rspack, webpack]
     env:
-      PROFILE_REVISION: m3-session-control-${{ matrix.tool }}-bulletproof
+      PROFILE_REVISION: m4-session-control-${{ matrix.tool }}-bulletproof
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -73,25 +78,26 @@ jobs:
           node-version-file: profiles/runtime-v1/.node-version
           cache: npm
       - run: npm ci --include=dev --no-audit --no-fund
-      - name: Verify exact cloud environment
+      - name: Verify target cloud environment
         run: node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
-      - name: Prepare and install frozen Bulletproof React profile
+      - name: Prepare and install Bulletproof React development profile
         run: |
           node scripts/prepare-production-profile.mjs realworld app
-          npm ci --prefix '.submission-pilot/bulletproof-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' --include=dev --no-audit --no-fund
-      - name: Exercise one warmup and five measured-code paths without primary eligibility
+          workspace='.submission-pilot/bulletproof-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}'
+          node scripts/prepare-development-profile.mjs '${{ matrix.tool }}' "$workspace" realworld
+          npm ci --prefix "$workspace" --include=dev --no-audit --no-fund
+      - name: Exercise state-preserving warmup and five measured-code paths
         run: |
-          node scripts/confirmatory-incremental-session.mjs \
+          node scripts/confirmatory-hmr-session.mjs \
             --tool '${{ matrix.tool }}' \
+            --workload bulletproof-react \
             --workspace '.submission-pilot/bulletproof-corrected-${{ env.PROFILE_REVISION }}/${{ matrix.tool }}' \
             --evidence-dir control-evidence/session \
-            --workload bulletproof-react \
-            --target src/app/index.tsx \
             --correctness-only
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: m3-session-control-bulletproof-${{ matrix.tool }}
+          name: m4-session-control-bulletproof-${{ matrix.tool }}
           path: control-evidence/
           if-no-files-found: error
           retention-days: 30
@@ -105,7 +111,7 @@ jobs:
       max-parallel: 3
       matrix:
         application: [memos, excalidraw]
-        tool: [vite, rspack, esbuild, webpack, rollup]
+        tool: [vite, rspack, webpack]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -118,37 +124,41 @@ jobs:
         with:
           node-version-file: profiles/runtime-v1/.node-version
           cache: npm
+      - uses: actions/setup-go@v5
+        if: matrix.application == 'memos'
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: upstream/go.sum
       - run: npm ci --include=dev --no-audit --no-fund
-      - name: Verify exact cloud environment and prepare adapter
+      - name: Verify environment and prepare development adapter
         run: |
           node scripts/inspect-cloud-macos-runner.mjs control-evidence/pre-block.json
           node scripts/verify-realworld-source.mjs '${{ matrix.application }}' upstream > control-evidence/source.json
           if [ '${{ matrix.application }}' = memos ]; then
             node scripts/prepare-memos-adapter.mjs upstream/web adapter-workspace '${{ matrix.tool }}'
             npx --yes npm@11.9.0 ci --prefix adapter-workspace --include=dev --no-audit --no-fund
+            (cd upstream && go build -mod=readonly -o ../memos-server ./cmd/memos)
           else
             node scripts/prepare-excalidraw-adapter.mjs upstream adapter-workspace '${{ matrix.tool }}'
             npx --yes npm@11.9.0 ci --prefix adapter-workspace --include=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund
           fi
-      - name: Exercise one warmup and five measured-code paths without primary eligibility
+      - name: Exercise state-preserving warmup and five measured-code paths
         run: |
+          backend_args=()
           if [ '${{ matrix.application }}' = memos ]; then
-            target='src/pages/SignUp.tsx'
-          else
-            target='packages/excalidraw/components/main-menu/MainMenu.tsx'
+            backend_args=(--memos-backend memos-server)
           fi
-          node scripts/confirmatory-incremental-session.mjs \
+          node scripts/confirmatory-hmr-session.mjs \
             --tool '${{ matrix.tool }}' \
+            --workload '${{ matrix.application }}' \
             --workspace adapter-workspace \
             --evidence-dir control-evidence/session \
-            --workload '${{ matrix.application }}' \
-            --target "$target" \
-            --edit-mode '${{ matrix.application }}' \
-            --correctness-only
+            --correctness-only \
+            "${backend_args[@]}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: m3-session-control-${{ matrix.application }}-${{ matrix.tool }}
+          name: m4-session-control-${{ matrix.application }}-${{ matrix.tool }}
           path: control-evidence/
           if-no-files-found: error
           retention-days: 30
