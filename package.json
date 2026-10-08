@@ -12,6 +12,7 @@
     "cloud-runner:inspect": "node scripts/inspect-cloud-macos-runner.mjs",
     "cloud-capacity:validate": "node scripts/validate-cloud-capacity-evidence.mjs",
     "cloud-workspace-seal:test": "node scripts/cloud-cell-workspace-seal.test.mjs",
+    "cloud-block-artifact:test": "node scripts/cloud-block-artifact.test.mjs",
     "incremental-session:test": "node scripts/confirmatory-incremental-session.test.mjs",
     "incremental-session:validate-controls": "node scripts/validate-m3-session-controls.mjs",
     "hmr-session:check": "node --check scripts/confirmatory-hmr-session.mjs && node scripts/hmr-session-acceptance.test.mjs",

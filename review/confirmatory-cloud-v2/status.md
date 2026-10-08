@@ -17,6 +17,7 @@
 - Exact-image M3 smoke run 36953454980 passed all five tools on `xs-50`. The 19-file archive revalidates each runner gate, all 30 edit/revert cycles, source and process cleanup, internal evidence hashes, absence of primary outcomes, and zero primary eligibility.
 - Replacement M3 smoke run 37726841669 passed all five tools on `macos-15`; its independently validated, 17-file hash manifest again covers 30 edit/revert cycles with zero primary outcomes.
 - Corrected M4 smoke run 37727056763 passed Vite, Rspack, and Webpack on `macos-15`. Its independently validated, 11-file hash manifest covers 18 state-preserving edit/revert cycles, reload positive controls, restoration and cleanup, and zero primary outcomes.
+- The block-artifact finalizer now authenticates the scheduled block and tool order, attempt identity, macOS 15 environment, frozen repository state, cell-report identities and outcome boundary, complete evidence inventory, and every file hash. Its controls pass a valid three-cell artifact and reject post-finalization drift.
 - These controls record no primary performance observations and remain `publicationEligible: false`.
 
 Run 36949697335 is a superseded diagnostic. Its Memos failure exposed a macOS keyboard-modifier assumption, and its Excalidraw failure exposed a Chrome 154 permissions-policy diagnostic. Both functional paths had otherwise succeeded. The harness corrections are explicit and the superseded run was cancelled once the corrected run was active.
@@ -26,7 +27,7 @@ Run 36949697335 is a superseded diagnostic. Its Memos failure exposed a macOS ke
 1. Pass the `macos-15` capacity controls and the corrected M4 sealed session control on that runner family.
 2. Build the one-block-per-job M1 and M2/M10/M11 cloud orchestrators around the existing collectors.
 3. Expand the passing M3 smoke control to the remaining 35 cells and the M4 smoke control to its remaining 15 cells.
-4. Implement block-artifact validation, replacement-attempt auditing, download registration, and corpus consolidation.
+4. Integrate the passing block-artifact finalizer into every orchestrator; implement replacement-attempt auditing, download registration, and corpus consolidation.
 5. Pass the complete executor-control matrix on the frozen `macos-15` runner family and validate image-version sensitivity metadata.
 6. Freeze the protocol, schedule, workflows, executors, profiles, source inventories, and dependency locks before observing a primary outcome.
 7. Run all 420 blocks one job at a time, archive every successful and failed attempt, execute the prespecified analysis, and deposit the durable corpus.
