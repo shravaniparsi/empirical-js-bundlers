@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "confirmatory-v2-cloud-environment-control-archive",
+  "protocol": "confirmatory-v2-cloud-m1",
+  "githubRunId": "37726841673",
+  "githubRunUrl": "https://github.com/shravaniparsi/empirical-js-bundlers/actions/runs/37726841673",
+  "repositoryCommit": "305418f8feb7b44f5be96fe056a74b2d3bb3caab",
+  "target": "macos-15",
+  "publicationEligible": false,
+  "newPrimaryMeasurements": 0,
+  "accepted": true
+}

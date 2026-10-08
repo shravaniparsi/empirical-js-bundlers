@@ -117,7 +117,7 @@ const report = {
   untimedWarmupUpdates: 1,
   measuredUpdatesPlanned: 5,
   workspaceSealVerified: correctnessOnly ? null : true,
-  checks: {}, edits: [], errors: [], consoleErrors: [], ignoredConsoleMessages: [], passed: false,
+  checks: {}, edits: [], errors: [], consoleErrors: [], httpErrors: [], ignoredConsoleMessages: [], ignoredHttpResponses: [], passed: false,
 };
 
 const reservePort = async () => {
@@ -190,6 +190,8 @@ let documentToken;
 let initialState;
 let navigations = 0;
 const ignoredConsolePattern = /^Permissions policy violation: unload is not allowed in this document\.?$/;
+const missingResourceConsolePattern = /^Failed to load resource: the server responded with a status of 404 \(Not Found\)$/;
+const unexplainedMissingResourceDiagnostics = () => report.ignoredConsoleMessages.filter(message => missingResourceConsolePattern.test(message)).length > report.ignoredHttpResponses.length;
 const stateSnapshot = async () => {
   if (workload === 'memos') return page.evaluate(() => ({ username: document.querySelector('#signup-username')?.value, password: document.querySelector('#signup-password')?.value }));
   if (workload === 'excalidraw') return page.evaluate(id => JSON.parse(localStorage.getItem('excalidraw') || '[]').find(element => element.id === id), initialState?.id);
@@ -217,9 +219,18 @@ try {
   page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 1000 });
   page.on('pageerror', error => report.consoleErrors.push(`pageerror: ${error.message}`));
+  page.on('response', response => {
+    if (response.status() < 400) return;
+    const failure = { status: response.status(), url: response.url() };
+    let pathname = null;
+    try { pathname = new URL(response.url()).pathname; } catch {}
+    if (response.status() === 404 && pathname === '/favicon.ico') report.ignoredHttpResponses.push(failure);
+    else report.httpErrors.push(failure);
+  });
   page.on('console', message => {
     if (message.type() !== 'error') return;
-    if (workload === 'excalidraw' && ignoredConsolePattern.test(message.text())) report.ignoredConsoleMessages.push(message.text());
+    if (missingResourceConsolePattern.test(message.text())) report.ignoredConsoleMessages.push(message.text());
+    else if (workload === 'excalidraw' && ignoredConsolePattern.test(message.text())) report.ignoredConsoleMessages.push(message.text());
     else report.consoleErrors.push(`console: ${message.text()}`);
   });
   await page.goto(origin + profile.route, { waitUntil: 'networkidle0', timeout: startupTimeoutMs });
@@ -241,7 +252,8 @@ try {
   if ((workload === 'memos' && (initialState.username !== 'hmr-state-sentinel' || initialState.password !== 'Hmr-state-sentinel-7391')) ||
       (workload === 'excalidraw' && !initialState?.id) ||
       (!['memos', 'excalidraw'].includes(workload) && initialState !== 'hmr-state-sentinel')) throw new Error('Application state was not established');
-  if (report.consoleErrors.length) throw new Error(`Browser emitted ${report.consoleErrors.length} error(s) before the HMR cycles`);
+  if (unexplainedMissingResourceDiagnostics()) throw new Error('A generic 404 console diagnostic was not explained by an observed /favicon.ico response');
+  if (report.consoleErrors.length || report.httpErrors.length) throw new Error(`Browser emitted ${report.consoleErrors.length} console error(s) and ${report.httpErrors.length} unexpected HTTP error(s) before the HMR cycles`);
   report.checks.applicationStateEstablished = true;
   documentToken = randomUUID();
   await page.evaluate(token => { window.__benchmarkDocumentToken = token; }, documentToken);
@@ -253,6 +265,7 @@ try {
     const selector = profile.markerSelector(marker);
     if (await page.$(selector)) throw new Error(`marker ${marker} existed before edit`);
     const errorsBefore = report.consoleErrors.length;
+    const httpErrorsBefore = report.httpErrors.length;
     const started = performance.now();
     fs.writeFileSync(target, profile.edit(original, marker));
     await page.waitForSelector(selector, { timeout: updateTimeoutMs });
@@ -264,7 +277,7 @@ try {
       statePreserved: stateMatches(await stateSnapshot()),
       navigations,
       settled: true,
-      browserErrors: report.consoleErrors.length - errorsBefore,
+      browserErrors: (report.consoleErrors.length - errorsBefore) + (report.httpErrors.length - httpErrorsBefore),
       durationMs,
     };
     acceptHmrUpdate(observation);
@@ -272,7 +285,7 @@ try {
     await page.waitForFunction(selectorValue => !document.querySelector(selectorValue), { timeout: updateTimeoutMs }, selector);
     await new Promise(resolve => setTimeout(resolve, 1000));
     if (await page.$(selector)) throw new Error(`marker ${marker} survived source restoration update`);
-    if (report.consoleErrors.length !== errorsBefore) throw new Error(`Browser emitted an error during edit/revert cycle ${edit}`);
+    if (report.consoleErrors.length !== errorsBefore || report.httpErrors.length !== httpErrorsBefore) throw new Error(`Browser emitted an error during edit/revert cycle ${edit}`);
     const editReport = { edit, phase, marker, ...observation, sourceRestorationUpdated: true };
     if (correctnessOnly) editReport.diagnosticDurationMs = editReport.durationMs;
     if (correctnessOnly || edit === 0) delete editReport.durationMs;
@@ -291,7 +304,9 @@ try {
     documentReplaced: await page.evaluate(token => window.__benchmarkDocumentToken !== token, documentToken),
   };
   acceptReloadDetector(reloadControl);
-  if (report.consoleErrors.length) throw new Error(`Browser emitted ${report.consoleErrors.length} error(s) during the session`);
+  report.checks.ignoredNetworkDiagnosticsExplained = !unexplainedMissingResourceDiagnostics();
+  if (!report.checks.ignoredNetworkDiagnosticsExplained) throw new Error('A generic 404 console diagnostic was not explained by an observed /favicon.ico response');
+  if (report.consoleErrors.length || report.httpErrors.length) throw new Error(`Browser emitted ${report.consoleErrors.length} console error(s) and ${report.httpErrors.length} unexpected HTTP error(s) during the session`);
   report.reloadControl = reloadControl;
   report.checks.reloadControlDetected = true;
   report.passed = true;

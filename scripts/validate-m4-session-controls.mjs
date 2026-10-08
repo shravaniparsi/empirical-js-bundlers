@@ -26,6 +26,7 @@ for (const tool of tools) {
   if (Object.hasOwn(session, 'outcomes')) fail(`${tool}: correctness control contains primary outcomes`);
   if (session.reloadControl?.navigationObserved !== true || session.reloadControl?.documentReplaced !== true) fail(`${tool}: reload positive control failed`);
   if (session.consoleErrors?.length !== 0) fail(`${tool}: browser errors were recorded`);
+  if (session.httpErrors?.length !== 0) fail(`${tool}: unexpected HTTP errors were recorded`);
   if (!Object.values(session.checks ?? {}).every(Boolean)) fail(`${tool}: session finalization check failed`);
   for (const file of session.files ?? []) {
     const filename = path.resolve(sessionDir, file.path);
